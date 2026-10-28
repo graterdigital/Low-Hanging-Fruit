@@ -100,8 +100,13 @@ foreach ($ids as $id) {
 }
 
 // Postmeta (menu item URLs, ACF link fields). Serialized values are left alone and reported.
-$like = '%' . $wpdb->esc_like($job['host']) . '%';
-$rows = $wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_key NOT LIKE '\_edit%%' AND (meta_value LIKE %s OR meta_value LIKE '/%%')", $like));
+// Any meta value that contains one of the old paths in plain or JSON-escaped form (ACF WYSIWYG, link, URL fields).
+$conds = []; $params = [];
+foreach ($job['swaps'] as $s) {
+    $path = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['old']);
+    foreach ([$path, str_replace('/', '\\/', $path)] as $n) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
+}
+$rows = $wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_key NOT LIKE '\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params));
 foreach ($rows as $m) {
     if (is_serialized($m->meta_value)) {
         $hits = [];
