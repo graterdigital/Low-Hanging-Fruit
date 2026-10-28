@@ -18,9 +18,11 @@
  * Scope: post_content of non-revision posts, and postmeta values. wp_update_post keeps a revision.
  */
 if (!defined('REPLACE_LINKS_JOB')) { fwrite(STDERR, "no job\n"); exit(1); }
+// wp eval-file includes this file inside a function, so declare shared state global explicitly
+// or the helper functions below see nothing.
+global $wpdb, $job, $mode, $home_host, $live_host, $legacy, $all_hosts, $hosts_re, $swaps;
 $job  = json_decode(REPLACE_LINKS_JOB, true);
 $mode = $job['mode'] ?? 'dry';
-global $wpdb;
 
 $home_host   = parse_url(home_url(), PHP_URL_HOST);
 $live_host   = $job['host'];

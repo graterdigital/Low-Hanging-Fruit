@@ -76,6 +76,7 @@ def main():
     res = run_remote(alias, mode, host, swaps, args.webroot, m.get("legacy_hosts"))
     print(f"Install runs on {res['home_host']}; matching hosts: {', '.join(res['hosts'])}")
 
+    if not isinstance(res.get("totals"), dict): res["totals"] = {}   # PHP encodes an empty array as []
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
     outdir = ROOT / "changes" / args.slug; outdir.mkdir(parents=True, exist_ok=True)
     log = [f"# fix-redirect-links: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · map `{Path(args.map).name}`", ""]
