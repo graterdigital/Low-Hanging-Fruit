@@ -14,7 +14,7 @@ ahrefs:
 
 platform:
   cms: wordpress
-  wp_version: 7.1.2
+  wp_version: 7.1.3
   theme: atlantaspecializedcare
   page_builder: none-detected
   seo_plugin: yoast
@@ -23,10 +23,10 @@ platform:
   perf_plugins: [wp-rocket]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: atlantaspecializedcare
+  staging_environment: atlantaspecializedcare-staging
 
 tracking:
   ga4_measurement_id: none-detected

@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [BreadcrumbList, City, CollegeOrUniversity, EducationalOccupationalCredential, EntryPoint, GeoCoordinates, Hospital, ImageObject, ListItem, MedicalOrganization, Organization, PostalAddress, ReadAction, SearchAction, State, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: newradiancenow
+  staging_environment: newradiancenow-staging
 
 tracking:
   ga4_measurement_id: G-TBP679T6FT

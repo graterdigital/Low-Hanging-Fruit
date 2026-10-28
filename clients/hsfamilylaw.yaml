@@ -14,7 +14,7 @@ ahrefs:
 
 platform:
   cms: wordpress
-  wp_version: unknown
+  wp_version: 7.1.3
   theme: hastingsshadmehry        # custom theme
   page_builder: none-detected
   seo_plugin: yoast               # v28.6 seen in the 2026-10-08 crawl
@@ -25,9 +25,9 @@ platform:
 
 hosting:
   provider: kinsta
-  access: ssh+wp-cli              # Greg has full access
-  ssh_alias: unknown              # name of the entry in ~/.ssh/config once it exists
-  staging_environment: unknown
+  access: ssh+wp-cli
+  ssh_alias: hsfamilylaw
+  staging_environment: hsfamilylaw-staging
 
 tracking:
   ga4_measurement_id: G-0EF6RCF9P6   # loaded through Site Kit

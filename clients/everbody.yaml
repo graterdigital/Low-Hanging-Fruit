@@ -23,10 +23,10 @@ platform:
   perf_plugins: []
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: everbody
+  staging_environment: everbody-staging
 
 tracking:
   ga4_measurement_id: none-detected

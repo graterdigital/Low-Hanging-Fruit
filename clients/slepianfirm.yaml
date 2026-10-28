@@ -14,7 +14,7 @@ ahrefs:
 
 platform:
   cms: wordpress
-  wp_version: unknown
+  wp_version: 7.1.2
   theme: slepian
   page_builder: block-editor
   seo_plugin: yoast
@@ -24,10 +24,10 @@ platform:
   template_notes: home page has no <h1>; only a legacy UA tag was found in the raw HTML (no GA4 or GTM), so GA4 may load via Site Kit JS or be missing
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: slepianfirm
+  staging_environment: slepianfirm-staging
 
 tracking:
   ga4_measurement_id: none-detected

@@ -25,10 +25,10 @@ platform:
   template_notes: WooCommerce store; GA4 presumably fires from GTM-T9M284N5 (no G- id in raw HTML)
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: ruggeddepot
+  staging_environment: ruggeddepot-staging, ruggeddepot-staging-2
 
 tracking:
   ga4_measurement_id: none-detected

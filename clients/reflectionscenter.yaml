@@ -26,9 +26,9 @@ platform:
 
 hosting:
   provider: wpengine
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  access: ssh+wp-cli
+  ssh_alias: reflectionscenter
+  staging_environment: reflectionscenter-staging
 
 tracking:
   ga4_measurement_id: G-24E94Y8YXM

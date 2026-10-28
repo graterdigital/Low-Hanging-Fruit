@@ -22,10 +22,10 @@ platform:
   redirect_manager: unknown
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: livingyoungcenter
+  staging_environment: livingyoungcenter-staging
 
 tracking:
   ga4_measurement_id: unknown       # GTM present; GA4 ID not visible in the raw HTML

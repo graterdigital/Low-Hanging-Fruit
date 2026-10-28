@@ -24,10 +24,10 @@ platform:
   schema_notes: LocalBusiness with AggregateRating in the home-page JSON-LD; two GTM containers load (GTM-KD45X7C, GTM-NXR8Z4MV)
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: theclinique
+  staging_environment: theclinique-staging
 
 tracking:
   ga4_measurement_id: G-GX3QTEKF9E

@@ -14,7 +14,7 @@ ahrefs:
 
 platform:
   cms: wordpress
-  wp_version: unknown   # generator meta: Site Kit by Google 1.188.0
+  wp_version: 7.1.2
   theme: mesh
   page_builder: block-editor
   seo_plugin: yoast
@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [BreadcrumbList, EntryPoint, ListItem, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: meshautomationinc
+  staging_environment: meshautomationinc-staging
 
 tracking:
   ga4_measurement_id: G-RFZVKPZM1X

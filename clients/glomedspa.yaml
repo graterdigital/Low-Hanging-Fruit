@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [BreadcrumbList, ImageObject, ListItem, Organization, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: glomedspa
+  staging_environment: none
 
 tracking:
   ga4_measurement_id: unknown   # Site Kit loads Google tag GT-PJWB343; the G- ID resolves server-side

@@ -23,10 +23,10 @@ platform:
   perf_plugins: []
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: backto30
+  staging_environment: backto30-staging
 
 tracking:
   ga4_measurement_id: [G-966G0YGJTE, G-YCZ61B1C1D]

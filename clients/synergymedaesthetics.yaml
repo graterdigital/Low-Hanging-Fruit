@@ -24,10 +24,10 @@ platform:
   template_notes: no GA4 id in raw HTML; GA4 presumably fires from GTM-TJJXBCN
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: synergymedaesthetics
+  staging_environment: synergymedaesthetics-staging
 
 tracking:
   ga4_measurement_id: none-detected

@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [AggregateRating, BreadcrumbList, City, EntryPoint, GeoCoordinates, HealthAndBeautyBusiness, ImageObject, ListItem, Organization, PostalAddress, PropertyValueSpecification, ReadAction, SearchAction, State, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: nouveauspa
+  staging_environment: nouveauspa-staging
 
 tracking:
   ga4_measurement_id: G-BSZV02HTD5

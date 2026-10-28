@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [BreadcrumbList, EntryPoint, Event, ListItem, Place, PostalAddress, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: miuraboiler
+  staging_environment: miuraboiler-staging
 
 tracking:
   ga4_measurement_id: G-54YPGPKFLB

@@ -24,10 +24,10 @@ platform:
   template_notes: home page has no <h1>; no GA4/GTM found in raw HTML (NitroPack may defer/inline scripts, so re-check in a browser)
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: skynbaratlanta
+  staging_environment: skynbaratlanta-staging
 
 tracking:
   ga4_measurement_id: none-detected

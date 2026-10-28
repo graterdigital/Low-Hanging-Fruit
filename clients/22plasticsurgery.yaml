@@ -23,10 +23,10 @@ platform:
   perf_plugins: []
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: 22plasticsurgery
+  staging_environment: 22plasticsurgery-staging
 
 tracking:
   ga4_measurement_id: G-G7ZNG693T2

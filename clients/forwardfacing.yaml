@@ -14,7 +14,7 @@ ahrefs:
 
 platform:
   cms: wordpress
-  wp_version: 7.1.2
+  wp_version: 7.1.3
   theme: facingforwardpodcast
   page_builder: block-editor
   seo_plugin: yoast
@@ -23,10 +23,10 @@ platform:
   perf_plugins: []
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: forwardfacing
+  staging_environment: forwardfacing-staging
 
 tracking:
   ga4_measurement_id: none-detected

@@ -24,10 +24,10 @@ platform:
   schema_types_seen: [BreadcrumbList, EntryPoint, ImageObject, ListItem, Organization, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: wpengine
+  access: ssh+wp-cli
+  ssh_alias: h-md
+  staging_environment: h-md-staging
 
 tracking:
   ga4_measurement_id: none-detected   # no gtag snippet in raw HTML despite Site Kit being active; verify in GTM/Site Kit

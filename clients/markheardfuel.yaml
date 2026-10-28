@@ -23,10 +23,10 @@ platform:
   perf_plugins: [wp-rocket]
 
 hosting:
-  provider: unknown
-  access: unknown
-  ssh_alias: unknown
-  staging_environment: unknown
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: markheardfuel
+  staging_environment: markheardfuel-staging
 
 tracking:
   ga4_measurement_id: G-B21FF0NC62
