@@ -10,6 +10,7 @@ vertical: medical-spa
 
 ahrefs:
   site_audit_project_id: 9704535
+  gsc_connected: no
 
 platform:
   cms: wordpress

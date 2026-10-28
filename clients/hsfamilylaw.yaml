@@ -10,6 +10,7 @@ vertical: legal
 
 ahrefs:
   site_audit_project_id: 9704538
+  gsc_connected: yes
 
 platform:
   cms: wordpress
