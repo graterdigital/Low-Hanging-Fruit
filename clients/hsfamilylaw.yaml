@@ -1,0 +1,49 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: hsfamilylaw
+name: Hastings Shadmehry Family Law
+domain: hsfamilylaw.com
+canonical_host: https://hsfamilylaw.com
+vertical: legal
+
+ahrefs:
+  site_audit_project_id: 9704538
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: hastingsshadmehry        # custom theme
+  page_builder: none-detected
+  seo_plugin: yoast               # v28.6 seen in the 2026-10-08 crawl
+  plugins_seen: [google-site-kit, business-reviews-bundle, handl-utm-grabber-v3, simple-banner, youtube-feed-pro, gravityforms, akismet]
+  image_optimization_plugin: none-detected
+  schema_notes: hand-coded LegalService JSON-LD in the theme head on core pages and bios, alongside Yoast's graph
+  template_notes: category/tag archives output no <h1>; theme pagination links page 1 as /page/1/
+
+hosting:
+  provider: kinsta
+  access: ssh+wp-cli              # Greg has full access
+  ssh_alias: unknown              # name of the entry in ~/.ssh/config once it exists
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-0EF6RCF9P6   # loaded through Site Kit
+  gtm_container: none-detected
+  other_tags: [meta-pixel, callrail, microsoft-clarity]
+  meta_pixel_id: "818245807727671"
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: "3650 Mansell Road, Suite 475, Alpharetta, GA 30022 · +1 770-641-8200"   # from the site's own schema, not checked against the Business Profile
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve      # law firm: every wording change gets a human look
+  do_not_touch: []
+
+evidence:
+  last_checked: 2026-10-13
+  basis: Ahrefs Site Audit crawl of 2026-10-08 plus raw HTML of /, /category/divorce/, /blog/page/2/. Not verified by logging in.

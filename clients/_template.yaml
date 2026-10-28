@@ -1,0 +1,46 @@
+# Copy to clients/<slug>.yaml. Slug = domain without its ending (example.com -> example).
+# Holds WHAT is true about one site, never HOW to do a task, and never a credential.
+# "unknown" means nobody has checked yet; skills fill fields in as they learn them.
+
+slug: example
+name: Example Co
+domain: example.com
+canonical_host: https://example.com
+vertical: unknown            # legal, medical-spa, ecommerce, b2b-industrial, real-estate ...
+
+ahrefs:
+  site_audit_project_id: 0
+  gsc_connected: unknown     # yes once Search Console is linked to the Ahrefs project
+
+platform:
+  cms: unknown
+  wp_version: unknown
+  theme: unknown
+  page_builder: unknown      # none-detected, elementor, divi, wpbakery, beaver, block-editor
+  seo_plugin: unknown        # yoast, rankmath, seopress, aioseo
+  plugins_seen: []
+
+hosting:
+  provider: unknown          # kinsta, wpengine, ...
+  access: unknown            # ssh+wp-cli, application-password, admin-only
+  ssh_alias: unknown         # the Host entry name in ~/.ssh/config on the machine that runs fixes
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: unknown
+  gtm_container: unknown
+  other_tags: []
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 1970-01-01
+  basis: ""

@@ -1,0 +1,46 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: livingyoungcenter
+name: Living Young Center
+domain: livingyoungcenter.com
+canonical_host: https://livingyoungcenter.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704535
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: salient
+  page_builder: wpbakery            # js_composer_salient
+  seo_plugin: yoast                 # yoast-schema-graph in homepage HTML; version unknown
+  plugins_seen: [salient-core, js_composer_salient, google-site-kit, nitropack, instagram-feed, wp-popups-lite, custom-financing-widget]
+  redirect_manager: unknown
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: unknown       # GTM present; GA4 ID not visible in the raw HTML
+  gtm_container: GTM-55HK3JG
+  other_tags: [meta-pixel]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown                      # four locations: St. Petersburg, Seminole, Palm Harbor, Odessa (from page titles)
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+
+evidence:
+  last_checked: 2026-10-13
+  basis: Ahrefs Site Audit crawl of 2026-10-08 plus the homepage's raw HTML. Not verified by logging in.

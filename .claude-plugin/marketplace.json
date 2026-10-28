@@ -1,0 +1,7 @@
+{
+  "name": "graterdigital",
+  "owner": { "name": "Grater Digital" },
+  "plugins": [
+    { "name": "low-hanging-fruit", "source": "./", "description": "SEO/PPC low-hanging-fruit skills" }
+  ]
+}
