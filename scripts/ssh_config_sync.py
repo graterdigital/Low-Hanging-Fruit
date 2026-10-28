@@ -51,17 +51,16 @@ def kinsta_envs():
     out = []
     for site in r.json()["company"]["sites"]:
         for env in site.get("environments", []):
-            cfg = requests.get(f"https://api.kinsta.com/v2/sites/{site['id']}/environments/{env['id']}/ssh/config", headers=h, timeout=60)
-            if cfg.status_code != 200:
-                print(f"Kinsta: no SSH config for {site['name']}/{env['name']} ({cfg.status_code}); is SSH enabled for it?")
+            conn = env.get("ssh_connection") or {}
+            ip = (conn.get("ssh_ip") or {}).get("external_ip"); port = conn.get("ssh_port")
+            if not (ip and port):
+                print(f"Kinsta: no SSH details for {site['name']}/{env['name']}; is SSH enabled for it?")
                 continue
-            c = cfg.json()
             out.append({
-                "provider": "kinsta",
-                "site": site["name"],
-                "env": env["name"],                      # live, staging, ...
+                "provider": "kinsta", "site_key": f"kinsta:{site['id']}",
+                "site": site["name"], "env": env["name"],              # live, staging, ...
                 "domain": (env.get("primaryDomain") or {}).get("name") or "",
-                "host": c["host"], "port": str(c["port"]), "user": c["user"],
+                "host": ip, "port": str(port), "user": site["name"],  # Kinsta's SSH user is the site name
                 "wp_version": env.get("wordpress_version"),
             })
     print(f"Kinsta: {len(out)} environments")
@@ -78,9 +77,10 @@ def wpengine_envs():
         r.raise_for_status()
         j = r.json()
         for inst in j.get("results", []):
+            site = inst.get("site") or {}
             out.append({
-                "provider": "wpengine",
-                "site": (inst.get("site") or {}).get("name") or inst["name"],
+                "provider": "wpengine", "site_key": f"wpengine:{site.get('id') or inst['name']}",
+                "site": site.get("name") or inst["name"],
                 "env": inst.get("environment") or "production",   # production, staging, development
                 "domain": inst.get("primary_domain") or inst.get("cname") or "",
                 "host": f"{inst['name']}.ssh.wpengine.net", "port": "22", "user": inst["name"],
@@ -92,14 +92,25 @@ def wpengine_envs():
     print(f"WP Engine: {len(out)} installs")
     return out
 
-def alias_for(e, clients):
-    """Pick the alias: client slug if the primary domain matches a client file, else the host's site name."""
-    s = slug_of(e["domain"]) if e["domain"] else None
-    base = s if s in clients else slug_of(e["site"])
-    env = e["env"].lower()
-    if env in ("live", "production"):
-        return base
-    return f"{base}-{'staging' if 'stag' in env else env}"
+def is_live(env): return env.lower() in ("live", "production")
+def env_suffix(env):
+    e = env.lower()
+    return "staging" if "stag" in e else ("dev" if "dev" in e else e)
+
+def group_sites(envs, clients):
+    """Group environments by hosting site and pick one base alias per site from its live environment."""
+    sites = {}
+    for e in envs:
+        sites.setdefault(e["site_key"], []).append(e)
+    result = []
+    for key, group in sites.items():
+        live = [e for e in group if is_live(e["env"])]
+        probe = live[0] if live else group[0]
+        s = slug_of(probe["domain"]) if probe["domain"] else None
+        matched_slug = s if s in clients else None
+        base = matched_slug or (s if s and not probe["domain"].endswith((".kinsta.cloud", ".wpengine.com", ".wpenginepowered.com")) else slug_of(probe["site"]))
+        result.append({"base": base, "client": matched_slug, "envs": group, "live": live})
+    return result
 
 def main():
     ap = argparse.ArgumentParser()
@@ -111,19 +122,24 @@ def main():
     if not envs:
         sys.exit("Nothing to do.")
 
-    blocks, matched, unmatched = [], {}, []
-    for e in envs:
-        alias = alias_for(e, clients)
-        blocks.append(f"Host {alias}\n    HostName {e['host']}\n    Port {e['port']}\n    User {e['user']}\n    IdentityFile {KEY_FILE}\n")
-        s = slug_of(e["domain"]) if e["domain"] else None
-        if s in clients:
-            matched.setdefault(s, {"provider": e["provider"], "live": None, "staging": None, "wp_version": None})
-            if e["env"].lower() in ("live", "production"):
-                matched[s]["live"] = alias; matched[s]["wp_version"] = e["wp_version"]
-            elif "stag" in e["env"].lower():
-                matched[s]["staging"] = alias
+    blocks, matched, unmatched, used = [], {}, [], set()
+    for site in group_sites(envs, clients):
+        aliases = {}
+        for e in site["envs"]:
+            alias = site["base"] if is_live(e["env"]) else f"{site['base']}-{env_suffix(e['env'])}"
+            n, cand = 2, alias
+            while cand in used:
+                cand = f"{alias}-{n}"; n += 1
+            used.add(cand); aliases[cand] = e
+            blocks.append(f"Host {cand}\n    HostName {e['host']}\n    Port {e['port']}\n    User {e['user']}\n    IdentityFile {KEY_FILE}\n")
+        if site["client"]:
+            live_alias = next((a for a, e in aliases.items() if is_live(e["env"])), None)
+            stg = [a for a, e in aliases.items() if env_suffix(e["env"]) == "staging"]
+            wpv = next((e["wp_version"] for e in site["envs"] if is_live(e["env"]) and e.get("wp_version")), None)
+            matched[site["client"]] = {"provider": site["envs"][0]["provider"], "live": live_alias, "staging": ", ".join(stg) if stg else None, "wp_version": wpv}
         else:
-            unmatched.append(f"{e['provider']}: {e['site']} ({e['env']}) {e['domain'] or 'no domain'} -> alias {alias}")
+            doms = ", ".join(sorted({e["domain"] for e in site["envs"] if e["domain"]})) or "no domain"
+            unmatched.append(f"{site['envs'][0]['provider']}: {site['base']} [{', '.join(aliases)}] {doms}")
 
     print("\n--- SSH blocks ---\n" + "\n".join(blocks))
     print("--- Client files to update ---")
