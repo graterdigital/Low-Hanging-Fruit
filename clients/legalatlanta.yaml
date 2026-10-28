@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: legalatlanta
+name: Legal Atlanta
+domain: legalatlanta.com
+canonical_host: https://legalatlanta.com
+vertical: legal
+
+ahrefs:
+  site_audit_project_id: 9704534
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: lawyers-attorneys
+  page_builder: block-editor
+  seo_plugin: yoast
+  plugins_seen: [akismet, genesis-blocks, gravityforms, link-whisper-premium, real-time-auto-find-and-replace, revslider, vamtam-push-menu]
+  image_optimization_plugin: none-detected
+  perf_plugins: [nitropack, wp-engine]
+
+hosting:
+  provider: wpengine
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-DBN4J7C4M3
+  gtm_container: GTM-5NWBHGB
+  google_ads_ids: []
+  other_tags: [callrail]
+  legacy_ua_ids: [UA-50120734-1]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Ahrefs Site Audit raw HTML of https://legalatlanta.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Legacy UA-50120734-1 also present; NitroPack active."

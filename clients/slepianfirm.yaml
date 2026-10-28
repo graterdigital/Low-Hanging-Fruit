@@ -1,0 +1,52 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: slepianfirm
+name: Slepian Firm
+domain: slepianfirm.com
+canonical_host: https://www.slepianfirm.com
+vertical: legal
+
+ahrefs:
+  site_audit_project_id: 9704553
+  gsc_connected: yes
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: slepian
+  page_builder: block-editor
+  seo_plugin: yoast
+  plugins_seen: [foobox-image-lightbox, olevmedia-shortcodes, post-content-shortcodes, wordpress-post-tabs, google-site-kit]
+  image_optimization_plugin: none-detected
+  perf_plugins: [wp-rocket]
+  template_notes: home page has no <h1>; only a legacy UA tag was found in the raw HTML (no GA4 or GTM), so GA4 may load via Site Kit JS or be missing
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: none-detected
+  gtm_container: none-detected
+  google_ads_ids: []
+  other_tags: [microsoft-clarity]
+  ua_ids: [UA-41356599-28]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: Fingerprint of raw HTML of https://www.slepianfirm.com/ from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.

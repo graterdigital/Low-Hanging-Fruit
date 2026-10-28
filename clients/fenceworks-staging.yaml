@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: fenceworks-staging
+name: Fenceworks Dev (staging)
+domain: stg-fenceworksofgeorgia-fwstaging.kinsta.cloud
+canonical_host: https://stg-fenceworksofgeorgia-fwstaging.kinsta.cloud
+vertical: home-services
+
+ahrefs:
+  site_audit_project_id: 10134365
+  gsc_connected: no
+
+platform:
+  cms: unknown
+  wp_version: unknown
+  theme: unknown
+  page_builder: unknown
+  seo_plugin: unknown
+  plugins_seen: []
+  image_optimization_plugin: unknown
+  perf_plugins: []
+
+hosting:
+  provider: kinsta
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: unknown
+  gtm_container: unknown
+  google_ads_ids: []
+  other_tags: []
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: Ahrefs site-audit-page-content for / failed (project 10134365 is unverified in Ahrefs; this is the Kinsta staging environment for fenceworksofga.com, hosting provider inferred from the hostname); platform and tracking fields unverified. gsc-pages checked 2026-09-28..2026-10-26.

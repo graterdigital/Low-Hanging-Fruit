@@ -1,0 +1,49 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: naturalenclosures
+name: Natural Enclosures
+domain: naturalenclosures.com
+canonical_host: https://naturalenclosures.com
+vertical: home-services
+
+ahrefs:
+  site_audit_project_id: 9704545
+  gsc_connected: yes
+
+platform:
+  cms: static-html
+  wp_version: unknown
+  theme: none (hand-coded static HTML, single style.css, Google Fonts Oswald/Barlow)
+  page_builder: none-detected
+  seo_plugin: none-detected
+  plugins_seen: []
+  image_optimization_plugin: none-detected
+  perf_plugins: []
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-C8LVM3JZRG
+  gtm_container: none-detected
+  google_ads_ids: []
+  other_tags: []
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://naturalenclosures.com/ (project 9704545) with scripts/fingerprint.py on 2026-10-28; no CMS markers found (no wp-content, generator, or SaaS builder strings), so recorded as static-html; gsc-pages returned rows for 2026-09-28..2026-10-26. Fence company in McDonough GA per title tag. Not verified by logging in."

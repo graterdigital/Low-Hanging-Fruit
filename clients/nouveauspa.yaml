@@ -1,0 +1,51 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: nouveauspa
+name: Nouveau Spa
+domain: nouveauspa.com
+canonical_host: https://nouveauspa.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704547
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: Site Kit by Google 1.181.0
+  theme: twentytwentyone-child
+  page_builder: oxygen
+  seo_plugin: yoast
+  plugins_seen: [akismet, google-site-kit, hide-price-add-to-cart-button, responsive-menu, woocommerce, woocommerce-payments, wp-dlm-faq, wp-popups-lite, wt-woocommerce-gift-cards]
+  image_optimization_plugin: none-detected
+  perf_plugins: [nitropack]
+  schema_types_seen: [AggregateRating, BreadcrumbList, City, EntryPoint, GeoCoordinates, HealthAndBeautyBusiness, ImageObject, ListItem, Organization, PostalAddress, PropertyValueSpecification, ReadAction, SearchAction, State, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-BSZV02HTD5
+  gtm_container: GTM-PS92ZV2R
+  google_ads_ids: []
+  other_tags: [microsoft-clarity, site-kit]
+  legacy_ua_ids: [UA-122238765-1]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://nouveauspa.com/ (project 9704547) with scripts/fingerprint.py on 2026-10-28; gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Not verified by logging in."

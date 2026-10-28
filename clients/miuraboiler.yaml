@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: miuraboiler
+name: Miura Boiler
+domain: miuraboiler.com
+canonical_host: https://miuraboiler.com
+vertical: b2b-industrial
+
+ahrefs:
+  site_audit_project_id: 9704539
+  gsc_connected: yes
+
+platform:
+  cms: wordpress
+  wp_version: 7.1.2
+  theme: sw-miura-boiler
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [elementor, google-site-kit, link-whisper, nextend-smart-slider3-pro, pdf-embedder, searchwp, simple-banner, the-events-calendar]
+  image_optimization_plugin: none-detected
+  perf_plugins: []
+  schema_types_seen: [BreadcrumbList, EntryPoint, Event, ListItem, Place, PostalAddress, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-54YPGPKFLB
+  gtm_container: GTM-N2TH2DR
+  google_ads_ids: [AW-1474914107]
+  other_tags: [site-kit]
+  consent_mode: default-seen
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://miuraboiler.com/ (project 9704539) with scripts/fingerprint.py on 2026-10-28 (homepage has no H1); gsc-pages returned rows for 2026-09-28..2026-10-26. Not verified by logging in."

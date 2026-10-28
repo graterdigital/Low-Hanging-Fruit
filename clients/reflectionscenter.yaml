@@ -1,0 +1,53 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: reflectionscenter
+name: Reflections Center
+domain: reflectionscenter.com
+canonical_host: https://www.reflectionscenter.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704548
+  gsc_connected: yes
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: twentytwentyone-child
+  page_builder: block-editor
+  seo_plugin: yoast
+  plugins_seen: [menu-image, molongui-authorship, responsive-menu, wp-dlm-faq, wp-popups-lite, perfmatters]
+  image_optimization_plugin: none-detected
+  perf_plugins: [perfmatters]
+  schema_notes: rich LocalBusiness/Service/OfferCatalog JSON-LD on the home page alongside the Yoast graph
+  template_notes: site resolves on www; the bare host is not in the crawl. WP Engine hosting inferred from asset hints
+
+hosting:
+  provider: wpengine
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-24E94Y8YXM
+  gtm_container: GTM-MBBGGW
+  google_ads_ids: [AW-1071921026]
+  other_tags: [meta-pixel, callrail, microsoft-clarity, hotjar, hubspot]
+  ua_ids: [UA-6196442-1]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: Fingerprint of raw HTML of https://www.reflectionscenter.com/ (the bare-host URL was not in the crawl) from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.

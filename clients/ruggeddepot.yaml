@@ -1,0 +1,52 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: ruggeddepot
+name: Rugged Depot
+domain: ruggeddepot.com
+canonical_host: https://ruggeddepot.com
+vertical: ecommerce
+
+ahrefs:
+  site_audit_project_id: 9704549
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: 7.1.2
+  theme: ruggeddepotoverhaul
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [cookie-law-info, gravityforms, gravityformsrecaptcha, handl-utm-grabber-v3, megamenu, woocommerce, woocommerce-avatax, woocommerce-tax-exempt-plugin, wt-woocommerce-related-products, yith-woocommerce-advanced-product-options-premium, yith-woocommerce-request-a-quote-premium]
+  image_optimization_plugin: none-detected
+  perf_plugins: [wp-rocket]
+  schema_notes: MerchantReturnPolicy in the home-page JSON-LD alongside the Yoast graph
+  template_notes: WooCommerce store; GA4 presumably fires from GTM-T9M284N5 (no G- id in raw HTML)
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: none-detected
+  gtm_container: GTM-T9M284N5
+  google_ads_ids: []
+  other_tags: [microsoft-clarity, hubspot, cookie-law-info]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: Fingerprint of raw HTML of https://ruggeddepot.com/ from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.

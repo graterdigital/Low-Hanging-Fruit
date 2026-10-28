@@ -1,0 +1,51 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: skynbaratlanta
+name: Skyn Bar Atlanta
+domain: skynbaratlanta.com
+canonical_host: https://skynbaratlanta.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704551
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: skynbar
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [custom-financing-widget, elementor, elementor-pro, megamenu, wp-popups-lite, google-site-kit]
+  image_optimization_plugin: none-detected
+  perf_plugins: [nitropack]
+  template_notes: home page has no <h1>; no GA4/GTM found in raw HTML (NitroPack may defer/inline scripts, so re-check in a browser)
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: none-detected
+  gtm_container: none-detected
+  google_ads_ids: []
+  other_tags: [hubspot]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: Fingerprint of raw HTML of https://skynbaratlanta.com/ from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.

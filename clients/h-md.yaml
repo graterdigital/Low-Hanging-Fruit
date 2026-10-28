@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: h-md
+name: H-MD Medical Spa
+domain: h-md.com
+canonical_host: https://h-md.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704536
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: Site Kit by Google 1.188.0
+  theme: hmdmedicalspa
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [custom-financing-widget, elementor, elementor-pro, google-site-kit, gravityforms, wp-popups-lite]   # site-kit inferred from generator meta
+  image_optimization_plugin: none-detected
+  perf_plugins: []
+  schema_types_seen: [BreadcrumbList, EntryPoint, ImageObject, ListItem, Organization, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: none-detected   # no gtag snippet in raw HTML despite Site Kit being active; verify in GTM/Site Kit
+  gtm_container: none-detected
+  google_ads_ids: []
+  other_tags: [hubspot]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://h-md.com/ (project 9704536) with scripts/fingerprint.py on 2026-10-28; Site Kit generator meta is present but no gtag/GTM/GA4 snippet appears in the raw HTML (only a googletagmanager dns-prefetch), so analytics may be injected client-side or missing entirely; gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Med spa in Oklahoma City per title tag. Not verified by logging in."

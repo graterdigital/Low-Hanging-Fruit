@@ -1,0 +1,51 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: meshautomationinc
+name: Mesh Automation
+domain: meshautomationinc.com
+canonical_host: https://meshautomationinc.com
+vertical: b2b-industrial
+
+ahrefs:
+  site_audit_project_id: 9704540
+  gsc_connected: yes
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: Site Kit by Google 1.188.0
+  theme: mesh
+  page_builder: block-editor
+  seo_plugin: yoast
+  plugins_seen: [akismet, foobox-image-lightbox, gf-form-multicolumn, google-listings-and-ads, gravityforms, handl-utm-grabber-v3, masterslider, megamenu, simple-banner, woocommerce, yith-woocommerce-brands-add-on, yith-woocommerce-request-a-quote-premium]
+  image_optimization_plugin: none-detected
+  perf_plugins: [wp-rocket]
+  schema_types_seen: [BreadcrumbList, EntryPoint, ListItem, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-RFZVKPZM1X
+  gtm_container: GTM-NZXJTMR
+  google_ads_ids: [AW-10799773093, AW-17728184078]
+  other_tags: [callrail, microsoft-clarity]
+  legacy_ua_ids: [UA-86500331-1]
+  consent_mode: default-seen
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://meshautomationinc.com/ (project 9704540) with scripts/fingerprint.py on 2026-10-28 (homepage has no H1; two Google Ads conversion IDs seen); gsc-pages returned rows for 2026-09-28..2026-10-26. Not verified by logging in."

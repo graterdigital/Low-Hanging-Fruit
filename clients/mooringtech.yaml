@@ -1,0 +1,49 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: mooringtech
+name: Mooring Tech
+domain: mooringtech.com
+canonical_host: https://mooringtech.com
+vertical: unknown
+
+ahrefs:
+  site_audit_project_id: 9704542
+  gsc_connected: yes
+
+platform:
+  cms: unknown
+  wp_version: unknown
+  theme: unknown
+  page_builder: unknown
+  seo_plugin: unknown
+  plugins_seen: []
+  image_optimization_plugin: unknown
+  perf_plugins: []
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: unknown
+  gtm_container: unknown
+  google_ads_ids: []
+  other_tags: []
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Ahrefs site-audit-page-content (project 9704542) returned 'The requested page content is unavailable in the crawl for the given date' for both https://mooringtech.com/ and https://www.mooringtech.com/ on 2026-10-28, so platform and tracking fields were not fingerprinted; gsc-pages returned rows for 2026-09-28..2026-10-26 (homepage ranks for 'mooring tech'). Not verified by logging in."

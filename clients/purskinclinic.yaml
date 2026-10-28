@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: purskinclinic
+name: PUR Skin Clinic
+domain: purskinclinic.com
+canonical_host: https://www.purskinclinic.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704546
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: Site Kit by Google 1.183.0
+  theme: purskin
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [elementor, megamenu, megamenu-pro]
+  image_optimization_plugin: none-detected
+  perf_plugins: [nitropack, wp-engine]
+  schema_types_seen: [BreadcrumbList, EntryPoint, ImageObject, ListItem, Organization, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
+
+hosting:
+  provider: wpengine
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-GV152L8QM2
+  gtm_container: GTM-PLLFMZ9
+  google_ads_ids: []
+  other_tags: [microsoft-clarity, hubspot]
+  consent_mode: default-seen
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://www.purskinclinic.com/ (project 9704546) with scripts/fingerprint.py on 2026-10-28; gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Not verified by logging in."

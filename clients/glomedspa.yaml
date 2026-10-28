@@ -1,0 +1,51 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: glomedspa
+name: Glo Med Spa
+domain: glomedspa.com
+canonical_host: https://glomedspa.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704537
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: All in One SEO (AIOSEO) 5.0.2
+  theme: divi
+  page_builder: divi
+  seo_plugin: aioseo
+  plugins_seen: [cookie-law-info, custom-financing-widget, google-site-kit, gravityforms, supreme-modules-for-divi, wp-popups-lite]
+  image_optimization_plugin: none-detected
+  perf_plugins: []
+  schema_types_seen: [BreadcrumbList, ImageObject, ListItem, Organization, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: unknown   # Site Kit loads Google tag GT-PJWB343; the G- ID resolves server-side
+  google_tag_id: GT-PJWB343
+  gtm_container: none-detected   # Google tag GT-PJWB343 via Site Kit (gtag.js), not a GTM container
+  google_ads_ids: []
+  other_tags: [meta-pixel, hubspot, site-kit]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://glomedspa.com/ (project 9704537) with scripts/fingerprint.py on 2026-10-28; page is Divi-built (et_pb_ markup dominates, residual Elementor CSS classes only), homepage has no H1, and Site Kit loads Google tag GT-PJWB343 instead of a G- ID; gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Not verified by logging in."

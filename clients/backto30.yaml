@@ -1,0 +1,49 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: backto30
+name: Back To 30
+domain: backto30.com
+canonical_host: https://backto30.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704525
+  gsc_connected: no
+
+platform:
+  cms: static-html
+  wp_version: unknown
+  theme: none (hand-coded)
+  page_builder: none-detected
+  seo_plugin: none-detected
+  plugins_seen: []
+  image_optimization_plugin: n/a
+  perf_plugins: []
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: [G-966G0YGJTE, G-YCZ61B1C1D]
+  gtm_container: none-detected
+  google_ads_ids: [AW-628999733, AW-855413366]
+  other_tags: [hubspot]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Ahrefs Site Audit raw HTML of https://backto30.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Homepage is a hand-coded static HTML site (no wp-content, single assets/js/site.js, no generator meta), not WordPress; two GA4 IDs and two Google Ads IDs fire with gtag consent default set; Zenoti booking links; HubSpot offer subdomain hsoffer.backto30.com."

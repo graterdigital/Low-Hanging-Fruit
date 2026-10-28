@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: newradiancenow
+name: New Radiance Now
+domain: newradiancenow.com
+canonical_host: https://newradiancenow.com
+vertical: medical-spa
+
+ahrefs:
+  site_audit_project_id: 9704544
+  gsc_connected: yes
+
+platform:
+  cms: wordpress
+  wp_version: unknown   # generator meta: Site Kit by Google 1.190.0
+  theme: twentytwentyone-child
+  page_builder: block-editor
+  seo_plugin: yoast
+  plugins_seen: [akismet, google-site-kit, gravityforms, gtranslate, instagram-feed, responsive-menu, wp-dlm-faq, wp-popups-lite]
+  image_optimization_plugin: none-detected
+  perf_plugins: []
+  schema_types_seen: [BreadcrumbList, City, CollegeOrUniversity, EducationalOccupationalCredential, EntryPoint, GeoCoordinates, Hospital, ImageObject, ListItem, MedicalOrganization, Organization, PostalAddress, ReadAction, SearchAction, State, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-TBP679T6FT
+  gtm_container: [GTM-KQCN8XBJ, GTM-NZSJ7P7]
+  google_ads_ids: [AW-541151662]
+  other_tags: [microsoft-clarity, hubspot, site-kit]
+  consent_mode: default-seen
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://newradiancenow.com/ (project 9704544) with scripts/fingerprint.py on 2026-10-28 (two GTM containers seen on the homepage); gsc-pages returned rows for 2026-09-28..2026-10-26. Not verified by logging in."

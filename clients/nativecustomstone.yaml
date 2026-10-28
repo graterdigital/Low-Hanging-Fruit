@@ -1,0 +1,50 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: nativecustomstone
+name: Native Custom Stone
+domain: nativecustomstone.com
+canonical_host: https://www.nativecustomstone.com
+vertical: ecommerce
+
+ahrefs:
+  site_audit_project_id: 9704543
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: 7.1.3
+  theme: nativecustomstone
+  page_builder: elementor
+  seo_plugin: yoast
+  plugins_seen: [business-reviews-bundle, elementor, elementor-pro, google-site-kit, gravityforms, gravityformsrecaptcha, woocommerce, wp-google-maps]
+  image_optimization_plugin: none-detected
+  perf_plugins: [wp-rocket]
+  schema_types_seen: [BreadcrumbList, EntryPoint, ImageObject, ListItem, Organization, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite]
+
+hosting:
+  provider: unknown
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-CXVXBZ9VFT
+  gtm_container: none-detected
+  google_ads_ids: []
+  other_tags: [site-kit]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://www.nativecustomstone.com/ (project 9704543) with scripts/fingerprint.py on 2026-10-28 (WooCommerce present; stone veneer manufacturer, so may be ecommerce/b2b hybrid); gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Not verified by logging in."

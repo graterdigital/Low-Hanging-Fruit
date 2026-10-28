@@ -1,0 +1,49 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: dermguy
+name: Dermguy
+domain: dermguy.com
+canonical_host: https://dermguy.com
+vertical: dermatology
+
+ahrefs:
+  site_audit_project_id: 9704523
+  gsc_connected: no
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: dermguy
+  page_builder: wpbakery
+  seo_plugin: yoast
+  plugins_seen: [ba-plus-before-after-image-slider-free, custom-css-js-php, js_composer, logo-carousel-free, megamenu, molongui-authorship, nimble-portfolio, responsive-menu, wp-popups-lite, wp-video-lightbox]
+  image_optimization_plugin: none-detected
+  perf_plugins: [nitropack, wp-engine]
+
+hosting:
+  provider: wpengine
+  access: unknown
+  ssh_alias: unknown
+  staging_environment: unknown
+
+tracking:
+  ga4_measurement_id: G-K6HX6KG9E3
+  gtm_container: [GTM-KQJ5HR7, GTM-NH8SL79F]
+  google_ads_ids: []
+  other_tags: [callrail]
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
+  do_not_touch: []
+  priority_pages: []
+
+evidence:
+  last_checked: 2026-10-28
+  basis: "Ahrefs Site Audit raw HTML of https://dermguy.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Main Line Center for Laser Surgery (Ardmore/Philadelphia dermatology); two GTM containers on the homepage; homepage has no <h1>; Site Kit generator meta 1.178.0 but plugin path not seen; NitroPack active."
