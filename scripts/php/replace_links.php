@@ -1,134 +1,154 @@
 <?php
 /**
  * Rewrite internal links that point at redirecting URLs so they point at the final URL.
- * Runs inside WordPress via `wp eval-file`. Reads a JSON job from the REPLACE_LINKS_JOB constant
- * that the Python runner prepends. Never call this file directly.
+ * Runs inside WordPress via `wp eval-file`; the Python runner prepends the job as REPLACE_LINKS_JOB.
  *
- * Job: {"mode": "dry"|"apply", "host": "hsfamilylaw.com", "swaps": [{"old": "...", "new": "..."}]}
+ * Job: {"mode": "dry"|"apply"|"probe", "host": "example.com", "legacy_hosts": ["old.wpengine.com"],
+ *       "swaps": [{"old": "https://example.com/old/", "new": "https://example.com/new/"}]}
  *
- * Matching is anchored so a URL is only replaced when it is a complete link target:
- *   preceded by a quote or "(" and followed by a quote, ")", "#" or "?".
- * That is what keeps /child-support/ from matching inside /divorce/child-support/,
- * and /contact-us from matching /contact-us/.
- * Both absolute (https://host/path) and root-relative (/path) forms are handled; a relative
- * link stays relative after the swap.
+ * Hosts: links are matched on the live domain, on whatever host this install currently runs on
+ * (staging copies get their own domain), and on any legacy hosts. A matched link keeps the host it
+ * had, except legacy hosts, which become the current host. Only the path changes otherwise.
  *
- * Scope: post_content of every non-revision post, and postmeta values (menus, ACF links).
- * Applies with wp_update_post so WordPress keeps a revision of the previous content.
+ * Anchoring: a URL is replaced only when it is a complete link target (between quotes/parens, or a whole
+ * string value inside serialized/JSON data). /child-support/ never matches inside /divorce/child-support/.
+ * Forms handled: absolute, root-relative, JSON-escaped (https:\/\/...), and PHP-serialized values
+ * (ACF link/url fields), which are unserialized, rewritten, and reserialized.
+ *
+ * Scope: post_content of non-revision posts, and postmeta values. wp_update_post keeps a revision.
  */
 if (!defined('REPLACE_LINKS_JOB')) { fwrite(STDERR, "no job\n"); exit(1); }
-$job   = json_decode(REPLACE_LINKS_JOB, true);
-$mode  = $job['mode'] ?? 'dry';
-$host  = preg_quote($job['host'], '~');
+$job  = json_decode(REPLACE_LINKS_JOB, true);
+$mode = $job['mode'] ?? 'dry';
 global $wpdb;
 
-$rules = [];
-foreach ($job['swaps'] as $s) {
-    $oldPath = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['old']);
-    $newPath = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['new']);
-    $q = preg_quote($oldPath, '~');
-    // absolute form
-    $rules[] = ['re' => '~(?<=["\'(])https?://(?:www\.)?' . $host . $q . '(?=["\')#?])~', 'to' => $s['new'], 'old' => $s['old']];
-    // root-relative form
-    $rules[] = ['re' => '~(?<=["\'(])' . $q . '(?=["\')#?])~', 'to' => $newPath, 'old' => $s['old']];
-    // JSON-escaped forms, as stored in block-editor comments and ACF block data: https:\/\/host\/path\/ inside \"...\"
-    $qj = preg_quote(str_replace('/', '\\/', $oldPath), '~');
-    $newJ = str_replace('/', '\\/', $s['new']); $newPathJ = str_replace('/', '\\/', $newPath);
-    $rules[] = ['re' => '~(?<=\\")https?:\\\\/\\\\/(?:www\\.)?' . $host . $qj . '(?=\\\\?["#?])~', 'to' => $newJ, 'old' => $s['old']];
-    $rules[] = ['re' => '~(?<=\\")' . $qj . '(?=\\\\?["#?])~', 'to' => $newPathJ, 'old' => $s['old']];
+$home_host   = parse_url(home_url(), PHP_URL_HOST);
+$live_host   = $job['host'];
+$legacy      = array_values(array_filter($job['legacy_hosts'] ?? []));
+$all_hosts   = array_unique(array_merge([$live_host, $home_host], $legacy));
+$hosts_re    = '(?:www\.)?(?:' . implode('|', array_map(fn($h) => preg_quote(preg_replace('~^www\.~', '', $h), '~'), $all_hosts)) . ')';
+$path_of     = fn($u) => preg_replace('~^https?://(www\.)?[^/]+~', '', $u);
+
+$swaps = [];
+foreach ($job['swaps'] as $s) $swaps[] = ['old' => $s['old'], 'oldPath' => $path_of($s['old']), 'newPath' => $path_of($s['new'])];
+
+function target_host($matched_host) {
+    global $legacy, $home_host;
+    $bare = preg_replace('~^www\.~', '', $matched_host);
+    foreach ($legacy as $l) if ($bare === preg_replace('~^www\.~', '', $l)) return $home_host;
+    return $matched_host;
 }
 
-// Probe mode: report every raw occurrence of each old path anywhere in posts, postmeta and options,
-// with context, so unmatched links can be located. Changes nothing.
-if ($mode === 'probe') {
-    $rep = [];
-    foreach ($job['swaps'] as $s) {
-        $path = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['old']);
-        $needles = [$path, str_replace('/', '\\/', $path)];
-        foreach ($needles as $n) {
-            $like = '%' . $wpdb->esc_like($n) . '%';
-            foreach ($wpdb->get_results($wpdb->prepare("SELECT ID, post_type, post_status, post_title, post_content FROM {$wpdb->posts} WHERE post_type<>'revision' AND post_content LIKE %s", $like)) as $r) {
-                foreach (ctx($r->post_content, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "post {$r->ID} ({$r->post_type}/{$r->post_status}) {$r->post_title}", 'ctx' => $c];
-            }
-            foreach ($wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_value LIKE %s", $like)) as $r) {
-                foreach (ctx($r->meta_value, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "postmeta {$r->meta_id} post {$r->post_id} key {$r->meta_key}", 'ctx' => $c];
-            }
-            foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value FROM {$wpdb->options} WHERE option_value LIKE %s", $like)) as $r) {
-                foreach (ctx($r->option_value, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "option {$r->option_name}", 'ctx' => $c];
-            }
-        }
-    }
-    echo "\n===JSON===\n" . json_encode(['mode' => 'probe', 'occurrences' => $rep], JSON_UNESCAPED_SLASHES) . "\n";
-    exit(0);
-}
-function ctx($hay, $needle) {
-    $out = []; $off = 0;
-    while (($i = strpos($hay, $needle, $off)) !== false) {
-        $out[] = substr($hay, max(0, $i - 70), strlen($needle) + 140); $off = $i + strlen($needle);
-        if (count($out) > 5) break;
-    }
-    return $out;
-}
-
-function apply_rules($text, $rules, &$hits) {
-    foreach ($rules as $r) {
+/** Rewrite one string. $hits accumulates counts per old URL. */
+function rewrite($text, &$hits) {
+    global $swaps, $hosts_re, $legacy, $home_host;
+    foreach ($swaps as $s) {
+        $q  = preg_quote($s['oldPath'], '~');
+        $qj = preg_quote(str_replace('/', '\\/', $s['oldPath']), '~');
+        $newJ = str_replace('/', '\\/', $s['newPath']);
         $n = 0;
-        $text = preg_replace($r['re'], $r['to'], $text, -1, $n);
-        if ($n) { $hits[$r['old']] = ($hits[$r['old']] ?? 0) + $n; }
+        // absolute: "https://host/old/"  → same host (or home host for legacy), new path
+        $text = preg_replace_callback('~(?<=["\'(])(https?://)(' . $hosts_re . ')' . $q . '(?=["\')#?])~i',
+            fn($m) => $m[1] . target_host($m[2]) . $s['newPath'], $text, -1, $c); $n += $c;
+        // root-relative: "/old/"
+        $text = preg_replace('~(?<=["\'(])' . $q . '(?=["\')#?])~', $s['newPath'], $text, -1, $c); $n += $c;
+        // JSON-escaped absolute and relative
+        $text = preg_replace_callback('~(?<=\\\\")(https?:\\\\/\\\\/)(' . $hosts_re . ')' . $qj . '(?=\\\\?["#?])~i',
+            fn($m) => $m[1] . target_host($m[2]) . $newJ, $text, -1, $c); $n += $c;
+        $text = preg_replace('~(?<=\\\\")' . $qj . '(?=\\\\?["#?])~', $newJ, $text, -1, $c); $n += $c;
+        if ($n) $hits[$s['old']] = ($hits[$s['old']] ?? 0) + $n;
+    }
+    // Legacy host on an otherwise-correct path: just move it to the current host.
+    foreach ($legacy as $l) {
+        $lq = preg_quote(preg_replace('~^www\.~', '', $l), '~');
+        $text = preg_replace('~(?<=["\'(])(https?://)(?:www\.)?' . $lq . '(?=/)~i', '$1' . $home_host, $text, -1, $c);
+        if ($c) $hits["host:$l"] = ($hits["host:$l"] ?? 0) + $c;
     }
     return $text;
 }
 
-$out = ['mode' => $mode, 'posts' => [], 'meta' => [], 'totals' => []];
+/** Rewrite a scalar that is a whole URL value (serialized/array leaf), not embedded in markup. */
+function rewrite_value($v, &$hits) {
+    global $swaps, $hosts_re, $legacy, $home_host;
+    if (!is_string($v)) return $v;
+    if (preg_match('~^(https?://)(' . $hosts_re . ')(/.*)$~i', $v, $m) || preg_match('~^()()(/[^\s"\']*)$~', $v, $m)) {
+        [$all, $scheme, $host, $path] = $m;
+        foreach ($swaps as $s) {
+            if ($path === $s['oldPath']) { $hits[$s['old']] = ($hits[$s['old']] ?? 0) + 1; return $scheme . ($host ? target_host($host) : '') . $s['newPath']; }
+        }
+        if ($host && target_host($host) !== $host) { $hits["host:$host"] = ($hits["host:$host"] ?? 0) + 1; return $scheme . target_host($host) . $path; }
+        return $v;
+    }
+    return rewrite($v, $hits);   // HTML inside a WYSIWYG field
+}
+function walk($data, &$hits) {
+    if (is_array($data)) { foreach ($data as $k => $v) $data[$k] = walk($v, $hits); return $data; }
+    return rewrite_value($data, $hits);
+}
 
-// Posts
-$ids = $wpdb->get_col("SELECT ID FROM {$wpdb->posts} WHERE post_type NOT IN ('revision','nav_menu_item') AND post_status NOT IN ('trash','auto-draft')");
+// ---- probe: where do the old paths live? (anchored so /x/ doesn't match /y/x/) ----
+if ($mode === 'probe') {
+    $rep = [];
+    foreach ($swaps as $s) {
+        foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $needle) {
+            $like = '%' . $wpdb->esc_like($needle) . '%';
+            $re = '~(?<![\w/\\\\-])' . preg_quote($needle, '~') . '(?![\w-])~';
+            $scan = function($text, $where) use (&$rep, $re, $s) {
+                if (!preg_match_all($re, $text, $mm, PREG_OFFSET_CAPTURE)) return;
+                foreach (array_slice($mm[0], 0, 5) as $m) $rep[] = ['old' => $s['old'], 'where' => $where, 'ctx' => substr($text, max(0, $m[1] - 70), strlen($m[0]) + 140)];
+            };
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT ID, post_type, post_status, post_title, post_content FROM {$wpdb->posts} WHERE post_type NOT IN ('revision','customize_changeset') AND post_content LIKE %s", $like)) as $r)
+                $scan($r->post_content, "post {$r->ID} ({$r->post_type}/{$r->post_status}) {$r->post_title}");
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_value LIKE %s", $like)) as $r)
+                $scan($r->meta_value, "postmeta {$r->meta_id} post {$r->post_id} key {$r->meta_key}");
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value FROM {$wpdb->options} WHERE option_value LIKE %s", $like)) as $r)
+                $scan($r->option_value, "option {$r->option_name}");
+        }
+    }
+    foreach ($legacy as $l) {
+        $like = '%' . $wpdb->esc_like($l) . '%';
+        $n1 = (int)$wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type<>'revision' AND post_content LIKE %s", $like));
+        $n2 = (int)$wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->postmeta} WHERE meta_value LIKE %s", $like));
+        $rep[] = ['old' => "host:$l", 'where' => "$n1 posts, $n2 meta rows reference this legacy host", 'ctx' => ''];
+    }
+    echo "\n===JSON===\n" . json_encode(['mode' => 'probe', 'home_host' => $home_host, 'hosts' => $all_hosts, 'occurrences' => $rep], JSON_UNESCAPED_SLASHES) . "\n";
+    exit(0);
+}
+
+$out = ['mode' => $mode, 'home_host' => $home_host, 'hosts' => $all_hosts, 'posts' => [], 'meta' => [], 'totals' => []];
+$tally = function($hits) use (&$out) { foreach ($hits as $k => $v) $out['totals'][$k] = ($out['totals'][$k] ?? 0) + $v; };
+
+// ---- posts ----
+$ids = $wpdb->get_col("SELECT ID FROM {$wpdb->posts} WHERE post_type NOT IN ('revision','nav_menu_item','customize_changeset') AND post_status NOT IN ('trash','auto-draft')");
 foreach ($ids as $id) {
     $p = get_post($id);
     if (!$p || $p->post_content === '') continue;
-    $hits = [];
-    $new = apply_rules($p->post_content, $rules, $hits);
+    $hits = []; $new = rewrite($p->post_content, $hits);
     if ($new === $p->post_content) continue;
-    $entry = ['id' => (int)$id, 'type' => $p->post_type, 'status' => $p->post_status, 'title' => $p->post_title,
-              'url' => get_permalink($id), 'hits' => $hits, 'before' => $p->post_content, 'after' => $new];
-    if ($mode === 'apply') {
-        $r = wp_update_post(wp_slash(['ID' => $id, 'post_content' => $new]), true);
-        $entry['applied'] = is_wp_error($r) ? 'ERROR: ' . $r->get_error_message() : true;
-    }
-    $out['posts'][] = $entry;
-    foreach ($hits as $k => $v) $out['totals'][$k] = ($out['totals'][$k] ?? 0) + $v;
+    $e = ['id' => (int)$id, 'type' => $p->post_type, 'status' => $p->post_status, 'title' => $p->post_title, 'url' => get_permalink($id), 'hits' => $hits, 'before' => $p->post_content, 'after' => $new];
+    if ($mode === 'apply') { $r = wp_update_post(wp_slash(['ID' => $id, 'post_content' => $new]), true); $e['applied'] = is_wp_error($r) ? 'ERROR: ' . $r->get_error_message() : true; }
+    $out['posts'][] = $e; $tally($hits);
 }
 
-// Postmeta (menu item URLs, ACF link fields). Serialized values are left alone and reported.
-// Any meta value that contains one of the old paths in plain or JSON-escaped form (ACF WYSIWYG, link, URL fields).
+// ---- postmeta: any value containing an old path (plain or JSON-escaped) or a legacy host ----
 $conds = []; $params = [];
-foreach ($job['swaps'] as $s) {
-    $path = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['old']);
-    foreach ([$path, str_replace('/', '\\/', $path)] as $n) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
-}
+foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
+foreach ($legacy as $l) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($l) . '%'; }
 $rows = $wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_key NOT LIKE '\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params));
 foreach ($rows as $m) {
-    if (is_serialized($m->meta_value)) {
-        $hits = [];
-        apply_rules($m->meta_value, $rules, $hits);
-        if ($hits) $out['meta'][] = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'hits' => $hits, 'skipped' => 'serialized value; fix by hand'];
-        continue;
-    }
     $hits = [];
-    $new = apply_rules($m->meta_value, $rules, $hits);
-    // Plain exact-URL values (e.g. _menu_item_url) have no quotes to anchor on; handle them as a whole-value match.
-    if ($new === $m->meta_value) {
-        foreach ($job['swaps'] as $s) {
-            if (rtrim($m->meta_value, '/') === rtrim($s['old'], '/') && $m->meta_value === $s['old']) { $new = $s['new']; $hits[$s['old']] = 1; }
-        }
+    if (is_serialized($m->meta_value)) {
+        $data = maybe_unserialize($m->meta_value);
+        $newData = walk($data, $hits);
+        $new = $hits ? serialize($newData) : $m->meta_value;
+        $kind = 'serialized';
+    } else {
+        $new = rewrite_value($m->meta_value, $hits); $kind = 'plain';
     }
     if ($new === $m->meta_value) continue;
-    $entry = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
-    if ($mode === 'apply') {
-        $entry['applied'] = (bool)$wpdb->update($wpdb->postmeta, ['meta_value' => $new], ['meta_id' => $m->meta_id]);
-    }
-    $out['meta'][] = $entry;
-    foreach ($hits as $k => $v) $out['totals'][$k] = ($out['totals'][$k] ?? 0) + $v;
+    $e = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'kind' => $kind, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
+    if ($mode === 'apply') $e['applied'] = (bool)$wpdb->update($wpdb->postmeta, ['meta_value' => $new], ['meta_id' => $m->meta_id]);
+    $out['meta'][] = $e; $tally($hits);
 }
 
 echo "\n===JSON===\n" . json_encode($out, JSON_UNESCAPED_SLASHES) . "\n";

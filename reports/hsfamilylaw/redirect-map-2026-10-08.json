@@ -3,25 +3,85 @@
   "source": "Ahrefs Site Audit project 9704538, crawl 2026-10-08, issue '3XX redirect' with redirect/final_redirect columns",
   "generated": "2026-10-28",
   "swaps": [
-    {"old": "https://hsfamilylaw.com/child-custody/", "new": "https://hsfamilylaw.com/divorce/child-custody/"},
-    {"old": "https://hsfamilylaw.com/child-support/", "new": "https://hsfamilylaw.com/divorce/child-support/"},
-    {"old": "https://hsfamilylaw.com/collaborative-divorce-attorney/the-process/", "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/", "note": "2-hop chain collapsed to its final page"},
-    {"old": "https://hsfamilylaw.com/collaborative-divorce-attorney/", "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/"},
-    {"old": "https://hsfamilylaw.com/divorce/collaborative-divorce/", "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/"},
-    {"old": "https://hsfamilylaw.com/contact-us", "new": "https://hsfamilylaw.com/contact-us/", "note": "missing trailing slash"},
-    {"old": "https://hsfamilylaw.com/family-law/guardian-ad-litem/", "new": "https://hsfamilylaw.com/family-law/guardian-ad-litem-services/"},
-    {"old": "https://hsfamilylaw.com/divorce/divorce-process/", "new": "https://hsfamilylaw.com/divorce/"},
-    {"old": "https://hsfamilylaw.com/mediation/mediate/", "new": "https://hsfamilylaw.com/mediation/"}
+    {
+      "old": "https://hsfamilylaw.com/child-custody/",
+      "new": "https://hsfamilylaw.com/divorce/child-custody/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/child-support/",
+      "new": "https://hsfamilylaw.com/divorce/child-support/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/collaborative-divorce-attorney/the-process/",
+      "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/",
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://hsfamilylaw.com/collaborative-divorce-attorney/",
+      "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/divorce/collaborative-divorce/",
+      "new": "https://hsfamilylaw.com/divorce/collaborative-divorce-attorney/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/contact-us",
+      "new": "https://hsfamilylaw.com/contact-us/",
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://hsfamilylaw.com/family-law/guardian-ad-litem/",
+      "new": "https://hsfamilylaw.com/family-law/guardian-ad-litem-services/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/divorce/divorce-process/",
+      "new": "https://hsfamilylaw.com/divorce/"
+    },
+    {
+      "old": "https://hsfamilylaw.com/mediation/mediate/",
+      "new": "https://hsfamilylaw.com/mediation/"
+    }
   ],
   "skipped": [
-    {"old": "https://hsfamilylaw.com/collaborative-divorce-attorney/basics-collaborative-approach/", "reason": "redirects to homepage; needs a real target (APPROVE)"},
-    {"old": "https://hsfamilylaw.com/family-law/alimony-modification/", "reason": "redirects to homepage; needs a real target (APPROVE)"},
-    {"old": "https://hsfamilylaw.com/modifications/", "reason": "redirects to homepage; needs a real target (APPROVE)"},
-    {"old": "https://hsfamilylaw.com/mediation/mediation-faqs/", "reason": "redirects to homepage; needs a real target (APPROVE)"},
-    {"old": "https://hsfamilylaw.com/understanding-roles-collaborative-divorce-team/Collaborative%20Divorce%20Team%20Hastings%20Shadmehry", "reason": "broken image path on one post; fix the post by hand (APPROVE)"},
-    {"old": "https://hsfamilylaw.com/podcast/", "reason": "redirects off-site to forwardfacing.com; intentional, leave"},
-    {"pattern": "*/page/1/", "reason": "theme pagination template emits /page/1/; fix in the template, not in content"},
-    {"pattern": "/author/*", "reason": "in the Yoast author sitemap, not in content; disable author archives in Yoast"},
-    {"pattern": "http:// and www. host variants", "reason": "expected canonical redirects"}
-  ]
+    {
+      "old": "https://hsfamilylaw.com/collaborative-divorce-attorney/basics-collaborative-approach/",
+      "reason": "redirects to homepage; needs a real target (APPROVE)"
+    },
+    {
+      "old": "https://hsfamilylaw.com/family-law/alimony-modification/",
+      "reason": "redirects to homepage; needs a real target (APPROVE)"
+    },
+    {
+      "old": "https://hsfamilylaw.com/modifications/",
+      "reason": "redirects to homepage; needs a real target (APPROVE)"
+    },
+    {
+      "old": "https://hsfamilylaw.com/mediation/mediation-faqs/",
+      "reason": "redirects to homepage; needs a real target (APPROVE)"
+    },
+    {
+      "old": "https://hsfamilylaw.com/understanding-roles-collaborative-divorce-team/Collaborative%20Divorce%20Team%20Hastings%20Shadmehry",
+      "reason": "broken image path on one post; fix the post by hand (APPROVE)"
+    },
+    {
+      "old": "https://hsfamilylaw.com/podcast/",
+      "reason": "redirects off-site to forwardfacing.com; intentional, leave"
+    },
+    {
+      "pattern": "*/page/1/",
+      "reason": "theme pagination template emits /page/1/; fix in the template, not in content"
+    },
+    {
+      "pattern": "/author/*",
+      "reason": "in the Yoast author sitemap, not in content; disable author archives in Yoast"
+    },
+    {
+      "pattern": "http:// and www. host variants",
+      "reason": "expected canonical redirects"
+    }
+  ],
+  "legacy_hosts": [
+    "hswlaw.wpengine.com"
+  ],
+  "notes": "legacy_hosts: hostnames found in content by the 2026-10-28 probe that are not the live site; links on them are rewritten to the current host with the same path. hswlaw.wpengine.com is the firm's previous WP Engine install, still linked from FAQ fields on ~10 pages."
 }

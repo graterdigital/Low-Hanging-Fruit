@@ -21,8 +21,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 SKIP_PLUGINS = "handl-utm-grabber-v3"   # prints PHP warnings under CLI; harmless but noisy
 
-def run_remote(alias, mode, host, swaps, webroot="public"):
-    job = json.dumps({"mode": mode, "host": host, "swaps": swaps})
+def run_remote(alias, mode, host, swaps, webroot="public", legacy_hosts=None):
+    job = json.dumps({"mode": mode, "host": host, "swaps": swaps, "legacy_hosts": legacy_hosts or []})
     php = (HERE / "php" / "replace_links.php").read_text(encoding="utf-8")
     # Prepend the job as a constant so the PHP file itself stays generic.
     payload = "<?php define('REPLACE_LINKS_JOB', " + json.dumps(job) + "); ?>" + php
@@ -59,7 +59,8 @@ def main():
         if input().strip() != args.slug: sys.exit("aborted")
 
     if args.probe:
-        res = run_remote(alias, "probe", host, swaps, args.webroot)
+        res = run_remote(alias, "probe", host, swaps, args.webroot, m.get("legacy_hosts"))
+        print(f"Install runs on {res['home_host']}; matching hosts: {', '.join(res['hosts'])}")
         occ = res["occurrences"]
         print(f"PROBE on {args.target} ({alias}): {len(occ)} occurrences")
         by = {}
@@ -72,18 +73,20 @@ def main():
 
     mode = "apply" if args.apply else "dry"
     print(f"{mode.upper()} on {args.target} ({alias}), {len(swaps)} swap rules, webroot {args.webroot}")
-    res = run_remote(alias, mode, host, swaps, args.webroot)
+    res = run_remote(alias, mode, host, swaps, args.webroot, m.get("legacy_hosts"))
+    print(f"Install runs on {res['home_host']}; matching hosts: {', '.join(res['hosts'])}")
 
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
     outdir = ROOT / "changes" / args.slug; outdir.mkdir(parents=True, exist_ok=True)
     log = [f"# fix-redirect-links: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · map `{Path(args.map).name}`", ""]
+    log += [f"Install host `{res['home_host']}`; hosts matched: {', '.join('`'+h+'`' for h in res['hosts'])}. Entries starting `host:` are legacy-host links moved to the current host.", ""]
     log += ["## Totals (replacements per old URL)", ""] + [f"- `{k}` → {v}" for k, v in sorted(res["totals"].items())] + [""]
     log += [f"## Posts changed ({len(res['posts'])})", "", "| ID | type | title | URL | replacements | applied |", "|---|---|---|---|---|---|"]
     for p in res["posts"]:
         log.append(f"| {p['id']} | {p['type']} | {p['title'][:50]} | {p['url']} | {sum(p['hits'].values())} | {p.get('applied', '-')} |")
-    log += ["", f"## Postmeta changed ({len(res['meta'])})", "", "| meta_id | post | key | replacements | note |", "|---|---|---|---|---|"]
+    log += ["", f"## Postmeta changed ({len(res['meta'])})", "", "| meta_id | post | key | kind | replacements | applied |", "|---|---|---|---|---|---|"]
     for mm in res["meta"]:
-        log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {sum(mm['hits'].values())} | {mm.get('skipped') or mm.get('applied', '-')} |")
+        log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {mm.get('kind','')} | {sum(mm['hits'].values())} | {mm.get('applied', '-')} |")
     log += ["", "## Skipped by the map", ""] + [f"- {s.get('old') or s.get('pattern')}: {s['reason']}" for s in m.get("skipped", [])]
     log += ["", "## Rollback", "", "Posts: WordPress kept a revision of each changed post (Posts → edit → Revisions), and the exact before/after content is in `backup/` next to this log.",
             "Postmeta: previous values are in the same backup file."]

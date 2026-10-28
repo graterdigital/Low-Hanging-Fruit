@@ -27,13 +27,15 @@ Skip, with the reason written into the map, when:
 - it's an `http://` or `www.` variant of the site itself. Those redirects are supposed to exist.
 - the old URL looks like a pasted file path (spaces, `%20`, `_files/`). A broken image on one post; fix by hand.
 
-Save the map as JSON with `site`, `source`, `generated`, `swaps` (`old`, `new`, optional `note`) and `skipped` (`old` or `pattern`, `reason`). The skipped list goes into the change log so nobody wonders why those links were left alone.
+Save the map as JSON with `site`, `source`, `generated`, `swaps` (`old`, `new`, optional `note`), `skipped` (`old` or `pattern`, `reason`) and, when the probe finds them, `legacy_hosts`: old hostnames (a previous host's URL, an old domain) still linked from content. Links on a legacy host are moved to the current host with the same path. The skipped list goes into the change log so nobody wonders why those links were left alone.
 
 ## Running it
 
 Everything happens through `scripts/fix_redirect_links.py`, which ships `scripts/php/replace_links.php` to the site over SSH and runs it inside WordPress with `wp eval-file`. The PHP does anchored matching: a URL is replaced only when it is a complete link target (between quotes or parentheses), so `/child-support/` never matches inside `/divorce/child-support/`, and `/contact-us` never matches `/contact-us/`. Absolute and root-relative links are both handled; relative links stay relative.
 
-Run in this order, and stop at any step that looks wrong:
+Staging copies run on their own domain and the host rewrites every absolute link to it, so the matcher accepts the live domain, whatever host the install currently runs on, and the legacy hosts, and a rewritten link keeps the host it had. Serialized ACF link fields are unserialized, rewritten, and reserialized.
+
+Run in this order, and stop at any step that looks wrong. Start with `--probe` on a new site: it lists where each old URL actually appears and reveals legacy hosts and storage forms (ACF fields, builder data) the dry run would otherwise miss.
 
 ```
 python scripts/fix_redirect_links.py <slug> --map reports/<slug>/redirect-map-<date>.json
