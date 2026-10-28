@@ -31,6 +31,43 @@ foreach ($job['swaps'] as $s) {
     $rules[] = ['re' => '~(?<=["\'(])https?://(?:www\.)?' . $host . $q . '(?=["\')#?])~', 'to' => $s['new'], 'old' => $s['old']];
     // root-relative form
     $rules[] = ['re' => '~(?<=["\'(])' . $q . '(?=["\')#?])~', 'to' => $newPath, 'old' => $s['old']];
+    // JSON-escaped forms, as stored in block-editor comments and ACF block data: https:\/\/host\/path\/ inside \"...\"
+    $qj = preg_quote(str_replace('/', '\\/', $oldPath), '~');
+    $newJ = str_replace('/', '\\/', $s['new']); $newPathJ = str_replace('/', '\\/', $newPath);
+    $rules[] = ['re' => '~(?<=\\")https?:\\\\/\\\\/(?:www\\.)?' . $host . $qj . '(?=\\\\?["#?])~', 'to' => $newJ, 'old' => $s['old']];
+    $rules[] = ['re' => '~(?<=\\")' . $qj . '(?=\\\\?["#?])~', 'to' => $newPathJ, 'old' => $s['old']];
+}
+
+// Probe mode: report every raw occurrence of each old path anywhere in posts, postmeta and options,
+// with context, so unmatched links can be located. Changes nothing.
+if ($mode === 'probe') {
+    $rep = [];
+    foreach ($job['swaps'] as $s) {
+        $path = preg_replace('~^https?://(www\.)?[^/]+~', '', $s['old']);
+        $needles = [$path, str_replace('/', '\\/', $path)];
+        foreach ($needles as $n) {
+            $like = '%' . $wpdb->esc_like($n) . '%';
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT ID, post_type, post_status, post_title, post_content FROM {$wpdb->posts} WHERE post_type<>'revision' AND post_content LIKE %s", $like)) as $r) {
+                foreach (ctx($r->post_content, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "post {$r->ID} ({$r->post_type}/{$r->post_status}) {$r->post_title}", 'ctx' => $c];
+            }
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_value LIKE %s", $like)) as $r) {
+                foreach (ctx($r->meta_value, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "postmeta {$r->meta_id} post {$r->post_id} key {$r->meta_key}", 'ctx' => $c];
+            }
+            foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value FROM {$wpdb->options} WHERE option_value LIKE %s", $like)) as $r) {
+                foreach (ctx($r->option_value, $n) as $c) $rep[] = ['old' => $s['old'], 'where' => "option {$r->option_name}", 'ctx' => $c];
+            }
+        }
+    }
+    echo "\n===JSON===\n" . json_encode(['mode' => 'probe', 'occurrences' => $rep], JSON_UNESCAPED_SLASHES) . "\n";
+    exit(0);
+}
+function ctx($hay, $needle) {
+    $out = []; $off = 0;
+    while (($i = strpos($hay, $needle, $off)) !== false) {
+        $out[] = substr($hay, max(0, $i - 70), strlen($needle) + 140); $off = $i + strlen($needle);
+        if (count($out) > 5) break;
+    }
+    return $out;
 }
 
 function apply_rules($text, $rules, &$hits) {

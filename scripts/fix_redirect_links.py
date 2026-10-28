@@ -39,6 +39,7 @@ def main():
     ap.add_argument("--map", required=True, help="redirect map JSON (see reports/<slug>/redirect-map-*.json)")
     ap.add_argument("--target", choices=["staging", "live"], default="staging")
     ap.add_argument("--apply", action="store_true", help="write changes; default is dry run")
+    ap.add_argument("--probe", action="store_true", help="locate every raw occurrence of each old URL (posts, meta, options) and stop; changes nothing")
     ap.add_argument("--webroot", default="public", help="path to WordPress relative to the SSH login dir (Kinsta: public; WP Engine: sites/<install>)")
     args = ap.parse_args()
 
@@ -56,6 +57,18 @@ def main():
     if args.target == "live" and args.apply:
         print(f"About to APPLY {len(swaps)} link swaps on LIVE ({alias}). Type the slug to confirm: ", end="", flush=True)
         if input().strip() != args.slug: sys.exit("aborted")
+
+    if args.probe:
+        res = run_remote(alias, "probe", host, swaps, args.webroot)
+        occ = res["occurrences"]
+        print(f"PROBE on {args.target} ({alias}): {len(occ)} occurrences")
+        by = {}
+        for o in occ: by.setdefault(o["old"], []).append(o)
+        for s_ in swaps:
+            items = by.get(s_["old"], [])
+            print(f"\n== {s_['old']}  ({len(items)} found)")
+            for o in items: print(f"   {o['where']}\n      …{o['ctx'].replace(chr(10),' ')}…")
+        return
 
     mode = "apply" if args.apply else "dry"
     print(f"{mode.upper()} on {args.target} ({alias}), {len(swaps)} swap rules, webroot {args.webroot}")
