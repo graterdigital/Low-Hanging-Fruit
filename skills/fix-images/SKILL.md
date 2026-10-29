@@ -10,10 +10,10 @@ Three different problems hide under "images" in an audit, and they need three di
 | Problem | What Ahrefs calls it | Tier | What this skill does |
 |---|---|---|---|
 | Oversized originals (multi-MB PNGs, 4000px headshots shown at 400px) | Image file size too large | **AUTO** | Pull, compress and resize on your machine, push back under the same name, regenerate thumbnails. Nothing a visitor reads changes. |
-| Images with no `alt` | Missing alt text | **APPROVE** | Find every `<img>` without alt (Ahrefs only gives per-page counts) and list them with page, source and context. A human writes the text. |
+| Images with no `alt` | Missing alt text | **APPROVE** | Find every `<img>` without alt (Ahrefs only gives per-page counts), put them in a CSV with drafted text, a human reviews, the skill writes it back. |
 | Broken or redirected image sources | Image broken, Image redirects, Page has broken/redirected image | **APPROVE** | List them per page. These are re-uploads or removals, done by hand. |
 
-Not this skill: converting to WebP/AVIF and swapping references (that is a delivery concern; a plugin or the host does it from the originals this skill shrinks), lazy-loading, `width`/`height` attributes, theme CSS images.
+Not this skill: converting to WebP/AVIF and swapping references (that is a delivery concern; a plugin or the host does it from the originals this skill shrinks), lazy-loading, `width`/`height` attributes, theme CSS images, writing the alt text itself (a human does, in the sheet).
 
 ## Why "in place, same format"
 
@@ -65,12 +65,25 @@ Apply pushes the compressed files back under the same names, deletes any stale W
 
 Commit the `changes/<provider>/<slug>/*.md` logs; the `backup/` folders stay local.
 
-## Step 4: hand back the APPROVE work
+## Step 4: alt text (APPROVE, from a reviewed sheet)
 
-From the probe report:
-- **Alt text list** → the user (or a content person) fills in text per row. Writing it back is `alt-text-apply` (not built yet): `_wp_attachment_image_alt` for featured images, and an attribute insert into the exact `<img>` tag for inline ones, under the usual dry/apply/log contract.
-- **Broken and redirected images** → per page, by hand: re-upload the file, replace the `src`, add alt.
-- **Delivery** → if no WebP plugin is active, recommend one (or Kinsta's/WP Engine's built-in conversion). Not installed by this skill.
+```
+python scripts/fix_images.py <slug> --alt-csv
+```
+
+No SSH; builds `changes/<provider>/<slug>/<stamp>-fix-images-alt.csv` from the inventory, one row per image without alt, sorted by tier: **A** alt attribute absent on a published page (what Ahrefs counts), **C** featured images whose attachment has no alt (one attachment field fixes every use), **B** `alt=""` inline on published pages (valid-decorative by HTML rules, usually just unfilled), **D** unpublished (left blank, never applied). `new_alt` is prefilled with a draft; `note` says where the draft came from. The drafts are written from the page topic and file name, not from seeing the picture, so the review is real work, not a rubber stamp: open the page, look at the image, fix the text. Blank `new_alt` to skip a row. Leave decorative images (logos, icons, divider art) blank. Alt text is short, describes what the picture shows, and never starts with "image of"; no keyword stuffing.
+
+```
+python scripts/fix_images.py <slug> --alt-apply changes/<provider>/<slug>/<stamp>-fix-images-alt.csv
+python scripts/fix_images.py <slug> --alt-apply <csv> --apply
+python scripts/fix_images.py <slug> --alt-apply <csv> --target live --apply
+```
+
+Ships `scripts/php/apply_alt.php` with the rows that have `new_alt`. Featured images: `_wp_attachment_image_alt` on the attachment. Inline: every `<img>` in that post (or that ACF meta row) whose `src` path matches gets `alt="..."` (replaced if present, inserted after `<img` if not); the host part of `src` is ignored, so a sheet built on staging applies to live. `wp_update_post` keeps a revision. Log: `<stamp>-fix-images-alt-<target>-<dry|apply>.md`; previous values in `backup/`. A dry run that reports "no <img> with that src found" means the content changed since the probe or the alt was already set; re-probe.
+
+Broken and redirected images (pasted web pages, dead thumbnails) are not alt work: the sheet marks them "remove by hand" and leaves `new_alt` blank.
+
+If no WebP delivery exists on the site, say so in the handoff; on Kinsta, turn on CDN image optimization in MyKinsta rather than installing a plugin (WebP Express's rewrite rules do nothing on Nginx).
 
 ## After
 

@@ -9,6 +9,9 @@
 Inputs: clients/<slug>.yaml (SSH aliases, provider, domain) and the Ahrefs Site Audit "Image file size too large" issue
 (AHREFS_API_KEY in .env), cached in reports/<slug>/image-inventory-<crawl-date>.json after --probe (--inventory to pick one).
 Compression runs on this machine: pngquant + oxipng/optipng when on PATH, else Pillow; JPEGs are re-encoded with Pillow.
+    python scripts/fix_images.py <slug> --alt-csv                  # review sheet of every image without alt, with drafted suggestions
+    python scripts/fix_images.py <slug> --alt-apply <csv>           # dry run of the reviewed sheet on staging; add --apply / --target live as above
+
 Anything longer than --max-edge pixels (default 2560, WordPress's own big-image threshold) is resized first.
 A file is only replaced when the result is at least --min-gain percent smaller (default 15). Originals are kept in
 changes/<provider>/<slug>/backup/ (git-ignored). Alt text and broken images are reported, never written, by this script.
@@ -117,6 +120,87 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="65-85", jpeg_qual
     if work != src: Path(work).unlink(missing_ok=True)
     return steps
 
+
+# ---------------------------------------------------------------- alt text
+BRAND_TOKENS = {"waggoner", "hastings", "shadmehry", "hs", "hsfamilylaw", "family", "law", "blog", "featured", "image", "img", "scaled",
+                "stock", "photo", "shutterstock", "pexels", "unsplash", "istock", "edit", "final", "copy", "new", "web", "small", "large", "thumb"}
+
+def alt_tier(a):
+    url = a.get("page_url") or ""
+    if a.get("post_status") not in (None, "publish") or "?p=" in url or "?page_id=" in url: return "D"
+    if a["where"].startswith("featured_image"): return "C"
+    return "A" if a["alt"] is None else "B"
+
+def suggest_alt(a, firm):
+    """A first draft from the page title and the file name. Humans fix it; headshots and generic names are flagged."""
+    src = a.get("src") or ""; title = (a.get("title") or "").strip(" –-|")
+    name = re.sub(r"\.\w+$", "", src.rsplit("/", 1)[-1])
+    name = re.sub(r"-\d+x\d+$", "", name); name = re.sub(r"-e\d{10,}$", "", name)
+    words = [w for w in re.split(r"[-_\s]+", name.lower()) if w and not re.fullmatch(r"\d+|[a-z]\d+|[a-z0-9]{8,}", w)]
+    meaningful = [w for w in words if w not in BRAND_TOKENS]
+    if "/firm/" in (a.get("page_url") or ""):
+        return f"{title}, family law and divorce attorney at {firm}", "headshot"
+    if src.endswith(".svg") or "logo" in name.lower() or "icon" in name.lower():
+        return "", "logo/icon: leave decorative (empty alt) unless it is the only brand mention; skipped"
+    if not re.search(r"\.(jpe?g|png|webp|gif|avif)$", src, re.I):
+        return "", "not an image file name (pasted page junk?); remove the tag by hand, skipped"
+    if len(meaningful) >= 2 and not any(w.startswith("featured") for w in words):
+        phrase = " ".join(meaningful).replace("vs ", "versus ").replace("coparenting", "co-parenting")
+        return phrase[0].upper() + phrase[1:], "from file name; check it describes the picture"
+    return f"Illustration for the article {title}" if title else "", "generic file name: describe the actual picture"
+
+def alt_csv(args, inv, cdir, stamp, firm):
+    rows = []
+    for i, a in enumerate(inv["alt"]):
+        tier = alt_tier(a)
+        m = re.search(r"\(attachment (\d+)\)", a["where"])
+        where = "featured_image" if m else a["where"]
+        sug, note = suggest_alt(a, firm)
+        rows.append({"id": f"r{i+1}", "tier": tier, "post_id": a["post_id"], "page_url": a.get("page_url") or "", "title": a.get("title") or "",
+                     "where": where, "attachment_id": m.group(1) if m else "", "src": a.get("src") or "",
+                     "current_alt": "" if a["alt"] is None else "(empty)", "new_alt": sug if tier != "D" else "", "note": note if tier != "D" else "unpublished; skipped"})
+    order = {"A": 0, "C": 1, "B": 2, "D": 3}
+    rows.sort(key=lambda r: (order[r["tier"]], r["page_url"], r["where"]))
+    out = cdir / f"{stamp}-fix-images-alt.csv"
+    with out.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+    counts = {t: len([r for r in rows if r["tier"] == t]) for t in "ACBD"}
+    print(f"{len(rows)} rows -> {out}\n  A {counts['A']} alt absent · C {counts['C']} featured images · B {counts['B']} empty alt inline · D {counts['D']} unpublished (skipped)")
+    print("Review new_alt (prefilled with a draft; blank it to skip a row), then: python scripts/fix_images.py <slug> --alt-apply " + out.name)
+    return out
+
+def alt_apply(args, alias, provider, host, cdir, stamp):
+    rows = list(csv.DictReader(Path(args.alt_apply).open(encoding="utf-8-sig")))
+    todo = [r for r in rows if (r.get("new_alt") or "").strip() and r["tier"] != "D"]
+    mode = "apply" if args.apply else "dry"
+    print(f"{mode.upper()} alt text on {args.target} ({alias}): {len(todo)} of {len(rows)} rows have new_alt")
+    if args.target == "live" and args.apply: confirm_live(args.slug, len(todo), alias, args.yes)
+    job_rows = [{"id": r["id"], "where": r["where"], "post_id": int(r["post_id"]), "attachment_id": int(r["attachment_id"] or 0),
+                 "src_path": re.sub(r"^(?:https?:)?//[^/]+", "", r["src"].split("?")[0]), "new_alt": r["new_alt"].strip()} for r in todo]
+    php = (HERE / "php" / "apply_alt.php").read_text(encoding="utf-8")
+    payload = ("<?php define('APPLY_ALT_JOB', " + json.dumps(json.dumps({"mode": mode, "rows": job_rows})) + "); ?>" + php).encode("utf-8")
+    code, out, err = ssh(alias, f"cd {args.webroot} && wp --skip-plugins={SKIP_PLUGINS} eval-file -", payload)
+    if "===JSON===" not in out: sys.exit(f"Remote run failed.\nstdout:\n{out[-2000:]}\nstderr:\n{err[-2000:]}")
+    res = json.loads(out.split("===JSON===", 1)[1].strip())
+    by = {r["id"]: r for r in todo}
+    flush = None
+    if mode == "apply":
+        c, o, e = wp(alias, args.webroot, "cache flush"); flush = (c == 0, (o + e).strip())
+    n_change = len([x for x in res["results"] if x["changes"] and not x["note"].startswith("already")])
+    log = [f"# fix-images (alt text): {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · sheet `{Path(args.alt_apply).name}` · install host `{res['home_host']}`", "",
+           f"{len(todo)} rows submitted, {n_change} would change" if mode == "dry" else f"{len(todo)} rows submitted, {len([x for x in res['results'] if x['applied']])} written", "",
+           "| row | tier | page | where | src | new alt | result |", "|---|---|---|---|---|---|---|"]
+    for x in res["results"]:
+        r = by[x["id"]]; status = x["note"] or (("written" if x["applied"] else "FAILED") if mode == "apply" else f"{len(x['changes'])} tag(s) would change")
+        log.append(f"| {x['id']} | {r['tier']} | {r['page_url'].replace('https://','')} | {r['where']} | `{r['src'].rsplit('/',1)[-1][:50]}` | {r['new_alt'].replace('|', '/')} | {status} |")
+        print(f"  {x['id']:5} {r['tier']} {r['where'][:28]:28} {r['src'].rsplit('/',1)[-1][:45]:45} {status}")
+    if flush is not None: log += ["", f"Object cache flush: {flush}"]
+    log += ["", "## Rollback", "", "post_content rows: WordPress kept a revision of each changed post. featured_image and postmeta rows: previous values are in `backup/` next to this log."]
+    lpath = cdir / f"{stamp}-fix-images-alt-{args.target}-{mode}.md"; lpath.write_text("\n".join(log) + "\n", encoding="utf-8")
+    if mode == "apply":
+        bdir = cdir / "backup"; bdir.mkdir(exist_ok=True); (bdir / f"{stamp}-fix-images-alt-{args.target}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+    print(f"\nLog: {lpath}")
+
 # ---------------------------------------------------------------- main
 def confirm_live(slug, n, alias, yes):
     if yes: print(f"APPLY {n} image replacements on LIVE ({alias}) — confirmed by --yes"); return
@@ -140,6 +224,8 @@ def main(argv=None):
     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
+    ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
+    ap.add_argument("--alt-apply", metavar="CSV", help="write the reviewed alt CSV back to the site (dry unless --apply)")
     args = ap.parse_args(argv)
     load_env()
 
@@ -205,6 +291,15 @@ def main(argv=None):
         (rdir / f"images-{crawl}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
         print("\n".join(md[:14])); print(f"\n{len(inv['files'])} files, {fmt(total)}; {len(inv['alt'])} img without alt; {len(inv['broken'])} broken srcs")
         print(f"\nInventory: {jpath}\nReport:    {rdir / f'images-{crawl}.md'}")
+        return
+
+    if args.alt_csv or args.alt_apply:
+        if args.alt_csv:
+            inv_path = Path(args.inventory) if args.inventory else (sorted(rdir.glob("image-inventory-*.json")) or [None])[-1]
+            if not inv_path: sys.exit(f"No inventory for {args.slug}; run with --probe first.")
+            alt_csv(args, json.loads(inv_path.read_text(encoding="utf-8")), cdir, stamp, client.get("name") or host)
+        else:
+            alt_apply(args, alias, provider, host, cdir, stamp)
         return
 
     # ------------------------------------------------------------ dry / apply
