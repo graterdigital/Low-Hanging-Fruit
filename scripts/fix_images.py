@@ -191,8 +191,16 @@ def main(argv=None):
         md += ["", f"Total on disk: {fmt(total)} across {len(inv['files'])} files.", ""]
         noref = [f["path"] for f in inv["files"] if sum(f["refs"].values()) == 0 and not f.get("is_featured_image_of") and not f.get("in_acf_image_fields")]
         if noref: md += ["Referenced nowhere in the database (theme file or CSS, or unused): " + ", ".join(f"`{p}`" for p in noref), ""]
-        md += [f"## Images without alt text ({len(inv['alt'])})", "", "| page | type | where | src | alt |", "|---|---|---|---|---|"]
-        for a in inv["alt"]: md.append(f"| {a.get('page_url') or a['post_id']} | {a.get('post_type')} | {a['where']} | `{(a['src'] or '')[-70:]}` | {'missing' if a['alt'] is None else 'empty'} |")
+        tiers = {"A": "alt attribute absent, published page (this is what Ahrefs counts)", "B": "alt=\"\" inline, published (decorative per HTML; usually just never filled in)",
+                 "C": "featured image whose attachment has no alt (theme outputs alt=\"\"; fix once on the attachment)", "D": "not published (drafts, private): ignore"}
+        md += [f"## Images without alt text ({len(inv['alt'])})", ""]
+        for t, label in tiers.items():
+            rows = [a for a in inv["alt"] if a.get("tier", "A" if a["alt"] is None else "B") == t]
+            md += [f"### Tier {t}: {label} ({len(rows)})", ""]
+            if not rows: md += ["none", ""]; continue
+            md += ["| page | type | where | src | alt |", "|---|---|---|---|---|"]
+            for a in rows: md.append(f"| {a.get('page_url') or a['post_id']} | {a.get('post_type')} | {a['where']} | `{(a['src'] or '')[-70:]}` | {'missing' if a['alt'] is None else 'empty'} |")
+            md.append("")
         md += ["", f"## Broken image sources on this host ({len(inv['broken'])})", ""] + [f"- {b.get('page_url')} · {b['where']} · `{b['src']}`" for b in inv["broken"]]
         (rdir / f"images-{crawl}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
         print("\n".join(md[:14])); print(f"\n{len(inv['files'])} files, {fmt(total)}; {len(inv['alt'])} img without alt; {len(inv['broken'])} broken srcs")
@@ -221,35 +229,57 @@ def main(argv=None):
     remote_base = out.strip()
     if code != 0 or not remote_base.startswith("/"): sys.exit(f"Could not resolve uploads dir on {alias}: {out} ")
     results = []
-    for f in files:
-        rel = re.sub(r"^.*?/uploads/", "", f["path"])
+    def process(rel, attachment_id, kind, max_edge):
+        """Pull one remote file, compress it locally, push it back on apply. Returns the result row."""
         remote = f"{remote_base}/{rel}"
         local_o = bdir / "orig" / Path(rel).name; local_n = bdir / "new" / Path(rel).name
+        row = {"path": rel, "kind": kind, "attachment_id": attachment_id, "remote": remote, "before": None, "after": None, "steps": [], "action": None, "gain_pct": None}
         ok, err = scp(f"{alias}:{remote}", str(local_o))
-        row = {"path": f["path"], "attachment_id": f.get("attachment_id"), "remote": remote, "before": None, "after": None, "steps": [], "action": None}
-        if not ok: row["action"] = f"PULL FAILED: {err}"; results.append(row); print(f"  !! {rel}: pull failed {err}"); continue
+        if not ok: row["action"] = f"PULL FAILED: {err}"; print(f"  !! {rel}: pull failed {err}"); return row
         row["before"] = local_o.stat().st_size
-        row["steps"] = compress(local_o, local_n, args.max_edge, args.png_quality, args.jpeg_quality)
+        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality)
         row["after"] = local_n.stat().st_size
         gain = 100 * (1 - row["after"] / row["before"]) if row["before"] else 0
         row["gain_pct"] = round(gain, 1)
-        if gain < args.min_gain: row["action"] = "kept (gain below threshold)"; results.append(row); print(f"  -- {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%), kept"); continue
+        if gain < args.min_gain: row["action"] = "kept (gain below threshold)"; print(f"  -- {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%), kept"); return row
         if mode == "apply":
             ok, err = scp(str(local_n), f"{alias}:{remote}")
             row["action"] = "replaced" if ok else f"PUSH FAILED: {err}"
         else:
             row["action"] = "would replace"
-        results.append(row); print(f"  {'OK' if 'FAIL' not in row['action'] else '!!'} {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%) {'; '.join(row['steps'])}")
+        print(f"  {'OK' if 'FAIL' not in row['action'] else '!!'} {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%) {'; '.join(row['steps'])}")
+        return row
 
-    regen = flush = cdn = webp_purge = None
+    regenerated = {}
+    for f in files:
+        rel = re.sub(r"^.*?/uploads/", "", f["path"])
+        row = process(rel, f.get("attachment_id"), "original", args.max_edge)
+        results.append(row)
+        if "FAILED" in (row["action"] or ""): continue
+        sizes = f.get("sizes") or {}
+        # Sub-sizes are what pages actually load (the 1024px "large" of a photo-PNG can be 1.5 MB on its own).
+        # WordPress saves resized PNGs as truecolor, so regenerating from a quantized original would NOT shrink them:
+        # compress each existing sub-size file in place too. If the original was resized, regenerate first so the
+        # metadata and any dimension-bound sub-sizes match, then compress whatever files that produced.
+        if any(st.startswith("resized") for st in row["steps"]) and row["action"] == "replaced" and f.get("attachment_id"):
+            code, out, err = wp(alias, args.webroot, f"media regenerate {f['attachment_id']} --yes")
+            regenerated[f["attachment_id"]] = (code == 0, (out + err).strip().splitlines()[-1:])
+            code, out, err = wp(alias, args.webroot, f"post meta get {f['attachment_id']} _wp_attachment_metadata --format=json")
+            try: sizes = json.loads(out).get("sizes", {}) if code == 0 else sizes
+            except json.JSONDecodeError: pass
+        seen = set()
+        for name, sz in sizes.items():
+            fn = sz.get("file") if isinstance(sz, dict) else None
+            if not fn:  # inventory rows only carry w/h/bytes; derive the WordPress name
+                fn = re.sub(r"(\.\w+)$", f"-{sz['w']}x{sz['h']}\\1", Path(rel).name)
+            if fn in seen: continue
+            seen.add(fn)
+            results.append(process(str(Path(rel).parent / fn).replace("\\", "/"), f.get("attachment_id"), f"sub-size {name}", 10 ** 6))
+
+    regen = regenerated or None; flush = cdn = webp_purge = None
     if mode == "apply":
-        ids = sorted({str(r["attachment_id"]) for r in results if r["action"] == "replaced" and r.get("attachment_id")})
-        if ids:
-            code, out, err = wp(alias, args.webroot, f"media regenerate {' '.join(ids)} --yes")
-            regen = (code == 0, (out + err).strip().splitlines()[-1:] )
-            print(f"Regenerate {len(ids)} attachments: {'ok' if code == 0 else 'FAILED'} {regen[1]}")
         # stale WebP Express conversions of the replaced originals and their thumbnails
-        stems = [re.sub(r"\.\w+$", "", re.sub(r"^.*?/uploads/", "", r["path"])) for r in results if r["action"] == "replaced"]
+        stems = sorted({re.sub(r"\.\w+$", "", r["path"]) for r in results if r["action"] == "replaced" and r["kind"] == "original"})
         if stems and inv.get("webp", {}).get("webp-express") == "active":
             finds = " ".join(f"-path '*/{s}*.webp' -o" for s in stems).rstrip(" -o")
             code, out, err = ssh(alias, f"cd {args.webroot} && find wp-content/webp-express wp-content/uploads \\( {finds} \\) -type f -print -delete 2>/dev/null | wc -l")
@@ -263,16 +293,17 @@ def main(argv=None):
     log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · max edge {args.max_edge}px · min gain {args.min_gain}% · PNG {args.png_quality} · JPEG q{args.jpeg_quality}", "",
            f"Tools: pngquant {'yes' if have('pngquant') else 'no (Pillow quantize)'}, oxipng {'yes' if have('oxipng') else 'no'}, optipng {'yes' if have('optipng') else 'no'}, jpegoptim {'yes' if have('jpegoptim') else 'no'}", "",
            f"**{fmt(before)} → {fmt(after)}** across {len(results)} files ({len([r for r in results if r['action'] in ('replaced','would replace')])} {'replaced' if mode=='apply' else 'would be replaced'}).", "",
-           "| file | attachment | before | after | gain | steps | action |", "|---|---|---|---|---|---|---|"]
-    for r in results: log.append(f"| `{r['path']}` | {r['attachment_id'] or '-'} | {fmt(r['before'])} | {fmt(r['after'])} | {r.get('gain_pct','-')}% | {'; '.join(r['steps'])} | {r['action']} |")
+           "| file | kind | attachment | before | after | gain | steps | action |", "|---|---|---|---|---|---|---|---|"]
+    for r in results: log.append(f"| `{r['path']}` | {r['kind']} | {r['attachment_id'] or '-'} | {fmt(r['before'])} | {fmt(r['after'])} | {r.get('gain_pct') if r.get('gain_pct') is not None else '-'}% | {'; '.join(r['steps'])} | {r['action']} |")
     if mode == "apply":
-        log += ["", f"Thumbnails regenerated: {regen}", f"Stale .webp removed: {webp_purge}", f"Object cache flush: {flush}", f"Host/CDN purge: {cdn}"]
+        log += ["", f"Thumbnails regenerated (only where the original was resized): {regen}", f"Stale .webp removed: {webp_purge}", f"Object cache flush: {flush}", f"Host/CDN purge: {cdn}"]
     log += ["", "## Rollback", "", f"Originals are in `backup/{bdir.name}/orig/`. To restore one: `scp backup/.../orig/<name> {alias}:<remote path from the table>` then `wp media regenerate <id> --yes`.",
             "", "## Not done by this run", "", "Alt text and broken/redirected images are in the probe report (`reports/<slug>/images-<crawl>.md`) and are APPROVE-tier, per page."]
     lpath = cdir / f"{stamp}-fix-images-{args.target}-{mode}.md"
     lpath.write_text("\n".join(log) + "\n", encoding="utf-8")
     (bdir / "result.json").write_text(json.dumps(results, indent=1), encoding="utf-8")
-    print(f"\n{fmt(before)} -> {fmt(after)}\nLog: {lpath}\nFiles: {bdir}")
+    n_o = len([r for r in results if r["kind"] == "original"]); n_s = len(results) - n_o
+    print(f"\n{fmt(before)} -> {fmt(after)} across {n_o} originals + {n_s} sub-size files\nLog: {lpath}\nFiles: {bdir}")
 
 if __name__ == "__main__":
     main()

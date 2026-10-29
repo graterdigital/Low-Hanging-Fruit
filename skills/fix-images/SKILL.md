@@ -59,7 +59,9 @@ python scripts/fix_images.py <slug> --apply
 python scripts/fix_images.py <slug> --target live --apply        # type the slug; --yes for vetted unattended runs
 ```
 
-Apply pushes the compressed files back under the same names, runs `wp media regenerate <ids> --yes` for the attachments involved (so thumbnails and `srcset` entries shrink too and the metadata's width/height match the resized original), deletes any stale WebP Express conversions of those files (the plugin remakes them on the next request), flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
+The dry run and apply both work on the original **and every registered sub-size file** of each attachment (the 1024px `large` of a photo saved as PNG is often 1–1.5 MB by itself, and that is what pages actually load). WordPress writes resized PNGs as truecolor, so regenerating thumbnails from a quantized original would not shrink them; each sub-size file is compressed in place instead. `wp media regenerate` runs only when an original had to be resized, so the metadata and dimension-bound sub-sizes match, and the sub-sizes that produces are then compressed too.
+
+Apply pushes the compressed files back under the same names, deletes any stale WebP Express conversions of those files (the plugin remakes them on the next request), flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
 
 Commit the `changes/<provider>/<slug>/*.md` logs; the `backup/` folders stay local.
 
@@ -76,7 +78,7 @@ Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files 
 
 ## Rollback
 
-`backup/<stamp>-fix-images-<target>/orig/` holds every original byte-for-byte. Restore one with `scp` to the remote path shown in the log table, then `wp media regenerate <id> --yes`.
+`backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. Restore one with `scp` to the remote path shown in the log table. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
 
 ## Scope and limits
 

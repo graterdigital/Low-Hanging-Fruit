@@ -91,7 +91,7 @@ foreach ($job['urls'] ?? [] as $url) {
         $row['original_image'] = $meta['original_image'] ?? null;   // set when WP already made a -scaled copy
         foreach (($meta['sizes'] ?? []) as $name => $s) {
             $sf = dirname($file) . '/' . $s['file'];
-            $row['sizes'][$name] = ['w' => $s['width'], 'h' => $s['height'], 'bytes' => file_exists($sf) ? filesize($sf) : null];
+            $row['sizes'][$name] = ['file' => $s['file'], 'w' => $s['width'], 'h' => $s['height'], 'bytes' => file_exists($sf) ? filesize($sf) : null];
         }
         if ($file && file_exists($file)) $row['bytes'] = filesize($file);
         $row['is_featured_image_of'] = (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $wpdb->postmeta WHERE meta_key='_thumbnail_id' AND meta_value=%s", (string) $id));
@@ -139,7 +139,9 @@ foreach ($metas as $mm) scan_imgs($mm->meta_value, "postmeta:{$mm->meta_key}#{$m
 $noalt = $wpdb->get_results("SELECT pm.post_id AS attachment_id, pm.meta_value AS used_by FROM $wpdb->postmeta pm
     WHERE pm.meta_key='_thumbnail_id' AND NOT EXISTS (SELECT 1 FROM $wpdb->postmeta a WHERE a.post_id = pm.meta_value AND a.meta_key='_wp_attachment_image_alt' AND a.meta_value <> '')");
 foreach ($noalt as $r) $out['alt'][] = ['post_id' => (int) $r->attachment_id, 'where' => 'featured_image(attachment ' . $r->used_by . ')', 'src' => wp_get_attachment_url((int) $r->used_by), 'alt' => null, 'tag' => '_wp_attachment_image_alt empty'];
-foreach ($out['alt'] as &$a) { $a['page_url'] = get_permalink($a['post_id']) ?: null; $a['post_type'] = get_post_type($a['post_id']) ?: null; $a['title'] = html_entity_decode(get_the_title($a['post_id'])); }
+foreach ($out['alt'] as &$a) { $a['page_url'] = get_permalink($a['post_id']) ?: null; $a['post_type'] = get_post_type($a['post_id']) ?: null; $a['post_status'] = get_post_status($a['post_id']) ?: null; $a['title'] = html_entity_decode(get_the_title($a['post_id']));
+    // tier: A = alt attribute absent on a published page (what Ahrefs counts); B = alt="" inline (decorative by HTML rules, often just unfilled); C = featured image whose attachment has no alt; D = not published
+    $a['tier'] = $a['post_status'] !== 'publish' ? 'D' : (strpos($a['where'], 'featured_image') === 0 ? 'C' : ($a['alt'] === null ? 'A' : 'B')); }
 unset($a);
 foreach ($out['broken'] as &$b) { $b['page_url'] = get_permalink($b['post_id']) ?: null; }
 unset($b);
