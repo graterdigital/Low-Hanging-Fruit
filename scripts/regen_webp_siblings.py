@@ -18,8 +18,12 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 SKIP = "handl-utm-grabber-v3"
 
-def ssh(alias, cmd):
-    r = subprocess.run(["ssh", alias, cmd], capture_output=True)
+def ssh(alias, cmd, stdin_script=None):
+    """Short commands go as an argument; long ones are piped to `bash -s` (Windows caps the argument length)."""
+    if stdin_script is not None:
+        r = subprocess.run(["ssh", alias, "bash -s"], input=stdin_script.encode("utf-8"), capture_output=True)
+    else:
+        r = subprocess.run(["ssh", alias, cmd], capture_output=True)
     return r.returncode, r.stdout.decode("utf-8", "replace"), r.stderr.decode("utf-8", "replace")
 
 def main():
@@ -57,7 +61,7 @@ def main():
         if naming in ("append", "both"): outs.append(src + ".webp")
         if naming in ("replace", "both"): outs.append(src.rsplit(".", 1)[0] + ".webp")
         for o in outs: cmds.append(f"cwebp -quiet -q {a.quality} '{src}' -o '{o}' && echo OK '{o}' || echo FAIL '{src}'")
-    code, out, err = ssh(alias, " ; ".join(cmds))
+    code, out, err = ssh(alias, None, stdin_script="\n".join(cmds) + "\n")
     ok = out.count("OK "); fail = out.count("FAIL ")
     print(out[-3000:]); print(f"\n{ok} webp written, {fail} failed")
     for c in (f"cd {a.webroot} && wp --skip-plugins={SKIP} cache flush", f"cd {a.webroot} && wp --skip-plugins={SKIP} kinsta cache purge --all"):
