@@ -1,0 +1,68 @@
+# fix-images: restore originals on hsfamilylaw.com (live)
+
+Run 2026-10-29-1640 · alias `hsfamilylaw` · from `2026-10-29-1503-fix-images-live` · filter `andrea-dyer,mali-shadmehry,lisa-malas,cathy-cooper,lily-lutton,nicole-crites,madison-alexander,elizabeth-findley,Jordan-Alexis-Fox,rhonda-smith,Kristy-Seidenberg,sarah-price` · webp siblings rewritten
+
+Restored 62, failed 0.
+
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-400x400.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-1024x1024.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-150x150.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-768x768.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-300x300.png`
+- `2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599-600x600.png`
+- `2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png`
+- `2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/mali-shadmehry-family-law-and-divorce-attorney.png`
+- `2026/04/mali-shadmehry-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/mali-shadmehry-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/mali-shadmehry-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/mali-shadmehry-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/cathy-cooper-family-law-and-divorce-attorney.png`
+- `2026/04/cathy-cooper-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/cathy-cooper-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/cathy-cooper-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/cathy-cooper-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/lily-lutton-family-law-and-divorce-attorney.png`
+- `2026/04/lily-lutton-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/lily-lutton-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/lily-lutton-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/lily-lutton-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/nicole-crites-family-law-and-divorce-attorney.png`
+- `2026/04/nicole-crites-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/nicole-crites-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/nicole-crites-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/nicole-crites-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/lisa-malas-family-law-and-divorce-attorney.png`
+- `2026/04/lisa-malas-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/lisa-malas-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/lisa-malas-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/lisa-malas-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/madison-alexander-family-law-and-divorce-attorney.png`
+- `2026/04/madison-alexander-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/madison-alexander-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/madison-alexander-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/madison-alexander-family-law-and-divorce-attorney-768x768.png`
+- `2026/04/elizabeth-findley-family-law-and-divorce-attorney.png`
+- `2026/04/elizabeth-findley-family-law-and-divorce-attorney-400x400.png`
+- `2026/04/elizabeth-findley-family-law-and-divorce-attorney-1024x1024.png`
+- `2026/04/elizabeth-findley-family-law-and-divorce-attorney-150x150.png`
+- `2026/04/elizabeth-findley-family-law-and-divorce-attorney-768x768.png`
+- `2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry.png`
+- `2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-400x400.png`
+- `2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-1024x1024.png`
+- `2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-150x150.png`
+- `2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-768x768.png`
+- `2026/08/rhonda-smith-attorney-hastings-shadmehry-1.png`
+- `2026/08/rhonda-smith-attorney-hastings-shadmehry-1-400x400.png`
+- `2026/08/rhonda-smith-attorney-hastings-shadmehry-1-1024x1024.png`
+- `2026/08/rhonda-smith-attorney-hastings-shadmehry-1-150x150.png`
+- `2026/08/rhonda-smith-attorney-hastings-shadmehry-1-768x768.png`
+- `2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1.png`
+- `2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1-400x400.png`
+- `2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1-1024x1024.png`
+- `2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1-150x150.png`
+- `2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1-768x768.png`
