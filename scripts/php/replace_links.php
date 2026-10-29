@@ -32,8 +32,16 @@ $all_hosts   = array_values(array_unique(array_merge([$live_host, $home_host], $
 $hosts_re    = '(?:www\.)?(?:' . implode('|', array_map(fn($h) => preg_quote(preg_replace('~^www\.~', '', $h), '~'), $all_hosts)) . ')';
 $path_of     = fn($u) => preg_replace('~^https?://(www\.)?[^/]+~', '', $u);
 
-$swaps = [];
-foreach ($job['swaps'] as $s) $swaps[] = ['old' => $s['old'], 'oldPath' => $path_of($s['old']), 'newPath' => $path_of($s['new'])];
+$swaps = []; $refused = [];
+foreach ($job['swaps'] as $s) {
+    $op = $path_of($s['old']); $np = $path_of($s['new']);
+    // A path with a backslash, quote, space or angle bracket cannot be anchored safely: "/x/\\" matches the escaping
+    // backslash of a JSON-encoded link and the rewrite eats it. Refuse such swaps outright, whatever the map says.
+    if (preg_match('~[\\\\"\'<>\s]~', $op . $np) || $op === '' || $op === '/') { $refused[] = ['old' => $s['old'], 'reason' => 'unsafe characters in path']; continue; }
+    $swaps[] = ['old' => $s['old'], 'oldPath' => $op, 'newPath' => $np];
+}
+/** Valid JSON and not a bare scalar: the shape builder data (Elementor) takes. */
+function is_json_blob($v) { if (!is_string($v) || $v === '' || ($v[0] !== '{' && $v[0] !== '[')) return false; json_decode($v); return json_last_error() === JSON_ERROR_NONE; }
 
 function target_host($matched_host) {
     global $legacy, $home_host;
@@ -119,6 +127,19 @@ function scan_options() {
     return $rep;
 }
 
+// ---- checkjson: is every _elementor_data row still valid JSON? (damage check after a bad run) ----
+if ($mode === 'checkjson') {
+    $bad = []; $n = 0;
+    foreach ($wpdb->get_results("SELECT m.meta_id, m.post_id, p.post_type, p.post_status, p.post_title FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE m.meta_key = '_elementor_data' AND p.post_type <> 'revision'") as $r) {
+        $n++; $v = get_post_meta($r->post_id, '_elementor_data', true);
+        if (!is_string($v) || $v === '' || $v === '[]') continue;
+        json_decode($v);
+        if (json_last_error() !== JSON_ERROR_NONE) $bad[] = ['meta_id' => (int)$r->meta_id, 'post_id' => (int)$r->post_id, 'type' => $r->post_type, 'status' => $r->post_status, 'title' => $r->post_title, 'error' => json_last_error_msg(), 'url' => get_permalink($r->post_id)];
+    }
+    echo "\n===JSON===\n" . json_encode(['mode' => 'checkjson', 'home_host' => $home_host, 'hosts' => $all_hosts, 'checked' => $n, 'invalid' => $bad], JSON_UNESCAPED_SLASHES) . "\n";
+    exit(0);
+}
+
 // ---- probe: where do the old paths live? (anchored so /x/ doesn't match /y/x/) ----
 if ($mode === 'probe') {
     $rep = [];
@@ -148,8 +169,32 @@ if ($mode === 'probe') {
     exit(0);
 }
 
-$out = ['mode' => $mode, 'home_host' => $home_host, 'hosts' => $all_hosts, 'posts' => [], 'meta' => [], 'totals' => [], 'options' => scan_options()];
+$out = ['mode' => $mode, 'home_host' => $home_host, 'hosts' => $all_hosts, 'posts' => [], 'meta' => [], 'totals' => [], 'options' => scan_options(), 'refused' => $refused, 'json_guarded' => []];
 $tally = function($hits) use (&$out) { foreach ($hits as $k => $v) $out['totals'][$k] = ($out['totals'][$k] ?? 0) + $v; };
+
+// ---- postmeta first: any value containing an old path (plain or JSON-escaped) or a legacy host, on non-revision posts.
+// (Meta goes before posts because wp_update_post creates revisions whose copied meta would otherwise be found and counted.)
+$conds = []; $params = [];
+foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) { $conds[] = "m.meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
+foreach ($legacy as $l) { $conds[] = "m.meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($l) . '%'; }
+$rows = $conds ? $wpdb->get_results($wpdb->prepare("SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE p.post_type NOT IN ('revision','customize_changeset') AND m.meta_key NOT LIKE '\\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params)) : [];
+foreach ($rows as $m) {
+    $hits = [];
+    if (is_serialized($m->meta_value)) {
+        $data = maybe_unserialize($m->meta_value);
+        $newData = walk($data, $hits);
+        $new = $hits ? serialize($newData) : $m->meta_value;
+        $kind = 'serialized';
+    } else {
+        $new = rewrite_value($m->meta_value, $hits); $kind = is_json_blob($m->meta_value) ? 'json' : 'plain';
+    }
+    if ($new === $m->meta_value) continue;
+    $e = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'kind' => $kind, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
+    // JSON guard: never turn a valid JSON blob into an invalid one, whatever the swap rules say.
+    if ($kind === 'json' && !is_json_blob($new)) { $e['applied'] = 'GUARDED: rewrite would break JSON'; unset($e['after']); $out['json_guarded'][] = $e; continue; }
+    if ($mode === 'apply') $e['applied'] = (bool)$wpdb->update($wpdb->postmeta, ['meta_value' => $new], ['meta_id' => $m->meta_id]);
+    $out['meta'][] = $e; $tally($hits);
+}
 
 // ---- posts ----
 $ids = $wpdb->get_col("SELECT ID FROM {$wpdb->posts} WHERE post_type NOT IN ('revision','nav_menu_item','customize_changeset') AND post_status NOT IN ('trash','auto-draft')");
@@ -161,27 +206,6 @@ foreach ($ids as $id) {
     $e = ['id' => (int)$id, 'type' => $p->post_type, 'status' => $p->post_status, 'title' => $p->post_title, 'url' => get_permalink($id), 'hits' => $hits, 'before' => $p->post_content, 'after' => $new];
     if ($mode === 'apply') { $r = wp_update_post(wp_slash(['ID' => $id, 'post_content' => $new]), true); $e['applied'] = is_wp_error($r) ? 'ERROR: ' . $r->get_error_message() : true; }
     $out['posts'][] = $e; $tally($hits);
-}
-
-// ---- postmeta: any value containing an old path (plain or JSON-escaped) or a legacy host ----
-$conds = []; $params = [];
-foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
-foreach ($legacy as $l) { $conds[] = "meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($l) . '%'; }
-$rows = $wpdb->get_results($wpdb->prepare("SELECT meta_id, post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_key NOT LIKE '\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params));
-foreach ($rows as $m) {
-    $hits = [];
-    if (is_serialized($m->meta_value)) {
-        $data = maybe_unserialize($m->meta_value);
-        $newData = walk($data, $hits);
-        $new = $hits ? serialize($newData) : $m->meta_value;
-        $kind = 'serialized';
-    } else {
-        $new = rewrite_value($m->meta_value, $hits); $kind = 'plain';
-    }
-    if ($new === $m->meta_value) continue;
-    $e = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'kind' => $kind, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
-    if ($mode === 'apply') $e['applied'] = (bool)$wpdb->update($wpdb->postmeta, ['meta_value' => $new], ['meta_id' => $m->meta_id]);
-    $out['meta'][] = $e; $tally($hits);
 }
 
 echo "\n===JSON===\n" . json_encode($out, JSON_UNESCAPED_SLASHES) . "\n";

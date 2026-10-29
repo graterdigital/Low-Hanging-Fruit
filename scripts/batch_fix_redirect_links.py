@@ -31,8 +31,8 @@ ROOT = HERE.parent
 spec = importlib.util.spec_from_file_location("frl", HERE / "fix_redirect_links.py"); frl = importlib.util.module_from_spec(spec); spec.loader.exec_module(frl)
 
 class Args:  # minimal stand-in for the argparse namespace fix_redirect_links.run() expects
-    def __init__(self, slug, target, apply=False, probe=False, map=None):
-        self.slug, self.target, self.apply, self.probe, self.map = slug, target, apply, probe, map
+    def __init__(self, slug, target, apply=False, probe=False, map=None, checkjson=False):
+        self.slug, self.target, self.apply, self.probe, self.map, self.checkjson = slug, target, apply, probe, map, checkjson
         self.webroot, self.yes = "public", True
 
 def clients_for(provider, only, skip):
@@ -106,6 +106,9 @@ def main():
                     unmatched = [s["old"] for s in m["swaps"] if s["old"] not in dry["totals"]]
                     if unmatched: row["notes"].append(f"{len(unmatched)} swap(s) had no hits on staging (theme/builder/already fixed): " + ", ".join(unmatched[:3]) + (" ..." if len(unmatched) > 3 else ""))
                     if dry.get("options"): row["notes"].append(f"{len(dry['options'])} wp_options row(s) still reference old URLs; see the -options.md log")
+                    if dry.get("refused_n"): row["notes"].append(f"{dry['refused_n']} swap(s) refused for unsafe characters (see log)")
+                    if dry.get("guarded"):
+                        row["status"] = "json guard tripped"; row["notes"].append(f"{dry['guarded']} meta row(s) would break JSON; nothing applied, see log"); continue
                     if stage_counts[2] == 0:
                         row["staging"] = "0 hits"; row["notes"].append("staging dry run found nothing: staging already fixed, or links live outside post content")
                     else:
@@ -113,6 +116,11 @@ def main():
                         row["staging"] = f"{counts(app)[0]}p/{counts(app)[1]}m/{counts(app)[2]}r"
                         if app["errors"] or app.get("flushed") is False:
                             row["status"] = "staging apply errors"; row["notes"].append(f"{app['errors']} save errors, flush={app.get('flushed')}"); continue
+                        if str((c.get("platform") or {}).get("page_builder", "")).lower() == "elementor":
+                            cj = frl.run(Args(slug, "staging", map=str(mp), checkjson=True))
+                            if cj["errors"]:
+                                row["status"] = "elementor json invalid"; row["notes"].append(f"{cj['errors']} _elementor_data row(s) invalid on staging after apply; restore and investigate"); continue
+                            row["notes"].append(f"elementor json ok ({cj['checked']} rows)")
             if not a.live:
                 row["status"] = "staged" if row["staging"] != "-" else "map built"; continue
 
@@ -120,6 +128,8 @@ def main():
             lc = counts(ldry)
             if lc[2] == 0:
                 row["live"] = "0 hits"; row["status"] = "live already clean"; continue
+            if ldry.get("guarded"):
+                row["status"] = "json guard tripped (live)"; row["notes"].append(f"{ldry['guarded']} meta row(s) would break JSON on live; nothing applied"); continue
             if stage_counts and not (within(stage_counts[0], lc[0], a.tolerance) and within(stage_counts[1], lc[1], a.tolerance)):
                 row["status"] = "live/staging mismatch"; row["notes"].append(f"staging dry {stage_counts[0]}p/{stage_counts[1]}m vs live dry {lc[0]}p/{lc[1]}m; staging may be stale"); continue
             lapp = frl.run(Args(slug, "live", apply=True, map=str(mp))); row["logs"].append(lapp["log"])

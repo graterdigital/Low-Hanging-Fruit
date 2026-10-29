@@ -26,7 +26,8 @@ Skip, with the reason written into the map, when:
 - the old URL is an author archive, or has zero incoming links (a sitemap or orphan entry). Fix the SEO plugin setting instead.
 - it's an `http://` or `www.` variant of the site itself. Those redirects are supposed to exist.
 - the old URL looks like a pasted file path (spaces, `%20`, `_files/`). A broken image on one post; fix by hand.
-- the old URL carries a query string, or the final target does not return 200 (from Ahrefs, or on the HEAD check).
+- the old URL carries a query string, or the final target does not return 200 (from Ahrefs, or on the HEAD check). A 403/405/429 on the HEAD check with Ahrefs reporting 200 is a firewall answering the script, not the page; the swap is kept with a note.
+- the old or new path contains a backslash, quote, space or angle bracket. That is a typo in one link (`/rep-locator/\`), and a path like that cannot be matched safely: the trailing backslash matches the escaping backslash of a JSON-encoded link and the rewrite destroys the encoding. The matcher refuses such swaps even if a hand-made map contains one.
 
 The map's `legacy_hosts` (old hostnames still linked from content, such as a previous host's URL) can't come from Ahrefs; add them after a `--probe` run. A rebuild for the same crawl keeps them. The script also prints which swaps are linked from nearly every page: those are menu, footer or template links. Custom menu links live in `_menu_item_url` postmeta and are rewritten; a link in a widget shows up in the options report instead; a link baked into a theme file is out of reach.
 
@@ -72,9 +73,15 @@ The intended rhythm, until the rules have proven themselves on this host: run st
 - Hand over the `-options.md` log too: each row is a widget, menu, theme setting, or plugin option still carrying an old link, to be fixed in wp-admin by hand.
 - Page builders: WPBakery shortcodes live in `post_content` and are handled. Elementor keeps its layout as a JSON string in `_elementor_data` postmeta; the JSON-escaped matching should cover it but has not been exercised on a real Elementor site yet, so on the first one, probe, dry-run, and inspect the diff in the backup before applying.
 
+## Safety nets in the matcher
+
+- Postmeta is rewritten before posts, and revision rows are ignored, so `wp_update_post` creating revisions does not inflate counts or edit history.
+- JSON guard: a meta value that was valid JSON (Elementor's `_elementor_data`) and would not be after the rewrite is left untouched and listed in the log under "blocked by the JSON guard". A guarded row means a swap rule is wrong; stop and look.
+- `--check-json` validates every `_elementor_data` row on a target and reports the invalid ones. The batch runs it on staging after every apply on an Elementor site and stops the site if anything is invalid.
+
 ## Rollback
 
-Per post: Posts → edit → Revisions → restore the one before the run. In bulk: the backup JSON has `before` content for every changed post and meta row; `wp post update <id> --post_content=<file>` restores one, or ask for a restore script. Never rerun the fix "in reverse" by swapping new for old; the anchored matching makes that unsafe.
+`python scripts/restore_changes.py <slug> --backup changes/<provider>/<slug>/backup/<stamp>-fix-redirect-links-<target>.json` (dry run; add `--apply`). It restores every post and meta row to its `before` value, but only when the row still holds exactly what the fix wrote; anything edited since is reported and left alone. `--only-meta-keys _elementor_data` narrows a restore to one storage form. Per post, WordPress revisions also work (Posts → edit → Revisions). Never rerun the fix "in reverse" by swapping new for old; the anchored matching makes that unsafe.
 
 ## Scope and limits
 

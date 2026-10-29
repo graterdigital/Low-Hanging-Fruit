@@ -59,6 +59,7 @@ def main(argv=None):
     ap.add_argument("--apply", action="store_true", help="write changes; default is dry run")
     ap.add_argument("--probe", action="store_true", help="locate every raw occurrence of each old URL (posts, meta, options) and stop; changes nothing")
     ap.add_argument("--webroot", default="public", help="path to WordPress relative to the SSH login dir (Kinsta: public; WP Engine: sites/<install>)")
+    ap.add_argument("--check-json", action="store_true", dest="checkjson", help="validate every _elementor_data row on the target and stop; changes nothing")
     ap.add_argument("--yes", action="store_true", help="skip the type-the-slug confirmation on a live apply (for vetted, unattended runs)")
     args = ap.parse_args(argv)
     return run(args)
@@ -87,6 +88,14 @@ def run(args):
     swaps = m["swaps"]
     if args.target == "live" and args.apply:
         confirm_live(args.slug, len(swaps), alias, args.yes)
+
+    if getattr(args, "checkjson", False):
+        res = run_remote(alias, "checkjson", host, [], args.webroot, [])
+        bad = res["invalid"]
+        print(f"CHECK-JSON on {args.target} ({alias}): {res['checked']} _elementor_data rows, {len(bad)} invalid")
+        for b in bad: print(f"   post {b['post_id']} ({b['type']}/{b['status']}) {b['title'][:50]}  {b['url']}  [{b['error']}]")
+        res["log"] = None; res["options_log"] = None; res["errors"] = len(bad); res["posts"] = []; res["meta"] = []; res["totals"] = {}
+        return res
 
     if args.probe:
         res = run_remote(alias, "probe", host, swaps, args.webroot, m.get("legacy_hosts"))
@@ -126,6 +135,11 @@ def run(args):
     for mm in res["meta"]:
         log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {mm.get('kind','')} | {sum(mm['hits'].values())} | {mm.get('applied', '-')} |")
     log += ["", "## Skipped by the map", ""] + [f"- {s.get('old') or s.get('pattern')}: {s['reason']}" for s in m.get("skipped", [])]
+    refused = res.get("refused") or []; guarded = res.get("json_guarded") or []
+    if refused: log += ["## Swaps refused by the matcher (unsafe characters)", ""] + [f"- `{r['old']}`: {r['reason']}" for r in refused] + [""]
+    if guarded:
+        log += [f"## Rewrites blocked by the JSON guard ({len(guarded)})", "", "These meta values are valid JSON and the rewrite would have broken them. Nothing was written; the swap rule or the matcher needs a look.", "",
+                "| meta_id | post | key | hits |", "|---|---|---|---|"] + [f"| {g['meta_id']} | {g['post_id']} | {g['key']} | {sum(g['hits'].values())} |" for g in guarded] + [""]
     opts = res.get("options") or []
     log += ["", f"## wp_options still referencing old URLs ({len(opts)}, not changed)", "",
             f"See `{base}-options.md` next to this log. Widgets, theme mods, menus and plugin settings live here and need a hand or a different skill." if opts else "None found."]
@@ -154,11 +168,14 @@ def run(args):
     print(f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows would change" if mode == "dry" else f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows changed")
     for k, v in sorted(res["totals"].items()): print(f"  {v:3}  {k}")
     print(f"  {len(opts)} wp_options rows still reference old URLs (not changed; see the -options.md log)")
+    if refused: print(f"  {len(refused)} swap(s) REFUSED for unsafe characters: " + ", ".join(r['old'] for r in refused))
+    if guarded: print(f"  {len(guarded)} meta row(s) BLOCKED by the JSON guard; see log")
     print(f"\nLog: {main_log}\nOptions log: {outdir / (base + '-options.md')}")
     errs = [p for p in res["posts"] if str(p.get("applied", "")).startswith("ERROR")]
     if errs: print(f"\n{len(errs)} posts failed to save; see log.")
     res["log"] = str(main_log); res["options_log"] = str(outdir / (base + "-options.md")); res["errors"] = len(errs)
     res["flushed"] = None if flushed is None else bool(flushed[0]); res["alias"] = alias; res["provider"] = provider
+    res["guarded"] = len(guarded); res["refused_n"] = len(refused)
     return res
 
 if __name__ == "__main__":

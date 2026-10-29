@@ -76,6 +76,8 @@ def classify(row, site_host):
     path = u.path or "/"
     if not final:
         return "skip", "Ahrefs reports no redirect target"
+    if re.search(r"[\\\"'<>\s]", u.path + (f.path or "")):
+        return "skip", "path contains a backslash, quote, space or angle bracket; a typo in a link that cannot be matched safely. Fix that link by hand (APPROVE)"
     if norm_host(f.netloc) != site_host:
         return "skip", f"redirects off-site to {f.netloc}; usually intentional, leave"
     if u.query:
@@ -143,7 +145,10 @@ def main():
         new = r["final_redirect"]
         if not args.no_verify:
             st = head_status(new)
-            if st != 200:
+            if st in (403, 405, 429, 503) and r.get("final_redirect_code") == 200:
+                # A firewall or bot filter answered the script, not the page. Ahrefs saw 200 from the target; trust that.
+                note = (note + "; " if note else "") + f"verify got {st} (bot protection); trusting Ahrefs' 200"
+            elif st != 200:
                 verify_fail += 1
                 skipped.append({"old": r["url"], "reason": f"target {new} returned {st} on verify, expected 200; check the redirect rule (APPROVE)", "links": r.get("incoming_all_links")}); continue
         s = {"old": r["url"], "new": new, "links": r.get("incoming_all_links")}

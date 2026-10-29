@@ -26,6 +26,16 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 - That post also still links `/modifications/`, one of the 5 homepage-redirect URLs on the skipped list; first concrete item for `redirect-rules`.
 - **Verified by the 2026-10-29 crawl** (same day): "Page has links to redirect" 39 → 31, "3XX redirect" 28 → 21, "Redirect chain" 1 → 0. The 31 that remain are 25 paginated archives (template `/page/1/` fix) and 6 content pages that link to skipped-list URLs: home (`/podcast/`), `/2026-child-support/` (`/modifications/`), `/understanding-roles-collaborative-divorce-team/` (pasted file path), `/family-law/`, `/co-parenting-schedules-summer-break/`, `/needs-mediation-attorneys/` (the homepage-redirect URLs). `build_redirect_map.py` run against this crawl produces 0 swaps / 21 skipped, all for the expected reasons; that map (`redirect-map-2026-10-29.json`) is the current one, so the batch reports the site as nothing to do.
 
+## Kinsta stage-only batch, 2026-10-29 14:33 (`changes/kinsta/_batch-2026-10-29-1433-fix-redirect-links-stage.md`)
+
+13 client files, 8 staged, 4 nothing to do (fenceworks ×2, hsfamilylaw, ruggeddepot), nativecustomstone needs staging. Mechanics held up: no prompts, no hangs, all gates and logs behaved. Reading the results exposed three builder/matcher problems, all fixed the same afternoon, **and left miuraboiler staging corrupted**:
+
+- **miuraboiler**: the map contained `https://miuraboiler.com/rep-locator/\` (a link typo on the site that Ahrefs reports as a redirecting URL). The matcher took the backslash as part of the path, matched the escaping backslash of JSON-encoded links (`\"/rep-locator/\"`) 30 times, and the rewrite removed it, producing invalid JSON in Elementor data. **Staging only. Restore it with `restore_changes.py` from `changes/kinsta/miuraboiler/backup/2026-10-29-1438-fix-redirect-links-staging.json`, rebuild the map (the builder now skips such URLs), then re-stage.** Then `--check-json` must report 0 invalid.
+- **ruggeddepot**: `/repair-and-support/` → `/services/` (6,341 incoming links, a sitewide template link) was skipped because the HEAD verify got a 403 from the site's bot protection. Builder now trusts Ahrefs' 200 on 403/405/429/503 and notes it. Rebuild the map; expect 1 swap. The crawl really does have only 6 redirecting URLs now.
+- **apply counts > dry counts** (miuraboiler 35 → 60 meta, setcomcorp 111 → 115): `wp_update_post` in the posts pass created revisions, and Elementor copies `_elementor_data` into revisions, so the meta pass then found and rewrote those copies. Harmless but wrong. The meta pass now runs first and ignores revision rows.
+
+Other notes from the run: atlantaspecializedcare is ACF-heavy (748 meta rows for 33 swaps, chains collapsed correctly); forwardfacing's hits are all in meta (0 posts); markheardfuel (Elementor) 12p/71m applied cleanly on staging but has 16 `wp_options` hits (widgets/theme settings to fix by hand); meshautomationinc has 15 query-string redirects skipped and 7 homepage redirects for a human; setcomcorp 13 swaps incl. three menu-level slash fixes; technikpackaging's canonical host is `www`. Elementor sites staged (markheardfuel, setcomcorp, miuraboiler, meshautomationinc is ACF/Elementor?) need `--check-json` run before any of them go live.
+
 ## Things learned the hard way (already encoded in the script)
 
 1. Kinsta rewrites every absolute URL to the staging domain when it builds staging, so a matcher that only knows the live domain finds half the links.
@@ -41,8 +51,9 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 
 - Second site: one on WP Engine (webroot `sites/<install>`, path logic exists but is untested) and one with a page builder (Elementor stores content as JSON in `_elementor_data`; the JSON-escaped rules should cover it but it has not been exercised).
 - Builder-aware handling if Elementor data turns out to need it.
-- A restore script for bulk rollback from the backup JSON (today: per-post revisions, or ask for one).
-- Kinsta batch: 11 sites (10 with staging; nativecustomstone has none). First run is stage-only; the four Elementor sites (markheardfuel, miuraboiler, ruggeddepot, nativecustomstone) are the untested storage form, so read markheardfuel's staging backup diff before letting the batch go live on the other three.
+- `restore_changes.py` exists now; first real use is miuraboiler staging.
+- Kinsta batch: stage-only run done (see above). Before live: restore + re-stage miuraboiler, rebuild ruggeddepot's map, `--check-json` on every Elementor staging, set up staging for nativecustomstone (86 swaps waiting), fix setcomcorp's live SSH port (37782 times out; staging works).
+- setcomcorp live SSH alias: port 37782 timed out on 2026-10-29; get the current port from MyKinsta.
 - Once a few batch cycles are clean, schedule `--live` as a task.
 
 ## Related work that is NOT this skill
