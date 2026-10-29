@@ -37,11 +37,18 @@ def main():
     provider = str(h.get("provider") or "other").lower()
     if provider == "wpengine" and a.webroot == "public": a.webroot = f"sites/{alias}"
     cdir = ROOT / "changes" / provider / a.slug
-    res = Path(a.result) if a.result else sorted((cdir / "backup").glob(f"*-fix-images-{a.target}/result.json"))[-1]
+    if a.result:
+        res = Path(a.result).resolve()
+    else:
+        # Oldest run for this target: a later run's "orig" is the earlier run's output, not the real original.
+        runs = sorted((cdir / "backup").glob(f"*-fix-images-{a.target}/result.json"))
+        if not runs: sys.exit(f"no fix-images backup for {a.target}")
+        res = runs[0]
+        if len(runs) > 1: print(f"note: {len(runs)} runs found for {a.target}; restoring from the OLDEST ({res.parent.name}), which holds the true originals. Use --result to pick another.")
     bdir = res.parent
     rows = [r for r in json.loads(res.read_text(encoding="utf-8")) if r.get("action") == "replaced"]
     if a.only: rows = [r for r in rows if any(s in r["path"] for s in a.only.split(","))]
-    print(f"{len(rows)} files to restore on {a.target} ({alias}) from {bdir.relative_to(ROOT)}")
+    print(f"{len(rows)} files to restore on {a.target} ({alias}) from {bdir.name}")
     done, failed = [], []
     for r in rows:
         local = bdir / "orig" / Path(r["path"]).name
