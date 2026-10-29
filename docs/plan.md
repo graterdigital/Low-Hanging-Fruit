@@ -1,6 +1,6 @@
 # Low-Hanging-Fruit Toolkit: Plan v1.2
 
-Last updated 2026-10-29 (afternoon). Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
+Last updated 2026-10-29 (late afternoon). Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
 This doc is the source of truth for the build. Update it when a decision changes; don't rely on chat history.
 
 ## 0. Status
@@ -18,6 +18,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 
 **Next**
 - `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Now the Kinsta batch: `build_redirect_map.py` (Ahrefs API) + `batch_fix_redirect_links.py --provider kinsta`, stage-only first, across 11 sites incl. the new setcomcorp.
+- `fix-images`: scaffold built 2026-10-29 (`skills/fix-images/`, `scripts/fix_images.py`, `scripts/php/image_inventory.php`), not yet run. Weight fixes are in-place/same-URL (AUTO); alt and broken images are inventoried for APPROVE. First step is `--probe` on hsfamilylaw staging, which also settles whether WebP Express is actually serving WebP. Handoff: `docs/skills/fix-images.md`.
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
 **Roster facts that shape the build**
@@ -88,7 +89,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**
 - `fix-redirect-links` (AUTO). **Done on hsfamilylaw (applied and verified by recrawl 2026-10-29). Map builder (Ahrefs API) and host-wide batch runner added; Kinsta batch next.**
 - `fix-meta` (titles and descriptions through the SEO plugin, APPROVE)
-- `fix-images` (weight, format, alt, APPROVE)
+- `fix-images` (weight in place AUTO; alt and broken images APPROVE). **Scaffold built 2026-10-29; probe next.** Format conversion is out of scope (plugin/host job).
 - `indexation-review` (archives, sitemap, noindex, APPROVE)
 - `schema-check` (FLAG)
 - `verify`: compare the next crawl against the baseline.
@@ -120,7 +121,7 @@ Tiebreaker is Google Search Central; then Ahrefs and Search Engine Land. Moz cou
 - Decide which of the ~20 unaudited live sites get Ahrefs projects.
 - Connect GSC to the 23 Ahrefs projects that lack it.
 - 13 client files have no host match from the sync script (other hosts, or unverified Ahrefs projects); fill `hosting:` by hand.
-- hsfamilylaw: WordPress 7.1.3, Yoast 28.8, Redirection, WebP Express, Enable Media Replace, Simple History, ACF Pro all active (from `wp plugin list` 2026-10-28). Fold into the client file.
+- hsfamilylaw: WordPress 7.1.3, Yoast 28.8, Redirection, WebP Express, Enable Media Replace, Simple History, ACF Pro all active (from `wp plugin list` 2026-10-28). Folded into the client file 2026-10-29; WebP Express's real behaviour is checked by the `fix-images` probe.
 - Google Ads MCP: Google's docs say developer tokens were sunset 2026-09-09 but the repo README still asks for one. Resolve before Phase 3.
 - Moz cross-check of the standards in section 6.
 

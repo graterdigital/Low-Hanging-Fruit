@@ -17,9 +17,11 @@ platform:
   wp_version: 7.1.3
   theme: hastingsshadmehry        # custom theme
   page_builder: none-detected
-  seo_plugin: yoast               # v28.6 seen in the 2026-10-08 crawl
+  seo_plugin: yoast               # v28.8 per wp plugin list 2026-10-28
   plugins_seen: [google-site-kit, business-reviews-bundle, handl-utm-grabber-v3, simple-banner, youtube-feed-pro, gravityforms, akismet]
-  image_optimization_plugin: none-detected
+  plugins_active: [wordpress-seo, redirection, webp-express, enable-media-replace, simple-history, advanced-custom-fields-pro, google-site-kit]   # wp plugin list 2026-10-28; names best-effort
+  redirect_manager: redirection
+  image_optimization_plugin: webp-express   # active per wp plugin list 2026-10-28, but the 2026-10-29 crawl still saw full-size PNGs; whether it serves WebP to browsers is unverified (fix-images --probe checks)
   schema_notes: hand-coded LegalService JSON-LD in the theme head on core pages and bios, alongside Yoast's graph
   template_notes: category/tag archives output no <h1>; theme pagination links page 1 as /page/1/
 
@@ -46,5 +48,5 @@ rules:
   do_not_touch: []
 
 evidence:
-  last_checked: 2026-10-13
-  basis: Ahrefs Site Audit crawl of 2026-10-08 plus raw HTML of /, /category/divorce/, /blog/page/2/. Not verified by logging in.
+  last_checked: 2026-10-29
+  basis: Ahrefs Site Audit crawls of 2026-10-08 and 2026-10-29, raw HTML of /, /category/divorce/, /blog/page/2/, and `wp plugin list` over SSH on 2026-10-28.
