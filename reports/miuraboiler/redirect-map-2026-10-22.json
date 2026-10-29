@@ -4,9 +4,9 @@
   "generated": "2026-10-29",
   "verified": true,
   "counts": {
-    "rows": 231,
+    "rows": 245,
     "swaps": 28,
-    "skipped": 203,
+    "skipped": 217,
     "verify_failed": 0
   },
   "swaps": [
@@ -109,7 +109,7 @@
     {
       "old": "https://miuraboiler.com/miuraboiler/request-a-quote/",
       "new": "https://miuraboiler.com/request-a-quote/",
-      "links": 2362
+      "links": 2496
     },
     {
       "old": "https://miuraboiler.com/reps/d-b-johnsen/rep-locator",
@@ -167,22 +167,22 @@
     {
       "old": "https://miuraboiler.com/events-old/pack-expo-international-nov-3-6-2/",
       "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
-      "links": 2363
+      "links": 2497
     },
     {
       "old": "https://miuraboiler.com/events-old/imc-december-16-19-2/",
       "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
-      "links": 2363
+      "links": 2497
     },
     {
       "old": "https://miuraboiler.com/events-old/ahr-feb-10-12-2/",
       "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
-      "links": 2363
+      "links": 2497
     },
     {
       "old": "https://miuraboiler.com/events-old/adi-2025-craft-distillers-conference/",
       "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
-      "links": 2363
+      "links": 2497
     },
     {
       "old": "https://miuraboiler.com/tag/lx/",
@@ -305,6 +305,11 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-06-19",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-12-01",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
@@ -365,12 +370,27 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-09-07",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-10-05",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-10-04",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-08-14",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-10-06",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
@@ -415,12 +435,22 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-09-09",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-10-12",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-10-01",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-04-24",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
@@ -560,6 +590,11 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-08-06",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-07-31",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
@@ -571,6 +606,11 @@
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-08-28",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-02-23",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
@@ -730,6 +770,11 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-08-25",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-12-30",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
@@ -790,6 +835,11 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-04-03",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-09-03",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
@@ -801,6 +851,11 @@
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-06-11",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-07-27",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
@@ -870,6 +925,11 @@
       "links": 2
     },
     {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-05-29",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-04-21",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
@@ -886,6 +946,11 @@
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-09-20",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-08-26",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
@@ -956,6 +1021,11 @@
     },
     {
       "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-09-12",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://miuraboiler.com/?post_type=tribe_events&eventDisplay=day&paged=2&eventDate=2026-06-04",
       "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
       "links": 2
     },
