@@ -14,10 +14,10 @@ This doc is the source of truth for the build. Update it when a decision changes
 - `site-triage` v1, cold-tested on hsfamilylaw.com and livingyoungcenter.com.
 - Client files for all 40 Ahrefs projects (`clients/`, index in `docs/client-index.md`), with stack fingerprints from `scripts/fingerprint.py`. Hosting aliases filled for 32 of them by the sync script.
 - SSH + WP-CLI access proven to hsfamilylaw live and staging.
-- `fix-redirect-links` built, dry-run and applied on hsfamilylaw staging (79 link swaps across 8 posts and 55 ACF fields, clean). Handoff: `claude/skill-fix-redirect-links.md`.
+- `fix-redirect-links` built, dry-run and applied on hsfamilylaw staging (79 link swaps across 8 posts and 55 ACF fields, clean). Same day: change logs regrouped to `changes/<provider>/<slug>/`, `--yes` flag for unattended live runs, `wp cache flush` after apply, companion `-options.md` report of `wp_options` rows still holding old URLs. Handoff: `claude/skill-fix-redirect-links.md`.
 
 **Next**
-- `fix-redirect-links` live run on hsfamilylaw, then an Ahrefs recrawl to verify.
+- `fix-redirect-links`: re-run the staging dry run (script changed), live run on hsfamilylaw, then an Ahrefs recrawl to verify.
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
 **Roster facts that shape the build**
@@ -82,7 +82,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 
 ## 5. Build order
 
-**Phase 0: Foundation.** Plugin repo, client file format (done, see `clients/`), change-log and rollback convention, approval hook on all writes.
+**Phase 0: Foundation.** Plugin repo, client file format (done, see `clients/`), change-log and rollback convention (done: `changes/<provider>/<slug>/`, see `changes/README.md`), approval hook on all writes.
 
 **Phase 1: Technical SEO (pilot on hsfamilylaw.com).**
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**

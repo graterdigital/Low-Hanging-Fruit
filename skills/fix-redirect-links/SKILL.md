@@ -33,32 +33,35 @@ Save the map as JSON with `site`, `source`, `generated`, `swaps` (`old`, `new`, 
 
 Everything happens through `scripts/fix_redirect_links.py`, which ships `scripts/php/replace_links.php` to the site over SSH and runs it inside WordPress with `wp eval-file`. The PHP does anchored matching: a URL is replaced only when it is a complete link target (between quotes or parentheses), so `/child-support/` never matches inside `/divorce/child-support/`, and `/contact-us` never matches `/contact-us/`. Absolute and root-relative links are both handled; relative links stay relative.
 
-Staging copies run on their own domain and the host rewrites every absolute link to it, so the matcher accepts the live domain, whatever host the install currently runs on, and the legacy hosts, and a rewritten link keeps the host it had. Serialized ACF link fields are unserialized, rewritten, and reserialized.
+Staging copies run on their own domain and the host rewrites every absolute link to it, so the matcher accepts the live domain, whatever host the install currently runs on, and the legacy hosts, and a rewritten link keeps the host it had. Serialized postmeta (ACF link and URL fields, WYSIWYG fields inside repeaters) is unserialized, walked, rewritten, and reserialized.
+
+Logs land in `changes/<provider>/<slug>/` (provider from the client file: `kinsta`, `wpengine`, `other`). Every run writes two files: the change log, and a companion `-options.md` listing any `wp_options` rows that still contain an old URL. Options are never edited; that list is for a human. Widgets, theme mods, Customizer settings, and plugin configs live there, and a swap that shows zero hits in posts and meta but turns up in the options log is a link to fix by hand.
 
 Run in this order, and stop at any step that looks wrong. Start with `--probe` on a new site: it lists where each old URL actually appears and reveals legacy hosts and storage forms (ACF fields, builder data) the dry run would otherwise miss.
 
 ```
 python scripts/fix_redirect_links.py <slug> --map reports/<slug>/redirect-map-<date>.json
 ```
-Dry run on staging. Prints how many posts and menu/meta rows would change and per-URL totals, and writes `changes/<slug>/<stamp>-fix-redirect-links-staging-dry.md`. Read the log. Sanity checks: the post count should be in the same ballpark as Ahrefs' "Page has links to redirect" count for non-template pages (template-driven pages like paginated archives won't appear, which is expected); every swap in the map should have hits, and a swap with zero hits means the link lives in a widget, theme file, or serialized builder data the script doesn't touch.
+Dry run on staging. Prints how many posts and meta rows would change, per-URL totals, and how many options rows reference old URLs, and writes `changes/<provider>/<slug>/<stamp>-fix-redirect-links-staging-dry.md` plus the `-options.md` companion. Read both. Sanity checks: the post count should be in the same ballpark as Ahrefs' "Page has links to redirect" count for non-template pages (template-driven pages like paginated archives won't appear, which is expected); every swap in the map should have hits somewhere, and a swap with no hits in posts, meta, or options means the link lives in a theme file or a builder blob the script doesn't read.
 
 ```
 python scripts/fix_redirect_links.py <slug> --map ... --apply
 ```
-Apply on staging. WordPress keeps a revision of each changed post, and the full before/after of everything is saved to `changes/<slug>/backup/` (git-ignored, since it's client content). Then open two or three of the changed pages on staging and click the fixed links.
+Apply on staging. WordPress keeps a revision of each changed post, the full before/after of everything is saved to `changes/<provider>/<slug>/backup/` (git-ignored, since it's client content), and the script runs `wp cache flush` afterwards because postmeta is written straight to the table and a persistent object cache would otherwise keep serving the old values. Then open two or three of the changed pages on staging and click the fixed links.
 
 ```
 python scripts/fix_redirect_links.py <slug> --map ... --target live --apply
 ```
-Apply on live. The script asks you to type the slug to confirm. Same log and backup.
+Apply on live. The script asks you to type the slug to confirm; `--yes` skips that for vetted, unattended runs, and a run with neither a terminal nor `--yes` aborts rather than hanging. Same logs, backup, and cache flush.
 
-Then commit the `changes/<slug>/*.md` logs (not the backup folder).
+Then commit the `changes/<provider>/<slug>/*.md` logs (not the backup folder).
 
 ## After
 
 - Ask the user to trigger a recrawl in Ahrefs, or wait for the scheduled one. The "Page has links to redirect" count should drop by roughly the number of posts changed; what's left is template-driven and belongs to the template fix.
 - Hand back the skipped list as a short to-do: the homepage-redirect URLs each need a decision.
-- Page builders store content in postmeta as serialized data (Elementor `_elementor_data`, WPBakery shortcodes live in post_content and are fine). The script reports serialized matches but does not change them; those need a builder-aware pass and are out of scope here.
+- Hand over the `-options.md` log too: each row is a widget, menu, theme setting, or plugin option still carrying an old link, to be fixed in wp-admin by hand.
+- Page builders: WPBakery shortcodes live in `post_content` and are handled. Elementor keeps its layout as a JSON string in `_elementor_data` postmeta; the JSON-escaped matching should cover it but has not been exercised on a real Elementor site yet, so on the first one, probe, dry-run, and inspect the diff in the backup before applying.
 
 ## Rollback
 
@@ -67,5 +70,5 @@ Per post: Posts → edit → Revisions → restore the one before the run. In bu
 ## Scope and limits
 
 - WordPress only, over SSH with WP-CLI. Kinsta's web root is `public`; WP Engine's is `sites/<install>` (the script picks that from `hosting.provider`).
-- Touches `post_content` of all non-revision posts and plain-text postmeta values. Does not touch theme files, widgets, options, or serialized data.
+- Touches `post_content` of all non-revision posts and postmeta values, plain or serialized. Reads `wp_options` for the companion report but never writes it. Does not touch theme files or anything outside the database.
 - Does not create, edit, or delete redirect rules. Chains are handled by pointing links at the final URL; the rule cleanup in Redirection (or whatever plugin holds the rules) is a separate, APPROVE-tier step.

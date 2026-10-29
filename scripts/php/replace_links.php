@@ -16,6 +16,7 @@
  * (ACF link/url fields), which are unserialized, rewritten, and reserialized.
  *
  * Scope: post_content of non-revision posts, and postmeta values. wp_update_post keeps a revision.
+ * wp_options is scanned and reported (the `options` key in the output) but never written.
  */
 if (!defined('REPLACE_LINKS_JOB')) { fwrite(STDERR, "no job\n"); exit(1); }
 // wp eval-file includes this file inside a function, so declare shared state global explicitly
@@ -88,6 +89,27 @@ function walk($data, &$hits) {
     return rewrite_value($data, $hits);
 }
 
+/** Anchored scan of wp_options for old paths and legacy hosts. Report only; options are never edited.
+ *  Every mode calls this so the Python runner can write the companion -options.md log. */
+function scan_options() {
+    global $wpdb, $swaps, $legacy;
+    $rep = []; $seen = [];
+    $needles = [];
+    foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) $needles[] = [$s['old'], $n, '~(?<![\w/\\\\-])' . preg_quote($n, '~') . '(?![\w-])~'];
+    foreach ($legacy as $l) $needles[] = ["host:$l", $l, '~' . preg_quote($l, '~') . '~i'];
+    foreach ($needles as [$old, $needle, $re]) {
+        $like = '%' . $wpdb->esc_like($needle) . '%';
+        foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value, autoload FROM {$wpdb->options} WHERE option_value LIKE %s", $like)) as $r) {
+            if (isset($seen[$r->option_name . "\0" . $old])) continue;
+            if (!preg_match($re, $r->option_value, $m, PREG_OFFSET_CAPTURE)) continue;
+            $seen[$r->option_name . "\0" . $old] = 1;
+            $rep[] = ['option_name' => $r->option_name, 'autoload' => $r->autoload, 'size' => strlen($r->option_value), 'old' => $old,
+                      'ctx' => substr($r->option_value, max(0, $m[0][1] - 60), strlen($m[0][0]) + 120)];
+        }
+    }
+    return $rep;
+}
+
 // ---- probe: where do the old paths live? (anchored so /x/ doesn't match /y/x/) ----
 if ($mode === 'probe') {
     $rep = [];
@@ -117,7 +139,7 @@ if ($mode === 'probe') {
     exit(0);
 }
 
-$out = ['mode' => $mode, 'home_host' => $home_host, 'hosts' => $all_hosts, 'posts' => [], 'meta' => [], 'totals' => []];
+$out = ['mode' => $mode, 'home_host' => $home_host, 'hosts' => $all_hosts, 'posts' => [], 'meta' => [], 'totals' => [], 'options' => scan_options()];
 $tally = function($hits) use (&$out) { foreach ($hits as $k => $v) $out['totals'][$k] = ($out['totals'][$k] ?? 0) + $v; };
 
 // ---- posts ----

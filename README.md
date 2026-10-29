@@ -16,7 +16,7 @@ skills/           one folder per skill, each with a SKILL.md
 agents/           subagents for noisy jobs (crawling, network capture)
 clients/          one YAML per site; _template.yaml shows every field; never credentials
 reports/          what skills found, per site, per crawl date
-changes/          what fix skills changed, per site, per run, with rollback detail
+changes/          what fix skills changed, grouped by host then site, per run, with rollback detail
 docs/             plan, standards, decisions
 ```
 
