@@ -26,7 +26,7 @@ hosting:
   provider: kinsta
   access: ssh+wp-cli
   ssh_alias: technikpackaging
-  staging_environment: none
+  staging_environment: technikpackaging-staging
 
 tracking:
   ga4_measurement_id: G-PWZ21D82WY

@@ -1,0 +1,47 @@
+# Client file: one per site. Holds WHAT is true about this site, never HOW to do a task.
+# No passwords, keys, or tokens in this file. Credentials live in your local SSH config / password manager.
+# "unknown" means nobody has checked yet. Skills should fill these in as they learn them.
+
+slug: setcomcorp
+name: Setcom Corporation
+domain: setcomcorp.com
+canonical_host: https://setcomcorp.com
+vertical: unknown
+
+ahrefs:
+  site_audit_project_id: 10610051
+  gsc_connected: unknown
+
+platform:
+  cms: wordpress
+  wp_version: unknown
+  theme: unknown                     # WP Rocket strips theme/plugin paths from the HTML
+  page_builder: elementor            # inferred from an elementor popup action URL on the homepage; not confirmed
+  seo_plugin: unknown
+  plugins_seen: [wp-rocket]          # WP Rocket 3.23.5.1 generator tag
+  image_optimization_plugin: unknown
+
+hosting:
+  provider: kinsta
+  access: ssh+wp-cli
+  ssh_alias: setcomcorp
+  staging_environment: setcomcorp-staging   # stg-setcomcorp-setcomstg.kinsta.cloud
+
+tracking:
+  ga4_measurement_id: unknown
+  gtm_container: unknown
+  other_tags: []
+  consent_mode: unknown
+
+local:
+  business_profile: unknown
+  nap: unknown
+
+rules:
+  # Tier overrides. Skills may be stricter than their defaults here, never looser.
+  visible_copy_changes: approve
+  do_not_touch: []
+
+evidence:
+  last_checked: 2026-10-29
+  basis: Ahrefs Site Audit project 10610051 (crawl 2026-10-28, 1024 URLs, health 94) plus the homepage HTML fetched 2026-10-29; SSH aliases from ssh_config_sync.py the same day. Not verified by logging in.
