@@ -23,7 +23,7 @@ Replacing `big.png` with a smaller `big.png` keeps every URL, every `srcset`, ev
 
 1. `clients/<slug>.yaml` with `hosting.ssh_alias`, `hosting.staging_environment`, `hosting.provider` and `ahrefs.site_audit_project_id`.
 2. `AHREFS_API_KEY` in `.env` at the repo root.
-3. On the machine that runs the script: Python with `pillow` and `pyyaml`; optionally `pngquant` and `oxipng` on PATH (better PNG results than Pillow's quantizer; the log records which was used).
+3. On the machine that runs the script: Python with `pillow` and `pyyaml`, and **`pngquant` on PATH** (optionally `oxipng`). Without pngquant, PNGs are skipped: Pillow's 256-colour quantizer is only usable for flat graphics and visibly ruins photographs saved as PNG, which is what most oversized PNGs on client sites are (headshots, hero photos). `--allow-pillow` overrides that for a run you have looked at.
 4. A fresh staging copy of live.
 
 ## Step 1: probe
@@ -50,7 +50,9 @@ python scripts/fix_images.py <slug>
 
 Pulls each oversized file over `scp` into `changes/<provider>/<slug>/backup/<stamp>-fix-images-staging/orig/`, compresses it into `new/`, and writes `changes/<provider>/<slug>/<stamp>-fix-images-staging-dry.md` with before/after bytes and the steps per file. Nothing is pushed. Open a few of the `new/` files next to their `orig/` at 100%: headshots and anything with gradients or text are the ones to look at. If one looks wrong, exclude it with `--only` on the next run or raise `--png-quality` (pngquant only, e.g. `80-95`).
 
-Defaults: `--max-edge 2560`, `--min-gain 15` (a file that doesn't shrink by at least 15% is left alone), `--png-quality 65-85`, `--jpeg-quality 82`.
+Defaults: `--max-edge 2560`, `--min-gain 15` (a file that doesn't shrink by at least 15% is left alone), `--png-quality 80-98` (pngquant's floor–ceiling; visually lossless on photos, and pngquant refuses rather than going below the floor), `--jpeg-quality 82`. Flat graphics can take `--png-quality 65-85` with `--only` to target them.
+
+**Look before you apply, every time.** Open the headshots and anything with a smooth gradient from `new/` next to `orig/` at 100%. The staging apply is not the review step; it is confirmation of a review already done. A run that was applied twice (a second pass over already-quantized files) compounds the damage, so never rerun apply on the same files without restoring first.
 
 ## Step 3: apply on staging, then live
 
@@ -91,7 +93,7 @@ Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files 
 
 ## Rollback
 
-`backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. Restore one with `scp` to the remote path shown in the log table. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
+`backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. `python scripts/restore_images.py <slug> --target <t> --only <names>` (or `--all`) pushes them back, rewrites the `.webp` siblings with `--webp`, and purges caches; it defaults to the **oldest** run's backup for that target, because a later run's `orig/` is the earlier run's output, not the real original. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
 
 ## Scope and limits
 

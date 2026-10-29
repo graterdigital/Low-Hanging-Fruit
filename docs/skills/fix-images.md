@@ -1,6 +1,6 @@
 # Handoff: fix-images
 
-Status as of 2026-10-29 (evening). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+Status as of 2026-10-29 (late evening). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
 
 ## What the skill does
 
@@ -18,14 +18,22 @@ Decision made this chat: no format conversion and no URL swaps in this skill. We
 
 Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Live-tested on hsfamilylaw 2026-10-29 with the Pillow path only (no pngquant on Greg's PC yet).
 
-## Pilot: hsfamilylaw.com (Ahrefs crawl 2026-10-29) — DONE on live
+## What went wrong on 2026-10-29 (read this first)
+
+1. **Pillow's quantizer wrecked the headshots.** The 11 attorney photos are photographs saved as PNG with smooth gradient backgrounds; 256-colour quantization with dithering made them look awful at full size. Nobody looked at `new/` vs `orig/` before the staging or live apply, and Greg then ran a second live apply (15:36) after installing pngquant, which quantized the already-quantized files. Fixed by `restore_images.py` from the 15:03 live backup (the true originals), 55 files, plus fresh `.webp` siblings. Skill now: PNGs are skipped unless pngquant is on PATH (`--allow-pillow` overrides), default `--png-quality 80-98`, and SKILL.md says the visual check is mandatory before any apply.
+2. **Deleting `.webp` siblings blanked the images.** Kinsta's Nginx still serves `name.webp` to WebP-capable browsers after WebP Express is removed (naming: `photo.webp`, not `photo.png.webp`). The run deleted the siblings of exactly the 26 replaced files, so exactly those 26 went blank on staging (files on disk were fine). Skill now: deletion is opt-in (`--purge-webp`); `regen_webp_siblings.py` recreates siblings with `cwebp` on the server. Ask Kinsta to remove the WebP Express rules on both environments.
+3. **Restore picked the wrong backup once.** Newest-run default pointed at the 15:36 run whose `orig/` was already-compressed. Now defaults to the oldest run; `--result` overrides.
+4. Windows: one ssh argument with 134 commands exceeds the command-line limit; long batches are piped to `bash -s`.
+
+## Pilot: hsfamilylaw.com (Ahrefs crawl 2026-10-29) — applied, headshots restored
 
 - 26 PNGs flagged, 53 MB of originals; with their sub-sizes, **102 MB on disk → 26 MB** after the run (26 originals + 108 sub-size files, all replaced, none under the 15% floor). Blog/practice-area graphics and the site-wide `HS-BG-Image.png` dropped 82–89%; attorney headshots (transparent backgrounds → Pillow's octree quantizer) dropped 55–69%.
 - Probe findings that shaped the skill: the 1024px `large` sub-sizes were 0.9–1.6 MB each and are what pages actually load (originals are referenced through ACF image fields and featured images); WordPress regenerates PNG thumbs as truecolor, so the skill now compresses every sub-size file in place and only regenerates when an original was resized (none were; max was 1920px).
 - Run log: probe 14:25 → staging dry 14:43 → staging apply 14:52 → **live apply 15:03** (`changes/kinsta/hsfamilylaw/2026-10-29-1503-fix-images-live-apply.md`). Object cache flush ok; `wp kinsta cache purge --all` works on Kinsta and is logged. 138 stray `.webp` files for these images removed on live (142 on staging).
 - WebP Express was active and had produced 2,464 `.webp` files but served none of them (Kinsta is Nginx; its `.htaccess` rules do nothing there and it wasn't in Alter-HTML mode). Greg removed the plugin and enabled **Kinsta CDN lossy image optimization** at the server level the same afternoon. ~1,880 stray `.webp` siblings remain elsewhere in `uploads/`; harmless, sweep later.
 - Alt text scan (111 rows) agrees with Ahrefs: Tier A (alt attribute absent, published) = 5 rows = Ahrefs' 5 pages. Tier C 59 (featured images with empty attachment alt), Tier B 34 (`alt=""` inline), Tier D 13 (drafts/private). Broken srcs: 0. **Review sheet written: `changes/kinsta/hsfamilylaw/2026-10-29-1533-fix-images-alt.csv`, 94 rows prefilled** (13 headshots from the bio titles; the rest drafted from post topics without seeing the pictures, flagged as such; 3 pasted tracking pixels on `/isle-of-dogs/` and `decor-logo.svg` left blank). Review copy in Google Drive: "hsfamilylaw alt text review 2026-10-29" (Sheets file id `1j6bX79mViQOnblkOgDAhUmcW4lLrFpoanVgka1NN3gU`, 98 rows, Tier D left out, live page links). When Greg is done: export as CSV (Drive `download_file_content` with `text/csv`), `python scripts/merge_alt_sheet.py changes/kinsta/hsfamilylaw/2026-10-29-1533-fix-images-alt.csv <export>`, commit, then `--alt-apply` dry → staging → live. Not yet run. (A second, empty sheet with the same name exists from a failed first upload; Greg can delete it.)
-- Still to do here: a recrawl to confirm "Image file size too large" clears; a fresh `--probe` to confirm Kinsta's CDN now serves WebP to browsers; visual spot-check of the headshots at 100% (not done before apply).
+- Current state of live: 15 graphics (practice-area images, `HS-BG-Image`, phone graphic, areas-of-practice picture) are the compressed versions and look fine so far (Greg to confirm); 11 headshots are back to originals (2–3 MB PNGs) with `.webp` siblings at q85, so WebP browsers still get a small file. Staging restore of the headshots pending at time of writing.
+- Still to do: staging headshot restore; decide whether to recompress headshots with pngquant `--png-quality 85-98` after a real visual check, or leave them; Ahrefs recrawl; fresh `--probe` for WebP serving; Kinsta ticket for the Nginx rules; alt text apply (dry run on staging was clean, 95 rows, all resolved).
 
 ## Open items
 

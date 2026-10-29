@@ -79,7 +79,7 @@ def webp_served(url):
 # ---------------------------------------------------------------- local compression
 def have(bin_): return shutil.which(bin_) is not None
 
-def compress(src: Path, dst: Path, max_edge: int, png_quality="65-85", jpeg_quality=82):
+def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_quality=82, allow_pillow=False):
     """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name."""
     from PIL import Image
     steps = []
@@ -101,6 +101,10 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="65-85", jpeg_qual
             if r.returncode == 0: steps.append("pngquant " + png_quality)
             elif r.returncode == 99: shutil.copyfile(work, dst); steps.append("pngquant: quality floor not met, kept pixels")
             else: sys.exit("pngquant failed: " + r.stderr.decode("utf-8", "replace"))
+        elif not allow_pillow:
+            shutil.copyfile(src, dst); steps.append("SKIPPED: pngquant not on PATH and --allow-pillow not set")
+            if work != src: Path(work).unlink(missing_ok=True)
+            return steps
         else:
             im2 = Image.open(work); im2.load()
             has_alpha = im2.mode in ("RGBA", "LA") or (im2.mode == "P" and "transparency" in im2.info)
@@ -219,11 +223,12 @@ def main(argv=None):
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--max-edge", type=int, default=2560)
     ap.add_argument("--min-gain", type=int, default=15, help="percent; smaller gains leave the file alone")
-    ap.add_argument("--png-quality", default="65-85")
+    ap.add_argument("--png-quality", default="80-98", help="pngquant min-max; 80-98 is visually lossless on photos, 65-85 is fine for flat graphics")
     ap.add_argument("--jpeg-quality", type=int, default=82)
     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
+    ap.add_argument("--allow-pillow", action="store_true", help="let Pillow's 256-colour quantizer handle PNGs when pngquant is missing. OFF by default: it visibly damages photos (hsfamilylaw headshots, 2026-10-29)")
     ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
     ap.add_argument("--alt-apply", metavar="CSV", help="write the reviewed alt CSV back to the site (dry unless --apply)")
@@ -333,10 +338,11 @@ def main(argv=None):
         ok, err = scp(f"{alias}:{remote}", str(local_o))
         if not ok: row["action"] = f"PULL FAILED: {err}"; print(f"  !! {rel}: pull failed {err}"); return row
         row["before"] = local_o.stat().st_size
-        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality)
+        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality, args.allow_pillow)
         row["after"] = local_n.stat().st_size
         gain = 100 * (1 - row["after"] / row["before"]) if row["before"] else 0
         row["gain_pct"] = round(gain, 1)
+        if any(st.startswith("SKIPPED") for st in row["steps"]): row["action"] = "skipped (no pngquant)"; print(f"  -- {rel}: skipped, pngquant not on PATH"); return row
         if gain < args.min_gain: row["action"] = "kept (gain below threshold)"; print(f"  -- {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%), kept"); return row
         if mode == "apply":
             ok, err = scp(str(local_n), f"{alias}:{remote}")
