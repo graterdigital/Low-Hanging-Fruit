@@ -24,7 +24,7 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 - **Live applied 2026-10-29 11:30** (`2026-10-29-1130-fix-redirect-links-live-apply.md`): 8 posts, 55 postmeta rows, 79 replacements, all `applied: True`, cache flush ok, 0 `wp_options` hits. Totals: 25 legacy-host links, 18 `/contact-us` slash fixes, 15 guardian-ad-litem, 13 collaborative-divorce, 2+2 collaborative-divorce-attorney (incl. the chain), 1 each child-custody, child-support, divorce-process, mediate.
 - Verified from outside right after: `/divorce/child-support/` serves fixed links. `/2026-child-support/` (post 5553, 2 replacements applied) still served the old `/child-support/` and `/child-custody/` hrefs minutes later: Kinsta edge cache; DB confirmed changed via the apply log. Re-check after the cache clears.
 - That post also still links `/modifications/`, one of the 5 homepage-redirect URLs on the skipped list; first concrete item for `redirect-rules`.
-- Next: Ahrefs recrawl of project 9704538; "Page has links to redirect" should drop from 39 to roughly the 24 paginated archives, which belong to the template fix.
+- **Verified by the 2026-10-29 crawl** (same day): "Page has links to redirect" 39 → 31, "3XX redirect" 28 → 21, "Redirect chain" 1 → 0. The 31 that remain are 25 paginated archives (template `/page/1/` fix) and 6 content pages that link to skipped-list URLs: home (`/podcast/`), `/2026-child-support/` (`/modifications/`), `/understanding-roles-collaborative-divorce-team/` (pasted file path), `/family-law/`, `/co-parenting-schedules-summer-break/`, `/needs-mediation-attorneys/` (the homepage-redirect URLs). `build_redirect_map.py` run against this crawl produces 0 swaps / 21 skipped, all for the expected reasons; that map (`redirect-map-2026-10-29.json`) is the current one, so the batch reports the site as nothing to do.
 
 ## Things learned the hard way (already encoded in the script)
 
@@ -39,7 +39,6 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 
 ## Open items for this skill
 
-- Verify hsfamilylaw with an Ahrefs recrawl (live applied 2026-10-29).
 - Second site: one on WP Engine (webroot `sites/<install>`, path logic exists but is untested) and one with a page builder (Elementor stores content as JSON in `_elementor_data`; the JSON-escaped rules should cover it but it has not been exercised).
 - Builder-aware handling if Elementor data turns out to need it.
 - A restore script for bulk rollback from the backup JSON (today: per-post revisions, or ask for one).
@@ -48,7 +47,7 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 
 ## Related work that is NOT this skill
 
-- `redirect-rules` (APPROVE): fix the 5 homepage-redirect URLs and collapse chains in the Redirection plugin.
+- `redirect-rules` (APPROVE): give the 4 homepage-redirect URLs real targets (`/modifications/`, `/family-law/alimony-modification/`, `/mediation/mediation-faqs/`, `/collaborative-divorce-attorney/basics-collaborative-approach/`) and fix the links on the 5 pages above; the chain is already gone.
 - Template fixes (theme diffs, by hand): archive `<h1>`, pagination `/page/1/`.
 - `indexation-review` (APPROVE): Yoast author sitemap, thin archive noindex.
 - Options cleanup (by hand, from the `-options.md` log): widgets, menus, theme settings still carrying old links.

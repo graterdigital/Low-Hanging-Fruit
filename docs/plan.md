@@ -17,7 +17,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 - `fix-redirect-links` built, dry-run and applied on hsfamilylaw staging (79 link swaps across 8 posts and 55 ACF fields, clean). Same day: change logs regrouped to `changes/<provider>/<slug>/`, `--yes` flag for unattended live runs, `wp cache flush` after apply, companion `-options.md` report of `wp_options` rows still holding old URLs. Handoff: `claude/skill-fix-redirect-links.md`.
 
 **Next**
-- `fix-redirect-links`: Ahrefs recrawl of hsfamilylaw to verify (live applied 2026-10-29: 8 posts, 55 meta rows, 79 links). Then the Kinsta batch: `build_redirect_map.py` (Ahrefs API) + `batch_fix_redirect_links.py --provider kinsta`, stage-only first, across 11 sites incl. the new setcomcorp.
+- `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Now the Kinsta batch: `build_redirect_map.py` (Ahrefs API) + `batch_fix_redirect_links.py --provider kinsta`, stage-only first, across 11 sites incl. the new setcomcorp.
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
 **Roster facts that shape the build**
@@ -86,7 +86,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 
 **Phase 1: Technical SEO (pilot on hsfamilylaw.com).**
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**
-- `fix-redirect-links` (AUTO). **Built; applied to hsfamilylaw live 2026-10-29; recrawl pending. Map builder and host-wide batch runner added same day; Kinsta batch next.**
+- `fix-redirect-links` (AUTO). **Done on hsfamilylaw (applied and verified by recrawl 2026-10-29). Map builder (Ahrefs API) and host-wide batch runner added; Kinsta batch next.**
 - `fix-meta` (titles and descriptions through the SEO plugin, APPROVE)
 - `fix-images` (weight, format, alt, APPROVE)
 - `indexation-review` (archives, sitemap, noindex, APPROVE)
