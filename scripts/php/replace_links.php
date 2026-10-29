@@ -28,7 +28,7 @@ $mode = $job['mode'] ?? 'dry';
 $home_host   = parse_url(home_url(), PHP_URL_HOST);
 $live_host   = $job['host'];
 $legacy      = array_values(array_filter($job['legacy_hosts'] ?? []));
-$all_hosts   = array_unique(array_merge([$live_host, $home_host], $legacy));
+$all_hosts   = array_values(array_unique(array_merge([$live_host, $home_host], $legacy)));   // array_values: a gapped array would JSON-encode as an object
 $hosts_re    = '(?:www\.)?(?:' . implode('|', array_map(fn($h) => preg_quote(preg_replace('~^www\.~', '', $h), '~'), $all_hosts)) . ')';
 $path_of     = fn($u) => preg_replace('~^https?://(www\.)?[^/]+~', '', $u);
 
