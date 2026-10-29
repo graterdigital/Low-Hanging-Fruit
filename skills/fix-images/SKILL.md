@@ -61,7 +61,7 @@ python scripts/fix_images.py <slug> --target live --apply        # type the slug
 
 The dry run and apply both work on the original **and every registered sub-size file** of each attachment (the 1024px `large` of a photo saved as PNG is often 1–1.5 MB by itself, and that is what pages actually load). WordPress writes resized PNGs as truecolor, so regenerating thumbnails from a quantized original would not shrink them; each sub-size file is compressed in place instead. `wp media regenerate` runs only when an original had to be resized, so the metadata and dimension-bound sub-sizes match, and the sub-sizes that produces are then compressed too.
 
-Apply pushes the compressed files back under the same names, deletes any stale WebP Express conversions of those files (the plugin remakes them on the next request), flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
+Apply pushes the compressed files back under the same names, flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
 
 Commit the `changes/<provider>/<slug>/*.md` logs; the `backup/` folders stay local.
 
@@ -99,4 +99,4 @@ Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files 
 - Only files Ahrefs flags are touched. A site-wide sweep of `uploads/` is deliberate scope creep for later; Ahrefs' threshold is the agreed definition of "too large".
 - PNG stays PNG, JPEG stays JPEG. GIF, SVG, AVIF, WebP originals are copied through untouched.
 - Writes files and attachment metadata (via regenerate) only. Never touches `post_content`, postmeta text, options or theme files.
-- Every `.webp` sibling removed is one WebP Express made from a file this run replaced; nothing else in `webp-express/` is touched.
+- `.webp` siblings are left alone unless `--purge-webp` is passed. Learned on hsfamilylaw: Kinsta's Nginx kept serving `name.png.webp` to WebP-capable browsers after WebP Express was removed, so deleting the siblings of the 26 replaced files broke exactly those 26 images (the photo looked "missing"; the file on disk was fine). After replacing an image on such a host, regenerate its sibling instead: `python scripts/regen_webp_siblings.py <slug> --target <staging|live>` (uses `cwebp` on the server and picks the naming from the existing files). The real fix is having the host remove the plugin's rewrite rules.

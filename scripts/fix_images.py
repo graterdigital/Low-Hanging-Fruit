@@ -224,6 +224,7 @@ def main(argv=None):
     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
+    ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
     ap.add_argument("--alt-apply", metavar="CSV", help="write the reviewed alt CSV back to the site (dry unless --apply)")
     args = ap.parse_args(argv)
@@ -375,11 +376,13 @@ def main(argv=None):
     if mode == "apply":
         # stale WebP Express conversions of the replaced originals and their thumbnails
         stems = sorted({re.sub(r"\.\w+$", "", r["path"]) for r in results if r["action"] == "replaced" and r["kind"] == "original"})
-        if stems and inv.get("webp", {}).get("webp-express") == "active":
+        if stems and args.purge_webp:
             finds = " ".join(f"-path '*/{s}*.webp' -o" for s in stems).rstrip(" -o")
             code, out, err = ssh(alias, f"cd {args.webroot} && find wp-content/webp-express wp-content/uploads \\( {finds} \\) -type f -print -delete 2>/dev/null | wc -l")
             webp_purge = out.strip()
-            print(f"Removed {webp_purge} stale .webp conversions (WebP Express regenerates them on request)")
+            print(f"Removed {webp_purge} .webp siblings (--purge-webp)")
+        elif stems:
+            webp_purge = "skipped (not requested; see --purge-webp). If a WebP plugin or host rule serves .webp siblings, regenerate them with scripts/regen_webp_siblings.py"
         code, out, err = wp(alias, args.webroot, "cache flush"); flush = (code == 0, (out + err).strip())
         code, out, err = wp(alias, args.webroot, "kinsta cache purge --all" if provider == "kinsta" else "page-cache flush") ; cdn = (code == 0, (out + err).strip()[-120:])
         print(f"Object cache flush: {'ok' if flush[0] else 'FAILED'}; host/CDN cache purge: {'ok' if cdn[0] else 'not available'} {cdn[1]}")
