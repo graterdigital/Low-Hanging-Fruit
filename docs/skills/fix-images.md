@@ -40,6 +40,6 @@ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng`
 - pngquant on Greg's PC: headshots would likely go from ~60% to 70–80% reduction and with less banding risk; rerun `--target live --apply` after installing (idempotent enough: already-quantized files just shrink a bit more or stay under the floor).
 - Alt drafts without seeing the image are the weak spot: a vision pass (fetch each image, describe it) would make the sheet near-final. Needs the images reachable from wherever the pass runs.
 - Thumbnail regeneration for files with no attachment ID (edited `-eNNNN` copies, direct uploads): compressed by path, thumbs untouched. See what the probe finds.
-- Batch runner across a host, like `batch_fix_redirect_links.py`, once two sites are clean.
+- `scripts/batch_fix_images.py --provider kinsta`: review-only batch (probe → staging dry run → alt sheet per site, nothing pushed), summary in `changes/kinsta/_batch-<stamp>-fix-images-review.md`. Built 2026-10-29 evening, first run pending. Applies stay per site after the visual check.
 - Elementor/WPBakery sites: image references in builder JSON are not an issue for this skill (URLs don't change), but the alt scan only reads `<img>` tags; builder widgets keep alt in their JSON. Extend the scan when the first builder site runs.
 - Server-side compression (Imagick/pngquant on the host) if the local round-trip proves slow on sites with hundreds of files.
