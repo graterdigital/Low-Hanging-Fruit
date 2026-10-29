@@ -12,6 +12,7 @@ if (!defined('RESTORE_LINKS_JOB')) { fwrite(STDERR, "no job\n"); exit(1); }
 global $wpdb;
 $job = json_decode(RESTORE_LINKS_JOB, true);
 $mode = $job['mode'] ?? 'dry';
+$force = !empty($job['force']);   // restore even when the current value is not what the fix wrote
 $out = ['mode' => $mode, 'posts' => [], 'meta' => []];
 
 foreach ($job['posts'] ?? [] as $p) {
@@ -19,12 +20,13 @@ foreach ($job['posts'] ?? [] as $p) {
     $e = ['id' => (int)$p['id']];
     if ($cur === null) $e['result'] = 'missing';
     elseif ($cur === $p['before']) $e['result'] = 'already restored';
-    elseif ($cur !== ($p['after'] ?? null)) $e['result'] = 'modified since; left alone';
+    elseif ($cur !== ($p['after'] ?? null) && !$force) $e['result'] = 'modified since; left alone';
     else {
+        if ($cur !== ($p['after'] ?? null)) $e['forced'] = true;
         if ($mode === 'apply') {
             $ok = $wpdb->update($wpdb->posts, ['post_content' => $p['before']], ['ID' => $p['id']]);
             clean_post_cache($p['id']);
-            $e['result'] = $ok === false ? 'ERROR: ' . $wpdb->last_error : 'restored';
+            $e['result'] = $ok === false ? 'ERROR: ' . $wpdb->last_error : (empty($e['forced']) ? 'restored' : 'restored (forced over a later change)');
         } else $e['result'] = 'would restore';
     }
     $out['posts'][] = $e;
@@ -34,12 +36,13 @@ foreach ($job['meta'] ?? [] as $m) {
     $e = ['meta_id' => (int)$m['meta_id']];
     if (!$row) $e['result'] = 'missing';
     elseif ($row->meta_value === $m['before']) $e['result'] = 'already restored';
-    elseif ($row->meta_value !== ($m['after'] ?? null)) $e['result'] = 'modified since; left alone';
+    elseif ($row->meta_value !== ($m['after'] ?? null) && !$force) $e['result'] = 'modified since; left alone';
     else {
+        if ($row->meta_value !== ($m['after'] ?? null)) $e['forced'] = true;
         if ($mode === 'apply') {
             $ok = $wpdb->update($wpdb->postmeta, ['meta_value' => $m['before']], ['meta_id' => $m['meta_id']]);
             wp_cache_delete($row->post_id, 'post_meta');
-            $e['result'] = $ok === false ? 'ERROR: ' . $wpdb->last_error : 'restored';
+            $e['result'] = $ok === false ? 'ERROR: ' . $wpdb->last_error : (empty($e['forced']) ? 'restored' : 'restored (forced over a later change)');
         } else $e['result'] = 'would restore';
     }
     $out['meta'][] = $e;
