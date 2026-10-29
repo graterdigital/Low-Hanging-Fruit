@@ -19,9 +19,10 @@ platform:
   page_builder: none-detected
   seo_plugin: yoast               # v28.8 per wp plugin list 2026-10-28
   plugins_seen: [google-site-kit, business-reviews-bundle, handl-utm-grabber-v3, simple-banner, youtube-feed-pro, gravityforms, akismet]
-  plugins_active: [wordpress-seo, redirection, webp-express, enable-media-replace, simple-history, advanced-custom-fields-pro, google-site-kit]   # wp plugin list 2026-10-28; names best-effort
+  plugins_active: [wordpress-seo, redirection, enable-media-replace, simple-history, advanced-custom-fields-pro, google-site-kit]   # wp plugin list 2026-10-28; webp-express removed 2026-10-29
   redirect_manager: redirection
-  image_optimization_plugin: webp-express   # active per wp plugin list 2026-10-28, but the 2026-10-29 crawl still saw full-size PNGs; whether it serves WebP to browsers is unverified (fix-images --probe checks)
+  image_optimization_plugin: none            # WebP Express removed 2026-10-29 (it converted but never served on Nginx); Kinsta CDN lossy image optimization enabled instead
+  image_notes: fix-images run 2026-10-29 (live) shrank the 26 flagged PNGs + sub-sizes 102 MB -> 26 MB in place; ~1,880 stray .webp files left in uploads/ from the old plugin
   schema_notes: hand-coded LegalService JSON-LD in the theme head on core pages and bios, alongside Yoast's graph
   template_notes: category/tag archives output no <h1>; theme pagination links page 1 as /page/1/
 
@@ -49,4 +50,4 @@ rules:
 
 evidence:
   last_checked: 2026-10-29
-  basis: Ahrefs Site Audit crawls of 2026-10-08 and 2026-10-29, raw HTML of /, /category/divorce/, /blog/page/2/, and `wp plugin list` over SSH on 2026-10-28.
+  basis: Ahrefs Site Audit crawls of 2026-10-08 and 2026-10-29, raw HTML of /, /category/divorce/, /blog/page/2/, `wp plugin list` over SSH on 2026-10-28, and the fix-images probe/apply over SSH on 2026-10-29.

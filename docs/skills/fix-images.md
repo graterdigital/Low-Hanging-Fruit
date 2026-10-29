@@ -1,6 +1,6 @@
 # Handoff: fix-images
 
-Status as of 2026-10-29 (afternoon). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+Status as of 2026-10-29 (evening). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
 
 ## What the skill does
 
@@ -15,20 +15,22 @@ Decision made this chat: no format conversion and no URL swaps in this skill. We
 - `scripts/php/image_inventory.php`: read-only, runs via `wp eval-file`. Server tools, optimizer-plugin state (WebP Express config + converted-file counts), per-file facts (attachment ID, dims, sub-sizes, references, featured/ACF use), `<img>`-without-alt scan over post_content + postmeta, missing-file scan.
 - Logs: `changes/<provider>/<slug>/<stamp>-fix-images-<target>-<dry|apply>.md`; originals in `backup/<stamp>-fix-images-<target>/orig/`, compressed in `new/` (git-ignored).
 
-Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Tested here only on synthetic PNGs (opaque and alpha): resize + quantize work, transparency survives.
+Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Live-tested on hsfamilylaw 2026-10-29 with the Pillow path only (no pngquant on Greg's PC yet).
 
-## Pilot: hsfamilylaw.com (Ahrefs crawl 2026-10-29)
+## Pilot: hsfamilylaw.com (Ahrefs crawl 2026-10-29) — DONE on live
 
-- 26 PNGs flagged, ~55 MB total, 1.0–3.5 MB each. 11 attorney headshots (2026/04, 08, 09), 12 blog/practice-area graphics (2025/03, 2026/06), `2025/04/HS-BG-Image.png` 1.59 MB on **160** pages, `2026/02/forward-facing-phone-graphic.png` (new since Oct 8), `2025/02/Areas-of-Practice-Experience-Picture.png`.
-- Other image issues: Missing alt text 5 pages, Image broken 1, Image redirects 4 + Page has redirected image 1 (the pasted `/isle-of-dogs/` post), HTTPS→HTTP image 0.
-- **Open question the probe answers first:** `wp plugin list` on 2026-10-28 showed WebP Express and Enable Media Replace active, but the client file still says `image_optimization_plugin: none-detected` and Ahrefs crawled PNGs. Either WebP Express serves `.webp` to browsers (then the live impact is smaller than the audit says, and the originals are still worth shrinking) or it isn't converting (fix the config by hand first).
-- Nothing run on the site yet. Next: `--probe` on staging, read `reports/hsfamilylaw/images-2026-10-29.md`, dry run, eyeball `new/` vs `orig/` for the headshots, apply on staging, then live.
+- 26 PNGs flagged, 53 MB of originals; with their sub-sizes, **102 MB on disk → 26 MB** after the run (26 originals + 108 sub-size files, all replaced, none under the 15% floor). Blog/practice-area graphics and the site-wide `HS-BG-Image.png` dropped 82–89%; attorney headshots (transparent backgrounds → Pillow's octree quantizer) dropped 55–69%.
+- Probe findings that shaped the skill: the 1024px `large` sub-sizes were 0.9–1.6 MB each and are what pages actually load (originals are referenced through ACF image fields and featured images); WordPress regenerates PNG thumbs as truecolor, so the skill now compresses every sub-size file in place and only regenerates when an original was resized (none were; max was 1920px).
+- Run log: probe 14:25 → staging dry 14:43 → staging apply 14:52 → **live apply 15:03** (`changes/kinsta/hsfamilylaw/2026-10-29-1503-fix-images-live-apply.md`). Object cache flush ok; `wp kinsta cache purge --all` works on Kinsta and is logged. 138 stray `.webp` files for these images removed on live (142 on staging).
+- WebP Express was active and had produced 2,464 `.webp` files but served none of them (Kinsta is Nginx; its `.htaccess` rules do nothing there and it wasn't in Alter-HTML mode). Greg removed the plugin and enabled **Kinsta CDN lossy image optimization** at the server level the same afternoon. ~1,880 stray `.webp` siblings remain elsewhere in `uploads/`; harmless, sweep later.
+- Alt text scan (111 rows) agrees with Ahrefs: Tier A (alt attribute absent, published) = 5 rows = Ahrefs' 5 pages. Tier B 42 (`alt=""` inline), Tier C 59 (featured images with empty attachment alt), Tier D 4 (drafts). Broken srcs: 0. All still open; see `reports/hsfamilylaw/images-2026-10-29.md`.
+- Still to do here: a recrawl to confirm "Image file size too large" clears; a fresh `--probe` to confirm Kinsta's CDN now serves WebP to browsers; visual spot-check of the headshots at 100% (not done before apply).
 
 ## Open items
 
+- pngquant on Greg's PC: headshots would likely go from ~60% to 70–80% reduction and with less banding risk; rerun `--target live --apply` after installing (idempotent enough: already-quantized files just shrink a bit more or stay under the floor).
 - `alt-text-apply`: write-back from an edited CSV (featured image → `_wp_attachment_image_alt`; inline → attribute insert into the exact tag in post_content/postmeta). Same dry/apply/log contract.
 - Thumbnail regeneration for files with no attachment ID (edited `-eNNNN` copies, direct uploads): compressed by path, thumbs untouched. See what the probe finds.
 - Batch runner across a host, like `batch_fix_redirect_links.py`, once two sites are clean.
 - Elementor/WPBakery sites: image references in builder JSON are not an issue for this skill (URLs don't change), but the alt scan only reads `<img>` tags; builder widgets keep alt in their JSON. Extend the scan when the first builder site runs.
 - Server-side compression (Imagick/pngquant on the host) if the local round-trip proves slow on sites with hundreds of files.
-- Kinsta CDN: `wp kinsta cache purge --all` is attempted and logged; confirm it exists on this install.
