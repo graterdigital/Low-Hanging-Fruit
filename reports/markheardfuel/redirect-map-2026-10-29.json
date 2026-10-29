@@ -1,0 +1,133 @@
+{
+  "site": "markheardfuel.com",
+  "source": "Ahrefs Site Audit project 9799849, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 23,
+    "swaps": 19,
+    "skipped": 4,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://markheardfuel.com/service-areas/cumming-ga-propane-company/",
+      "new": "https://markheardfuel.com/service-areas/cumming-ga-propane-company",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/dawsonville-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/dawsonville-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/gainesville-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/gainesville-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/johns-creek-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/johns-creek-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/alpharetta-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/alpharetta-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/dahlonega-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/dahlonega-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/roswell-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/roswell-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/buford-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/buford-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/canton-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/canton-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/jasper-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/jasper-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/service-areas/milton-ga-propane/",
+      "new": "https://markheardfuel.com/service-areas/milton-ga-propane",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/services/signup-for-new-service/",
+      "new": "https://markheardfuel.com/services/new-account-setup",
+      "links": 10,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://markheardfuel.com/services/new-account-setup/",
+      "new": "https://markheardfuel.com/services/new-account-setup",
+      "links": 8
+    },
+    {
+      "old": "https://markheardfuel.com/faqs/propane-safety-faqs/",
+      "new": "https://markheardfuel.com/faqs/propane-safety-faqs",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/faqs/why-choose-propane/",
+      "new": "https://markheardfuel.com/faqs/why-choose-propane",
+      "links": 1
+    },
+    {
+      "old": "https://markheardfuel.com/services/order-a-refill/",
+      "new": "https://markheardfuel.com/services/order-a-refill",
+      "links": 1
+    },
+    {
+      "old": "https://markheardfuel.com/privacy-policy/",
+      "new": "https://markheardfuel.com/privacy-policy",
+      "links": 41
+    },
+    {
+      "old": "https://markheardfuel.com/contact/",
+      "new": "https://markheardfuel.com/contact",
+      "links": 5
+    },
+    {
+      "old": "https://markheardfuel.com/about/",
+      "new": "https://markheardfuel.com/about",
+      "links": 1
+    }
+  ],
+  "skipped": [
+    {
+      "old": "http://www.markheardfuel.com/?utm_campaign=gmb",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 2
+    },
+    {
+      "old": "https://www.markheardfuel.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://www.markheardfuel.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://markheardfuel.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

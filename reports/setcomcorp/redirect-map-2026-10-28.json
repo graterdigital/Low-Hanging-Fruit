@@ -1,0 +1,164 @@
+{
+  "site": "setcomcorp.com",
+  "source": "Ahrefs Site Audit project 10610051, crawl 2026-10-28, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 27,
+    "swaps": 13,
+    "skipped": 14,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://setcomcorp.com/products/accessories/headset-strap-extension",
+      "new": "https://setcomcorp.com/products/accessories/headset-strap-extension/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/2025-police-motorcycle-training-events/",
+      "new": "https://setcomcorp.com/2025-setcom-conference-schedule/",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/police-motorcycle-rodeo-course-maps",
+      "new": "https://setcomcorp.com/police-motorcycle-rodeo-course-maps/",
+      "links": 163,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/portable-radio-adapter-cables",
+      "new": "https://setcomcorp.com/portable-radio-adapter-cables/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/industry/drone-operations",
+      "new": "https://setcomcorp.com/industry/drone-operations/",
+      "links": 2,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/products/systems/1600/",
+      "new": "https://setcomcorp.com/products/systems/",
+      "links": 1,
+      "note": "redirects up to its parent page; check the parent covers the old content"
+    },
+    {
+      "old": "https://setcomcorp.com/radio-designator-list",
+      "new": "https://setcomcorp.com/radio-designator-list/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/industry/drilling",
+      "new": "https://setcomcorp.com/industry/drilling/",
+      "links": 2,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/wwett-2025-show",
+      "new": "https://setcomcorp.com/wwett-2025-show/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/warranty",
+      "new": "https://setcomcorp.com/warranty/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/dealers",
+      "new": "https://setcomcorp.com/dealers/",
+      "links": 163,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/about",
+      "new": "https://setcomcorp.com/about/",
+      "links": 163,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://setcomcorp.com/shop",
+      "new": "https://setcomcorp.com/shop/",
+      "links": 1,
+      "note": "missing trailing slash"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://setcomcorp.com/2026/10/21/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 2
+    },
+    {
+      "old": "https://setcomcorp.com/2026/06/22/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/06/04/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/05/04/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://www.setcomcorp.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/10/07/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/05/18/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/01/09/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/01/28/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/09/10/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/09/24/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "https://setcomcorp.com/2026/10/16/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "http://setcomcorp.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://www.setcomcorp.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

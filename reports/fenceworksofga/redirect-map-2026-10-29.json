@@ -1,0 +1,31 @@
+{
+  "site": "fenceworksofga.com",
+  "source": "Ahrefs Site Audit project 9799850, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 3,
+    "swaps": 0,
+    "skipped": 3,
+    "verify_failed": 0
+  },
+  "swaps": [],
+  "skipped": [
+    {
+      "old": "https://fenceworksofga.com/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "http://fenceworksofga.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://www.fenceworksofga.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

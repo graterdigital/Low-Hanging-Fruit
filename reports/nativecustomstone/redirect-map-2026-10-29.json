@@ -1,0 +1,579 @@
+{
+  "site": "nativecustomstone.com",
+  "source": "Ahrefs Site Audit project 9704543, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 106,
+    "swaps": 86,
+    "skipped": 20,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://www.nativecustomstone.com/architects-value-native-custom-stone-lunch-learn-sessions/lunch-and-learn-native-custom-stone/",
+      "new": "https://www.nativecustomstone.com/wp-content/uploads/2018/07/lunch-and-learn-native-custom-stone.jpg",
+      "links": 2
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog/why-should-you-use-manufactured-stone-veneer-in-a-bathroom/",
+      "new": "http://www.nativecustomstone.com/why-should-you-use-manufactured-stone-veneer-in-a-bathroom/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog/why-should-you-use-manufactured-stone-veneer-in-a-bathroom/",
+      "new": "https://www.nativecustomstone.com/why-should-you-use-manufactured-stone-veneer-in-a-bathroom/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog/is-manufactured-stone-cheaper-than-natural-stone-veneer/",
+      "new": "http://www.nativecustomstone.com/is-manufactured-stone-cheaper-than-natural-stone-veneer/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog/is-manufactured-stone-cheaper-than-natural-stone-veneer/",
+      "new": "https://www.nativecustomstone.com/is-manufactured-stone-cheaper-than-natural-stone-veneer/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/wp-content/uploads/2015/01/Go-Stone_New-Brochure_12-19-13.pdf",
+      "new": "http://www.nativecustomstone.com/wp-content/uploads/2026/03/143496-Native-Stone-Catalog-1-pdf.jpg",
+      "links": 2
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog/seal-your-custom-stone-veneer-in-just-4-easy-steps/",
+      "new": "http://www.nativecustomstone.com/seal-your-custom-stone-veneer-in-just-4-easy-steps/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog/seal-your-custom-stone-veneer-in-just-4-easy-steps/",
+      "new": "https://www.nativecustomstone.com/seal-your-custom-stone-veneer-in-just-4-easy-steps/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/uploads/2026/02/CustomFit-over-Sheathing-MS-1.dwg",
+      "new": "http://www.nativecustomstone.com/category/maintenance-and-installation/tips-and-advice/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/uploads/2026/02/CustomFit-over-Sheathing-MS-1.dwg",
+      "new": "https://www.nativecustomstone.com/category/maintenance-and-installation/tips-and-advice/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog/creating-custom-stone-veneer-accent-wall/",
+      "new": "http://www.nativecustomstone.com/blog/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page; redirects up to its parent page; check the parent covers the old content"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog/creating-custom-stone-veneer-accent-wall/",
+      "new": "https://www.nativecustomstone.com/blog/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page; redirects up to its parent page; check the parent covers the old content"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog/change-your-mind-manufactured-stone/",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone-installation-and-accessory-details/",
+      "new": "http://www.nativecustomstone.com/technical/",
+      "links": 6
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog/change-your-mind-manufactured-stone/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone-installation-and-accessory-details/",
+      "new": "https://www.nativecustomstone.com/technical/",
+      "links": 3
+    },
+    {
+      "old": "http://www.nativecustomstone.com/top-5-places-install-faux-stone/",
+      "new": "http://www.nativecustomstone.com/blog/",
+      "links": 109,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/top-5-places-install-faux-stone/",
+      "new": "https://www.nativecustomstone.com/blog/",
+      "links": 105,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/distributors/find-a-distributor",
+      "new": "http://www.nativecustomstone.com/vendors/",
+      "links": 10
+    },
+    {
+      "old": "http://www.nativecustomstone.com/go-brick-go-stone-diy-projects/",
+      "new": "http://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/distributors/find-a-distributor",
+      "new": "https://www.nativecustomstone.com/vendors/",
+      "links": 10
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-brick-go-stone-diy-projects/",
+      "new": "https://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/custom-stone-vs-natural-stone/",
+      "new": "http://www.nativecustomstone.com/using-custom-stone-veneer-vs-natural-stone-for-your-project/",
+      "links": 9
+    },
+    {
+      "old": "http://www.nativecustomstone.com/go-stone/go-stone-installation",
+      "new": "http://www.nativecustomstone.com/go-stone-stone-panels/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/category/manufactured-stone-2/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 2
+    },
+    {
+      "old": "https://www.nativecustomstone.com/custom-stone-vs-natural-stone/",
+      "new": "https://www.nativecustomstone.com/using-custom-stone-veneer-vs-natural-stone-for-your-project/",
+      "links": 9
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-stone/go-stone-installation",
+      "new": "https://www.nativecustomstone.com/go-stone-stone-panels/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/roi-home-remodel-infographic/",
+      "new": "http://www.nativecustomstone.com/how-to-get-the-most-roi-from-your-home-remodel-infographic/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/roi-home-remodel-infographic/",
+      "new": "https://www.nativecustomstone.com/how-to-get-the-most-roi-from-your-home-remodel-infographic/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/cleaning-manufactured-stone/",
+      "new": "http://www.nativecustomstone.com/technical/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/diy-manufactured-stone-arch/",
+      "new": "http://www.nativecustomstone.com/how-to-install-your-own-manufactured-stone-arch/",
+      "links": 4
+    },
+    {
+      "old": "http://www.nativecustomstone.com/natural-shield-stone-sealer/",
+      "new": "http://www.nativecustomstone.com/shop/",
+      "links": 4,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/cleaning-manufactured-stone/",
+      "new": "https://www.nativecustomstone.com/technical/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/diy-manufactured-stone-arch/",
+      "new": "https://www.nativecustomstone.com/how-to-install-your-own-manufactured-stone-arch/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/natural-shield-stone-sealer/",
+      "new": "https://www.nativecustomstone.com/shop/",
+      "links": 6,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/manufactured-stone-veneer/",
+      "new": "http://www.nativecustomstone.com/manufactured-stone-veneer-suits-any-occasion/",
+      "links": 7
+    },
+    {
+      "old": "https://www.nativecustomstone.com/manufactured-stone-veneer/",
+      "new": "https://www.nativecustomstone.com/manufactured-stone-veneer-suits-any-occasion/",
+      "links": 5
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone-veneer-maintenance/",
+      "new": "http://www.nativecustomstone.com/category/maintenance-and-installation/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone-veneer-maintenance/",
+      "new": "https://www.nativecustomstone.com/category/maintenance-and-installation/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/specs/technical-details",
+      "new": "http://www.nativecustomstone.com/technical/",
+      "links": 2
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-brick-product-specs/",
+      "new": "https://www.nativecustomstone.com/technical/",
+      "links": 2
+    },
+    {
+      "old": "https://www.nativecustomstone.com/specs/technical-details",
+      "new": "https://www.nativecustomstone.com/technical/",
+      "links": 2
+    },
+    {
+      "old": "http://www.nativecustomstone.com/find-a-distributor/",
+      "new": "http://www.nativecustomstone.com/vendors/",
+      "links": 19,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/manufactured-stone/",
+      "new": "http://www.nativecustomstone.com/wp-content/uploads/2014/08/manufactured-stone.jpg",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/find-a-distributor/",
+      "new": "https://www.nativecustomstone.com/vendors/",
+      "links": 19,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/manufactured-stone/",
+      "new": "https://www.nativecustomstone.com/wp-content/uploads/2014/08/manufactured-stone.jpg",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/gallery/galleries/",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 23,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/gallery/galleries/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 17,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/gallery/galleries",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 4,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/gallery/galleries",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 4,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/tips-and-advice/",
+      "new": "http://www.nativecustomstone.com/blog/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/tips-and-advice/",
+      "new": "https://www.nativecustomstone.com/blog/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/go-brick-veneer",
+      "new": "http://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-brick-veneer",
+      "new": "https://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/find-a-vendor/",
+      "new": "http://www.nativecustomstone.com/vendors/",
+      "links": 317
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone-veneers/",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/find-a-vendor/",
+      "new": "https://www.nativecustomstone.com/vendors/",
+      "links": 295
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone-veneers/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone-colors/",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 6,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone-veneer/",
+      "new": "http://www.nativecustomstone.com/wp-content/uploads/2014/10/stone-veneer.jpg",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone-colors/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 6,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone-veneer/",
+      "new": "https://www.nativecustomstone.com/wp-content/uploads/2014/10/stone-veneer.jpg",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/lunch-learn/",
+      "new": "http://www.nativecustomstone.com/lunch-learn-program/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/lunch-learn/",
+      "new": "https://www.nativecustomstone.com/lunch-learn-program/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/accessories",
+      "new": "http://www.nativecustomstone.com/accessories/",
+      "links": 3,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/accessories",
+      "new": "https://www.nativecustomstone.com/accessories/",
+      "links": 3,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/go-brick/",
+      "new": "http://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 31,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/go-stone/",
+      "new": "http://www.nativecustomstone.com/go-stone-stone-panels/",
+      "links": 68
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-brick/",
+      "new": "https://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 31,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/go-stone/",
+      "new": "https://www.nativecustomstone.com/go-stone-stone-panels/",
+      "links": 86
+    },
+    {
+      "old": "http://www.nativecustomstone.com/contact",
+      "new": "http://www.nativecustomstone.com/contact/",
+      "links": 13,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/styles/",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 11
+    },
+    {
+      "old": "http://www.nativecustomstone.com/vendors",
+      "new": "http://www.nativecustomstone.com/vendors/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/contact",
+      "new": "https://www.nativecustomstone.com/contact/",
+      "links": 13,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/styles/",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 11
+    },
+    {
+      "old": "https://www.nativecustomstone.com/vendors",
+      "new": "https://www.nativecustomstone.com/vendors/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/brick/",
+      "new": "http://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 317
+    },
+    {
+      "old": "https://www.nativecustomstone.com/brick/",
+      "new": "https://www.nativecustomstone.com/go-brick-veneer/",
+      "links": 296
+    },
+    {
+      "old": "http://www.nativecustomstone.com/stone",
+      "new": "http://www.nativecustomstone.com/stone/",
+      "links": 321,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/stone",
+      "new": "https://www.nativecustomstone.com/stone/",
+      "links": 299,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/blog",
+      "new": "http://www.nativecustomstone.com/blog/",
+      "links": 230,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "http://www.nativecustomstone.com/diy/",
+      "new": "http://www.nativecustomstone.com/diy-update-for-your-fireplace-for-winter-with-go-stone-or-go-brick/",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/shop",
+      "new": "http://www.nativecustomstone.com/shop/",
+      "links": 5,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/blog",
+      "new": "https://www.nativecustomstone.com/blog/",
+      "links": 230,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.nativecustomstone.com/diy/",
+      "new": "https://www.nativecustomstone.com/diy-update-for-your-fireplace-for-winter-with-go-stone-or-go-brick/",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/shop",
+      "new": "https://www.nativecustomstone.com/shop/",
+      "links": 5,
+      "note": "missing trailing slash"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "http://www.nativecustomstone.com/author/welcome/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 39
+    },
+    {
+      "old": "https://www.nativecustomstone.com/author/welcome/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 18
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/maintenance-and-installation/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 4
+    },
+    {
+      "old": "https://www.nativecustomstone.com/category/maintenance-and-installation/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 4
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/manufactured-stone/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 3
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/maintenance-and-installation/diy/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 2
+    },
+    {
+      "old": "https://www.nativecustomstone.com/tag/custom-stone/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 2
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/faux-stone-veneer/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 2
+    },
+    {
+      "old": "https://www.nativecustomstone.com/2020/02/15/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/2020/02/15/",
+      "reason": "date archive redirecting to the homepage; not a content link",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/faux-stone-paneling/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/category/go-stone-panels/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/custom-stone-fireplace/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/category/custom-stone-kitchen/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/custom-stone-kitchen/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/go-stone-panels/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/maintenance-and-installation/tips-and-advice/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/category/uncategorized/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://www.nativecustomstone.com/category/maintenance-and-installation/tips-and-advice/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "http://www.nativecustomstone.com/checkout/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

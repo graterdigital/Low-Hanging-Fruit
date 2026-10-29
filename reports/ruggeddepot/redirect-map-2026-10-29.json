@@ -1,0 +1,53 @@
+{
+  "site": "ruggeddepot.com",
+  "source": "Ahrefs Site Audit project 9704549, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 7,
+    "swaps": 1,
+    "skipped": 6,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://ruggeddepot.com/repair-and-support/",
+      "new": "https://ruggeddepot.com/services/",
+      "links": 7149,
+      "note": "verify got 403 (bot protection); trusting Ahrefs' 200"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://ruggeddepot.com/get-a-custom-quote/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    },
+    {
+      "old": "http://ruggeddepot.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://ruggeddepot.com/product/panasonic-cf-339w045bm/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    },
+    {
+      "old": "http://www.ruggeddepot.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://www.ruggeddepot.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://ruggeddepot.com/our-team/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

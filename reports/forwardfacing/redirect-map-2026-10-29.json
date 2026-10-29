@@ -1,0 +1,49 @@
+{
+  "site": "forwardfacing.com",
+  "source": "Ahrefs Site Audit project 9704533, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 6,
+    "swaps": 3,
+    "skipped": 3,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://forwardfacing.com/terms-of-service",
+      "new": "https://forwardfacing.com/terms-of-service/",
+      "links": 73,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://forwardfacing.com/resources/",
+      "new": "https://forwardfacing.com/forward-finds/",
+      "links": 1
+    },
+    {
+      "old": "https://forwardfacing.com/episodes",
+      "new": "https://forwardfacing.com/episodes/",
+      "links": 73,
+      "note": "missing trailing slash"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "http://forwardfacing.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://www.forwardfacing.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://www.forwardfacing.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

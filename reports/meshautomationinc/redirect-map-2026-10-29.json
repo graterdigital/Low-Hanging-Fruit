@@ -1,0 +1,377 @@
+{
+  "site": "meshautomationinc.com",
+  "source": "Ahrefs Site Audit project 9704540, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 70,
+    "swaps": 41,
+    "skipped": 29,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://meshautomationinc.com/automated-palletizers-and-packing-systems/robotic-palletizing-gantry-palletizing/",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-palletizers-and-packing-systems/stacking-feeding-and-picking-systems/",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/automated-pail-palletizing-handling-systems/",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/automated-pail-palletizing/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-palletizers-and-packing-systems/case-packer-palletizer/",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/case-packer-palletizer/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/warehouse-automation-systems-vs-traditional-storage-workflows/",
+      "new": "https://meshautomationinc.com/warehouse-automation-systems-vs-traditional-storage-workflows-2/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-palletizers-and-packing-systems/bottle-palletizing/",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/bottle-palletizing/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-material-handling/robotic-feeding-picking-systems/",
+      "new": "https://meshautomationinc.com/robotic-feeding-picking-systems/",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/industries-served/pharmaceutical-manufacturing-automation/",
+      "new": "https://meshautomationinc.com/pharmaceutical-manufacturing-automation/",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/industries-served/food-and-beverage-automation-solutions/",
+      "new": "https://meshautomationinc.com/food-and-beverage-automation-solutions/",
+      "links": 3
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems//automated-conveyor-systems/",
+      "new": "https://meshautomationinc.com/material-handling/automated-conveyor-systems/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-material-handling/automated-conveyor-systems/",
+      "new": "https://meshautomationinc.com/material-handling/automated-conveyor-systems/",
+      "links": 6
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems//automated-pallet-handling/",
+      "new": "https://meshautomationinc.com/material-handling/automated-pallet-handling/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/automated-conveyor-systems/",
+      "new": "https://meshautomationinc.com/material-handling/automated-conveyor-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-material-handling/automated-pallet-handling/",
+      "new": "https://meshautomationinc.com/material-handling/automated-pallet-handling/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/automated-pallet-handling/",
+      "new": "https://meshautomationinc.com/material-handling/automated-pallet-handling/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/warehouse-control-systems/",
+      "new": "https://meshautomationinc.com/warehouse-control-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-material-handling/robotic-stacking-systems/",
+      "new": "https://meshautomationinc.com/material-handling/robotic-stacking-systems/",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/industries-served/medical-device-assembly-automation/",
+      "new": "https://meshautomationinc.com/medical-device-assembly-automation/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/autonomous-mobile-robots/",
+      "new": "https://meshautomationinc.com/autonomous-mobile-robots/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/robotic-stacking-systems/",
+      "new": "https://meshautomationinc.com/material-handling/robotic-stacking-systems/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-machining-finishing/robotic-polishing",
+      "new": "https://meshautomationinc.com/robotic-machining-finishing/robotic-polishing/",
+      "links": 4,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://meshautomationinc.com/other-services/factory-service-and-support/",
+      "new": "https://meshautomationinc.com/factory-service-and-support/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/pre_eng_sol/mini-mac-mesh-automation-cell/",
+      "new": "https://meshautomationinc.com/shop/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/palletxbuilder",
+      "new": "https://meshautomationinc.com/robotic-palletizing-systems/palletxbuilder/",
+      "links": 16,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://meshautomationinc.com/core/test-inspection/vision-solutions/",
+      "new": "https://meshautomationinc.com/automated-vision-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/industrial-automation-software-design/",
+      "new": "https://meshautomationinc.com/factory-service-and-support/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/pre_eng_sol/mac-mesh-automation-cell/",
+      "new": "https://meshautomationinc.com/shop/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/categorycpt/robotic-tending/page/2/",
+      "new": "https://meshautomationinc.com/case_studies/page/2/?categorycpt=robotic-tending",
+      "links": 3
+    },
+    {
+      "old": "https://meshautomationinc.com/categorycpt/palletizing/page/4/",
+      "new": "https://meshautomationinc.com/case_studies/page/4/?categorycpt=palletizing",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/other-services/software-design/",
+      "new": "https://meshautomationinc.com/factory-service-and-support/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/other-services/mesh-partners/",
+      "new": "https://meshautomationinc.com/mesh-partners/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-conveyor-systems/",
+      "new": "https://meshautomationinc.com/material-handling/automated-conveyor-systems/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/categorycpt/vision/page/2/",
+      "new": "https://meshautomationinc.com/case_studies/page/2/?categorycpt=vision",
+      "links": 3
+    },
+    {
+      "old": "https://meshautomationinc.com/factory-service-support/",
+      "new": "https://meshautomationinc.com/factory-service-and-support/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/core/test-inspection/",
+      "new": "https://meshautomationinc.com/automated-vision-systems/",
+      "links": 3
+    },
+    {
+      "old": "https://meshautomationinc.com/shopmacgrind/",
+      "new": "https://meshautomationinc.com/shop/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/shopmacpal-2/",
+      "new": "https://meshautomationinc.com/shop/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://meshautomationinc.com/why-automate/",
+      "new": "https://meshautomationinc.com/about-us/why-automate/",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/contact-us/",
+      "new": "https://meshautomationinc.com/contact/",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/pre_eng_sol",
+      "new": "https://meshautomationinc.com/pre_eng_sol/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://meshautomationinc.com/shop",
+      "new": "https://meshautomationinc.com/shop/",
+      "links": 3,
+      "note": "missing trailing slash"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://meshautomationinc.com/blog/page/3/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 10
+    },
+    {
+      "old": "https://meshautomationinc.com/case_studies/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 7
+    },
+    {
+      "old": "https://meshautomationinc.com/automated-material-handling/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/robotic-palletizing-systems/automated-guided-vehicles/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 4
+    },
+    {
+      "old": "https://meshautomationinc.com/case_studies/page/1/?categorycpt=palletizing",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 3
+    },
+    {
+      "old": "https://meshautomationinc.com/assembly-systems/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 2
+    },
+    {
+      "old": "https://meshautomationinc.com/processing-lines/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/case_studies/page/1/?categorycpt=vision",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=assembly",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=robotic-tending",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=additional-expertise",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=material-handling",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/blog/page/1/?category=palletizing",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/blog/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/case_studies/page/1/?categorycpt=material-handling",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=cobots",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=palletizing",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=amr-agv",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/case_studies/page/1/?categorycpt=robotic-tending",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=robotic-grinding",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/mesh-bag-palletizing-automation",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/blog/page/1/?category=additional-expertise",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/?categorycpt=vision",
+      "reason": "URL has a query string; parameter redirects are handled by the app, not content links",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/pre-engineered-solutions/mac-mesh-automation-cell/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://meshautomationinc.com/categorycpt/palletizing/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://www.meshautomationinc.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://meshautomationinc.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://www.meshautomationinc.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://meshautomationinc.com/checkout/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

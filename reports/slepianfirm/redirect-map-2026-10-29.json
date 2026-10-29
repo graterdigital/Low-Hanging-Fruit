@@ -1,0 +1,206 @@
+{
+  "site": "slepianfirm.com",
+  "source": "Ahrefs Site Audit project 9704553, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 34,
+    "swaps": 32,
+    "skipped": 2,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-checklist-for-the-agent/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-the-agent/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/glossary-of-closing-terminology/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/glossary-of-closing-terminology/",
+      "links": 1
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-checklist-for-builders/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-builders/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-checklist-for-sellers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-sellers/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-checklist-for-buyers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-buyers/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/title-order-request/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/title-order-request/",
+      "links": 2
+    },
+    {
+      "old": "https://www.slepianfirm.com/closing-checklist-for-lenders-and-mortgage-brokers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/closing-faqs/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-faqs/",
+      "links": 15
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-criminal-defense-attorney",
+      "new": "https://www.slepianfirm.com/peachtree-city-criminal-defense-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-personal-injury-attorney",
+      "new": "https://www.slepianfirm.com/personal-injury-attorney/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/",
+      "links": 1
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-real-estate-attorney",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/closing-checklist-for-the-agent/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-the-agent/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-business-attorney",
+      "new": "https://www.slepianfirm.com/peachtree-city-business-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/peachtree-city-divorce-attorney/",
+      "new": "https://www.slepianfirm.com/divorce-attorney/",
+      "links": 4
+    },
+    {
+      "old": "https://www.slepianfirm.com/closing-checklist-for-builders/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-builders/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/closing-checklist-for-sellers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-sellers/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/closing-checklist-for-buyers/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-buyers/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/georgia-estate-attorneys",
+      "new": "https://www.slepianfirm.com/georgia-estate-attorneys/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/landlord-tenant-attorney",
+      "new": "https://www.slepianfirm.com/landlord-tenant-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/personal-injury-attorney",
+      "new": "https://www.slepianfirm.com/personal-injury-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/prepare-mediation-ga/",
+      "new": "https://www.slepianfirm.com/mediation-attorney/",
+      "links": 6
+    },
+    {
+      "old": "https://www.slepianfirm.com/real-estate-attorney",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/mediation-attorney",
+      "new": "https://www.slepianfirm.com/mediation-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/angela-landgaard/",
+      "new": "https://www.slepianfirm.com/divorce-attorney/",
+      "links": 1
+    },
+    {
+      "old": "https://www.slepianfirm.com/divorce-attorney",
+      "new": "https://www.slepianfirm.com/divorce-attorney/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/jeremy-trimble/",
+      "new": "https://www.slepianfirm.com/jeremy-trimble-attorney/",
+      "links": 193
+    },
+    {
+      "old": "https://www.slepianfirm.com/gary-Schwartz",
+      "new": "https://www.slepianfirm.com/gary-Schwartz/",
+      "links": 1,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/eric-slepian",
+      "new": "https://www.slepianfirm.com/eric-slepian/",
+      "links": 15,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://www.slepianfirm.com/real-estate/",
+      "new": "https://www.slepianfirm.com/real-estate-attorney/",
+      "links": 1,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://www.slepianfirm.com/keri-davis",
+      "new": "https://www.slepianfirm.com/keri-davis/",
+      "links": 1,
+      "note": "missing trailing slash"
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://www.slepianfirm.com/author/ismuser/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 149
+    },
+    {
+      "old": "http://www.slepianfirm.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

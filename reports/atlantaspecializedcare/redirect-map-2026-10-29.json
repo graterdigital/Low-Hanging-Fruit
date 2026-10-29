@@ -1,0 +1,235 @@
+{
+  "site": "atlantaspecializedcare.com",
+  "source": "Ahrefs Site Audit project 9704530, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 43,
+    "swaps": 33,
+    "skipped": 10,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://atlantaspecializedcare.com/10-our-recovery-from-substance-abuse-and-addiction-easier/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/substance-use/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/therapies/child-teen-comprehensive-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/child-teen-therapy/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/chronic-mental-illness/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/chronic-mental-illness/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/executive-functioning/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/executive-functioning/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/learning-differences/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/neurodiversity/learning-differences/",
+      "links": 3
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/mood-dysregulation/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/mood-dysregulation/",
+      "links": 2,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/therapies/lgbtq-affirming-counseling/",
+      "new": "https://atlantaspecializedcare.com/therapies/lgbtq-counseling/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/our-expertise/mood-dysrerulation/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/mood-dysregulation/",
+      "links": 3
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/depression/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/depression/",
+      "links": 3
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/what-we-do/individual-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/bipolar-psychotic-disorders/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/bipolar-psychotic-disorders/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/our-expertise/group-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/group-therapy/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/anxiety/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/anxiety/",
+      "links": 4
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/what-we-do/couples-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/neurodiverse-couples-therapy/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/autism/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/neurodiversity/autism/",
+      "links": 3
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/trauma/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/trauma/",
+      "links": 4
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/therapies/cps-erp-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/cps-therapy/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/what-we-do/family-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/blended-families/",
+      "links": 4
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/what-we-do/group-therapy/",
+      "new": "https://atlantaspecializedcare.com/therapies/group-therapy/",
+      "links": 3
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/what-we-do/social-skills/",
+      "new": "https://atlantaspecializedcare.com/therapies/cbt-therapy/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/adhd/",
+      "new": "https://atlantaspecializedcare.com/wp-content/uploads/2025/05/adhd.jpeg",
+      "links": 5
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/areas-of-expertise/ocd/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/ocd/",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/chronic-mental-illness/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/chronic-mental-illness/",
+      "links": 2,
+      "note": "2-hop chain collapsed to its final page"
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/request-an-appointment/",
+      "new": "https://atlantaspecializedcare.com/make-an-appointment/",
+      "links": 10
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/executive-functioning/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/executive-functioning/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/process-addiction/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/process-addiction/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/neurodiversity/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/neurodiversity/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/contact-us/",
+      "new": "https://atlantaspecializedcare.com/contact/",
+      "links": 12
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/depression/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/depression/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/anxiety/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/anxiety/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/trauma/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/trauma/",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/blog",
+      "new": "https://atlantaspecializedcare.com/blog/",
+      "links": 78,
+      "note": "missing trailing slash"
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/ocd/",
+      "new": "https://atlantaspecializedcare.com/our-expertise/ocd/",
+      "links": 2
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://atlantaspecializedcare.com/blog/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 8
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/category/counseling/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 2
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/category/mental-health/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://www.atlantaspecializedcare.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/workplace-consultation/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/category/depression/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/category/anxiety/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://atlantaspecializedcare.com/therapies/workplace-consultation/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "http://www.atlantaspecializedcare.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://atlantaspecializedcare.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

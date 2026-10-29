@@ -1,0 +1,31 @@
+{
+  "site": "stg-fenceworksofgeorgia-fwstaging.kinsta.cloud",
+  "source": "Ahrefs Site Audit project 10134365, crawl 2026-10-28, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 3,
+    "swaps": 0,
+    "skipped": 3,
+    "verify_failed": 0
+  },
+  "swaps": [],
+  "skipped": [
+    {
+      "old": "https://www.stg-fenceworksofgeorgia-fwstaging.kinsta.cloud/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 1
+    },
+    {
+      "old": "http://www.stg-fenceworksofgeorgia-fwstaging.kinsta.cloud/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "http://stg-fenceworksofgeorgia-fwstaging.kinsta.cloud/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}

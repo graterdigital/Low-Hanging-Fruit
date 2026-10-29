@@ -1,0 +1,67 @@
+{
+  "site": "technikpackaging.com",
+  "source": "Ahrefs Site Audit project 9704554, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 10,
+    "swaps": 6,
+    "skipped": 4,
+    "verify_failed": 0
+  },
+  "swaps": [
+    {
+      "old": "https://www.technikpackaging.com/product-category/vertical-form-fill-seal-baggers/",
+      "new": "https://www.technikpackaging.com/product-category/packaging-equipment/vertical-baggers/",
+      "links": 5
+    },
+    {
+      "old": "https://www.technikpackaging.com/product-category/candy/",
+      "new": "https://www.technikpackaging.com/product-category/industries/candy-packaging-equipment/",
+      "links": 1
+    },
+    {
+      "old": "https://www.technikpackaging.com/packaging-equipment/",
+      "new": "https://www.technikpackaging.com/packaging-equipment-buyers-guide-compact-cartoners/",
+      "links": 4
+    },
+    {
+      "old": "https://www.technikpackaging.com/vertical-baggers/",
+      "new": "https://www.technikpackaging.com/wp-content/uploads/2024/11/Vertical-Baggers.jpg",
+      "links": 1
+    },
+    {
+      "old": "https://www.technikpackaging.com/industries/",
+      "new": "https://www.technikpackaging.com/industries-that-benefit-most-from-automated-packaging-machinery/",
+      "links": 3
+    },
+    {
+      "old": "https://www.technikpackaging.com/contact/",
+      "new": "https://www.technikpackaging.com/contact-us/",
+      "links": 83
+    }
+  ],
+  "skipped": [
+    {
+      "old": "https://www.technikpackaging.com/news/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 7
+    },
+    {
+      "old": "https://www.technikpackaging.com/category/news/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 6
+    },
+    {
+      "old": "http://www.technikpackaging.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://www.technikpackaging.com/checkout/",
+      "reason": "no incoming internal links (sitemap or orphan entry); nothing in content to rewrite",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}
