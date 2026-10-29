@@ -17,10 +17,12 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 ## Pilot: hsfamilylaw.com
 
 - Map: 9 swaps from the 2026-10-08 crawl's "3XX redirect" issue, 1 legacy host (`hswlaw.wpengine.com`, the firm's previous WP Engine install, still linked from FAQ fields). Skipped: 5 old URLs that redirect to the homepage (need real targets), `/podcast/` (intentional, off-site), `/page/1/` links (theme pagination template), author archives (Yoast sitemap setting), host variants.
-- Dry run on fresh staging 2026-10-29 morning: 8 posts, 55 postmeta rows, 79 replacements. Applied to staging same day, identical counts, no errors. Greg spot-checked pages and links: good. Those logs were written under the old `changes/hsfamilylaw/` path and are uncommitted on Greg's PC; move them to `changes/kinsta/hsfamilylaw/` before committing.
-- The script changed after that run (log layout, cache flush, options scan, `--yes`), so re-run the staging dry run once before live: `python scripts\fix_redirect_links.py hsfamilylaw --map reports\hsfamilylaw\redirect-map-2026-10-08.json`. Counts should match the morning (8 / 55 / 79); read the new `-options.md` too.
-- Live run: pending. `python scripts\fix_redirect_links.py hsfamilylaw --map reports\hsfamilylaw\redirect-map-2026-10-08.json --target live --apply`, then commit `changes/`.
-- After live: trigger an Ahrefs recrawl; "Page has links to redirect" should drop from 39 to roughly the 24 paginated archives, which belong to the template fix.
+- Dry run on fresh staging 2026-10-29 morning: 8 posts, 55 postmeta rows, 79 replacements. Applied to staging same day, identical counts, no errors. Greg spot-checked pages and links: good. Logs in `changes/kinsta/hsfamilylaw/` (2026-10-28 and 2026-10-29 dry runs, 2026-10-29-1040 apply).
+- A second staging dry run after the script changes (2026-10-29-1118) returned 0 / 0: idempotent, as expected on an already-applied copy.
+- **Live applied 2026-10-29 11:30** (`2026-10-29-1130-fix-redirect-links-live-apply.md`): 8 posts, 55 postmeta rows, 79 replacements, all `applied: True`, cache flush ok, 0 `wp_options` hits. Totals: 25 legacy-host links, 18 `/contact-us` slash fixes, 15 guardian-ad-litem, 13 collaborative-divorce, 2+2 collaborative-divorce-attorney (incl. the chain), 1 each child-custody, child-support, divorce-process, mediate.
+- Verified from outside right after: `/divorce/child-support/` serves fixed links. `/2026-child-support/` (post 5553, 2 replacements applied) still served the old `/child-support/` and `/child-custody/` hrefs minutes later: Kinsta edge cache; DB confirmed changed via the apply log. Re-check after the cache clears.
+- That post also still links `/modifications/`, one of the 5 homepage-redirect URLs on the skipped list; first concrete item for `redirect-rules`.
+- Next: Ahrefs recrawl of project 9704538; "Page has links to redirect" should drop from 39 to roughly the 24 paginated archives, which belong to the template fix.
 
 ## Things learned the hard way (already encoded in the script)
 
@@ -35,7 +37,7 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 
 ## Open items for this skill
 
-- Re-run staging dry run, then live on hsfamilylaw, then verify with a recrawl.
+- Verify hsfamilylaw with an Ahrefs recrawl (live applied 2026-10-29).
 - Second site: one on WP Engine (webroot `sites/<install>`, path logic exists but is untested) and one with a page builder (Elementor stores content as JSON in `_elementor_data`; the JSON-escaped rules should cover it but it has not been exercised).
 - Builder-aware handling if Elementor data turns out to need it.
 - A restore script for bulk rollback from the backup JSON (today: per-post revisions, or ask for one).
