@@ -27,12 +27,15 @@ SELECT = "url,http_code,redirect,redirect_code,final_redirect,final_redirect_cod
 UA = "Mozilla/5.0 (compatible; GraterDigital-LHF/1.0; +https://graterdigital.com)"
 
 def load_env():
+    """Read KEY=value lines from .env at the repo root. Tolerates the BOM and UTF-16 that PowerShell's Set-Content can write."""
     f = ROOT / ".env"
-    if f.exists():
-        for line in f.read_text(encoding="utf-8").splitlines():
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, v = line.split("=", 1); os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    if not f.exists(): return
+    raw = f.read_bytes()
+    text = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8-sig", "replace")
+    for line in text.splitlines():
+        line = line.strip().lstrip("\ufeff")
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1); os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 def ahrefs(path, **params):
     key = os.environ.get("AHREFS_API_KEY")
