@@ -30,7 +30,8 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 4. PHP encodes an empty array as a JSON list; the runner tolerates that.
 5. A rebuilt Kinsta staging gets a new host key on the same port; `ssh-keygen -R "[ip]:port"` clears the warning.
 6. Per-site probe before dry run. It found the legacy host and the storage forms the first dry run missed.
-7. Postmeta is written straight to the table, so a persistent object cache (Kinsta Redis, WP Engine) keeps serving old ACF values until `wp cache flush`. The runner flushes after every apply and records the result in the log.
+7. The probe/options find-regex originally rejected any word character before the path, which blocked `hsfamilylaw.com/contact-us` as well as `/divorce/contact-us`, so the probe only ever saw root-relative links. Now `find_re()` allows an optional `scheme://host` prefix and rejects a trailing `/`, so `/contact-us` no longer matches its own fixed form `/contact-us/`. Transients are excluded from the options report.
+8. Postmeta is written straight to the table, so a persistent object cache (Kinsta Redis, WP Engine) keeps serving old ACF values until `wp cache flush`. The runner flushes after every apply and records the result in the log.
 
 ## Open items for this skill
 

@@ -88,7 +88,7 @@ def main():
         for s_ in swaps:
             items = by.get(s_["old"], [])
             print(f"\n== {s_['old']}  ({len(items)} found)")
-            for o in items: print(f"   {o['where']}\n      …{o['ctx'].replace(chr(10),' ')}…")
+            for o in items: print(f"   {o['where']}\n      ...{o['ctx'].replace(chr(10),' ')}...")
         return
 
     mode = "apply" if args.apply else "dry"
@@ -127,12 +127,12 @@ def main():
     # Secondary, report-only log: wp_options rows that contain an old path or legacy host.
     olog = [f"# fix-redirect-links: wp_options hits for {host} ({args.target})", "",
             f"Run {stamp} · mode **{mode}** · companion to `{main_log.name}`. Report only: the script never edits options.", "",
-            "Each row is an option whose value contains an old URL. `autoload` and size are shown so you can tell a widget from a transient or a cached blob.", ""]
+            "Each row is an option whose value contains an old URL (transients are excluded). `autoload` and size help tell a widget or menu setting from an analytics or cache blob, which can be ignored.", ""]
     if opts:
         olog += ["| option_name | autoload | bytes | old URL | context |", "|---|---|---|---|---|"]
         for o in opts:
             ctx = o["ctx"].replace("\n", " ").replace("|", "\\|")
-            olog.append(f"| `{o['option_name']}` | {o['autoload']} | {o['size']} | `{o['old']}` | …{ctx}… |")
+            olog.append(f"| `{o['option_name']}` | {o['autoload']} | {o['size']} | `{o['old']}` | ...{ctx}... |")
     else:
         olog.append("No option values reference any of the old URLs or legacy hosts.")
     (outdir / f"{base}-options.md").write_text("\n".join(olog) + "\n", encoding="utf-8")

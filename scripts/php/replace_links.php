@@ -89,17 +89,26 @@ function walk($data, &$hits) {
     return rewrite_value($data, $hits);
 }
 
+/** Anchored find-regex for an old path (plain or JSON-escaped form). Matches the path as a root-relative link or
+ *  directly after a scheme://host, never inside a longer path (/x/ in /y/x/) and never followed by more path. */
+function find_re($needle) {
+    $host = '(?:https?:\\\\?/\\\\?/[^/"\'\s\\\\]+)?';
+    return '~(?<![\w/\\\\-])' . $host . preg_quote($needle, '~') . '(?![\w/\\\\-])~i';
+}
+
 /** Anchored scan of wp_options for old paths and legacy hosts. Report only; options are never edited.
  *  Every mode calls this so the Python runner can write the companion -options.md log. */
 function scan_options() {
     global $wpdb, $swaps, $legacy;
     $rep = []; $seen = [];
     $needles = [];
-    foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) $needles[] = [$s['old'], $n, '~(?<![\w/\\\\-])' . preg_quote($n, '~') . '(?![\w-])~'];
+    // find_re() rejects a trailing `/` or `\`, so an old path without a trailing slash (/contact-us) does not match
+    // its own slashed successor (/contact-us/). Transients are skipped: they are caches, not settings.
+    foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) $needles[] = [$s['old'], $n, find_re($n)];
     foreach ($legacy as $l) $needles[] = ["host:$l", $l, '~' . preg_quote($l, '~') . '~i'];
     foreach ($needles as [$old, $needle, $re]) {
         $like = '%' . $wpdb->esc_like($needle) . '%';
-        foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value, autoload FROM {$wpdb->options} WHERE option_value LIKE %s", $like)) as $r) {
+        foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value, autoload FROM {$wpdb->options} WHERE option_value LIKE %s AND option_name NOT LIKE '\\_transient\\_%%' AND option_name NOT LIKE '\\_site\\_transient\\_%%'", $like)) as $r) {
             if (isset($seen[$r->option_name . "\0" . $old])) continue;
             if (!preg_match($re, $r->option_value, $m, PREG_OFFSET_CAPTURE)) continue;
             $seen[$r->option_name . "\0" . $old] = 1;
@@ -116,7 +125,7 @@ if ($mode === 'probe') {
     foreach ($swaps as $s) {
         foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $needle) {
             $like = '%' . $wpdb->esc_like($needle) . '%';
-            $re = '~(?<![\w/\\\\-])' . preg_quote($needle, '~') . '(?![\w-])~';
+            $re = find_re($needle);
             $scan = function($text, $where) use (&$rep, $re, $s) {
                 if (!preg_match_all($re, $text, $mm, PREG_OFFSET_CAPTURE)) return;
                 foreach (array_slice($mm[0], 0, 5) as $m) $rep[] = ['old' => $s['old'], 'where' => $where, 'ctx' => substr($text, max(0, $m[1] - 70), strlen($m[0]) + 140)];
