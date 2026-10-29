@@ -1,0 +1,121 @@
+{
+  "site": "hsfamilylaw.com",
+  "source": "Ahrefs Site Audit project 9704538, crawl 2026-10-29, issue '3XX redirect' via build_redirect_map.py",
+  "generated": "2026-10-29",
+  "verified": true,
+  "counts": {
+    "rows": 21,
+    "swaps": 0,
+    "skipped": 21,
+    "verify_failed": 0
+  },
+  "swaps": [],
+  "skipped": [
+    {
+      "old": "https://hsfamilylaw.com/blog/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 12
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/collaborative-divorce/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 4
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/families/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 4
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/uncategorized/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 2
+    },
+    {
+      "old": "https://hsfamilylaw.com/collaborative-divorce-attorney/basics-collaborative-approach/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/family-law/alimony-modification/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/divorce/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/podcast/",
+      "reason": "redirects off-site to forwardfacing.com; usually intentional, leave",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/divorce-faq/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/modifications/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/understanding-roles-collaborative-divorce-team/Collaborative%20Divorce%20Team%20Hastings%20Shadmehry",
+      "reason": "looks like a pasted file path (one post's broken image); fix the post by hand (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/category/firm-news/page/1/",
+      "reason": "pagination /page/1/ comes from the theme template, not content; fix in the template",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/mediation/mediation-faqs/",
+      "reason": "redirects to homepage; needs a real target or removal (APPROVE)",
+      "links": 1
+    },
+    {
+      "old": "https://hsfamilylaw.com/author/tatelyninteractivesearchmarketing-com/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 0
+    },
+    {
+      "old": "https://hsfamilylaw.com/author/joegraterdigital-com/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 0
+    },
+    {
+      "old": "http://hsfamilylaw.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://www.hsfamilylaw.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    },
+    {
+      "old": "https://hsfamilylaw.com/author/tatelyngraterdigital-com/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 0
+    },
+    {
+      "old": "https://hsfamilylaw.com/author/content/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 0
+    },
+    {
+      "old": "https://hsfamilylaw.com/author/haleyburklowkz0p/",
+      "reason": "author archive; disable author archives or the author sitemap in the SEO plugin",
+      "links": 0
+    },
+    {
+      "old": "http://www.hsfamilylaw.com/",
+      "reason": "http:// or www. host variant; expected canonical redirect",
+      "links": 0
+    }
+  ],
+  "legacy_hosts": []
+}
