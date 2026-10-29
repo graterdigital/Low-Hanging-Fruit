@@ -15,23 +15,26 @@ Internal links that go through a redirect waste a hop on every click and crawl, 
 
 ## Building the redirect map
 
-Pull the "3XX redirect" issue for the Ahrefs Site Audit project with `site-audit-page-explorer`, `select: url,http_code,redirect,redirect_code,final_redirect,final_redirect_code,incoming_all_links,nr_redirect_chain_urls`. The `final_redirect` column is the destination after following any chain. Then sort every row into **swaps** or **skipped**:
+`python scripts/build_redirect_map.py <slug>` pulls the "3XX redirect" issue for the site's Ahrefs project (API key in `.env` at the repo root as `AHREFS_API_KEY=...`), classifies every row, HEAD-checks each swap target for a 200, and writes `reports/<slug>/redirect-map-<crawl-date>.json`. It is the same procedure as doing it by hand; the rules it applies are:
 
-Swap when the final URL is on the same site, returns 200, and is a specific page. Use `final_redirect` as `new`, never the first hop, so chains collapse in one step.
+Swap when the final URL is on the same site, returns 200, and is a specific page. `final_redirect` is used as `new`, never the first hop, so chains collapse in one step. Notes are added for a missing trailing slash, a collapsed chain, and a URL that redirects up to its parent (check the parent covers the old content).
 
 Skip, with the reason written into the map, when:
-- the final URL is the homepage. Someone picked "send it home" because the page was deleted; the link needs a real target or removal, which is a human decision (APPROVE).
+- the final URL is the homepage. Someone picked "send it home" because the page was deleted; the link needs a real target or removal, which is a human decision (APPROVE). WordPress date archives (`/2026/10/21/`) that redirect home get their own reason and are noise.
 - the final URL is on another domain. Usually intentional.
 - the old URL is `.../page/1/`. That comes from the theme's pagination template, not content. Fixing it in content would be undone on the next render.
-- the old URL is an author archive or similar sitemap entry with zero incoming links. Fix the SEO plugin setting instead.
+- the old URL is an author archive, or has zero incoming links (a sitemap or orphan entry). Fix the SEO plugin setting instead.
 - it's an `http://` or `www.` variant of the site itself. Those redirects are supposed to exist.
 - the old URL looks like a pasted file path (spaces, `%20`, `_files/`). A broken image on one post; fix by hand.
+- the old URL carries a query string, or the final target does not return 200 (from Ahrefs, or on the HEAD check).
 
-Save the map as JSON with `site`, `source`, `generated`, `swaps` (`old`, `new`, optional `note`), `skipped` (`old` or `pattern`, `reason`) and, when the probe finds them, `legacy_hosts`: old hostnames (a previous host's URL, an old domain) still linked from content. Links on a legacy host are moved to the current host with the same path. The skipped list goes into the change log so nobody wonders why those links were left alone.
+The map's `legacy_hosts` (old hostnames still linked from content, such as a previous host's URL) can't come from Ahrefs; add them after a `--probe` run. A rebuild for the same crawl keeps them. The script also prints which swaps are linked from nearly every page: those are menu, footer or template links. Custom menu links live in `_menu_item_url` postmeta and are rewritten; a link in a widget shows up in the options report instead; a link baked into a theme file is out of reach.
 
-## Running it
+A hand-made map still works (`--map` on the runner); the format is `site`, `source`, `generated`, `swaps` (`old`, `new`, optional `note`), `skipped` (`old` or `pattern`, `reason`) and `legacy_hosts`.
 
-Everything happens through `scripts/fix_redirect_links.py`, which ships `scripts/php/replace_links.php` to the site over SSH and runs it inside WordPress with `wp eval-file`. The PHP does anchored matching: a URL is replaced only when it is a complete link target (between quotes or parentheses), so `/child-support/` never matches inside `/divorce/child-support/`, and `/contact-us` never matches `/contact-us/`. Absolute and root-relative links are both handled; relative links stay relative.
+## Running one site
+
+Everything happens through `scripts/fix_redirect_links.py` (`--map` defaults to the newest map in `reports/<slug>/`), which ships `scripts/php/replace_links.php` to the site over SSH and runs it inside WordPress with `wp eval-file`. The PHP does anchored matching: a URL is replaced only when it is a complete link target (between quotes or parentheses), so `/child-support/` never matches inside `/divorce/child-support/`, and `/contact-us` never matches `/contact-us/`. Absolute and root-relative links are both handled; relative links stay relative.
 
 Staging copies run on their own domain and the host rewrites every absolute link to it, so the matcher accepts the live domain, whatever host the install currently runs on, and the legacy hosts, and a rewritten link keeps the host it had. Serialized postmeta (ACF link and URL fields, WYSIWYG fields inside repeaters) is unserialized, walked, rewritten, and reserialized.
 
@@ -55,6 +58,12 @@ python scripts/fix_redirect_links.py <slug> --map ... --target live --apply
 Apply on live. The script asks you to type the slug to confirm; `--yes` skips that for vetted, unattended runs, and a run with neither a terminal nor `--yes` aborts rather than hanging. Same logs, backup, and cache flush.
 
 Then commit the `changes/<provider>/<slug>/*.md` logs (not the backup folder).
+
+## Running a whole host
+
+`python scripts/batch_fix_redirect_links.py --provider kinsta` runs every client file on that host through map build → staging dry run → staging apply, and `--live` continues with live dry run → live apply for the sites that passed. Each site stops at the first gate it fails (map failed, no staging alias, staging save errors, live dry-run counts more than 25% off the staging counts, live save errors) and the batch moves on; nothing is skipped silently. One summary table lands in `changes/<provider>/_batch-<stamp>-fix-redirect-links-<stage|live>.md` next to the per-site logs.
+
+The intended rhythm, until the rules have proven themselves on this host: run stage-only across the host, skim the summary once (the swap counts, the "no hits" and options notes, anything that stopped), then run `--live --no-stage --no-map` so the exact maps and staging results that were reviewed are the ones that go live. After a few clean cycles the stage-only review becomes a spot check and the two commands can be one.
 
 ## After
 

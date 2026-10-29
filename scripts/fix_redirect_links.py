@@ -51,17 +51,27 @@ def confirm_live(slug, n, alias, yes):
     print(f"About to APPLY {n} link swaps on LIVE ({alias}). Type the slug to confirm: ", end="", flush=True)
     if input().strip() != slug: sys.exit("aborted")
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
-    ap.add_argument("--map", required=True, help="redirect map JSON (see reports/<slug>/redirect-map-*.json)")
+    ap.add_argument("--map", help="redirect map JSON; default: newest reports/<slug>/redirect-map-*.json")
     ap.add_argument("--target", choices=["staging", "live"], default="staging")
     ap.add_argument("--apply", action="store_true", help="write changes; default is dry run")
     ap.add_argument("--probe", action="store_true", help="locate every raw occurrence of each old URL (posts, meta, options) and stop; changes nothing")
     ap.add_argument("--webroot", default="public", help="path to WordPress relative to the SSH login dir (Kinsta: public; WP Engine: sites/<install>)")
     ap.add_argument("--yes", action="store_true", help="skip the type-the-slug confirmation on a live apply (for vetted, unattended runs)")
-    args = ap.parse_args()
+    args = ap.parse_args(argv)
+    return run(args)
 
+def latest_map(slug):
+    maps = sorted((ROOT / "reports" / slug).glob("redirect-map-*.json"))
+    return maps[-1] if maps else None
+
+def run(args):
+    """Runs one target/mode and returns the remote result dict (with 'log' and 'options_log' paths added), or None for probe."""
+    if not args.map:
+        args.map = latest_map(args.slug)
+        if not args.map: sys.exit(f"No redirect map for {args.slug}; run scripts/build_redirect_map.py {args.slug} first.")
     client = yaml.safe_load((ROOT / "clients" / f"{args.slug}.yaml").read_text(encoding="utf-8"))
     hosting = client.get("hosting", {})
     alias = hosting.get("ssh_alias") if args.target == "live" else hosting.get("staging_environment")
@@ -89,7 +99,7 @@ def main():
             items = by.get(s_["old"], [])
             print(f"\n== {s_['old']}  ({len(items)} found)")
             for o in items: print(f"   {o['where']}\n      ...{o['ctx'].replace(chr(10),' ')}...")
-        return
+        return None
 
     mode = "apply" if args.apply else "dry"
     print(f"{mode.upper()} on {args.target} ({alias}), {len(swaps)} swap rules, webroot {args.webroot}")
@@ -147,6 +157,9 @@ def main():
     print(f"\nLog: {main_log}\nOptions log: {outdir / (base + '-options.md')}")
     errs = [p for p in res["posts"] if str(p.get("applied", "")).startswith("ERROR")]
     if errs: print(f"\n{len(errs)} posts failed to save; see log.")
+    res["log"] = str(main_log); res["options_log"] = str(outdir / (base + "-options.md")); res["errors"] = len(errs)
+    res["flushed"] = None if flushed is None else bool(flushed[0]); res["alias"] = alias; res["provider"] = provider
+    return res
 
 if __name__ == "__main__":
     main()

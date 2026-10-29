@@ -11,7 +11,9 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 - `skills/fix-redirect-links/SKILL.md`: the procedure (how to build the redirect map from Ahrefs, what to skip, run order, rollback).
 - `scripts/fix_redirect_links.py`: local runner. Reads `clients/<slug>.yaml` for SSH aliases and `hosting.provider`, ships the PHP over SSH, writes the change logs, runs `wp cache flush` after an apply. Flags: `--probe` (locate occurrences, change nothing), default dry run, `--apply`, `--target live` (asks you to type the slug), `--yes` (skips that prompt for vetted unattended runs; with no terminal and no `--yes` it aborts rather than hangs), `--webroot`.
 - `scripts/php/replace_links.php`: runs inside WordPress via `wp eval-file -`. Anchored matching so `/child-support/` never matches inside `/divorce/child-support/`. Handles absolute, root-relative, JSON-escaped, and PHP-serialized (ACF link field) forms. Matches the live host, the host the install currently runs on (staging has its own domain), and `legacy_hosts` from the map. Uses `wp_update_post` so WordPress keeps a revision; postmeta is updated directly. Every mode also scans `wp_options` (anchored) and returns the hits under `options` for the report.
-- `reports/<slug>/redirect-map-<crawl-date>.json`: per-site input. `swaps` (old → new), `skipped` (with reasons), `legacy_hosts`.
+- `scripts/build_redirect_map.py`: builds the map from the Ahrefs API (`AHREFS_API_KEY` in `.env`), applying the SKILL.md swap/skip rules and HEAD-checking every target. Replaces the hand-made JSON; tested against the hsfamilylaw map (identical result) and setcom's rows.
+- `scripts/batch_fix_redirect_links.py`: runs every client on a host through map → staging dry → staging apply (→ `--live`: live dry → live apply) with gates between steps; writes `changes/<provider>/_batch-<stamp>-...md`.
+- `reports/<slug>/redirect-map-<crawl-date>.json`: per-site input. `swaps` (old → new), `skipped` (with reasons), `legacy_hosts`. The runner's `--map` now defaults to the newest one.
 - `changes/<provider>/<slug>/<stamp>-fix-redirect-links-<target>-<mode>.md`: change log per run, grouped by host (`kinsta`, `wpengine`, `other`). Companion `<stamp>-fix-redirect-links-<target>-options.md`: `wp_options` rows that still contain an old URL or legacy host, with autoload flag, size and context. Report only; those are widgets, menus, theme mods and plugin settings to fix by hand. `changes/<provider>/<slug>/backup/*.json` holds full before/after content (git-ignored).
 
 ## Pilot: hsfamilylaw.com
@@ -41,8 +43,8 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 - Second site: one on WP Engine (webroot `sites/<install>`, path logic exists but is untested) and one with a page builder (Elementor stores content as JSON in `_elementor_data`; the JSON-escaped rules should cover it but it has not been exercised).
 - Builder-aware handling if Elementor data turns out to need it.
 - A restore script for bulk rollback from the backup JSON (today: per-post revisions, or ask for one).
-- Consider having the skill build the redirect map itself from Ahrefs instead of a hand-made JSON; the rules for swap vs. skip are already written in SKILL.md.
-- Once a few live runs are clean, schedule it with `--yes`.
+- Kinsta batch: 11 sites (10 with staging; nativecustomstone has none). First run is stage-only; the four Elementor sites (markheardfuel, miuraboiler, ruggeddepot, nativecustomstone) are the untested storage form, so read markheardfuel's staging backup diff before letting the batch go live on the other three.
+- Once a few batch cycles are clean, schedule `--live` as a task.
 
 ## Related work that is NOT this skill
 

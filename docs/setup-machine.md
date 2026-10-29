@@ -44,3 +44,13 @@ It writes `~/.ssh/grater_hosts` (one entry per environment, aliased by client sl
 A WP-CLI version means the chain works. "Permission denied (publickey)" means the key hasn't propagated at the host yet, or the key file name differs from `~/.ssh/id_ed25519` (edit `KEY_FILE` at the top of the script if so).
 
 Sites on other hosts: fill `hosting:` in their client file by hand and add a `Host <slug>` block to `~/.ssh/config` yourself.
+
+## Ahrefs API key
+
+`scripts/build_redirect_map.py` and the batch runner read `AHREFS_API_KEY` from the environment or from a `.env` file at the repo root (git-ignored). Create it once:
+
+```powershell
+Set-Content -Path .env -Value "AHREFS_API_KEY=paste-the-key-here"
+```
+
+The key comes from Ahrefs → Account settings → API keys. Never put it in a client file or commit it.
