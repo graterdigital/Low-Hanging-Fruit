@@ -32,10 +32,13 @@ def load_env():
     if not f.exists(): return
     raw = f.read_bytes()
     text = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8-sig", "replace")
-    for line in text.splitlines():
-        line = line.strip().lstrip("\ufeff")
-        if line and not line.startswith("#") and "=" in line:
+    lines = [l.strip().lstrip("\ufeff") for l in text.splitlines() if l.strip() and not l.strip().startswith("#")]
+    for line in lines:
+        if "=" in line:
             k, v = line.split("=", 1); os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    # A file that is nothing but the key itself (no KEY= prefix) is taken as the Ahrefs key.
+    if len(lines) == 1 and "=" not in lines[0] and " " not in lines[0]:
+        os.environ.setdefault("AHREFS_API_KEY", lines[0].strip('"').strip("'"))
 
 def ahrefs(path, **params):
     key = os.environ.get("AHREFS_API_KEY")
