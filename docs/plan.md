@@ -1,13 +1,31 @@
-# Low-Hanging-Fruit Toolkit: Plan v1.1
+# Low-Hanging-Fruit Toolkit: Plan v1.2
 
-Last updated 2026-10-13 (evening). Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
+Last updated 2026-10-29. Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
 This doc is the source of truth for the build. Update it when a decision changes; don't rely on chat history.
 
 ## 0. Status
 
-- **Done:** `site-triage` skill v1, cold-tested on two sites by agents that had only the skill file (hsfamilylaw.com and livingyoungcenter.com). Both reports reconciled every active issue type. Reports live in this project under `reports/<slug>/`, client files under `clients/<slug>.yaml`.
-- **Decided:** hsfamilylaw.com is on Kinsta with full access, so the write path is SSH + WP-CLI, with Kinsta staging as the safety net. The toolkit repo will be a private GitHub repo under a Grater Digital account (account not created yet).
-- **Next:** repo scaffold, then `fix-redirect-links` (the AUTO-tier skill) against hsfamilylaw.com staging.
+**Working conventions**
+- The repo (github.com/graterdigital/Low-Hanging-Fruit) is the source of truth. The claude.ai project mirrors the plan, client files, reports, and one handoff doc per skill (`claude/skill-<name>.md`).
+- One chat per skill inside the project. A chat starts by reading this plan and the skill's handoff doc, and ends by updating both. Nothing important lives only in a conversation.
+- Fixes run from Greg's PC (Windows, PowerShell, repo at `C:\Users\greg\Documents\Low-Hanging-Fruit`) over SSH. `docs/setup-machine.md` sets up a new machine; `scripts/ssh_config_sync.py` builds the SSH aliases from the Kinsta and WP Engine APIs.
+
+**Done**
+- `site-triage` v1, cold-tested on hsfamilylaw.com and livingyoungcenter.com.
+- Client files for all 40 Ahrefs projects (`clients/`, index in `docs/client-index.md`), with stack fingerprints from `scripts/fingerprint.py`. Hosting aliases filled for 32 of them by the sync script.
+- SSH + WP-CLI access proven to hsfamilylaw live and staging.
+- `fix-redirect-links` built, dry-run and applied on hsfamilylaw staging (79 link swaps across 8 posts and 55 ACF fields, clean). Handoff: `claude/skill-fix-redirect-links.md`.
+
+**Next**
+- `fix-redirect-links` live run on hsfamilylaw, then an Ahrefs recrawl to verify.
+- `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
+
+**Roster facts that shape the build**
+- 31 of 35 WordPress sites run Yoast; 2 run AIOSEO (cmitsolutions, glomedspa). No Rank Math.
+- Builders: Elementor 14, block editor 12, WPBakery 3, Divi 1, Oxygen 1. hsfamilylaw is ACF Pro + classic editor, so links live mostly in postmeta.
+- GSC connected in Ahrefs for 17 of 40 projects; connecting the rest is free and worth doing.
+- Two sites are static HTML (naturalenclosures, backto30 homepage).
+- ~20 live sites on Kinsta/WP Engine have no Ahrefs project yet (no audit, no triage).
 
 ## 1. How the pieces fit (read this first)
 
@@ -68,7 +86,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 
 **Phase 1: Technical SEO (pilot on hsfamilylaw.com).**
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**
-- `fix-redirect-links` (AUTO)
+- `fix-redirect-links` (AUTO). **Built; staging passed; live pending.**
 - `fix-meta` (titles and descriptions through the SEO plugin, APPROVE)
 - `fix-images` (weight, format, alt, APPROVE)
 - `indexation-review` (archives, sitemap, noindex, APPROVE)
@@ -99,9 +117,10 @@ Tiebreaker is Google Search Central; then Ahrefs and Search Engine Land. Moz cou
 
 ## 7. Open items
 
-- Create the Grater Digital GitHub account and the private toolkit repo.
-- Kinsta SSH details for hsfamilylaw.com go in `~/.ssh/config` on the machine that runs fixes, never in a client file or this project.
-- Confirm hsfamilylaw.com's WordPress version (Yoast abilities need 6.9+ if that route is ever used instead of WP-CLI).
+- Decide which of the ~20 unaudited live sites get Ahrefs projects.
+- Connect GSC to the 23 Ahrefs projects that lack it.
+- 13 client files have no host match from the sync script (other hosts, or unverified Ahrefs projects); fill `hosting:` by hand.
+- hsfamilylaw: WordPress 7.1.3, Yoast 28.8, Redirection, WebP Express, Enable Media Replace, Simple History, ACF Pro all active (from `wp plugin list` 2026-10-28). Fold into the client file.
 - Google Ads MCP: Google's docs say developer tokens were sunset 2026-09-09 but the repo README still asks for one. Resolve before Phase 3.
 - Moz cross-check of the standards in section 6.
 
