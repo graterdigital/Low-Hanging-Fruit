@@ -11,7 +11,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 - Fixes run from Greg's PC (Windows, PowerShell, repo at `C:\Users\greg\Documents\Low-Hanging-Fruit`) over SSH. `docs/setup-machine.md` sets up a new machine; `scripts/ssh_config_sync.py` builds the SSH aliases from the Kinsta and WP Engine APIs.
 
 **Done**
-- `fix-images` v1 (weight in place, AUTO), run on hsfamilylaw staging and live 2026-10-29. Alt/broken-image write-back not built yet.
+- `fix-images` v1: weight fix (AUTO) and alt-text write-back from a reviewed Google Sheet (APPROVE) both run on hsfamilylaw live 2026-10-29. 15 graphics compressed; 11 headshots restored to originals after Pillow quantization damaged them (pngquant now required; see the skill handoff). 95 alt texts written.
 - `site-triage` v1, cold-tested on hsfamilylaw.com and livingyoungcenter.com.
 - Client files for all 40 Ahrefs projects (`clients/`, index in `docs/client-index.md`), with stack fingerprints from `scripts/fingerprint.py`. Hosting aliases filled for 32 of them by the sync script.
 - SSH + WP-CLI access proven to hsfamilylaw live and staging.
@@ -19,7 +19,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 
 **Next**
 - `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Now the Kinsta batch: `build_redirect_map.py` (Ahrefs API) + `batch_fix_redirect_links.py --provider kinsta`, stage-only first, across 11 sites incl. the new setcomcorp.
-- `fix-images` v1 built and **applied to hsfamilylaw live 2026-10-29**: 26 flagged PNGs plus their 108 sub-size files, 102 MB → 26 MB on disk, same URLs. WebP Express turned out to be converting but not serving (Nginx); Greg removed it and enabled Kinsta CDN lossy optimization. Alt text (5 real + 101 lesser rows) and the isle-of-dogs images remain APPROVE work. Handoff: `docs/skills/fix-images.md`.
+- `fix-images` v1 built and **applied to hsfamilylaw live 2026-10-29**: 26 flagged PNGs plus their 108 sub-size files, 102 MB → 26 MB on disk, same URLs. WebP Express turned out to be converting but not serving (Nginx); Greg removed it and enabled Kinsta CDN lossy optimization. Alt text: 95 rows reviewed in a Google Sheet and written to live. Headshots restored to originals after over-compression; graphics kept. Remaining: isle-of-dogs pasted images, Kinsta ticket to drop WebP Express Nginx rules, recrawl. Handoff: `docs/skills/fix-images.md`.
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
 **Roster facts that shape the build**
