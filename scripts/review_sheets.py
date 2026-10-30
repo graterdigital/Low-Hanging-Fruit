@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One persistent Google Sheet per client for APPROVE-tier review (alt text now; other skills can add tabs later).
 
-    python scripts/review_sheets.py setup <slug> [--share overwatch@graterdigital.com]   # create the workbook, record its id in clients/<slug>.yaml
+    python scripts/review_sheets.py setup <slug>          # find the human-made blank sheet "<slug> review" in the shared folder, record its id, add the tab
     python scripts/review_sheets.py push <slug>            # append new images from the newest alt CSV to the "alt text" tab (existing rows untouched)
     python scripts/review_sheets.py pull <slug>            # read decisions back: merge new_alt into the repo CSV, mark rows "merged"
     python scripts/review_sheets.py mark-applied <slug>    # after --alt-apply: stamp merged rows "applied <date>"
@@ -112,6 +112,8 @@ def review_rows_from_csv(path, domain):
     return out, rows
 
 def cmd_setup(a):
+    """Service accounts cannot own Drive files, so a human creates the blank sheet (named '<slug> review') inside the shared
+    folder; setup finds it by name, records its id in the client file, and adds the 'alt text' tab."""
     c = load_client(a.slug); g = gc()
     existing = (c.get("review") or {}).get("alt_sheet_id")
     title = f"{a.slug} review"
@@ -119,13 +121,18 @@ def cmd_setup(a):
         sh = g.open_by_key(existing); print(f"{a.slug}: sheet already recorded ({existing}): {sh.url}")
     else:
         folder = os.environ.get("GOOGLE_SHEETS_FOLDER", "").strip()
-        if not folder: sys.exit("GOOGLE_SHEETS_FOLDER not set: service accounts cannot own files, so sheets are created inside a Drive folder a human owns and has shared with the service account (Editor). Put GOOGLE_SHEETS_FOLDER=<folder id> in .env.")
-        sh = g.create(title, folder_id=folder)
+        if not folder: sys.exit("GOOGLE_SHEETS_FOLDER not set in .env (the Drive folder you created and shared with the service account).")
+        found = [f for f in g.list_spreadsheet_files(folder_id=folder) if f["name"].strip().lower() == title.lower()]
+        if not found:
+            sys.exit(f"{a.slug}: no sheet named '{title}' in the shared folder. In Google Drive, open the folder, New -> Google Sheets -> Blank, "
+                     f"rename it exactly '{title}', then rerun this command. (Service accounts cannot create files.)")
+        sh = g.open_by_key(found[0]["id"])
         set_sheet_id(a.slug, sh.id, title)
-        print(f"{a.slug}: created {sh.url} and recorded review.alt_sheet_id in clients/{a.slug}.yaml")
+        print(f"{a.slug}: found {sh.url} and recorded review.alt_sheet_id in clients/{a.slug}.yaml")
     sh, ws = open_tab(g, sh.id)
     for who in (a.share or []):
-        sh.share(who, perm_type="user", role="writer", notify=False); print(f"  shared with {who}")
+        try: sh.share(who, perm_type="user", role="writer", notify=False); print(f"  shared with {who}")
+        except Exception as e: print(f"  could not share with {who}: {str(e)[:100]}")
     try:
         default = sh.sheet1
         if default.title != TAB and default.title.startswith("Sheet") and not default.get_all_values(): sh.del_worksheet(default)

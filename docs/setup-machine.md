@@ -70,9 +70,10 @@ exporting anything. It authenticates as a service account. One-time setup, ~10 m
 4. `pip install gspread google-auth`
 5. Service accounts cannot own files, so make a folder in your own Drive (e.g. **LHF Review Sheets**), share it with the service
    account's email (`client_email` in the JSON) as Editor, and put its id (the part of the folder URL after `/folders/`) in `.env`:
-   `Add-Content .env "GOOGLE_SHEETS_FOLDER=<folder id>"`. Sheets `setup` creates land in that folder, owned by you. `--share` is then
-   only for other humans:
-   `python scripts/review_sheets.py setup <slug> --share overwatch@graterdigital.com` (add `--share greg@graterdigital.com` if that account should see them too)
+   `Add-Content .env "GOOGLE_SHEETS_FOLDER=<folder id>"`. Service accounts cannot create files either, so for each client make a blank
+   Google Sheet in that folder named exactly `<slug> review` (e.g. `fenceworksofga review`), then run
+   `python scripts/review_sheets.py setup <slug>`: it finds the sheet by name, records its id in the client file, and adds the `alt text` tab.
+   `push <slug>` then fills it.
    For a sheet that already exists in a human's Drive, share it with the service account's email (`client_email` in the JSON) as Editor
    and put its id in `clients/<slug>.yaml` under `review.alt_sheet_id`.
 6. `python scripts/review_sheets.py status` lists every client's sheet and its pending / merged / applied counts.
