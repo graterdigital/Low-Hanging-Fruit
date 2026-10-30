@@ -1,6 +1,6 @@
 # Handoff: fix-redirect-links
 
-Status as of 2026-10-29. Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-redirect-links.md`; update both.
+Status as of 2026-10-30. Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-redirect-links.md`; update both.
 
 ## What the skill does
 
@@ -36,6 +36,27 @@ Rewrites internal links that point at redirecting URLs so they point straight at
 
 Other notes from the run: atlantaspecializedcare is ACF-heavy (748 meta rows for 33 swaps, chains collapsed correctly); forwardfacing's hits are all in meta (0 posts); markheardfuel (Elementor) 12p/71m applied cleanly on staging but has 16 `wp_options` hits (widgets/theme settings to fix by hand); meshautomationinc has 15 query-string redirects skipped and 7 homepage redirects for a human; setcomcorp 13 swaps incl. three menu-level slash fixes; technikpackaging's canonical host is `www`. Elementor sites staged (markheardfuel, setcomcorp, miuraboiler, meshautomationinc is ACF/Elementor?) need `--check-json` run before any of them go live.
 
+## Kinsta live batch, 2026-10-30
+
+After the stage-only run and its fixes (below), live went in three groups with `--live --no-stage --no-map`, two sites first, then five, then miuraboiler and setcomcorp singly. **9 of 11 Kinsta sites are done**:
+
+| site | live p/m/r | notes |
+|---|---|---|
+| hsfamilylaw | 8/55/79 (10-29) | verified by recrawl |
+| slepianfirm | 9/0/19 | staging is a rebuild, not a copy: `staging_is_copy_of_live: false` in the client file now; live dry run was the only gate |
+| technikpackaging | 31/0/34 | |
+| atlantaspecializedcare | 5/60/96 | staging said 748 meta rows: revision copies counted by the old code; the meta-first/no-revisions pass gives the true number |
+| forwardfacing | 0/3/3 | |
+| markheardfuel | 12/6/18 | Elementor; check-json on staging 0 invalid |
+| meshautomationinc | 21/59/114 | |
+| ruggeddepot | 0/44/64 | the 6,341-link `/repair-and-support/` swap vanished from the 10-29/30 crawl before we reached it; current map has 25 swaps |
+| miuraboiler | 75/23/102 | Elementor; staging was stale (17 hits), live is the real number; run live check-json after apply |
+| setcomcorp | 10/9/43 | live SSH needs the running machine's IP on the environment's allowlist (MyKinsta → Security); Elementor, run live check-json |
+
+Left on Kinsta: **nativecustomstone** (86 swaps in the map, no staging; create one or run live-only with `--allow-no-staging` after reading the map). Options logs with real hits to hand over: markheardfuel (16 rows), setcomcorp (7), meshautomationinc (3), technikpackaging (2), forwardfacing, ruggeddepot (1 each): widgets/menus/theme settings carrying old links.
+
+Verify next week: Ahrefs recrawls each project on its schedule; compare "Page has links to redirect" and "3XX redirect" against the 10-22/10-29 baselines in the first batch summary.
+
 ## Things learned the hard way (already encoded in the script)
 
 1. Kinsta rewrites every absolute URL to the staging domain when it builds staging, so a matcher that only knows the live domain finds half the links.
@@ -52,8 +73,10 @@ Other notes from the run: atlantaspecializedcare is ACF-heavy (748 meta rows for
 - Second site: one on WP Engine (webroot `sites/<install>`, path logic exists but is untested) and one with a page builder (Elementor stores content as JSON in `_elementor_data`; the JSON-escaped rules should cover it but it has not been exercised).
 - Builder-aware handling if Elementor data turns out to need it.
 - `restore_changes.py` exists now; first real use is miuraboiler staging.
-- Kinsta batch: stage-only run done (see above). Before live: restore + re-stage miuraboiler, rebuild ruggeddepot's map, `--check-json` on every Elementor staging, set up staging for nativecustomstone (86 swaps waiting), fix setcomcorp's live SSH port (37782 times out; staging works).
-- setcomcorp live SSH alias: port 37782 timed out on 2026-10-29; get the current port from MyKinsta.
+- nativecustomstone: staging or live-only run (86 swaps).
+- Hand over the options logs listed above.
+- Next host: WP Engine (22 client files, webroot `sites/<install>` untested). Same rhythm: stage-only batch, read the summary, live.
+- Gate gap found 2026-10-30: `--live --no-stage` has no staging counts to compare against, so the live/staging mismatch gate is silent in that mode. Acceptable while a human reads the table; before scheduling, make the batch read the latest staging dry-run log for the comparison.
 - Once a few batch cycles are clean, schedule `--live` as a task.
 
 ## Related work that is NOT this skill

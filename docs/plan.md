@@ -18,7 +18,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 - `fix-redirect-links` built, dry-run and applied on hsfamilylaw staging (79 link swaps across 8 posts and 55 ACF fields, clean). Same day: change logs regrouped to `changes/<provider>/<slug>/`, `--yes` flag for unattended live runs, `wp cache flush` after apply, companion `-options.md` report of `wp_options` rows still holding old URLs. Handoff: `claude/skill-fix-redirect-links.md`.
 
 **Next**
-- `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Now the Kinsta batch: `build_redirect_map.py` (Ahrefs API) + `batch_fix_redirect_links.py --provider kinsta`, stage-only first, across 11 sites incl. the new setcomcorp.
+- `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Kinsta batch done 2026-10-30 (9 sites live via `batch_fix_redirect_links.py`, plus hsfamilylaw); nativecustomstone needs staging; WP Engine batch is next.
 - `fix-images` v1 built and **applied to hsfamilylaw live 2026-10-29**: 26 flagged PNGs plus their 108 sub-size files, 102 MB → 26 MB on disk, same URLs. WebP Express turned out to be converting but not serving (Nginx); Greg removed it and enabled Kinsta CDN lossy optimization. Alt text: 95 rows reviewed in a Google Sheet and written to live. Headshots restored to originals after over-compression; graphics kept. Remaining: isle-of-dogs pasted images, Kinsta ticket to drop WebP Express Nginx rules, recrawl. Handoff: `docs/skills/fix-images.md`.
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
@@ -88,7 +88,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 
 **Phase 1: Technical SEO (pilot on hsfamilylaw.com).**
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**
-- `fix-redirect-links` (AUTO). **Done on hsfamilylaw (applied and verified by recrawl 2026-10-29). Map builder (Ahrefs API) and host-wide batch runner added; Kinsta batch next.**
+- `fix-redirect-links` (AUTO). **Live on 10 of 11 Kinsta sites (2026-10-29/30) via the batch runner; nativecustomstone pending (no staging). WP Engine next.**
 - `fix-meta` (titles and descriptions through the SEO plugin, APPROVE)
 - `ai-discoverability` (bot access policy + machine readability, from Ahrefs' AI Discoverability category; APPROVE for robots.txt and IndexNow, FLAG/route for the rest). Spec: `docs/skills/ai-discoverability.md`.
 - `fix-images` (weight in place AUTO; alt and broken images APPROVE). **Done on hsfamilylaw 2026-10-29 (live). Recrawl + WebP-serving re-probe pending; `alt-text-apply` next.** Format conversion is out of scope (plugin/host job: Kinsta CDN).
