@@ -2,6 +2,9 @@
 
 One-time per machine. After this, every skill that writes to a site works through `ssh <slug>`.
 
+**Status on Greg's PC (2026-10-30):** sections 1-4 (SSH key, Kinsta API, SSH config, test) and the Ahrefs key are DONE; if `ssh hsfamilylaw "wp --info"`
+works, skip to whichever section is new. The Google service account section (bottom) is the only one still to do.
+
 ## 1. SSH key (once, ever)
 
 You probably already have one at `~/.ssh/id_ed25519`. If `ssh-keygen` says it exists, keep it. Otherwise:
