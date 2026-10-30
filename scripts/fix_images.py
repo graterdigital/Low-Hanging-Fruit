@@ -160,9 +160,13 @@ def alt_csv(args, inv, cdir, stamp, firm):
         m = re.search(r"\(attachment (\d+)\)", a["where"])
         where = "featured_image" if m else a["where"]
         sug, note = suggest_alt(a, firm)
+        reliable = note == "headshot"
         rows.append({"id": f"r{i+1}", "tier": tier, "post_id": a["post_id"], "page_url": a.get("page_url") or "", "title": a.get("title") or "",
                      "where": where, "attachment_id": m.group(1) if m else "", "src": a.get("src") or "",
-                     "current_alt": "" if a["alt"] is None else "(empty)", "new_alt": sug if tier != "D" else "", "note": note if tier != "D" else "unpublished; skipped"})
+                     "current_alt": "" if a["alt"] is None else "(empty)",
+                     "new_alt": sug if (tier != "D" and reliable) else "",
+                     "suggestion": sug if tier != "D" else "",
+                     "note": note if tier != "D" else "unpublished; skipped"})
     order = {"A": 0, "C": 1, "B": 2, "D": 3}
     rows.sort(key=lambda r: (order[r["tier"]], r["page_url"], r["where"]))
     out = cdir / f"{stamp}-fix-images-alt.csv"
@@ -170,8 +174,89 @@ def alt_csv(args, inv, cdir, stamp, firm):
         w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
     counts = {t: len([r for r in rows if r["tier"] == t]) for t in "ACBD"}
     print(f"{len(rows)} rows -> {out}\n  A {counts['A']} alt absent · C {counts['C']} featured images · B {counts['B']} empty alt inline · D {counts['D']} unpublished (skipped)")
-    print("Review new_alt (prefilled with a draft; blank it to skip a row), then: python scripts/fix_images.py <slug> --alt-apply " + out.name)
+    print(f"  {len([r for r in rows if r['new_alt']])} rows prefilled (headshots only); the rest carry a draft in `suggestion` for a human to accept into `new_alt` or rewrite")
+    print("Review, then: python scripts/fix_images.py <slug> --alt-apply " + out.name)
     return out
+
+# ---------------------------------------------------------------- WooCommerce product alt rule
+VIEW_WORDS = {"front": "front view", "back": "back view", "rear": "rear view", "side": "side view", "top": "top view", "bottom": "underside",
+              "left": "left side", "right": "right side", "angle": "angled view", "angled": "angled view", "detail": "detail", "closeup": "close-up",
+              "close-up": "close-up", "ports": "ports", "port": "ports", "keyboard": "keyboard", "screen": "screen", "display": "display",
+              "open": "open", "closed": "closed", "dock": "docked", "docked": "docked", "mount": "mounted", "mounted": "mounted", "vehicle": "in vehicle",
+              "lifestyle": "in use", "use": "in use", "inuse": "in use", "box": "packaging", "packaging": "packaging", "kit": "kit contents",
+              "accessories": "accessories", "cable": "cable", "charger": "charger", "stylus": "stylus", "case": "case", "strap": "strap"}
+
+def clean_title(t):
+    t = re.sub(r"\s*\|.*$", "", t)   # drop a "| Brand" tail some stores put in titles
+    return re.sub(r"\s+", " ", t).strip()
+
+def view_suffix(filename, title):
+    """A short, honest suffix from the file name: 'ports', 'side view', 'docked'. Nothing if the name says nothing."""
+    name = re.sub(r"\.\w+$", "", filename); name = re.sub(r"-\d+x\d+$", "", name); name = re.sub(r"-e\d{10,}$", "", name)
+    words = [w for w in re.split(r"[-_\s]+", name.lower()) if w]
+    title_words = set(re.split(r"[^a-z0-9]+", title.lower()))
+    hits = [VIEW_WORDS[w] for w in words if w in VIEW_WORDS and w not in title_words]
+    seen = []; [seen.append(h) for h in hits if h not in seen]
+    return ", ".join(seen[:2])
+
+def product_alt_rows(inv):
+    """One row per product image needing alt. Alt = cleaned product title (+ view suffix / 'view N' / variation attributes).
+    Already-set alts are kept; an attachment shared by several products is assigned once, to the first product that uses it."""
+    rows, seen = [], {}
+    for pr in inv.get("products", []):
+        title = clean_title(pr["title"])
+        if not title: continue
+        n_gal = 0
+        for im in pr["images"]:
+            aid = im["attachment_id"]
+            if im["role"] == "gallery": n_gal += 1
+            if (im.get("alt") or "").strip():
+                rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": "", "note": "already set, kept: " + im["alt"][:60]}); continue
+            if aid in seen:
+                rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": "", "note": f"shared image, alt set via product {seen[aid]}"}); continue
+            suffix = view_suffix(im["file"], title)
+            if im["role"] == "featured": alt = title
+            elif im["role"] == "gallery": alt = f"{title} - {suffix or f'view {n_gal + 1}'}"
+            else: alt = f"{title} - {im.get('variation') or suffix or 'variation'}"
+            seen[aid] = pr["id"]
+            rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": alt[:125], "note": ""})
+    return rows
+
+def product_alt(args, inv, alias, provider, host, cdir, stamp):
+    rows = product_alt_rows(inv)
+    todo = [r for r in rows if r["new_alt"]]
+    mode = "apply" if args.apply else "dry"
+    print(f"{mode.upper()} product alt on {args.target} ({alias}): {len(inv.get('products', []))} products, {len(rows)} images, {len(todo)} to set, {len(rows) - len(todo)} kept/shared")
+    if not todo: print("nothing to do"); return
+    if args.target == "live" and args.apply: confirm_live(args.slug, len(todo), alias, args.yes)
+    sheet = cdir / f"{stamp}-fix-images-product-alt-{args.target}-{mode}.csv"
+    with sheet.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+    res = {"results": [], "home_host": ""}
+    if True:   # dry runs go to the server too, so "already set" and missing attachments are reported from live data
+        job_rows = [{"id": f"p{i}", "where": "featured_image", "post_id": r["product_id"], "attachment_id": r["attachment_id"], "src_path": "", "new_alt": r["new_alt"]} for i, r in enumerate(todo)]
+        php = (HERE / "php" / "apply_alt.php").read_text(encoding="utf-8")
+        for chunk in range(0, len(job_rows), 500):   # keep each eval-file payload modest
+            payload = ("<?php define('APPLY_ALT_JOB', " + json.dumps(json.dumps({"mode": mode, "rows": job_rows[chunk:chunk + 500]})) + "); ?>" + php).encode("utf-8")
+            code, out, err = ssh(alias, f"cd {args.webroot} && wp --skip-plugins={SKIP_PLUGINS} eval-file -", payload)
+            if "===JSON===" not in out: sys.exit(f"Remote run failed.\nstdout:\n{out[-2000:]}\nstderr:\n{err[-2000:]}")
+            part = json.loads(out.split("===JSON===", 1)[1].strip()); res["results"] += part["results"]; res["home_host"] = part["home_host"]
+    written = len([x for x in res["results"] if x.get("applied")]); already = len([x for x in res["results"] if x.get("note", "").startswith("already")])
+    flush = None
+    if mode == "apply":
+        c, o, e = wp(alias, args.webroot, "cache flush"); flush = (c == 0, (o + e).strip())
+    log = [f"# fix-images (product alt from title): {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · install host `{res['home_host']}`", "",
+           f"{len(inv.get('products', []))} products, {len(rows)} images. {len(todo)} alts {'written' if mode == 'apply' else 'would be written'}" + (f" ({written} confirmed)" if mode == "apply" else "") + f", {already} already set on the attachment, {len(rows) - len(todo) - already} shared or kept.", "",
+           f"Full list: `{sheet.name}`. Rule: featured = product title; gallery = title + view word from the file name or 'view N'; variation = title + attributes. Existing alts are never overwritten.", "",
+           "Sample:", ""] + [f"- {r['role']:9} `{r['file'][:50]}` → {r['new_alt']}" for r in todo[:25]]
+    if flush is not None: log += ["", f"Object cache flush: {flush}"]
+    log += ["", "## Rollback", "", "Every attachment in the list had an empty `_wp_attachment_image_alt`; clearing it restores the previous state. `backup/` holds the full result."]
+    lpath = cdir / f"{stamp}-fix-images-product-alt-{args.target}-{mode}.md"; lpath.write_text("\n".join(log) + "\n", encoding="utf-8")
+    if mode == "apply":
+        bdir = cdir / "backup"; bdir.mkdir(exist_ok=True); (bdir / f"{stamp}-fix-images-product-alt-{args.target}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+    for r in todo[:15]: print(f"  {r['role']:9} {r['file'][:45]:45} -> {r['new_alt']}")
+    if len(todo) > 15: print(f"  ... {len(todo) - 15} more in {sheet.name}")
+    print(f"\nLog: {lpath}")
 
 def alt_apply(args, alias, provider, host, cdir, stamp):
     rows = list(csv.DictReader(Path(args.alt_apply).open(encoding="utf-8-sig")))
@@ -231,6 +316,7 @@ def main(argv=None):
     ap.add_argument("--allow-pillow", action="store_true", help="let Pillow's 256-colour quantizer handle PNGs when pngquant is missing. OFF by default: it visibly damages photos (hsfamilylaw headshots, 2026-10-29)")
     ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
+    ap.add_argument("--product-alt", action="store_true", help="WooCommerce: set empty product image alts from the product title (featured, gallery, variations); dry unless --apply")
     ap.add_argument("--alt-apply", metavar="CSV", help="write the reviewed alt CSV back to the site (dry unless --apply)")
     args = ap.parse_args(argv)
     load_env()
@@ -299,8 +385,14 @@ def main(argv=None):
         print(f"\nInventory: {jpath}\nReport:    {rdir / f'images-{crawl}.md'}")
         return
 
-    if args.alt_csv or args.alt_apply:
-        if args.alt_csv:
+    if args.alt_csv or args.alt_apply or args.product_alt:
+        if args.product_alt:
+            inv_path = Path(args.inventory) if args.inventory else (sorted(rdir.glob("image-inventory-*.json")) or [None])[-1]
+            if not inv_path: sys.exit(f"No inventory for {args.slug}; run with --probe first.")
+            inv = json.loads(inv_path.read_text(encoding="utf-8"))
+            if "products" not in inv: sys.exit("inventory predates the product scan; rerun --probe")
+            product_alt(args, inv, alias, provider, host, cdir, stamp)
+        elif args.alt_csv:
             inv_path = Path(args.inventory) if args.inventory else (sorted(rdir.glob("image-inventory-*.json")) or [None])[-1]
             if not inv_path: sys.exit(f"No inventory for {args.slug}; run with --probe first.")
             alt_csv(args, json.loads(inv_path.read_text(encoding="utf-8")), cdir, stamp, client.get("name") or host)

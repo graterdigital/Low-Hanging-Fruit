@@ -73,7 +73,7 @@ Commit the `changes/<provider>/<slug>/*.md` logs; the `backup/` folders stay loc
 python scripts/fix_images.py <slug> --alt-csv
 ```
 
-No SSH; builds `changes/<provider>/<slug>/<stamp>-fix-images-alt.csv` from the inventory, one row per image without alt, sorted by tier: **A** alt attribute absent on a published page (what Ahrefs counts), **C** featured images whose attachment has no alt (one attachment field fixes every use), **B** `alt=""` inline on published pages (valid-decorative by HTML rules, usually just unfilled), **D** unpublished (left blank, never applied). `new_alt` is prefilled with a draft; `note` says where the draft came from. The drafts are written from the page topic and file name, not from seeing the picture, so the review is real work, not a rubber stamp: open the page, look at the image, fix the text. Blank `new_alt` to skip a row. For review in a spreadsheet, upload the CSV to Google Sheets (Drive converts it) with live page links in place of the staging host, and when the review is done export it back to CSV and run `python scripts/merge_alt_sheet.py <repo csv> <export csv>`, which copies `new_alt` (and `note`) back by row `id` and leaves everything else untouched; the merged repo CSV is what gets committed and applied. Leave decorative images (logos, icons, divider art) blank. Alt text is short, describes what the picture shows, and never starts with "image of"; no keyword stuffing.
+No SSH; builds `changes/<provider>/<slug>/<stamp>-fix-images-alt.csv` from the inventory, one row per image without alt, sorted by tier: **A** alt attribute absent on a published page (what Ahrefs counts), **C** featured images whose attachment has no alt (one attachment field fixes every use), **B** `alt=""` inline on published pages (valid-decorative by HTML rules, usually just unfilled), **D** unpublished (left blank, never applied). `new_alt` is prefilled only for attorney/staff headshots (name + role, the one case the rule gets right); every other row carries a draft in `suggestion` and an empty `new_alt`, so nothing gets applied unless a person accepted or rewrote it. The drafts are written from the page topic and file name, not from seeing the picture, so the review is real work, not a rubber stamp: open the page, look at the image, fix the text. Blank `new_alt` to skip a row. For review in a spreadsheet, upload the CSV to Google Sheets (Drive converts it) with live page links in place of the staging host, and when the review is done export it back to CSV and run `python scripts/merge_alt_sheet.py <repo csv> <export csv>`, which copies `new_alt` (and `note`) back by row `id` and leaves everything else untouched; the merged repo CSV is what gets committed and applied. Leave decorative images (logos, icons, divider art) blank. Alt text is short, describes what the picture shows, and never starts with "image of"; no keyword stuffing.
 
 ```
 python scripts/fix_images.py <slug> --alt-apply changes/<provider>/<slug>/<stamp>-fix-images-alt.csv
@@ -82,6 +82,20 @@ python scripts/fix_images.py <slug> --alt-apply <csv> --target live --apply
 ```
 
 Ships `scripts/php/apply_alt.php` with the rows that have `new_alt`. Featured images: `_wp_attachment_image_alt` on the attachment. Inline: every `<img>` in that post (or that ACF meta row) whose `src` path matches gets `alt="..."` (replaced if present, inserted after `<img` if not); the host part of `src` is ignored, so a sheet built on staging applies to live. `wp_update_post` keeps a revision. Log: `<stamp>-fix-images-alt-<target>-<dry|apply>.md`; previous values in `backup/`. A dry run that reports "no <img> with that src found" means the content changed since the probe or the alt was already set; re-probe.
+
+The scan covers public post types only (revisions, Elementor templates, TablePress tables and the like are skipped), which is what keeps the sheet reviewable.
+
+### WooCommerce products: alt from the title, no sheet
+
+A store's product images are the bulk of its missing alts (ruggeddepot: 3,517 of 3,604) and the right text is mechanical, so they are AUTO:
+
+```
+python scripts/fix_images.py <slug> --product-alt                    # dry: lists every product image and the alt it would get
+python scripts/fix_images.py <slug> --product-alt --apply            # staging
+python scripts/fix_images.py <slug> --product-alt --target live --apply
+```
+
+Rule: featured image = product title (a `| Brand` tail dropped); gallery images = title + a view word taken from the file name (`-ports`, `-side`, `-docked`, `-in-vehicle`…) or `view N` when the name says nothing; variation images = title + the variation attributes. An alt already on the attachment is never overwritten. An attachment shared by several products is set once, for the first product that uses it, and the others are listed as shared. The full product → image → alt list is written as a CSV next to the log for a skim before `--apply`.
 
 Broken and redirected images (pasted web pages, dead thumbnails) are not alt work: the sheet marks them "remove by hand" and leaves `new_alt` blank.
 
