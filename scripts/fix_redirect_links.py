@@ -240,6 +240,9 @@ def run(args):
     for mm in res["meta"]:
         log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {mm.get('kind','')}{' (menu: ' + str(mm.get('title',''))[:30] + ')' if mm.get('kind') == 'menu' else ''} | {sum(mm['hits'].values())} | {mm.get('applied', '-')} |")
     log += ["", "## Skipped by the map", ""] + [f"- {s.get('old') or s.get('pattern')}: {s['reason']}" for s in m.get("skipped", [])]
+    acf = res.get("acf_options") or []
+    log += ["", f"## ACF options-page fields changed ({len(acf)})", "", "| option_id | option_name | kind | replacements | applied |", "|---|---|---|---|---|"]
+    for o in acf: log.append(f"| {o['option_id']} | {o['option_name']} | {o.get('kind','')} | {sum(o['hits'].values())} | {o.get('applied', '-')} |")
     refused = res.get("refused") or []; guarded = res.get("json_guarded") or []
     if refused: log += ["## Swaps refused by the matcher (unsafe characters)", ""] + [f"- `{r['old']}`: {r['reason']}" for r in refused] + [""]
     if guarded:
@@ -249,7 +252,7 @@ def run(args):
     log += ["", f"## wp_options still referencing old URLs ({len(opts)}, not changed)", "",
             f"See `{base}-options.md` next to this log. Widgets, theme mods, menus and plugin settings live here and need a hand or a different skill." if opts else "None found."]
     log += ["", "## Rollback", "", "Posts: WordPress kept a revision of each changed post (Posts → edit → Revisions), and the exact before/after content is in `backup/` next to this log.",
-            "Postmeta: previous values are in the same backup file."]
+            "Postmeta and ACF options-page rows: previous values are in the same backup file; `scripts/restore_changes.py` restores all three."]
     main_log = outdir / f"{base}-{mode}.md"
     main_log.write_text("\n".join(log) + "\n", encoding="utf-8")
 
@@ -270,13 +273,17 @@ def run(args):
         bdir = outdir / "backup"; bdir.mkdir(exist_ok=True)
         (bdir / f"{base}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
     res["linkcheck"] = None
+    if mode == "apply" and res.get("acf_options"):
+        home = (client.get("canonical_host") or f"https://{host}").rstrip("/") + "/"
+        res["check_urls"] = list(dict.fromkeys([home] + (res.get("check_urls") or [])))   # options render site-wide; the homepage stands in
     if mode == "apply" and not getattr(args, "no_link_check", False) and res.get("check_urls"):
         lc = check_links(res["check_urls"], host, swaps, m.get("legacy_hosts") or [])
         sw, ol, other, pb = write_linkcheck_log(outdir, base, host, args.target, lc, res.get("check_skipped"))
         res["linkcheck"] = (sw, ol, other, pb)
         print(f"Link check: {len(res['check_urls'])} pages, {lc['links_checked']} links; {sw} swap target(s) not 200, {ol} old URL(s) still linked, {other} other non-200, {pb} page(s) not 200  -> {base}-linkcheck.md")
 
-    print(f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows would change" if mode == "dry" else f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows changed")
+    nacf = len(res.get("acf_options") or [])
+    print(f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows, {nacf} ACF option rows would change" if mode == "dry" else f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows, {nacf} ACF option rows changed")
     for k, v in sorted(res["totals"].items()): print(f"  {v:3}  {k}")
     print(f"  {len(opts)} wp_options rows still reference old URLs (not changed; see the -options.md log)")
     if refused: print(f"  {len(refused)} swap(s) REFUSED for unsafe characters: " + ", ".join(r['old'] for r in refused))

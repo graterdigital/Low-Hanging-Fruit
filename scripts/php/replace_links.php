@@ -16,7 +16,8 @@
  * (ACF link/url fields), which are unserialized, rewritten, and reserialized.
  *
  * Scope: post_content of non-revision posts, and postmeta values. wp_update_post keeps a revision.
- * wp_options is scanned and reported (the `options` key in the output) but never written.
+ * wp_options: ACF options-page values (option_name 'options_*') are rewritten like ACF postmeta (the `acf_options` key);
+ * everything else in wp_options is scanned and reported (the `options` key) but never written.
  */
 if (!defined('REPLACE_LINKS_JOB')) { fwrite(STDERR, "no job\n"); exit(1); }
 // wp eval-file includes this file inside a function, so declare shared state global explicitly
@@ -126,7 +127,7 @@ function scan_options() {
     foreach ($legacy as $l) $needles[] = ["host:$l", $l, '~' . preg_quote($l, '~') . '~i'];
     foreach ($needles as [$old, $needle, $re]) {
         $like = '%' . $wpdb->esc_like($needle) . '%';
-        foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value, autoload FROM {$wpdb->options} WHERE option_value LIKE %s AND option_name NOT LIKE '\\_transient\\_%%' AND option_name NOT LIKE '\\_site\\_transient\\_%%'", $like)) as $r) {
+        foreach ($wpdb->get_results($wpdb->prepare("SELECT option_name, option_value, autoload FROM {$wpdb->options} WHERE option_value LIKE %s AND option_name NOT LIKE '\\_transient\\_%%' AND option_name NOT LIKE '\\_site\\_transient\\_%%' AND option_name NOT LIKE 'options\\_%%'", $like)) as $r) {
             if (isset($seen[$r->option_name . "\0" . $old])) continue;
             if (!preg_match($re, $r->option_value, $m, PREG_OFFSET_CAPTURE)) continue;
             $seen[$r->option_name . "\0" . $old] = 1;
@@ -217,6 +218,25 @@ foreach ($ids as $id) {
     $e = ['id' => (int)$id, 'type' => $p->post_type, 'status' => $p->post_status, 'title' => $p->post_title, 'url' => get_permalink($id), 'hits' => $hits, 'before' => $p->post_content, 'after' => $new];
     if ($mode === 'apply') { $r = wp_update_post(wp_slash(['ID' => $id, 'post_content' => $new]), true); $e['applied'] = is_wp_error($r) ? 'ERROR: ' . $r->get_error_message() : true; }
     $out['posts'][] = $e; $tally($hits);
+}
+
+// ---- ACF options-page fields: option_name 'options_<field>' (and other prefixed ACF option pages). Content the client
+// edits in wp-admin, stored like ACF postmeta (plain or serialized link arrays), so the same walk/rewrite applies.
+// Everything else in wp_options stays report-only. The field-reference rows ('_options_<field>' = 'field_abc') are never touched.
+$out['acf_options'] = [];
+if ($conds) {
+    $oconds = array_map(fn($c) => str_replace('m.meta_value', 'option_value', $c), $conds);
+    $orows = $wpdb->get_results($wpdb->prepare("SELECT option_id, option_name, option_value FROM {$wpdb->options} WHERE option_name LIKE 'options\\_%%' AND option_name NOT LIKE '\\_%%' AND option_name NOT LIKE '%%\\_transient\\_%%' AND (" . implode(' OR ', $oconds) . ")", $params));
+    foreach ($orows as $o) {
+        $hits = [];
+        if (is_serialized($o->option_value)) { $data = maybe_unserialize($o->option_value); $newData = walk($data, $hits); $new = $hits ? serialize($newData) : $o->option_value; $kind = 'serialized'; }
+        else { $new = rewrite_value($o->option_value, $hits); $kind = is_json_blob($o->option_value) ? 'json' : 'plain'; }
+        if ($new === $o->option_value) continue;
+        $e = ['option_id' => (int)$o->option_id, 'option_name' => $o->option_name, 'kind' => $kind, 'hits' => $hits, 'before' => $o->option_value, 'after' => $new];
+        if ($kind === 'json' && !is_json_blob($new)) { $e['applied'] = 'GUARDED: rewrite would break JSON'; unset($e['after']); $out['json_guarded'][] = $e; continue; }
+        if ($mode === 'apply') { $e['applied'] = (bool)$wpdb->update($wpdb->options, ['option_value' => $new], ['option_id' => $o->option_id]); wp_cache_delete($o->option_name, 'options'); wp_cache_delete('alloptions', 'options'); }
+        $out['acf_options'][] = $e; $tally($hits);
+    }
 }
 
 // Pages to re-check after an apply: every changed post, plus the owner of every changed non-menu meta row,

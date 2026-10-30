@@ -58,6 +58,10 @@ Re-run needed on the Elementor sites (markheardfuel, setcomcorp, miuraboiler, ru
 
 Verify next week: Ahrefs recrawls each project on its schedule; compare "Page has links to redirect" and "3XX redirect" against the 10-22/10-29 baselines in the first batch summary.
 
+## Elementor re-run and the ACF-options finding, 2026-10-30 10:52
+
+After the plain-JSON fix: miuraboiler 149p/126m/2,653 replacements (2,652 of them `www.`→bare host moves), setcomcorp 1p/7m/12r, ruggeddepot 0p/10m/10r, meshautomationinc clean, markheardfuel only 1 move. All Elementor JSON valid on live. markheardfuel's 15 remaining old links turned out to be **ACF options-page fields** (`options_proudly_serving_repeater_*_link`: the footer service-area list), the one storage form the script was told never to write. Since ACF options are client-edited content exactly like ACF postmeta, the matcher now rewrites `options_*` rows with the same serialized walk, backup, JSON guard and restore; all other `wp_options` rows stay report-only. **Re-run markheardfuel live** to pick them up; expect ~15 ACF option rows. miuraboiler's "LINK CHECK FAILED" after that run was the edge cache still serving old HTML; re-run `--check-links` after a few minutes.
+
 ## Things learned the hard way (already encoded in the script)
 
 1. Kinsta rewrites every absolute URL to the staging domain when it builds staging, so a matcher that only knows the live domain finds half the links.

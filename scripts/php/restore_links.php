@@ -47,4 +47,21 @@ foreach ($job['meta'] ?? [] as $m) {
     }
     $out['meta'][] = $e;
 }
+$out['acf_options'] = [];
+foreach ($job['acf_options'] ?? [] as $o) {
+    $cur = $wpdb->get_var($wpdb->prepare("SELECT option_value FROM {$wpdb->options} WHERE option_id = %d", $o['option_id']));
+    $e = ['option_id' => (int)$o['option_id'], 'option_name' => $o['option_name'] ?? ''];
+    if ($cur === null) $e['result'] = 'missing';
+    elseif ($cur === $o['before']) $e['result'] = 'already restored';
+    elseif ($cur !== ($o['after'] ?? null) && !$force) $e['result'] = 'modified since; left alone';
+    else {
+        if ($cur !== ($o['after'] ?? null)) $e['forced'] = true;
+        if ($mode === 'apply') {
+            $ok = $wpdb->update($wpdb->options, ['option_value' => $o['before']], ['option_id' => $o['option_id']]);
+            if (!empty($o['option_name'])) wp_cache_delete($o['option_name'], 'options'); wp_cache_delete('alloptions', 'options');
+            $e['result'] = $ok === false ? 'ERROR: ' . $wpdb->last_error : (empty($e['forced']) ? 'restored' : 'restored (forced over a later change)');
+        } else $e['result'] = 'would restore';
+    }
+    $out['acf_options'][] = $e;
+}
 echo "\n===JSON===\n" . json_encode($out, JSON_UNESCAPED_SLASHES) . "\n";

@@ -44,16 +44,17 @@ def main():
     b = json.loads(bp.read_text(encoding="utf-8"))
     posts = [{"id": p["id"], "before": p["before"], "after": p.get("after")} for p in b.get("posts", []) if "before" in p]
     meta = [{"meta_id": x["meta_id"], "before": x["before"], "after": x.get("after")} for x in b.get("meta", []) if "before" in x]
+    acf = [{"option_id": x["option_id"], "option_name": x.get("option_name", ""), "before": x["before"], "after": x.get("after")} for x in b.get("acf_options", []) if "before" in x]
     keys = {k.strip() for k in args.only_meta_keys.split(",") if k.strip()}
     if keys:
         wanted = {x["meta_id"] for x in b.get("meta", []) if x.get("key") in keys}
-        meta = [x for x in meta if x["meta_id"] in wanted]; posts = []
+        meta = [x for x in meta if x["meta_id"] in wanted]; posts = []; acf = []
     mode = "apply" if args.apply else "dry"
     if target == "live" and args.apply:
-        print(f"About to RESTORE {len(posts)} posts and {len(meta)} meta rows on LIVE ({alias}){' WITH --force' if args.force else ''}. Type the slug to confirm: ", end="", flush=True)
+        print(f"About to RESTORE {len(posts)} posts, {len(meta)} meta rows and {len(acf)} ACF option rows on LIVE ({alias}){' WITH --force' if args.force else ''}. Type the slug to confirm: ", end="", flush=True)
         if input().strip() != args.slug: sys.exit("aborted")
 
-    job = json.dumps({"mode": mode, "force": bool(args.force), "posts": posts, "meta": meta})
+    job = json.dumps({"mode": mode, "force": bool(args.force), "posts": posts, "meta": meta, "acf_options": acf})
     php = (HERE / "php" / "restore_links.php").read_text(encoding="utf-8")
     payload = "<?php define('RESTORE_LINKS_JOB', " + json.dumps(job) + "); ?>" + php
     cmd = ["ssh", alias, f"cd {args.webroot} && wp --skip-plugins={frl.SKIP_PLUGINS} eval-file -"]
@@ -69,19 +70,20 @@ def main():
         t = {}
         for x in rows: t[x["result"].split(";")[0]] = t.get(x["result"].split(";")[0], 0) + 1
         return t
-    tp, tm = tally(res["posts"]), tally(res["meta"])
+    tp, tm, ta = tally(res["posts"]), tally(res["meta"]), tally(res.get("acf_options", []))
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
     outdir = ROOT / "changes" / provider / args.slug; outdir.mkdir(parents=True, exist_ok=True)
     log = [f"# restore from backup: {client['domain']} ({target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · backup `{bp.name}`" + (f" · meta keys {sorted(keys)}" if keys else ""), "",
-           "## Posts", ""] + [f"- {k}: {v}" for k, v in tp.items()] + ["", "## Postmeta", ""] + [f"- {k}: {v}" for k, v in tm.items()] + ["", "## Rows not restored", ""]
+           "## Posts", ""] + [f"- {k}: {v}" for k, v in tp.items()] + ["", "## Postmeta", ""] + [f"- {k}: {v}" for k, v in tm.items()] + ["", "## ACF options", ""] + [f"- {k}: {v}" for k, v in ta.items()] + ["", "## Rows not restored", ""]
     ok_results = ("restored", "would restore", "already restored", "restored (forced over a later change)")
     log += [f"- post {x['id']}: {x['result']}" for x in res["posts"] if x["result"] not in ok_results]
     log += [f"- meta {x['meta_id']}: {x['result']}" for x in res["meta"] if x["result"] not in ok_results]
+    log += [f"- option {x['option_name'] or x['option_id']}: {x['result']}" for x in res.get("acf_options", []) if x["result"] not in ok_results]
     if args.force: log += ["", f"Run with --force: rows marked 'forced' were overwritten although their value had changed after the fix."]
     log += ["", "## Forced rows", ""] + [f"- post {x['id']}" for x in res["posts"] if x.get("forced")] + [f"- meta {x['meta_id']}" for x in res["meta"] if x.get("forced")]
     (outdir / f"{stamp}-restore-{target}-{mode}.md").write_text("\n".join(log) + "\n", encoding="utf-8")
     print(f"{mode.upper()} restore on {target} ({alias}) from {bp.name}")
-    print("  posts:", tp); print("  meta: ", tm)
+    print("  posts:", tp); print("  meta: ", tm); print("  acf options:", ta)
     print(f"Log: {outdir / (stamp + '-restore-' + target + '-' + mode + '.md')}")
 
 if __name__ == "__main__":
