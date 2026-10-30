@@ -96,6 +96,12 @@ def main():
                 row["alt"] = f"A {m[1]} · C {m[2]} · B {m[3]}" if m else "written"
                 m = re.search(r"rows -> (\S.*)", out); row["sheet"] = m[1].strip() if m else ""
                 print(f"  alt sheet: {row['alt']}")
+                if ((c.get("review") or {}).get("alt_sheet_id") or "unknown") != "unknown":
+                    r2 = subprocess.run([sys.executable, str(HERE / "review_sheets.py"), "push", slug], capture_output=True, text=True, encoding="utf-8", errors="replace")
+                    line = (r2.stdout or r2.stderr or "").strip().splitlines()[-1:] or ["(no output)"]
+                    print("  google sheet:", line[0][:160]); row["note"] += " " + ("sheet pushed" if r2.returncode == 0 else "sheet push failed: " + line[0][:80])
+                else:
+                    row["note"] += " no review sheet (run review_sheets.py setup)"
             else:
                 row["note"] += " alt sheet failed"
         except Exception:

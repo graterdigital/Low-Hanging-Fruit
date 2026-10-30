@@ -5,3 +5,4 @@
 tmp/
 changes/**/backup/
 __pycache__/
+secrets/

@@ -47,3 +47,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://atlantaspecializedcare.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Mental-health counseling practice (Atlanta/Alpharetta); custom theme, fingerprint's oxygen match was only a ct-section class so builder set to none-detected; no GTM/GA4 tag in raw HTML (Site Kit + Clarity present); WP Rocket active."
+
+review:
+  alt_sheet_id: 1Hnt0UeOHOKL3SwNZ2A9v9aUohyo9yZ1Z7QqDxGDyPyc   # "atlantaspecializedcare alt text review" in Google Sheets; scripts/review_sheets.py

@@ -48,3 +48,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: Fingerprint of raw HTML of https://markheardfuel.com/ from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.
+
+review:
+  alt_sheet_id: 1gOpJHO-d7WW1J53C2h3fY_nBB1Ur5dT8C4Wgc1qXrq4   # "markheardfuel alt text review" in Google Sheets; scripts/review_sheets.py

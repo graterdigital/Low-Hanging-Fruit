@@ -52,3 +52,6 @@ rules:
 evidence:
   last_checked: 1970-01-01
   basis: ""
+
+review:
+  alt_sheet_id: unknown      # one Google Sheet per client for APPROVE-tier review; scripts/review_sheets.py setup <slug> fills this in

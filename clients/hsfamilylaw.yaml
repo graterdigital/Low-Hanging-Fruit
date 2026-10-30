@@ -65,3 +65,6 @@ rules:
 evidence:
   last_checked: 2026-10-29
   basis: Ahrefs Site Audit crawls of 2026-10-08 and 2026-10-29, raw HTML of /, /category/divorce/, /blog/page/2/, `wp plugin list` over SSH on 2026-10-28, and the fix-images probe/apply over SSH on 2026-10-29.
+
+review:
+  alt_sheet_id: 1j6bX79mViQOnblkOgDAhUmcW4lLrFpoanVgka1NN3gU   # "hsfamilylaw alt text review" in Google Sheets; scripts/review_sheets.py
