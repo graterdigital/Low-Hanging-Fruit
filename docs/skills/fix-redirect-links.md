@@ -62,6 +62,12 @@ Verify next week: Ahrefs recrawls each project on its schedule; compare "Page ha
 
 After the plain-JSON fix: miuraboiler 149p/126m/2,653 replacements (2,652 of them `www.`→bare host moves), setcomcorp 1p/7m/12r, ruggeddepot 0p/10m/10r, meshautomationinc clean, markheardfuel only 1 move. All Elementor JSON valid on live. markheardfuel's 15 remaining old links turned out to be **ACF options-page fields** (`options_proudly_serving_repeater_*_link`: the footer service-area list), the one storage form the script was told never to write. Since ACF options are client-edited content exactly like ACF postmeta, the matcher now rewrites `options_*` rows with the same serialized walk, backup, JSON guard and restore; all other `wp_options` rows stay report-only. **Re-run markheardfuel live** to pick them up; expect ~15 ACF option rows. miuraboiler's "LINK CHECK FAILED" after that run was the edge cache still serving old HTML; re-run `--check-links` after a few minutes.
 
+## Late 2026-10-30: ACF options, GSC, onboarding
+
+- markheardfuel's 15 footer/CTA links were ACF options-page fields; the 10:52 live run rewrote them (backup has 11 `proudly_serving` rows + 4 others), the apply log's ACF section didn't print (cosmetic, parked). Site verified correct. Options report now 1 row (shortcode plugin memory).
+- GSC columns in the map (`gsc_clicks_90d`, `gsc_impressions_90d`, pulled through the Ahrefs project when `gsc_connected: yes`) order the skipped list; hsfamilylaw: 107 GSC pages, 0 skipped URLs with impressions.
+- Answer to "new site = add to Ahrefs and run?": nearly. Still needs a client file; `new_client.py <domain>` is the next build so that becomes true (plan.md). Then `redirect-rules` (APPROVE, GSC-driven) for the homepage-redirect leftovers.
+
 ## Things learned the hard way (already encoded in the script)
 
 1. Kinsta rewrites every absolute URL to the staging domain when it builds staging, so a matcher that only knows the live domain finds half the links.
