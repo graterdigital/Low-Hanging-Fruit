@@ -11,7 +11,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 - Fixes run from Greg's PC (Windows, PowerShell, repo at `C:\Users\greg\Documents\Low-Hanging-Fruit`) over SSH. `docs/setup-machine.md` sets up a new machine; `scripts/ssh_config_sync.py` builds the SSH aliases from the Kinsta and WP Engine APIs.
 
 **Done**
-- `fix-images` v1: weight fix (AUTO) and alt-text write-back from a reviewed Google Sheet (APPROVE) both run on hsfamilylaw live 2026-10-29. 15 graphics compressed; 11 headshots restored to originals after Pillow quantization damaged them (pngquant now required; see the skill handoff). 95 alt texts written.
+- `fix-images` v1: weight fix (AUTO) and alt-text write-back (APPROVE) run on hsfamilylaw live 2026-10-29; WooCommerce product alts by title rule (`--product-alt`) on ruggeddepot staging 2026-10-30 (live pending); review batch across 11 Kinsta sites; persistent per-client Google review sheets via service account (`scripts/review_sheets.py`). Details and next steps in `docs/skills/fix-images.md`.
 - `site-triage` v1, cold-tested on hsfamilylaw.com and livingyoungcenter.com.
 - Client files for all 40 Ahrefs projects (`clients/`, index in `docs/client-index.md`), with stack fingerprints from `scripts/fingerprint.py`. Hosting aliases filled for 32 of them by the sync script.
 - SSH + WP-CLI access proven to hsfamilylaw live and staging.

@@ -1,6 +1,6 @@
 # Handoff: fix-images
 
-Status as of 2026-10-29 (late evening). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+Status as of 2026-10-30 12:50. Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
 
 ## What the skill does
 
@@ -19,7 +19,23 @@ Decision made this chat: no format conversion and no URL swaps in this skill. We
 
 Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Live-tested on hsfamilylaw 2026-10-29 with the Pillow path only (no pngquant on Greg's PC yet).
 
-## What went wrong on 2026-10-29 (read this first)
+## Where things stand (2026-10-30 12:50) — read this first
+
+**Done**
+- hsfamilylaw: 15 graphics compressed on live; 11 headshots restored to originals; 95 alt texts applied live; WebP Express removed, Kinsta CDN optimisation on; theme untouched.
+- ruggeddepot: 7,481 product alts written on **staging** by the title rule (`--product-alt`); theme gallery patch (`scripts/php/patch_ruggeddepot_gallery_alt.php`) applied on staging and verified (the `#` is gone). **Live still pending** for both: `python scripts/fix_images.py ruggeddepot --product-alt --target live --apply`, then scp + `wp eval-file` the patch on the live alias, then commit logs. 296-attachment exception CSV (shared model photos, one-word titles) awaits a human.
+- Review batch (`batch_fix_images.py --provider kinsta`, 2026-10-29): probes, staging dry runs and alt CSVs for 11 sites; summary `changes/kinsta/_batch-2026-10-29-1655-fix-images-review.md`. Compression dry runs ready for a visual check (nothing pushed): atlantaspecializedcare 149→28 MB, markheardfuel 32→7, miuraboiler 45→21, meshautomationinc 40→21, setcomcorp 30→12, forwardfacing 12→7. slepianfirm's 27 flagged files are bare uploads with no attachment record (needs a path-only mode, not built).
+- Google review sheets: service account `lhf-review-sheets@overwatch-site-monitoring.iam.gserviceaccount.com`, key at `secrets/google-service-account.json`, Drive folder `1IOL3yiztXBmERkbfEbUA8NVYDSl-jHfG` ("LHF Review Sheets", owned by overwatch@, shared with greg@ and the service account). Eleven blank sheets `<slug> review` created in it. `setup`+`push` succeeded for atlantaspecializedcare (76 rows), fenceworksofga (127), forwardfacing (66, all prefilled by rule), hsfamilylaw (3), markheardfuel (9); the Sheets API 60-reads/min quota stopped the rest. Retry added (`4398a25`).
+
+**Next, in order**
+1. Rerun on Greg's PC: `foreach ($s in "meshautomationinc","miuraboiler","setcomcorp","slepianfirm","technikpackaging","ruggeddepot") { python scripts/review_sheets.py setup $s; python scripts/review_sheets.py push $s }` then `status`, commit `clients/`.
+2. ruggeddepot live (product-alt apply + theme patch), see above.
+3. Greg (or overwatch@) fills `new_alt` in the sheets; then per site `review_sheets.py pull <slug>` → `fix_images.py <slug> --alt-apply <csv>` dry → `--apply` → `--target live --apply` → `review_sheets.py mark-applied <slug>`. forwardfacing can skip review (rule-filled).
+4. Compression applies, per site, after looking at `backup/<stamp>-fix-images-staging/new/` vs `orig/`: `fix_images.py <slug> --apply` then `--target live --apply`. A `batch_apply_images.py` with a `--reviewed <slugs>` gate is designed but not built.
+5. Delete the five hand-made sheets in greg@'s Drive (dated "alt text review 2026-10-29/30"); their ids were retired from the client files. Rotate the service-account key that was pasted into chat (Cloud Console → service account → Keys → delete `ae5a2fd2…`; the live key is `9a12a0ed…`).
+6. Kinsta ticket: remove WebP Express Nginx rules on hsfamilylaw (both environments).
+
+## What went wrong on 2026-10-29
 
 1. **Pillow's quantizer wrecked the headshots.** The 11 attorney photos are photographs saved as PNG with smooth gradient backgrounds; 256-colour quantization with dithering made them look awful at full size. Nobody looked at `new/` vs `orig/` before the staging or live apply, and Greg then ran a second live apply (15:36) after installing pngquant, which quantized the already-quantized files. Fixed by `restore_images.py` from the 15:03 live backup (the true originals), 55 files, plus fresh `.webp` siblings. Skill now: PNGs are skipped unless pngquant is on PATH (`--allow-pillow` overrides), default `--png-quality 80-98`, and SKILL.md says the visual check is mandatory before any apply.
 2. **Deleting `.webp` siblings blanked the images.** Kinsta's Nginx still serves `name.webp` to WebP-capable browsers after WebP Express is removed (naming: `photo.webp`, not `photo.png.webp`). The run deleted the siblings of exactly the 26 replaced files, so exactly those 26 went blank on staging (files on disk were fine). Skill now: deletion is opt-in (`--purge-webp`); `regen_webp_siblings.py` recreates siblings with `cwebp` on the server. Ask Kinsta to remove the WebP Express rules on both environments.
