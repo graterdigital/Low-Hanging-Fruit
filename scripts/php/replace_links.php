@@ -209,9 +209,17 @@ foreach ($ids as $id) {
     $out['posts'][] = $e; $tally($hits);
 }
 
-// Pages to re-check after an apply: every changed post, plus the owner of every changed non-menu meta row.
-$check = [];
-foreach ($out['posts'] as $p) $check[$p['id']] = $p['url'];
-foreach ($out['meta'] as $m) if ($m['kind'] !== 'menu' && !isset($check[$m['post_id']])) { $u = get_permalink($m['post_id']); if ($u) $check[$m['post_id']] = $u; }
-$out['check_urls'] = array_values(array_unique(array_filter($check)));
+// Pages to re-check after an apply: every changed post, plus the owner of every changed non-menu meta row,
+// but only PUBLISHED ones: drafts/private/pending get a ?p=N permalink that 404s for an anonymous visitor.
+$check = []; $skipped = [];
+$consider = function($id) use (&$check, &$skipped) {
+    if (isset($check[$id]) || isset($skipped[$id])) return;
+    $st = get_post_status($id); $pt = get_post_type($id);
+    if ($st !== 'publish' || in_array($pt, ['nav_menu_item', 'elementor_library', 'attachment', 'acf-field', 'acf-field-group'], true)) { $skipped[$id] = "$pt/$st"; return; }
+    $u = get_permalink($id); if ($u) $check[$id] = $u; else $skipped[$id] = "$pt/$st (no permalink)";
+};
+foreach ($out['posts'] as $p) $consider($p['id']);
+foreach ($out['meta'] as $m) if ($m['kind'] !== 'menu') $consider($m['post_id']);
+$out['check_urls'] = array_values(array_unique($check));
+$out['check_skipped'] = $skipped;
 echo "\n===JSON===\n" . json_encode($out, JSON_UNESCAPED_SLASHES) . "\n";

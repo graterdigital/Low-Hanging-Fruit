@@ -97,16 +97,21 @@ def check_links(pages, site_host, swaps, legacy_hosts=()):
     bad = []
     for u, (st, loc) in sorted(link_results.items()):
         if st == 200: continue
+        if st in (401, 403, 429, 503) or isinstance(st, str): continue   # firewall/rate limit answered, not the page; the builder already trusted Ahrefs here
         path = urllib.parse.urlsplit(u).path or "/"
         bad.append({"url": u, "status": st, "location": loc, "on_pages": sorted(links[u]),
                     "is_swap_target": path in new_paths, "is_old_url": path in old_paths and path not in new_paths})
     return {"pages": page_results, "links_checked": len(link_results), "bad": bad}
 
-def write_linkcheck_log(outdir, base, host, target, res):
+def write_linkcheck_log(outdir, base, host, target, res, skipped=None):
     bad = res["bad"]; pages_bad = {u: s for u, s in res["pages"].items() if s != 200}
+    unverifiable = {u: s for u, s in pages_bad.items() if s in (401, 403, 429, 503) or isinstance(s, str)}
+    pages_bad = {u: s for u, s in pages_bad.items() if u not in unverifiable}
     lines = [f"# fix-redirect-links: link check for {host} ({target})", "",
-             f"{len(res['pages'])} changed page(s) fetched, {res['links_checked']} unique internal link(s) HEAD-checked without following redirects. Anything not 200 is listed.", ""]
-    if pages_bad: lines += ["## Changed pages that did not return 200", ""] + [f"- {u}: {s}" for u, s in pages_bad.items()] + [""]
+             f"{len(res['pages'])} published changed page(s) fetched, {res['links_checked']} unique internal link(s) HEAD-checked without following redirects. Anything not 200 is listed.", ""]
+    if skipped: lines += [f"{len(skipped)} changed post(s) not checked because they are not published pages (drafts, private, templates, menu items): " + ", ".join(f"{k} ({v})" for k, v in list(skipped.items())[:12]) + (" ..." if len(skipped) > 12 else ""), ""]
+    if unverifiable: lines += ["## Changed pages the checker could not fetch (firewall or rate limit answered, not the page)", ""] + [f"- {u}: {s}" for u, s in unverifiable.items()] + [""]
+    if pages_bad: lines += ["## Changed published pages that did not return 200", ""] + [f"- {u}: {s}" for u, s in pages_bad.items()] + [""]
     sw = [b for b in bad if b["is_swap_target"]]; ol = [b for b in bad if b["is_old_url"] and not b["is_swap_target"]]; other = [b for b in bad if not b["is_swap_target"] and not b["is_old_url"]]
     def table(rows):
         out = ["| link | status | redirects to | on pages |", "|---|---|---|---|"]
@@ -175,7 +180,7 @@ def run(args):
         res = check_links(pages, host, swaps, m.get("legacy_hosts") or [])
         outdir = ROOT / "changes" / provider / args.slug; outdir.mkdir(parents=True, exist_ok=True)
         stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
-        sw, ol, other, pb = write_linkcheck_log(outdir, f"{stamp}-fix-redirect-links-{args.target}", host, args.target, res)
+        sw, ol, other, pb = write_linkcheck_log(outdir, f"{stamp}-fix-redirect-links-{args.target}", host, args.target, res, b.get("check_skipped"))
         print(f"LINK CHECK on {args.target}: {len(pages)} pages, {res['links_checked']} links; {sw} swap target(s) not 200, {ol} old URL(s) still linked, {other} other non-200, {pb} page(s) not 200")
         print(f"Log: {outdir / (stamp + '-fix-redirect-links-' + args.target + '-linkcheck.md')}")
         return {"posts": [], "meta": [], "totals": {}, "errors": sw + pb, "linkcheck": (sw, ol, other, pb), "log": None, "options_log": None}
@@ -258,7 +263,7 @@ def run(args):
     res["linkcheck"] = None
     if mode == "apply" and not getattr(args, "no_link_check", False) and res.get("check_urls"):
         lc = check_links(res["check_urls"], host, swaps, m.get("legacy_hosts") or [])
-        sw, ol, other, pb = write_linkcheck_log(outdir, base, host, args.target, lc)
+        sw, ol, other, pb = write_linkcheck_log(outdir, base, host, args.target, lc, res.get("check_skipped"))
         res["linkcheck"] = (sw, ol, other, pb)
         print(f"Link check: {len(res['check_urls'])} pages, {lc['links_checked']} links; {sw} swap target(s) not 200, {ol} old URL(s) still linked, {other} other non-200, {pb} page(s) not 200  -> {base}-linkcheck.md")
 
