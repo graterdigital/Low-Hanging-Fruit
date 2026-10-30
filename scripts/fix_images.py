@@ -240,7 +240,7 @@ def product_alt_rows(inv):
             cur = (im.get("alt") or "").strip()
             if cur and not junk_alt(cur) and len(cur.split()) > 1:
                 rows.append({**base, "new_alt": "", "note": "already set, kept: " + cur[:60]}); continue
-            if cur: base["note_prefix"] = f"replaces junk alt {cur[:30]!r}: "
+            prefix = f"replaces junk alt {cur[:30]!r}: " if cur else ""
             if len(use[aid]) > SHARED_LIMIT:
                 rows.append({**base, "new_alt": "", "note": f"EXCEPTION: used by {len(use[aid])} products, likely a placeholder, brand image or shared model photo; set its alt by hand"}); continue
             if len(title.split()) < 2:
@@ -253,7 +253,7 @@ def product_alt_rows(inv):
             else: alt = f"{title} - {im.get('variation') or suffix or 'variation'}"
             seen[aid] = pr["id"]
             if len(alt) > 125: alt = alt[:125].rsplit(" ", 1)[0]
-            rows.append({**base, "new_alt": alt, "note": base.pop("note_prefix", "")})
+            rows.append({**base, "new_alt": alt, "note": prefix})
     return rows
 
 def product_alt(args, inv, alias, provider, host, cdir, stamp):
