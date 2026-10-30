@@ -33,6 +33,21 @@ COLS = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "curre
 def client_path(slug): return ROOT / "clients" / f"{slug}.yaml"
 def load_client(slug): return yaml.safe_load(client_path(slug).read_text(encoding="utf-8"))
 
+def _patient(client):
+    """Google's Sheets API allows 60 reads/min per user; a batch of pushes trips it. Retry 429s with a backoff."""
+    import time
+    orig = client.http_client.request
+    def request(*a, **k):
+        for wait in (0, 15, 30, 60, 60):
+            if wait: time.sleep(wait)
+            try: return orig(*a, **k)
+            except Exception as e:
+                if "429" not in str(e) or wait == 60: raise
+                print(f"  (rate limited, waiting {wait + 15}s)", flush=True)
+        return orig(*a, **k)
+    client.http_client.request = request
+    return client
+
 def gc():
     load_env()
     key = os.environ.get("GOOGLE_SERVICE_ACCOUNT", str(ROOT / "secrets" / "google-service-account.json"))
@@ -41,7 +56,7 @@ def gc():
         import gspread
     except ImportError:
         sys.exit("pip install gspread google-auth")
-    return gspread.service_account(filename=key)
+    return _patient(gspread.service_account(filename=key))
 
 def set_sheet_id(slug, sheet_id, title):
     """Write review.alt_sheet_id into the client file without disturbing its comments: text edit, not a YAML dump."""
