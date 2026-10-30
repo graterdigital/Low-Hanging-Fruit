@@ -1,6 +1,6 @@
 # AI discoverability: hsfamilylaw.com
 
-Ahrefs Site Audit project 9704538 · crawl 2026-10-29 · health 94 · 25 indexable pages sampled (top by traffic) · robots.txt source: `tmp/robots-hsfamilylaw.txt` (saved copy)
+Ahrefs Site Audit project 9704538 · crawl 2026-10-29 · health 94 · 40 indexable pages sampled (top by traffic) · robots.txt source: `https://hsfamilylaw.com/robots.txt` (HTTP 200)
 
 Mostly read-and-route. The only direct change this skill makes is the robots.txt policy block (APPROVE, after the client decides). Google's position, which this report follows: AI Overviews and AI Mode use Googlebot and need pages that are indexed and snippet-eligible; `Google-Extended` governs Gemini training and grounding, not Search; no AI-specific files or markup are needed.
 
@@ -43,16 +43,16 @@ robots.txt errors reported by Ahrefs: none · Sitemap lines: `https://hsfamilyla
 Current robots.txt:
 
 ```
-# START YOAST BLOCK
-#  -  -  -  -  -  -  -  -  - 
-User-agent: *
-Disallow:
-
-Sitemap: https://hsfamilylaw.com/sitemap_index.xml
-#  -  -  -  -  -  -  -  -  - 
-# END YOAST BLOCK
-
-User-agent: axios
+# START YOAST BLOCK
+#  -  -  -  -  -  -  -  -  - 
+User-agent: *
+Disallow:
+
+Sitemap: https://hsfamilylaw.com/sitemap_index.xml
+#  -  -  -  -  -  -  -  -  - 
+# END YOAST BLOCK
+
+User-agent: axios
   Allow: /
 ```
 
@@ -101,10 +101,12 @@ Schema notes: these are Ahrefs' notices against its own page classification, not
 
 Google ignores IndexNow; Bing, Yandex, Naver and Seznam use it, and Bing's index feeds ChatGPT search and Copilot. Two separate things can submit URLs, and Ahrefs only reports on the first:
 
-- **Ahrefs auto-submission** (Site Audit → Crawl settings → IndexNow): status on sampled pages `Indexnow_off` ×25. `Indexnow_off` means the crawl setting is off. Turning it on needs an IndexNow key file hosted at the site root and a project boost that includes the feature; then Ahrefs submits changed, new, redirected and removed pages after each crawl.
-- **The site pinging on publish**: Yoast SEO Premium (built in, on by default; not in free Yoast), Rank Math's Instant Indexing plugin, AIOSEO's IndexNow addon, or Microsoft's free `indexnow` plugin on anything else. This is the one that matters for fresh content, and Ahrefs cannot see it. Not probed (run with `--probe` to check the plugin list over SSH).
+- **Ahrefs auto-submission** (Site Audit → Crawl settings → IndexNow): status on sampled pages `Indexnow_off` ×40. `Indexnow_off` means the crawl setting is off. Turning it on needs an IndexNow key file hosted at the site root and a project boost that includes the feature; then Ahrefs submits changed, new, redirected and removed pages after each crawl.
+- **The site pinging on publish**: Yoast SEO Premium (built in, on by default; not in free Yoast), Rank Math's Instant Indexing plugin, AIOSEO's IndexNow addon, or Microsoft's free `indexnow` plugin on anything else. This is the one that matters for fresh content, and Ahrefs cannot see it. Probe over SSH (hsfamilylaw): no IndexNow plugin active; `wpseo.enable_index_now` = 1.
 
 Client file says `ai.indexnow: no`. Recommended for the roster: Microsoft's `indexnow` plugin on free-Yoast sites (one key file, no settings), and the SEO plugin's own integration where it exists. Record the choice in `ai.indexnow` once it is live.
+
+Probe also found robots.txt served as **file** on live.
 
 ## 4. Not recommended, on purpose
 

@@ -54,6 +54,8 @@ ai:
     blocked_search_bots: []
     blocked_training_bots: []
     indexnow_status: Indexnow_off
+    robots_txt: file
+    indexnow_plugin: none
 
 rules:
   # Tier overrides. Skills may be stricter than their defaults here, never looser.
