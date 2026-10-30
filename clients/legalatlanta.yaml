@@ -24,7 +24,7 @@ platform:
 
 hosting:
   provider: wpengine
-  access: unknown
+  access: none              # Grater Digital has no WP Engine access to this install (2026-10-30); SSH skills skip it
   ssh_alias: unknown
   staging_environment: unknown
 
