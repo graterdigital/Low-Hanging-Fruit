@@ -38,9 +38,10 @@ Never in this repo. SSH hosts, ports, and usernames live in `~/.ssh/config` on t
 | Skill | Tier | Status |
 |---|---|---|
 | `site-triage` | read-only | v1, tested on two sites |
-| `fix-redirect-links` | AUTO | next |
+| `fix-redirect-links` | AUTO | v1, live on the Kinsta roster |
+| `fix-images` | AUTO / APPROVE | v1, live on hsfamilylaw |
+| `ai-discoverability` | read-and-route; robots.txt APPROVE | v1, first report on hsfamilylaw |
 | `fix-meta` | APPROVE | planned |
-| `fix-images` | APPROVE | planned |
 | `indexation-review` | APPROVE | planned |
 | `schema-check` | FLAG | planned |
 | `verify` | read-only | planned |

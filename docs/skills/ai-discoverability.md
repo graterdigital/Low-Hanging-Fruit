@@ -1,58 +1,40 @@
 # Handoff: ai-discoverability
 
-Status as of 2026-10-30: specified, not built. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
+Status as of 2026-10-30: **built, v1.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
+
+Files: `skills/ai-discoverability/SKILL.md` (the procedure), `scripts/ai_discoverability.py` (report, roster, probe, robots apply), `reports/hsfamilylaw/ai-discoverability-2026-10-29.md` (first report), `ai:` block in `clients/_template.yaml` and `clients/hsfamilylaw.yaml`.
 
 ## Purpose
 
-Report and tune how a site is seen by AI search and assistant crawlers, using Ahrefs Site Audit's "AI Discoverability" category (app view: Site Audit → AI discoverability → sub-categories *Bot access* and *Machine readability*). Mostly read-and-decide: the few direct fixes are a robots.txt policy change (APPROVE) and the IndexNow toggle (APPROVE); everything else routes to another skill.
+Report and tune how a site is seen by AI search and assistant crawlers, using Ahrefs Site Audit's "AI Discoverability" category. Read-and-route: the one direct write is a managed robots.txt block (APPROVE, only after the client decides); IndexNow is a plugin install (APPROVE); everything else is FLAG or routed to `fix-images`, `schema-check`, content, hosting.
 
-## Data available through the Ahrefs API
+## What the build found (changes from the spec)
 
-Issue types (`site-audit-issues`, category `AI Discoverability`), with hsfamilylaw counts from the 2026-10-08 crawl:
+- **The category now has 12 checks, not 8.** Five schema notices were added by Ahrefs (Article, Category/ItemList, FAQPage, Organization, Product), all routed to `schema-check` as FLAG. "Changed pages not submitted to IndexNow" is gone from the issue list.
+- **`indexnow_status` is about Ahrefs, not the site.** It reports Ahrefs' own auto-submission (Site Audit → Crawl settings → IndexNow, needs a key file at the site root plus a project boost). `Indexnow_off` = that setting is off. The site's own pinging on publish is invisible to Ahrefs; `--probe` checks the plugin list over SSH instead. And Yoast's IndexNow integration is **Premium only**, so the "one-click toggle" in the spec does not exist on the free-Yoast majority of the roster. Recommendation: Microsoft's free `indexnow` plugin there.
+- **Page sample must filter on `is_html` and `page_is_noindex`**, not just `http_code = 200`: images, CSS and JS carry the bot columns too and crowd a traffic-sorted sample.
+- Live robots.txt on hsfamilylaw is Yoast's virtual output (`User-agent: *` / `Disallow:` / Sitemap) plus a hand-added `User-agent: axios / Allow: /` group. All 17 search bots and 8 training bots allowed on every sampled page. Nothing blocked anywhere.
+- hsfamilylaw active checks on 2026-10-29: Article schema ×4 (service pages Ahrefs' ML classes as guides), FAQPage ×1 (`/category/divorce-faq/`), Organization ×1 (homepage), JS-rendered main content ×1 (`/what-our-clients-say/`; `business-reviews-bundle` or `youtube-feed-pro` is the widget). Slow-server and 2 MB checks are now at zero (fix-images and the WebP Express removal did that).
 
-| Check | Importance | Sub-category | hsfamilylaw |
-|---|---|---|---|
-| Indexable page blocked from all AI search bots | Warning | Bot access | 0 |
-| Indexable page blocked from some AI search bots | Notice | Bot access | 0 |
-| Inconsistent AI training bot policy | Notice | Bot access | 0 |
-| Main content requires JavaScript rendering | Warning | Machine readability | 1 (`/what-our-clients-say/`, reviews widget) |
-| Slow server response for AI crawlers | Warning | Machine readability | 3 |
-| Page size exceeds 2 MB crawl limit | Error | Machine readability | 0 |
-| Similar AI-generated content | Warning | Machine readability | 0 |
-| Changed pages not submitted to IndexNow | Notice | Machine readability | 2 |
+## Script surface
 
-Per-page columns (`site-audit-page-explorer`): `allowed_search_bots`, `blocked_search_bots`, `allowed_training_bots`, `blocked_training_bots`, `is_rendered`, `size_uncompressed`, `http_header_robots`, `meta_robots`, `robots_error`, `indexnow_status`, `ai_content_level`. hsfamilylaw's homepage allows all 17 AI search bots (ChatGPT-User, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot, DuckAssistBot, Google-Agent, ...) and all 8 training bots (GPTBot, ClaudeBot, anthropic-ai, Google-Extended, Applebot-Extended, Meta-ExternalAgent, DeepseekBot, xAI-Bot).
-
-## Skill design
-
-Inputs: client slug; a per-client policy block in `clients/<slug>.yaml`:
-
-```yaml
-ai:
-  search_bots: allow          # allow | block   (citations and live answers in ChatGPT, Perplexity, AI Overviews, etc.)
-  training_bots: allow        # allow | block   (model training; GPTBot, ClaudeBot, Google-Extended, ...)
-  exceptions: []              # bot names that override the above
-  indexnow: unknown           # yes | no | unknown
-  policy_confirmed_by: ""     # who at the client decided, and when
+```
+python scripts/ai_discoverability.py <slug> [--probe] [--cache] [--robots-file path] [--no-client-write]
+python scripts/ai_discoverability.py <slug> --apply-robots [--apply] [--target live] [--yes] [--webroot public]
+python scripts/ai_discoverability.py --all [--cache]          -> docs/ai-bot-policy.md
 ```
 
-Steps:
-1. Pull the eight checks and the per-page bot columns for indexable pages (one call with `where` on indexable, select the bot columns; it's the same robots.txt for every page, so sample the homepage and a few templates rather than all URLs).
-2. **Bot access.** Compare actual allow/block lists with the client policy. If the client file has no policy, stop and ask: it's a business decision (training-bot blocking trades future AI visibility for content control). Output a proposed robots.txt diff. APPROVE. Note Google's own guidance: AI Overviews and AI Mode use Googlebot; `Google-Extended` governs Gemini training and grounding, not Search; blocking Googlebot to avoid AI Overviews also removes the page from Search.
-3. **Machine readability.** Route: page size > 2 MB → `fix-images`; slow response for AI crawlers → hosting/cache (FLAG; a TTFB check, not a crawl fix); JS-only main content → theme/plugin change (FLAG, with the page and the plugin named); similar AI-generated content → content phase (FLAG). IndexNow: Google ignores it, Bing/Yandex/Naver use it; Yoast and Rank Math have a one-click toggle. APPROVE, cheap.
-4. **Not recommended, say so in the report:** llms.txt (Google states Search does not use it; a 300k-domain study found no citation effect), "AI-specific" schema, chunking or rewriting content "for AI." The real levers are the normal ones: indexable, snippet-eligible, content in HTML text, structured data that matches the page, Business Profile current.
-5. Write `reports/<slug>/ai-discoverability-<crawl-date>.md`: policy vs. actual, proposed robots.txt diff, routed items, recommendation-against list. Update the client file's `ai:` block with what was observed.
-
-Tier summary: robots.txt change APPROVE (only after the client decides); IndexNow APPROVE; everything else FLAG or routed.
-
-Write path for robots.txt on WordPress: if a physical `robots.txt` exists in the web root, edit it over SSH with a backup copy in `changes/`; otherwise WordPress generates it and Yoast's file editor (or the `robots_txt` filter) owns it. Check which with `wp eval 'echo file_exists(ABSPATH."robots.txt") ? "file" : "virtual";'`.
+Design points worth keeping: bot universe comes from Ahrefs' `allowed_*`/`blocked_*` columns (fallback lists only for never-crawled sites); allowed bots get no robots group (groups do not inherit); blocked bots sit in one managed block between markers so reruns replace instead of stack; Googlebot is never blocked regardless of the client file; `rules.do_not_touch: [robots.txt]` stops the apply; the client file's policy fields are never written by the script, only `ai.observed`.
 
 ## Verification
 
-Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl. For IndexNow, `indexnow_status` per page flips on the next content change.
+Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl. IndexNow: Bing Webmaster Tools shows submissions; Ahrefs' column only changes if Ahrefs' own auto-submission is turned on.
 
-## Open questions for the build chat
+## Open items
 
-- Does the firm (and each client) want training bots blocked? Default proposal: allow search bots, decide training bots per client, never block Googlebot.
-- Whether to extend the sync script's fingerprint with a robots.txt fetch so the client index shows bot policy across all 40 sites at once (cheap: one page-explorer call per site, or the public robots.txt).
-- Sources to cite in the report: Google AI features doc (https://developers.google.com/search/docs/appearance/ai-features), Google AI optimization guide (https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), Google-Extended / robots meta docs, Ahrefs AI discoverability help article.
+- **Policy decision for hsfamilylaw** (and a default for the roster): `training_bots` is `unknown`. Proposal in the report: allow search bots, decide training bots per client, never block Googlebot. Until someone fills `policy_confirmed_by`, the skill proposes nothing.
+- First real `--probe` and `--apply-robots` run (staging first). The virtual→file handover carries Yoast's Sitemap line as static text; confirm Yoast's file editor then shows that file.
+- IndexNow on free-Yoast sites: install Microsoft's `indexnow` plugin (APPROVE) or turn on Ahrefs auto-submission per project; decide which, then record `ai.indexnow`.
+- `--all` roster run once the API key is on the machine, to see whether any of the 40 sites blocks anything today.
+- Sample size: the hsfamilylaw report used 25 pages (built from cached MCP pulls); the script default is 40.
+- Sources used by the report: Google AI features (https://developers.google.com/search/docs/appearance/ai-features), Google AI optimization guide (https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), Google crawlers / Google-Extended (https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers), Ahrefs Sept 2026 features post (https://ahrefs.com/blog/new-features-september-2026/), Ahrefs IndexNow help (https://help.ahrefs.com/en/articles/9317209-how-to-submit-pages-to-indexnow-within-site-audit), Yoast IndexNow (https://yoast.com/yoast-seo-june-28-2022/).
