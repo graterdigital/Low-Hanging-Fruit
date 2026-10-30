@@ -45,6 +45,8 @@ ai:
   exceptions: []                # bot names that flip the verdict above
   indexnow: unknown             # yes | no | unknown: does the site itself ping IndexNow on publish (Microsoft's `indexnow` plugin is the roster standard)
   policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"
+  observed:                      # written by ai-discoverability; do not edit by hand
+    indexnow_plugin: Yoast SEO Premium (IndexNow built in, on by default)
 
 rules:
   visible_copy_changes: approve   # skills may be stricter than their default tier, never looser

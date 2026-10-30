@@ -47,7 +47,7 @@ ai:
   search_bots: allow            # allow | block: AI search/assistant crawlers (ChatGPT-User, OAI-SearchBot, Claude-SearchBot, PerplexityBot ...). Googlebot is never blocked.
   training_bots: allow          # allow | block: model-training crawlers (GPTBot, ClaudeBot, Google-Extended ...). Agency default is allow; flip to block when the client asks
   exceptions: []                # bot names that flip the verdict above, e.g. [GPTBot]
-  indexnow: no                  # yes | no | unknown: does the site ping IndexNow on publish (free Yoast does not; needs Yoast Premium or the `indexnow` plugin)
+  indexnow: yes                  # yes | no | unknown: does the site ping IndexNow on publish (free Yoast does not; needs Yoast Premium or the `indexnow` plugin)
   policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"
   observed:                      # written by ai-discoverability; do not edit by hand
     crawl: 2026-10-29
@@ -55,7 +55,7 @@ ai:
     blocked_training_bots: []
     indexnow_status: Indexnow_off
     robots_txt: file
-    indexnow_plugin: none
+    indexnow_plugin: IndexNow (Microsoft Bing, free)
 
 rules:
   # Tier overrides. Skills may be stricter than their defaults here, never looser.
