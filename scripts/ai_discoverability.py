@@ -306,7 +306,7 @@ def write_report(client, data, robots_status, robots_text, proposed, blocked_pol
             "- **The site pinging on publish**: Yoast SEO Premium (built in, on by default; not in free Yoast), Rank Math's Instant Indexing plugin, AIOSEO's IndexNow addon, "
             "or Microsoft's free `indexnow` plugin on anything else. This is the one that matters for fresh content, and Ahrefs cannot see it. " +
             (f"Probe over SSH ({probe.get('alias')}): " + (f"**{probe['indexnow']}**" if probe.get("indexnow") else "no IndexNow plugin active" +
-             (f"; `wpseo.enable_index_now` = {probe['yoast_index_now']}" if probe.get("yoast_index_now") not in (None, "") else "")) + "."
+             (f" (`wpseo.enable_index_now` = {probe['yoast_index_now']}, but that flag only does anything in Yoast Premium)" if probe.get("yoast_index_now") not in (None, "") else "")) + "."
              if probe.get("alias") else "Not probed (run with `--probe` to check the plugin list over SSH)."),
             "", f"Client file says `ai.indexnow: {yn(ai.get('indexnow', 'unknown'))}`. Recommended for the roster: Microsoft's `indexnow` plugin on free-Yoast sites "
             "(one key file, no settings), and the SEO plugin's own integration where it exists. Record the choice in `ai.indexnow` once it is live.", ""]
@@ -469,6 +469,7 @@ def roster(cache):
            "| Site | Policy (search / training) | Blocked search bots | Blocked training bots | IndexNow | robots.txt errors |", "|---|---|---|---|---|---|"]
     for slug, ai, pages, err in rows:
         if pages is None: out.append(f"| {slug} | | | | | API error: {err} |"); continue
+        if not pages: out.append(f"| {slug} | {ai.get('search_bots', '?')} / {ai.get('training_bots', '?')} | no crawl data | | | |"); continue
         se, ss, te, ts = observed_blocks(pages)
         inx = ", ".join(sorted({str(p.get('indexnow_status')) for p in pages}))
         errs = ", ".join(sorted({str(p.get('robots_error')) for p in pages if p.get('robots_error')})) or "-"

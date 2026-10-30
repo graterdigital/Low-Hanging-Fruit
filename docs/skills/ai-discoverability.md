@@ -30,6 +30,13 @@ Design points worth keeping: bot universe comes from Ahrefs' `allowed_*`/`blocke
 
 Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl. IndexNow: Bing Webmaster Tools shows submissions; Ahrefs' column only changes if Ahrefs' own auto-submission is turned on.
 
+## Roster findings (first `--all` run, 2026-10-30)
+
+- forwardfacing, miuraboiler, setcomcorp carry an identical hand-added block list: Amazonbot + Claude-Web (search) and Applebot-Extended, ClaudeBot, GPTBot, Google-Extended, Meta-ExternalAgent, anthropic-ai (training). Nobody recorded a decision; find who added it and either record `training_bots: block` with `policy_confirmed_by`, or replace it with the managed block.
+- ruggeddepot is the one project with Ahrefs IndexNow auto-submission on (`Indexnow_success`); the other 35 crawled projects are off.
+- hsfamilylaw probe: robots.txt is a physical file on live; no IndexNow plugin; free Yoast's `enable_index_now` flag is set but inert.
+- Five client files have no crawl data (backto30, fenceworks-staging, liftaesthetics, purskinclinic, sjklawfirm).
+
 ## Open items
 
 - **Policy decision for hsfamilylaw** (and a default for the roster): `training_bots` is `unknown`. Proposal in the report: allow search bots, decide training bots per client, never block Googlebot. Until someone fills `policy_confirmed_by`, the skill proposes nothing.
