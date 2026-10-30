@@ -121,8 +121,9 @@ function scan_imgs($html, $where, $post_id, &$alt, &$broken) {
         $src = preg_match('~\bsrc\s*=\s*["\']([^"\']+)~i', $tag, $s) ? html_entity_decode($s[1]) : '';
         $has_alt = preg_match('~\balt\s*=\s*(["\'])(.*?)\1~is', $tag, $a);
         $alt_val = $has_alt ? trim($a[2]) : null;
-        if (!$has_alt || $alt_val === '') {
-            $alt[] = ['post_id' => $post_id, 'where' => $where, 'src' => $src, 'alt' => $has_alt ? '' : null, 'tag' => mb_substr($tag, 0, 300)];
+        $junk = $has_alt && $alt_val !== '' && (mb_strlen($alt_val) <= 2 || preg_match('~^(?:[\W_]+|\d+|image|img|photo|picture|pic|untitled|n/?a|none|null|alt|logo|placeholder|(?:img|image|dsc|photo|pic|screenshot)[_ -]?\d+)$~i', $alt_val) || preg_match('~\.(jpe?g|png|gif|webp|avif|svg)$~i', $alt_val));
+        if (!$has_alt || $alt_val === '' || $junk) {
+            $alt[] = ['post_id' => $post_id, 'where' => $where, 'src' => $src, 'alt' => $has_alt ? $alt_val : null, 'tag' => mb_substr($tag, 0, 300)];
         }
         if ($src && preg_match('~^(?:https?:)?//' . $hosts_re . '(/wp-content/uploads/.+)$~i', $src, $u)) {
             $abs = $up['basedir'] . preg_replace('~^.*?/uploads~', '', strtok($u[1], '?'));

@@ -133,7 +133,7 @@ def alt_tier(a):
     url = a.get("page_url") or ""
     if a.get("post_status") not in (None, "publish") or "?p=" in url or "?page_id=" in url: return "D"
     if a["where"].startswith("featured_image"): return "C"
-    return "A" if a["alt"] is None else "B"
+    return "A" if (a["alt"] is None or (a["alt"].strip() and junk_alt(a["alt"]))) else "B"
 
 def suggest_alt(a, firm):
     """A first draft from the page title and the file name. Humans fix it; headshots and generic names are flagged."""
@@ -187,7 +187,15 @@ VIEW_WORDS = {"front": "front view", "back": "back view", "rear": "rear view", "
               "accessories": "accessories", "cable": "cable", "charger": "charger", "stylus": "stylus", "case": "case", "strap": "strap"}
 
 KEEP_CAPS = {"USB", "LTE", "RF", "GPS", "VESA", "LED", "HD", "DC", "AC", "IP", "NFC", "GJ", "GPIO", "HDMI", "VGA", "DVI", "SSD", "HDD", "RAM", "CPU", "LCD", "OEM", "SKU", "KIT", "NO", "OS", "PC", "TV", "UHF", "VHF", "FM", "AM", "PSU", "UPS", "POS", "ID", "US", "UK", "EU"}
-SHARED_LIMIT = 5   # an attachment used by more than this many products is a placeholder/brand image, not a product photo
+SHARED_LIMIT = 5
+JUNK_ALT = re.compile(r"^(?:[\W_]+|\d+|image|img|photo|picture|pic|untitled|n/?a|none|null|alt|logo|placeholder|(?:img|image|dsc|photo|pic|screenshot)[_ -]?\d+|[\w-]*\d[\w-]*_\d+)$", re.I)
+
+def junk_alt(a):
+    """An alt that carries no information: '#', '-', a bare number or SKU, a file stem, 'image', a single character."""
+    a = (a or "").strip()
+    if not a: return True
+    if len(a) <= 2 or JUNK_ALT.match(a) or re.search(r"\.(jpe?g|png|gif|webp|avif|svg)$", a, re.I): return True
+    return False   # an attachment used by more than this many products is a placeholder/brand image, not a product photo
 
 def clean_title(t):
     t = re.sub(r"\s*\|.*$", "", t)   # drop a "| SKU" or "| Brand" tail
@@ -229,8 +237,10 @@ def product_alt_rows(inv):
             aid = im["attachment_id"]
             if im["role"] == "gallery": n_gal += 1
             base = {"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "shared_by": len(use[aid])}
-            if (im.get("alt") or "").strip():
-                rows.append({**base, "new_alt": "", "note": "already set, kept: " + im["alt"][:60]}); continue
+            cur = (im.get("alt") or "").strip()
+            if cur and not junk_alt(cur) and len(cur.split()) > 1:
+                rows.append({**base, "new_alt": "", "note": "already set, kept: " + cur[:60]}); continue
+            if cur: base["note_prefix"] = f"replaces junk alt {cur[:30]!r}: "
             if len(use[aid]) > SHARED_LIMIT:
                 rows.append({**base, "new_alt": "", "note": f"EXCEPTION: used by {len(use[aid])} products, likely a placeholder, brand image or shared model photo; set its alt by hand"}); continue
             if len(title.split()) < 2:
@@ -243,7 +253,7 @@ def product_alt_rows(inv):
             else: alt = f"{title} - {im.get('variation') or suffix or 'variation'}"
             seen[aid] = pr["id"]
             if len(alt) > 125: alt = alt[:125].rsplit(" ", 1)[0]
-            rows.append({**base, "new_alt": alt, "note": ""})
+            rows.append({**base, "new_alt": alt, "note": base.pop("note_prefix", "")})
     return rows
 
 def product_alt(args, inv, alias, provider, host, cdir, stamp):
