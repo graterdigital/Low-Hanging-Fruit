@@ -55,3 +55,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://miuraboiler.com/ (project 9704539) with scripts/fingerprint.py on 2026-10-28 (homepage has no H1); gsc-pages returned rows for 2026-09-28..2026-10-26. Not verified by logging in."
+
+review:
+  alt_sheet_id: 1EnTpNZEPCPuxkdYQDaiZjCaeWCMXvrm5usx5ImfQ338   # "miuraboiler review" in Google Sheets; scripts/review_sheets.py

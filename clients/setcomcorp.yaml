@@ -53,3 +53,6 @@ rules:
 evidence:
   last_checked: 2026-10-29
   basis: Ahrefs Site Audit project 10610051 (crawl 2026-10-28, 1024 URLs, health 94) plus the homepage HTML fetched 2026-10-29; SSH aliases from ssh_config_sync.py the same day. Not verified by logging in.
+
+review:
+  alt_sheet_id: 10_Dw9g66xPvz0M1Gy5LzHkvkmd-4NKVxqAHRgvSc5cA   # "setcomcorp review" in Google Sheets; scripts/review_sheets.py
