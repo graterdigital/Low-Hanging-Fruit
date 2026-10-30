@@ -187,7 +187,7 @@ VIEW_WORDS = {"front": "front view", "back": "back view", "rear": "rear view", "
               "accessories": "accessories", "cable": "cable", "charger": "charger", "stylus": "stylus", "case": "case", "strap": "strap"}
 
 KEEP_CAPS = {"USB", "LTE", "RF", "GPS", "VESA", "LED", "HD", "DC", "AC", "IP", "NFC", "GJ", "GPIO", "HDMI", "VGA", "DVI", "SSD", "HDD", "RAM", "CPU", "LCD", "OEM", "SKU", "KIT", "NO", "OS", "PC", "TV", "UHF", "VHF", "FM", "AM", "PSU", "UPS", "POS", "ID", "US", "UK", "EU"}
-SHARED_LIMIT = 5
+SHARED_LIMIT = 50  # an attachment used by more than this many products is a placeholder, brand image or a whole model line's photo set, not one product's photo
 JUNK_ALT = re.compile(r"^(?:[\W_]+|\d+|image|img|photo|picture|pic|untitled|n/?a|none|null|alt|logo|placeholder|(?:img|image|dsc|photo|pic|screenshot)[_ -]?\d+|[\w-]*\d[\w-]*_\d+)$", re.I)
 
 def junk_alt(a):
@@ -225,9 +225,22 @@ def product_alt_rows(inv):
     Already-set alts are kept. An attachment used by more than SHARED_LIMIT products is a placeholder or brand image and is
     NOT named after a product: it goes on the exception list with a blank new_alt. An attachment shared by a few products
     (SKU variants of one model) gets the alt from the first product that uses it, which is fine when the names match."""
-    use = {}
+    use, titles = {}, {}
     for pr in inv.get("products", []):
-        for im in pr["images"]: use.setdefault(im["attachment_id"], set()).add(pr["id"])
+        for im in pr["images"]:
+            use.setdefault(im["attachment_id"], set()).add(pr["id"])
+            titles.setdefault(im["attachment_id"], []).append(clean_title(pr["title"]))
+
+    def shared_name(aid, title):
+        """For an image several SKU variants share, the name they have in common ('Panasonic SSD 2nd Drive ... FZ-55'),
+        built from the longest common word prefix and suffix of their titles; falls back to this product's title."""
+        ts = [t for t in titles.get(aid, []) if t]
+        if len(set(ts)) <= 1: return title
+        ws = [t.split() for t in ts]
+        pre = os.path.commonprefix(ws); suf = os.path.commonprefix([w[::-1] for w in ws])[::-1]
+        if len(pre) + len(suf) >= len(min(ws, key=len)): suf = []
+        name = " ".join(pre + suf).strip(" -:,/(")
+        return name if len(name.split()) >= 3 else title
     rows, seen = [], {}
     for pr in inv.get("products", []):
         title = clean_title(pr["title"])
@@ -248,6 +261,7 @@ def product_alt_rows(inv):
             if aid in seen:
                 rows.append({**base, "new_alt": "", "note": f"shared image, alt set via product {seen[aid]}"}); continue
             suffix = view_suffix(im["file"], title)
+            if len(use[aid]) > 1: title = shared_name(aid, title)
             if im["role"] == "featured": alt = title
             elif im["role"] == "gallery": alt = f"{title} - {suffix or f'view {n_gal + 1}'}"
             else: alt = f"{title} - {im.get('variation') or suffix or 'variation'}"
