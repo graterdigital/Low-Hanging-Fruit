@@ -8,7 +8,8 @@
     python scripts/review_sheets.py status                 # one line per client: sheet id, pending / merged / applied counts
 
 Credentials: a Google service account. Put the JSON key at the path in GOOGLE_SERVICE_ACCOUNT (environment or .env at the
-repo root; default secrets/google-service-account.json, git-ignored). Share each sheet with the service account's
+repo root; default secrets/google-service-account.json, git-ignored). Service accounts cannot own Drive files, so `setup`
+creates each sheet inside the folder GOOGLE_SHEETS_FOLDER (.env), a folder a human owns and has shared with the service account. Share each sheet with the service account's
 client_email, or let `setup` create the sheet as the service account and share it with the humans in --share.
 Needs: pip install gspread google-auth
 
@@ -117,7 +118,9 @@ def cmd_setup(a):
     if existing and existing != "unknown":
         sh = g.open_by_key(existing); print(f"{a.slug}: sheet already recorded ({existing}): {sh.url}")
     else:
-        sh = g.create(title)
+        folder = os.environ.get("GOOGLE_SHEETS_FOLDER", "").strip()
+        if not folder: sys.exit("GOOGLE_SHEETS_FOLDER not set: service accounts cannot own files, so sheets are created inside a Drive folder a human owns and has shared with the service account (Editor). Put GOOGLE_SHEETS_FOLDER=<folder id> in .env.")
+        sh = g.create(title, folder_id=folder)
         set_sheet_id(a.slug, sh.id, title)
         print(f"{a.slug}: created {sh.url} and recorded review.alt_sheet_id in clients/{a.slug}.yaml")
     sh, ws = open_tab(g, sh.id)

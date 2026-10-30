@@ -68,7 +68,10 @@ exporting anything. It authenticates as a service account. One-time setup, ~10 m
 3. IAM & Admin → Service Accounts → Create: name `lhf-review-sheets`. No roles needed. Open it → Keys → Add key → JSON. Save the file as
    `C:\Users\greg\Documents\Low-Hanging-Fruit\secrets\google-service-account.json` (the folder is git-ignored).
 4. `pip install gspread google-auth`
-5. The service account has its own Drive. Sheets it creates live there and are shared out to humans, so always pass `--share`:
+5. Service accounts cannot own files, so make a folder in your own Drive (e.g. **LHF Review Sheets**), share it with the service
+   account's email (`client_email` in the JSON) as Editor, and put its id (the part of the folder URL after `/folders/`) in `.env`:
+   `Add-Content .env "GOOGLE_SHEETS_FOLDER=<folder id>"`. Sheets `setup` creates land in that folder, owned by you. `--share` is then
+   only for other humans:
    `python scripts/review_sheets.py setup <slug> --share overwatch@graterdigital.com` (add `--share greg@graterdigital.com` if that account should see them too)
    For a sheet that already exists in a human's Drive, share it with the service account's email (`client_email` in the JSON) as Editor
    and put its id in `clients/<slug>.yaml` under `review.alt_sheet_id`.
