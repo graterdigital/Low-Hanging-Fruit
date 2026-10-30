@@ -157,6 +157,11 @@ def cmd_push(a):
     c = load_client(a.slug); provider = str((c.get("hosting") or {}).get("provider") or "other").lower()
     domain = c.get("canonical_host") or f"https://{c['domain']}"
     sid = sheet_for(a.slug, c); g = gc(); sh, ws = open_tab(g, sid)
+    if getattr(a, "reset", False):
+        existing = read_rows(ws); edited = [r for r in existing if r["new_alt"].strip() and r["status"] == "pending"]
+        if edited and not getattr(a, "yes", False):
+            sys.exit(f"{a.slug}: --reset would drop {len(edited)} human-edited pending rows; rerun with --yes if that is intended")
+        ws.clear(); ws.update("A1", [COLS], value_input_option="RAW"); ws.freeze(rows=1); print(f"  tab cleared ({len(existing)} rows dropped)")
     have = {r["image_key"] for r in read_rows(ws)}
     path = newest_alt_csv(a.slug, provider)
     review, _ = review_rows_from_csv(path, domain)
@@ -222,7 +227,7 @@ def cmd_status(a):
 def main():
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("setup"); s.add_argument("slug"); s.add_argument("--share", action="append", help="email to share with (repeatable)"); s.set_defaults(f=cmd_setup)
-    s = sub.add_parser("push"); s.add_argument("slug"); s.set_defaults(f=cmd_push)
+    s = sub.add_parser("push"); s.add_argument("slug"); s.add_argument("--reset", action="store_true", help="clear the tab first and refill from the newest CSV"); s.add_argument("--yes", action="store_true", help="with --reset: drop human-edited pending rows too"); s.set_defaults(f=cmd_push)
     s = sub.add_parser("pull"); s.add_argument("slug"); s.set_defaults(f=cmd_pull)
     s = sub.add_parser("mark-applied"); s.add_argument("slug"); s.set_defaults(f=cmd_mark)
     s = sub.add_parser("status"); s.set_defaults(f=cmd_status)
