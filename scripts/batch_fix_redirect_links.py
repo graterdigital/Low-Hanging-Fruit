@@ -95,6 +95,11 @@ def main():
             staging_alias = str(h.get("staging_environment") or "").split(",")[0].strip()
             has_staging = staging_alias and staging_alias not in ("unknown", "none", "None")
             stage_counts = None
+            if h.get("staging_is_copy_of_live") is False:
+                row["notes"].append("staging is not a copy of live (client file); no staging rehearsal, live dry run is the only gate")
+                has_staging = False
+                if not a.live: row["status"] = "map built (no staging rehearsal)"; continue
+                if not a.allow_no_staging and not a.no_stage: row["status"] = "needs --allow-no-staging"; continue
 
             if not a.no_stage:
                 if not has_staging:

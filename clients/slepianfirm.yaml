@@ -28,6 +28,7 @@ hosting:
   access: ssh+wp-cli
   ssh_alias: slepianfirm
   staging_environment: slepianfirm-staging
+  staging_is_copy_of_live: false   # staging holds a site rebuild in progress (2026-10); fix skills must not treat it as a rehearsal of live
 
 tracking:
   ga4_measurement_id: none-detected

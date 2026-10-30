@@ -11,7 +11,7 @@ Internal links that go through a redirect waste a hop on every click and crawl, 
 
 1. A client file `clients/<slug>.yaml` with `hosting.ssh_alias` (live) and `hosting.staging_environment` (staging) filled in. If they say `unknown`, run `scripts/ssh_config_sync.py` first or ask for the aliases.
 2. A redirect map: `reports/<slug>/redirect-map-<crawl-date>.json`. If there isn't one, build it (next section).
-3. A staging environment that is a recent copy of live. If the user hasn't refreshed it, say so before running; a stale staging proves little.
+3. A staging environment that is a recent copy of live. If the user hasn't refreshed it, say so before running; a stale staging proves little. When staging is a rebuild in progress rather than a copy, set `hosting.staging_is_copy_of_live: false` in the client file: the batch then skips the staging rehearsal for that site and the live dry run is the only gate (with `--allow-no-staging`).
 
 ## Building the redirect map
 

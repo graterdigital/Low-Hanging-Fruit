@@ -25,6 +25,7 @@ hosting:
   access: unknown            # ssh+wp-cli, application-password, admin-only
   ssh_alias: unknown         # the Host entry name in ~/.ssh/config on the machine that runs fixes
   staging_environment: unknown
+  staging_is_copy_of_live: true     # false when staging is a rebuild/redesign, not a copy of live; batch skips the staging rehearsal then
 
 tracking:
   ga4_measurement_id: unknown
