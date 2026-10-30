@@ -43,3 +43,7 @@ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng`
 - `scripts/batch_fix_images.py --provider kinsta`: review-only batch (probe → staging dry run → alt sheet per site, nothing pushed), summary in `changes/kinsta/_batch-<stamp>-fix-images-review.md`. Built 2026-10-29 evening, first run pending. Applies stay per site after the visual check.
 - Elementor/WPBakery sites: image references in builder JSON are not an issue for this skill (URLs don't change), but the alt scan only reads `<img>` tags; builder widgets keep alt in their JSON. Extend the scan when the first builder site runs.
 - Server-side compression (Imagick/pngquant on the host) if the local round-trip proves slow on sites with hundreds of files.
+
+## Theme gotcha found on ruggeddepot (2026-10-30)
+
+The product-alt run wrote 7,671 alts correctly, but the custom theme (`ruggeddepotoverhaul`, `inc/woo-custom.php`) renders the product gallery with a hardcoded `alt="#"` and never reads the attachment. Fixed with `scripts/php/patch_ruggeddepot_gallery_alt.php` (run via `wp eval-file` on staging then live; backs up the original; keeps the attachment ID in the map and prints the attachment alt, falling back to the product name). General lesson for the skill: after any alt apply, curl one page and grep the `<img>` tags; data in the database is not the same as alt in the HTML. The probe should do that check automatically (open item).
