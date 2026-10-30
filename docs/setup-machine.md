@@ -63,13 +63,13 @@ The key comes from Ahrefs → Account settings → API keys. Never put it in a c
 `scripts/review_sheets.py` keeps one Google Sheet per client for APPROVE-tier review and reads decisions back without a human
 exporting anything. It authenticates as a service account. One-time setup, ~10 minutes:
 
-1. Google Cloud Console (console.cloud.google.com), signed in as greg@graterdigital.com → create a project (e.g. `grater-lhf`) or pick one.
+1. Google Cloud Console (console.cloud.google.com), signed in as the Google account you normally work in (overwatch@graterdigital.com) → create a project (e.g. `grater-lhf`) or pick one. Which account owns the project does not matter; what matters is who the sheets get shared with (step 5).
 2. APIs & Services → Enable APIs → enable **Google Sheets API** and **Google Drive API**.
 3. IAM & Admin → Service Accounts → Create: name `lhf-review-sheets`. No roles needed. Open it → Keys → Add key → JSON. Save the file as
    `C:\Users\greg\Documents\Low-Hanging-Fruit\secrets\google-service-account.json` (the folder is git-ignored).
 4. `pip install gspread google-auth`
 5. The service account has its own Drive. Sheets it creates live there and are shared out to humans, so always pass `--share`:
-   `python scripts/review_sheets.py setup <slug> --share greg@graterdigital.com --share overwatch@graterdigital.com`
+   `python scripts/review_sheets.py setup <slug> --share overwatch@graterdigital.com` (add `--share greg@graterdigital.com` if that account should see them too)
    For a sheet that already exists in a human's Drive, share it with the service account's email (`client_email` in the JSON) as Editor
    and put its id in `clients/<slug>.yaml` under `review.alt_sheet_id`.
 6. `python scripts/review_sheets.py status` lists every client's sheet and its pending / merged / applied counts.
