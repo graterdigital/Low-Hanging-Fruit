@@ -82,12 +82,12 @@ function rewrite($text, &$hits) {
 function rewrite_value($v, &$hits) {
     global $swaps, $hosts_re, $legacy, $home_host;
     if (!is_string($v)) return $v;
-    if (preg_match('~^(https?://)(' . $hosts_re . ')(/.*)$~i', $v, $m) || preg_match('~^()()(/[^\s"\']*)$~', $v, $m)) {
-        [$all, $scheme, $host, $path] = $m;
+    if (preg_match('~^(https?://)(' . $hosts_re . ')(/[^#?\s"\']*)([#?].*)?$~i', $v, $m) || preg_match('~^()()(/[^#?\s"\']*)([#?][^\s"\']*)?$~', $v, $m)) {
+        $scheme = $m[1]; $host = $m[2]; $path = $m[3]; $tail = $m[4] ?? '';   // tail keeps a #fragment or ?query on a whole-value URL (menu items)
         foreach ($swaps as $s) {
-            if ($path === $s['oldPath']) { $hits[$s['old']] = ($hits[$s['old']] ?? 0) + 1; return $scheme . ($host ? target_host($host) : '') . $s['newPath']; }
+            if ($path === $s['oldPath']) { $hits[$s['old']] = ($hits[$s['old']] ?? 0) + 1; return $scheme . ($host ? target_host($host) : '') . $s['newPath'] . $tail; }
         }
-        if ($host && target_host($host) !== $host) { $hits["host:$host"] = ($hits["host:$host"] ?? 0) + 1; return $scheme . target_host($host) . $path; }
+        if ($host && target_host($host) !== $host) { $hits["host:$host"] = ($hits["host:$host"] ?? 0) + 1; return $scheme . target_host($host) . $path . $tail; }
         return $v;
     }
     return rewrite($v, $hits);   // HTML inside a WYSIWYG field
@@ -177,7 +177,7 @@ $tally = function($hits) use (&$out) { foreach ($hits as $k => $v) $out['totals'
 $conds = []; $params = [];
 foreach ($swaps as $s) foreach ([$s['oldPath'], str_replace('/', '\\/', $s['oldPath'])] as $n) { $conds[] = "m.meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($n) . '%'; }
 foreach ($legacy as $l) { $conds[] = "m.meta_value LIKE %s"; $params[] = '%' . $wpdb->esc_like($l) . '%'; }
-$rows = $conds ? $wpdb->get_results($wpdb->prepare("SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE p.post_type NOT IN ('revision','customize_changeset') AND m.meta_key NOT LIKE '\\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params)) : [];
+$rows = $conds ? $wpdb->get_results($wpdb->prepare("SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value, p.post_type, p.post_title FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE p.post_type NOT IN ('revision','customize_changeset') AND m.meta_key NOT LIKE '\\_edit%%' AND (" . implode(' OR ', $conds) . ")", $params)) : [];
 foreach ($rows as $m) {
     $hits = [];
     if (is_serialized($m->meta_value)) {
@@ -188,8 +188,9 @@ foreach ($rows as $m) {
     } else {
         $new = rewrite_value($m->meta_value, $hits); $kind = is_json_blob($m->meta_value) ? 'json' : 'plain';
     }
+    if ($m->post_type === 'nav_menu_item') $kind = 'menu';
     if ($new === $m->meta_value) continue;
-    $e = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'kind' => $kind, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
+    $e = ['meta_id' => (int)$m->meta_id, 'post_id' => (int)$m->post_id, 'key' => $m->meta_key, 'kind' => $kind, 'post_type' => $m->post_type, 'title' => $m->post_title, 'hits' => $hits, 'before' => $m->meta_value, 'after' => $new];
     // JSON guard: never turn a valid JSON blob into an invalid one, whatever the swap rules say.
     if ($kind === 'json' && !is_json_blob($new)) { $e['applied'] = 'GUARDED: rewrite would break JSON'; unset($e['after']); $out['json_guarded'][] = $e; continue; }
     if ($mode === 'apply') $e['applied'] = (bool)$wpdb->update($wpdb->postmeta, ['meta_value' => $new], ['meta_id' => $m->meta_id]);
@@ -208,4 +209,9 @@ foreach ($ids as $id) {
     $out['posts'][] = $e; $tally($hits);
 }
 
+// Pages to re-check after an apply: every changed post, plus the owner of every changed non-menu meta row.
+$check = [];
+foreach ($out['posts'] as $p) $check[$p['id']] = $p['url'];
+foreach ($out['meta'] as $m) if ($m['kind'] !== 'menu' && !isset($check[$m['post_id']])) { $u = get_permalink($m['post_id']); if ($u) $check[$m['post_id']] = $u; }
+$out['check_urls'] = array_values(array_unique(array_filter($check)));
 echo "\n===JSON===\n" . json_encode($out, JSON_UNESCAPED_SLASHES) . "\n";

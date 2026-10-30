@@ -12,8 +12,9 @@ each changed post to changes/<provider>/<slug>/backup/ (git-ignored) and flushes
 A second, report-only log lists wp_options rows that still contain an old URL; the script never edits options.
 Live applies ask you to type the slug unless --yes is given.
 """
-import argparse, json, re, subprocess, sys, datetime
+import argparse, json, re, subprocess, sys, datetime, urllib.request, urllib.parse, urllib.error, html
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 try:
     import yaml
@@ -43,6 +44,80 @@ def flush_cache(alias, webroot="public"):
     msg = (r.stdout.decode("utf-8", "replace") + r.stderr.decode("utf-8", "replace")).strip().splitlines()
     return (r.returncode == 0, msg[-1] if msg else "")
 
+UA = "Mozilla/5.0 (compatible; GraterDigital-LHF/1.0; +https://graterdigital.com)"
+
+def _fetch(url, method="GET", follow=False, timeout=20):
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *a, **k): return None
+    opener = urllib.request.build_opener() if follow else urllib.request.build_opener(NoRedirect)
+    try:
+        req = urllib.request.Request(url, method=method, headers={"User-Agent": UA, "Accept": "text/html,*/*"})
+        with opener.open(req, timeout=timeout) as r:
+            return r.status, (r.read().decode("utf-8", "replace") if method == "GET" else ""), r.headers.get("Location", "")
+    except urllib.error.HTTPError as e:
+        return e.code, "", e.headers.get("Location", "") if e.headers else ""
+    except Exception as e:
+        return f"error: {type(e).__name__}", "", ""
+
+def check_links(pages, site_host, swaps, legacy_hosts=()):
+    """Fetch each page, HEAD every unique internal link on it (no redirects followed), and report non-200s.
+    Links whose path is one of the swap targets are flagged separately so a bad swap stands out."""
+    site_host = re.sub(r"^www\.", "", site_host.lower())
+    # Exact paths: a slash-only swap (/about -> /about/) must not collapse old and new into one key.
+    new_paths = {urllib.parse.urlsplit(s["new"]).path or "/" for s in swaps}
+    old_paths = {urllib.parse.urlsplit(s["old"]).path or "/" for s in swaps}
+    def internal(href, base):
+        href = html.unescape(href.strip())
+        if not href or href.startswith(("#", "mailto:", "tel:", "javascript:", "data:")): return None
+        u = urllib.parse.urljoin(base, href); s = urllib.parse.urlsplit(u)
+        if s.scheme not in ("http", "https"): return None
+        h = re.sub(r"^www\.", "", s.netloc.lower())
+        if h != site_host and h not in {re.sub(r"^www\.", "", l.lower()) for l in legacy_hosts}: return None
+        return urllib.parse.urlunsplit((s.scheme, s.netloc, s.path or "/", s.query, ""))
+    page_results, links = {}, {}
+    def do_page(url):
+        st, body, _ = _fetch(url, "GET", follow=True)
+        found = set()
+        if isinstance(st, int) and st == 200:
+            for href in re.findall(r"""<a\s[^>]*?href\s*=\s*["']([^"']+)["']""", body, flags=re.I):
+                u = internal(href, url)
+                if u: found.add(u)
+        return url, st, found
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        for url, st, found in ex.map(do_page, pages):
+            page_results[url] = st
+            for u in found: links.setdefault(u, set()).add(url)
+    def do_link(u):
+        st, _, loc = _fetch(u, "HEAD")
+        if st in (403, 405, 501): st, _, loc = _fetch(u, "GET")
+        return u, st, loc
+    link_results = {}
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        for u, st, loc in ex.map(do_link, sorted(links)): link_results[u] = (st, loc)
+    bad = []
+    for u, (st, loc) in sorted(link_results.items()):
+        if st == 200: continue
+        path = urllib.parse.urlsplit(u).path or "/"
+        bad.append({"url": u, "status": st, "location": loc, "on_pages": sorted(links[u]),
+                    "is_swap_target": path in new_paths, "is_old_url": path in old_paths and path not in new_paths})
+    return {"pages": page_results, "links_checked": len(link_results), "bad": bad}
+
+def write_linkcheck_log(outdir, base, host, target, res):
+    bad = res["bad"]; pages_bad = {u: s for u, s in res["pages"].items() if s != 200}
+    lines = [f"# fix-redirect-links: link check for {host} ({target})", "",
+             f"{len(res['pages'])} changed page(s) fetched, {res['links_checked']} unique internal link(s) HEAD-checked without following redirects. Anything not 200 is listed.", ""]
+    if pages_bad: lines += ["## Changed pages that did not return 200", ""] + [f"- {u}: {s}" for u, s in pages_bad.items()] + [""]
+    sw = [b for b in bad if b["is_swap_target"]]; ol = [b for b in bad if b["is_old_url"] and not b["is_swap_target"]]; other = [b for b in bad if not b["is_swap_target"] and not b["is_old_url"]]
+    def table(rows):
+        out = ["| link | status | redirects to | on pages |", "|---|---|---|---|"]
+        for b in rows: out.append(f"| {b['url']} | {b['status']} | {b['location'] or ''} | {len(b['on_pages'])}: {', '.join(b['on_pages'][:3])}{' ...' if len(b['on_pages']) > 3 else ''} |")
+        return out
+    lines += [f"## Swap targets not returning 200 ({len(sw)})", "", "A fixed link that does not resolve to 200 means the map's `new` URL is wrong or the target changed. Stop and look." if sw else "None."] + (table(sw) if sw else []) + [""]
+    lines += [f"## Old URLs still linked ({len(ol)})", "", "Links the rewrite did not reach: theme files, builder blobs it does not read, or links rendered by a plugin." if ol else "None."] + (table(ol) if ol else []) + [""]
+    lines += [f"## Other internal links not returning 200 ({len(other)})", "", "Pre-existing redirects and broken links on the same pages; not caused by this run, listed for the next fix." if other else "None."] + (table(other) if other else [])
+    (outdir / f"{base}-linkcheck.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return len(sw), len(ol), len(other), len(pages_bad)
+
 def confirm_live(slug, n, alias, yes):
     if yes:
         print(f"APPLY {n} link swaps on LIVE ({alias}) — confirmed by --yes"); return
@@ -59,6 +134,8 @@ def main(argv=None):
     ap.add_argument("--apply", action="store_true", help="write changes; default is dry run")
     ap.add_argument("--probe", action="store_true", help="locate every raw occurrence of each old URL (posts, meta, options) and stop; changes nothing")
     ap.add_argument("--webroot", default="public", help="path to WordPress relative to the SSH login dir (Kinsta: public; WP Engine: sites/<install>)")
+    ap.add_argument("--check-links", action="store_true", dest="checklinks", help="fetch the pages changed by the latest apply log on this target and HEAD-check every internal link; writes a -linkcheck.md")
+    ap.add_argument("--no-link-check", action="store_true", help="skip the automatic link check after an apply")
     ap.add_argument("--check-json", action="store_true", dest="checkjson", help="validate every _elementor_data row on the target and stop; changes nothing")
     ap.add_argument("--yes", action="store_true", help="skip the type-the-slug confirmation on a live apply (for vetted, unattended runs)")
     args = ap.parse_args(argv)
@@ -88,6 +165,20 @@ def run(args):
     swaps = m["swaps"]
     if args.target == "live" and args.apply:
         confirm_live(args.slug, len(swaps), alias, args.yes)
+
+    if getattr(args, "checklinks", False):
+        bdir = ROOT / "changes" / provider / args.slug / "backup"
+        backups = sorted(bdir.glob(f"*-fix-redirect-links-{args.target}.json")) if bdir.exists() else []
+        if not backups: sys.exit(f"No apply backup for {args.slug} on {args.target}; the link check needs the list of changed pages.")
+        b = json.loads(backups[-1].read_text(encoding="utf-8"))
+        pages = b.get("check_urls") or sorted({p["url"] for p in b.get("posts", []) if p.get("url")})
+        res = check_links(pages, host, swaps, m.get("legacy_hosts") or [])
+        outdir = ROOT / "changes" / provider / args.slug; outdir.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+        sw, ol, other, pb = write_linkcheck_log(outdir, f"{stamp}-fix-redirect-links-{args.target}", host, args.target, res)
+        print(f"LINK CHECK on {args.target}: {len(pages)} pages, {res['links_checked']} links; {sw} swap target(s) not 200, {ol} old URL(s) still linked, {other} other non-200, {pb} page(s) not 200")
+        print(f"Log: {outdir / (stamp + '-fix-redirect-links-' + args.target + '-linkcheck.md')}")
+        return {"posts": [], "meta": [], "totals": {}, "errors": sw + pb, "linkcheck": (sw, ol, other, pb), "log": None, "options_log": None}
 
     if getattr(args, "checkjson", False):
         res = run_remote(alias, "checkjson", host, [], args.webroot, [])
@@ -133,7 +224,7 @@ def run(args):
         log.append(f"| {p['id']} | {p['type']} | {p['title'][:50]} | {p['url']} | {sum(p['hits'].values())} | {p.get('applied', '-')} |")
     log += ["", f"## Postmeta changed ({len(res['meta'])})", "", "| meta_id | post | key | kind | replacements | applied |", "|---|---|---|---|---|---|"]
     for mm in res["meta"]:
-        log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {mm.get('kind','')} | {sum(mm['hits'].values())} | {mm.get('applied', '-')} |")
+        log.append(f"| {mm['meta_id']} | {mm['post_id']} | {mm['key']} | {mm.get('kind','')}{' (menu: ' + str(mm.get('title',''))[:30] + ')' if mm.get('kind') == 'menu' else ''} | {sum(mm['hits'].values())} | {mm.get('applied', '-')} |")
     log += ["", "## Skipped by the map", ""] + [f"- {s.get('old') or s.get('pattern')}: {s['reason']}" for s in m.get("skipped", [])]
     refused = res.get("refused") or []; guarded = res.get("json_guarded") or []
     if refused: log += ["## Swaps refused by the matcher (unsafe characters)", ""] + [f"- `{r['old']}`: {r['reason']}" for r in refused] + [""]
@@ -164,6 +255,12 @@ def run(args):
     if mode == "apply":
         bdir = outdir / "backup"; bdir.mkdir(exist_ok=True)
         (bdir / f"{base}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+    res["linkcheck"] = None
+    if mode == "apply" and not getattr(args, "no_link_check", False) and res.get("check_urls"):
+        lc = check_links(res["check_urls"], host, swaps, m.get("legacy_hosts") or [])
+        sw, ol, other, pb = write_linkcheck_log(outdir, base, host, args.target, lc)
+        res["linkcheck"] = (sw, ol, other, pb)
+        print(f"Link check: {len(res['check_urls'])} pages, {lc['links_checked']} links; {sw} swap target(s) not 200, {ol} old URL(s) still linked, {other} other non-200, {pb} page(s) not 200  -> {base}-linkcheck.md")
 
     print(f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows would change" if mode == "dry" else f"\n{len(res['posts'])} posts, {len(res['meta'])} meta rows changed")
     for k, v in sorted(res["totals"].items()): print(f"  {v:3}  {k}")

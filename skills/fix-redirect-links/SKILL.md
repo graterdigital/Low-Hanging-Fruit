@@ -73,6 +73,10 @@ The intended rhythm, until the rules have proven themselves on this host: run st
 - Hand over the `-options.md` log too: each row is a widget, menu, theme setting, or plugin option still carrying an old link, to be fixed in wp-admin by hand.
 - Page builders: WPBakery shortcodes live in `post_content` and are handled. Elementor keeps its layout as a JSON string in `_elementor_data` postmeta; the JSON-escaped matching should cover it but has not been exercised on a real Elementor site yet, so on the first one, probe, dry-run, and inspect the diff in the backup before applying.
 
+## After every apply: the link check
+
+The runner fetches every page it changed (and the page owning every changed meta row), collects each internal link on them, and HEAD-checks each unique link without following redirects. `<stamp>-fix-redirect-links-<target>-linkcheck.md` lists everything that is not 200 in three groups: **swap targets not 200** (the map's `new` URL is wrong or the target moved; the batch stops the site), **old URLs still linked** (links the rewrite could not reach: theme files, builder blobs, plugin-rendered), and **other non-200 links** (pre-existing redirects and 404s on those pages, input for the next fix). `--check-links` runs it on its own against the latest apply backup; `--no-link-check` skips it. Menu items: custom menu URLs live in `_menu_item_url` postmeta and are rewritten like any other meta (the log marks them `menu`), and a `#fragment` or `?query` on a whole-value URL is kept.
+
 ## Safety nets in the matcher
 
 - Postmeta is rewritten before posts, and revision rows are ignored, so `wp_update_post` creating revisions does not inflate counts or edit history.

@@ -121,6 +121,11 @@ def main():
                         row["staging"] = f"{counts(app)[0]}p/{counts(app)[1]}m/{counts(app)[2]}r"
                         if app["errors"] or app.get("flushed") is False:
                             row["status"] = "staging apply errors"; row["notes"].append(f"{app['errors']} save errors, flush={app.get('flushed')}"); continue
+                        lc = app.get("linkcheck")
+                        if lc:
+                            sw, ol, other, pb = lc
+                            if sw or pb: row["status"] = "staging link check failed"; row["notes"].append(f"link check: {sw} swap target(s) not 200, {pb} changed page(s) not 200; see -linkcheck.md"); continue
+                            if ol or other: row["notes"].append(f"link check: {ol} old URL(s) still linked, {other} other non-200 link(s) on changed pages (pre-existing); see -linkcheck.md")
                         if str((c.get("platform") or {}).get("page_builder", "")).lower() == "elementor":
                             cj = frl.run(Args(slug, "staging", map=str(mp), checkjson=True))
                             if cj["errors"]:
@@ -141,6 +146,11 @@ def main():
             row["live"] = f"{counts(lapp)[0]}p/{counts(lapp)[1]}m/{counts(lapp)[2]}r"
             if lapp["errors"] or lapp.get("flushed") is False:
                 row["status"] = "live apply errors"; row["notes"].append(f"{lapp['errors']} save errors, flush={lapp.get('flushed')}"); continue
+            lc = lapp.get("linkcheck")
+            if lc:
+                sw, ol, other, pb = lc
+                if sw or pb: row["status"] = "live applied; LINK CHECK FAILED"; row["notes"].append(f"link check: {sw} swap target(s) not 200, {pb} changed page(s) not 200; see -linkcheck.md and consider restore_changes.py"); continue
+                row["notes"].append(f"link check ok" + (f"; {ol} old URL(s) still linked, {other} other non-200 (pre-existing)" if ol or other else ""))
             row["status"] = "live applied"
         except SystemExit as e:
             row["status"] = "stopped"; row["notes"].append(str(e)[:300])
