@@ -163,8 +163,17 @@ def cmd_push(a):
     today = datetime.date.today().isoformat()
     new = [[r["image_key"], r["tier"], r["uses"], r["on_pages"], r["example_page"], r["image"], r["current_alt"], r["suggestion"], r["new_alt"],
             "merged" if r["new_alt"] else "pending", r["note"], today] for r in review if r["image_key"] not in have]
+    # WooCommerce: the product-alt exception list (shared model photos, one-word titles) also needs a human
+    exc_files = sorted((ROOT / "changes" / provider / a.slug).glob("*-fix-images-product-alt-exceptions.csv"))
+    n_exc = 0
+    if exc_files:
+        for e in csv.DictReader(exc_files[-1].open(encoding="utf-8-sig")):
+            key = f"product-attachment:{e['attachment_id']}"
+            if key in have: continue
+            new.append([key, "P", e["used_by_products"], e["used_by_products"], e.get("example_products", "")[:200], e["file"], "", e.get("suggestion", ""), "",
+                        "pending", "product image: " + e.get("reason", ""), today]); n_exc += 1
     if new: ws.append_rows(new, value_input_option="RAW")
-    print(f"{a.slug}: {len(new)} new images appended ({len(review) - len(new)} already on the sheet) from {path.name}: {sh.url}")
+    print(f"{a.slug}: {len(new)} new rows appended ({len(review) - (len(new) - n_exc)} already on the sheet) from {path.name}" + (f" + {n_exc} product-alt exceptions" if n_exc else "") + f": {sh.url}")
 
 def cmd_pull(a):
     c = load_client(a.slug); provider = str((c.get("hosting") or {}).get("provider") or "other").lower()

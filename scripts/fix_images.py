@@ -161,6 +161,7 @@ def alt_csv(args, inv, cdir, stamp, firm):
     rows = []
     for i, a in enumerate(inv["alt"]):
         if (a.get("post_type") or "") in NON_PUBLIC_TYPES: continue   # older inventories include these; newer probes filter server-side
+        if (a.get("post_type") or "") == "product" and inv.get("products"): continue   # WooCommerce product images go through --product-alt, not the review sheet
         tier = alt_tier(a)
         m = re.search(r"\(attachment (\d+)\)", a["where"])
         where = "featured_image" if m else a["where"]
