@@ -90,6 +90,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 - `site-triage`: Ahrefs issues → root-cause groups → tiered fix queue. Read-only. **Done (v1).**
 - `fix-redirect-links` (AUTO). **Done on hsfamilylaw (applied and verified by recrawl 2026-10-29). Map builder (Ahrefs API) and host-wide batch runner added; Kinsta batch next.**
 - `fix-meta` (titles and descriptions through the SEO plugin, APPROVE)
+- `ai-discoverability` (bot access policy + machine readability, from Ahrefs' AI Discoverability category; APPROVE for robots.txt and IndexNow, FLAG/route for the rest). Spec: `docs/skills/ai-discoverability.md`.
 - `fix-images` (weight in place AUTO; alt and broken images APPROVE). **Done on hsfamilylaw 2026-10-29 (live). Recrawl + WebP-serving re-probe pending; `alt-text-apply` next.** Format conversion is out of scope (plugin/host job: Kinsta CDN).
 - `indexation-review` (archives, sitemap, noindex, APPROVE)
 - `schema-check` (FLAG)
