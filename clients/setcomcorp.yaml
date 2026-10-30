@@ -26,6 +26,7 @@ hosting:
   access: ssh+wp-cli
   ssh_alias: setcomcorp
   staging_environment: setcomcorp-staging   # stg-setcomcorp-setcomstg.kinsta.cloud
+  notes: live environment has an SSH IP allowlist in MyKinsta (Security tab); a connection timeout on port 37782 means the running machine's IP is not on it. Staging has no allowlist.
 
 tracking:
   ga4_measurement_id: unknown
