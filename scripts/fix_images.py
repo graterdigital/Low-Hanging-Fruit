@@ -153,9 +153,14 @@ def suggest_alt(a, firm):
         return phrase[0].upper() + phrase[1:], "from file name; check it describes the picture"
     return f"Illustration for the article {title}" if title else "", "generic file name: describe the actual picture"
 
+NON_PUBLIC_TYPES = {"revision", "attachment", "nav_menu_item", "elementor_library", "tablepress_table", "acf-field", "acf-field-group",
+                    "wp_block", "wp_template", "wp_template_part", "wp_global_styles", "wp_navigation", "customize_changeset", "oembed_cache",
+                    "shop_order", "shop_coupon", "product_variation", "wpcf7_contact_form", "slider", "popup", "scheduled-action"}
+
 def alt_csv(args, inv, cdir, stamp, firm):
     rows = []
     for i, a in enumerate(inv["alt"]):
+        if (a.get("post_type") or "") in NON_PUBLIC_TYPES: continue   # older inventories include these; newer probes filter server-side
         tier = alt_tier(a)
         m = re.search(r"\(attachment (\d+)\)", a["where"])
         where = "featured_image" if m else a["where"]
@@ -169,14 +174,44 @@ def alt_csv(args, inv, cdir, stamp, firm):
                      "note": note if tier != "D" else "unpublished; skipped"})
     order = {"A": 0, "C": 1, "B": 2, "D": 3}
     rows.sort(key=lambda r: (order[r["tier"]], r["page_url"], r["where"]))
+    # One review decision per distinct image: occurrences of the same file (any size variant) share an image_key, and the
+    # review sheet carries one row per key; merge_alt_sheet.py fans the decision back out to every occurrence.
+    for r in rows: r["image_key"] = image_key(r["src"])
     out = cdir / f"{stamp}-fix-images-alt.csv"
     with out.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+    # the review sheet
+    groups = {}
+    for r in rows:
+        if r["tier"] == "D": continue
+        g = groups.setdefault(r["image_key"], {"image_key": r["image_key"], "tier": r["tier"], "uses": 0, "pages": set(), "example_page": r["page_url"], "image": r["src"].rsplit("/", 1)[-1],
+                                               "src": r["src"], "current_alt": r["current_alt"], "suggestion": r["suggestion"], "new_alt": r["new_alt"], "note": r["note"]})
+        g["uses"] += 1; g["pages"].add(r["page_url"])
+        if order[r["tier"]] < order[g["tier"]]: g["tier"] = r["tier"]
+    deco = [g for g in groups.values() if decorative(g["image"])]
+    review = [g for g in groups.values() if not decorative(g["image"])]
+    review.sort(key=lambda g: (order[g["tier"]], -g["uses"], g["example_page"]))
+    rpath = cdir / f"{stamp}-fix-images-alt-review.csv"
+    with rpath.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh); w.writerow(["image_key", "tier", "uses", "on_pages", "example_page", "image", "current_alt", "suggestion", "new_alt", "note"])
+        for g in review: w.writerow([g["image_key"], g["tier"], g["uses"], len(g["pages"]), g["example_page"], g["image"], g["current_alt"], g["suggestion"], g["new_alt"], g["note"]])
     counts = {t: len([r for r in rows if r["tier"] == t]) for t in "ACBD"}
-    print(f"{len(rows)} rows -> {out}\n  A {counts['A']} alt absent · C {counts['C']} featured images · B {counts['B']} empty alt inline · D {counts['D']} unpublished (skipped)")
-    print(f"  {len([r for r in rows if r['new_alt']])} rows prefilled (headshots only); the rest carry a draft in `suggestion` for a human to accept into `new_alt` or rewrite")
-    print("Review, then: python scripts/fix_images.py <slug> --alt-apply " + out.name)
+    print(f"{len(rows)} occurrences -> {out.name}\n  A {counts['A']} alt absent · C {counts['C']} featured images · B {counts['B']} empty alt inline · D {counts['D']} unpublished (skipped)")
+    print(f"  review sheet: {len(review)} distinct images -> {rpath.name}" + (f" ({len(deco)} decorative files left out: " + ", ".join(sorted({g['image'] for g in deco})[:4]) + ")" if deco else ""))
+    print(f"  {len([g for g in review if g['new_alt']])} prefilled (headshots); the rest carry a draft in `suggestion`")
+    print("Review the sheet, merge with scripts/merge_alt_sheet.py, then: python scripts/fix_images.py <slug> --alt-apply " + out.name)
     return out
+
+def image_key(src):
+    """Stem that unites size variants: /2019/05/foo-300x200.jpg and /2019/05/foo.jpg -> 2019/05/foo"""
+    path = re.sub(r"^(?:https?:)?//[^/]+", "", (src or "").split("?")[0])
+    path = re.sub(r"^.*?/uploads/", "", path)
+    path = re.sub(r"\.\w+$", "", path); path = re.sub(r"-\d+x\d+$", "", path); path = re.sub(r"-scaled$", "", path)
+    return path or (src or "")
+
+DECORATIVE = re.compile(r"^(avatar|icon|icons|spacer|pixel|blank|divider|separator|bullet|arrow|placeholder|loader|spinner|bg|pattern|decor|ornament)([-_.]|\d|$)|[-_](icon|avatar|spacer|divider|spinner|loader|bg)(-\d+x\d+)?\.\w+$|\.svg$", re.I)
+def decorative(filename):
+    return bool(DECORATIVE.search(filename or ""))
 
 # ---------------------------------------------------------------- WooCommerce product alt rule
 VIEW_WORDS = {"front": "front view", "back": "back view", "rear": "rear view", "side": "side view", "top": "top view", "bottom": "underside",

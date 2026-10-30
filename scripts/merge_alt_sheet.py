@@ -3,9 +3,9 @@
 
     python scripts/merge_alt_sheet.py changes/<provider>/<slug>/<stamp>-fix-images-alt.csv <exported-review.csv>
 
-Rows are matched by `id`. Only `new_alt` (and `note`, if present) are taken from the review export; every other
-column keeps the repo value, so a slimmed-down review sheet (fewer columns, Tier D rows left out) merges cleanly.
-Prints what changed. Rows in the repo CSV that the export lacks are left as they were.
+The export is either the per-image review sheet (one row per `image_key`, fanned out to every occurrence of that image in
+the repo CSV) or an older per-row sheet (matched by `id`). Only `new_alt` (and `note`, if present) are taken from the
+export; every other column keeps the repo value. Prints what changed. Occurrences the export does not cover are left as they were.
 """
 import csv, sys
 from pathlib import Path
@@ -14,10 +14,14 @@ def main():
     if len(sys.argv) != 3: sys.exit(__doc__)
     repo, export = Path(sys.argv[1]), Path(sys.argv[2])
     rows = list(csv.DictReader(repo.open(encoding="utf-8-sig")))
-    rev = {r["id"].strip(): r for r in csv.DictReader(export.open(encoding="utf-8-sig")) if r.get("id")}
+    exp = list(csv.DictReader(export.open(encoding="utf-8-sig")))
+    by_key = {r["image_key"].strip(): r for r in exp if r.get("image_key")}
+    by_id = {r["id"].strip(): r for r in exp if r.get("id")}
+    print(f"export: {len(exp)} rows, keyed by {'image_key' if by_key else 'id'}")
     changed = cleared = 0
     for r in rows:
-        e = rev.get(r["id"])
+        if r.get("tier") == "D": continue
+        e = by_key.get(r.get("image_key", "")) if by_key else by_id.get(r["id"])
         if e is None: continue
         new = (e.get("new_alt") or "").strip()
         if new != (r["new_alt"] or "").strip():
