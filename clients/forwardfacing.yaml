@@ -54,3 +54,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://forwardfacing.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Divorce/family-law podcast site run by Hastings Shadmehry; no GTM or GA4 tag seen in raw HTML (Site Kit present, Clarity present)."
+
+review:
+  alt_sheet_id: 17MNFWP2D4CFu6gJLR42roZ6yz3NyR2a4Ej-_Lq0Jls4   # "forwardfacing review" in Google Sheets; scripts/review_sheets.py

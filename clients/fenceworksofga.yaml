@@ -58,3 +58,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: Fingerprint of raw HTML of https://www.fenceworksofga.com/ (the bare-host URL was not in the crawl) from the latest Ahrefs Site Audit crawl (site-audit-page-content) plus gsc-pages check for 2026-09-28..2026-10-26. Not verified by logging in.
+
+review:
+  alt_sheet_id: 1ICQ4u3JfiA2DwAfv3rGHxgE8yGnIZCgtVGMzULKFtVI   # "fenceworksofga review" in Google Sheets; scripts/review_sheets.py

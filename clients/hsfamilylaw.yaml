@@ -67,4 +67,4 @@ evidence:
   basis: Ahrefs Site Audit crawls of 2026-10-08 and 2026-10-29, raw HTML of /, /category/divorce/, /blog/page/2/, `wp plugin list` over SSH on 2026-10-28, and the fix-images probe/apply over SSH on 2026-10-29.
 
 review:
-  alt_sheet_id: unknown      # old hand-made sheet in greg@ Drive retired 2026-10-30; review_sheets.py setup creates the real one
+  alt_sheet_id: 15clsGl0RA5BRuYQFyiWzxxy_kVcrXcdH5P5Lt9QdSKU   # "hsfamilylaw review" in Google Sheets; scripts/review_sheets.py
