@@ -90,17 +90,17 @@
   "converter-for-media": "absent",
   "webp-express-config": "config.json not found",
   "webp-express-converted-files": {
-   "separate-folder": 552,
-   "mingled-in-uploads": 1912
+   "separate-folder": 548,
+   "mingled-in-uploads": 1908
   }
  },
  "files": [
   {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/child-custody-lawyer-hastings-shadmehry.png",
-   "path": "/wp-content/uploads/2025/03/child-custody-lawyer-hastings-shadmehry.png",
-   "attachment_id": 5007,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/child-custody-lawyer-hastings-shadmehry.png",
-   "bytes": 3535633,
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
+   "attachment_id": 6161,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
+   "bytes": 1092870,
    "mime": "image/png",
    "width": 1500,
    "height": 1500,
@@ -113,51 +113,56 @@
    },
    "sizes": {
     "medium": {
+     "file": "andrea-dyer-hastings-family-law-and-divorce-attorney-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 267592
+     "bytes": 79781
     },
     "large": {
+     "file": "andrea-dyer-hastings-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1620611
+     "bytes": 466978
     },
     "thumbnail": {
+     "file": "andrea-dyer-hastings-family-law-and-divorce-attorney-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 44114
+     "bytes": 14119
     },
     "medium_large": {
+     "file": "andrea-dyer-hastings-family-law-and-divorce-attorney-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 945225
+     "bytes": 265262
     },
     "large_high": {
+     "file": "andrea-dyer-hastings-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1620611
+     "bytes": 466978
     }
    },
    "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 10,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 3535633,
-    "incoming_all_links": 1,
+    "size": 2787450,
+    "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 3535633
+    "content_type": "image/webp",
+    "bytes": 2134420
    }
   },
   {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/hasting-shadmehry-guide-to-alimony.png",
-   "path": "/wp-content/uploads/2025/03/hasting-shadmehry-guide-to-alimony.png",
-   "attachment_id": 5000,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/hasting-shadmehry-guide-to-alimony.png",
-   "bytes": 3275381,
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
+   "attachment_id": 6168,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
+   "bytes": 920777,
    "mime": "image/png",
    "width": 1500,
    "height": 1500,
@@ -170,51 +175,56 @@
    },
    "sizes": {
     "medium": {
+     "file": "mali-shadmehry-family-law-and-divorce-attorney-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 261444
+     "bytes": 79917
     },
     "large": {
+     "file": "mali-shadmehry-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1571546
+     "bytes": 438618
     },
     "thumbnail": {
+     "file": "mali-shadmehry-family-law-and-divorce-attorney-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 39565
+     "bytes": 14677
     },
     "medium_large": {
+     "file": "mali-shadmehry-family-law-and-divorce-attorney-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 928632
+     "bytes": 254573
     },
     "large_high": {
+     "file": "mali-shadmehry-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1571546
+     "bytes": 438618
     }
    },
    "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 12,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 3275381,
-    "incoming_all_links": 1,
+    "size": 2529063,
+    "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 3275381
+    "content_type": "image/webp",
+    "bytes": 1892618
    }
   },
   {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/child-support-lawyer-hastings-shadmehry.png",
-   "path": "/wp-content/uploads/2025/03/child-support-lawyer-hastings-shadmehry.png",
-   "attachment_id": 5012,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/child-support-lawyer-hastings-shadmehry.png",
-   "bytes": 3253633,
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
+   "attachment_id": 6179,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
+   "bytes": 849626,
    "mime": "image/png",
    "width": 1500,
    "height": 1500,
@@ -227,43 +237,172 @@
    },
    "sizes": {
     "medium": {
+     "file": "cathy-cooper-family-law-and-divorce-attorney-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 278408
+     "bytes": 68593
     },
     "large": {
+     "file": "cathy-cooper-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1535879
+     "bytes": 400379
     },
     "thumbnail": {
+     "file": "cathy-cooper-family-law-and-divorce-attorney-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 46849
+     "bytes": 12970
     },
     "medium_large": {
+     "file": "cathy-cooper-family-law-and-divorce-attorney-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 915837
+     "bytes": 229368
     },
     "large_high": {
+     "file": "cathy-cooper-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 1535879
+     "bytes": 400379
     }
    },
    "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 10,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 3253633,
-    "incoming_all_links": 1,
+    "size": 2348492,
+    "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 3253633
+    "content_type": "image/webp",
+    "bytes": 1738002
+   }
+  },
+  {
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
+   "attachment_id": 6180,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
+   "bytes": 825285,
+   "mime": "image/png",
+   "width": 1500,
+   "height": 1500,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "lily-lutton-family-law-and-divorce-attorney-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 79381
+    },
+    "large": {
+     "file": "lily-lutton-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 417373
+    },
+    "thumbnail": {
+     "file": "lily-lutton-family-law-and-divorce-attorney-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 14603
+    },
+    "medium_large": {
+     "file": "lily-lutton-family-law-and-divorce-attorney-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 249287
+    },
+    "large_high": {
+     "file": "lily-lutton-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 417373
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 2282935,
+    "incoming_all_links": 3,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/webp",
+    "bytes": 1640850
+   }
+  },
+  {
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
+   "attachment_id": 6188,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
+   "bytes": 793761,
+   "mime": "image/png",
+   "width": 1500,
+   "height": 1500,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "nicole-crites-family-law-and-divorce-attorney-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 73916
+    },
+    "large": {
+     "file": "nicole-crites-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 395985
+    },
+    "thumbnail": {
+     "file": "nicole-crites-family-law-and-divorce-attorney-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 13886
+    },
+    "medium_large": {
+     "file": "nicole-crites-family-law-and-divorce-attorney-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 233613
+    },
+    "large_high": {
+     "file": "nicole-crites-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 395985
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1927734,
+    "incoming_all_links": 3,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/webp",
+    "bytes": 1435468
    }
   },
   {
@@ -271,7 +410,7 @@
    "path": "/wp-content/uploads/2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599.png",
    "attachment_id": 6197,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599.png",
-   "bytes": 3142029,
+   "bytes": 701989,
    "mime": "image/png",
    "width": 1495,
    "height": 1495,
@@ -284,576 +423,66 @@
    },
    "sizes": {
     "medium": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 164791
+     "bytes": 66028
     },
     "large": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 920413
+     "bytes": 349498
     },
     "thumbnail": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 27602
+     "bytes": 12868
     },
     "medium_large": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 541984
+     "bytes": 206065
     },
     "large_high": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 920413
+     "bytes": 349498
     },
     "gform-image-choice-sm": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-300x300.png",
      "w": 300,
      "h": 300,
-     "bytes": 97125
+     "bytes": 40154
     },
     "gform-image-choice-md": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 164791
+     "bytes": 66028
     },
     "gform-image-choice-lg": {
+     "file": "sarah-price-family-law-and-divorce-attorney-1-e1781711488599-600x600.png",
      "w": 600,
      "h": 600,
-     "bytes": 345741
+     "bytes": 134359
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 3142029,
+    "size": 1884625,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 3142029
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
-   "attachment_id": 6161,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
-   "bytes": 2936300,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 199255
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1226916
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 30912
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 703117
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1226916
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 2936300,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2936300
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
-   "attachment_id": 6168,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
-   "bytes": 2633224,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 201446
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1180793
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 32294
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 684984
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1180793
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 2633224,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2633224
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney.png",
-   "path": "/wp-content/uploads/2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney.png",
-   "attachment_id": 4994,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney.png",
-   "bytes": 2495923,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 191915
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1133063
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 34037
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 659610
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1133063
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 9,
-   "ahrefs": {
-    "size": 2495923,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2495923
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
-   "attachment_id": 6179,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
-   "bytes": 2461772,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 173515
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1063085
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 27905
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 607353
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1063085
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 2461772,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2461772
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
-   "attachment_id": 6180,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
-   "bytes": 2427042,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 203761
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1142984
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 32756
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 677852
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1142984
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 2427042,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2427042
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys.png",
-   "path": "/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys.png",
-   "attachment_id": 5018,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys.png",
-   "bytes": 2279724,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 1
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 188699
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1100851
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 30559
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 654334
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1100851
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 7,
-   "ahrefs": {
-    "size": 2279724,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2279724
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/collaborative-divorce-process-hastings-shadmehry.png",
-   "path": "/wp-content/uploads/2025/03/collaborative-divorce-process-hastings-shadmehry.png",
-   "attachment_id": 5016,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/collaborative-divorce-process-hastings-shadmehry.png",
-   "bytes": 2112684,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 2
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 208936
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1063859
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 38717
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 651358
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1063859
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 11,
-   "ahrefs": {
-    "size": 2112684,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2112684
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
-   "attachment_id": 6188,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
-   "bytes": 2103052,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 178148
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 990062
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 30104
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 588097
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 990062
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 2103052,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2103052
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/hastings-shadmehry-divorce-ft-image.png",
-   "path": "/wp-content/uploads/2025/03/hastings-shadmehry-divorce-ft-image.png",
-   "attachment_id": 4971,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/hastings-shadmehry-divorce-ft-image.png",
-   "bytes": 2019407,
-   "mime": "image/png",
-   "width": 1920,
-   "height": 1080,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 225,
-     "bytes": 124929
-    },
-    "large": {
-     "w": 1024,
-     "h": 576,
-     "bytes": 648857
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 36561
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 432,
-     "bytes": 392522
-    },
-    "1536x1536": {
-     "w": 1536,
-     "h": 864,
-     "bytes": 1309014
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 576,
-     "bytes": 648857
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 12,
-   "ahrefs": {
-    "size": 2019407,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 2019407
+    "content_type": "image/webp",
+    "bytes": 1409096
    }
   },
   {
@@ -861,7 +490,7 @@
    "path": "/wp-content/uploads/2026/04/lisa-malas-family-law-and-divorce-attorney.png",
    "attachment_id": 6174,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/lisa-malas-family-law-and-divorce-attorney.png",
-   "bytes": 1997342,
+   "bytes": 737322,
    "mime": "image/png",
    "width": 1500,
    "height": 1500,
@@ -874,157 +503,48 @@
    },
    "sizes": {
     "medium": {
+     "file": "lisa-malas-family-law-and-divorce-attorney-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 171148
+     "bytes": 71219
     },
     "large": {
+     "file": "lisa-malas-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 947743
+     "bytes": 370306
     },
     "thumbnail": {
+     "file": "lisa-malas-family-law-and-divorce-attorney-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 27631
+     "bytes": 13617
     },
     "medium_large": {
+     "file": "lisa-malas-family-law-and-divorce-attorney-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 565895
+     "bytes": 219428
     },
     "large_high": {
+     "file": "lisa-malas-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 947743
+     "bytes": 370306
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 1997342,
+    "size": 1856216,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 1997342
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/before-the-divorce-hastings-shadmehry.png",
-   "path": "/wp-content/uploads/2025/03/before-the-divorce-hastings-shadmehry.png",
-   "attachment_id": 4990,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/before-the-divorce-hastings-shadmehry.png",
-   "bytes": 1977525,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 203287
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1006712
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 38514
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 618790
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 1006712
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 7,
-   "ahrefs": {
-    "size": 1977525,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1977525
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
-   "path": "/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
-   "attachment_id": 6190,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
-   "bytes": 1957496,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 184795
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 976947
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 29945
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 593655
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 976947
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 1957496,
-    "incoming_all_links": 3,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1957496
+    "content_type": "image/webp",
+    "bytes": 1388322
    }
   },
   {
@@ -1032,7 +552,7 @@
    "path": "/wp-content/uploads/2026/04/elizabeth-findley-family-law-and-divorce-attorney.png",
    "attachment_id": 6177,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/elizabeth-findley-family-law-and-divorce-attorney.png",
-   "bytes": 1952439,
+   "bytes": 725649,
    "mime": "image/png",
    "width": 1500,
    "height": 1500,
@@ -1045,43 +565,110 @@
    },
    "sizes": {
     "medium": {
+     "file": "elizabeth-findley-family-law-and-divorce-attorney-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 167751
+     "bytes": 69261
     },
     "large": {
+     "file": "elizabeth-findley-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 923182
+     "bytes": 363247
     },
     "thumbnail": {
+     "file": "elizabeth-findley-family-law-and-divorce-attorney-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 28449
+     "bytes": 13454
     },
     "medium_large": {
+     "file": "elizabeth-findley-family-law-and-divorce-attorney-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 548532
+     "bytes": 212884
     },
     "large_high": {
+     "file": "elizabeth-findley-family-law-and-divorce-attorney-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 923182
+     "bytes": 363247
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 1952439,
+    "size": 1802121,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 1952439
+    "content_type": "image/webp",
+    "bytes": 1382752
+   }
+  },
+  {
+   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
+   "path": "/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
+   "attachment_id": 6190,
+   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
+   "bytes": 873091,
+   "mime": "image/png",
+   "width": 1500,
+   "height": 1500,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "madison-alexander-family-law-and-divorce-attorney-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 84037
+    },
+    "large": {
+     "file": "madison-alexander-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 450765
+    },
+    "thumbnail": {
+     "file": "madison-alexander-family-law-and-divorce-attorney-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 15433
+    },
+    "medium_large": {
+     "file": "madison-alexander-family-law-and-divorce-attorney-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 269441
+    },
+    "large_high": {
+     "file": "madison-alexander-family-law-and-divorce-attorney-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 450765
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1763629,
+    "incoming_all_links": 3,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/webp",
+    "bytes": 1409786
    }
   },
   {
@@ -1089,7 +676,7 @@
    "path": "/wp-content/uploads/2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry.png",
    "attachment_id": 6512,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry.png",
-   "bytes": 1772425,
+   "bytes": 626619,
    "mime": "image/png",
    "width": 1365,
    "height": 1365,
@@ -1102,100 +689,48 @@
    },
    "sizes": {
     "medium": {
+     "file": "Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 178220
+     "bytes": 69405
     },
     "large": {
+     "file": "Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 980550
+     "bytes": 363632
     },
     "thumbnail": {
+     "file": "Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 29635
+     "bytes": 13576
     },
     "medium_large": {
+     "file": "Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 585615
+     "bytes": 218673
     },
     "large_high": {
+     "file": "Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 980550
+     "bytes": 363632
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 1772425,
+    "size": 1621847,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 1772425
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/03/hastings-shadmehry-uncontested-divorce-attorney.png",
-   "path": "/wp-content/uploads/2025/03/hastings-shadmehry-uncontested-divorce-attorney.png",
-   "attachment_id": 4988,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/03/hastings-shadmehry-uncontested-divorce-attorney.png",
-   "bytes": 1722556,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1500,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 400,
-     "bytes": 171431
-    },
-    "large": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 879171
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 32501
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 768,
-     "bytes": 537371
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1024,
-     "bytes": 879171
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 12,
-   "ahrefs": {
-    "size": 1722556,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1722556
+    "content_type": "image/webp",
+    "bytes": 1183234
    }
   },
   {
@@ -1203,7 +738,7 @@
    "path": "/wp-content/uploads/2026/08/rhonda-smith-attorney-hastings-shadmehry-1.png",
    "attachment_id": 6471,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/08/rhonda-smith-attorney-hastings-shadmehry-1.png",
-   "bytes": 1640828,
+   "bytes": 508250,
    "mime": "image/png",
    "width": 1365,
    "height": 1365,
@@ -1216,43 +751,48 @@
    },
    "sizes": {
     "medium": {
+     "file": "rhonda-smith-attorney-hastings-shadmehry-1-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 164253
+     "bytes": 60381
     },
     "large": {
+     "file": "rhonda-smith-attorney-hastings-shadmehry-1-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 906886
+     "bytes": 298538
     },
     "thumbnail": {
+     "file": "rhonda-smith-attorney-hastings-shadmehry-1-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 27832
+     "bytes": 12173
     },
     "medium_large": {
+     "file": "rhonda-smith-attorney-hastings-shadmehry-1-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 538887
+     "bytes": 180163
     },
     "large_high": {
+     "file": "rhonda-smith-attorney-hastings-shadmehry-1-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 906886
+     "bytes": 298538
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 1640828,
+    "size": 1546741,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 1640828
+    "content_type": "image/webp",
+    "bytes": 1153296
    }
   },
   {
@@ -1260,7 +800,7 @@
    "path": "/wp-content/uploads/2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1.png",
    "attachment_id": 6484,
    "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1.png",
-   "bytes": 1629522,
+   "bytes": 512637,
    "mime": "image/png",
    "width": 1365,
    "height": 1365,
@@ -1273,308 +813,48 @@
    },
    "sizes": {
     "medium": {
+     "file": "Kristy-Seidenberg-Hastings-Shadmehry-1-400x400.png",
      "w": 400,
      "h": 400,
-     "bytes": 171176
+     "bytes": 63828
     },
     "large": {
+     "file": "Kristy-Seidenberg-Hastings-Shadmehry-1-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 925488
+     "bytes": 311837
     },
     "thumbnail": {
+     "file": "Kristy-Seidenberg-Hastings-Shadmehry-1-150x150.png",
      "w": 150,
      "h": 150,
-     "bytes": 29122
+     "bytes": 12858
     },
     "medium_large": {
+     "file": "Kristy-Seidenberg-Hastings-Shadmehry-1-768x768.png",
      "w": 768,
      "h": 768,
-     "bytes": 556707
+     "bytes": 193093
     },
     "large_high": {
+     "file": "Kristy-Seidenberg-Hastings-Shadmehry-1-1024x1024.png",
      "w": 1024,
      "h": 1024,
-     "bytes": 925488
+     "bytes": 311837
     }
    },
    "original_image": null,
    "is_featured_image_of": 1,
    "in_acf_image_fields": 0,
    "ahrefs": {
-    "size": 1629522,
+    "size": 1546227,
     "incoming_all_links": 3,
     "content_type": "image/png"
    },
    "served_to_webp_browser": {
     "status": 200,
-    "content_type": "image/png",
-    "bytes": 1629522
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/04/HS-BG-Image.png",
-   "path": "/wp-content/uploads/2025/04/HS-BG-Image.png",
-   "attachment_id": 5135,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/04/HS-BG-Image.png",
-   "bytes": 1594369,
-   "mime": "image/png",
-   "width": 1500,
-   "height": 1636,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 2
-   },
-   "sizes": {
-    "medium": {
-     "w": 367,
-     "h": 400,
-     "bytes": 116254
-    },
-    "large": {
-     "w": 939,
-     "h": 1024,
-     "bytes": 635154
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 25812
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 838,
-     "bytes": 438879
-    },
-    "1536x1536": {
-     "w": 1408,
-     "h": 1536,
-     "bytes": 1327884
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1117,
-     "bytes": 745650
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 1594369,
-    "incoming_all_links": 160,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1594369
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia.png",
-   "path": "/wp-content/uploads/2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia.png",
-   "attachment_id": 6425,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia.png",
-   "bytes": 1382724,
-   "mime": "image/png",
-   "width": 800,
-   "height": 1000,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 1,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 320,
-     "h": 400,
-     "bytes": 157249
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 32912
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 960,
-     "bytes": 787495
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 1382724,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1382724
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/06/splitting-retirement-in-divorce-hastings-shadmehry.png",
-   "path": "/wp-content/uploads/2026/06/splitting-retirement-in-divorce-hastings-shadmehry.png",
-   "attachment_id": 6433,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/06/splitting-retirement-in-divorce-hastings-shadmehry.png",
-   "bytes": 1358550,
-   "mime": "image/png",
-   "width": 800,
-   "height": 1000,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 1,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 320,
-     "h": 400,
-     "bytes": 167621
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 31729
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 960,
-     "bytes": 902612
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 1,
-   "in_acf_image_fields": 0,
-   "ahrefs": {
-    "size": 1358550,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1358550
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2026/02/forward-facing-phone-graphic.png",
-   "path": "/wp-content/uploads/2026/02/forward-facing-phone-graphic.png",
-   "attachment_id": 5965,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2026/02/forward-facing-phone-graphic.png",
-   "bytes": 1059607,
-   "mime": "image/png",
-   "width": 1080,
-   "height": 1920,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 0
-   },
-   "sizes": {
-    "medium": {
-     "w": 225,
-     "h": 400,
-     "bytes": 68494
-    },
-    "large": {
-     "w": 576,
-     "h": 1024,
-     "bytes": 291049
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 21068
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 1365,
-     "bytes": 445241
-    },
-    "1536x1536": {
-     "w": 864,
-     "h": 1536,
-     "bytes": 526491
-    },
-    "large_high": {
-     "w": 1024,
-     "h": 1820,
-     "bytes": 675545
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 11,
-   "ahrefs": {
-    "size": 1059607,
-    "incoming_all_links": 1,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1059607
-   }
-  },
-  {
-   "url": "https://hsfamilylaw.com/wp-content/uploads/2025/02/Areas-of-Practice-Experience-Picture.png",
-   "path": "/wp-content/uploads/2025/02/Areas-of-Practice-Experience-Picture.png",
-   "attachment_id": 76,
-   "file": "/www/hastingsshadmehry_450/public/wp-content/uploads/2025/02/Areas-of-Practice-Experience-Picture.png",
-   "bytes": 1013944,
-   "mime": "image/png",
-   "width": 814,
-   "height": 767,
-   "is_scaled_variant": false,
-   "refs": {
-    "post_content": 0,
-    "postmeta": 0,
-    "options": 0,
-    "thumbnail_refs": 3
-   },
-   "sizes": {
-    "medium": {
-     "w": 400,
-     "h": 377,
-     "bytes": 205369
-    },
-    "thumbnail": {
-     "w": 150,
-     "h": 150,
-     "bytes": 36433
-    },
-    "medium_large": {
-     "w": 768,
-     "h": 724,
-     "bytes": 682328
-    }
-   },
-   "original_image": null,
-   "is_featured_image_of": 0,
-   "in_acf_image_fields": 21,
-   "ahrefs": {
-    "size": 1013944,
-    "incoming_all_links": 2,
-    "content_type": "image/png"
-   },
-   "served_to_webp_browser": {
-    "status": 200,
-    "content_type": "image/png",
-    "bytes": 1013944
+    "content_type": "image/webp",
+    "bytes": 1103550
    }
   }
  ],
@@ -1587,7 +867,9 @@
    "tag": "<img class=\" wp-image-222 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/02/Divorce-and-Family-Law-Attorney-background-1-400x159.png\" alt=\"\" width=\"757\" height=\"301\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?page_id=4739",
    "post_type": "page",
-   "title": "Understanding Prenuptial Agreements: Securing Your Future"
+   "post_status": "draft",
+   "title": "Understanding Prenuptial Agreements: Securing Your Future",
+   "tier": "D"
   },
   {
    "post_id": 4739,
@@ -1597,7 +879,9 @@
    "tag": "<img class=\" wp-image-84 aligncenter\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/02/stock-photo-happy-family-at-home-mother-father-two-children-daughters-relaxing-on-sofa-indoor-mom-dad-parents-2476963763-400x206.png\" alt=\"\" width=\"902\" height=\"464\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?page_id=4739",
    "post_type": "page",
-   "title": "Understanding Prenuptial Agreements: Securing Your Future"
+   "post_status": "draft",
+   "title": "Understanding Prenuptial Agreements: Securing Your Future",
+   "tier": "D"
   },
   {
    "post_id": 4739,
@@ -1607,7 +891,9 @@
    "tag": "<img class=\" wp-image-2680 alignleft\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/05/collaborative-divorce-mediation-waggoner-hastings-400x267.jpg\" alt=\"\" width=\"673\" height=\"449\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?page_id=4739",
    "post_type": "page",
-   "title": "Understanding Prenuptial Agreements: Securing Your Future"
+   "post_status": "draft",
+   "title": "Understanding Prenuptial Agreements: Securing Your Future",
+   "tier": "D"
   },
   {
    "post_id": 5925,
@@ -1617,7 +903,9 @@
    "tag": "<img class=\"aligncenter wp-image-5928 size-medium\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/alimony-qualification-blog-hastings-400x390.png\" alt=\"\" width=\"400\" height=\"390\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5925",
    "post_type": "post",
-   "title": "Navigating Alimony Modification in Georgia: What You Need to Know"
+   "post_status": "draft",
+   "title": "Navigating Alimony Modification in Georgia: What You Need to Know",
+   "tier": "D"
   },
   {
    "post_id": 5925,
@@ -1627,7 +915,9 @@
    "tag": "<img class=\"wp-image-5941 alignleft\" style=\"border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,0.18);\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/shutterstock_2288701443-400x267.jpg\" alt=\"\" width=\"645\" height=\"431\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5925",
    "post_type": "post",
-   "title": "Navigating Alimony Modification in Georgia: What You Need to Know"
+   "post_status": "draft",
+   "title": "Navigating Alimony Modification in Georgia: What You Need to Know",
+   "tier": "D"
   },
   {
    "post_id": 5932,
@@ -1637,7 +927,9 @@
    "tag": "<img class=\"aligncenter wp-image-5933 size-medium\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/dividing-401k-blog-hastings-400x304.png\" alt=\"\" width=\"400\" height=\"304\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5932",
    "post_type": "post",
-   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry"
+   "post_status": "draft",
+   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry",
+   "tier": "D"
   },
   {
    "post_id": 5932,
@@ -1647,7 +939,9 @@
    "tag": "<img class=\" wp-image-5957 alignleft\" style=\"border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,0.18);\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/03/Dividing-401K-and-Retirement-Accounts-in-a-Georgia-Divorce-Hastings-Shadmehry-400x267.jpg\" alt=\"\" width=",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5932",
    "post_type": "post",
-   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry"
+   "post_status": "draft",
+   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry",
+   "tier": "D"
   },
   {
    "post_id": 5935,
@@ -1657,347 +951,9 @@
    "tag": "<img class=\" wp-image-5131 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/04/legitimation-and-paternity-hastings-shadmehry-400x266.jpg\" alt=\"\" width=\"543\" height=\"361\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5935",
    "post_type": "post",
-   "title": "Change of Custody in Georgia: When a Child’s Choice Flips Child Support"
-  },
-  {
-   "post_id": 2432,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-holidays-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "<img class=\"alignright wp-image-2434\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-holidays-waggoner-hastings.jpg\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/dealing-divorce-parenting-holidays/",
-   "post_type": "post",
-   "title": "Dealing With Divorce and Parenting Over the Holidays"
-  },
-  {
-   "post_id": 2433,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-new-year-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "<img class=\"alignright wp-image-2436\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-new-year-waggoner-hastings.jpg\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/starting-new-year-divorce/",
-   "post_type": "post",
-   "title": "Starting the New Year After Divorce"
-  },
-  {
-   "post_id": 2468,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-mediation-attorney-waggoner.jpg",
-   "alt": null,
-   "tag": "<img class=\"alignright wp-image-2471\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-mediation-attorney-waggoner.jpg\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/mediation-attorneys-make-divorce-easier/",
-   "post_type": "post",
-   "title": "Mediation attorneys Make Divorce Easier"
-  },
-  {
-   "post_id": 2469,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-attorney-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "<img class=\"alignright wp-image-2474\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-attorney-waggoner-hastings.jpg\" width=\"350\" height=\"233\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorcing-someone-wont-let-go/",
-   "post_type": "post",
-   "title": "Divorcing Someone Who Won’t Let Go"
-  },
-  {
-   "post_id": 2477,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/04/mediation-vs-collaboritive-divorce-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright wp-image-2479\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/04/mediation-vs-collaboritive-divorce-waggoner-hastings.jpg\" alt=\"\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/difference-collaboration-mediation-attorneys/",
-   "post_type": "post",
-   "title": "The Difference Between Collaboration and Mediation Attorneys"
-  },
-  {
-   "post_id": 2478,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2017/04/divorce-attorney-300x197.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2482\" src=\"/wp-content/uploads/2017/04/divorce-attorney-300x197.jpg\" alt=\"\" width=\"300\" height=\"197\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/need-attorney-start-divorce-proceedings/",
-   "post_type": "post",
-   "title": "Why You Need an Attorney Before You Start Divorce Proceedings"
-  },
-  {
-   "post_id": 2487,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2017/06/co-parenting-over-summer-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2488\" src=\"/wp-content/uploads/2017/06/co-parenting-over-summer-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/co-parenting-schedules-summer-break/",
-   "post_type": "post",
-   "title": "Co-Parenting Schedules for the Summer Break"
-  },
-  {
-   "post_id": 2492,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2017/08/mediation-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2494\" src=\"/wp-content/uploads/2017/08/mediation-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/whether-choose-judge-mediation-attorney-divorce/",
-   "post_type": "post",
-   "title": "Choosing a Judge or a Mediation Attorney for Divorce"
-  },
-  {
-   "post_id": 2516,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2017/11/divorce-mediation-families-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2518\" src=\"/wp-content/uploads/2017/11/divorce-mediation-families-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-mediation-helps-children/",
-   "post_type": "post",
-   "title": "How Divorce Mediation Helps The Children"
-  },
-  {
-   "post_id": 2517,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/11/alpharetta-divorce-mediation-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img class=\"aligncenter wp-image-2520 size-full\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/11/alpharetta-divorce-mediation-waggoner-hastings.jpg\" alt=\"\" width=\"1000\" height=\"333\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/discuss-divorce-mediation/",
-   "post_type": "post",
-   "title": "What to Discuss During Divorce Mediation"
-  },
-  {
-   "post_id": 2536,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2017/12/holiday-divorce-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2537\" src=\"/wp-content/uploads/2017/12/holiday-divorce-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/threat-divorce-common-holidays/",
-   "post_type": "post",
-   "title": "Is the Threat of Divorce More Common After the Holidays?"
-  },
-  {
-   "post_id": 2552,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2018/04/how-to-make-divorce-easier-300x199.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2555\" src=\"/wp-content/uploads/2018/04/how-to-make-divorce-easier-300x199.jpg\" alt=\"\" width=\"300\" height=\"199\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/tips-make-divorce-process-easier/",
-   "post_type": "post",
-   "title": "Tips to Make the Divorce Process Easier"
-  },
-  {
-   "post_id": 2561,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2018/05/divorce-mediation-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2563\" src=\"/wp-content/uploads/2018/05/divorce-mediation-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-mediation-effective-negotiation-tips/",
-   "post_type": "post",
-   "title": "Divorce Mediation: Effective Negotiation Tips"
-  },
-  {
-   "post_id": 2588,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2018/10/seperation-agreement-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2589\" src=\"/wp-content/uploads/2018/10/seperation-agreement-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/security-separation-agreements/",
-   "post_type": "post",
-   "title": "The Emotional and Financial Security of Separation Agreements"
-  },
-  {
-   "post_id": 2619,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2018/12/collaborative-divorce-team-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright size-medium wp-image-2620\" src=\"/wp-content/uploads/2018/12/collaborative-divorce-team-waggoner-hastings-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/understanding-roles-collaborative-divorce-team/",
-   "post_type": "post",
-   "title": "Understanding the Roles of the Collaborative Divorce Team"
-  },
-  {
-   "post_id": 2632,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/prenup-vs-postnup-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/prenup-vs-postnup-waggoner-hastings.jpg\" alt=\"\" class=\"wp-image-2634\"/>",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/the-difference-between-postnup-and-prenup-agreements/",
-   "post_type": "post",
-   "title": "The Difference Between Postnup and Prenup Agreements"
-  },
-  {
-   "post_id": 2633,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/collaborative-divorce-help-children-cope.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-2636\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/collaborative-divorce-help-children-cope.jpg\" alt=\"\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/how-collaborative-divorce-helps-children-cope/",
-   "post_type": "post",
-   "title": "How Collaborative Divorce Helps Children Cope"
-  },
-  {
-   "post_id": 2660,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2019/03/family-law-issues-waggoner-hastings-300x200.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-2662\" src=\"/wp-content/uploads/2019/03/family-law-issues-waggoner-hastings-300x200.jpg\" alt=\"\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/avoiding-disputes-in-family-law-matters/",
-   "post_type": "post",
-   "title": "Avoiding Disputes in Family Law Matters"
-  },
-  {
-   "post_id": 2669,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/03/family-law-mediation-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/03/family-law-mediation-waggoner-hastings.jpg\" alt=\"\" class=\"wp-image-2670\"/>",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/what-to-do-if-you-dont-want-a-divorce/",
-   "post_type": "post",
-   "title": "What to do If You Don’t Want a Divorce?"
-  },
-  {
-   "post_id": 2678,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/05/collaborative-divorce-mediation-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/05/collaborative-divorce-mediation-waggoner-hastings.jpg\" alt=\"\" class=\"wp-image-2680\"/>",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/settle-divorce-collaborative-divorce-mediation/",
-   "post_type": "post",
-   "title": "Settle Your Divorce Outside of Court with Collaborative Divorce Mediation"
-  },
-  {
-   "post_id": 2692,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/09/divorce-mediation-waggoner-hastings.jpg",
-   "alt": "",
-   "tag": "<img src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/09/divorce-mediation-waggoner-hastings.jpg\" alt=\"\" class=\"wp-image-2693\" width=\"600\" height=\"667\"/>",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-mediation-prevent-litigation/",
-   "post_type": "post",
-   "title": "Divorce Mediation Can Prevent Litigation"
-  },
-  {
-   "post_id": 2722,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2020/03/COVID-19-Response-Plan-Waggoner-Hastings-1024x536.png",
-   "alt": "",
-   "tag": "<img class=\"wp-image-2723\" src=\"/wp-content/uploads/2020/03/COVID-19-Response-Plan-Waggoner-Hastings-1024x536.png\" alt=\"\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/a-note-to-our-clients-about-covid-19/",
-   "post_type": "post",
-   "title": "A Note to Our Clients about Covid-19"
-  },
-  {
-   "post_id": 2742,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2020/09/NYT_PowerLawyer-556x1024.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-2743\" src=\"/wp-content/uploads/2020/09/NYT_PowerLawyer-556x1024.jpg\" alt=\"\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/andrea-hastings-lawyer-of-distinction/",
-   "post_type": "post",
-   "title": "Congratulations to Andrea Hastings for Being Recognized as one of the Lawyers of Distinction’s “2020 Power Lawyers”"
-  },
-  {
-   "post_id": 4349,
-   "where": "post_content",
-   "src": "/wp-content/uploads/2024/11/NW8sFJew-1024x683.jpg",
-   "alt": "",
-   "tag": "<img class=\"aligncenter size-large wp-image-4544\" src=\"/wp-content/uploads/2024/11/NW8sFJew-1024x683.jpg\" alt=\"\" width=\"1024\" height=\"683\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2024-woman-of-the-moment/",
-   "post_type": "post",
-   "title": "Hastings Shadmehry Partners Honored as “2024 Woman of the Moment” by The Atlantan Magazine"
-  },
-  {
-   "post_id": 5663,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/10/georgia-back-to-school-parenting-plan-hs-family-law.jpg",
-   "alt": "",
-   "tag": "<img class=\" wp-image-5664 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/10/georgia-back-to-school-parenting-plan-hs-family-law.jpg\" alt=\"\" width=\"673\" height=\"449\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/coparenting-back-to-school/",
-   "post_type": "post",
-   "title": "Back-to-School and Custody Schedules: Tips for Co-Parents in Georgia"
-  },
-  {
-   "post_id": 5553,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-26-400x267.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright\" style=\"font-size: 16px;\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-26-400x267.jpg\" alt=\"\" width=\"431\" height=\"288\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2026-child-support/",
-   "post_type": "post",
-   "title": "2026 Georgia Child Support Law Changes Guide"
-  },
-  {
-   "post_id": 5553,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-35-400x267.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-5557 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-35-400x267.jpg\" alt=\"\" width=\"582\" height=\"389\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2026-child-support/",
-   "post_type": "post",
-   "title": "2026 Georgia Child Support Law Changes Guide"
-  },
-  {
-   "post_id": 5553,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-36-400x266.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-5558 alignleft\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-36-400x266.jpg\" alt=\"\" width=\"549\" height=\"365\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2026-child-support/",
-   "post_type": "post",
-   "title": "2026 Georgia Child Support Law Changes Guide"
-  },
-  {
-   "post_id": 5553,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-41-400x245.jpg",
-   "alt": "",
-   "tag": "<img class=\"wp-image-5559 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-41-400x245.jpg\" alt=\"\" width=\"651\" height=\"399\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2026-child-support/",
-   "post_type": "post",
-   "title": "2026 Georgia Child Support Law Changes Guide"
-  },
-  {
-   "post_id": 5553,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-2-400x267.jpg",
-   "alt": "",
-   "tag": "<img class=\" wp-image-5540 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-2-400x267.jpg\" alt=\"\" width=\"463\" height=\"309\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2026-child-support/",
-   "post_type": "post",
-   "title": "2026 Georgia Child Support Law Changes Guide"
-  },
-  {
-   "post_id": 5599,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/decor-logo.svg",
-   "alt": "",
-   "tag": "<img class=\" wp-image-5025 attachment-svg alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/decor-logo.svg\" alt=\"\" width=\"369\" height=\"323\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/no-fault-divorce-georgia/",
-   "post_type": "post",
-   "title": "No-Fault Divorce in Alpharetta, Georgia: Why It Matters and What It Really Looks Like"
-  },
-  {
-   "post_id": 5369,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys-400x400.png",
-   "alt": "",
-   "tag": "<img class=\"size-medium wp-image-5018 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys-400x400.png\" alt=\"\" width=\"400\" height=\"400\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/how-much-does-a-divorce-cost-in-georgia-in-2026/",
-   "post_type": "post",
-   "title": "How Much Does a Divorce Cost in Georgia in 2026?"
-  },
-  {
-   "post_id": 5369,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/pexels-karolina-grabowska-7876050-400x267.jpg",
-   "alt": "",
-   "tag": "<img class=\"size-medium wp-image-4895 alignleft\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/pexels-karolina-grabowska-7876050-400x267.jpg\" alt=\"\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/how-much-does-a-divorce-cost-in-georgia-in-2026/",
-   "post_type": "post",
-   "title": "How Much Does a Divorce Cost in Georgia in 2026?"
-  },
-  {
-   "post_id": 5879,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/MaliAndAndrea_11240-Edit-1024x683.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignright wp-image-5894\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/MaliAndAndrea_11240-Edit-1024x683.jpg\" alt=\"\" width=\"900\" height=\"600\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/isle-of-dogs/",
-   "post_type": "post",
-   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine"
+   "post_status": "draft",
+   "title": "Change of Custody in Georgia: When a Child’s Choice Flips Child Support",
+   "tier": "D"
   },
   {
    "post_id": 5879,
@@ -2007,7 +963,9 @@
    "tag": "<img src=\"./Isle of Dogs_files/insync\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/isle-of-dogs/",
    "post_type": "post",
-   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine"
+   "post_status": "publish",
+   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine",
+   "tier": "A"
   },
   {
    "post_id": 5879,
@@ -2017,7 +975,9 @@
    "tag": "<img class=\"pp-cp-pix\" style=\"display: none;\" src=\"./Isle of Dogs_files/sr\" alt=\"\" width=\"0\" height=\"0\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/isle-of-dogs/",
    "post_type": "post",
-   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine"
+   "post_status": "publish",
+   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine",
+   "tier": "B"
   },
   {
    "post_id": 5879,
@@ -2027,27 +987,9 @@
    "tag": "<img class=\"pp-cp-pix\" style=\"display: none;\" src=\"./Isle of Dogs_files/rtset\" alt=\"\" width=\"0\" height=\"0\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/isle-of-dogs/",
    "post_type": "post",
-   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine"
-  },
-  {
-   "post_id": 6338,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/05/ASD_Spring_2026_Hastings_Shadmehry_Family_Law_2-300x400.jpg",
-   "alt": "",
-   "tag": "<img class=\"alignleft size-medium wp-image-6340\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/05/ASD_Spring_2026_Hastings_Shadmehry_Family_Law_2-300x400.jpg\" alt=\"\" width=\"300\" height=\"400\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/atlanta-style-design-2026/",
-   "post_type": "post",
-   "title": "Practicing Family Law with Tenacity and Compassion – Atlanta Style & Design Magazine"
-  },
-  {
-   "post_id": 6549,
-   "where": "post_content",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/10/Hastings-Shadmehry-Military-Parenting-Plan-400x267.jpg",
-   "alt": "",
-   "tag": "<img class=\"size-medium wp-image-6550 alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/10/Hastings-Shadmehry-Military-Parenting-Plan-400x267.jpg\" alt=\"\" width=\"400\" height=\"267\" />",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/military-parenting-plans-georgia/",
-   "post_type": "post",
-   "title": "Military Parenting Plans in Georgia: Planning for the Orders You Don’t Have Yet"
+   "post_status": "publish",
+   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine",
+   "tier": "B"
   },
   {
    "post_id": 5583,
@@ -2057,367 +999,9 @@
    "tag": "<img class=\"wp-image-5025 attachment-svg alignright\" src=\"https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/decor-logo.svg\" alt=\"\" width=\"374\" height=\"328\" />",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?page_id=5583",
    "post_type": "page",
-   "title": "Private: No Fault Divorce"
-  },
-  {
-   "post_id": 12,
-   "where": "featured_image(attachment 4971)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/hastings-shadmehry-divorce-ft-image.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce/",
-   "post_type": "page",
-   "title": "Divorce"
-  },
-  {
-   "post_id": 16,
-   "where": "featured_image(attachment 5145)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/04/divorce-mediation-services-hastings-shadmehry-scaled-e1743700374314.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/mediation/",
-   "post_type": "page",
-   "title": "Mediation"
-  },
-  {
-   "post_id": 89,
-   "where": "featured_image(attachment 6161)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/andrea-dyer-hastings-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/andrea-dyer-hastings/",
-   "post_type": "page",
-   "title": "Andrea Dyer Hastings"
-  },
-  {
-   "post_id": 92,
-   "where": "featured_image(attachment 6168)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/mali-shadmehry-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/mali-shadmehry/",
-   "post_type": "page",
-   "title": "Mali C. Shadmehry"
-  },
-  {
-   "post_id": 104,
-   "where": "featured_image(attachment 6174)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/lisa-malas-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/lisa-malas/",
-   "post_type": "page",
-   "title": "Lisa Malas"
-  },
-  {
-   "post_id": 2376,
-   "where": "featured_image(attachment 2378)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/06/mom-or-dad.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-affects-children-law/",
-   "post_type": "post",
-   "title": "How Divorce Affects Children in Law"
-  },
-  {
-   "post_id": 4349,
-   "where": "featured_image(attachment 4544)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2024/11/NW8sFJew-scaled-1.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/2024-woman-of-the-moment/",
-   "post_type": "post",
-   "title": "Hastings Shadmehry Partners Honored as “2024 Woman of the Moment” by The Atlantan Magazine"
-  },
-  {
-   "post_id": 4715,
-   "where": "featured_image(attachment 5082)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/04/alpharetta-family-law-scaled-e1743636816606.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/family-law/",
-   "post_type": "page",
-   "title": "Family Law"
-  },
-  {
-   "post_id": 5160,
-   "where": "featured_image(attachment 6190)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/madison-alexander-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/madison-alexander/",
-   "post_type": "page",
-   "title": "Madison Alexander"
-  },
-  {
-   "post_id": 5266,
-   "where": "featured_image(attachment 6177)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/elizabeth-findley-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/elizabeth-findley/",
-   "post_type": "page",
-   "title": "Elizabeth Findley"
-  },
-  {
-   "post_id": 5369,
-   "where": "featured_image(attachment 5018)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/03/property-division-hastings-shadmehry-divorce-attorneys.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/how-much-does-a-divorce-cost-in-georgia-in-2026/",
-   "post_type": "post",
-   "title": "How Much Does a Divorce Cost in Georgia in 2026?"
-  },
-  {
-   "post_id": 2742,
-   "where": "featured_image(attachment 2743)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2020/09/NYT_PowerLawyer.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/andrea-hastings-lawyer-of-distinction/",
-   "post_type": "post",
-   "title": "Congratulations to Andrea Hastings for Being Recognized as one of the Lawyers of Distinction’s “2020 Power Lawyers”"
-  },
-  {
-   "post_id": 2722,
-   "where": "featured_image(attachment 2723)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2020/03/COVID-19-Response-Plan-Waggoner-Hastings.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/a-note-to-our-clients-about-covid-19/",
-   "post_type": "post",
-   "title": "A Note to Our Clients about Covid-19"
-  },
-  {
-   "post_id": 2692,
-   "where": "featured_image(attachment 2693)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/09/divorce-mediation-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-mediation-prevent-litigation/",
-   "post_type": "post",
-   "title": "Divorce Mediation Can Prevent Litigation"
-  },
-  {
-   "post_id": 2678,
-   "where": "featured_image(attachment 2680)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/05/collaborative-divorce-mediation-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/settle-divorce-collaborative-divorce-mediation/",
-   "post_type": "post",
-   "title": "Settle Your Divorce Outside of Court with Collaborative Divorce Mediation"
-  },
-  {
-   "post_id": 2669,
-   "where": "featured_image(attachment 2670)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/03/family-law-mediation-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/what-to-do-if-you-dont-want-a-divorce/",
-   "post_type": "post",
-   "title": "What to do If You Don’t Want a Divorce?"
-  },
-  {
-   "post_id": 2660,
-   "where": "featured_image(attachment 2662)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/03/family-law-issues-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/avoiding-disputes-in-family-law-matters/",
-   "post_type": "post",
-   "title": "Avoiding Disputes in Family Law Matters"
-  },
-  {
-   "post_id": 2633,
-   "where": "featured_image(attachment 2636)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/collaborative-divorce-help-children-cope.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/how-collaborative-divorce-helps-children-cope/",
-   "post_type": "post",
-   "title": "How Collaborative Divorce Helps Children Cope"
-  },
-  {
-   "post_id": 2632,
-   "where": "featured_image(attachment 2634)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2019/01/prenup-vs-postnup-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/the-difference-between-postnup-and-prenup-agreements/",
-   "post_type": "post",
-   "title": "The Difference Between Postnup and Prenup Agreements"
-  },
-  {
-   "post_id": 2619,
-   "where": "featured_image(attachment 2620)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2018/12/collaborative-divorce-team-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/understanding-roles-collaborative-divorce-team/",
-   "post_type": "post",
-   "title": "Understanding the Roles of the Collaborative Divorce Team"
-  },
-  {
-   "post_id": 2588,
-   "where": "featured_image(attachment 2589)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2018/10/seperation-agreement-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/security-separation-agreements/",
-   "post_type": "post",
-   "title": "The Emotional and Financial Security of Separation Agreements"
-  },
-  {
-   "post_id": 2552,
-   "where": "featured_image(attachment 2555)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2018/04/how-to-make-divorce-easier.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/tips-make-divorce-process-easier/",
-   "post_type": "post",
-   "title": "Tips to Make the Divorce Process Easier"
-  },
-  {
-   "post_id": 2536,
-   "where": "featured_image(attachment 2537)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/12/holiday-divorce-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/threat-divorce-common-holidays/",
-   "post_type": "post",
-   "title": "Is the Threat of Divorce More Common After the Holidays?"
-  },
-  {
-   "post_id": 2517,
-   "where": "featured_image(attachment 2520)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/11/alpharetta-divorce-mediation-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/discuss-divorce-mediation/",
-   "post_type": "post",
-   "title": "What to Discuss During Divorce Mediation"
-  },
-  {
-   "post_id": 2516,
-   "where": "featured_image(attachment 2518)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/11/divorce-mediation-families-waggoner-hastings-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-mediation-helps-children/",
-   "post_type": "post",
-   "title": "How Divorce Mediation Helps The Children"
-  },
-  {
-   "post_id": 2492,
-   "where": "featured_image(attachment 2494)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/08/mediation-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/whether-choose-judge-mediation-attorney-divorce/",
-   "post_type": "post",
-   "title": "Choosing a Judge or a Mediation Attorney for Divorce"
-  },
-  {
-   "post_id": 2487,
-   "where": "featured_image(attachment 2488)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/06/co-parenting-over-summer-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/co-parenting-schedules-summer-break/",
-   "post_type": "post",
-   "title": "Co-Parenting Schedules for the Summer Break"
-  },
-  {
-   "post_id": 2478,
-   "where": "featured_image(attachment 2482)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/04/divorce-attorney.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/need-attorney-start-divorce-proceedings/",
-   "post_type": "post",
-   "title": "Why You Need an Attorney Before You Start Divorce Proceedings"
-  },
-  {
-   "post_id": 2477,
-   "where": "featured_image(attachment 2479)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/04/mediation-vs-collaboritive-divorce-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/difference-collaboration-mediation-attorneys/",
-   "post_type": "post",
-   "title": "The Difference Between Collaboration and Mediation Attorneys"
-  },
-  {
-   "post_id": 2469,
-   "where": "featured_image(attachment 2474)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-attorney-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorcing-someone-wont-let-go/",
-   "post_type": "post",
-   "title": "Divorcing Someone Who Won’t Let Go"
-  },
-  {
-   "post_id": 2468,
-   "where": "featured_image(attachment 2471)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2017/03/divorce-mediation-attorney-waggoner.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/mediation-attorneys-make-divorce-easier/",
-   "post_type": "post",
-   "title": "Mediation attorneys Make Divorce Easier"
-  },
-  {
-   "post_id": 2433,
-   "where": "featured_image(attachment 2436)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-new-year-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/starting-new-year-divorce/",
-   "post_type": "post",
-   "title": "Starting the New Year After Divorce"
-  },
-  {
-   "post_id": 2432,
-   "where": "featured_image(attachment 2434)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/divorce-holidays-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/dealing-divorce-parenting-holidays/",
-   "post_type": "post",
-   "title": "Dealing With Divorce and Parenting Over the Holidays"
-  },
-  {
-   "post_id": 2427,
-   "where": "featured_image(attachment 2428)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/025_Legal_graphic-9af4cbce.jpeg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/andrea-hastings-named-2016-legal-elite-georgia-trend/",
-   "post_type": "post",
-   "title": "Andrea Hastings Named a 2016 Legal Elite by Georgia Trend"
-  },
-  {
-   "post_id": 2422,
-   "where": "featured_image(attachment 2425)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/first-christmas-after-divorce.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/handling-first-holidays-divorce/",
-   "post_type": "post",
-   "title": "Handling Your First Holidays After a Divorce, with Children"
-  },
-  {
-   "post_id": 2421,
-   "where": "featured_image(attachment 2423)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2016/12/co-parenting-over-the-holidays-waggoner-hastings.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/tips-alpharetta-family-law-attorney-co-parenting-holidays/",
-   "post_type": "post",
-   "title": "Tips from Alpharetta Family Law Attorney on Co-Parenting Over the Holidays"
+   "post_status": "private",
+   "title": "Private: No Fault Divorce",
+   "tier": "D"
   },
   {
    "post_id": 2405,
@@ -2427,187 +1011,9 @@
    "tag": "_wp_attachment_image_alt empty",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=2405",
    "post_type": "post",
-   "title": "Mediation Attorneys Enable Co-Parenting After Divorce"
-  },
-  {
-   "post_id": 2368,
-   "where": "featured_image(attachment 5100)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/04/20230127-IMG_8217-scaled-e1743690119419.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/andrea-hastings-top-one-percent-2016/",
-   "post_type": "post",
-   "title": "Andrea Hastings Selected as 2016 Member of the Nation’s Top One Percent by NADC"
-  },
-  {
-   "post_id": 2263,
-   "where": "featured_image(attachment 310)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/02/Divorce-and-Family-Law-Attorney-background-4.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/andrea-hastings-top-one-percent/",
-   "post_type": "post",
-   "title": "Press Release: Attorney Andrea Hastings is Now a Member of NADC’s Nation’s Top One Percent"
-  },
-  {
-   "post_id": 1922,
-   "where": "featured_image(attachment 5541)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-3-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/live-work-downtown-atlanta-area/",
-   "post_type": "post",
-   "title": "Live or Work in the Downtown Atlanta Area?"
-  },
-  {
-   "post_id": 1916,
-   "where": "featured_image(attachment 5133)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/04/Family-Violence-and-Restraining-Orders-hastings-shadmehry-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/makes-collaborative-lawyer/",
-   "post_type": "post",
-   "title": "What Makes a Collaborative Lawyer"
-  },
-  {
-   "post_id": 1920,
-   "where": "featured_image(attachment 5542)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-4-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/just-fine-thanks/",
-   "post_type": "post",
-   "title": "Just Fine, Thanks"
-  },
-  {
-   "post_id": 1910,
-   "where": "featured_image(attachment 5543)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-5-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/whats-difference-options-divorcing-couples/",
-   "post_type": "post",
-   "title": "What's the Difference? Options for Divorcing Couples"
-  },
-  {
-   "post_id": 1925,
-   "where": "featured_image(attachment 5544)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-6-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/problem-solvers-warriors-2/",
-   "post_type": "post",
-   "title": "Problem Solvers, Not Warriors"
-  },
-  {
-   "post_id": 1908,
-   "where": "featured_image(attachment 5545)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-7-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/problem-solvers-warriors/",
-   "post_type": "post",
-   "title": "Doing the Right Thing, Even When it Hurts"
-  },
-  {
-   "post_id": 1906,
-   "where": "featured_image(attachment 5546)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-8-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/divorce-doesnt-destroy-business/",
-   "post_type": "post",
-   "title": "Divorce Doesn't Have to Destroy Your Business"
-  },
-  {
-   "post_id": 1904,
-   "where": "featured_image(attachment 5547)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-9-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/whose-life-anyway/",
-   "post_type": "post",
-   "title": "Whose Life is it Anyway?"
-  },
-  {
-   "post_id": 1902,
-   "where": "featured_image(attachment 5548)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-10-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/everybody-needs-family/",
-   "post_type": "post",
-   "title": "Everybody Needs a Family"
-  },
-  {
-   "post_id": 1899,
-   "where": "featured_image(attachment 5549)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/09/HS-Blog-Featured-Image-11-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/changing-times-changing-families-2/",
-   "post_type": "post",
-   "title": "Changing Times, Changing Families"
-  },
-  {
-   "post_id": 5663,
-   "where": "featured_image(attachment 5664)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/10/georgia-back-to-school-parenting-plan-hs-family-law.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/coparenting-back-to-school/",
-   "post_type": "post",
-   "title": "Back-to-School and Custody Schedules: Tips for Co-Parents in Georgia"
-  },
-  {
-   "post_id": 5680,
-   "where": "featured_image(attachment 5682)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2025/11/Hastings-Shadmehry-November-Inn-of-Court-Meeting-3.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/hastings-shadmehry-november-meeting-inn-of-court/",
-   "post_type": "post",
-   "title": "Hastings Shadmehry Hosts the November meeting of the Marion T. Pope Inn of Court"
-  },
-  {
-   "post_id": 5744,
-   "where": "featured_image(attachment 6179)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/cathy-cooper-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/cathy-cooper/",
-   "post_type": "page",
-   "title": "Cathy Cooper"
-  },
-  {
-   "post_id": 5760,
-   "where": "featured_image(attachment 6180)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/lily-lutton-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/lily-lutton/",
-   "post_type": "page",
-   "title": "Lily Lutton"
-  },
-  {
-   "post_id": 5783,
-   "where": "featured_image(attachment 6188)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/nicole-crites-family-law-and-divorce-attorney.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/nicole-crites/",
-   "post_type": "page",
-   "title": "Nicole Crites"
-  },
-  {
-   "post_id": 5879,
-   "where": "featured_image(attachment 5894)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/02/MaliAndAndrea_11240-Edit-scaled.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/isle-of-dogs/",
-   "post_type": "post",
-   "title": "“Isle of Dogs”, from 2026 SuperLawyers Magazine"
+   "post_status": "draft",
+   "title": "Mediation Attorneys Enable Co-Parenting After Divorce",
+   "tier": "D"
   },
   {
    "post_id": 5935,
@@ -2617,7 +1023,9 @@
    "tag": "_wp_attachment_image_alt empty",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5935",
    "post_type": "post",
-   "title": "Change of Custody in Georgia: When a Child’s Choice Flips Child Support"
+   "post_status": "draft",
+   "title": "Change of Custody in Georgia: When a Child’s Choice Flips Child Support",
+   "tier": "D"
   },
   {
    "post_id": 5932,
@@ -2627,7 +1035,9 @@
    "tag": "_wp_attachment_image_alt empty",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5932",
    "post_type": "post",
-   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry"
+   "post_status": "draft",
+   "title": "Dividing 401K and Retirement Accounts in a Georgia Divorce – Hastings Shadmehry",
+   "tier": "D"
   },
   {
    "post_id": 5925,
@@ -2637,62 +1047,14 @@
    "tag": "_wp_attachment_image_alt empty",
    "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/?p=5925",
    "post_type": "post",
-   "title": "Navigating Alimony Modification in Georgia: What You Need to Know"
-  },
-  {
-   "post_id": 6121,
-   "where": "featured_image(attachment 6197)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/04/sarah-price-family-law-and-divorce-attorney-1-e1781711488599.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/sarah-price/",
-   "post_type": "page",
-   "title": "Sarah Price Smith"
-  },
-  {
-   "post_id": 6411,
-   "where": "featured_image(attachment 6471)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/08/rhonda-smith-attorney-hastings-shadmehry-1.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/rhonda-smith/",
-   "post_type": "page",
-   "title": "Rhonda Smith"
-  },
-  {
-   "post_id": 6481,
-   "where": "featured_image(attachment 6484)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/08/Kristy-Seidenberg-Hastings-Shadmehry-1.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/kristy-seidenberg/",
-   "post_type": "page",
-   "title": "Kristy Seidenberg"
-  },
-  {
-   "post_id": 6491,
-   "where": "featured_image(attachment 6496)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/09/forward-facing-selfcare-during-divorce-hastings-shadmehry.jpg",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/self-care-during-divorce/",
-   "post_type": "post",
-   "title": "Self-Care During Divorce: How to Stay Forward Facing"
-  },
-  {
-   "post_id": 6511,
-   "where": "featured_image(attachment 6512)",
-   "src": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/wp-content/uploads/2026/09/Jordan-Alexis-Fox-Attorney-Hastings-Shadmehry.png",
-   "alt": null,
-   "tag": "_wp_attachment_image_alt empty",
-   "page_url": "https://stg-hastingsshadmehry-hsfamilystg.kinsta.cloud/firm/jordan-alexis-fox/",
-   "post_type": "page",
-   "title": "Jordan Alexis Fox"
+   "post_status": "draft",
+   "title": "Navigating Alimony Modification in Georgia: What You Need to Know",
+   "tier": "D"
   }
  ],
  "broken": [],
  "slug": "hsfamilylaw",
  "crawl": "2026-10-29",
  "target": "staging",
- "generated": "2026-10-29-1425"
+ "generated": "2026-10-29-1703"
 }

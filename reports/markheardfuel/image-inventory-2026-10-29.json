@@ -1,0 +1,558 @@
+{
+ "home_host": "stg-markheardfuel-markheardstg.kinsta.cloud",
+ "env": {
+  "uploads_basedir": "/www/markheardfuel_403/public/wp-content/uploads",
+  "uploads_baseurl": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 7.1.2-31 Q8 x86_64 8309dc92a:20260903 https://imagemagick.org",
+  "gd": "2.3.3",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": "/usr/bin/cwebp",
+   "jpegoptim": null,
+   "convert": "/usr/bin/convert",
+   "magick": "/usr/bin/magick"
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "active",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent",
+  "webp-express-config": "config.json not found",
+  "webp-express-converted-files": {
+   "separate-folder": 195,
+   "mingled-in-uploads": 1
+  }
+ },
+ "files": [
+  {
+   "url": "https://markheardfuel.com/wp-content/uploads/2024/12/mark-heard-fuel-company-home-page-image.jpg",
+   "path": "/wp-content/uploads/2024/12/mark-heard-fuel-company-home-page-image.jpg",
+   "attachment_id": 564,
+   "file": "/www/markheardfuel_403/public/wp-content/uploads/2024/12/mark-heard-fuel-company-home-page-image.jpg",
+   "bytes": 18393476,
+   "mime": "image/jpeg",
+   "width": 5292,
+   "height": 7934,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "mark-heard-fuel-company-home-page-image-200x300.jpg",
+     "w": 200,
+     "h": 300,
+     "bytes": 17965
+    },
+    "large": {
+     "file": "mark-heard-fuel-company-home-page-image-683x1024.jpg",
+     "w": 683,
+     "h": 1024,
+     "bytes": 93962
+    },
+    "thumbnail": {
+     "file": "mark-heard-fuel-company-home-page-image-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 11562
+    },
+    "medium_large": {
+     "file": "mark-heard-fuel-company-home-page-image-768x1151.jpg",
+     "w": 768,
+     "h": 1151,
+     "bytes": 111850
+    },
+    "1536x1536": {
+     "file": "mark-heard-fuel-company-home-page-image-1025x1536.jpg",
+     "w": 1025,
+     "h": 1536,
+     "bytes": 176502
+    },
+    "full_hd": {
+     "file": "mark-heard-fuel-company-home-page-image-1920x2879.jpg",
+     "w": 1920,
+     "h": 2879,
+     "bytes": 497141
+    },
+    "large_high": {
+     "file": "mark-heard-fuel-company-home-page-image-1024x1535.jpg",
+     "w": 1024,
+     "h": 1535,
+     "bytes": 175330
+    },
+    "gform-image-choice-sm": {
+     "file": "mark-heard-fuel-company-home-page-image-300x300.jpg",
+     "w": 300,
+     "h": 300,
+     "bytes": 23966
+    },
+    "gform-image-choice-md": {
+     "file": "mark-heard-fuel-company-home-page-image-400x400.jpg",
+     "w": 400,
+     "h": 400,
+     "bytes": 34386
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 12,
+   "ahrefs": {
+    "size": 18393476,
+    "incoming_all_links": 1,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 18393476
+   }
+  },
+  {
+   "url": "https://markheardfuel.com/wp-content/uploads/2024/12/mark-heard-get-in-touch-background-image.png",
+   "path": "/wp-content/uploads/2024/12/mark-heard-get-in-touch-background-image.png",
+   "attachment_id": 579,
+   "file": "/www/markheardfuel_403/public/wp-content/uploads/2024/12/mark-heard-get-in-touch-background-image.png",
+   "bytes": 3514093,
+   "mime": "image/png",
+   "width": 1920,
+   "height": 1080,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "mark-heard-get-in-touch-background-image-300x169.png",
+     "w": 300,
+     "h": 169,
+     "bytes": 107897
+    },
+    "large": {
+     "file": "mark-heard-get-in-touch-background-image-1024x576.png",
+     "w": 1024,
+     "h": 576,
+     "bytes": 1063998
+    },
+    "thumbnail": {
+     "file": "mark-heard-get-in-touch-background-image-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 49314
+    },
+    "medium_large": {
+     "file": "mark-heard-get-in-touch-background-image-768x432.png",
+     "w": 768,
+     "h": 432,
+     "bytes": 624994
+    },
+    "1536x1536": {
+     "file": "mark-heard-get-in-touch-background-image-1536x864.png",
+     "w": 1536,
+     "h": 864,
+     "bytes": 2185721
+    },
+    "large_high": {
+     "file": "mark-heard-get-in-touch-background-image-1024x576.png",
+     "w": 1024,
+     "h": 576,
+     "bytes": 1063998
+    },
+    "gform-image-choice-sm": {
+     "file": "mark-heard-get-in-touch-background-image-300x300.png",
+     "w": 300,
+     "h": 300,
+     "bytes": 179991
+    },
+    "gform-image-choice-md": {
+     "file": "mark-heard-get-in-touch-background-image-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 308270
+    },
+    "gform-image-choice-lg": {
+     "file": "mark-heard-get-in-touch-background-image-600x600.png",
+     "w": 600,
+     "h": 600,
+     "bytes": 657502
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 12,
+   "ahrefs": {
+    "size": 3514093,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 3514093
+   }
+  },
+  {
+   "url": "https://markheardfuel.com/wp-content/uploads/2025/07/propane-for-builders-new-construction-mark-heard.png",
+   "path": "/wp-content/uploads/2025/07/propane-for-builders-new-construction-mark-heard.png",
+   "attachment_id": 692,
+   "file": "/www/markheardfuel_403/public/wp-content/uploads/2025/07/propane-for-builders-new-construction-mark-heard.png",
+   "bytes": 1705873,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 850,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "propane-for-builders-new-construction-mark-heard-300x255.png",
+     "w": 300,
+     "h": 255,
+     "bytes": 161613
+    },
+    "thumbnail": {
+     "file": "propane-for-builders-new-construction-mark-heard-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 49958
+    },
+    "medium_large": {
+     "file": "propane-for-builders-new-construction-mark-heard-768x653.png",
+     "w": 768,
+     "h": 653,
+     "bytes": 963990
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1705873,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1705873
+   }
+  },
+  {
+   "url": "https://markheardfuel.com/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png",
+   "path": "/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png",
+   "attachment_id": 670,
+   "file": "/www/markheardfuel_403/public/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png",
+   "bytes": 1560602,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 850,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 1,
+    "options": 0,
+    "thumbnail_refs": 2
+   },
+   "sizes": {
+    "medium": {
+     "file": "keep-full-worry-free-propane-mark-heard-300x255.png",
+     "w": 300,
+     "h": 255,
+     "bytes": 149937
+    },
+    "thumbnail": {
+     "file": "keep-full-worry-free-propane-mark-heard-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 46965
+    },
+    "medium_large": {
+     "file": "keep-full-worry-free-propane-mark-heard-768x653.png",
+     "w": 768,
+     "h": 653,
+     "bytes": 864603
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1560602,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1560602
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 663,
+   "where": "post_content",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png",
+   "alt": "",
+   "tag": "<img width=\"1000\" height=\"850\" src=\"https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png\" alt=\"\" srcset=\"https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/06/keep-full-worry-free-propane-mark-heard.png 10",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/keep-full",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Keep Full Propane Autofill Service",
+   "tier": "B"
+  },
+  {
+   "post_id": 689,
+   "where": "post_content",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/07/propane-for-builders-new-construction-mark-heard.png",
+   "alt": "",
+   "tag": "<img width=\"1000\" height=\"850\" src=\"https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/07/propane-for-builders-new-construction-mark-heard.png\" alt=\"\" srcset=\"https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/07/propane-for-builders-new-construction",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/new-construction",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Propane for New Construction",
+   "tier": "B"
+  },
+  {
+   "post_id": 558,
+   "where": "post_content",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/forsyth-co-schools-300x200.png",
+   "alt": "",
+   "tag": "<img class=\"alignright size-medium wp-image-559\" src=\"https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/forsyth-co-schools-300x200.png\" alt=\"\" width=\"300\" height=\"200\" />",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/blog/fueling-the-future",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Fueling the Future: Mark Heard Fuel Company Sponsors Grant for First-Time Teachers in Forsyth County",
+   "tier": "B"
+  },
+  {
+   "post_id": 27,
+   "where": "featured_image(attachment 573)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-order-a-refill-featured-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/faqs/ordering-information",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Ordering Information",
+   "tier": "C"
+  },
+  {
+   "post_id": 28,
+   "where": "featured_image(attachment 568)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-promise.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/faqs/propane-safety-faqs",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Propane Safety FAQs",
+   "tier": "C"
+  },
+  {
+   "post_id": 26,
+   "where": "featured_image(attachment 532)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/propane-safety-FAQs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/faqs/why-choose-propane",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Why Choose Propane?",
+   "tier": "C"
+  },
+  {
+   "post_id": 558,
+   "where": "featured_image(attachment 559)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/forsyth-co-schools.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/blog/fueling-the-future",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Fueling the Future: Mark Heard Fuel Company Sponsors Grant for First-Time Teachers in Forsyth County",
+   "tier": "C"
+  },
+  {
+   "post_id": 343,
+   "where": "featured_image(attachment 659)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2025/06/update-machine-cmit-solutions-atlanta.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/service-areas/alpharetta-ga-propane",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Alpharetta, GA Propane Company",
+   "tier": "C"
+  },
+  {
+   "post_id": 32,
+   "where": "featured_image(attachment 580)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-interior-hero-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/contact",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Contact",
+   "tier": "C"
+  },
+  {
+   "post_id": 951,
+   "where": "featured_image(attachment 580)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-interior-hero-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/?p=951",
+   "post_type": "revision",
+   "post_status": "inherit",
+   "title": "Contact",
+   "tier": "D"
+  },
+  {
+   "post_id": 989,
+   "where": "featured_image(attachment 590)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-propane-fire-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/blog/propane-gas-smell-actions",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Does Propane Gas Smell Like And What Should You Do If You Notice It?",
+   "tier": "C"
+  },
+  {
+   "post_id": 994,
+   "where": "featured_image(attachment 590)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-propane-fire-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/?p=994",
+   "post_type": "revision",
+   "post_status": "inherit",
+   "title": "What Does Propane Gas Smell Like And What Should You Do If You Notice It?",
+   "tier": "D"
+  },
+  {
+   "post_id": 995,
+   "where": "featured_image(attachment 590)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-propane-fire-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/?p=995",
+   "post_type": "revision",
+   "post_status": "inherit",
+   "title": "What Does Propane Gas Smell Like And What Should You Do If You Notice It?",
+   "tier": "D"
+  },
+  {
+   "post_id": 996,
+   "where": "featured_image(attachment 590)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-propane-fire-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/?p=996",
+   "post_type": "revision",
+   "post_status": "inherit",
+   "title": "What Does Propane Gas Smell Like And What Should You Do If You Notice It?",
+   "tier": "D"
+  },
+  {
+   "post_id": 997,
+   "where": "featured_image(attachment 590)",
+   "src": "https://stg-markheardfuel-markheardstg.kinsta.cloud/wp-content/uploads/2024/12/mark-heard-fuel-company-propane-fire-image.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-markheardfuel-markheardstg.kinsta.cloud/?p=997",
+   "post_type": "revision",
+   "post_status": "inherit",
+   "title": "What Does Propane Gas Smell Like And What Should You Do If You Notice It?",
+   "tier": "D"
+  }
+ ],
+ "broken": [],
+ "slug": "markheardfuel",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-10-29-1705"
+}

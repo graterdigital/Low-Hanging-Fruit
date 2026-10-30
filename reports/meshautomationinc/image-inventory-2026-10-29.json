@@ -1,0 +1,1188 @@
+{
+ "home_host": "stg-meshautomation-meshengstg.kinsta.cloud",
+ "env": {
+  "uploads_basedir": "/www/meshautomation_374/public/wp-content/uploads",
+  "uploads_baseurl": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads",
+  "php": "7.4.33",
+  "imagick": "ImageMagick 7.1.2-31 Q8 x86_64 8309dc92a:20260903 https://imagemagick.org",
+  "gd": "2.3.3",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": "/usr/bin/cwebp",
+   "jpegoptim": null,
+   "convert": "/usr/bin/convert",
+   "magick": "/usr/bin/magick"
+  },
+  "big_image_size_threshold": 5000,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 5000,
+    "height": 5000,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "yith_wcbr_logo_size": {
+    "width": 500,
+    "height": 100,
+    "crop": true
+   },
+   "expertise": {
+    "width": 580,
+    "height": 388,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "case-study": {
+    "width": 560,
+    "height": 420,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   },
+   "woocommerce_thumbnail": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "woocommerce_single": {
+    "width": 600,
+    "height": 0,
+    "crop": false
+   },
+   "woocommerce_gallery_thumbnail": {
+    "width": 100,
+    "height": 100,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "active",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2018/08/3d-vision-solutions-mesh-automation-1024x768.bmp",
+   "path": "/wp-content/uploads/2018/08/3d-vision-solutions-mesh-automation-1024x768.bmp",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2018/08/3d-vision-solutions-mesh-automation-1024x768.bmp",
+   "bytes": 3145866,
+   "mime": "image/bmp",
+   "width": 1024,
+   "height": 768,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 3145866,
+    "incoming_all_links": 2,
+    "content_type": "image/x-ms-bmp"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/x-ms-bmp",
+    "bytes": 3145866
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2022/10/macgrind-case-study-091-2.png",
+   "path": "/wp-content/uploads/2022/10/macgrind-case-study-091-2.png",
+   "attachment_id": 2961,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2022/10/macgrind-case-study-091-2.png",
+   "bytes": 3109478,
+   "mime": "image/png",
+   "width": 2048,
+   "height": 1192,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "woocommerce_thumbnail": {
+     "file": "macgrind-case-study-091-2-300x300.png",
+     "w": 300,
+     "h": 300,
+     "bytes": 149693
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "macgrind-case-study-091-2-100x100.png",
+     "w": 100,
+     "h": 100,
+     "bytes": 21653
+    },
+    "woocommerce_single": {
+     "file": "macgrind-case-study-091-2-600x349.png",
+     "w": 600,
+     "h": 349,
+     "bytes": 335535
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 1,
+   "ahrefs": {
+    "size": 3109478,
+    "incoming_all_links": 7,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 3109478
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2026/07/what-is-warehouse-automation-mesh-automation-scaled.jpg",
+   "path": "/wp-content/uploads/2026/07/what-is-warehouse-automation-mesh-automation-scaled.jpg",
+   "attachment_id": null,
+   "file": null,
+   "bytes": null,
+   "mime": null,
+   "width": null,
+   "height": null,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2800640,
+    "incoming_all_links": 1,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2800640
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Gantry-Palletizing-System-5000x2813.jpg",
+   "path": "/wp-content/uploads/2025/02/Gantry-Palletizing-System-5000x2813.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Gantry-Palletizing-System-5000x2813.jpg",
+   "bytes": 2760085,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 2813,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2760085,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2760085
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Bag-Palletizing-System-5000x3333.jpg",
+   "path": "/wp-content/uploads/2025/02/Bag-Palletizing-System-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Bag-Palletizing-System-5000x3333.jpg",
+   "bytes": 2344357,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2344357,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2344357
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/MESH-Automation-MACTend-Dual-Gripper-EOAT-5000x3611.jpg",
+   "path": "/wp-content/uploads/2025/02/MESH-Automation-MACTend-Dual-Gripper-EOAT-5000x3611.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/MESH-Automation-MACTend-Dual-Gripper-EOAT-5000x3611.jpg",
+   "bytes": 2118403,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3611,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2118403,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2118403
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Sheet-Handling-Tool-5000x3333.jpg",
+   "path": "/wp-content/uploads/2025/02/Sheet-Handling-Tool-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Sheet-Handling-Tool-5000x3333.jpg",
+   "bytes": 2087643,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2087643,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2087643
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Robotic-Handling-of-Roller-Bottles-5000x3333.jpg",
+   "path": "/wp-content/uploads/2025/02/Robotic-Handling-of-Roller-Bottles-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Robotic-Handling-of-Roller-Bottles-5000x3333.jpg",
+   "bytes": 2079353,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2079353,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2079353
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-5000x3333.jpg",
+   "path": "/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-5000x3333.jpg",
+   "bytes": 2033643,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2033643,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2033643
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-scaled.jpg",
+   "path": "/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-scaled.jpg",
+   "attachment_id": 4736,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2026/04/MESH-Automation-Robotic-Buffering-scaled.jpg",
+   "bytes": 2033643,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "MESH-Automation-Robotic-Buffering-300x200.jpg",
+     "w": 300,
+     "h": 200,
+     "bytes": 39300
+    },
+    "large": {
+     "file": "MESH-Automation-Robotic-Buffering-5000x3333.jpg",
+     "w": 5000,
+     "h": 3333,
+     "bytes": 2033643
+    },
+    "thumbnail": {
+     "file": "MESH-Automation-Robotic-Buffering-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 25897
+    },
+    "medium_large": {
+     "file": "MESH-Automation-Robotic-Buffering-768x512.jpg",
+     "w": 768,
+     "h": 512,
+     "bytes": 119901
+    },
+    "1536x1536": {
+     "file": "MESH-Automation-Robotic-Buffering-1536x1024.jpg",
+     "w": 1536,
+     "h": 1024,
+     "bytes": 303910
+    },
+    "2048x2048": {
+     "file": "MESH-Automation-Robotic-Buffering-2048x1365.jpg",
+     "w": 2048,
+     "h": 1365,
+     "bytes": 453767
+    },
+    "yith_wcbr_logo_size": {
+     "file": "MESH-Automation-Robotic-Buffering-500x100.jpg",
+     "w": 500,
+     "h": 100,
+     "bytes": 32519
+    },
+    "expertise": {
+     "file": "MESH-Automation-Robotic-Buffering-580x388.jpg",
+     "w": 580,
+     "h": 388,
+     "bytes": 84027
+    },
+    "case-study": {
+     "file": "MESH-Automation-Robotic-Buffering-560x420.jpg",
+     "w": 560,
+     "h": 420,
+     "bytes": 85365
+    },
+    "woocommerce_thumbnail": {
+     "file": "MESH-Automation-Robotic-Buffering-300x300.jpg",
+     "w": 300,
+     "h": 300,
+     "bytes": 47043
+    },
+    "woocommerce_single": {
+     "file": "MESH-Automation-Robotic-Buffering-600x400.jpg",
+     "w": 600,
+     "h": 400,
+     "bytes": 87236
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "MESH-Automation-Robotic-Buffering-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 21026
+    }
+   },
+   "original_image": "MESH-Automation-Robotic-Buffering.jpg",
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 2033643,
+    "incoming_all_links": 1,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2033643
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/One-in-and-Six-Out-Palletizing-System-5000x3750.jpg",
+   "path": "/wp-content/uploads/2025/02/One-in-and-Six-Out-Palletizing-System-5000x3750.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/One-in-and-Six-Out-Palletizing-System-5000x3750.jpg",
+   "bytes": 2033005,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3750,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 2033005,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 2033005
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2026/04/mesh-modex.png",
+   "path": "/wp-content/uploads/2026/04/mesh-modex.png",
+   "attachment_id": 4657,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2026/04/mesh-modex.png",
+   "bytes": 1893081,
+   "mime": "image/png",
+   "width": 1200,
+   "height": 1200,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "woocommerce_thumbnail": {
+     "file": "mesh-modex-300x300.png",
+     "w": 300,
+     "h": 300,
+     "bytes": 116744
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "mesh-modex-100x100.png",
+     "w": 100,
+     "h": 100,
+     "bytes": 15961
+    },
+    "woocommerce_single": {
+     "file": "mesh-modex-600x600.png",
+     "w": 600,
+     "h": 600,
+     "bytes": 386188
+    },
+    "medium": {
+     "file": "mesh-modex-300x300.png",
+     "w": 300,
+     "h": 300,
+     "bytes": 116744
+    },
+    "thumbnail": {
+     "file": "mesh-modex-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 33052
+    },
+    "medium_large": {
+     "file": "mesh-modex-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 600451
+    },
+    "yith_wcbr_logo_size": {
+     "file": "mesh-modex-500x100.png",
+     "w": 500,
+     "h": 100,
+     "bytes": 59639
+    },
+    "expertise": {
+     "file": "mesh-modex-580x388.png",
+     "w": 580,
+     "h": 388,
+     "bytes": 268691
+    },
+    "case-study": {
+     "file": "mesh-modex-560x420.png",
+     "w": 560,
+     "h": 420,
+     "bytes": 283407
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1893081,
+    "incoming_all_links": 2,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1893081
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/MESH-Flat-Stock-Handling-System-5000x3333.jpg",
+   "path": "/wp-content/uploads/2025/02/MESH-Flat-Stock-Handling-System-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/MESH-Flat-Stock-Handling-System-5000x3333.jpg",
+   "bytes": 1501300,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 1501300,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1501300
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/MESH-Roller-Bottle-Handling-System-Pick-Point-5000x3333.jpg",
+   "path": "/wp-content/uploads/2025/02/MESH-Roller-Bottle-Handling-System-Pick-Point-5000x3333.jpg",
+   "attachment_id": null,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/MESH-Roller-Bottle-Handling-System-Pick-Point-5000x3333.jpg",
+   "bytes": 1495138,
+   "mime": "image/jpeg",
+   "width": 5000,
+   "height": 3333,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 1495138,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1495138
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/MACcoPal-Cell-at-FAT-scaled.jpg",
+   "path": "/wp-content/uploads/2025/02/MACcoPal-Cell-at-FAT-scaled.jpg",
+   "attachment_id": 4139,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/MACcoPal-Cell-at-FAT-scaled.jpg",
+   "bytes": 1013170,
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1920,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "woocommerce_thumbnail": {
+     "file": "MACcoPal-Cell-at-FAT-scaled-300x300.jpg",
+     "w": 300,
+     "h": 300,
+     "bytes": 23780
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "MACcoPal-Cell-at-FAT-scaled-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 3893
+    },
+    "woocommerce_single": {
+     "file": "MACcoPal-Cell-at-FAT-scaled-600x450.jpg",
+     "w": 600,
+     "h": 450,
+     "bytes": 67993
+    },
+    "medium": {
+     "file": "MACcoPal-Cell-at-FAT-300x225.jpg",
+     "w": 300,
+     "h": 225,
+     "bytes": 18778
+    },
+    "thumbnail": {
+     "file": "MACcoPal-Cell-at-FAT-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 7042
+    },
+    "medium_large": {
+     "file": "MACcoPal-Cell-at-FAT-768x576.jpg",
+     "w": 768,
+     "h": 576,
+     "bytes": 106869
+    },
+    "1536x1536": {
+     "file": "MACcoPal-Cell-at-FAT-1536x1152.jpg",
+     "w": 1536,
+     "h": 1152,
+     "bytes": 401939
+    },
+    "2048x2048": {
+     "file": "MACcoPal-Cell-at-FAT-2048x1536.jpg",
+     "w": 2048,
+     "h": 1536,
+     "bytes": 683891
+    },
+    "expertise": {
+     "file": "MACcoPal-Cell-at-FAT-580x388.jpg",
+     "w": 580,
+     "h": 388,
+     "bytes": 58232
+    },
+    "case-study": {
+     "file": "MACcoPal-Cell-at-FAT-560x420.jpg",
+     "w": 560,
+     "h": 420,
+     "bytes": 58495
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1013170,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1013170
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Robotic-Bottle-Palletizer-with-Tray-Former-scaled.jpg",
+   "path": "/wp-content/uploads/2025/02/Robotic-Bottle-Palletizer-with-Tray-Former-scaled.jpg",
+   "attachment_id": 4128,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Robotic-Bottle-Palletizer-with-Tray-Former-scaled.jpg",
+   "bytes": 1009639,
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1920,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "woocommerce_thumbnail": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-scaled-300x300.jpg",
+     "w": 300,
+     "h": 300,
+     "bytes": 29023
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-scaled-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 4637
+    },
+    "woocommerce_single": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-scaled-600x450.jpg",
+     "w": 600,
+     "h": 450,
+     "bytes": 74948
+    },
+    "medium": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-300x225.jpg",
+     "w": 300,
+     "h": 225,
+     "bytes": 20576
+    },
+    "thumbnail": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 8368
+    },
+    "medium_large": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-768x576.jpg",
+     "w": 768,
+     "h": 576,
+     "bytes": 116835
+    },
+    "1536x1536": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-1536x1152.jpg",
+     "w": 1536,
+     "h": 1152,
+     "bytes": 419027
+    },
+    "2048x2048": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-2048x1536.jpg",
+     "w": 2048,
+     "h": 1536,
+     "bytes": 694622
+    },
+    "expertise": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-580x388.jpg",
+     "w": 580,
+     "h": 388,
+     "bytes": 63407
+    },
+    "case-study": {
+     "file": "Robotic-Bottle-Palletizer-with-Tray-Former-560x420.jpg",
+     "w": 560,
+     "h": 420,
+     "bytes": 63910
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1009639,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1009639
+   }
+  },
+  {
+   "url": "https://meshautomationinc.com/wp-content/uploads/2025/02/Robotic-Tote-Palletizing-Robot-scaled.jpg",
+   "path": "/wp-content/uploads/2025/02/Robotic-Tote-Palletizing-Robot-scaled.jpg",
+   "attachment_id": 4151,
+   "file": "/www/meshautomation_374/public/wp-content/uploads/2025/02/Robotic-Tote-Palletizing-Robot-scaled.jpg",
+   "bytes": 1007196,
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1920,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "woocommerce_thumbnail": {
+     "file": "Robotic-Tote-Palletizing-Robot-scaled-300x300.jpg",
+     "w": 300,
+     "h": 300,
+     "bytes": 29925
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "Robotic-Tote-Palletizing-Robot-scaled-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 4283
+    },
+    "woocommerce_single": {
+     "file": "Robotic-Tote-Palletizing-Robot-scaled-600x450.jpg",
+     "w": 600,
+     "h": 450,
+     "bytes": 82953
+    },
+    "medium": {
+     "file": "Robotic-Tote-Palletizing-Robot-300x225.jpg",
+     "w": 300,
+     "h": 225,
+     "bytes": 21771
+    },
+    "thumbnail": {
+     "file": "Robotic-Tote-Palletizing-Robot-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 8052
+    },
+    "medium_large": {
+     "file": "Robotic-Tote-Palletizing-Robot-768x576.jpg",
+     "w": 768,
+     "h": 576,
+     "bytes": 127747
+    },
+    "1536x1536": {
+     "file": "Robotic-Tote-Palletizing-Robot-1536x1152.jpg",
+     "w": 1536,
+     "h": 1152,
+     "bytes": 440135
+    },
+    "2048x2048": {
+     "file": "Robotic-Tote-Palletizing-Robot-2048x1536.jpg",
+     "w": 2048,
+     "h": 1536,
+     "bytes": 706540
+    },
+    "expertise": {
+     "file": "Robotic-Tote-Palletizing-Robot-580x388.jpg",
+     "w": 580,
+     "h": 388,
+     "bytes": 69021
+    },
+    "case-study": {
+     "file": "Robotic-Tote-Palletizing-Robot-560x420.jpg",
+     "w": 560,
+     "h": 420,
+     "bytes": 69606
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1007196,
+    "incoming_all_links": 2,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1007196
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 3012,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2023/02/MHI-and-MESH-Automation-2-300x300.png",
+   "alt": "",
+   "tag": "<img class=\"size-medium wp-image-3015 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2023/02/MHI-and-MESH-Automation-2-300x300.png\" alt=\"\" width=\"300\" height=\"300\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/mesh-automation-joined-mih/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "MESH Automation has recently joined the Material Handling Institute (MHI)",
+   "tier": "B"
+  },
+  {
+   "post_id": 1424,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/04/converting-photo-300x200.jpg",
+   "alt": "",
+   "tag": "<img class=\" wp-image-1428 alignright\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/04/converting-photo-300x200.jpg\" alt=\"\" width=\"453\" height=\"302\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/non-woven-converting-machines-for-medical-devices-and-supplies/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Nonwoven Converting Machines for Medical Devices and Supplies",
+   "tier": "B"
+  },
+  {
+   "post_id": 3793,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2024/10/promat-2025-300x169.jpg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-3794 aligncenter\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2024/10/promat-2025-300x169.jpg\" alt=\"\" width=\"1033\" height=\"582\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/mesh-promat-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Join MESH Automation at ProMat 2025: Discover the Future of Supply Chain Solutions!",
+   "tier": "B"
+  },
+  {
+   "post_id": 4016,
+   "where": "post_content",
+   "src": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157991849/settings_images/177ba1-3332-20bb-f58-8ca35cbbd40_Fix.jpg",
+   "alt": null,
+   "tag": "<img class=\"aligncenter\" src=\"https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157991849/settings_images/177ba1-3332-20bb-f58-8ca35cbbd40_Fix.jpg\" width=\"400\" height=\"225\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/navigating-big-time-automation-investments-with-mesh-lafayette-engineering/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Navigating Big-Time Automation Investments with MESH & LaFayette Engineering",
+   "tier": "A"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACTend-Implementation-at-FAT-225x300.jpg",
+   "alt": "",
+   "tag": "<img class=\" wp-image-4168 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACTend-Implementation-at-FAT-225x300.jpg\" alt=\"\" width=\"283\" height=\"377\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/10/mac-pal-mesh-automation-1-270x300.jpg",
+   "alt": "",
+   "tag": "<img class=\" wp-image-1687 alignright\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/10/mac-pal-mesh-automation-1-270x300.jpg\" alt=\"\" width=\"373\" height=\"414\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACcoPal-System-Run-Off-at-MESH-300x225.jpg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-4133 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACcoPal-System-Run-Off-at-MESH-300x225.jpg\" alt=\"\" width=\"439\" height=\"329\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/09/MESH-MiniMACGrind-Spindle-300x189.jpg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-2923 alignright\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/09/MESH-MiniMACGrind-Spindle-300x189.jpg\" alt=\"\" width=\"360\" height=\"227\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/09/MESH-MACPolish-Backstand-300x200.jpg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-2933 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/09/MESH-MACPolish-Backstand-300x200.jpg\" alt=\"\" width=\"450\" height=\"300\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4239,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACControls-Tested-and-Ready-to-Now-300x225.jpg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-4132 alignright\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2025/02/MACControls-Tested-and-Ready-to-Now-300x225.jpg\" alt=\"\" width=\"452\" height=\"339\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre-engineered-vs-custom-automation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Pre-Engineered vs Custom Automation: Cost & Lead Time in 2026",
+   "tier": "B"
+  },
+  {
+   "post_id": 4554,
+   "where": "post_content",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2026/02/2026_MODEX_logo_full.png",
+   "alt": "",
+   "tag": "<img class=\"aligncenter wp-image-4555\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2026/02/2026_MODEX_logo_full.png\" alt=\"\" width=\"1063\" height=\"381\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/mesh-modex-2026/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "See MESH Automation in Action at MODEX26",
+   "tier": "B"
+  },
+  {
+   "post_id": 439,
+   "where": "postmeta:flexible_content_0_full_width_text#4666311",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2021/07/mesh-vision-partners.png",
+   "alt": "",
+   "tag": "<img class=\"aligncenter size-full wp-image-1766\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2021/07/mesh-vision-partners.png\" alt=\"\" width=\"1200\" height=\"400\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/automated-vision-systems/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Automated Inspection Systems",
+   "tier": "B"
+  },
+  {
+   "post_id": 2760,
+   "where": "postmeta:flexible_content_1_full_width_text#4658013",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/03/If-you-need-a-machine-and-dont-buy-it-then-you-will-ultimately-find-that-you-have-paid-for-it-and-dont-have-it..png",
+   "alt": "",
+   "tag": "<img class=\"aligncenter size-full wp-image-2833\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/03/If-you-need-a-machine-and-dont-buy-it-then-you-will-ultimately-find-that-you-have-paid-for-it-and-dont-have-it..png\" alt=\"\" width=\"1115\" height=\"300\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/about-us/why-automate/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Why Automate?",
+   "tier": "B"
+  },
+  {
+   "post_id": 2908,
+   "where": "postmeta:flexible_content_1_full_width_text#4659616",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/08/mesh-press-release-2.png",
+   "alt": "",
+   "tag": "<img class=\"aligncenter size-full wp-image-2913\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2022/08/mesh-press-release-2.png\" alt=\"\" width=\"1115\" height=\"300\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/mesh-imts-2022/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "MESH Automation to Display Robotic Deburring Cell at the International Manufacturing Technology Show",
+   "tier": "B"
+  },
+  {
+   "post_id": 1570,
+   "where": "postmeta:tech_data_sheet#17464",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png",
+   "alt": "",
+   "tag": "<img class=\"size-full wp-image-1548 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png\" alt=\"\" width=\"90\" height=\"110\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/macgrind/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACGrind",
+   "tier": "B"
+  },
+  {
+   "post_id": 1571,
+   "where": "postmeta:tech_data_sheet#17518",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png",
+   "alt": "",
+   "tag": "<img class=\"size-full wp-image-1548 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png\" alt=\"\" width=\"90\" height=\"110\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/macmegagrind/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACMegaGrind",
+   "tier": "B"
+  },
+  {
+   "post_id": 1567,
+   "where": "postmeta:tech_data_sheet#17230",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png",
+   "alt": "",
+   "tag": "<img class=\"size-full wp-image-1548 alignleft\" src=\"https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/09/download-w.png\" alt=\"\" width=\"90\" height=\"110\" />",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/macpac/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACPac",
+   "tier": "B"
+  },
+  {
+   "post_id": 1567,
+   "where": "featured_image(attachment 1607)",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/10/IMG_2100e-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/macpac/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACPac",
+   "tier": "C"
+  },
+  {
+   "post_id": 1571,
+   "where": "featured_image(attachment 1619)",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/10/eIMG_9578-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/macmegagrind/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACMegaGrind",
+   "tier": "C"
+  },
+  {
+   "post_id": 1578,
+   "where": "featured_image(attachment 1629)",
+   "src": "https://stg-meshautomation-meshengstg.kinsta.cloud/wp-content/uploads/2020/10/IMG_2784-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-meshautomation-meshengstg.kinsta.cloud/pre_eng_sol/maclean/",
+   "post_type": "pre_eng_sol",
+   "post_status": "publish",
+   "title": "MACLean",
+   "tier": "C"
+  }
+ ],
+ "broken": [],
+ "slug": "meshautomationinc",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-10-29-1706"
+}

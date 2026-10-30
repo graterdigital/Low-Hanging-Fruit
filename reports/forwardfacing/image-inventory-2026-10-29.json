@@ -1,0 +1,1133 @@
+{
+ "home_host": "stg-forwardfacingpodcast-stgforward.kinsta.cloud",
+ "env": {
+  "uploads_basedir": "/www/forwardfacingpodcast_817/public/wp-content/uploads",
+  "uploads_baseurl": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 7.1.2-31 Q8 x86_64 8309dc92a:20260903 https://imagemagick.org",
+  "gd": "2.3.3",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": "/usr/bin/cwebp",
+   "jpegoptim": null,
+   "convert": "/usr/bin/convert",
+   "magick": "/usr/bin/magick"
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 400,
+    "height": 400,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [
+  {
+   "url": "https://forwardfacing.com/wp-content/uploads/2026/01/what-makes-us-unique-forward-facing-pod.png",
+   "path": "/wp-content/uploads/2026/01/what-makes-us-unique-forward-facing-pod.png",
+   "attachment_id": 9259,
+   "file": "/www/forwardfacingpodcast_817/public/wp-content/uploads/2026/01/what-makes-us-unique-forward-facing-pod.png",
+   "bytes": 3472336,
+   "mime": "image/png",
+   "width": 1870,
+   "height": 1360,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "what-makes-us-unique-forward-facing-pod-400x291.png",
+     "w": 400,
+     "h": 291,
+     "bytes": 161573
+    },
+    "large": {
+     "file": "what-makes-us-unique-forward-facing-pod-1024x745.png",
+     "w": 1024,
+     "h": 745,
+     "bytes": 959333
+    },
+    "thumbnail": {
+     "file": "what-makes-us-unique-forward-facing-pod-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 39070
+    },
+    "medium_large": {
+     "file": "what-makes-us-unique-forward-facing-pod-768x559.png",
+     "w": 768,
+     "h": 559,
+     "bytes": 549887
+    },
+    "1536x1536": {
+     "file": "what-makes-us-unique-forward-facing-pod-1536x1117.png",
+     "w": 1536,
+     "h": 1117,
+     "bytes": 2088326
+    },
+    "large_high": {
+     "file": "what-makes-us-unique-forward-facing-pod-1024x745.png",
+     "w": 1024,
+     "h": 745,
+     "bytes": 959333
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 4,
+   "ahrefs": {
+    "size": 3472336,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 3472336
+   }
+  },
+  {
+   "url": "https://forwardfacing.com/wp-content/uploads/2026/01/andee-and-mali-facing-forward-podcast.png",
+   "path": "/wp-content/uploads/2026/01/andee-and-mali-facing-forward-podcast.png",
+   "attachment_id": 9254,
+   "file": "/www/forwardfacingpodcast_817/public/wp-content/uploads/2026/01/andee-and-mali-facing-forward-podcast.png",
+   "bytes": 1901673,
+   "mime": "image/png",
+   "width": 1600,
+   "height": 900,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "andee-and-mali-facing-forward-podcast-400x225.png",
+     "w": 400,
+     "h": 225,
+     "bytes": 148706
+    },
+    "large": {
+     "file": "andee-and-mali-facing-forward-podcast-1024x576.png",
+     "w": 1024,
+     "h": 576,
+     "bytes": 827067
+    },
+    "thumbnail": {
+     "file": "andee-and-mali-facing-forward-podcast-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 42858
+    },
+    "medium_large": {
+     "file": "andee-and-mali-facing-forward-podcast-768x432.png",
+     "w": 768,
+     "h": 432,
+     "bytes": 493772
+    },
+    "1536x1536": {
+     "file": "andee-and-mali-facing-forward-podcast-1536x864.png",
+     "w": 1536,
+     "h": 864,
+     "bytes": 1650482
+    },
+    "large_high": {
+     "file": "andee-and-mali-facing-forward-podcast-1024x576.png",
+     "w": 1024,
+     "h": 576,
+     "bytes": 827067
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 7,
+   "ahrefs": {
+    "size": 1901673,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1901673
+   }
+  },
+  {
+   "url": "https://forwardfacing.com/wp-content/uploads/2025/09/Mali-shadmehry-host-of-forward-facing-podcast-1024x1024.png",
+   "path": "/wp-content/uploads/2025/09/Mali-shadmehry-host-of-forward-facing-podcast-1024x1024.png",
+   "attachment_id": null,
+   "file": null,
+   "bytes": null,
+   "mime": null,
+   "width": null,
+   "height": null,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 1194903,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1194903
+   }
+  },
+  {
+   "url": "https://forwardfacing.com/wp-content/uploads/2026/03/forward-facing-phone-graphic.png",
+   "path": "/wp-content/uploads/2026/03/forward-facing-phone-graphic.png",
+   "attachment_id": null,
+   "file": null,
+   "bytes": null,
+   "mime": null,
+   "width": null,
+   "height": null,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": [],
+   "ahrefs": {
+    "size": 1059607,
+    "incoming_all_links": 68,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1059607
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 9278,
+   "where": "post_content",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/09/main-logo-header.svg",
+   "alt": "",
+   "tag": "<img src=\"https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/09/main-logo-header.svg\" alt=\"\" width=\"\" height=\"\" data-dynamic-tag=\"\" data-image-src=\"wpmedia\" data-mobile-visibility=\".sp-image-block-ugkm5p|false\" data-tablet-visibility=\".sp-image-block-ugkm5p|false\" data-",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/?post_type=seedprod&p=9278",
+   "post_type": "seedprod",
+   "post_status": "draft",
+   "title": "sp-cs",
+   "tier": "D"
+  },
+  {
+   "post_id": 9278,
+   "where": "post_content",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/andee-and-mali-facing-forward-podcast.png",
+   "alt": "",
+   "tag": "<img src=\"https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/andee-and-mali-facing-forward-podcast.png\" alt=\"\" width=\"1600\" height=\"900\" data-dynamic-tag=\"\" data-image-src=\"wpmedia\" data-mobile-visibility=\".sp-image-block-w3oyp1|false\" data-tablet-visibility=\".sp-ima",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/?post_type=seedprod&p=9278",
+   "post_type": "seedprod",
+   "post_status": "draft",
+   "title": "sp-cs",
+   "tier": "D"
+  },
+  {
+   "post_id": 954,
+   "where": "featured_image(attachment 9207)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/09/Andee.fuscia02-scaled-e1769628335528.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/host/andee-hastings/",
+   "post_type": "host",
+   "post_status": "publish",
+   "title": "Andee Hastings",
+   "tier": "C"
+  },
+  {
+   "post_id": 956,
+   "where": "featured_image(attachment 957)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/09/Mali-host-e1769628206236.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/host/mali-shadmehry/",
+   "post_type": "host",
+   "post_status": "publish",
+   "title": "Mali Shadmehry",
+   "tier": "C"
+  },
+  {
+   "post_id": 6560,
+   "where": "featured_image(attachment 6561)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/5YBEGSdJLBs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/the-marital-balance-sheet-in-divorce-episode-71/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "The Marital Balance Sheet in Divorce – Episode 71",
+   "tier": "C"
+  },
+  {
+   "post_id": 6564,
+   "where": "featured_image(attachment 6565)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/390PwRpjQls.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/certified-divorce-real-estate-expert-jill-heineck-episode-70/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Certified Divorce Real Estate Expert Jill Heineck – Episode 70",
+   "tier": "C"
+  },
+  {
+   "post_id": 6568,
+   "where": "featured_image(attachment 6569)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/GLCPQD8J690.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-54-encore-utilizing-experts-in-divorce/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 54 ENCORE: Utilizing Experts In Divorce",
+   "tier": "C"
+  },
+  {
+   "post_id": 6574,
+   "where": "featured_image(attachment 6575)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/xer1uemISLY.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-53-encore-meet-the-partners-mali-shadmehry-family-law-attorney-and-trailblazer/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 53 ENCORE Meet the Partners: Mali Shadmehry, Family Law Attorney, and Trailblazer",
+   "tier": "C"
+  },
+  {
+   "post_id": 6578,
+   "where": "featured_image(attachment 6579)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/5fHws-c_tog.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-52-encore-meet-the-partners-andee-hastings-and-her-passion-for-family-law/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 52 ENCORE: Meet the Partners: Andee Hastings and her Passion for Family Law",
+   "tier": "C"
+  },
+  {
+   "post_id": 6580,
+   "where": "featured_image(attachment 6581)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/5lUTjoqF6x4.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/adultery-and-divorce-episode-66/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Adultery and Divorce – Episode 66",
+   "tier": "C"
+  },
+  {
+   "post_id": 6582,
+   "where": "featured_image(attachment 6583)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/8y2l27cP8dg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/meet-the-wolf-pack-family-law-stalwart-elizabeth-findley-episode-65/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Meet the Wolf Pack: Family Law Stalwart Elizabeth Findley – Episode 65",
+   "tier": "C"
+  },
+  {
+   "post_id": 6584,
+   "where": "featured_image(attachment 6585)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/hL9HBxedILs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/why-tell-your-lawyer-the-truth-episode-64/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Why Tell Your Lawyer The Truth? – Episode 64",
+   "tier": "C"
+  },
+  {
+   "post_id": 6588,
+   "where": "featured_image(attachment 6589)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/K7V-mMPZ2ts.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/summer-parenting-time-episode-62/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Summer Parenting Time – Episode 62",
+   "tier": "C"
+  },
+  {
+   "post_id": 6590,
+   "where": "featured_image(attachment 6591)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/GEKBFo8qREQ.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-37-encore-no-fault-divorce-what-it-means-why-it-matters/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 37 ENCORE: No-Fault Divorce: What It Means & Why It Matters",
+   "tier": "C"
+  },
+  {
+   "post_id": 6592,
+   "where": "featured_image(attachment 6593)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/Du4RbK08HI8.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/juvenile-family-law-with-expert-kim-beatty-episode-60/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Juvenile Family Law with Expert Kim Beatty – Episode 60",
+   "tier": "C"
+  },
+  {
+   "post_id": 6594,
+   "where": "featured_image(attachment 6595)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/nwi8MRVrvz0.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/meet-the-wolf-pack-family-law-attorney-madison-alexander-episode-59/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Meet the Wolf Pack: Family Law Attorney Madison Alexander – Episode 59",
+   "tier": "C"
+  },
+  {
+   "post_id": 6596,
+   "where": "featured_image(attachment 6597)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/H46ahDPl288.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/drfa-the-first-step-in-a-divorce-episode-58/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "DRFA: The First Step In a Divorce — Episode 58",
+   "tier": "C"
+  },
+  {
+   "post_id": 6598,
+   "where": "featured_image(attachment 6599)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/pBRyZI9ilp4.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/narcissism-divorce-understanding-the-toxic-patterns-part-3-episode-57/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Narcissism & Divorce: Understanding the Toxic Patterns Part 3 – Episode 57",
+   "tier": "C"
+  },
+  {
+   "post_id": 6600,
+   "where": "featured_image(attachment 6601)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/RoE9OfmAfZM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-48-encore-narcissism-and-divorce-understanding-the-toxic-patterns-part-2/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 48 ENCORE: Narcissism and Divorce Understanding the Toxic Patterns, Part 2",
+   "tier": "C"
+  },
+  {
+   "post_id": 6602,
+   "where": "featured_image(attachment 6603)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/mz4BccUO4cY.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/utilizing-experts-in-divorce-episode-54/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Utilizing Experts In Divorce – Episode 54",
+   "tier": "C"
+  },
+  {
+   "post_id": 7481,
+   "where": "featured_image(attachment 7485)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/7hg3RoQemxo.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/meet-the-partners-mali-shadmehry-family-law-attorney-and-trailblazer-episode-53/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Meet the Partners: Mali Shadmehry, Family Law Attorney, and Trailblazer – Episode 53",
+   "tier": "C"
+  },
+  {
+   "post_id": 7484,
+   "where": "featured_image(attachment 7488)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/Dq8PwKlRvn0.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/meet-the-partners-andee-hastings-and-her-passion-for-family-law-episode-52/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Meet the Partners: Andee Hastings and her Passion for Family Law – Episode 52",
+   "tier": "C"
+  },
+  {
+   "post_id": 7489,
+   "where": "featured_image(attachment 7492)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/SFeBr0G5kVs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/when-to-file-for-divorce-timing-strategy-impact-episode-51/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "When to File for Divorce: Timing, Strategy & Impact – Episode 51",
+   "tier": "C"
+  },
+  {
+   "post_id": 7493,
+   "where": "featured_image(attachment 7496)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/FRZnXyYA7IM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-29-encore-introduction-to-collaborative-divorce-episode-50/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 29 ENCORE: Introduction to Collaborative Divorce – Episode 50",
+   "tier": "C"
+  },
+  {
+   "post_id": 7497,
+   "where": "featured_image(attachment 7500)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/MqcLmNHpiKA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/parenting-time-agreements-avoiding-holiday-conflicts-episode-49/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Parenting Time Agreements: Avoiding Holiday Conflicts – Episode 49",
+   "tier": "C"
+  },
+  {
+   "post_id": 7501,
+   "where": "featured_image(attachment 7504)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/OVfZv7Rs23k.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/narcissism-divorce-understanding-the-toxic-patterns-part-2-episode-48/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Narcissism & Divorce: Understanding the Toxic Patterns Part 2 – Episode 48",
+   "tier": "C"
+  },
+  {
+   "post_id": 7501,
+   "where": "featured_image(attachment 7504)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/OVfZv7Rs23k.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/narcissism-divorce-understanding-the-toxic-patterns-part-2-episode-48/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Narcissism & Divorce: Understanding the Toxic Patterns Part 2 – Episode 48",
+   "tier": "C"
+  },
+  {
+   "post_id": 7505,
+   "where": "featured_image(attachment 7508)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/UYaebjsOOfA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-41-encore-narcissism-and-divorce-understanding-the-toxic-patterns-part-1/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 41 ENCORE: Narcissism and Divorce: Understanding the Toxic Patterns, Part 1",
+   "tier": "C"
+  },
+  {
+   "post_id": 7506,
+   "where": "featured_image(attachment 7509)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/UYaebjsOOfA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-41-encore-narcissism-and-divorce-understanding-the-toxic-patterns-part-1/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 41 ENCORE: Narcissism and Divorce: Understanding the Toxic Patterns, Part 1",
+   "tier": "C"
+  },
+  {
+   "post_id": 7510,
+   "where": "featured_image(attachment 7512)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/FdIBklh0pVQ.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-28-encore-family-law-leadership-qa-andee-and-mali-on-running-a-law-firm/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 28 ENCORE: Family Law Leadership Q&A: Andee and Mali on Running a Law Firm",
+   "tier": "C"
+  },
+  {
+   "post_id": 7514,
+   "where": "featured_image(attachment 7515)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/RGjd3ekUgtA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-25-encore-the-secrets-of-mediation-navigating-disputes-with-diplomacy-and-strategy/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 25 ENCORE: The Secrets of Mediation: Navigating Disputes with Diplomacy and Strategy",
+   "tier": "C"
+  },
+  {
+   "post_id": 7516,
+   "where": "featured_image(attachment 7517)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/fQ5ulFViifw.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-18-encore-behind-the-scenes-of-high-profile-divorces/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 18 ENCORE: Behind the Scenes of High-Profile Divorces",
+   "tier": "C"
+  },
+  {
+   "post_id": 7518,
+   "where": "featured_image(attachment 7519)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/qXele1K4XCw.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-21-encore-understanding-temporary-protective-orders-tpos/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 21 ENCORE: Understanding Temporary Protective Orders (TPOs)",
+   "tier": "C"
+  },
+  {
+   "post_id": 7520,
+   "where": "featured_image(attachment 7521)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/Oz_hG-9AlDo.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/narcissism-divorce-understanding-the-toxic-patterns-part-1-episode-41/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Narcissism & Divorce: Understanding the Toxic Patterns Part 1 – Episode 41",
+   "tier": "C"
+  },
+  {
+   "post_id": 7522,
+   "where": "featured_image(attachment 7523)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/nVZxqMVyncg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-20-encore-winning-family-law-firm-secrets-divorce-faqs/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 20 ENCORE: Winning Family Law Firm Secrets & Divorce FAQs",
+   "tier": "C"
+  },
+  {
+   "post_id": 7524,
+   "where": "featured_image(attachment 7525)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/ERlfKfja1ZU.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/meet-the-wolf-pack-family-law-attorney-lisa-malas-episode-39/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Meet the Wolf Pack: Family Law Attorney Lisa Malas – Episode 39",
+   "tier": "C"
+  },
+  {
+   "post_id": 7526,
+   "where": "featured_image(attachment 7527)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/J5oRUXFxYOg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-24-encore-therapy-for-kids-in-divorce-with-dr-kyrstin-jimenez/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 24 ENCORE: Therapy for Kids in Divorce with Dr. Kyrstin Jimenez",
+   "tier": "C"
+  },
+  {
+   "post_id": 7528,
+   "where": "featured_image(attachment 7529)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/N55cyqAHlT0.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/no-fault-divorce-what-it-means-why-it-matters-episode-37/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "No-Fault Divorce: What It Means & Why It Matters – Episode 37",
+   "tier": "C"
+  },
+  {
+   "post_id": 7530,
+   "where": "featured_image(attachment 7531)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/QA1-tCbPh6w.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/what-to-do-if-youre-unhappy-with-your-lawyer-mali-shadmehry-offers-guidance-episode-36/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "What to Do If You’re Unhappy with Your Lawyer: Mali Shadmehry Offers Guidance – Episode 36",
+   "tier": "C"
+  },
+  {
+   "post_id": 7532,
+   "where": "featured_image(attachment 7533)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/NJJPb4c4e0A.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-23-encore-jury-trials-in-divorce-benefits-challenges-preparing-for-success/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 23 ENCORE: Jury Trials in Divorce: Benefits, Challenges & Preparing for Success",
+   "tier": "C"
+  },
+  {
+   "post_id": 7534,
+   "where": "featured_image(attachment 7535)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/I68f-9yZmoU.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/first-anniversary-of-hastings-shadmehry-family-law-episode-33/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "First Anniversary of Hastings Shadmehry Family Law – Episode 33",
+   "tier": "C"
+  },
+  {
+   "post_id": 7538,
+   "where": "featured_image(attachment 7539)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/uXvv7pOfKAE.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-14-encore-what-to-do-before-divorce-financial-emotional-and-practical-steps/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 14 ENCORE: What to Do Before Divorce: Financial, Emotional, and Practical Steps",
+   "tier": "C"
+  },
+  {
+   "post_id": 7540,
+   "where": "featured_image(attachment 7541)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/PRuK_j5kOwI.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/man-vs-bear-and-home-studios-in-divorce-episode-30/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Man vs Bear? and Home Studios in Divorce – Episode 30",
+   "tier": "C"
+  },
+  {
+   "post_id": 7542,
+   "where": "featured_image(attachment 7543)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/M_98VvnMwlM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/introduction-to-collaborative-divorce-episode-29/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Introduction to Collaborative Divorce – Episode 29",
+   "tier": "C"
+  },
+  {
+   "post_id": 7544,
+   "where": "featured_image(attachment 7545)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/WrXFY9ZOjHU.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/family-law-leadership-qa-andee-and-mali-on-running-a-law-firm-episode-28/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Family Law Leadership Q&A: Andee and Mali on Running a Law Firm – Episode 28",
+   "tier": "C"
+  },
+  {
+   "post_id": 7546,
+   "where": "featured_image(attachment 7547)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/SIvsBZwcNsA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/defining-aggression-in-family-law-passion-vs-emotion-in-the-courtroom-episode-27/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Defining Aggression in Family Law: Passion vs. Emotion in the Courtroom – Episode 27",
+   "tier": "C"
+  },
+  {
+   "post_id": 7548,
+   "where": "featured_image(attachment 7549)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/doFvcS3pC5s.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/temporary-hearings-what-you-need-to-know-in-family-law-episode-26/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Temporary Hearings: What You Need to Know in Family Law – Episode 26",
+   "tier": "C"
+  },
+  {
+   "post_id": 7550,
+   "where": "featured_image(attachment 7551)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/HCDY_AJCAA0.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/the-secrets-of-mediation-navigating-disputes-with-diplomacy-and-strategy-episode-25/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "The Secrets of Mediation: Navigating Disputes with Diplomacy and Strategy – Episode 25",
+   "tier": "C"
+  },
+  {
+   "post_id": 7552,
+   "where": "featured_image(attachment 7553)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/lg-BVIRj0Rw.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/therapy-for-kids-in-divorce-with-dr-kyrstin-jimenez-episode-24/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Therapy for Kids in Divorce with Dr. Kyrstin Jimenez – Episode 24",
+   "tier": "C"
+  },
+  {
+   "post_id": 7556,
+   "where": "featured_image(attachment 7557)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/oP13AY7ULiA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/jury-trials-in-divorce-benefits-challenges-preparing-for-success-episode-23/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Jury Trials in Divorce: Benefits, Challenges & Preparing for Success – Episode 23",
+   "tier": "C"
+  },
+  {
+   "post_id": 7558,
+   "where": "featured_image(attachment 7559)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/_si8zfzeDOM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/handling-pet-custody-in-divorce-episode-22/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Handling Pet Custody in Divorce — Episode 22",
+   "tier": "C"
+  },
+  {
+   "post_id": 7562,
+   "where": "featured_image(attachment 7563)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/oqCJvM_nGl8.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/understanding-temporary-protective-orders-tpos-episode-21/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Understanding Temporary Protective Orders (TPOs) – Episode 21",
+   "tier": "C"
+  },
+  {
+   "post_id": 7564,
+   "where": "featured_image(attachment 7565)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/-tERssBjqsc.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/winning-family-law-firm-secrets-divorce-faqs-episode-20/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Winning Family Law Firm Secrets & Divorce FAQs – Episode 20",
+   "tier": "C"
+  },
+  {
+   "post_id": 9162,
+   "where": "featured_image(attachment 9163)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/0lbIYtjbAmA.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/behind-the-scenes-of-high-profile-divorces-episode-18/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Behind the Scenes of High-Profile Divorces – Episode 18",
+   "tier": "C"
+  },
+  {
+   "post_id": 9166,
+   "where": "featured_image(attachment 9167)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/BPfJIqP6NJw.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/empowerment-advocacy-in-family-law-episode-15/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Empowerment & Advocacy in Family Law – Episode 15",
+   "tier": "C"
+  },
+  {
+   "post_id": 9168,
+   "where": "featured_image(attachment 9169)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/gOGs_TDH25s.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/what-to-do-before-divorce-financial-emotional-and-practical-steps-episode-14/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "What to Do Before Divorce: Financial, Emotional, and Practical Steps – Episode 14",
+   "tier": "C"
+  },
+  {
+   "post_id": 9170,
+   "where": "featured_image(attachment 9171)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/m4xSKfIIU7U.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/the-emotional-landscape-of-family-law-episode-13/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "The Emotional Landscape of Family Law – Episode 13",
+   "tier": "C"
+  },
+  {
+   "post_id": 9172,
+   "where": "featured_image(attachment 9173)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/vjym5xmP_uk.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/life-after-divorce-custody-battles-dating-and-legal-insights-episode-12/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Life After Divorce: Custody Battles, Dating, and Legal Insights – Episode 12",
+   "tier": "C"
+  },
+  {
+   "post_id": 9174,
+   "where": "featured_image(attachment 9175)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/2rOpasXCDIs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/50-50-custody-benefits-challenges-and-practical-considerations-episode-11/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "50-50 Custody: Benefits, Challenges, and Practical Considerations – Episode 11",
+   "tier": "C"
+  },
+  {
+   "post_id": 9178,
+   "where": "featured_image(attachment 9179)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/10/S2QwCgu_JhM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/protecting-childrens-voices-in-family-law-custody-battles-parental-alienation-episode-10/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Protecting Children’s Voices in Family Law: Custody Battles & Parental Alienation – Episode 10",
+   "tier": "C"
+  },
+  {
+   "post_id": 9188,
+   "where": "featured_image(attachment 9189)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2025/11/UHfR6CGXwNs.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/make-up-artist-and-entrepreneur-tiffany-nicole-episode-73/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Make Up Artist and Entrepreneur Tiffany Nicole – Episode 73",
+   "tier": "C"
+  },
+  {
+   "post_id": 9217,
+   "where": "featured_image(attachment 9218)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/o-CfZ0FyMKw.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-70-encore-certified-divorce-real-estate-expert-jill-heineck/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 70 ENCORE: Certified Divorce Real Estate Expert Jill Heineck",
+   "tier": "C"
+  },
+  {
+   "post_id": 9219,
+   "where": "featured_image(attachment 9220)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/Q29m01WGXYg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-57-encore-narcissism-divorce-part-3/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 57 ENCORE: Narcissism & Divorce Part 3",
+   "tier": "C"
+  },
+  {
+   "post_id": 9221,
+   "where": "featured_image(attachment 9222)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/9nAbEZErn2k.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-64-encore-why-tell-your-lawyer-the-truth/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 64 ENCORE: Why Tell Your Lawyer the Truth?",
+   "tier": "C"
+  },
+  {
+   "post_id": 9223,
+   "where": "featured_image(attachment 9224)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/Ly-YA4DT1XY.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-49-encore-holiday-parenting-time/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 49 ENCORE: Holiday Parenting Time",
+   "tier": "C"
+  },
+  {
+   "post_id": 9251,
+   "where": "featured_image(attachment 9252)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/01/TSg0pHYkpsQ.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/episode-60-encore-juvenile-family-law-with-expert-kim-beatty/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Episode 60 ENCORE: Juvenile Family Law with Expert Kim Beatty",
+   "tier": "C"
+  },
+  {
+   "post_id": 9261,
+   "where": "featured_image(attachment 9262)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/02/UiauFBxl1XE.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/andees-and-malis-secrets-for-wellness-episode-81/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Andee’s and Mali’s Secrets for Wellness – Episode 81",
+   "tier": "C"
+  },
+  {
+   "post_id": 9295,
+   "where": "featured_image(attachment 9296)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/02/w85iPqy7pw8.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/introducing-forward-facing-ep-101-2/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Introducing FORWARD FACING — Ep 101",
+   "tier": "C"
+  },
+  {
+   "post_id": 9298,
+   "where": "featured_image(attachment 9299)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/02/4QJSCoxqg-Y.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/why-we-rebranded-forward-facing-podcast-episode-1/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "Why We Rebranded | Forward Facing Podcast – Episode 1",
+   "tier": "C"
+  },
+  {
+   "post_id": 9300,
+   "where": "featured_image(attachment 9301)",
+   "src": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/wp-content/uploads/2026/03/fsGqWg5KUK8.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://stg-forwardfacingpodcast-stgforward.kinsta.cloud/episodes/the-art-of-dog-rescue-with-jason-flatt-forward-facing-102/",
+   "post_type": "sby_videos",
+   "post_status": "publish",
+   "title": "The Art of Dog Rescue with Jason Flatt – Forward Facing 102",
+   "tier": "C"
+  }
+ ],
+ "broken": [],
+ "slug": "forwardfacing",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-10-29-1702"
+}
