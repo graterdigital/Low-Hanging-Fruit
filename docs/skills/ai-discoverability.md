@@ -1,6 +1,6 @@
 # Handoff: ai-discoverability
 
-Status as of 2026-10-30: **built, v1.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
+Status as of 2026-10-30 (afternoon): **built, v1; policy default set roster-wide; IndexNow install step added, not yet run.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
 
 Files: `skills/ai-discoverability/SKILL.md` (the procedure), `scripts/ai_discoverability.py` (report, roster, probe, robots apply), `reports/hsfamilylaw/ai-discoverability-2026-10-29.md` (first report), `ai:` block in `clients/_template.yaml` and `clients/hsfamilylaw.yaml`.
 
@@ -37,11 +37,16 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - hsfamilylaw probe: robots.txt is a physical file on live; no IndexNow plugin; free Yoast's `enable_index_now` flag is set but inert.
 - Five client files have no crawl data (backto30, fenceworks-staging, liftaesthetics, purskinclinic, sjklawfirm).
 
+## Decisions 2026-10-30
+
+- Bot policy: agency default allow / allow written into all 41 client files with `policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"`. The three pre-blocked sites (forwardfacing, miuraboiler, setcomcorp) carry a NOTE comment; the skill will propose removing their block, which needs a decision before apply.
+- IndexNow: Microsoft's `indexnow` plugin everywhere; Ahrefs auto-submission not used (too expensive). `--install-indexnow --provider <host> [--apply] [--yes]` does the roster; one-site form takes a slug.
+
 ## Open items
 
-- **Policy decision for hsfamilylaw** (and a default for the roster): `training_bots` is `unknown`. Proposal in the report: allow search bots, decide training bots per client, never block Googlebot. Until someone fills `policy_confirmed_by`, the skill proposes nothing.
+- Run `--install-indexnow --provider kinsta` then `--provider wpengine` (dry, then `--apply --yes`), commit the change logs. ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings.
+- forwardfacing / miuraboiler / setcomcorp: find out who added the block list; keep (record `training_bots: block`) or let the skill replace it.
 - First real `--probe` and `--apply-robots` run (staging first). The virtual→file handover carries Yoast's Sitemap line as static text; confirm Yoast's file editor then shows that file.
-- IndexNow on free-Yoast sites: install Microsoft's `indexnow` plugin (APPROVE) or turn on Ahrefs auto-submission per project; decide which, then record `ai.indexnow`.
 - `--all` roster run once the API key is on the machine, to see whether any of the 40 sites blocks anything today.
 - Sample size: the hsfamilylaw report used 25 pages (built from cached MCP pulls); the script default is 40.
 - Sources used by the report: Google AI features (https://developers.google.com/search/docs/appearance/ai-features), Google AI optimization guide (https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), Google crawlers / Google-Extended (https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers), Ahrefs Sept 2026 features post (https://ahrefs.com/blog/new-features-september-2026/), Ahrefs IndexNow help (https://help.ahrefs.com/en/articles/9317209-how-to-submit-pages-to-indexnow-within-site-audit), Yoast IndexNow (https://yoast.com/yoast-seo-june-28-2022/).

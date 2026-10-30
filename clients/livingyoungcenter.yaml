@@ -37,6 +37,13 @@ local:
   business_profile: unknown
   nap: unknown                      # four locations: St. Petersburg, Seminole, Palm Harbor, Odessa (from page titles)
 
+ai:
+  search_bots: allow            # allow | block: AI search/assistant crawlers (ChatGPT-User, OAI-SearchBot, Claude-SearchBot, PerplexityBot ...). Googlebot is never blocked.
+  training_bots: allow          # allow | block: model-training crawlers (GPTBot, ClaudeBot, Google-Extended ...). Agency default is allow; flip to block when the client asks
+  exceptions: []                # bot names that flip the verdict above
+  indexnow: unknown             # yes | no | unknown: does the site itself ping IndexNow on publish (Microsoft's `indexnow` plugin is the roster standard)
+  policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"
+
 rules:
   # Tier overrides. Skills may be stricter than their defaults here, never looser.
   visible_copy_changes: approve

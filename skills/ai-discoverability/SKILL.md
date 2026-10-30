@@ -20,7 +20,7 @@ Google's position, which the skill follows: AI Overviews and AI Mode use Googleb
      indexnow: unknown           # yes | no | unknown: does the site itself ping IndexNow on publish
      policy_confirmed_by: ""     # who at the client decided, and when
    ```
-   `unknown` on either bots field means undecided. The skill reports but proposes nothing until both are `allow` or `block`.
+   `unknown` on either bots field means undecided. The skill reports but proposes nothing until both are `allow` or `block`. The agency default, written into every client file on 2026-10-30, is allow / allow; a client that wants training bots out gets `training_bots: block` (or names in `exceptions`) and a new `policy_confirmed_by`.
 2. `AHREFS_API_KEY` in `.env` at the repo root.
 3. For `--probe` and `--apply-robots`: `hosting.ssh_alias` (live) and `hosting.staging_environment` filled in.
 
@@ -56,7 +56,15 @@ The five schema checks are Ahrefs' notices against its own page classification, 
 
 **Section 3, IndexNow.** Two separate mechanisms, and Ahrefs only reports on the first:
 - Ahrefs' own auto-submission (Site Audit → Crawl settings → IndexNow; needs an IndexNow key file at the site root and a project boost). `Indexnow_off` in the per-page `indexnow_status` column means this setting is off. It is not a statement about the site.
-- The site pinging IndexNow on publish, which is the one that matters for fresh content. Yoast SEO Premium has it built in (free Yoast does not); Rank Math has the Instant Indexing plugin; AIOSEO has an addon; Microsoft's free `indexnow` plugin works everywhere else. `--probe` checks the active plugin list for these. Google ignores IndexNow; Bing, Yandex, Naver and Seznam use it, and Bing's index feeds ChatGPT search and Copilot. Installing the plugin is APPROVE (a plugin install on a client site); record the result in `ai.indexnow`.
+- The site pinging IndexNow on publish, which is the one that matters for fresh content. Yoast SEO Premium has it built in (free Yoast does not); Rank Math has the Instant Indexing plugin; AIOSEO has an addon; Microsoft's free `indexnow` plugin works everywhere else. `--probe` checks the active plugin list for these. Google ignores IndexNow; Bing, Yandex, Naver and Seznam share one submission endpoint, and Bing's index feeds ChatGPT search, Copilot and DuckDuckGo.
+
+**Roster standard (decided 2026-10-30):** Microsoft's `indexnow` plugin on every WordPress site; Ahrefs auto-submission stays off (it costs credits for the same result). The plugin generates and hosts its own key on activation and submits created, updated and deleted URLs in the background, skipping noindex pages; no settings.
+
+```
+python scripts/ai_discoverability.py --install-indexnow --provider kinsta            # dry: already / would install / skip, per site
+python scripts/ai_discoverability.py --install-indexnow --provider kinsta --apply    # wp plugin install indexnow --activate on live, then verify
+```
+Sites that already run any IndexNow mechanism are left alone and recorded. On apply the script re-reads the plugin list, finds the key in `wp_options`, fetches `https://<domain>/<key>.txt` to prove it is served, logs to `changes/<provider>/<slug>/<stamp>-ai-discoverability-indexnow-live.md`, and sets `ai.indexnow: yes`. No staging rehearsal: it is one plugin with no site-facing output. Live apply asks per site unless `--yes`. Rollback is `wp plugin deactivate indexnow && wp plugin delete indexnow`.
 
 **Section 4, not recommended.** llms.txt (Google Search does not read it; large-scale studies found no citation effect), "AI-specific" schema or hidden text, blocking Googlebot to avoid AI Overviews, rewriting content "for AI". Say so in client conversations; the real levers are indexable, snippet-eligible, fast, text in HTML, accurate schema, Business Profile current.
 

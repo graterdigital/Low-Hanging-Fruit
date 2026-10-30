@@ -9,6 +9,9 @@
     python scripts/ai_discoverability.py <slug> --apply-robots --apply                       # write robots.txt on staging (backup + change log)
     python scripts/ai_discoverability.py <slug> --apply-robots --target live --apply [--yes] # same on live; type the slug to confirm
     python scripts/ai_discoverability.py --all                       # roster: docs/ai-bot-policy.md, one row per client with an Ahrefs project
+    python scripts/ai_discoverability.py --install-indexnow --provider kinsta            # dry: which WordPress sites on that host lack an IndexNow plugin
+    python scripts/ai_discoverability.py --install-indexnow --provider kinsta --apply    # install + activate Microsoft's `indexnow` plugin on live, verify the key file
+    python scripts/ai_discoverability.py <slug> --install-indexnow [--apply]             # one site
 
 Read-and-route by design. The only write this script can make is the robots.txt file (APPROVE tier: the client has to
 decide the policy first, in clients/<slug>.yaml under `ai:`). Everything else in the report is routed to another skill
@@ -75,6 +78,7 @@ ROUTES = {
     "Product page missing Product schema":             ("schema-check", "FLAG", "WooCommerce emits Product; a non-Woo product page needs the SEO plugin's schema type set"),
 }
 
+args_nowrite = False
 def log(*a): print(*a, file=sys.stderr)
 def yn(v): return {True: "yes", False: "no"}.get(v, str(v))
 
@@ -448,6 +452,87 @@ def apply_robots(args, client, proposed_path):
     if kind != "unknown":
         update_client_observed(ROOT / "clients" / f"{client['slug']}.yaml", {"robots_txt": "file" if (args.apply and result == "written") else kind})
 
+# ---------- IndexNow plugin install (APPROVE) ----------
+def indexnow_state(alias, webroot):
+    """(mechanism label or '', key or '') for the site. Looks for any known IndexNow plugin, then the Microsoft plugin's key option."""
+    code, out, err = ssh(alias, f"cd {webroot} && wp --skip-plugins={SKIP_PLUGINS} plugin list --status=active --field=name 2>/dev/null; echo ---; "
+                              f"wp --skip-plugins={SKIP_PLUGINS} option list --search='*indexnow*' --format=json 2>/dev/null")
+    if code != 0 and not out.strip(): return None, None, err.strip()[-200:]
+    plugins, _, opts = out.partition("---")
+    active = {x.strip() for x in plugins.splitlines() if x.strip()}
+    found = ", ".join(label for slug, label in INDEXNOW_PLUGINS.items() if slug in active)
+    key = ""
+    try:
+        for row in json.loads(opts.strip() or "[]"):
+            m = re.search(r"[0-9a-f]{32}", str(row.get("option_value", "")), re.I)
+            if m and "indexnow" in str(row.get("option_name", "")).lower(): key = m.group(0); break
+    except json.JSONDecodeError: pass
+    return found, key, ""
+
+def install_indexnow(client, apply, yes, log_only=False):
+    """Install and activate Microsoft's `indexnow` plugin on live. Returns a row for the summary table."""
+    slug = client["slug"]; provider = str(client.get("hosting", {}).get("provider") or "other").lower()
+    if str((client.get("platform") or {}).get("cms", "")).lower() not in ("wordpress", "unknown", ""):
+        return (slug, "skip", f"cms is {client['platform']['cms']}")
+    if "indexnow" in (client.get("rules", {}).get("do_not_touch") or []): return (slug, "skip", "rules.do_not_touch")
+    alias, webroot = live_alias_and_root(client)
+    if not alias: return (slug, "skip", "no live SSH alias")
+    found, key, err = indexnow_state(alias, webroot)
+    if found is None: return (slug, "error", f"ssh: {err}")
+    if found:
+        if not args_nowrite: update_client_observed(ROOT / "clients" / f"{slug}.yaml", {"indexnow_plugin": found})
+        return (slug, "already", found + (f" (key {key[:8]}…)" if key else ""))
+    if not apply: return (slug, "would install", "no IndexNow mechanism active")
+    if yes: pass
+    elif not sys.stdin.isatty(): return (slug, "skip", "live apply needs a terminal to confirm, or --yes")
+    else:
+        print(f"Install the indexnow plugin on LIVE {slug} ({alias})? [y/N] ", end="", flush=True)
+        if input().strip().lower() != "y": return (slug, "skip", "declined")
+    stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+    code, out, err = ssh(alias, f"cd {webroot} && wp --skip-plugins={SKIP_PLUGINS} plugin install indexnow --activate 2>&1; "
+                              f"wp --skip-plugins={SKIP_PLUGINS} cache flush >/dev/null 2>&1; echo RC=$?")
+    found2, key2, _ = indexnow_state(alias, webroot)
+    home = (client.get("canonical_host") or f"https://{client['domain']}").rstrip("/")
+    keyfile = ""
+    if key2:
+        st, body, _ = fetch_text(f"{home}/{key2}.txt")
+        keyfile = f"key file HTTP {st}, {'matches' if body.strip() == key2 else 'does not match'}"
+    result = "installed" if found2 else "FAILED"
+    outdir = ROOT / "changes" / provider / slug; outdir.mkdir(parents=True, exist_ok=True)
+    (outdir / f"{stamp}-ai-discoverability-indexnow-live.md").write_text("\n".join([
+        f"# ai-discoverability: IndexNow plugin on {client['domain']} (live)", "",
+        f"Run {stamp} · alias `{alias}` · result **{result}** · {found2 or 'no plugin detected after install'}" + (f" · {keyfile}" if keyfile else ""), "",
+        "Rollback: `wp plugin deactivate indexnow && wp plugin delete indexnow` on the same alias. The plugin generates a new key on every activation.", "",
+        "```", out.strip()[-1500:], "```"]) + "\n", encoding="utf-8")
+    if found2 and not args_nowrite:
+        cpath = ROOT / "clients" / f"{slug}.yaml"
+        update_client_observed(cpath, {"indexnow_plugin": found2})
+        t = cpath.read_text(encoding="utf-8")
+        cpath.write_text(re.sub(r"^(  indexnow:)\s*\S+", r"\1 yes", t, count=1, flags=re.M), encoding="utf-8")
+    return (slug, result, (found2 or err.strip()[-120:]) + (f"; {keyfile}" if keyfile else ""))
+
+def install_indexnow_batch(args):
+    sites = []
+    for f in sorted((ROOT / "clients").glob("*.yaml")):
+        if f.name.startswith("_"): continue
+        c = yaml.safe_load(f.read_text(encoding="utf-8")) or {}; c.setdefault("slug", f.stem)
+        if args.slug and c["slug"] != args.slug: continue
+        if args.provider and str(c.get("hosting", {}).get("provider", "")).lower() != args.provider: continue
+        if args.only and c["slug"] not in args.only: continue
+        sites.append(c)
+    if not sites: sys.exit("no matching client files")
+    print(f"IndexNow plugin on {len(sites)} site(s){' — APPLY on LIVE' if args.apply else ' (dry run)'}")
+    rows = []
+    for c in sites:
+        row = install_indexnow(c, args.apply, args.yes); rows.append(row); print(f"  {row[0]:24} {row[1]:14} {row[2]}")
+    if args.provider and len(sites) > 1:
+        stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+        outdir = ROOT / "changes" / args.provider; outdir.mkdir(parents=True, exist_ok=True)
+        lines = [f"# Batch ai-discoverability: IndexNow plugin on {args.provider} ({'apply' if args.apply else 'dry'})", "", f"Run {stamp} · {len(sites)} site(s)", "",
+                 "| Site | Result | Detail |", "|---|---|---|"] + [f"| {a} | {b} | {c} |" for a, b, c in rows]
+        (outdir / f"_batch-{stamp}-ai-discoverability-indexnow-{'apply' if args.apply else 'dry'}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"Summary: {outdir}/_batch-{stamp}-ai-discoverability-indexnow-{'apply' if args.apply else 'dry'}.md")
+
 # ---------- roster ----------
 def roster(cache):
     rows = []
@@ -492,9 +577,17 @@ def main():
     ap.add_argument("--no-client-write", action="store_true", dest="nowrite", help="don't touch clients/<slug>.yaml")
     ap.add_argument("--probe", action="store_true", help="also look at live over SSH: robots.txt file vs virtual, IndexNow plugin state")
     ap.add_argument("--robots-file", dest="robots_file", help="use this saved robots.txt instead of fetching the public one")
+    ap.add_argument("--install-indexnow", action="store_true", dest="install_indexnow", help="install Microsoft's indexnow plugin on live (dry unless --apply)")
+    ap.add_argument("--provider", help="with --install-indexnow: every client file on this host (kinsta | wpengine)")
+    ap.add_argument("--only", default="", help="with --install-indexnow --provider: comma-separated slugs")
     args = ap.parse_args()
+    args.only = {x.strip() for x in args.only.split(",") if x.strip()}
+    global args_nowrite; args_nowrite = args.nowrite
     load_env()
     if args.all: return roster(args.cache)
+    if args.install_indexnow:
+        if not (args.slug or args.provider): ap.error("--install-indexnow needs a slug or --provider")
+        return install_indexnow_batch(args)
     if not args.slug: ap.error("slug or --all")
     cpath = ROOT / "clients" / f"{args.slug}.yaml"
     client = yaml.safe_load(cpath.read_text(encoding="utf-8"))
