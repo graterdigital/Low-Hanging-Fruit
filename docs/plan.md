@@ -20,6 +20,8 @@ This doc is the source of truth for the build. Update it when a decision changes
 **Next**
 - `fix-redirect-links`: hsfamilylaw verified by the same-day recrawl (links-to-redirect 39 → 31, the rest is template pagination and skipped-list URLs). Kinsta batch done 2026-10-30 (9 sites live via `batch_fix_redirect_links.py`, plus hsfamilylaw); nativecustomstone needs staging; WP Engine batch is next.
 - `fix-images` v1 built and **applied to hsfamilylaw live 2026-10-29**: 26 flagged PNGs plus their 108 sub-size files, 102 MB → 26 MB on disk, same URLs. WebP Express turned out to be converting but not serving (Nginx); Greg removed it and enabled Kinsta CDN lossy optimization. Alt text: 95 rows reviewed in a Google Sheet and written to live. Headshots restored to originals after over-compression; graphics kept. Remaining: isle-of-dogs pasted images, Kinsta ticket to drop WebP Express Nginx rules, recrawl. Handoff: `docs/skills/fix-images.md`.
+- `new_client.py <domain>`: find the Ahrefs project by domain, match the Kinsta/WP Engine environment from the SSH sync, fingerprint the stack, write `clients/<slug>.yaml`. Makes "add to Ahrefs, run the batch" true for the ~60 environments with no client file.
+- `redirect-rules` (APPROVE): GSC-driven. "Page with redirect" and 404s that still get impressions, plus each site's skipped-list homepage redirects, get real 301 targets in the redirect plugin. Sibling of fix-redirect-links; first inputs are hsfamilylaw's 4 and miuraboiler's `events-old/*` (23 pages).
 - `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
 
 **Roster facts that shape the build**

@@ -137,11 +137,28 @@ def main():
         if len(page) < 1000: break
         offset += 1000
 
+    # GSC (via Ahrefs, when the project has GSC connected): clicks/impressions per old URL over the last 90 days.
+    # Changes nothing about what is swapped; it orders the skipped list so a redirect-to-home that still gets
+    # impressions is the one to give a real target first. Silently empty when GSC is not connected.
+    gsc = {}
+    if str((client.get("ahrefs") or {}).get("gsc_connected", "")).lower() in ("yes", "true"):
+        try:
+            d_to = datetime.date.today(); d_from = d_to - datetime.timedelta(days=90)
+            gp = ahrefs("gsc/pages", project_id=pid, date_from=d_from.isoformat(), date_to=d_to.isoformat(), limit=5000)
+            for pg in gp.get("pages", []): gsc[pg["page"].rstrip("/")] = (pg.get("clicks") or 0, pg.get("impressions") or 0)
+        except SystemExit as e:
+            print(f"Note: GSC data not available ({str(e)[:120]}); continuing without it.")
+    def gsc_for(url):
+        return gsc.get(url.rstrip("/"))
+
     swaps, skipped, verify_fail = [], [], 0
     for r in rows:
         kind, note = classify(r, site_host)
         if kind == "skip":
-            skipped.append({"old": r["url"], "reason": note, "links": r.get("incoming_all_links")}); continue
+            e = {"old": r["url"], "reason": note, "links": r.get("incoming_all_links")}
+            g = gsc_for(r["url"])
+            if g: e["gsc_clicks_90d"], e["gsc_impressions_90d"] = g
+            skipped.append(e); continue
         new = r["final_redirect"]
         if not args.no_verify:
             st = head_status(new)
@@ -153,8 +170,12 @@ def main():
                 skipped.append({"old": r["url"], "reason": f"target {new} returned {st} on verify, expected 200; check the redirect rule (APPROVE)", "links": r.get("incoming_all_links")}); continue
         s = {"old": r["url"], "new": new, "links": r.get("incoming_all_links")}
         if note: s["note"] = note
+        g = gsc_for(r["url"])
+        if g: s["gsc_clicks_90d"], s["gsc_impressions_90d"] = g
         swaps.append(s)
 
+    # Skipped list: the ones a human must act on first (impressions, then links) at the top.
+    skipped.sort(key=lambda e: (-(e.get("gsc_impressions_90d") or 0), -(e.get("links") or 0), e["old"]))
     # Longest old path first so the anchored matcher sees the most specific rule first (it is anchored anyway; this is belt and braces).
     swaps.sort(key=lambda s: (-len(urllib.parse.urlsplit(s["old"]).path), s["old"]))
 
@@ -175,6 +196,8 @@ def main():
     sitewide = [s for s in swaps if (s.get("links") or 0) >= max(20, 0.8 * (hs.get("total") or 0))]
     print(f"{client['domain']}: crawl {crawl_date}, {len(rows)} redirecting URLs -> {len(swaps)} swaps, {len(skipped)} skipped" + (f" ({verify_fail} failed verify)" if verify_fail else ""))
     if sitewide: print(f"  {len(sitewide)} swap(s) are linked from nearly every page (menu/footer/template): " + ", ".join(urllib.parse.urlsplit(s['old']).path for s in sitewide[:5]))
+    hot = [e for e in skipped if (e.get("gsc_impressions_90d") or 0) > 0]
+    if gsc: print(f"  GSC: {len(gsc)} pages with data; {len(hot)} skipped URL(s) still get impressions" + (": " + ", ".join(urllib.parse.urlsplit(e['old']).path for e in hot[:5]) if hot else ""))
     by = {}
     for s in skipped: by[s["reason"].split(";")[0]] = by.get(s["reason"].split(";")[0], 0) + 1
     for k, v in sorted(by.items(), key=lambda kv: -kv[1]): print(f"  skip {v:3}  {k}")
