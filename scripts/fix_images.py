@@ -186,9 +186,22 @@ VIEW_WORDS = {"front": "front view", "back": "back view", "rear": "rear view", "
               "lifestyle": "in use", "use": "in use", "inuse": "in use", "box": "packaging", "packaging": "packaging", "kit": "kit contents",
               "accessories": "accessories", "cable": "cable", "charger": "charger", "stylus": "stylus", "case": "case", "strap": "strap"}
 
+KEEP_CAPS = {"USB", "LTE", "RF", "GPS", "VESA", "LED", "HD", "DC", "AC", "IP", "NFC", "GJ", "GPIO", "HDMI", "VGA", "DVI", "SSD", "HDD", "RAM", "CPU", "LCD", "OEM", "SKU", "KIT", "NO", "OS", "PC", "TV", "UHF", "VHF", "FM", "AM", "PSU", "UPS", "POS", "ID", "US", "UK", "EU"}
+SHARED_LIMIT = 5   # an attachment used by more than this many products is a placeholder/brand image, not a product photo
+
 def clean_title(t):
-    t = re.sub(r"\s*\|.*$", "", t)   # drop a "| Brand" tail some stores put in titles
-    return re.sub(r"\s+", " ", t).strip()
+    t = re.sub(r"\s*\|.*$", "", t)   # drop a "| SKU" or "| Brand" tail
+    t = re.sub(r"\s+", " ", t).strip()
+    # Shouting titles ("SAMSUNG GALAXY TAB ACTIVE2 DUAL USB DOCK") read badly in a screen reader; title-case them but keep
+    # tokens that are model codes or units (contain digits, or are short all-caps like USB, AMPS, KIT) as they are.
+    letters = [c for c in t if c.isalpha()]
+    if letters and sum(c.isupper() for c in letters) / len(letters) > 0.8:
+        def fix(w):
+            core = re.sub(r"[^A-Za-z0-9]", "", w)
+            if any(ch.isdigit() for ch in core) or core in KEEP_CAPS: return w
+            return w.capitalize()
+        t = " ".join(fix(w) for w in t.split(" "))
+    return t
 
 def view_suffix(filename, title):
     """A short, honest suffix from the file name: 'ports', 'side view', 'docked'. Nothing if the name says nothing."""
@@ -201,7 +214,12 @@ def view_suffix(filename, title):
 
 def product_alt_rows(inv):
     """One row per product image needing alt. Alt = cleaned product title (+ view suffix / 'view N' / variation attributes).
-    Already-set alts are kept; an attachment shared by several products is assigned once, to the first product that uses it."""
+    Already-set alts are kept. An attachment used by more than SHARED_LIMIT products is a placeholder or brand image and is
+    NOT named after a product: it goes on the exception list with a blank new_alt. An attachment shared by a few products
+    (SKU variants of one model) gets the alt from the first product that uses it, which is fine when the names match."""
+    use = {}
+    for pr in inv.get("products", []):
+        for im in pr["images"]: use.setdefault(im["attachment_id"], set()).add(pr["id"])
     rows, seen = [], {}
     for pr in inv.get("products", []):
         title = clean_title(pr["title"])
@@ -210,16 +228,22 @@ def product_alt_rows(inv):
         for im in pr["images"]:
             aid = im["attachment_id"]
             if im["role"] == "gallery": n_gal += 1
+            base = {"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "shared_by": len(use[aid])}
             if (im.get("alt") or "").strip():
-                rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": "", "note": "already set, kept: " + im["alt"][:60]}); continue
+                rows.append({**base, "new_alt": "", "note": "already set, kept: " + im["alt"][:60]}); continue
+            if len(use[aid]) > SHARED_LIMIT:
+                rows.append({**base, "new_alt": "", "note": f"EXCEPTION: used by {len(use[aid])} products, likely a placeholder, brand image or shared model photo; set its alt by hand"}); continue
+            if len(title.split()) < 2:
+                rows.append({**base, "new_alt": "", "note": f"EXCEPTION: product title is a single word ({title}); not enough to describe the image"}); continue
             if aid in seen:
-                rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": "", "note": f"shared image, alt set via product {seen[aid]}"}); continue
+                rows.append({**base, "new_alt": "", "note": f"shared image, alt set via product {seen[aid]}"}); continue
             suffix = view_suffix(im["file"], title)
             if im["role"] == "featured": alt = title
             elif im["role"] == "gallery": alt = f"{title} - {suffix or f'view {n_gal + 1}'}"
             else: alt = f"{title} - {im.get('variation') or suffix or 'variation'}"
             seen[aid] = pr["id"]
-            rows.append({"product_id": pr["id"], "product": title, "url": pr["url"], "attachment_id": aid, "role": im["role"], "file": im["file"], "new_alt": alt[:125], "note": ""})
+            if len(alt) > 125: alt = alt[:125].rsplit(" ", 1)[0]
+            rows.append({**base, "new_alt": alt, "note": ""})
     return rows
 
 def product_alt(args, inv, alias, provider, host, cdir, stamp):
@@ -242,12 +266,27 @@ def product_alt(args, inv, alias, provider, host, cdir, stamp):
             if "===JSON===" not in out: sys.exit(f"Remote run failed.\nstdout:\n{out[-2000:]}\nstderr:\n{err[-2000:]}")
             part = json.loads(out.split("===JSON===", 1)[1].strip()); res["results"] += part["results"]; res["home_host"] = part["home_host"]
     written = len([x for x in res["results"] if x.get("applied")]); already = len([x for x in res["results"] if x.get("note", "").startswith("already")])
+    exc = [r for r in rows if r["note"].startswith("EXCEPTION")]
+    by_att = {}
+    for r in exc: by_att.setdefault(r["attachment_id"], {"file": r["file"], "n": r["shared_by"], "titles": set(), "reason": r["note"]})["titles"].add(r["product"])
+    exc_att = sorted(by_att.items(), key=lambda kv: -kv[1]["n"])
+    if exc_att:
+        epath = cdir / f"{stamp}-fix-images-product-alt-exceptions.csv"
+        with epath.open("w", newline="", encoding="utf-8") as fh:
+            w = csv.writer(fh); w.writerow(["attachment_id", "file", "used_by_products", "example_products", "suggestion", "new_alt", "reason"])
+            for a, d in exc_att:
+                name = re.sub(r"\.\w+$", "", d["file"]); name = re.sub(r"-\d+x\d+$|-scaled|_?\d+x\d+", "", name)
+                words = [x for x in re.split(r"[-_\s.]+", name) if x and not re.fullmatch(r"\d+", x)]
+                common = os.path.commonprefix([t.lower() for t in d["titles"]]).strip(" -:,|") if len(d["titles"]) > 1 else next(iter(d["titles"]))
+                sug = (common.title() + " - " if common and len(common) > 3 else "") + " ".join(words).replace("  ", " ")
+                w.writerow([a, d["file"], d["n"], " | ".join(sorted(d["titles"])[:3]), sug[:125], "", d["reason"].replace("EXCEPTION: ", "")])
+        print(f"  {len(exc_att)} shared attachments (covering {len(exc)} product slots) need a hand-written alt: {epath.name}")
     flush = None
     if mode == "apply":
         c, o, e = wp(alias, args.webroot, "cache flush"); flush = (c == 0, (o + e).strip())
     log = [f"# fix-images (product alt from title): {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · install host `{res['home_host']}`", "",
            f"{len(inv.get('products', []))} products, {len(rows)} images. {len(todo)} alts {'written' if mode == 'apply' else 'would be written'}" + (f" ({written} confirmed)" if mode == "apply" else "") + f", {already} already set on the attachment, {len(rows) - len(todo) - already} shared or kept.", "",
-           f"Full list: `{sheet.name}`. Rule: featured = product title; gallery = title + view word from the file name or 'view N'; variation = title + attributes. Existing alts are never overwritten.", "",
+           f"Full list: `{sheet.name}`. Rule: featured = product title; gallery = title + view word from the file name or 'view N'; variation = title + attributes. Existing alts are never overwritten. Attachments used by more than {SHARED_LIMIT} products are placeholders or brand images and are listed in the `-exceptions.csv` for a human instead.", "",
            "Sample:", ""] + [f"- {r['role']:9} `{r['file'][:50]}` → {r['new_alt']}" for r in todo[:25]]
     if flush is not None: log += ["", f"Object cache flush: {flush}"]
     log += ["", "## Rollback", "", "Every attachment in the list had an empty `_wp_attachment_image_alt`; clearing it restores the previous state. `backup/` holds the full result."]
