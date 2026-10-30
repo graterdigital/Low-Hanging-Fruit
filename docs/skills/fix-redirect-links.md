@@ -54,7 +54,7 @@ After the stage-only run and its fixes (below), live went in three groups with `
 | miuraboiler | 75/23/102 | Elementor; staging was stale (17 hits), live is the real number; run live check-json after apply |
 | setcomcorp | 10/9/43 | live SSH needs the running machine's IP on the environment's allowlist (MyKinsta → Security); Elementor, run live check-json |
 
-Left on Kinsta: **nativecustomstone** (86 swaps in the map, no staging; create one or run live-only with `--allow-no-staging` after reading the map). Options logs with real hits to hand over: markheardfuel (16 rows), setcomcorp (7), meshautomationinc (3), technikpackaging (2), forwardfacing, ruggeddepot (1 each): widgets/menus/theme settings carrying old links.
+Re-run needed on the Elementor sites (markheardfuel, setcomcorp, miuraboiler, ruggeddepot, meshautomationinc) after the plain-JSON fix of 2026-10-30 (`--live --no-stage --no-map` is fine: the maps are current and the sites are idempotent). Left on Kinsta: **nativecustomstone** (86 swaps in the map, no staging; create one or run live-only with `--allow-no-staging` after reading the map). Options logs with real hits to hand over: markheardfuel (16 rows), setcomcorp (7), meshautomationinc (3), technikpackaging (2), forwardfacing, ruggeddepot (1 each): widgets/menus/theme settings carrying old links.
 
 Verify next week: Ahrefs recrawls each project on its schedule; compare "Page has links to redirect" and "3XX redirect" against the 10-22/10-29 baselines in the first batch summary.
 

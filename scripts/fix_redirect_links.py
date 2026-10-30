@@ -168,6 +168,15 @@ def run(args):
     host = client["domain"]
     m = json.loads(Path(args.map).read_text(encoding="utf-8"))
     swaps = m["swaps"]
+    # On LIVE, the non-canonical host variant (www. vs bare) is treated as a legacy host so links on it are moved
+    # to the canonical host: the path was already right, but every such link still costs a redirect hop.
+    # Staging keeps hosts as found (its own host is never the canonical one).
+    legacy_hosts = list(m.get("legacy_hosts") or [])
+    canon = urllib.parse.urlsplit(client.get("canonical_host") or f"https://{host}").netloc.lower()
+    if args.target == "live" and canon:
+        variant = canon[4:] if canon.startswith("www.") else "www." + canon
+        if variant not in legacy_hosts: legacy_hosts.append(variant)
+    m["legacy_hosts"] = legacy_hosts
     if args.target == "live" and args.apply:
         confirm_live(args.slug, len(swaps), alias, args.yes)
 

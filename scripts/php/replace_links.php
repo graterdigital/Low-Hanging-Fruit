@@ -45,8 +45,13 @@ function is_json_blob($v) { if (!is_string($v) || $v === '' || ($v[0] !== '{' &&
 
 function target_host($matched_host) {
     global $legacy, $home_host;
+    // Exact legacy match first (a www./bare variant of the site listed as legacy means: move to the canonical host).
+    foreach ($legacy as $l) if (strtolower($matched_host) === strtolower($l)) return $home_host;
     $bare = preg_replace('~^www\.~', '', $matched_host);
-    foreach ($legacy as $l) if ($bare === preg_replace('~^www\.~', '', $l)) return $home_host;
+    foreach ($legacy as $l) {
+        $lb = preg_replace('~^www\.~', '', $l);
+        if ($bare === $lb && $bare !== preg_replace('~^www\.~', '', $home_host)) return $home_host;   // a genuinely different old host
+    }
     return $matched_host;
 }
 
@@ -64,15 +69,20 @@ function rewrite($text, &$hits) {
         // root-relative: "/old/"
         $text = preg_replace('~(?<=["\'(])' . $q . '(?=["\')#?])~', $s['newPath'], $text, -1, $c); $n += $c;
         // JSON-escaped absolute and relative
-        $text = preg_replace_callback('~(?<=\\\\")(https?:\\\\/\\\\/)(' . $hosts_re . ')' . $qj . '(?=\\\\?["#?])~i',
+        $text = preg_replace_callback('~(?<=\\\\"|")(https?:\\\\/\\\\/)(' . $hosts_re . ')' . $qj . '(?=\\\\?["#?])~i',
             fn($m) => $m[1] . target_host($m[2]) . $newJ, $text, -1, $c); $n += $c;
-        $text = preg_replace('~(?<=\\\\")' . $qj . '(?=\\\\?["#?])~', $newJ, $text, -1, $c); $n += $c;
+        $text = preg_replace('~(?<=\\\\"|")' . $qj . '(?=\\\\?["#?])~', $newJ, $text, -1, $c); $n += $c;
         if ($n) $hits[$s['old']] = ($hits[$s['old']] ?? 0) + $n;
     }
     // Legacy host on an otherwise-correct path: just move it to the current host.
     foreach ($legacy as $l) {
-        $lq = preg_quote(preg_replace('~^www\.~', '', $l), '~');
-        $text = preg_replace('~(?<=["\'(])(https?://)(?:www\.)?' . $lq . '(?=/)~i', '$1' . $home_host, $text, -1, $c);
+        $lb = preg_replace('~^www\.~', '', $l);
+        // A legacy host that is a www./bare variant of the current host must match exactly (or it would match the canonical host too).
+        $lq = ($lb === preg_replace('~^www\.~', '', $home_host)) ? preg_quote($l, '~') : '(?:www\.)?' . preg_quote($lb, '~');
+        $text = preg_replace('~(?<=["\'(])(https?://)' . $lq . '(?=/)~i', '$1' . $home_host, $text, -1, $c);
+        if ($c) $hits["host:$l"] = ($hits["host:$l"] ?? 0) + $c;
+        // JSON-escaped form
+        $text = preg_replace('~(?<=\\\\"|")(https?:\\\\/\\\\/)' . $lq . '(?=\\\\/)~i', '$1' . $home_host, $text, -1, $c);
         if ($c) $hits["host:$l"] = ($hits["host:$l"] ?? 0) + $c;
     }
     return $text;
