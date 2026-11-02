@@ -24,7 +24,7 @@ Ahrefs' `indexnow_status` column is about Ahrefs' OWN auto-submission (a Site Au
 hosted at the site root), not about the site's SEO plugin pinging IndexNow on publish. The report keeps the two apart; `--probe`
 checks the plugin side over SSH.
 """
-import argparse, datetime, difflib, json, re, subprocess, sys, urllib.error, urllib.request
+import argparse, base64, datetime, difflib, json, re, subprocess, sys, urllib.error, urllib.request
 from pathlib import Path
 
 try:
@@ -467,7 +467,13 @@ def indexnow_state(alias, webroot):
     try:
         for row in json.loads(opts.strip() or "[]"):
             names.append(str(row.get("option_name")))
-            for c in re.findall(r"[A-Za-z0-9-]{16,128}", str(row.get("option_value", ""))):
+            val = str(row.get("option_value", "")).strip().strip('"')
+            # Microsoft's plugin stores the key base64-encoded in `indexnow-admin_api_key`; other plugins store it plain.
+            try:
+                dec = base64.b64decode(val, validate=True).decode("ascii")
+                if re.fullmatch(r"[A-Za-z0-9-]{8,128}", dec): cands.append(dec)
+            except Exception: pass
+            for c in re.findall(r"[A-Za-z0-9-]{16,128}", val):
                 if re.search(r"\d", c) and re.search(r"[a-zA-Z]", c): cands.append(c)
     except json.JSONDecodeError: pass
     return found, cands, ", ".join(names)
