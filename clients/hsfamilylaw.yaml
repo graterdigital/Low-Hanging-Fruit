@@ -56,7 +56,7 @@ ai:
     indexnow_status: Indexnow_off
     robots_txt: file
     indexnow_plugin: IndexNow (Microsoft Bing, free)
-    indexnow_key_served: unconfirmed
+    indexnow_key_served: yes
 
 rules:
   # Tier overrides. Skills may be stricter than their defaults here, never looser.
