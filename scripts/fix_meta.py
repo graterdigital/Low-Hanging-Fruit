@@ -578,7 +578,7 @@ def main():
     if not pid or str(pid) in ("0", "unknown"): sys.exit(f"clients/{args.slug}.yaml has no ahrefs.site_audit_project_id")
     outdir = ROOT / "reports" / args.slug; outdir.mkdir(parents=True, exist_ok=True)
     if args.sheet and not args.probe:
-        js = sorted(outdir.glob("meta-*.json"))
+        js = sorted(f for f in outdir.glob("meta-*.json") if re.match(r"meta-\d{4}-\d{2}-\d{2}\.json$", f.name))   # not meta-drafts.json
         if js:
             saved = json.loads(js[-1].read_text(encoding="utf-8"))
             print(f"{args.slug}: sheet: {push_sheet(client, saved['data'], saved['queue'])} (from {js[-1].name})"); return
