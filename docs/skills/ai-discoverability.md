@@ -1,6 +1,6 @@
 # Handoff: ai-discoverability
 
-Status as of 2026-10-30 (afternoon): **built, v1; policy default set roster-wide; IndexNow install step added, not yet run.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
+Status as of 2026-11-02: **built, v1. IndexNow plugin live on 11 Kinsta sites (2026-10-30). WP Engine run failed on the web-root path; fixed, needs a rerun.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
 
 Files: `skills/ai-discoverability/SKILL.md` (the procedure), `scripts/ai_discoverability.py` (report, roster, probe, robots apply), `reports/hsfamilylaw/ai-discoverability-2026-10-29.md` (first report), `ai:` block in `clients/_template.yaml` and `clients/hsfamilylaw.yaml`.
 
@@ -42,9 +42,15 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - Bot policy: agency default allow / allow written into all 41 client files with `policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"`. The three pre-blocked sites (forwardfacing, miuraboiler, setcomcorp) carry a NOTE comment; the skill will propose removing their block, which needs a decision before apply.
 - IndexNow: Microsoft's `indexnow` plugin everywhere; Ahrefs auto-submission not used (too expensive). `--install-indexnow --provider <host> [--apply] [--yes]` does the roster; one-site form takes a slug.
 
+## IndexNow rollout log
+
+- 2026-10-30 Kinsta: Microsoft `indexnow` plugin installed + activated on atlantaspecializedcare, fenceworksofga, forwardfacing, hsfamilylaw, markheardfuel, meshautomationinc, miuraboiler, nativecustomstone, setcomcorp, slepianfirm, technikpackaging. ruggeddepot already had Yoast SEO Premium (IndexNow built in). Key-file verification did not run on that pass (the option lookup was too narrow); the dry run now re-checks it and records `ai.observed.indexnow_key_served`.
+- 2026-10-30 WP Engine: every site FAILED with `cd: sites/<slug>: No such file or directory`. Cause: WP Engine's root is `/sites/<install>` where install is the environment name, not our slug. Fixed in `build_redirect_map.wpengine_webroot()` (reads the install name from `ssh -G <alias>`), used by ai_discoverability, fix_redirect_links and fix_images, so the WP Engine batches for those skills were about to hit the same wall. blushmedspact already has Yoast Premium. The dry run also used to report "no IndexNow mechanism" when the `cd` failed; it now reports the error.
+- Yoast and IndexNow: only Yoast SEO **Premium** pings IndexNow (ruggeddepot, blushmedspact on this roster). Free Yoast has the `enable_index_now` option but no code behind it; that is why the Microsoft plugin goes on the free-Yoast sites.
+
 ## Open items
 
-- Run `--install-indexnow --provider kinsta` then `--provider wpengine` (dry, then `--apply --yes`), commit the change logs. ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings.
+- Rerun `--install-indexnow --provider wpengine` (dry, then `--apply --yes`) with the web-root fix; rerun the Kinsta dry run to confirm key files are served. ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings.
 - forwardfacing / miuraboiler / setcomcorp: find out who added the block list; keep (record `training_bots: block`) or let the skill replace it.
 - First real `--probe` and `--apply-robots` run (staging first). The virtual→file handover carries Yoast's Sitemap line as static text; confirm Yoast's file editor then shows that file.
 - `--all` roster run once the API key is on the machine, to see whether any of the 40 sites blocks anything today.

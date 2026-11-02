@@ -27,7 +27,7 @@ except ImportError:
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-from build_redirect_map import load_env, ahrefs, UA   # same Ahrefs plumbing; keeps one copy of the .env reader
+from build_redirect_map import load_env, ahrefs, UA, wpengine_webroot   # same Ahrefs plumbing; keeps one copy of the .env reader
 
 ISSUE_ID = "c64d8113-d0f4-11e7-8ed1-001e67ed4656"   # Ahrefs "Image file size too large"
 SKIP_PLUGINS = "handl-utm-grabber-v3"
@@ -427,7 +427,7 @@ def main(argv=None):
     alias = alias.split(",")[0].strip()
     provider = str(hosting.get("provider") or "other").strip().lower() or "other"
     if provider in ("unknown", "none"): provider = "other"
-    if provider == "wpengine" and args.webroot == "public": args.webroot = f"sites/{alias}"
+    if provider == "wpengine" and args.webroot == "public": args.webroot = wpengine_webroot(alias)
     host = client["domain"]
     canon = client.get("canonical_host") or f"https://{host}"
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")

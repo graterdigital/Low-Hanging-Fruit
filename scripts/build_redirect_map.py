@@ -67,6 +67,17 @@ def head_status(url):
             return f"error: {type(e).__name__}"
     return None
 
+def wpengine_webroot(alias):
+    """WP Engine's WordPress root is /sites/<install>, where <install> is the environment name, not our client slug.
+    The SSH sync writes the install name as the alias's User, so read it back from `ssh -G`."""
+    import subprocess
+    try:
+        out = subprocess.run(["ssh", "-G", alias], capture_output=True, text=True, timeout=20).stdout
+        m = re.search(r"^user\s+(\S+)", out, re.M)
+        if m: return f"/sites/{m.group(1)}"
+    except Exception: pass
+    return f"/sites/{alias}"
+
 def norm_host(h): return re.sub(r"^www\.", "", (h or "").lower())
 
 def classify(row, site_host):

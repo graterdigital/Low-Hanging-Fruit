@@ -35,7 +35,7 @@ except ImportError:
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-from build_redirect_map import load_env, ahrefs, UA, norm_host  # noqa: E402
+from build_redirect_map import load_env, ahrefs, UA, norm_host, wpengine_webroot  # noqa: E402
 
 CATEGORY = "AI Discoverability"
 SKIP_PLUGINS = "handl-utm-grabber-v3"
@@ -392,7 +392,7 @@ def live_alias_and_root(client, webroot="public"):
     alias = (hosting.get("ssh_alias") or "").split(",")[0].strip()
     if not alias or alias in ("unknown", "none"): return None, None
     provider = str(hosting.get("provider") or "other").lower()
-    return alias, (f"sites/{alias}" if provider == "wpengine" and webroot == "public" else webroot)
+    return alias, (wpengine_webroot(alias) if provider == "wpengine" and webroot == "public" else webroot)
 
 def probe_site(client):
     """Over SSH on live: robots.txt file vs virtual, and which IndexNow mechanism (if any) the site has."""
@@ -414,7 +414,7 @@ def apply_robots(args, client, proposed_path):
     alias = alias.split(",")[0].strip()
     provider = str(hosting.get("provider") or "other").lower()
     if provider in ("", "unknown", "none"): provider = "other"
-    webroot = args.webroot if not (provider == "wpengine" and args.webroot == "public") else f"sites/{alias}"
+    webroot = args.webroot if not (provider == "wpengine" and args.webroot == "public") else wpengine_webroot(alias)
     if client.get("rules", {}).get("do_not_touch") and "robots.txt" in client["rules"]["do_not_touch"]:
         sys.exit("robots.txt is in rules.do_not_touch for this client")
     if not proposed_path.exists(): sys.exit(f"No proposed robots.txt at {proposed_path}; run the report first (and make sure the client has a decided `ai:` policy).")
@@ -454,20 +454,29 @@ def apply_robots(args, client, proposed_path):
 
 # ---------- IndexNow plugin install (APPROVE) ----------
 def indexnow_state(alias, webroot):
-    """(mechanism label or '', key or '') for the site. Looks for any known IndexNow plugin, then the Microsoft plugin's key option."""
-    code, out, err = ssh(alias, f"cd {webroot} && wp --skip-plugins={SKIP_PLUGINS} plugin list --status=active --field=name 2>/dev/null; echo ---; "
+    """(mechanism label or '', key or '', option names seen) for the site, or (None, None, error).
+    Looks for any known IndexNow plugin, then for a key-shaped string in any *indexnow* option; the key is confirmed by fetching /<key>.txt."""
+    code, out, err = ssh(alias, f"cd {webroot} || exit 97; wp --skip-plugins={SKIP_PLUGINS} plugin list --status=active --field=name 2>/dev/null; echo ---; "
                               f"wp --skip-plugins={SKIP_PLUGINS} option list --search='*indexnow*' --format=json 2>/dev/null")
+    if code == 97: return None, None, f"no such directory {webroot} on {alias}"
     if code != 0 and not out.strip(): return None, None, err.strip()[-200:]
     plugins, _, opts = out.partition("---")
     active = {x.strip() for x in plugins.splitlines() if x.strip()}
     found = ", ".join(label for slug, label in INDEXNOW_PLUGINS.items() if slug in active)
-    key = ""
+    names, cands = [], []
     try:
         for row in json.loads(opts.strip() or "[]"):
-            m = re.search(r"[0-9a-f]{32}", str(row.get("option_value", "")), re.I)
-            if m and "indexnow" in str(row.get("option_name", "")).lower(): key = m.group(0); break
+            names.append(str(row.get("option_name")))
+            for c in re.findall(r"[A-Za-z0-9-]{16,128}", str(row.get("option_value", ""))):
+                if re.search(r"\d", c) and re.search(r"[a-zA-Z]", c): cands.append(c)
     except json.JSONDecodeError: pass
-    return found, key, ""
+    return found, cands, ", ".join(names)
+
+def confirm_key(home, cands):
+    for c in dict.fromkeys(cands):
+        st, body, _ = fetch_text(f"{home}/{c}.txt")
+        if st == 200 and body.strip() == c: return c
+    return ""
 
 def install_indexnow(client, apply, yes, log_only=False):
     """Install and activate Microsoft's `indexnow` plugin on live. Returns a row for the summary table."""
@@ -477,11 +486,13 @@ def install_indexnow(client, apply, yes, log_only=False):
     if "indexnow" in (client.get("rules", {}).get("do_not_touch") or []): return (slug, "skip", "rules.do_not_touch")
     alias, webroot = live_alias_and_root(client)
     if not alias: return (slug, "skip", "no live SSH alias")
-    found, key, err = indexnow_state(alias, webroot)
-    if found is None: return (slug, "error", f"ssh: {err}")
+    home = (client.get("canonical_host") or f"https://{client['domain']}").rstrip("/")
+    found, cands, names = indexnow_state(alias, webroot)
+    if found is None: return (slug, "error", f"ssh: {names}")
     if found:
-        if not args_nowrite: update_client_observed(ROOT / "clients" / f"{slug}.yaml", {"indexnow_plugin": found})
-        return (slug, "already", found + (f" (key {key[:8]}…)" if key else ""))
+        key = confirm_key(home, cands or [])
+        if not args_nowrite: update_client_observed(ROOT / "clients" / f"{slug}.yaml", {"indexnow_plugin": found, "indexnow_key_served": "yes" if key else "unconfirmed"})
+        return (slug, "already", found + (f"; key file served ({key[:8]}…)" if key else f"; key file not confirmed (options seen: {names or 'none'})"))
     if not apply: return (slug, "would install", "no IndexNow mechanism active")
     if yes: pass
     elif not sys.stdin.isatty(): return (slug, "skip", "live apply needs a terminal to confirm, or --yes")
@@ -491,12 +502,10 @@ def install_indexnow(client, apply, yes, log_only=False):
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
     code, out, err = ssh(alias, f"cd {webroot} && wp --skip-plugins={SKIP_PLUGINS} plugin install indexnow --activate 2>&1; "
                               f"wp --skip-plugins={SKIP_PLUGINS} cache flush >/dev/null 2>&1; echo RC=$?")
-    found2, key2, _ = indexnow_state(alias, webroot)
-    home = (client.get("canonical_host") or f"https://{client['domain']}").rstrip("/")
-    keyfile = ""
-    if key2:
-        st, body, _ = fetch_text(f"{home}/{key2}.txt")
-        keyfile = f"key file HTTP {st}, {'matches' if body.strip() == key2 else 'does not match'}"
+    found2, cands2, names2 = indexnow_state(alias, webroot)
+    if found2 is None: found2, cands2, names2 = "", [], names2
+    key2 = confirm_key(home, cands2 or [])
+    keyfile = f"key file served ({key2[:8]}…)" if key2 else f"key file not confirmed (options seen: {names2 or 'none'})"
     result = "installed" if found2 else "FAILED"
     outdir = ROOT / "changes" / provider / slug; outdir.mkdir(parents=True, exist_ok=True)
     (outdir / f"{stamp}-ai-discoverability-indexnow-live.md").write_text("\n".join([
@@ -506,7 +515,7 @@ def install_indexnow(client, apply, yes, log_only=False):
         "```", out.strip()[-1500:], "```"]) + "\n", encoding="utf-8")
     if found2 and not args_nowrite:
         cpath = ROOT / "clients" / f"{slug}.yaml"
-        update_client_observed(cpath, {"indexnow_plugin": found2})
+        update_client_observed(cpath, {"indexnow_plugin": found2, "indexnow_key_served": "yes" if key2 else "unconfirmed"})
         t = cpath.read_text(encoding="utf-8")
         cpath.write_text(re.sub(r"^(  indexnow:)\s*\S+", r"\1 yes", t, count=1, flags=re.M), encoding="utf-8")
     return (slug, result, (found2 or err.strip()[-120:]) + (f"; {keyfile}" if keyfile else ""))

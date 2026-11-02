@@ -14,6 +14,8 @@ Live applies ask you to type the slug unless --yes is given.
 """
 import argparse, json, re, subprocess, sys, datetime, urllib.request, urllib.parse, urllib.error, html
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_redirect_map import wpengine_webroot  # noqa: E402
 from concurrent.futures import ThreadPoolExecutor
 
 try:
@@ -164,7 +166,7 @@ def run(args):
     provider = str(hosting.get("provider") or "other").strip().lower()
     if provider in ("", "unknown", "none"): provider = "other"
     if provider == "wpengine" and args.webroot == "public":
-        args.webroot = f"sites/{alias}"
+        args.webroot = wpengine_webroot(alias)
     host = client["domain"]
     m = json.loads(Path(args.map).read_text(encoding="utf-8"))
     swaps = m["swaps"]
