@@ -54,3 +54,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://backto30.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Homepage is a hand-coded static HTML site (no wp-content, single assets/js/site.js, no generator meta), not WordPress; two GA4 IDs and two Google Ads IDs fire with gtag consent default set; Zenoti booking links; HubSpot offer subdomain hsoffer.backto30.com."
+
+review:
+  alt_sheet_id: 1tmNlUb6I8Ke7T6zYAlvMalui01qB2I_tXWiaXGSsQeU   # "backto30 review" in Google Sheets; scripts/review_sheets.py

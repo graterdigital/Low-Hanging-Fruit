@@ -57,3 +57,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://22spamd.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Med spa in Cottonwood Heights / Salt Lake City, UT (sister site of 22 Plastic Surgery); GA4 likely via GTM, no direct G- tag; NitroPack active."
+
+review:
+  alt_sheet_id: 1GDWe3ant_-rA48F9LRpUec_lDeChID8gyhdRPIQtFV0   # "22spamd review" in Google Sheets; scripts/review_sheets.py

@@ -58,3 +58,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://newradiancenow.com/ (project 9704544) with scripts/fingerprint.py on 2026-10-28 (two GTM containers seen on the homepage); gsc-pages returned rows for 2026-09-28..2026-10-26. Not verified by logging in."
+
+review:
+  alt_sheet_id: 1rpbHKnnP74G_QnLL_YwhT48df4InA5q_JTxe5weuFsk   # "newradiancenow review" in Google Sheets; scripts/review_sheets.py

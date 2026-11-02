@@ -1,0 +1,296 @@
+{
+ "home_host": "lycstage.wpenginepowered.com",
+ "env": {
+  "uploads_basedir": "/sites/lycstage/wp-content/uploads",
+  "uploads_baseurl": "https://lycstage.wpenginepowered.com/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "portfolio-thumb_large": {
+    "width": 900,
+    "height": 604,
+    "crop": true
+   },
+   "portfolio-thumb": {
+    "width": 600,
+    "height": 403,
+    "crop": true
+   },
+   "portfolio-thumb_small": {
+    "width": 400,
+    "height": 269,
+    "crop": true
+   },
+   "portfolio-widget": {
+    "width": 100,
+    "height": 100,
+    "crop": true
+   },
+   "nectar_small_square": {
+    "width": 140,
+    "height": 140,
+    "crop": true
+   },
+   "wide": {
+    "width": 1000,
+    "height": 500,
+    "crop": true
+   },
+   "wide_small": {
+    "width": 670,
+    "height": 335,
+    "crop": true
+   },
+   "regular": {
+    "width": 500,
+    "height": 500,
+    "crop": true
+   },
+   "regular_small": {
+    "width": 350,
+    "height": 350,
+    "crop": true
+   },
+   "tall": {
+    "width": 500,
+    "height": 1000,
+    "crop": true
+   },
+   "wide_tall": {
+    "width": 1000,
+    "height": 1000,
+    "crop": true
+   },
+   "wide_photography": {
+    "width": 900,
+    "height": 600,
+    "crop": true
+   },
+   "large_featured": {
+    "width": 1870,
+    "height": 770,
+    "crop": true
+   },
+   "medium_featured": {
+    "width": 800,
+    "height": 800,
+    "crop": true
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [],
+ "alt": [
+  {
+   "post_id": 9289,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Botox-vial-300x300.png",
+   "alt": "",
+   "tag": "<img class=\"alignleft wp-image-16518 size-medium\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Botox-vial-300x300.png\" alt=\"\" width=\"300\" height=\"300\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/wrinkle-relaxers/botox/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Botox",
+   "tier": "B"
+  },
+  {
+   "post_id": 9289,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Xeomin-vial-300x300.png",
+   "alt": "",
+   "tag": "<img class=\"size-medium wp-image-16522 alignleft\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Xeomin-vial-300x300.png\" alt=\"\" width=\"300\" height=\"300\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/wrinkle-relaxers/botox/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Botox",
+   "tier": "B"
+  },
+  {
+   "post_id": 9289,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Daxxify-vial-300x300.png",
+   "alt": "",
+   "tag": "<img class=\"size-medium wp-image-16519 alignleft\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Daxxify-vial-300x300.png\" alt=\"\" width=\"300\" height=\"300\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/wrinkle-relaxers/botox/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Botox",
+   "tier": "B"
+  },
+  {
+   "post_id": 9289,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Jeuveau-vial-3-300x300.png",
+   "alt": "",
+   "tag": "<img class=\"size-medium wp-image-16525 alignleft\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Jeuveau-vial-3-300x300.png\" alt=\"\" width=\"300\" height=\"300\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/wrinkle-relaxers/botox/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Botox",
+   "tier": "B"
+  },
+  {
+   "post_id": 9289,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Dysport-vial-300x296.png",
+   "alt": "",
+   "tag": "<img class=\"size-medium wp-image-16520 alignleft\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/11/Dysport-vial-300x296.png\" alt=\"\" width=\"300\" height=\"296\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/wrinkle-relaxers/botox/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Botox",
+   "tier": "B"
+  },
+  {
+   "post_id": 16403,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/02/AdobeStock_939957024-300x200.jpeg",
+   "alt": "",
+   "tag": "<img class=\" wp-image-15811 alignright\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/02/AdobeStock_939957024-300x200.jpeg\" alt=\"\" width=\"531\" height=\"354\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/daxxify-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Daxxify in 2025, The Next Generation of Wrinkle Relaxation",
+   "tier": "B"
+  },
+  {
+   "post_id": 16403,
+   "where": "post_content",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/06/AdobeStock_217474292-300x200.jpeg",
+   "alt": "",
+   "tag": "<img class=\"wp-image-16006 alignleft\" src=\"https://lycstage.wpenginepowered.com/wp-content/uploads/2025/06/AdobeStock_217474292-300x200.jpeg\" alt=\"\" width=\"425\" height=\"283\" />",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/daxxify-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Daxxify in 2025, The Next Generation of Wrinkle Relaxation",
+   "tier": "B"
+  },
+  {
+   "post_id": 16516,
+   "where": "featured_image(attachment 15266)",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2024/04/Hair-Restoration-1-scaled.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/hair-restoration-in-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Hair Restoration in 2025: PRP, Exosomes, and Modern Hair Transplants",
+   "tier": "C"
+  },
+  {
+   "post_id": 16577,
+   "where": "featured_image(attachment 16578)",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2025/12/medical-weight-loss-2026-living-young-center-FI.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/medical-weight-loss-tampa-bay-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Beyond the Resolution: Why Tampa Bay Is Turning to Medical Weight Loss in 2026",
+   "tier": "C"
+  },
+  {
+   "post_id": 16589,
+   "where": "featured_image(attachment 9605)",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2022/02/ly-lp-botox-2.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/botox-vs-dysport-tampa-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Botox vs. Dysport in Tampa Bay: Which Injectable Is Right For Your Wrinkles?",
+   "tier": "C"
+  },
+  {
+   "post_id": 16594,
+   "where": "featured_image(attachment 9572)",
+   "src": "https://lycstage.wpenginepowered.com/wp-content/uploads/2022/02/ly-growth-hormone-peptide-therapy-2.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://lycstage.wpenginepowered.com/blog/peptide-therapy-tampa-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Are Peptides? Your Complete Guide to Peptide Therapy in Tampa",
+   "tier": "C"
+  }
+ ],
+ "broken": [],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "asenha_code_snippet",
+  "wppopups-templates"
+ ],
+ "products": [],
+ "slug": "livingyoungcenter",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-0929"
+}

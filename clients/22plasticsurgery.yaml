@@ -57,3 +57,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://22plasticsurgery.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. MonsterInsights (google-analytics-for-wordpress) and Site Kit both present; CookieYes (cookie-law-info) banner installed; PlasticSurgery/Physician JSON-LD present."
+
+review:
+  alt_sheet_id: 1odkcXfabkUI4_5ytUWM3jM2FlPV4ENd_POD-3a-uzAg   # "22plasticsurgery review" in Google Sheets; scripts/review_sheets.py

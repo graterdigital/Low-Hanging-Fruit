@@ -57,3 +57,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://aveluremedspa.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. GA4 likely loaded via GTM, no direct G- tag in HTML; Google Ads tag present; NitroPack active."
+
+review:
+  alt_sheet_id: 1rIGMvwJdVN-zKhqMcwEEaP4Uh7ClUl4W4Y3Q4dn60Sg   # "aveluremedspa review" in Google Sheets; scripts/review_sheets.py

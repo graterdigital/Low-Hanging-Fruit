@@ -58,3 +58,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://www.esthetixmd.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Med spa in Bend, OR; elementor markup seen but no elementor plugin asset path in HTML (NitroPack may inline/rename assets); legacy UA tag still present; Site Kit generator meta present though plugin path not seen."
+
+review:
+  alt_sheet_id: 1n6bh73GoJGd6PmOVB5yK4_GkIuRNoN0a_ujlWIKlcbA   # "esthetixmd review" in Google Sheets; scripts/review_sheets.py

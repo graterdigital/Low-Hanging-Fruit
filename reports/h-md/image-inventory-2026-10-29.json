@@ -1,0 +1,1349 @@
+{
+ "home_host": "h-md.com",
+ "env": {
+  "uploads_basedir": "/sites/hmdmedicalsstg/wp-content/uploads",
+  "uploads_baseurl": "https://h-md.com/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 400,
+    "height": 400,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma.png",
+   "path": "/wp-content/uploads/2026/01/Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma.png",
+   "attachment_id": 1975,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma.png",
+   "bytes": 1297424,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 240495
+    },
+    "thumbnail": {
+     "file": "Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 38186
+    },
+    "medium_large": {
+     "file": "Photorejuvenation-ipl-treatment-areas-h-md-med-spa-oklahoma-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 812021
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 14,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1297424,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1297424
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png",
+   "path": "/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png",
+   "attachment_id": 1877,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png",
+   "bytes": 1357203,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "chemical-peel-treatment-areas-h-md-med-spa-oklahoma-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 252779
+    },
+    "thumbnail": {
+     "file": "chemical-peel-treatment-areas-h-md-med-spa-oklahoma-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 38367
+    },
+    "medium_large": {
+     "file": "chemical-peel-treatment-areas-h-md-med-spa-oklahoma-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 852418
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 10,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1264759,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/webp",
+    "bytes": 902142
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/dermaplaning-treatment-areas-h-md-med-spa-oklahoma.png",
+   "path": "/wp-content/uploads/2026/01/dermaplaning-treatment-areas-h-md-med-spa-oklahoma.png",
+   "attachment_id": 1919,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/dermaplaning-treatment-areas-h-md-med-spa-oklahoma.png",
+   "bytes": 1321038,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "dermaplaning-treatment-areas-h-md-med-spa-oklahoma-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 269834
+    },
+    "thumbnail": {
+     "file": "dermaplaning-treatment-areas-h-md-med-spa-oklahoma-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 45300
+    },
+    "medium_large": {
+     "file": "dermaplaning-treatment-areas-h-md-med-spa-oklahoma-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 861650
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 14,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1241471,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1321038
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1.png",
+   "path": "/wp-content/uploads/2026/01/PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1.png",
+   "attachment_id": 1913,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1.png",
+   "bytes": 1271298,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 2,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 2
+   },
+   "sizes": {
+    "medium": {
+     "file": "PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 255462
+    },
+    "thumbnail": {
+     "file": "PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 39299
+    },
+    "medium_large": {
+     "file": "PRF-EZGel-treatment-areas-h-md-med-spa-oklahoma-1-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 841882
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 14,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1206122,
+    "incoming_all_links": 2,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1271298
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2021/04/How_long_does_Restylane_Kysse_last_637544958740726658.png",
+   "path": "/wp-content/uploads/2021/04/How_long_does_Restylane_Kysse_last_637544958740726658.png",
+   "attachment_id": 5357,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2021/04/How_long_does_Restylane_Kysse_last_637544958740726658.png",
+   "bytes": 1182982,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 747,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "How_long_does_Restylane_Kysse_last_637544958740726658-400x299.png",
+     "w": 400,
+     "h": 299,
+     "bytes": 169314
+    },
+    "thumbnail": {
+     "file": "How_long_does_Restylane_Kysse_last_637544958740726658-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 33693
+    },
+    "medium_large": {
+     "file": "How_long_does_Restylane_Kysse_last_637544958740726658-768x574.png",
+     "w": 768,
+     "h": 574,
+     "bytes": 632715
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1182982,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1182982
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2020/06/botox-voluma-18.png",
+   "path": "/wp-content/uploads/2020/06/botox-voluma-18.png",
+   "attachment_id": 5225,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2020/06/botox-voluma-18.png",
+   "bytes": 1181854,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 664,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "botox-voluma-18-400x266.png",
+     "w": 400,
+     "h": 266,
+     "bytes": 192856
+    },
+    "thumbnail": {
+     "file": "botox-voluma-18-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 41207
+    },
+    "medium_large": {
+     "file": "botox-voluma-18-768x510.png",
+     "w": 768,
+     "h": 510,
+     "bytes": 668158
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1181854,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1181854
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/Microneedling-treatment-areas-h-md-med-spa-oklahoma.png",
+   "path": "/wp-content/uploads/2026/01/Microneedling-treatment-areas-h-md-med-spa-oklahoma.png",
+   "attachment_id": 1955,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/Microneedling-treatment-areas-h-md-med-spa-oklahoma.png",
+   "bytes": 1239231,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "Microneedling-treatment-areas-h-md-med-spa-oklahoma-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 231474
+    },
+    "thumbnail": {
+     "file": "Microneedling-treatment-areas-h-md-med-spa-oklahoma-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 37036
+    },
+    "medium_large": {
+     "file": "Microneedling-treatment-areas-h-md-med-spa-oklahoma-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 771780
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 13,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1179082,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1239231
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2026/01/Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma.png",
+   "path": "/wp-content/uploads/2026/01/Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma.png",
+   "attachment_id": 1809,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2026/01/Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma.png",
+   "bytes": 1141432,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 1000,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 1
+   },
+   "sizes": {
+    "medium": {
+     "file": "Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 212411
+    },
+    "thumbnail": {
+     "file": "Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 32854
+    },
+    "medium_large": {
+     "file": "Ariessence-Pure-PDGF-treatment-areas-at-h-md-med-spa-oklahoma-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 718988
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 13,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1097324,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1141432
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2021/12/How_Is_Dysport_Different_From_Botox_637759167827661728.png",
+   "path": "/wp-content/uploads/2021/12/How_Is_Dysport_Different_From_Botox_637759167827661728.png",
+   "attachment_id": 5504,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2021/12/How_Is_Dysport_Different_From_Botox_637759167827661728.png",
+   "bytes": 1093632,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 964,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "How_Is_Dysport_Different_From_Botox_637759167827661728-400x386.png",
+     "w": 400,
+     "h": 386,
+     "bytes": 168404
+    },
+    "thumbnail": {
+     "file": "How_Is_Dysport_Different_From_Botox_637759167827661728-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 29678
+    },
+    "medium_large": {
+     "file": "How_Is_Dysport_Different_From_Botox_637759167827661728-768x740.png",
+     "w": 768,
+     "h": 740,
+     "bytes": 587548
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1093632,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1093632
+   }
+  },
+  {
+   "url": "https://h-md.com/wp-content/uploads/2022/03/Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595.png",
+   "path": "/wp-content/uploads/2022/03/Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595.png",
+   "attachment_id": 5544,
+   "file": "/sites/hmdmedicalsstg/wp-content/uploads/2022/03/Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595.png",
+   "bytes": 1021008,
+   "mime": "image/png",
+   "width": 1000,
+   "height": 667,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595-400x267.png",
+     "w": 400,
+     "h": 267,
+     "bytes": 165547
+    },
+    "thumbnail": {
+     "file": "Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 37542
+    },
+    "medium_large": {
+     "file": "Who_Is_a_Good_Candidate_for_Coolsculpting_637817096377834595-768x512.png",
+     "w": 768,
+     "h": 512,
+     "bytes": 563130
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1021008,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 1021008
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 948,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2025/11/single-service-1.png",
+   "alt": "",
+   "tag": "<img width=\"532\" height=\"466\" src=\"https://h-md.com/wp-content/uploads/2025/11/single-service-1.png\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2025/11/single-service-1.png 532w, https://h-md.com/wp-content/uploads/2025/11/single-service-1-400x350.png 400w\" sizes=\"(max-width: 532px) 100vw, 5",
+   "page_url": "https://h-md.com/?elementor_library=imagecontent-block1",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Image+Content Block",
+   "tier": "B"
+  },
+  {
+   "post_id": 1352,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2025/11/single-service-1.png",
+   "alt": "",
+   "tag": "<img width=\"532\" height=\"466\" src=\"https://h-md.com/wp-content/uploads/2025/11/single-service-1.png\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2025/11/single-service-1.png 532w, https://h-md.com/wp-content/uploads/2025/11/single-service-1-400x350.png 400w\" sizes=\"(max-width: 532px) 100vw, 5",
+   "page_url": "https://h-md.com/?elementor_library=single-service-page-tamplate",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Single Service Page Tamplate",
+   "tier": "B"
+  },
+  {
+   "post_id": 1352,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2025/11/single-service-2.png",
+   "alt": "",
+   "tag": "<img width=\"532\" height=\"466\" src=\"https://h-md.com/wp-content/uploads/2025/11/single-service-2.png\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2025/11/single-service-2.png 532w, https://h-md.com/wp-content/uploads/2025/11/single-service-2-400x350.png 400w\" sizes=\"(max-width: 532px) 100vw, 5",
+   "page_url": "https://h-md.com/?elementor_library=single-service-page-tamplate",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Single Service Page Tamplate",
+   "tier": "B"
+  },
+  {
+   "post_id": 6305,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/02/HMD-BBL-2.jpg",
+   "alt": "",
+   "tag": "<img src=\"https://h-md.com/wp-content/uploads/2026/02/HMD-BBL-2.jpg\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://h-md.com/wp-content/uploads/2026/02/HMD-BBL-2.jpg 1920w, https://h-md.com/wp-content/uploads/2026/02/HMD-BBL-2-400x363.jpg 400w, https://h-md.com/wp-content/uploads/2026/02/",
+   "page_url": "https://h-md.com/?post_type=services&p=6305",
+   "post_type": "services",
+   "post_status": "draft",
+   "title": "BBL® Photofacial",
+   "tier": "D"
+  },
+  {
+   "post_id": 1776,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/01/Injectable-Room-Chisholm.jpg",
+   "alt": "",
+   "tag": "<img src=\"https://h-md.com/wp-content/uploads/2026/01/Injectable-Room-Chisholm.jpg\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://h-md.com/wp-content/uploads/2026/01/Injectable-Room-Chisholm.jpg 1920w, https://h-md.com/wp-content/uploads/2026/01/Injectable-Room-Chisholm-400x306.jpg 400w,",
+   "page_url": "https://h-md.com/services/dermal-fillers",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Dermal Fillers",
+   "tier": "B"
+  },
+  {
+   "post_id": 1821,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-photo.png",
+   "alt": "",
+   "tag": "<img title=\"\" src=\"https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-photo.png\" alt=\"\" />",
+   "page_url": "https://h-md.com/services/prp-hair-restoration",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "PRP Hair Restoration",
+   "tier": "B"
+  },
+  {
+   "post_id": 1872,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png",
+   "alt": "",
+   "tag": "<img src=\"https://h-md.com/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png\" sizes=\"(max-width: 1000px) 100vw, 1000px\" srcset=\"https://h-md.com/wp-content/uploads/2026/01/chemical-peel-treatment-areas-h-md-med-spa-oklahoma.png 1000w, https://h-md.com/wp-content/uplo",
+   "page_url": "https://h-md.com/services/chemical-peels",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Chemical Peels",
+   "tier": "B"
+  },
+  {
+   "post_id": 1872,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-photo.png",
+   "alt": "",
+   "tag": "<img src=\"https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-photo.png\" sizes=\"(max-width: 1000px) 100vw, 1000px\" srcset=\"https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-photo.png 1000w, https://h-md.com/wp-content/uploads/2026/01/h-md-medspa-oklahoma-team-ph",
+   "page_url": "https://h-md.com/services/chemical-peels",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Chemical Peels",
+   "tier": "B"
+  },
+  {
+   "post_id": 6297,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/02/HMD-Ultherapy-1.jpg",
+   "alt": "",
+   "tag": "<img width=\"1920\" height=\"1742\" src=\"https://h-md.com/wp-content/uploads/2026/02/HMD-Ultherapy-1.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/02/HMD-Ultherapy-1.jpg 1920w, https://h-md.com/wp-content/uploads/2026/02/HMD-Ultherapy-1-400x363.jpg 400w, https://h-md.com/wp-content/upload",
+   "page_url": "https://h-md.com/services/ultherapy",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Ultherapy",
+   "tier": "B"
+  },
+  {
+   "post_id": 6315,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg",
+   "alt": "",
+   "tag": "<img width=\"1920\" height=\"1742\" src=\"https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg 1920w, https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2-400x363.jpg 400w, https://h-md.com/wp",
+   "page_url": "https://h-md.com/services/clear-brilliant",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Clear + Brilliant®",
+   "tier": "B"
+  },
+  {
+   "post_id": 6707,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/06/hmd-medical-weight-loss-therapy.jpg",
+   "alt": "",
+   "tag": "<img width=\"1000\" height=\"1000\" src=\"https://h-md.com/wp-content/uploads/2026/06/hmd-medical-weight-loss-therapy.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/06/hmd-medical-weight-loss-therapy.jpg 1000w, https://h-md.com/wp-content/uploads/2026/06/hmd-medical-weight-loss-therapy-400x",
+   "page_url": "https://h-md.com/services/medical-weight-management",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Medical Weight Management",
+   "tier": "B"
+  },
+  {
+   "post_id": 6715,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/06/hmd-peptide-therapy-wellness-program.jpg",
+   "alt": "",
+   "tag": "<img width=\"1000\" height=\"1000\" src=\"https://h-md.com/wp-content/uploads/2026/06/hmd-peptide-therapy-wellness-program.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/06/hmd-peptide-therapy-wellness-program.jpg 1000w, https://h-md.com/wp-content/uploads/2026/06/hmd-peptide-therapy-wellne",
+   "page_url": "https://h-md.com/services/peptide-therapy",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Peptide Therapy",
+   "tier": "B"
+  },
+  {
+   "post_id": 6735,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg",
+   "alt": "",
+   "tag": "<img width=\"1920\" height=\"1742\" src=\"https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2.jpg 1920w, https://h-md.com/wp-content/uploads/2026/02/HMD-ClearBrilliant-2-400x363.jpg 400w, https://h-md.com/wp",
+   "page_url": "https://h-md.com/services/daxxify",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Daxxify",
+   "tier": "B"
+  },
+  {
+   "post_id": 6743,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2026/06/xeomin-treatment-areas-hmd-med-spa.jpg",
+   "alt": "",
+   "tag": "<img width=\"1000\" height=\"1000\" src=\"https://h-md.com/wp-content/uploads/2026/06/xeomin-treatment-areas-hmd-med-spa.jpg\" alt=\"\" srcset=\"https://h-md.com/wp-content/uploads/2026/06/xeomin-treatment-areas-hmd-med-spa.jpg 1000w, https://h-md.com/wp-content/uploads/2026/06/xeomin-treatment-areas-hmd-med",
+   "page_url": "https://h-md.com/services/xeomin",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Xeomin",
+   "tier": "B"
+  },
+  {
+   "post_id": 2401,
+   "where": "featured_image(attachment 5821)",
+   "src": "https://h-md.com/wp-content/uploads/2015/11/bellafil.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=2401",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Hello world!",
+   "tier": "D"
+  },
+  {
+   "post_id": 3457,
+   "where": "featured_image(attachment 4991)",
+   "src": "https://h-md.com/wp-content/uploads/2018/05/microblading-in-OKC.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=3457",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Microblading in OKC – Is It for You?",
+   "tier": "D"
+  },
+  {
+   "post_id": 3467,
+   "where": "featured_image(attachment 5012)",
+   "src": "https://h-md.com/wp-content/uploads/2018/05/medical-spa-in-OKC.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/tips-for-finding-the-best-medical-spa-in-okc",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Tips for Finding the Best Medical Spa in OKC",
+   "tier": "C"
+  },
+  {
+   "post_id": 3478,
+   "where": "featured_image(attachment 5015)",
+   "src": "https://h-md.com/wp-content/uploads/2018/05/laser-hair-removal-7.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/the-benefits-of-laser-hair-removal-in-oklahoma-city",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Benefits of Laser Hair Removal in Oklahoma City",
+   "tier": "C"
+  },
+  {
+   "post_id": 3501,
+   "where": "featured_image(attachment 5018)",
+   "src": "https://h-md.com/wp-content/uploads/2018/06/microneedling-3.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/microneedling-who-is-a-good-candidate",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Microneedling – Who is a Good Candidate?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5057,
+   "where": "featured_image(attachment 5058)",
+   "src": "https://h-md.com/wp-content/uploads/2019/11/botox-Female-Incontinence-12.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/female-incontinence-can-it-be-reversed",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Female Incontinence: Can It Be Reversed?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5113,
+   "where": "featured_image(attachment 5114)",
+   "src": "https://h-md.com/wp-content/uploads/2019/12/botox-Botox-Lips-14.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/getting-botox-what-should-you-expect-your-first-time",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Getting Botox: What Should You Expect Your First Time?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5221,
+   "where": "featured_image(attachment 5222)",
+   "src": "https://h-md.com/wp-content/uploads/2020/05/botox-Medical-Spa-Treatments-17.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/medical-spa-treatments-what-does-a-medical-spa-consist-of",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Medical Spa Treatments: What Does a Medical Spa Consist of?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5297,
+   "where": "featured_image(attachment 5298)",
+   "src": "https://h-md.com/wp-content/uploads/2020/11/What_Is_Sculptra_Used_for_637402373729307770.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-is-sculptra-used-for",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Is Sculptra Used for?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5299,
+   "where": "featured_image(attachment 5300)",
+   "src": "https://h-md.com/wp-content/uploads/2020/11/How_Often_Should_I_Get_a_Chemical_Peel_637402375312526901.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-often-should-i-get-a-chemical-peel",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Often Should I Get a Chemical Peel?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5308,
+   "where": "featured_image(attachment 5309)",
+   "src": "https://h-md.com/wp-content/uploads/2021/01/How_Can_You_Get_a_Slimmer_Face_and_Body_9_Places_Kybella_Will_Melt_Fat_637456203678472554.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-can-you-get-a-slimmer-face-and-body-9-places-kybella-will-melt-fat",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "9 Places Kybella Will Melt Fat",
+   "tier": "C"
+  },
+  {
+   "post_id": 5338,
+   "where": "featured_image(attachment 5339)",
+   "src": "https://h-md.com/wp-content/uploads/2021/02/How_Can_You_Get_Rid_of_Wrinkles_Discover_Juvederm_637496728352124450.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-can-you-get-rid-of-wrinkles-discover-juvederm",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Juvederm: How Can You Get Rid of Wrinkles?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5354,
+   "where": "featured_image(attachment 5355)",
+   "src": "https://h-md.com/wp-content/uploads/2021/04/What_Is_the_Right_Age_for_Botox_637528576398225815.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-is-the-right-age-for-botox",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What is Botox? Right Age for this Treatment",
+   "tier": "C"
+  },
+  {
+   "post_id": 5356,
+   "where": "featured_image(attachment 5357)",
+   "src": "https://h-md.com/wp-content/uploads/2021/04/How_long_does_Restylane_Kysse_last_637544958740726658.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-long-does-restylane-kysse-last",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Long Does Restylane Kysse Last?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5362,
+   "where": "featured_image(attachment 5363)",
+   "src": "https://h-md.com/wp-content/uploads/2021/04/How_Often_Can_You_Do_Microneedling_637550982739685565.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-often-can-you-do-microneedling",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Often Can You Do Microneedling?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5364,
+   "where": "featured_image(attachment 5365)",
+   "src": "https://h-md.com/wp-content/uploads/2021/04/How_Long_Does_Juvederm_Ultra_Last_637552115870424674.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-long-does-juvederm-ultra-last",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Long Does Juvederm Ultra Last?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5379,
+   "where": "featured_image(attachment 5380)",
+   "src": "https://h-md.com/wp-content/uploads/2021/06/What_Are_the_Benefits_of_Dermaplaning_637586539571591167.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-are-the-benefits-of-dermaplaning",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Are the Benefits of Dermaplaning?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5393,
+   "where": "featured_image(attachment 5394)",
+   "src": "https://h-md.com/wp-content/uploads/2021/07/What_Are_the_Different_Types_of_Restylane_Used_for_637628984672885496.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-are-the-different-types-of-restylane-used-for",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Are the Different Types of Restylane Used for?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5452,
+   "where": "featured_image(attachment 5453)",
+   "src": "https://h-md.com/wp-content/uploads/2021/09/Who_Is_a_Good_Candidate_for_Xeomin_637665181523309570.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/who-is-a-good-candidate-for-xeomin",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Who Is a Good Candidate for Xeomin?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5503,
+   "where": "featured_image(attachment 5504)",
+   "src": "https://h-md.com/wp-content/uploads/2021/12/How_Is_Dysport_Different_From_Botox_637759167827661728.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-is-dysport-different-from-botox",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Is Dysport Different From Botox?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5596,
+   "where": "featured_image(attachment 5597)",
+   "src": "https://h-md.com/wp-content/uploads/2022/04/How_Does_PRP_Microneedling_work_637862192790404738.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-does-prp-microneedling-work",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Does PRP Microneedling work?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5681,
+   "where": "featured_image(attachment 5682)",
+   "src": "https://h-md.com/wp-content/uploads/2022/09/What_Is_Restylane_Lyft_Used_for_637973725131642283.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-is-restylane-lyft-used-for",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Is Restylane Lyft Used for?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5696,
+   "where": "featured_image(attachment 5697)",
+   "src": "https://h-md.com/wp-content/uploads/2022/10/How_Does_Jeuveau_Work_638018753737125566.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=5696",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "How Does Jeuveau Work?",
+   "tier": "D"
+  },
+  {
+   "post_id": 5706,
+   "where": "featured_image(attachment 5707)",
+   "src": "https://h-md.com/wp-content/uploads/2022/11/Does_Dysport_Work_Immediately_638040218445175683.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/does-dysport-work-immediately",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Does Dysport Work Immediately?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5722,
+   "where": "featured_image(attachment 5723)",
+   "src": "https://h-md.com/wp-content/uploads/2022/12/How_Long_Does_Xeomin_Last_638065897489653454.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-long-does-xeomin-last",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Long Does Xeomin Last?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5725,
+   "where": "featured_image(attachment 5726)",
+   "src": "https://h-md.com/wp-content/uploads/2022/12/How_Long_Does_Restylane_Take_to_Set_638071304400652494.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-long-does-restylane-take-to-set",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Long Does Restylane Take to Set?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5736,
+   "where": "featured_image(attachment 5737)",
+   "src": "https://h-md.com/wp-content/uploads/2023/02/How_Long_Do_Endermologie_Results_Last_638116054384362148.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-long-do-endermologie-results-last",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Long Do Endermologie Results Last?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5739,
+   "where": "featured_image(attachment 5740)",
+   "src": "https://h-md.com/wp-content/uploads/2023/02/What_Can_Be_Treated_With_PRP_Injections_638119650126660782.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-can-be-treated-with-prp-injections",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Can Be Treated With PRP Injections?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5743,
+   "where": "featured_image(attachment 5744)",
+   "src": "https://h-md.com/wp-content/uploads/2023/02/How_Soon_Does_Radiesse_Start_Working_638120542256156359.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/how-soon-does-radiesse-start-working",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "How Soon Does Radiesse Start Working?",
+   "tier": "C"
+  },
+  {
+   "post_id": 5755,
+   "where": "featured_image(attachment 5756)",
+   "src": "https://h-md.com/wp-content/uploads/2023/02/What_Is_Juvederm_Voluma_Used_for_638130901725872551.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/what-is-juvederm-voluma-used-for",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Is JUVÉDERM VOLUMA Used for?",
+   "tier": "C"
+  },
+  {
+   "post_id": 6305,
+   "where": "featured_image(attachment 6346)",
+   "src": "https://h-md.com/wp-content/uploads/2026/02/HMD-BBL-1.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?post_type=services&p=6305",
+   "post_type": "services",
+   "post_status": "draft",
+   "title": "BBL® Photofacial",
+   "tier": "D"
+  },
+  {
+   "post_id": 6518,
+   "where": "featured_image(attachment 6529)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/hmd-team-member-place-holder-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/aunisty-moore",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Aunisty Moore",
+   "tier": "C"
+  },
+  {
+   "post_id": 6519,
+   "where": "featured_image(attachment 6759)",
+   "src": "https://h-md.com/wp-content/uploads/2026/07/Kimberly-Ward-Chisholm-Creek-e1783544204662.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/kimberly-ward",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Kimberly Ward",
+   "tier": "C"
+  },
+  {
+   "post_id": 6520,
+   "where": "featured_image(attachment 6758)",
+   "src": "https://h-md.com/wp-content/uploads/2026/07/Lisa-Fortier-Chisholm-Creek-e1783544275649.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/lisa-fortier",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Lisa Fortier",
+   "tier": "C"
+  },
+  {
+   "post_id": 6522,
+   "where": "featured_image(attachment 6575)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/Shelby-Lueders-Chisholm-PA-C-e1778711743838.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/shelby-lueders",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Shelby Lueders",
+   "tier": "C"
+  },
+  {
+   "post_id": 6523,
+   "where": "featured_image(attachment 6576)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/Stephanie-Ramsey-Chisholm-PA-C-e1778711791121.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/stephanie-ramsey",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Stephanie Ramsey",
+   "tier": "C"
+  },
+  {
+   "post_id": 6524,
+   "where": "featured_image(attachment 6574)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/Nicole-Alexander-Chisholm-RN-BSN-e1778711715276.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/nicole-alexander",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Nicole Alexander",
+   "tier": "C"
+  },
+  {
+   "post_id": 6525,
+   "where": "featured_image(attachment 6529)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/hmd-team-member-place-holder-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/jasmyn-schmitz",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Jasmyn Schmitz",
+   "tier": "C"
+  },
+  {
+   "post_id": 6526,
+   "where": "featured_image(attachment 6529)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/hmd-team-member-place-holder-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/cindy-rogers",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Cindy Rogers",
+   "tier": "C"
+  },
+  {
+   "post_id": 6527,
+   "where": "featured_image(attachment 6529)",
+   "src": "https://h-md.com/wp-content/uploads/2026/05/hmd-team-member-place-holder-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/our_team/tracy-alburty",
+   "post_type": "our_team",
+   "post_status": "publish",
+   "title": "Tracy Alburty",
+   "tier": "C"
+  },
+  {
+   "post_id": 6707,
+   "where": "featured_image(attachment 6708)",
+   "src": "https://h-md.com/wp-content/uploads/2026/06/h-md-medical-weight-management-therapy.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/services/medical-weight-management",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Medical Weight Management",
+   "tier": "C"
+  },
+  {
+   "post_id": 6715,
+   "where": "featured_image(attachment 6716)",
+   "src": "https://h-md.com/wp-content/uploads/2026/06/hmd-peptide-therapy.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/services/peptide-therapy",
+   "post_type": "services",
+   "post_status": "publish",
+   "title": "Peptide Therapy",
+   "tier": "C"
+  },
+  {
+   "post_id": 6765,
+   "where": "featured_image(attachment 6766)",
+   "src": "https://h-md.com/wp-content/uploads/2026/08/Xeomin-vs.-Botox-H-MD-Medical-Spa.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=6765",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Xeomin vs. Botox: What’s the Difference and Which One Is Right for You?",
+   "tier": "D"
+  },
+  {
+   "post_id": 6768,
+   "where": "featured_image(attachment 6769)",
+   "src": "https://h-md.com/wp-content/uploads/2026/08/Does-CoolSculpting-Work-H-MD-Medical-Spa.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=6768",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Does CoolSculpting Work? What Oklahoma City Patients Should Know Before They Book",
+   "tier": "D"
+  },
+  {
+   "post_id": 6771,
+   "where": "featured_image(attachment 6772)",
+   "src": "https://h-md.com/wp-content/uploads/2026/08/h-md-medical-spa-wellness-services-hormone-peptide-and-b12-options-01.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=6771",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Wellness Services At H-MD Medical Spa: Hormone, Peptide, And B12 Options",
+   "tier": "D"
+  },
+  {
+   "post_id": 6774,
+   "where": "featured_image(attachment 6775)",
+   "src": "https://h-md.com/wp-content/uploads/2026/08/h-md-medical-spa-wellness-services-hormone-peptide-and-b12-options-02.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://h-md.com/?p=6774",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "What Is Peptide Therapy And How Is It Personalized?",
+   "tier": "D"
+  }
+ ],
+ "broken": [
+  {
+   "post_id": 948,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2025/11/single-service-1.png",
+   "page_url": "https://h-md.com/?elementor_library=imagecontent-block1"
+  },
+  {
+   "post_id": 1352,
+   "where": "post_content",
+   "src": "https://h-md.com/wp-content/uploads/2025/11/single-service-1.png",
+   "page_url": "https://h-md.com/?elementor_library=single-service-page-tamplate"
+  }
+ ],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "e-floating-buttons",
+  "elementor_library",
+  "asenha_code_snippet",
+  "services",
+  "our_team",
+  "testimonials",
+  "before_after",
+  "locations",
+  "faqs",
+  "wppopups-templates"
+ ],
+ "products": [],
+ "slug": "h-md",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-0928"
+}

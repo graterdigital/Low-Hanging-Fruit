@@ -58,3 +58,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Fingerprinted the Ahrefs Site Audit raw_html snapshot of https://h-md.com/ (project 9704536) with scripts/fingerprint.py on 2026-10-28; Site Kit generator meta is present but no gtag/GTM/GA4 snippet appears in the raw HTML (only a googletagmanager dns-prefetch), so analytics may be injected client-side or missing entirely; gsc-pages returned No GSC data available for 2026-09-28..2026-10-26. Med spa in Oklahoma City per title tag. Not verified by logging in."
+
+review:
+  alt_sheet_id: 1ubLeGCMsmrSn_egpT-D7pjxHoRtorqoaxRYbeudwqzY   # "h-md review" in Google Sheets; scripts/review_sheets.py

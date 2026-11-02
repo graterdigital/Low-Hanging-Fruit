@@ -55,3 +55,6 @@ rules:
 evidence:
   last_checked: 2026-10-13
   basis: Ahrefs Site Audit crawl of 2026-10-08 plus the homepage's raw HTML. Not verified by logging in.
+
+review:
+  alt_sheet_id: 1kWNgYcxU6NAjDZOFTYkmuJGpzLVTU_cgrm8ZjKLgixw   # "livingyoungcenter review" in Google Sheets; scripts/review_sheets.py

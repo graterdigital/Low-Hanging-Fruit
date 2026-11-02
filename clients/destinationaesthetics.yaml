@@ -57,3 +57,6 @@ rules:
 evidence:
   last_checked: 2026-10-28
   basis: "Ahrefs Site Audit raw HTML of https://www.destinationaesthetics.com/ (latest crawl) run through scripts/fingerprint.py; GSC checked via Ahrefs gsc-pages for 2026-09-28..2026-10-26. Not verified by logging in. Multi-location Sacramento-area med spa; no GTM or GA4 tag found in raw HTML (Site Kit, HubSpot, Clarity present); homepage H1 is just the word 'Difference' (split heading); CookieYes banner; NitroPack active."
+
+review:
+  alt_sheet_id: 1-QGTwh-EDT2EEl5Ds3L5cPI0JCutiTAC-o96SBEsWv0   # "destinationaesthetics review" in Google Sheets; scripts/review_sheets.py
