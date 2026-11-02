@@ -101,6 +101,25 @@ python scripts/ai_discoverability.py --all --sheet           # every client with
 ```
 Writes an `ai discoverability` tab on the client's existing review sheet (the same sheet `review_sheets.py` uses for alt text): one row per active check with `urls_flagged`, `route`, `tier`, `what_to_do`, up to 10 example URLs with traffic, and `status` / `note` for the humans. Reruns refresh counts and examples, keep `status` and `note`, and stamp `cleared <date>` on a check that no longer has URLs. Zero-count checks are not listed.
 
+## Fixing from the sheet, and keeping it running
+
+The tab is the queue. `status` values: `open` (new, nobody looked), `fix` (a human wants the automated fix), `flag` (no automated fix; routed), `done <date>`, `cleared <date>` (Ahrefs no longer flags it), or anything else you type (`skip`, `client declined`). Only `fix` triggers anything.
+
+```
+python scripts/ai_discoverability.py <slug> --fix                     # dry: what each "fix" row would do
+python scripts/ai_discoverability.py <slug> --fix --apply             # live (type the slug) — add --target staging to rehearse
+python scripts/ai_discoverability.py --all --fix --apply --yes        # unattended, every client
+```
+What `fix` does per check:
+- **Article page missing Article schema** → sets Yoast's `_yoast_wpseo_schema_article_type` to `Article` on every URL in the check (`scripts/php/set_article_type.php` over SSH). Before-values are backed up to `changes/<provider>/<slug>/backup/<stamp>-ai-discoverability-article-live.json`; rollback with `--rollback-article <that file>` (dry, then `--apply`). Only on Yoast sites. To keep some pages out, write `skip: /path/, /other/` in the row's `note` — Ahrefs' "article" classifier does catch service pages (hsfamilylaw's `/divorce/uncontested-divorce/`), so read the URL list in the dry-run log before marking `fix`.
+- **Bot-access checks** → not run from the sheet; set the client's `ai:` policy and use `--apply-robots` (it has its own confirm flow). The row gets a note saying so.
+- **Page size exceeds 2 MB** → note: run `fix-images`.
+- Everything else → status flips to `flag` with the route in the note. These are hand-offs by nature (hosting, theme, client assets).
+
+On apply the row becomes `done <date>` with the result counts in `note`; a dry run leaves it at `fix` and appends what it would do.
+
+**Weekly cycle.** `scripts/ai_discoverability_cycle.py` runs, in order: `git pull`, `--all --sheet` (new checks land as `open`, gone ones get `cleared`), `--all --fix --apply --yes`, `--all` (roster doc), commit and push. Schedule it on the machine with the keys (one line, in the script's docstring: `schtasks /Create ... /SC WEEKLY /D MON /ST 07:10`). The human part of the loop is a weekly skim of the tabs: set `fix` or `skip` on the `open` rows, add `skip:` paths where needed. The cycle log is `changes/_cycle-ai-discoverability.log`.
+
 ## Running the roster
 
 ```

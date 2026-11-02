@@ -57,6 +57,12 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - `--sheet` writes an `ai discoverability` tab on each client's existing review sheet (via `review_sheets.gc`), one row per active check, status/note owned by humans, upsert on rerun. 31 client files have a sheet id. Run `--all --sheet` from Greg's PC (needs the service-account key).
 - ruggeddepot read-through (crawl current as of 2026-11-02): slow-server 521 is deep Woo pagination + a few 8–11 s product pages (hosting/APM); ItemList 996 is 70% pagination and an Ahrefs preference; Product-schema 32 is 19 misclassified categories + 13 quote-only products with no price; Article 39 is the buying-guide pages built as WP pages — set Yoast's per-page Article type (candidate for a small APPROVE fix). Five live products carry `__trashed` slugs.
 
+## Fix loop (2026-11-02)
+
+- Sheet tab is the queue (internal only; clients never see it). `status: fix` → `--fix` applies; only Article-type (Yoast meta via `scripts/php/set_article_type.php`) is automated today; robots is a separate confirmed flow; page size routes to fix-images; the rest flip to `flag` with the route. Backups + `--rollback-article`.
+- `scripts/ai_discoverability_cycle.py` = weekly Task Scheduler job: sheet refresh → fixes → roster → commit/push. Not yet scheduled; first run should be by hand with a couple of `fix` rows set (ruggeddepot's Article row is the obvious first one — 39 buying-guide pages, all genuine articles).
+- Candidates for the next automated fix, in order of how often they appear across the 31 tabs: Organization schema (needs name/logo/sameAs from the client file → Yoast `wpseo_titles` options), WooCommerce products-per-page for the slow-pagination pattern.
+
 ## Open items
 
 - ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings (Yoast Premium already pings).

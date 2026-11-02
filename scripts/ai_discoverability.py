@@ -11,6 +11,9 @@
     python scripts/ai_discoverability.py --all                       # roster: docs/ai-bot-policy.md, one row per client with an Ahrefs project
     python scripts/ai_discoverability.py <slug> --sheet              # also write the "ai discoverability" tab on the client's review sheet
     python scripts/ai_discoverability.py --all --sheet               # same for every client that has a review sheet (review.alt_sheet_id)
+    python scripts/ai_discoverability.py <slug> --fix                # read the sheet tab: rows with status "fix" get their automated fix (dry run)
+    python scripts/ai_discoverability.py --all --fix --apply --yes   # apply on live for every client, unattended; rows become "done <date>"
+    python scripts/ai_discoverability.py <slug> --rollback-article changes/<provider>/<slug>/backup/<stamp>-ai-discoverability-article-live.json
     python scripts/ai_discoverability.py --install-indexnow --provider kinsta            # dry: which WordPress sites on that host lack an IndexNow plugin
     python scripts/ai_discoverability.py --install-indexnow --provider kinsta --apply    # install + activate Microsoft's `indexnow` plugin on live, verify the key file
     python scripts/ai_discoverability.py <slug> --install-indexnow [--apply]             # one site
@@ -636,6 +639,101 @@ def push_sheet(client, data):
     if appends: ws.append_rows(appends, value_input_option="RAW")
     return f"{len(appends)} added, {len(updates)} updated on '{SHEET_TAB}' ({sh.url})"
 
+# ---------- fixes driven by the sheet ----------
+FIXABLE = {"Article page missing Article schema": "article"}
+ROBOTS_CHECKS = ("Indexable page blocked from all AI search bots", "Indexable page blocked from some AI search bots", "Inconsistent AI training bot policy")
+
+def run_php(alias, webroot, php_name, const, job):
+    php = (HERE / "php" / php_name).read_text(encoding="utf-8")
+    payload = f"<?php define('{const}', " + json.dumps(json.dumps(job)) + "); ?>" + php
+    code, out, err = ssh(alias, f"cd {webroot} || exit 97; wp --skip-plugins={SKIP_PLUGINS} eval-file -", payload)
+    if code == 97: raise RuntimeError(f"no such directory {webroot} on {alias}")
+    start = out.find("{")
+    if start < 0: raise RuntimeError((err or out).strip()[-300:])
+    return json.loads(out[start:])
+
+def fix_article_schema(client, urls, apply, target="live", skip_paths=()):
+    """Set Yoast's per-post Article type on the flagged URLs. Dry by default; apply writes, backs up before-values, logs."""
+    slug = client["slug"]; hosting = client.get("hosting", {}); provider = str(hosting.get("provider") or "other").lower()
+    if str((client.get("platform") or {}).get("seo_plugin", "")).lower() != "yoast": return "skip", "seo_plugin is not yoast (the meta key is Yoast's)"
+    alias = (hosting.get("ssh_alias") if target == "live" else hosting.get("staging_environment")) or ""
+    alias = alias.split(",")[0].strip()
+    if not alias or alias in ("unknown", "none"): return "skip", f"no {target} SSH alias"
+    webroot = wpengine_webroot(alias) if provider == "wpengine" else "public"
+    urls = [u for u in urls if not any(urllib_path(u).startswith(s) for s in skip_paths)]
+    if not urls: return "skip", "no URLs after exclusions"
+    try:
+        res = run_php(alias, webroot, "set_article_type.php", "ARTICLE_TYPE_JOB", {"mode": "apply" if apply else "dry", "type": "Article", "urls": urls})
+    except Exception as e:
+        return "failed", str(e)[:200]
+    rows = res.get("rows", [])
+    counts = {}
+    for r in rows: counts[r["status"]] = counts.get(r["status"], 0) + 1
+    stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+    outdir = ROOT / "changes" / provider / slug; outdir.mkdir(parents=True, exist_ok=True)
+    mode = "apply" if apply else "dry"
+    if apply:
+        bdir = outdir / "backup"; bdir.mkdir(exist_ok=True)
+        (bdir / f"{stamp}-ai-discoverability-article-{target}.json").write_text(json.dumps({"slug": slug, "target": target, "rows": [r for r in rows if r["status"] == "set"]}, indent=1), encoding="utf-8")
+    lines = [f"# ai-discoverability: Article schema type on {client['domain']} ({target})", "",
+             f"Run {stamp} · mode **{mode}** · alias `{alias}` · {len(urls)} URL(s) from the Ahrefs check · " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())), "",
+             "Sets Yoast's `_yoast_wpseo_schema_article_type` to `Article` so the page emits Article (author, dates) alongside WebPage. "
+             f"Rollback: `python scripts/ai_discoverability.py {slug} --rollback-article changes/{provider}/{slug}/backup/{stamp}-ai-discoverability-article-{target}.json`", "",
+             "| URL | post | type | title | before | status |", "|---|---|---|---|---|---|"]
+    lines += [f"| `{urllib_path(r['url'])}` | {r['id'] or ''} | {r['post_type']} | {r['title'][:60]} | {r['before'] or '(none)'} | {r['status']} |" for r in rows]
+    (outdir / f"{stamp}-ai-discoverability-article-{target}-{mode}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    verdict = "done" if apply and counts.get("set") else ("dry" if not apply else "nothing to set")
+    return verdict, ", ".join(f"{k} {v}" for k, v in sorted(counts.items())) + f" · log {outdir / f'{stamp}-ai-discoverability-article-{target}-{mode}.md'}"
+
+def rollback_article(client, backup_path, apply):
+    b = json.loads(Path(backup_path).read_text(encoding="utf-8")); target = b.get("target", "live")
+    hosting = client.get("hosting", {}); provider = str(hosting.get("provider") or "other").lower()
+    alias = ((hosting.get("ssh_alias") if target == "live" else hosting.get("staging_environment")) or "").split(",")[0].strip()
+    webroot = wpengine_webroot(alias) if provider == "wpengine" else "public"
+    php = "foreach (json_decode(ROLLBACK_JOB, true) as $r) { $cur = (string) get_post_meta($r['id'], '_yoast_wpseo_schema_article_type', true); " \
+          "if ($cur !== $r['after']) { echo $r['id'] . ' changed since, left alone\\n'; continue; } " \
+          "if (MODE === 'apply') { if ($r['before'] === '') delete_post_meta($r['id'], '_yoast_wpseo_schema_article_type'); else update_post_meta($r['id'], '_yoast_wpseo_schema_article_type', $r['before']); } " \
+          "echo $r['id'] . ' ' . (MODE === 'apply' ? 'restored' : 'would restore') . ' -> ' . ($r['before'] ?: '(none)') . '\\n'; } if (MODE === 'apply') wp_cache_flush();"
+    payload = "<?php define('ROLLBACK_JOB', " + json.dumps(json.dumps(b["rows"])) + "); define('MODE', '" + ("apply" if apply else "dry") + "'); " + php
+    code, out, err = ssh(alias, f"cd {webroot} || exit 97; wp --skip-plugins={SKIP_PLUGINS} eval-file -", payload)
+    print(out.strip() or err.strip())
+
+def parse_skips(note):
+    m = re.search(r"skip\s*:\s*([^\n]+)", note or "", re.I)
+    return tuple(s.strip() for s in m.group(1).split(",") if s.strip()) if m else ()
+
+def fix_from_sheet(client, api, args):
+    """Rows on the client's 'ai discoverability' tab with status 'fix' get their automated fix, if one exists."""
+    sys.path.insert(0, str(HERE))
+    from review_sheets import gc
+    sid = ((client.get("review") or {}).get("alt_sheet_id") or "").strip()
+    if not sid or sid == "unknown": return "no review sheet"
+    sh = gc().open_by_key(sid)
+    try: ws = sh.worksheet(SHEET_TAB)
+    except Exception: return f"no '{SHEET_TAB}' tab yet (run --sheet first)"
+    rows = ws.get_all_values()
+    todo = [(i + 2, r + [""] * (len(SHEET_COLS) - len(r))) for i, r in enumerate(rows[1:]) if len(r) > 7 and r[7].strip().lower() == "fix"]
+    if not todo: return "nothing marked fix"
+    data = None; today = datetime.date.today().isoformat(); done = []
+    for rownum, r in todo:
+        name, note = r[0], r[8]
+        if name in FIXABLE:
+            if data is None: data = pull(client, api, sample_limit=5)
+            urls = [p["url"] for p in data["per_issue"].get(name, [])]
+            verdict, detail = fix_article_schema(client, urls, args.apply, args.target, parse_skips(note))
+            status = f"done {today}" if verdict == "done" else ("fix" if verdict in ("dry",) else f"{verdict}")
+            newnote = (note + " | " if note else "") + f"{today}: {detail}"
+        elif name in ROBOTS_CHECKS:
+            status, newnote = "fix", (note + " | " if note else "") + f"{today}: robots.txt is applied by `--apply-robots` once the ai: policy is set; not run from the sheet"
+        elif name == "Page size exceeds 2 MB crawl limit":
+            status, newnote = "fix", (note + " | " if note else "") + f"{today}: run fix-images on this site"
+        else:
+            status, newnote = "flag", (note + " | " if note else "") + f"{today}: no automated fix; route = {ROUTES.get(name, ('human',))[0]}"
+        if args.apply or status != r[7]:
+            ws.update(range_name=f"H{rownum}:J{rownum}", values=[[status, newnote[-900:], f"{today} (fix run)"]], value_input_option="RAW")
+        done.append(f"{name}: {status}" + (f" ({detail})" if name in FIXABLE else ""))
+    return "; ".join(done)
+
 # ---------- roster ----------
 def roster(cache):
     rows = []
@@ -682,12 +780,23 @@ def main():
     ap.add_argument("--robots-file", dest="robots_file", help="use this saved robots.txt instead of fetching the public one")
     ap.add_argument("--install-indexnow", action="store_true", dest="install_indexnow", help="install Microsoft's indexnow plugin on live (dry unless --apply)")
     ap.add_argument("--sheet", action="store_true", help="write the 'ai discoverability' tab on the client's review sheet (with --all: every client that has one)")
+    ap.add_argument("--fix", action="store_true", help="act on sheet rows marked 'fix' (dry unless --apply)")
+    ap.add_argument("--rollback-article", dest="rollback_article", help="backup JSON from an Article-type apply; dry unless --apply")
     ap.add_argument("--provider", help="with --install-indexnow: every client file on this host (kinsta | wpengine)")
     ap.add_argument("--only", default="", help="with --install-indexnow --provider: comma-separated slugs")
     args = ap.parse_args()
     args.only = {x.strip() for x in args.only.split(",") if x.strip()}
     global args_nowrite; args_nowrite = args.nowrite
     load_env()
+    if args.all and args.fix:
+        for f in sorted((ROOT / "clients").glob("*.yaml")):
+            if f.name.startswith("_"): continue
+            c = yaml.safe_load(f.read_text(encoding="utf-8")) or {}; c.setdefault("slug", f.stem)
+            pid = (c.get("ahrefs") or {}).get("site_audit_project_id")
+            if not pid or str(pid) in ("0", "unknown"): continue
+            try: print(f"  {c['slug']:24} {fix_from_sheet(c, Api(c['slug'], args.cache), args)}")
+            except SystemExit as e: print(f"  {c['slug']:24} error: {str(e)[:100]}")
+        return
     if args.all:
         if args.sheet:
             for f in sorted((ROOT / "clients").glob("*.yaml")):
@@ -710,6 +819,11 @@ def main():
     pid = (client.get("ahrefs") or {}).get("site_audit_project_id")
     if not pid or str(pid) in ("0", "unknown"): sys.exit(f"clients/{args.slug}.yaml has no ahrefs.site_audit_project_id")
 
+    if args.rollback_article:
+        return rollback_article(client, args.rollback_article, args.apply)
+    if args.fix:
+        if args.apply and args.target == "live" and not args.yes and not sys.stdin.isatty(): sys.exit("live apply needs a terminal or --yes")
+        return print(f"{args.slug}: {fix_from_sheet(client, Api(args.slug, args.cache), args)}")
     if args.apply_robots:
         proposed = sorted((ROOT / "reports" / args.slug).glob("robots-proposed-*.txt"))
         return apply_robots(args, client, proposed[-1] if proposed else ROOT / "reports" / args.slug / "robots-proposed-none.txt")
