@@ -25,6 +25,10 @@ This doc is the source of truth for the build. Update it when a decision changes
 - `ai-discoverability` v1 built 2026-10-30: report + roster + managed robots.txt block (APPROVE) + SSH probe. hsfamilylaw blocks nothing; 4 schema notices and 1 JS-rendered page routed. Decided: agency default policy allow/allow in every client file; Microsoft's `indexnow` plugin is the roster standard (Ahrefs auto-submission too expensive). IndexNow done 2026-11-02: Microsoft plugin with verified key file on 28 sites, 3 more on Yoast Premium (WP Engine needs a physical key file; the skill writes it); decide on the three sites with a pre-existing block list (forwardfacing, miuraboiler, setcomcorp). Handoff: `docs/skills/ai-discoverability.md`.
 - `fix-meta` v1 built 2026-11-02 (`scripts/fix_meta.py`, `scripts/php/set_meta.php`, `skills/fix-meta/SKILL.md`): probe → queue ordered by GSC impressions × (1 − CTR), title-rewrite classification (most SERP mismatches are Google dropping the brand suffix: no action), drafts from a hand file / `--draft` / bio template, `meta` tab on the review sheet, `--fix` through Yoast postmeta with backup, rendered-title check and rollback. First probe on hsfamilylaw: 22 rows (6 title fixes, 18 descriptions, all drafted) in `reports/hsfamilylaw/meta-2026-10-29.md`; sheet push and apply not yet run. Handoff: `docs/skills/fix-meta.md`.
 
+**Roster-wide issue routing (2026-11-02)**
+- `routes.yaml` maps all 184 Ahrefs issue types to a handler; `docs/issue-routing.md` has the analysis and the manual-fix process; rollup data in `reports/_roster/`.
+- New skills queued, in order: `fix-social-tags` (AUTO, 23 sites), `fix-broken-links` (22 sites), `indexation-review` (31 sites), `redirect-rules`, `schema-fix` (21 sites), `nofollow-audit` (ruggeddepot 8k / miuraboiler 3k). Spec'd: `work-orders` (`docs/skills/work-orders.md`) for everything manual.
+
 **Roster facts that shape the build**
 - 31 of 35 WordPress sites run Yoast; 2 run AIOSEO (cmitsolutions, glomedspa). No Rank Math.
 - Builders: Elementor 14, block editor 12, WPBakery 3, Divi 1, Oxygen 1. hsfamilylaw is ACF Pro + classic editor, so links live mostly in postmeta.

@@ -1,0 +1,1661 @@
+generated: '2026-11-02'
+source: Ahrefs site-audit-issues across 40 projects (latest crawls)
+handlers:
+  fix-redirect-links: built
+  fix-images: built
+  ai-discoverability: built
+  fix-meta: specified
+  site-triage: built
+  fix-broken-links: proposed
+  redirect-rules: proposed
+  indexation-review: proposed
+  fix-social-tags: proposed
+  schema-fix: proposed
+  nofollow-audit: proposed
+  manual: work-orders tab
+  monitor: content phase
+  ignore: no action
+  review: unclassified
+routes:
+- name: 3XX redirect
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 39
+  urls: 3219
+  importance: Warning
+  category: Redirects
+  issue_ids:
+  - c64d12c1-d0f4-11e7-8ed1-001e67ed4656
+  note: the redirecting URL itself is the target list; links get rewritten, the rule stays
+- name: HTTP to HTTPS redirect
+  handler: ignore
+  tier: none
+  sites: 36
+  urls: 88
+  importance: Notice
+  category: Redirects
+  issue_ids:
+  - c64d5080-d0f4-11e7-8ed1-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Page and SERP titles do not match
+  handler: fix-meta
+  tier: APPROVE
+  sites: 35
+  urls: 1258
+  importance: Notice
+  category: Content
+  issue_ids:
+  - d69246c2-225a-11ec-8456-06d2f2f613d8
+  note: drafted, reviewed in the sheet, written through the SEO plugin
+- name: Page has only one dofollow incoming internal link
+  handler: ignore
+  tier: none
+  sites: 33
+  urls: 5016
+  importance: Notice
+  category: Links
+  issue_ids:
+  - c64d863c-d0f4-11e7-8ed1-001e67ed4656
+  - f6d1d4fc-00b2-11e8-9066-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Page has links to redirect
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 32
+  urls: 27311
+  importance: Notice/Warning
+  category: Links
+  issue_ids:
+  - c64d3aa7-d0f4-11e7-8ed1-001e67ed4656
+  - 7272a5c0-00b1-11e8-ae24-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: Title too long
+  handler: ignore
+  tier: none
+  sites: 32
+  urls: 12762
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64dac3a-d0f4-11e7-8ed1-001e67ed4656
+  - 6a46d032-001c-11e8-99f1-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Indexable page not in sitemap
+  handler: indexation-review
+  tier: APPROVE
+  sites: 31
+  urls: 9376
+  importance: Notice
+  category: Sitemaps
+  issue_ids:
+  - b5f8f6d0-8f91-4af3-8569-6ea442f122e7
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Pages dropped from Top 10
+  handler: monitor
+  tier: none
+  sites: 31
+  urls: 225
+  importance: Notice
+  category: Other
+  issue_ids:
+  - f2e4c823-6a12-42e9-8083-960d78f19dc3
+  note: change-tracking, feeds content phase; not a defect
+- name: Organic traffic dropped
+  handler: monitor
+  tier: none
+  sites: 31
+  urls: 210
+  importance: Notice
+  category: Other
+  issue_ids:
+  - cb8ebb59-3502-4193-b4f1-a154bc0dddbe
+  note: change-tracking, feeds content phase; not a defect
+- name: Meta description too long
+  handler: ignore
+  tier: none
+  sites: 30
+  urls: 5993
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64d56c9-d0f4-11e7-8ed1-001e67ed4656
+  - 02085644-001c-11e8-8e51-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Meta description tag missing or empty
+  handler: fix-meta
+  tier: APPROVE
+  sites: 29
+  urls: 3105
+  importance: Warning
+  category: Content
+  issue_ids:
+  - c64d31f0-d0f4-11e7-8ed1-001e67ed4656
+  - 57751310-001c-11e8-b746-001e67ed4656
+  note: drafted, reviewed in the sheet, written through the SEO plugin
+- name: Noindex page
+  handler: indexation-review
+  tier: APPROVE
+  sites: 28
+  urls: 8234
+  importance: Warning
+  category: Indexability
+  issue_ids:
+  - c64d588b-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Meta description too short
+  handler: ignore
+  tier: none
+  sites: 28
+  urls: 7803
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64d5156-d0f4-11e7-8ed1-001e67ed4656
+  - 8d785026-001c-11e8-aa34-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Slow page
+  handler: manual
+  tier: FLAG
+  sites: 27
+  urls: 11242
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - c64d7cbc-d0f4-11e7-8ed1-001e67ed4656
+  note: hosting/cache/theme; needs a timing tool, not a crawl
+- name: Changed pages not submitted to IndexNow
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 25
+  urls: 2562
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - b23ae498-5dee-4626-930b-9d5facd8a17d
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: H1 tag missing or empty
+  handler: manual
+  tier: FLAG
+  sites: 24
+  urls: 2549
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64d9d0b-d0f4-11e7-8ed1-001e67ed4656
+  - 838c947a-001a-11e8-823b-001e67ed4656
+  note: 'almost always a template: triage names the post type, the fix is a theme edit'
+- name: Multiple H1 tags
+  handler: ignore
+  tier: none
+  sites: 24
+  urls: 1796
+  importance: Notice
+  category: Content
+  issue_ids:
+  - c64d52ef-d0f4-11e7-8ed1-001e67ed4656
+  - 79ec14d4-001c-11e8-ae09-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Open Graph tags incomplete
+  handler: fix-social-tags
+  tier: AUTO
+  sites: 23
+  urls: 9357
+  importance: Warning
+  category: Social tags
+  issue_ids:
+  - c64d8b03-d0f4-11e7-8ed1-001e67ed4656
+  note: 'one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap'
+- name: Noindex follow page
+  handler: indexation-review
+  tier: APPROVE
+  sites: 23
+  urls: 2850
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - f485750c-10a0-11e8-a32a-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Article page missing Article schema
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 23
+  urls: 639
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - 854c2345-b0f8-4853-9677-2a2d5064bb6d
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: 4XX page
+  handler: fix-broken-links
+  tier: AUTO/APPROVE
+  sites: 23
+  urls: 578
+  importance: Error
+  category: Internal pages
+  issue_ids:
+  - c64da643-d0f4-11e7-8ed1-001e67ed4656
+  note: 'sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)'
+- name: 404 page
+  handler: fix-broken-links
+  tier: AUTO/APPROVE
+  sites: 23
+  urls: 572
+  importance: Error
+  category: Internal pages
+  issue_ids:
+  - c64dae3f-d0f4-11e7-8ed1-001e67ed4656
+  note: 'sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)'
+- name: Page has links to broken page
+  handler: fix-broken-links
+  tier: AUTO/APPROVE
+  sites: 22
+  urls: 3775
+  importance: Error/Warning
+  category: Links
+  issue_ids:
+  - c64daf06-d0f4-11e7-8ed1-001e67ed4656
+  - 6193420a-00b1-11e8-930a-001e67ed4656
+  note: 'sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)'
+- name: Organization schema missing or incomplete
+  handler: schema-fix
+  tier: APPROVE
+  sites: 21
+  urls: 22
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - c873e18c-d53c-4df3-b402-dbd1d8a0e72b
+  note: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual
+- name: Page has nofollow outgoing internal links
+  handler: nofollow-audit
+  tier: APPROVE
+  sites: 19
+  urls: 13192
+  importance: Notice
+  category: Links
+  issue_ids:
+  - 864b441c-00b1-11e8-bfe2-001e67ed4656
+  - c64da7a0-d0f4-11e7-8ed1-001e67ed4656
+  note: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)
+- name: Open Graph URL not matching canonical
+  handler: ignore
+  tier: none
+  sites: 19
+  urls: 1540
+  importance: Warning
+  category: Social tags
+  issue_ids:
+  - c64d3974-d0f4-11e7-8ed1-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Redirect chain
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 19
+  urls: 389
+  importance: Notice
+  category: Redirects
+  issue_ids:
+  - c64d7b51-d0f4-11e7-8ed1-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: Image file size too large
+  handler: fix-images
+  tier: AUTO/APPROVE
+  sites: 18
+  urls: 409
+  importance: Error
+  category: Images
+  issue_ids:
+  - c64d8113-d0f4-11e7-8ed1-001e67ed4656
+  note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
+- name: Redirected page has no incoming internal links
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 18
+  urls: 272
+  importance: Notice/Warning
+  category: Links
+  issue_ids:
+  - c64d59c5-d0f4-11e7-8ed1-001e67ed4656
+  - bfebbc1e-00b2-11e8-a20b-001e67ed4656
+  note: the redirecting URL itself is the target list; links get rewritten, the rule stays
+- name: 3XX redirect in sitemap
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 18
+  urls: 103
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d7fdf-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: Multiple title tags
+  handler: manual
+  tier: FLAG
+  sites: 17
+  urls: 608
+  importance: Error/Warning
+  category: Content
+  issue_ids:
+  - c64d81a5-d0f4-11e7-8ed1-001e67ed4656
+  - ed48318e-001b-11e8-8cdd-001e67ed4656
+  note: two things print a <title>; diagnose the plugin/theme once per site (cmitsolutions 494 pages = one cause)
+- name: No. of referring domains dropped
+  handler: monitor
+  tier: none
+  sites: 17
+  urls: 76
+  importance: Notice
+  category: Other
+  issue_ids:
+  - 54e472ee-0653-4afc-9be4-c0a5b4c09f6e
+  note: change-tracking, feeds content phase; not a defect
+- name: Missing alt text
+  handler: fix-images
+  tier: AUTO/APPROVE
+  sites: 15
+  urls: 6098
+  importance: Warning
+  category: Images
+  issue_ids:
+  - c64d9be3-d0f4-11e7-8ed1-001e67ed4656
+  note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
+- name: Slow server response for AI crawlers
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 15
+  urls: 1108
+  importance: Warning
+  category: AI Discoverability
+  issue_ids:
+  - dd9582b9-6fec-4d9a-94f3-c67013fc26a1
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: FAQ page missing FAQPage schema
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 15
+  urls: 45
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - 7000a1e4-98df-4349-91dc-519adc4e8b11
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Orphan page (has no incoming internal links)
+  handler: indexation-review
+  tier: APPROVE
+  sites: 14
+  urls: 6097
+  importance: Error/Warning
+  category: Links
+  issue_ids:
+  - c64d7e96-d0f4-11e7-8ed1-001e67ed4656
+  - 944b9296-00b2-11e8-aeb8-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Category page missing ItemList schema
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 14
+  urls: 1122
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - a9e4af25-cc90-4451-a072-af97bc60672e
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Structured data has schema.org validation error
+  handler: schema-fix
+  tier: APPROVE
+  sites: 13
+  urls: 6623
+  importance: Notice
+  category: Other
+  issue_ids:
+  - c22e9647-5a8f-4352-8b38-14cb66d7f101
+  note: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual
+- name: Nofollow page
+  handler: indexation-review
+  tier: APPROVE
+  sites: 13
+  urls: 5386
+  importance: Warning
+  category: Indexability
+  issue_ids:
+  - c64d7a9c-d0f4-11e7-8ed1-001e67ed4656
+  note: usually intent; confirm with the client file before changing
+- name: Product page missing Product schema
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 13
+  urls: 148
+  importance: Warning
+  category: AI Discoverability
+  issue_ids:
+  - d20993c3-06e6-4e1d-9888-6e1646fe2872
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Noindex and nofollow page
+  handler: indexation-review
+  tier: APPROVE
+  sites: 12
+  urls: 5384
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - c64d3765-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Page has nofollow and dofollow incoming internal links
+  handler: ignore
+  tier: none
+  sites: 12
+  urls: 4327
+  importance: Notice
+  category: Links
+  issue_ids:
+  - c64dad62-d0f4-11e7-8ed1-001e67ed4656
+  - e52bbf42-00b2-11e8-861d-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: X (Twitter) card missing
+  handler: fix-social-tags
+  tier: AUTO
+  sites: 12
+  urls: 243
+  importance: Notice
+  category: Social tags
+  issue_ids:
+  - c64d3dbd-d0f4-11e7-8ed1-001e67ed4656
+  note: 'one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap'
+- name: Title too short
+  handler: ignore
+  tier: none
+  sites: 11
+  urls: 442
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64d3bf4-d0f4-11e7-8ed1-001e67ed4656
+  - 43b1d34a-001c-11e8-8bfe-001e67ed4656
+  note: no Google impact (length rules, H1 count, expected redirects, pagination OG) per site-triage's standards
+- name: Structured data has Google rich results validation error
+  handler: schema-fix
+  tier: APPROVE
+  sites: 8
+  urls: 3612
+  importance: Notice
+  category: Other
+  issue_ids:
+  - b35de3ae-76f2-49cc-bb8f-33bc4aaedf10
+  note: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual
+- name: HTTPS page has internal links to HTTP
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 8
+  urls: 630
+  importance: Error/Warning
+  category: Links
+  issue_ids:
+  - c64d82d6-d0f4-11e7-8ed1-001e67ed4656
+  - 46d24344-00b1-11e8-9ab2-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: H1 tag changed
+  handler: monitor
+  tier: none
+  sites: 8
+  urls: 67
+  importance: Notice
+  category: Content
+  issue_ids:
+  - 9cb115e3-7380-4f73-9ec0-7628c3393bdd
+  note: change-tracking, feeds content phase; not a defect
+- name: Page in multiple sitemaps
+  handler: indexation-review
+  tier: APPROVE
+  sites: 8
+  urls: 17
+  importance: Notice
+  category: Sitemaps
+  issue_ids:
+  - 41b8a46d-a157-4b62-bea3-a30b58c59a22
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Noindex page in sitemap
+  handler: indexation-review
+  tier: APPROVE
+  sites: 7
+  urls: 736
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d53a0-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Open Graph tags missing
+  handler: fix-social-tags
+  tier: AUTO
+  sites: 7
+  urls: 214
+  importance: Notice
+  category: Social tags
+  issue_ids:
+  - c64d413f-d0f4-11e7-8ed1-001e67ed4656
+  note: 'one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap'
+- name: Broken redirect
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 7
+  urls: 126
+  importance: Error
+  category: Redirects
+  issue_ids:
+  - 351b3b6e-ec76-11e7-a1e2-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: SERP title changed
+  handler: monitor
+  tier: none
+  sites: 7
+  urls: 35
+  importance: Notice
+  category: Content
+  issue_ids:
+  - 24c2faf0-0fab-40f1-9adf-3a73cdc59ceb
+  note: change-tracking, feeds content phase; not a defect
+- name: Canonical URL has no incoming internal links
+  handler: indexation-review
+  tier: APPROVE
+  sites: 6
+  urls: 365
+  importance: Error
+  category: Links
+  issue_ids:
+  - c64d3d21-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Title tag changed
+  handler: monitor
+  tier: none
+  sites: 6
+  urls: 119
+  importance: Notice
+  category: Content
+  issue_ids:
+  - 3f369e7f-85fc-48fc-84b7-9cf28faafffc
+  note: change-tracking, feeds content phase; not a defect
+- name: Page has broken image
+  handler: fix-images
+  tier: AUTO/APPROVE
+  sites: 6
+  urls: 68
+  importance: Error
+  category: Images
+  issue_ids:
+  - 34412dfa-feb0-11e8-a306-001e67ed4657
+  note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
+- name: Image broken
+  handler: fix-images
+  tier: AUTO/APPROVE
+  sites: 6
+  urls: 57
+  importance: Error
+  category: Images
+  issue_ids:
+  - c0e87084-feaf-11e8-8c05-001e67ed4657
+  note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
+- name: 3XX page receives organic traffic
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 6
+  urls: 38
+  importance: Error
+  category: Other
+  issue_ids:
+  - c64d34be-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: Double slash in URL
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 6
+  urls: 29
+  importance: Error
+  category: Other
+  issue_ids:
+  - c64d3a17-d0f4-11e7-8ed1-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: 302 redirect
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 6
+  urls: 22
+  importance: Warning
+  category: Redirects
+  issue_ids:
+  - c64cf724-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: CSS file size too large
+  handler: manual
+  tier: FLAG
+  sites: 6
+  urls: 20
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - c64d859f-d0f4-11e7-8ed1-001e67ed4656
+  note: hosting/cache/theme; needs a timing tool, not a crawl
+- name: Word count changed
+  handler: monitor
+  tier: none
+  sites: 6
+  urls: 20
+  importance: Notice
+  category: Content
+  issue_ids:
+  - b6a947e0-910c-4f71-81e2-666bdbc8559b
+  note: change-tracking, feeds content phase; not a defect
+- name: Noindex in HTML and HTTP header
+  handler: indexation-review
+  tier: APPROVE
+  sites: 5
+  urls: 297
+  importance: Warning
+  category: Indexability
+  issue_ids:
+  - c64d32b3-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Indexable page became non-indexable
+  handler: indexation-review
+  tier: APPROVE
+  sites: 5
+  urls: 170
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - 96c86162-fe10-4013-bbd1-d55431913a9d
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Meta description changed
+  handler: monitor
+  tier: none
+  sites: 5
+  urls: 106
+  importance: Notice
+  category: Content
+  issue_ids:
+  - 7bbfc9eb-ed59-4bba-970d-fd98cc2ac0fe
+  note: change-tracking, feeds content phase; not a defect
+- name: Non-canonical page in sitemap
+  handler: indexation-review
+  tier: APPROVE
+  sites: 5
+  urls: 81
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d87a0-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Canonical points to redirect
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 5
+  urls: 33
+  importance: Error
+  category: Indexability
+  issue_ids:
+  - c64d54e6-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: Page has redirected image
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 4
+  urls: 233
+  importance: Warning
+  category: Images
+  issue_ids:
+  - 4baf1c90-feb0-11e8-9842-001e67ed4657
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: Image redirects
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 4
+  urls: 46
+  importance: Warning
+  category: Images
+  issue_ids:
+  - f409aca8-feaf-11e8-b63d-001e67ed4657
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: Non-canonical page receives organic traffic
+  handler: monitor
+  tier: none
+  sites: 4
+  urls: 6
+  importance: Notice
+  category: Other
+  issue_ids:
+  - c64d362b-d0f4-11e7-8ed1-001e67ed4656
+  note: change-tracking, feeds content phase; not a defect
+- name: HTTPS to HTTP redirect
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 4
+  urls: 5
+  importance: Warning
+  category: Redirects
+  issue_ids:
+  - c64d3ef6-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: Page has nofollow incoming internal links only
+  handler: nofollow-audit
+  tier: APPROVE
+  sites: 3
+  urls: 1305
+  importance: Notice/Warning
+  category: Links
+  issue_ids:
+  - d21618ee-00b2-11e8-b8b2-001e67ed4656
+  - c64d36c7-d0f4-11e7-8ed1-001e67ed4656
+  note: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)
+- name: HTTP page has internal links to HTTPS
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 3
+  urls: 281
+  importance: Notice
+  category: Links
+  issue_ids:
+  - fb3391ae-00b0-11e8-bb10-001e67ed4656
+  - c64d7df6-d0f4-11e7-8ed1-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: X (Twitter) card incomplete
+  handler: fix-social-tags
+  tier: AUTO
+  sites: 3
+  urls: 202
+  importance: Warning
+  category: Social tags
+  issue_ids:
+  - c64d3e57-d0f4-11e7-8ed1-001e67ed4656
+  note: 'one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap'
+- name: Canonical from HTTP to HTTPS
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 3
+  urls: 155
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - c64d336c-d0f4-11e7-8ed1-001e67ed4656
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: HTTPS page links to HTTP image
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 3
+  urls: 19
+  importance: Warning
+  category: Images
+  issue_ids:
+  - 6c2437d0-fde8-11e8-9607-001e67ed4657
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: HTTPS/HTTP mixed content
+  handler: fix-redirect-links
+  tier: AUTO
+  sites: 3
+  urls: 19
+  importance: Warning
+  category: Internal pages
+  issue_ids:
+  - c64d9ea6-d0f4-11e7-8ed1-001e67ed4656
+  note: rewrite links/srcs to the final URL (http→https and double-slash rules to add)
+- name: 5XX page
+  handler: fix-broken-links
+  tier: AUTO/APPROVE
+  sites: 3
+  urls: 3
+  importance: Error
+  category: Internal pages
+  issue_ids:
+  - c64d38a1-d0f4-11e7-8ed1-001e67ed4656
+  note: 'sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)'
+- name: 5XX page in sitemap
+  handler: indexation-review
+  tier: APPROVE
+  sites: 3
+  urls: 3
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d1e78-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: More than three parameters in URL
+  handler: monitor
+  tier: none
+  sites: 2
+  urls: 581
+  importance: Notice
+  category: Other
+  issue_ids:
+  - c64d8a57-d0f4-11e7-8ed1-001e67ed4656
+  note: change-tracking, feeds content phase; not a defect
+- name: Inconsistent AI training bot policy
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 2
+  urls: 525
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - 12f55bdd-c905-4076-a19e-300ca2b63e70
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Indexable page blocked from some AI search bots
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 2
+  urls: 525
+  importance: Notice
+  category: AI Discoverability
+  issue_ids:
+  - 0f6ec0d9-db0f-4518-bc71-8a85c488dd26
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Canonical URL changed
+  handler: monitor
+  tier: none
+  sites: 2
+  urls: 226
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - 3d528372-1259-4306-937b-4b66e186296a
+  note: change-tracking, feeds content phase; not a defect
+- name: Low word count
+  handler: manual
+  tier: FLAG
+  sites: 2
+  urls: 11
+  importance: Notice/Warning
+  category: Content
+  issue_ids:
+  - c64da01e-d0f4-11e7-8ed1-001e67ed4656
+  - 684a079a-430e-11ea-9add-001e67ed2cd7
+  note: content decision
+- name: Page has no outgoing links
+  handler: manual
+  tier: FLAG
+  sites: 2
+  urls: 11
+  importance: Error/Warning
+  category: Links
+  issue_ids:
+  - c64d86f0-d0f4-11e7-8ed1-001e67ed4656
+  - 2632db12-00b1-11e8-a1b8-001e67ed4656
+  note: content decision
+- name: Multiple meta description tags
+  handler: fix-meta
+  tier: APPROVE
+  sites: 2
+  urls: 10
+  importance: Error/Warning
+  category: Content
+  issue_ids:
+  - c64d7795-d0f4-11e7-8ed1-001e67ed4656
+  - 1fa83188-001c-11e8-a742-001e67ed4656
+  note: drafted, reviewed in the sheet, written through the SEO plugin
+- name: Pages have high AI content levels
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 2
+  urls: 10
+  importance: Notice
+  category: Content
+  issue_ids:
+  - 6048d416-8373-4ba2-bbac-3472997590fb
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Canonical points to 4XX
+  handler: fix-broken-links
+  tier: AUTO/APPROVE
+  sites: 2
+  urls: 5
+  importance: Error
+  category: Indexability
+  issue_ids:
+  - c64d8074-d0f4-11e7-8ed1-001e67ed4656
+  note: 'sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)'
+- name: 4XX page in sitemap
+  handler: indexation-review
+  tier: APPROVE
+  sites: 2
+  urls: 4
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d76be-d0f4-11e7-8ed1-001e67ed4656
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Redirect loop
+  handler: redirect-rules
+  tier: APPROVE
+  sites: 2
+  urls: 4
+  importance: Error
+  category: Redirects
+  issue_ids:
+  - 9ad91154-de76-11e8-879d-001e67ed4657
+  note: 'fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions'
+- name: Title tag missing or empty
+  handler: fix-meta
+  tier: APPROVE
+  sites: 2
+  urls: 4
+  importance: Error/Warning
+  category: Content
+  issue_ids:
+  - c64d7840-d0f4-11e7-8ed1-001e67ed4656
+  - 345c781e-001c-11e8-b616-001e67ed4656
+  note: drafted, reviewed in the sheet, written through the SEO plugin
+- name: Sitemap in the wrong format
+  handler: indexation-review
+  tier: APPROVE
+  sites: 2
+  urls: 2
+  importance: Warning
+  category: Sitemaps
+  issue_ids:
+  - bef5195b-d8a7-4316-845e-2ee45a0724a4
+  note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+- name: Nofollow in HTML and HTTP header
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 293
+  importance: Warning
+  category: Indexability
+  issue_ids:
+  - c64daaa3-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Canonical from HTTPS to HTTP
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 142
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - c64dafd9-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Page has broken CSS
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 87
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - 3a68909c-feb5-11e8-a4c3-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Duplicate pages without canonical
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 41
+  importance: Error
+  category: Duplicates
+  issue_ids:
+  - c64d5626-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: CSS broken
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 28
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - c64d358b-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: JavaScript broken
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 4
+  importance: Error
+  category: JavaScript
+  issue_ids:
+  - c64dab77-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Page has broken JavaScript
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 4
+  importance: Error
+  category: JavaScript
+  issue_ids:
+  - 56c9d152-feb4-11e8-b65d-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Noindex page became indexable
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 3
+  importance: Notice
+  category: Indexability
+  issue_ids:
+  - e73a0779-4292-4db3-9a3f-973b20947167
+  note: not yet classified; rare on this roster
+- name: HTML file size too large
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 2
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - c64da874-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: 500 page
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 1
+  importance: Error
+  category: Internal pages
+  issue_ids:
+  - c64d40b0-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Main content requires JavaScript rendering
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 1
+  urls: 1
+  importance: Warning
+  category: AI Discoverability
+  issue_ids:
+  - a69b2b51-5202-49a2-96ae-d5c7fabdec4e
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Non-canonical page specified as canonical one
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 1
+  importance: Warning
+  category: Indexability
+  issue_ids:
+  - 80403128-3bd4-11e8-96e0-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Page size exceeds 2 MB crawl limit
+  handler: fix-images
+  tier: AUTO/APPROVE
+  sites: 1
+  urls: 1
+  importance: Error
+  category: AI Discoverability
+  issue_ids:
+  - 910e33d1-443b-4606-b950-deb7c659510f
+  note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
+- name: Robots.txt is not accessible
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 1
+  importance: Error
+  category: Other
+  issue_ids:
+  - 91326507-26f0-4b4b-a680-bfdff5dd74c7
+  note: not yet classified; rare on this roster
+- name: Robots.txt rules disallow to crawl
+  handler: review
+  tier: '?'
+  sites: 1
+  urls: 1
+  importance: Notice
+  category: Other
+  issue_ids:
+  - b366c49a-f514-45e5-9d9a-66cfff18f68b
+  note: not yet classified; rare on this roster
+- name: 403 page receives organic traffic
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Other
+  issue_ids:
+  - c64d558c-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: 4XX page receives organic traffic
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Other
+  issue_ids:
+  - c64d3b5a-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: CSS redirects
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - 18babe02-feb5-11e8-b126-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Canonical points to 5XX
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Indexability
+  issue_ids:
+  - c64d79e8-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Content is not sized correctly
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 463bc603-e3f6-4eb1-a1d3-d3312aa87714
+  note: not yet classified; rare on this roster
+- name: Document uses plugins
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - a6e3f8ec-acba-45d5-be55-fdaac8ec116f
+  note: not yet classified; rare on this roster
+- name: External 3XX redirect
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: External pages
+  issue_ids:
+  - c64d8847-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: External 4XX
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: External pages
+  issue_ids:
+  - c64d89a6-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: External 5XX
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: External pages
+  issue_ids:
+  - c64da9e3-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: External time out
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: External pages
+  issue_ids:
+  - c64d11d6-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Font size too small
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - be934cd0-e02a-4e4c-bff5-2f954287a24d
+  note: not yet classified; rare on this roster
+- name: HTML lang attribute invalid
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d8236-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: HTML lang attribute missing
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Localization
+  issue_ids:
+  - c64d7bfd-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: HTTPS page links to HTTP CSS
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - 7945ee9a-feb5-11e8-9c77-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: HTTPS page links to HTTP JavaScript
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: JavaScript
+  issue_ids:
+  - b278c328-feb4-11e8-9681-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Hreflang and HTML lang mismatch
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d5446-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Hreflang annotation invalid
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64da934-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Hreflang defined but HTML lang missing
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Localization
+  issue_ids:
+  - c64d7f46-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Hreflang to non-canonical
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d5765-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Hreflang to redirect or broken page
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d401b-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Indexable page blocked from all AI search bots
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: AI Discoverability
+  issue_ids:
+  - 08e86644-7958-4ea5-ba05-8af25f3a310c
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: JavaScript redirects
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: JavaScript
+  issue_ids:
+  - 2b32882c-feb4-11e8-930d-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Meta refresh redirect
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Redirects
+  issue_ids:
+  - c64d5233-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Missing reciprocal hreflang (no return-tag)
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d592c-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: More than one page for same language in hreflang
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d3c8d-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: No. of URLs in sitemap decreased
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Sitemaps
+  issue_ids:
+  - 1a5a375d-5529-4179-b6b0-d2d075687f44
+  note: not yet classified; rare on this roster
+- name: Noindex page receives organic traffic
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Other
+  issue_ids:
+  - c64d84df-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Not all pages from hreflang group were crawled
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Localization
+  issue_ids:
+  - c64d7d54-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Not compressed
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - c64d9de1-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Page from sitemap timed out
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - c64d843b-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Page has redirected CSS
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: CSS
+  issue_ids:
+  - 5b4053a4-feb5-11e8-a8ae-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Page has redirected JavaScript
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: JavaScript
+  issue_ids:
+  - 8699d134-feb4-11e8-9895-001e67ed4657
+  note: not yet classified; rare on this roster
+- name: Page referenced for more than one language in hreflang
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Localization
+  issue_ids:
+  - c64d1033-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Page stopped passing CWV requirements
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - d383c31c-925d-44ed-94a7-92c5e8e0fe41
+  note: not yet classified; rare on this roster
+- name: Pages added to sitemaps
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Sitemaps
+  issue_ids:
+  - 200a698b-a97d-45b5-ac5f-44683b91dbd9
+  note: not yet classified; rare on this roster
+- name: Pages removed from sitemaps
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Sitemaps
+  issue_ids:
+  - 1d2dcd1b-2d09-4d11-9a9f-e2d08af55454
+  note: not yet classified; rare on this roster
+- name: Pages with poor CLS
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 09a46610-1538-11ec-a251-0aa06bfc17da
+  note: not yet classified; rare on this roster
+- name: Pages with poor FID
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - ba925b7a-1539-11ec-8544-0aa06bfc17da
+  note: not yet classified; rare on this roster
+- name: Pages with poor INP
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 85c01513-d747-49f5-8235-2b356bb4c686
+  note: not yet classified; rare on this roster
+- name: Pages with poor LCP
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 462ac1d6-153a-11ec-ae90-0aa06bfc17da
+  note: not yet classified; rare on this roster
+- name: Redirect chain too long
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Redirects
+  issue_ids:
+  - aa35e302-1532-11ec-be41-0aa06bfc17da
+  note: not yet classified; rare on this roster
+- name: Redirect target changed
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Redirects
+  issue_ids:
+  - c877a3f9-450f-4b6f-b536-f76cec40f46d
+  note: not yet classified; rare on this roster
+- name: Robots.txt changed
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Other
+  issue_ids:
+  - 8ca9e4b6-2258-4a46-ba98-66f008848db1
+  note: not yet classified; rare on this roster
+- name: Robots.txt has syntax error
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Other
+  issue_ids:
+  - 9111b6c4-198e-401d-a91e-156f97f83d59
+  note: not yet classified; rare on this roster
+- name: Robots.txt has too many redirects or redirect loop
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Other
+  issue_ids:
+  - 1f27ccb2-ebfe-4941-af1e-972a56cd6ed5
+  note: not yet classified; rare on this roster
+- name: Self-reference hreflang annotation missing
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Localization
+  issue_ids:
+  - c64d78f3-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Similar AI-generated content
+  handler: ai-discoverability
+  tier: APPROVE/FLAG
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: AI Discoverability
+  issue_ids:
+  - 47ecb343-5ef9-47f7-b417-476a10702c22
+  note: robots policy, IndexNow, Article type via sheet; the rest routed
+- name: Sitemap has syntax error
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - 2e8ae87a-fc93-440a-81c8-0255d16bc750
+  note: not yet classified; rare on this roster
+- name: Sitemap includes URLs out of its scope
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Sitemaps
+  issue_ids:
+  - 714bf237-bb34-4c64-a238-59cd5108233d
+  note: not yet classified; rare on this roster
+- name: Sitemap is not accessible
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - df634009-c696-4c27-9cb9-5bc37d58093f
+  note: not yet classified; rare on this roster
+- name: Sitemap larger 50MB
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - 583f6b4b-735a-418f-b5e8-f416701ba015
+  note: not yet classified; rare on this roster
+- name: Sitemap with over 50K URLs
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Sitemaps
+  issue_ids:
+  - 4f5f249b-820f-4407-94f9-22389b5085bc
+  note: not yet classified; rare on this roster
+- name: Tap targets too small or too close together
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 8a7cdd75-8fb8-402c-8cc5-5b38bc5472e6
+  note: not yet classified; rare on this roster
+- name: Timed out
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Error
+  category: Internal pages
+  issue_ids:
+  - c64d3811-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster
+- name: Viewport not set
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Warning
+  category: Usability and performance
+  issue_ids:
+  - 7b162258-6738-4ac6-a3c5-daf9593681fb
+  note: not yet classified; rare on this roster
+- name: X-default hreflang annotation missing
+  handler: review
+  tier: '?'
+  sites: 0
+  urls: 0
+  importance: Notice
+  category: Localization
+  issue_ids:
+  - c64d340d-d0f4-11e7-8ed1-001e67ed4656
+  note: not yet classified; rare on this roster

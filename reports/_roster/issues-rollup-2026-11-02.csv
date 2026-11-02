@@ -1,0 +1,185 @@
+issue_id,name,importance,category,is_indexable,sites_with_issue,total_urls,median_urls_where_present,top3_sites
+c64d12c1-d0f4-11e7-8ed1-001e67ed4656,3XX redirect,Warning,Redirects,,39,3219,22,cmitsolutions:1514 miuraboiler:381 reflectionscenter:282
+c64d5080-d0f4-11e7-8ed1-001e67ed4656,HTTP to HTTPS redirect,Notice,Redirects,,36,88,1,cmitsolutions:31 mooringtech:5 markheardfuel:3
+d69246c2-225a-11ec-8456-06d2f2f613d8,Page and SERP titles do not match,Notice,Content,1,35,1258,16,cmitsolutions:295 reflectionscenter:227 legalatlanta:85
+c64d863c-d0f4-11e7-8ed1-001e67ed4656,Page has only one dofollow incoming internal link,Notice,Links,1,33,3464,20,ruggeddepot:1464 cmitsolutions:817 theclinique:277
+c64d3aa7-d0f4-11e7-8ed1-001e67ed4656,Page has links to redirect,Warning,Links,1,32,21047,88.5,ruggeddepot:8728 cmitsolutions:6848 reflectionscenter:2051
+c64dac3a-d0f4-11e7-8ed1-001e67ed4656,Title too long,Warning,Content,1,32,11619,31,ruggeddepot:3808 mooringtech:3600 cmitsolutions:2192
+b5f8f6d0-8f91-4af3-8569-6ea442f122e7,Indexable page not in sitemap,Notice,Sitemaps,,31,9376,17,cmitsolutions:6882 ruggeddepot:964 newradiancenow:448
+f2e4c823-6a12-42e9-8083-960d78f19dc3,Pages dropped from Top 10,Notice,Other,,31,225,3,reflectionscenter:70 cmitsolutions:53 newradiancenow:15
+cb8ebb59-3502-4193-b4f1-a154bc0dddbe,Organic traffic dropped,Notice,Other,,31,210,3,cmitsolutions:58 reflectionscenter:52 newradiancenow:18
+c64d56c9-d0f4-11e7-8ed1-001e67ed4656,Meta description too long,Warning,Content,1,30,5412,20.5,cmitsolutions:3234 mooringtech:884 reflectionscenter:405
+c64d31f0-d0f4-11e7-8ed1-001e67ed4656,Meta description tag missing or empty,Warning,Content,1,29,2034,27,cmitsolutions:892 reflectionscenter:190 technikpackaging:171
+c64d588b-d0f4-11e7-8ed1-001e67ed4656,Noindex page,Warning,Indexability,,28,8234,23.5,miuraboiler:5511 cmitsolutions:1044 mooringtech:492
+c64d5156-d0f4-11e7-8ed1-001e67ed4656,Meta description too short,Warning,Content,1,28,5126,8.5,mooringtech:3073 ruggeddepot:1195 newradiancenow:322
+c64d7cbc-d0f4-11e7-8ed1-001e67ed4656,Slow page,Warning,Usability and performance,,27,11242,11,ruggeddepot:6886 cmitsolutions:1766 miuraboiler:1754
+b23ae498-5dee-4626-930b-9d5facd8a17d,Changed pages not submitted to IndexNow,Notice,AI Discoverability,,25,2562,7,cmitsolutions:1160 mooringtech:341 h-md:212
+c64d52ef-d0f4-11e7-8ed1-001e67ed4656,Multiple H1 tags,Notice,Content,1,24,1396,7,cmitsolutions:880 technikpackaging:233 newradiancenow:57
+c64d9d0b-d0f4-11e7-8ed1-001e67ed4656,H1 tag missing or empty,Warning,Content,1,24,1182,7,cmitsolutions:829 mooringtech:48 ruggeddepot:42
+57751310-001c-11e8-b746-001e67ed4656,Meta description tag missing or empty,Warning,Content,0,24,1071,14,cmitsolutions:429 fenceworks-staging:153 destinationaesthetics:113
+c64d8b03-d0f4-11e7-8ed1-001e67ed4656,Open Graph tags incomplete,Warning,Social tags,,23,9357,47,cmitsolutions:6826 reflectionscenter:1324 boilertechnologies:226
+f485750c-10a0-11e8-a32a-001e67ed4656,Noindex follow page,Notice,Indexability,,23,2850,27,miuraboiler:999 cmitsolutions:508 mooringtech:490
+854c2345-b0f8-4853-9677-2a2d5064bb6d,Article page missing Article schema,Notice,AI Discoverability,,23,639,7,cmitsolutions:300 reflectionscenter:110 meshautomationinc:43
+c64da643-d0f4-11e7-8ed1-001e67ed4656,4XX page,Error,Internal pages,,23,578,5,cmitsolutions:374 reflectionscenter:88 nouveauspa:23
+c64dae3f-d0f4-11e7-8ed1-001e67ed4656,404 page,Error,Internal pages,,23,572,5,cmitsolutions:368 reflectionscenter:88 nouveauspa:23
+c64daf06-d0f4-11e7-8ed1-001e67ed4656,Page has links to broken page,Error,Links,1,22,3523,7,reflectionscenter:2052 cmitsolutions:960 legalatlanta:161
+f6d1d4fc-00b2-11e8-9066-001e67ed4656,Page has only one dofollow incoming internal link,Notice,Links,0,22,1552,4,miuraboiler:827 cmitsolutions:523 naturalenclosures:74
+c873e18c-d53c-4df3-b402-dbd1d8a0e72b,Organization schema missing or incomplete,Notice,AI Discoverability,,21,22,1,cmitsolutions:2 22plasticsurgery:1 atlantaspecializedcare:1
+7272a5c0-00b1-11e8-ae24-001e67ed4656,Page has links to redirect,Notice,Links,0,20,6264,37.5,miuraboiler:3140 cmitsolutions:1691 nativecustomstone:426
+864b441c-00b1-11e8-bfe2-001e67ed4656,Page has nofollow outgoing internal links,Notice,Links,0,19,4495,4,miuraboiler:3088 cmitsolutions:535 nativecustomstone:407
+c64d3974-d0f4-11e7-8ed1-001e67ed4656,Open Graph URL not matching canonical,Warning,Social tags,,19,1540,16,ruggeddepot:963 theclinique:264 newradiancenow:58
+c64d7b51-d0f4-11e7-8ed1-001e67ed4656,Redirect chain,Notice,Redirects,,19,389,5,cmitsolutions:264 h-md:26 nativecustomstone:18
+c64d8113-d0f4-11e7-8ed1-001e67ed4656,Image file size too large,Error,Images,,18,409,7,cmitsolutions:154 nativecustomstone:101 atlantaspecializedcare:37
+c64d59c5-d0f4-11e7-8ed1-001e67ed4656,Redirected page has no incoming internal links,Warning,Links,1,18,230,2,cmitsolutions:169 markheardfuel:11 meshautomationinc:10
+c64d7fdf-d0f4-11e7-8ed1-001e67ed4656,3XX redirect in sitemap,Error,Sitemaps,,18,103,2.5,reflectionscenter:50 ruggeddepot:16 cmitsolutions:6
+c64d81a5-d0f4-11e7-8ed1-001e67ed4656,Multiple title tags,Error,Content,1,17,519,1,cmitsolutions:494 newradiancenow:6 miuraboiler:5
+54e472ee-0653-4afc-9be4-c0a5b4c09f6e,No. of referring domains dropped,Notice,Other,,17,76,2,cmitsolutions:39 reflectionscenter:11 miuraboiler:4
+c64d9be3-d0f4-11e7-8ed1-001e67ed4656,Missing alt text,Warning,Images,,15,6098,66,reflectionscenter:2131 cmitsolutions:1001 theclinique:1001
+dd9582b9-6fec-4d9a-94f3-c67013fc26a1,Slow server response for AI crawlers,Warning,AI Discoverability,,15,1108,8,ruggeddepot:531 cmitsolutions:492 reflectionscenter:14
+7000a1e4-98df-4349-91dc-519adc4e8b11,FAQ page missing FAQPage schema,Notice,AI Discoverability,,15,45,2,cmitsolutions:14 newradiancenow:7 markheardfuel:5
+c64da7a0-d0f4-11e7-8ed1-001e67ed4656,Page has nofollow outgoing internal links,Notice,Links,1,14,8697,12,ruggeddepot:8065 h-md:227 nativecustomstone:161
+c64d7e96-d0f4-11e7-8ed1-001e67ed4656,Orphan page (has no incoming internal links),Error,Links,1,14,5592,9,mooringtech:4743 cmitsolutions:390 ruggeddepot:368
+a9e4af25-cc90-4451-a072-af97bc60672e,Category page missing ItemList schema,Notice,AI Discoverability,,14,1122,2,ruggeddepot:996 mooringtech:41 technikpackaging:34
+bfebbc1e-00b2-11e8-a20b-001e67ed4656,Redirected page has no incoming internal links,Notice,Links,0,14,42,2,cmitsolutions:10 22plasticsurgery:7 destinationaesthetics:4
+c22e9647-5a8f-4352-8b38-14cb66d7f101,Structured data has schema.org validation error,Notice,Other,,13,6623,150,miuraboiler:2934 reflectionscenter:2133 cmitsolutions:610
+c64d7a9c-d0f4-11e7-8ed1-001e67ed4656,Nofollow page,Warning,Indexability,,13,5386,2,miuraboiler:4512 cmitsolutions:536 fenceworks-staging:294
+8d785026-001c-11e8-aa34-001e67ed4656,Meta description too short,Notice,Content,0,13,2677,18,miuraboiler:2125 mooringtech:210 cmitsolutions:141
+d20993c3-06e6-4e1d-9888-6e1646fe2872,Product page missing Product schema,Warning,AI Discoverability,,13,148,4,ruggeddepot:32 cmitsolutions:28 meshautomationinc:28
+c64d3765-d0f4-11e7-8ed1-001e67ed4656,Noindex and nofollow page,Notice,Indexability,,12,5384,3.5,miuraboiler:4512 cmitsolutions:536 fenceworks-staging:294
+c64dad62-d0f4-11e7-8ed1-001e67ed4656,Page has nofollow and dofollow incoming internal links,Notice,Links,1,12,3487,38.5,cmitsolutions:2928 reflectionscenter:170 theclinique:95
+6a46d032-001c-11e8-99f1-001e67ed4656,Title too long,Notice,Content,0,12,1143,48,miuraboiler:315 nativecustomstone:287 mooringtech:202
+c64d3dbd-d0f4-11e7-8ed1-001e67ed4656,X (Twitter) card missing,Notice,Social tags,,12,243,2.5,naturalenclosures:195 theagelesscenter:14 glomedspa:10
+838c947a-001a-11e8-823b-001e67ed4656,H1 tag missing or empty,Notice,Content,0,11,1367,11,cmitsolutions:726 mooringtech:492 slepianfirm:88
+c64d3bf4-d0f4-11e7-8ed1-001e67ed4656,Title too short,Warning,Content,1,11,346,2,cmitsolutions:316 slepianfirm:11 miuraboiler:7
+02085644-001c-11e8-8e51-001e67ed4656,Meta description too long,Notice,Content,0,10,581,13,nativecustomstone:269 cmitsolutions:132 mooringtech:91
+b35de3ae-76f2-49cc-bb8f-33bc4aaedf10,Structured data has Google rich results validation error,Notice,Other,,8,3612,97,miuraboiler:2919 cmitsolutions:258 boilertechnologies:227
+79ec14d4-001c-11e8-ae09-001e67ed4656,Multiple H1 tags,Notice,Content,0,8,400,1,cmitsolutions:373 technikpackaging:20 mooringtech:2
+c64d82d6-d0f4-11e7-8ed1-001e67ed4656,HTTPS page has internal links to HTTP,Error,Links,1,8,391,2.5,cmitsolutions:295 nativecustomstone:76 mooringtech:12
+6193420a-00b1-11e8-930a-001e67ed4656,Page has links to broken page,Warning,Links,0,8,252,9.5,cmitsolutions:124 reflectionscenter:82 nouveauspa:18
+9cb115e3-7380-4f73-9ec0-7628c3393bdd,H1 tag changed,Notice,Content,1,8,67,2,cmitsolutions:35 mooringtech:21 reflectionscenter:4
+41b8a46d-a157-4b62-bea3-a30b58c59a22,Page in multiple sitemaps,Notice,Sitemaps,,8,17,1,cmitsolutions:6 reflectionscenter:5 22plasticsurgery:1
+e52bbf42-00b2-11e8-861d-001e67ed4656,Page has nofollow and dofollow incoming internal links,Notice,Links,0,7,840,2,cmitsolutions:816 mooringtech:10 theagelesscenter:6
+c64d53a0-d0f4-11e7-8ed1-001e67ed4656,Noindex page in sitemap,Error,Sitemaps,,7,736,2,mooringtech:491 fenceworks-staging:235 cmitsolutions:2
+c64d413f-d0f4-11e7-8ed1-001e67ed4656,Open Graph tags missing,Notice,Social tags,,7,214,3,naturalenclosures:195 glomedspa:10 newradiancenow:3
+351b3b6e-ec76-11e7-a1e2-001e67ed4656,Broken redirect,Error,Redirects,,7,126,2,cmitsolutions:102 nouveauspa:10 miuraboiler:9
+24c2faf0-0fab-40f1-9adf-3a73cdc59ceb,SERP title changed,Notice,Content,1,7,35,1,reflectionscenter:24 newradiancenow:5 cmitsolutions:2
+c64d3d21-d0f4-11e7-8ed1-001e67ed4656,Canonical URL has no incoming internal links,Error,Links,1,6,365,8.5,mooringtech:330 cmitsolutions:16 meshautomationinc:9
+3f369e7f-85fc-48fc-84b7-9cf28faafffc,Title tag changed,Notice,Content,1,6,119,5,cmitsolutions:83 mooringtech:21 legalatlanta:5
+34412dfa-feb0-11e8-a306-001e67ed4657,Page has broken image,Error,Images,,6,68,2,technikpackaging:46 cmitsolutions:16 nativecustomstone:2
+c0e87084-feaf-11e8-8c05-001e67ed4657,Image broken,Error,Images,,6,57,1,technikpackaging:36 cmitsolutions:17 hsfamilylaw:1
+c64d34be-d0f4-11e7-8ed1-001e67ed4656,3XX page receives organic traffic,Error,Other,,6,38,1.5,cmitsolutions:31 reflectionscenter:2 ruggeddepot:2
+c64d3a17-d0f4-11e7-8ed1-001e67ed4656,Double slash in URL,Error,Other,,6,29,2,cmitsolutions:16 22plasticsurgery:7 meshautomationinc:2
+c64cf724-d0f4-11e7-8ed1-001e67ed4656,302 redirect,Warning,Redirects,,6,22,1,miuraboiler:13 curatemedspa:5 meshautomationinc:1
+c64d859f-d0f4-11e7-8ed1-001e67ed4656,CSS file size too large,Warning,CSS,,6,20,3.5,atlantaspecializedcare:5 markheardfuel:5 nativecustomstone:4
+b6a947e0-910c-4f71-81e2-666bdbc8559b,Word count changed,Notice,Content,1,6,20,2.5,cmitsolutions:7 glomedspa:6 reflectionscenter:3
+944b9296-00b2-11e8-aeb8-001e67ed4656,Orphan page (has no incoming internal links),Warning,Links,0,5,505,4,mooringtech:490 fenceworks-staging:6 cmitsolutions:4
+c64d32b3-d0f4-11e7-8ed1-001e67ed4656,Noindex in HTML and HTTP header,Warning,Indexability,,5,297,1,fenceworks-staging:293 meshautomationinc:1 nouveauspa:1
+96c86162-fe10-4013-bbd1-d55431913a9d,Indexable page became non-indexable,Notice,Indexability,,5,170,1,cmitsolutions:115 nativecustomstone:52 mooringtech:1
+7bbfc9eb-ed59-4bba-970d-fd98cc2ac0fe,Meta description changed,Notice,Content,1,5,106,4,cmitsolutions:76 mooringtech:21 newradiancenow:4
+c64d87a0-d0f4-11e7-8ed1-001e67ed4656,Non-canonical page in sitemap,Error,Sitemaps,,5,81,7,nativecustomstone:60 mooringtech:10 cmitsolutions:7
+c64d54e6-d0f4-11e7-8ed1-001e67ed4656,Canonical points to redirect,Error,Indexability,,5,33,4,cmitsolutions:20 miuraboiler:4 synergymedaesthetics:4
+4baf1c90-feb0-11e8-9842-001e67ed4657,Page has redirected image,Warning,Images,,4,233,2.5,boilertechnologies:227 miuraboiler:3 cmitsolutions:2
+43b1d34a-001c-11e8-8bfe-001e67ed4656,Title too short,Notice,Content,0,4,96,14,cmitsolutions:67 slepianfirm:27 22spamd:1
+f409aca8-feaf-11e8-b63d-001e67ed4657,Image redirects,Warning,Images,,4,46,10,miuraboiler:24 boilertechnologies:16 hsfamilylaw:4
+c64d362b-d0f4-11e7-8ed1-001e67ed4656,Non-canonical page receives organic traffic,Notice,Other,,4,6,1,cmitsolutions:3 miuraboiler:1 nativecustomstone:1
+c64d3ef6-d0f4-11e7-8ed1-001e67ed4656,HTTPS to HTTP redirect,Warning,Redirects,,4,5,1,purskinclinic:2 curatemedspa:1 nativecustomstone:1
+d21618ee-00b2-11e8-b8b2-001e67ed4656,Page has nofollow incoming internal links only,Notice,Links,0,3,348,57,fenceworks-staging:287 cmitsolutions:57 glomedspa:4
+46d24344-00b1-11e8-9ab2-001e67ed4656,HTTPS page has internal links to HTTP,Warning,Links,0,3,239,18,nativecustomstone:219 cmitsolutions:18 mooringtech:2
+c64d3e57-d0f4-11e7-8ed1-001e67ed4656,X (Twitter) card incomplete,Warning,Social tags,,3,202,15,reflectionscenter:186 nouveauspa:15 ruggeddepot:1
+fb3391ae-00b0-11e8-bb10-001e67ed4656,HTTP page has internal links to HTTPS,Notice,Links,0,3,196,7,nativecustomstone:188 curatemedspa:7 miuraboiler:1
+c64d336c-d0f4-11e7-8ed1-001e67ed4656,Canonical from HTTP to HTTPS,Notice,Indexability,,3,155,7,nativecustomstone:147 curatemedspa:7 miuraboiler:1
+6c2437d0-fde8-11e8-9607-001e67ed4657,HTTPS page links to HTTP image,Warning,Images,,3,19,3,nativecustomstone:15 miuraboiler:3 cmitsolutions:1
+c64d9ea6-d0f4-11e7-8ed1-001e67ed4656,HTTPS/HTTP mixed content,Warning,Internal pages,,3,19,3,nativecustomstone:15 miuraboiler:3 cmitsolutions:1
+c64d38a1-d0f4-11e7-8ed1-001e67ed4656,5XX page,Error,Internal pages,,3,3,1,cmitsolutions:1 miuraboiler:1 mooringtech:1
+c64d1e78-d0f4-11e7-8ed1-001e67ed4656,5XX page in sitemap,Error,Sitemaps,,3,3,1,cmitsolutions:1 miuraboiler:1 mooringtech:1
+c64d8a57-d0f4-11e7-8ed1-001e67ed4656,More than three parameters in URL,Notice,Other,,2,581,290.5,miuraboiler:560 cmitsolutions:21
+12f55bdd-c905-4076-a19e-300ca2b63e70,Inconsistent AI training bot policy,Notice,AI Discoverability,,2,525,262.5,miuraboiler:453 forwardfacing:72
+0f6ec0d9-db0f-4518-bc71-8a85c488dd26,Indexable page blocked from some AI search bots,Notice,AI Discoverability,,2,525,262.5,miuraboiler:453 forwardfacing:72
+3d528372-1259-4306-937b-4b66e186296a,Canonical URL changed,Notice,Indexability,,2,226,113,nativecustomstone:210 cmitsolutions:16
+c64da01e-d0f4-11e7-8ed1-001e67ed4656,Low word count,Warning,Content,1,2,11,5.5,ruggeddepot:8 reflectionscenter:3
+c64d86f0-d0f4-11e7-8ed1-001e67ed4656,Page has no outgoing links,Error,Links,1,2,11,5.5,ruggeddepot:8 reflectionscenter:3
+c64d7795-d0f4-11e7-8ed1-001e67ed4656,Multiple meta description tags,Error,Content,1,2,10,5,cmitsolutions:9 newradiancenow:1
+6048d416-8373-4ba2-bbac-3472997590fb,Pages have high AI content levels,Notice,Content,1,2,10,5,blushmedspact:5 cmitsolutions:5
+c64d8074-d0f4-11e7-8ed1-001e67ed4656,Canonical points to 4XX,Error,Indexability,,2,5,2.5,cmitsolutions:4 theclinique:1
+c64d76be-d0f4-11e7-8ed1-001e67ed4656,4XX page in sitemap,Error,Sitemaps,,2,4,2,atlantaspecializedcare:3 technikpackaging:1
+9ad91154-de76-11e8-879d-001e67ed4657,Redirect loop,Error,Redirects,,2,4,2,cmitsolutions:2 synergymedaesthetics:2
+c64d7840-d0f4-11e7-8ed1-001e67ed4656,Title tag missing or empty,Error,Content,1,2,4,2,reflectionscenter:3 newradiancenow:1
+bef5195b-d8a7-4316-845e-2ee45a0724a4,Sitemap in the wrong format,Warning,Sitemaps,,2,2,1,cmitsolutions:1 glomedspa:1
+c64d36c7-d0f4-11e7-8ed1-001e67ed4656,Page has nofollow incoming internal links only,Warning,Links,1,1,957,957,cmitsolutions:957
+c64daaa3-d0f4-11e7-8ed1-001e67ed4656,Nofollow in HTML and HTTP header,Warning,Indexability,,1,293,293,fenceworks-staging:293
+c64dafd9-d0f4-11e7-8ed1-001e67ed4656,Canonical from HTTPS to HTTP,Notice,Indexability,,1,142,142,nativecustomstone:142
+ed48318e-001b-11e8-8cdd-001e67ed4656,Multiple title tags,Warning,Content,0,1,89,89,cmitsolutions:89
+3a68909c-feb5-11e8-a4c3-001e67ed4657,Page has broken CSS,Warning,CSS,,1,87,87,cmitsolutions:87
+c64d7df6-d0f4-11e7-8ed1-001e67ed4656,HTTP page has internal links to HTTPS,Notice,Links,1,1,85,85,nativecustomstone:85
+c64d5626-d0f4-11e7-8ed1-001e67ed4656,Duplicate pages without canonical,Error,Duplicates,,1,41,41,reflectionscenter:41
+c64d358b-d0f4-11e7-8ed1-001e67ed4656,CSS broken,Warning,CSS,,1,28,28,cmitsolutions:28
+c64dab77-d0f4-11e7-8ed1-001e67ed4656,JavaScript broken,Error,JavaScript,,1,4,4,cmitsolutions:4
+56c9d152-feb4-11e8-b65d-001e67ed4657,Page has broken JavaScript,Error,JavaScript,,1,4,4,cmitsolutions:4
+e73a0779-4292-4db3-9a3f-973b20947167,Noindex page became indexable,Notice,Indexability,,1,3,3,cmitsolutions:3
+c64da874-d0f4-11e7-8ed1-001e67ed4656,HTML file size too large,Warning,Usability and performance,,1,2,2,cmitsolutions:2
+c64d40b0-d0f4-11e7-8ed1-001e67ed4656,500 page,Error,Internal pages,,1,1,1,miuraboiler:1
+a69b2b51-5202-49a2-96ae-d5c7fabdec4e,Main content requires JavaScript rendering,Warning,AI Discoverability,,1,1,1,hsfamilylaw:1
+80403128-3bd4-11e8-96e0-001e67ed4657,Non-canonical page specified as canonical one,Warning,Indexability,,1,1,1,cmitsolutions:1
+910e33d1-443b-4606-b950-deb7c659510f,Page size exceeds 2 MB crawl limit,Error,AI Discoverability,,1,1,1,mooringtech:1
+91326507-26f0-4b4b-a680-bfdff5dd74c7,Robots.txt is not accessible,Error,Other,,1,1,1,cmitsolutions:1
+b366c49a-f514-45e5-9d9a-66cfff18f68b,Robots.txt rules disallow to crawl,Notice,Other,,1,1,1,atlantaspecializedcare:1
+c64d558c-d0f4-11e7-8ed1-001e67ed4656,403 page receives organic traffic,Error,Other,,0,0,0,
+c64d3b5a-d0f4-11e7-8ed1-001e67ed4656,4XX page receives organic traffic,Error,Other,,0,0,0,
+18babe02-feb5-11e8-b126-001e67ed4657,CSS redirects,Warning,CSS,,0,0,0,
+c64d79e8-d0f4-11e7-8ed1-001e67ed4656,Canonical points to 5XX,Error,Indexability,,0,0,0,
+463bc603-e3f6-4eb1-a1d3-d3312aa87714,Content is not sized correctly,Warning,Usability and performance,,0,0,0,
+a6e3f8ec-acba-45d5-be55-fdaac8ec116f,Document uses plugins,Warning,Usability and performance,,0,0,0,
+c64d8847-d0f4-11e7-8ed1-001e67ed4656,External 3XX redirect,Notice,External pages,,0,0,0,
+c64d89a6-d0f4-11e7-8ed1-001e67ed4656,External 4XX,Notice,External pages,,0,0,0,
+c64da9e3-d0f4-11e7-8ed1-001e67ed4656,External 5XX,Notice,External pages,,0,0,0,
+c64d11d6-d0f4-11e7-8ed1-001e67ed4656,External time out,Notice,External pages,,0,0,0,
+be934cd0-e02a-4e4c-bff5-2f954287a24d,Font size too small,Warning,Usability and performance,,0,0,0,
+c64d8236-d0f4-11e7-8ed1-001e67ed4656,HTML lang attribute invalid,Error,Localization,,0,0,0,
+c64d7bfd-d0f4-11e7-8ed1-001e67ed4656,HTML lang attribute missing,Warning,Localization,,0,0,0,
+7945ee9a-feb5-11e8-9c77-001e67ed4657,HTTPS page links to HTTP CSS,Warning,CSS,,0,0,0,
+b278c328-feb4-11e8-9681-001e67ed4657,HTTPS page links to HTTP JavaScript,Warning,JavaScript,,0,0,0,
+c64d5446-d0f4-11e7-8ed1-001e67ed4656,Hreflang and HTML lang mismatch,Error,Localization,,0,0,0,
+c64da934-d0f4-11e7-8ed1-001e67ed4656,Hreflang annotation invalid,Error,Localization,,0,0,0,
+c64d7f46-d0f4-11e7-8ed1-001e67ed4656,Hreflang defined but HTML lang missing,Warning,Localization,,0,0,0,
+c64d5765-d0f4-11e7-8ed1-001e67ed4656,Hreflang to non-canonical,Error,Localization,,0,0,0,
+c64d401b-d0f4-11e7-8ed1-001e67ed4656,Hreflang to redirect or broken page,Error,Localization,,0,0,0,
+08e86644-7958-4ea5-ba05-8af25f3a310c,Indexable page blocked from all AI search bots,Warning,AI Discoverability,,0,0,0,
+2b32882c-feb4-11e8-930d-001e67ed4657,JavaScript redirects,Warning,JavaScript,,0,0,0,
+684a079a-430e-11ea-9add-001e67ed2cd7,Low word count,Notice,Content,0,0,0,0,
+c64d5233-d0f4-11e7-8ed1-001e67ed4656,Meta refresh redirect,Notice,Redirects,,0,0,0,
+c64d592c-d0f4-11e7-8ed1-001e67ed4656,Missing reciprocal hreflang (no return-tag),Error,Localization,,0,0,0,
+c64d3c8d-d0f4-11e7-8ed1-001e67ed4656,More than one page for same language in hreflang,Error,Localization,,0,0,0,
+1fa83188-001c-11e8-a742-001e67ed4656,Multiple meta description tags,Warning,Content,0,0,0,0,
+1a5a375d-5529-4179-b6b0-d2d075687f44,No. of URLs in sitemap decreased,Notice,Sitemaps,,0,0,0,
+c64d84df-d0f4-11e7-8ed1-001e67ed4656,Noindex page receives organic traffic,Error,Other,,0,0,0,
+c64d7d54-d0f4-11e7-8ed1-001e67ed4656,Not all pages from hreflang group were crawled,Notice,Localization,,0,0,0,
+c64d9de1-d0f4-11e7-8ed1-001e67ed4656,Not compressed,Warning,Usability and performance,,0,0,0,
+c64d843b-d0f4-11e7-8ed1-001e67ed4656,Page from sitemap timed out,Error,Sitemaps,,0,0,0,
+2632db12-00b1-11e8-a1b8-001e67ed4656,Page has no outgoing links,Warning,Links,0,0,0,0,
+5b4053a4-feb5-11e8-a8ae-001e67ed4657,Page has redirected CSS,Warning,CSS,,0,0,0,
+8699d134-feb4-11e8-9895-001e67ed4657,Page has redirected JavaScript,Warning,JavaScript,,0,0,0,
+c64d1033-d0f4-11e7-8ed1-001e67ed4656,Page referenced for more than one language in hreflang,Error,Localization,,0,0,0,
+d383c31c-925d-44ed-94a7-92c5e8e0fe41,Page stopped passing CWV requirements,Warning,Usability and performance,,0,0,0,
+200a698b-a97d-45b5-ac5f-44683b91dbd9,Pages added to sitemaps,Notice,Sitemaps,,0,0,0,
+1d2dcd1b-2d09-4d11-9a9f-e2d08af55454,Pages removed from sitemaps,Notice,Sitemaps,,0,0,0,
+09a46610-1538-11ec-a251-0aa06bfc17da,Pages with poor CLS,Warning,Usability and performance,,0,0,0,
+ba925b7a-1539-11ec-8544-0aa06bfc17da,Pages with poor FID,Warning,Usability and performance,,0,0,0,
+85c01513-d747-49f5-8235-2b356bb4c686,Pages with poor INP,Warning,Usability and performance,,0,0,0,
+462ac1d6-153a-11ec-ae90-0aa06bfc17da,Pages with poor LCP,Warning,Usability and performance,,0,0,0,
+aa35e302-1532-11ec-be41-0aa06bfc17da,Redirect chain too long,Error,Redirects,,0,0,0,
+c877a3f9-450f-4b6f-b536-f76cec40f46d,Redirect target changed,Notice,Redirects,,0,0,0,
+8ca9e4b6-2258-4a46-ba98-66f008848db1,Robots.txt changed,Warning,Other,,0,0,0,
+9111b6c4-198e-401d-a91e-156f97f83d59,Robots.txt has syntax error,Error,Other,,0,0,0,
+1f27ccb2-ebfe-4941-af1e-972a56cd6ed5,Robots.txt has too many redirects or redirect loop,Error,Other,,0,0,0,
+c64d78f3-d0f4-11e7-8ed1-001e67ed4656,Self-reference hreflang annotation missing,Warning,Localization,,0,0,0,
+47ecb343-5ef9-47f7-b417-476a10702c22,Similar AI-generated content,Warning,AI Discoverability,,0,0,0,
+2e8ae87a-fc93-440a-81c8-0255d16bc750,Sitemap has syntax error,Error,Sitemaps,,0,0,0,
+714bf237-bb34-4c64-a238-59cd5108233d,Sitemap includes URLs out of its scope,Warning,Sitemaps,,0,0,0,
+df634009-c696-4c27-9cb9-5bc37d58093f,Sitemap is not accessible,Error,Sitemaps,,0,0,0,
+583f6b4b-735a-418f-b5e8-f416701ba015,Sitemap larger 50MB,Error,Sitemaps,,0,0,0,
+4f5f249b-820f-4407-94f9-22389b5085bc,Sitemap with over 50K URLs,Error,Sitemaps,,0,0,0,
+8a7cdd75-8fb8-402c-8cc5-5b38bc5472e6,Tap targets too small or too close together,Warning,Usability and performance,,0,0,0,
+c64d3811-d0f4-11e7-8ed1-001e67ed4656,Timed out,Error,Internal pages,,0,0,0,
+345c781e-001c-11e8-b616-001e67ed4656,Title tag missing or empty,Warning,Content,0,0,0,0,
+7b162258-6738-4ac6-a3c5-daf9593681fb,Viewport not set,Warning,Usability and performance,,0,0,0,
+c64d340d-d0f4-11e7-8ed1-001e67ed4656,X-default hreflang annotation missing,Notice,Localization,,0,0,0,
