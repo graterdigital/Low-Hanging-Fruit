@@ -484,6 +484,20 @@ def confirm_key(home, cands):
         if st == 200 and body.strip() == c: return c
     return ""
 
+def write_key_file(client, alias, webroot, key, home, found):
+    """Write <key>.txt to the web root so hosts that serve .txt statically still expose the IndexNow key. Returns (key or '', detail)."""
+    slug = client["slug"]; provider = str(client.get("hosting", {}).get("provider") or "other").lower()
+    code, out, err = ssh(alias, f"cd {webroot} || exit 97; printf '%s' '{key}' > '{key}.txt' && cat '{key}.txt'")
+    ok = code == 0 and out.strip() == key
+    served = confirm_key(home, [key]) if ok else ""
+    stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+    outdir = ROOT / "changes" / provider / slug; outdir.mkdir(parents=True, exist_ok=True)
+    (outdir / f"{stamp}-ai-discoverability-indexnow-keyfile-live.md").write_text("\n".join([
+        f"# ai-discoverability: IndexNow key file on {client['domain']} (live)", "",
+        f"Run {stamp} · alias `{alias}` · wrote `{webroot}/{key}.txt`: {'ok' if ok else 'FAILED ' + err.strip()[-200:]} · public fetch: {'served' if served else 'still not served'}", "",
+        "Why: the host serves .txt requests statically, so the plugin's rewrite-based key file never answered. Rollback: delete the file.", ""]) + "\n", encoding="utf-8")
+    return served, found + (f"; key file written and served ({key[:8]}…)" if served else f"; key file written but still not served (check the host's static rules)" if ok else f"; key file write FAILED: {err.strip()[-120:]}")
+
 def install_indexnow(client, apply, yes, log_only=False):
     """Install and activate Microsoft's `indexnow` plugin on live. Returns a row for the summary table."""
     slug = client["slug"]; provider = str(client.get("hosting", {}).get("provider") or "other").lower()
@@ -497,8 +511,16 @@ def install_indexnow(client, apply, yes, log_only=False):
     if found is None: return (slug, "error", f"ssh: {names}")
     if found:
         key = confirm_key(home, cands or [])
+        detail = found + (f"; key file served ({key[:8]}…)" if key else f"; key file not confirmed (options seen: {names or 'none'})")
+        # Plugin present and a key found, but /<key>.txt not served: the host answers .txt requests statically (WP Engine does), so the
+        # plugin's rewrite never runs. A physical file in the web root fixes it. Dry run says so; --apply writes it.
+        if not key and cands:
+            if apply:
+                key, detail = write_key_file(client, alias, webroot, cands[0], home, found)
+            else:
+                detail = found + f"; key found ({cands[0][:8]}…) but /<key>.txt is NOT served: host answers .txt statically; --apply writes the file"
         if not args_nowrite: update_client_observed(ROOT / "clients" / f"{slug}.yaml", {"indexnow_plugin": found, "indexnow_key_served": "yes" if key else "unconfirmed"})
-        return (slug, "already", found + (f"; key file served ({key[:8]}…)" if key else f"; key file not confirmed (options seen: {names or 'none'})"))
+        return (slug, "already" if key or not cands else "key file missing", detail)
     if not apply: return (slug, "would install", "no IndexNow mechanism active")
     if yes: pass
     elif not sys.stdin.isatty(): return (slug, "skip", "live apply needs a terminal to confirm, or --yes")
@@ -512,6 +534,8 @@ def install_indexnow(client, apply, yes, log_only=False):
     if found2 is None: found2, cands2, names2 = "", [], names2
     key2 = confirm_key(home, cands2 or [])
     keyfile = f"key file served ({key2[:8]}…)" if key2 else f"key file not confirmed (options seen: {names2 or 'none'})"
+    if found2 and not key2 and cands2:
+        key2, keyfile = write_key_file(client, alias, webroot, cands2[0], home, found2); keyfile = keyfile.split("; ", 1)[-1]
     result = "installed" if found2 else "FAILED"
     outdir = ROOT / "changes" / provider / slug; outdir.mkdir(parents=True, exist_ok=True)
     (outdir / f"{stamp}-ai-discoverability-indexnow-live.md").write_text("\n".join([
