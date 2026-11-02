@@ -97,9 +97,9 @@ class Api:
         if f: f.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
         return data
 
-def fetch_text(url, timeout=15):
+def fetch_text(url, timeout=15, ua=UA):
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/plain,*/*"})
+        req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "text/plain,*/*"})
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.status, r.read().decode("utf-8", "replace"), r.geturl()
     except urllib.error.HTTPError as e:
@@ -252,7 +252,7 @@ def write_report(client, data, robots_status, robots_text, proposed, blocked_pol
     hdr = sorted({str(h) for p in sample for h in (p.get("http_header_robots") or [])})
     out += ["", f"robots.txt errors reported by Ahrefs: {', '.join(robots_errs) if robots_errs else 'none'} · Sitemap lines: {', '.join('`'+s+'`' for s in sm) if sm else 'none'} · "
             f"X-Robots-Tag headers on sampled pages: {', '.join(hdr) if hdr else 'none'}", ""]
-    out += ["Current robots.txt:", "", "```", (robots_text.strip() or "(empty or not fetched)"), "```", ""]
+    out += ["Current robots.txt:", "", "```", (robots_text.strip() or f"(not fetched: HTTP {robots_status}; a firewall is answering, so use `--probe` or `--robots-file`. Ahrefs' per-page bot columns above are still authoritative)"), "```", ""]
     if proposed is not None:
         diff = list(difflib.unified_diff(robots_text.splitlines(), proposed.splitlines(), "robots.txt (live)", "robots.txt (proposed)", lineterm=""))
         out += ["### Proposed robots.txt (APPROVE)", "",
@@ -632,7 +632,7 @@ def push_sheet(client, data):
     for name, (r, old) in existing.items():
         if name not in active and old[7] and not old[7].startswith("cleared"):
             updates.append((r, old[:2] + [0] + old[3:7] + [f"cleared {today}", old[8], f"{today} (crawl {data['crawl']})"]))
-    for r, vals in updates: ws.update(f"A{r}:J{r}", [vals], value_input_option="RAW")
+    for r, vals in updates: ws.update(range_name=f"A{r}:J{r}", values=[vals], value_input_option="RAW")
     if appends: ws.append_rows(appends, value_input_option="RAW")
     return f"{len(appends)} added, {len(updates)} updated on '{SHEET_TAB}' ({sh.url})"
 
@@ -721,6 +721,8 @@ def main():
         status, robots_text = f"file {args.robots_file}", Path(args.robots_file).read_text(encoding="utf-8")
     else:
         status, robots_text, _ = fetch_text(home + "/robots.txt")
+        if status in (403, 406, 429):   # a WAF answering our UA, not the file; try as a browser
+            status, robots_text, _ = fetch_text(home + "/robots.txt", ua="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36")
         if not isinstance(status, int) or status != 200: robots_text = robots_text or ""
     probe = probe_site(client) if args.probe else None
     if probe and probe.get("error"): log(f"probe: {probe['error']}")
