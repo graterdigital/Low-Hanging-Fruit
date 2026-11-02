@@ -275,6 +275,14 @@ def write_report(client, data, robots_status, robots_text, proposed, blocked_pol
             if sus: out += [f"Client-side widget plugins on this site (from the client file): {', '.join(sorted(set(sus)))}. One of these is the usual suspect; the fix is server-rendered output or static fallback text in the template.", ""]
         if name.startswith(("Indexable page blocked", "Inconsistent")):
             out += ["See section 1; the fix is the managed robots.txt block.", ""]
+        if pages:
+            pag = sum(1 for p in pages if re.search(r"/page/\d+/", p["url"]))
+            trf = [p for p in pages if (p.get("traffic") or 0) > 0]
+            tt = sorted(p["time_to_first_byte"] for p in pages if p.get("time_to_first_byte"))
+            shape = f"Shape of the {len(pages)} sampled: {pag} paginated (`/page/N/`), {len(trf)} with any traffic ({int(sum(p['traffic'] for p in trf))} total)"
+            if tt: shape += f", TTFB median {tt[len(tt)//2]} ms / max {tt[-1]} ms"
+            if (i.get("crawled") or 0) > len(pages): shape += f" (of {i['crawled']} flagged; sample is the top by traffic)"
+            out += [shape + ".", ""]
         cols = ["URL", "traffic"]
         if "JavaScript" in name: cols += ["rendered?"]
         if "Slow" in name: cols += ["TTFB ms", "load ms"]
