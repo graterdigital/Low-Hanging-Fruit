@@ -52,6 +52,11 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - 2026-11-02 11:00 WP Engine: physical `<key>.txt` written on all 17 sites, each re-fetched and served. 22spamd had lost the plugin between Friday's install and today (reason unknown; reinstalled, key file written). `ai.observed.indexnow_key_served: yes` on 28 client files.
 - Yoast and IndexNow: only Yoast SEO **Premium** pings IndexNow (ruggeddepot, blushmedspact on this roster). Free Yoast has the `enable_index_now` option but no code behind it; that is why the Microsoft plugin goes on the free-Yoast sites.
 
+## Review sheets (2026-11-02)
+
+- `--sheet` writes an `ai discoverability` tab on each client's existing review sheet (via `review_sheets.gc`), one row per active check, status/note owned by humans, upsert on rerun. 31 client files have a sheet id. Run `--all --sheet` from Greg's PC (needs the service-account key).
+- ruggeddepot read-through (crawl current as of 2026-11-02): slow-server 521 is deep Woo pagination + a few 8–11 s product pages (hosting/APM); ItemList 996 is 70% pagination and an Ahrefs preference; Product-schema 32 is 19 misclassified categories + 13 quote-only products with no price; Article 39 is the buying-guide pages built as WP pages — set Yoast's per-page Article type (candidate for a small APPROVE fix). Five live products carry `__trashed` slugs.
+
 ## Open items
 
 - ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings (Yoast Premium already pings).

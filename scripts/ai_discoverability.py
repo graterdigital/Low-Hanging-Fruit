@@ -9,6 +9,8 @@
     python scripts/ai_discoverability.py <slug> --apply-robots --apply                       # write robots.txt on staging (backup + change log)
     python scripts/ai_discoverability.py <slug> --apply-robots --target live --apply [--yes] # same on live; type the slug to confirm
     python scripts/ai_discoverability.py --all                       # roster: docs/ai-bot-policy.md, one row per client with an Ahrefs project
+    python scripts/ai_discoverability.py <slug> --sheet              # also write the "ai discoverability" tab on the client's review sheet
+    python scripts/ai_discoverability.py --all --sheet               # same for every client that has a review sheet (review.alt_sheet_id)
     python scripts/ai_discoverability.py --install-indexnow --provider kinsta            # dry: which WordPress sites on that host lack an IndexNow plugin
     python scripts/ai_discoverability.py --install-indexnow --provider kinsta --apply    # install + activate Microsoft's `indexnow` plugin on live, verify the key file
     python scripts/ai_discoverability.py <slug> --install-indexnow [--apply]             # one site
@@ -580,6 +582,60 @@ def install_indexnow_batch(args):
         (outdir / f"_batch-{stamp}-ai-discoverability-indexnow-{'apply' if args.apply else 'dry'}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         print(f"Summary: {outdir}/_batch-{stamp}-ai-discoverability-indexnow-{'apply' if args.apply else 'dry'}.md")
 
+# ---------- review sheet tab ----------
+SHEET_TAB = "ai discoverability"
+SHEET_COLS = ["check", "importance", "urls_flagged", "route", "tier", "what_to_do", "example_urls", "status", "note", "updated"]
+WHAT_TO_DO = {
+    "Indexable page blocked from all AI search bots":  "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
+    "Indexable page blocked from some AI search bots": "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
+    "Inconsistent AI training bot policy":             "robots.txt groups disagree; the managed block replaces them (skill).",
+    "Main content requires JavaScript rendering":      "Find the widget rendering the main copy client-side (reviews/feed plugin) and give it server-side output or fallback text.",
+    "Slow server response for AI crawlers":            "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+    "Page size exceeds 2 MB crawl limit":              "Run fix-images on these pages.",
+    "Similar AI-generated content":                    "Near-duplicate generated copy; rewrite or consolidate (content phase).",
+    "Article page missing Article schema":             "Guides built as pages: set Yoast's per-page Article type (meta _yoast_wpseo_schema_article_type) so Article/author/date are emitted.",
+    "Category page missing ItemList schema":           "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+    "FAQ page missing FAQPage schema":                 "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
+    "Organization schema missing or incomplete":       "Fill Organization in the SEO plugin: name, logo, sameAs, contact.",
+    "Product page missing Product schema":             "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+}
+
+def push_sheet(client, data):
+    """Upsert one row per active AI Discoverability check on the client's review sheet. Humans own status/note; counts and examples refresh each run."""
+    sys.path.insert(0, str(HERE))
+    from review_sheets import gc, sheet_for
+    sid = ((client.get("review") or {}).get("alt_sheet_id") or "").strip()
+    if not sid or sid == "unknown": return f"no review sheet (review.alt_sheet_id) for {client['slug']}"
+    g = gc(); sh = g.open_by_key(sid)
+    try: ws = sh.worksheet(SHEET_TAB)
+    except Exception:
+        ws = sh.add_worksheet(SHEET_TAB, rows=100, cols=len(SHEET_COLS)); ws.append_row(SHEET_COLS); ws.freeze(rows=1)
+    rows = ws.get_all_values(); head = rows[0] if rows else []
+    if head != SHEET_COLS:
+        if not any(r for r in rows[1:] if any(r)): ws.clear(); ws.update("A1", [SHEET_COLS], value_input_option="RAW"); ws.freeze(rows=1); rows = [SHEET_COLS]
+        else: return f"'{SHEET_TAB}' tab on {client['slug']} has unexpected columns {head}"
+    existing = {r[0]: (idx + 2, r + [""] * (len(SHEET_COLS) - len(r))) for idx, r in enumerate(rows[1:]) if r and r[0]}
+    today = datetime.date.today().isoformat()
+    active = {i["name"]: i for i in data["issues"] if (i.get("crawled") or 0) > 0}
+    updates, appends = [], []
+    for name, i in active.items():
+        skill, tier, _ = ROUTES.get(name, ("human", "FLAG", ""))
+        pages = data["per_issue"].get(name, [])
+        ex = "\n".join(urllib_path(p["url"]) + (f"  ({int(p.get('traffic') or 0)} traffic)" if p.get("traffic") else "") for p in pages[:10])
+        if (i.get("crawled") or 0) > 10: ex += f"\n… {i['crawled'] - 10} more in Ahrefs"
+        if name in existing:
+            r, old = existing[name]
+            status = old[7] if old[7] and not old[7].startswith("cleared") else "open"
+            updates.append((r, [name, i.get("importance") or "", i.get("crawled") or 0, skill, tier, WHAT_TO_DO.get(name, ""), ex, status, old[8], f"{today} (crawl {data['crawl']})"]))
+        else:
+            appends.append([name, i.get("importance") or "", i.get("crawled") or 0, skill, tier, WHAT_TO_DO.get(name, ""), ex, "open", "", f"{today} (crawl {data['crawl']})"])
+    for name, (r, old) in existing.items():
+        if name not in active and old[7] and not old[7].startswith("cleared"):
+            updates.append((r, old[:2] + [0] + old[3:7] + [f"cleared {today}", old[8], f"{today} (crawl {data['crawl']})"]))
+    for r, vals in updates: ws.update(f"A{r}:J{r}", [vals], value_input_option="RAW")
+    if appends: ws.append_rows(appends, value_input_option="RAW")
+    return f"{len(appends)} added, {len(updates)} updated on '{SHEET_TAB}' ({sh.url})"
+
 # ---------- roster ----------
 def roster(cache):
     rows = []
@@ -625,13 +681,25 @@ def main():
     ap.add_argument("--probe", action="store_true", help="also look at live over SSH: robots.txt file vs virtual, IndexNow plugin state")
     ap.add_argument("--robots-file", dest="robots_file", help="use this saved robots.txt instead of fetching the public one")
     ap.add_argument("--install-indexnow", action="store_true", dest="install_indexnow", help="install Microsoft's indexnow plugin on live (dry unless --apply)")
+    ap.add_argument("--sheet", action="store_true", help="write the 'ai discoverability' tab on the client's review sheet (with --all: every client that has one)")
     ap.add_argument("--provider", help="with --install-indexnow: every client file on this host (kinsta | wpengine)")
     ap.add_argument("--only", default="", help="with --install-indexnow --provider: comma-separated slugs")
     args = ap.parse_args()
     args.only = {x.strip() for x in args.only.split(",") if x.strip()}
     global args_nowrite; args_nowrite = args.nowrite
     load_env()
-    if args.all: return roster(args.cache)
+    if args.all:
+        if args.sheet:
+            for f in sorted((ROOT / "clients").glob("*.yaml")):
+                if f.name.startswith("_"): continue
+                c = yaml.safe_load(f.read_text(encoding="utf-8")) or {}; c.setdefault("slug", f.stem)
+                pid = (c.get("ahrefs") or {}).get("site_audit_project_id"); sid = ((c.get("review") or {}).get("alt_sheet_id") or "").strip()
+                if not pid or str(pid) in ("0", "unknown") or not sid or sid == "unknown": continue
+                try:
+                    d = pull(c, Api(c["slug"], args.cache), sample_limit=5); print(f"  {c['slug']:24} {push_sheet(c, d)}")
+                except SystemExit as e: print(f"  {c['slug']:24} API error: {str(e)[:80]}")
+            return
+        return roster(args.cache)
     if args.install_indexnow:
         if not (args.slug or args.provider): ap.error("--install-indexnow needs a slug or --provider")
         return install_indexnow_batch(args)
@@ -676,6 +744,7 @@ def main():
         update_client_observed(cpath, obs)
 
     active = [i for i in data["issues"] if (i.get("crawled") or 0) > 0]
+    if args.sheet: print(f"Sheet: {push_sheet(client, data)}")
     print(f"{client['domain']}: crawl {data['crawl']}, {len(data['sample'])} pages sampled, robots.txt HTTP {status}")
     print(f"  blocked search bots: {se or 'none'}{(' (+ some pages: ' + str(ss) + ')') if ss else ''}; blocked training bots: {te or 'none'}{(' (+ some pages: ' + str(ts) + ')') if ts else ''}")
     print(f"  policy: {'UNDECIDED, nothing proposed' if undecided else ('matches live, nothing to change' if proposed is None else f'differs; proposed robots.txt blocks {len(blocked)} bot(s)')}")

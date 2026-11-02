@@ -93,6 +93,14 @@ Virtual robots.txt: WordPress and Yoast generate robots.txt when no file exists 
 
 Not WordPress, or `rules.do_not_touch` lists `robots.txt`: the script stops; hand over the proposed file.
 
+## Review sheet tab
+
+```
+python scripts/ai_discoverability.py <slug> --sheet          # one client
+python scripts/ai_discoverability.py --all --sheet           # every client with review.alt_sheet_id
+```
+Writes an `ai discoverability` tab on the client's existing review sheet (the same sheet `review_sheets.py` uses for alt text): one row per active check with `urls_flagged`, `route`, `tier`, `what_to_do`, up to 10 example URLs with traffic, and `status` / `note` for the humans. Reruns refresh counts and examples, keep `status` and `note`, and stamp `cleared <date>` on a check that no longer has URLs. Zero-count checks are not listed.
+
 ## Running the roster
 
 ```
