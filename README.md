@@ -41,7 +41,7 @@ Never in this repo. SSH hosts, ports, and usernames live in `~/.ssh/config` on t
 | `fix-redirect-links` | AUTO | v1, live on the Kinsta roster |
 | `fix-images` | AUTO / APPROVE | v1, live on hsfamilylaw |
 | `ai-discoverability` | read-and-route; robots.txt APPROVE | v1, first report on hsfamilylaw |
-| `fix-meta` | APPROVE | planned |
+| `fix-meta` | APPROVE | v1, first queue on hsfamilylaw (sheet review pending) |
 | `indexation-review` | APPROVE | planned |
 | `schema-check` | FLAG | planned |
 | `verify` | read-only | planned |

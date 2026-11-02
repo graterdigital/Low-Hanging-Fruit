@@ -1,83 +1,46 @@
 # Handoff: fix-meta
 
-Status as of 2026-11-02: specified, not built. Mirror of the project doc `claude/skill-fix-meta.md`; update both.
+Status as of 2026-11-02 (afternoon): **built, v1. Probe run on hsfamilylaw against the 2026-10-29 crawl; 22-row queue with drafts in `reports/hsfamilylaw/meta-2026-10-29.md`. Nothing pushed to the sheet, nothing written to the site.** `--sheet`, `--fix` and `--rollback` are written to the existing patterns but have not been run against a real sheet or server yet; the PHP is lint-clean but untested in WordPress. Mirror of the project doc `claude/skill-fix-meta.md`; update both.
 
 ## Purpose
 
 Write missing or weak SEO titles and meta descriptions through the SEO plugin, with every piece of text reviewed by a human before it goes live. APPROVE tier always (searchers read this text; the law-firm client rule `visible_copy_changes: approve` applies to all clients here). Highest traffic impact of anything in Phase 1.
 
-## What exists to build on (do not rebuild)
+## Files
 
-- **Review loop:** `scripts/review_sheets.py` gives every client a persistent Google Sheet (`review.alt_sheet_id` in the client file, service-account auth, Drive folder "LHF Review Sheets"). `scripts/ai_discoverability.py` shows the pattern for a skill-owned tab (`push_sheet`: upsert rows, humans own `status`/`note`, scripts own the rest) and a sheet-driven `--fix` that reads rows back. Add a tab named `meta`.
-- **Yoast per-post write:** `scripts/php/set_article_type.php` is the template: job JSON in a constant, `wp eval-file -` over SSH, path-based URL→post matching (works on staging hostnames), dry/apply, before/after rows. Copy it to `set_meta.php` writing `_yoast_wpseo_title` and `_yoast_wpseo_metadesc`.
-- **Runner conventions:** `fix_redirect_links.py` / `fix_images.py`: `--probe`, dry default, `--apply`, `--target live`, `--yes`, change log to `changes/<provider>/<slug>/`, backup JSON of before values, `wp cache flush` after apply, `restore_changes.py` for rollback.
-- **Ahrefs helpers:** `build_redirect_map.py` (`load_env`, `ahrefs()`), GSC through the Ahrefs API (`gsc-pages`, `gsc-keywords`; 0 units; 17 of 40 projects connected, `ahrefs.gsc_connected` in the client file).
+- `skills/fix-meta/SKILL.md`: the procedure, the drafting standard, run order, rollback.
+- `scripts/fix_meta.py`: `--probe [--draft] [--max-pages N] [--cache]`, `--sheet`, `--fix [--apply] [--target live] [--yes]`, `--rollback <backup.json> [--apply]`. Reuses `build_redirect_map` (`load_env`, `ahrefs`, `wpengine_webroot`) and `review_sheets.gc`. Cache dir `tmp/ahrefs-cache/<slug>/` (same `Api` class as ai_discoverability).
+- `scripts/php/set_meta.php`: Yoast writer, `wp eval-file -` with `META_JOB`; path-based URL→post lookup (copied from set_article_type); `before/after` per field; `rendered_title`/`rendered_description` from `YoastSEO()->meta->for_post()` (dry = current, apply = new, so the log shows whether Yoast adds its template suffix to a literal title); rebuilds the post's indexable after an apply; prints after `===JSON===`.
+- `reports/<slug>/meta-<crawl>.md` + `.json` (queue; the JSON is what `--sheet` pushes), `reports/<slug>/meta-drafts.json` (hand drafts, keyed by path).
+- Logs `changes/<provider>/<slug>/<stamp>-fix-meta-<target>-<dry|apply>.md`, backups `backup/<stamp>-fix-meta-<target>.json`, rollback logs `-rollback-<mode>.md`. Rollback lives in fix_meta.py (same pattern as `--rollback-article`), not in `restore_changes.py`; two meta keys did not justify extending the links restore.
 
-## Inputs
+## What the build found (changes from the spec)
 
-Ahrefs Site Audit issues (`site-audit-issues` + `site-audit-page-explorer` with `issue_id`):
+- **Issue ids are read by name**, not hard-coded: this project has no "Duplicate titles"/"Duplicate meta descriptions" issues at all; duplicates come from the `duplicate_*_canonical_hreflang` columns on flagged pages instead. Indexable variants only (`is_indexable` true).
+- **GSC `ctr` from the Ahrefs API is a percentage** (1.7475 = 1.75 %), not a fraction. Queue score is `impressions × (1 − ctr/100)`.
+- **Most "Page and SERP titles do not match" rows are not defects.** On hsfamilylaw 15 of 25 are Google dropping the ` - Hastings Shadmehry` suffix, plus the homepage where Google leads with the brand. The probe classifies each row (`brand dropped`, `truncated`, `brand moved first`, `used as-is` = no action; `rewritten to H1`, `stale year`, `brand typo`, `glued`, `rewritten` = propose). Only 6 titles get a proposal here.
+- **The brand suffix is ` - Hastings Shadmehry` (hyphen), not `|`** as the spec guessed; detected from a 100-title sample (most common tail after the last separator, ≥3 occurrences). Override with `meta.brand_suffix` / `meta.separator` in the client file. Three posts use `|` instead; left alone.
+- **Page text needs trimming**: Ahrefs' `page_text_md` carries the whole nav, the reviews widget and the footer. `main_text()` starts at the first H1 and stops at Reviews/Testimonials/Let's Get Started/Contact Us/Useful Links-style headings. Bios on this site have a role line right under the H1 and an "Areas of Practice" list, which the bio template reads.
+- **Drafts need a human or a model.** The build chat drafted all 18 descriptions and 7 titles by hand from the live pages into `reports/hsfamilylaw/meta-drafts.json`; the probe merges that file first, then `--draft` (Anthropic API, `ANTHROPIC_API_KEY` in `.env`, model `LHF_DRAFT_MODEL`, default `claude-sonnet-5-5`), then the bio template. `--draft` is written but has not been run (no key on the build machine).
+- **Stale year also hits the description**: `/how-much-does-a-divorce-cost-in-georgia-in-2026/` says 2025 in both; the probe swaps the year in the existing description automatically and the hand draft rewrote it anyway.
 
-| Issue | issue_id | hsfamilylaw (2026-10-08) |
-|---|---|---|
-| Meta description tag missing or empty (indexable) | `c64d31f0-d0f4-11e7-8ed1-001e67ed4656` | 58 (41 archives/pagination, 17 real pages) |
-| Page and SERP titles do not match | `d69246c2-225a-11ec-8456-06d2f2f613d8` | 28 (20 with traffic, 653 combined) |
-| Title tag missing or empty, Multiple title tags, Duplicate titles, Duplicate meta descriptions | look up by name in the issues list | 0 / 0 / 0 / 0 here; present on other sites |
+## hsfamilylaw queue (crawl 2026-10-29, GSC 2026-08-03 → 2026-11-01)
 
-Page-explorer columns: `url, title, serp_title, is_page_title_used_in_serp, meta_description, h1, traffic, page_type, duplicate_title, duplicate_description_canonical_hreflang`. GSC per page: `clicks, impressions, ctr, position, top_keyword, keywords_count` (gsc-pages, last 90 days). Page text for drafting: `site-audit-page-content` with `select: page_text_md` (one call per page, ~50 units; only for pages that make the queue).
+79 flagged URLs → 22 to write, 15 no action, 42 archives routed to `indexation-review`. Top of the queue by impressions × (1 − CTR): the 2026 divorce-cost post (16,107 impressions, 0.17 % CTR, stale 2025 in title and description), `/2026-child-support/` (Google shows the H1, drops "Updates & Info"), `/divorce/property-debt-division/` (suffix typo "Hasting"), then the six core pages and eleven bios without a description. Two more title fixes: `/mediation-attorneys-make-divorce-easier/` and `/divorce-mediation-helps-children/` (Google uses the H1), `/resource-links/` (two titles glued together). Rhonda Smith's bio is the only one whose title has no role; the hand draft adds "Senior Attorney".
 
-Ignore on purpose (already in site-triage's ignore list): "Title too long" and "Meta description too long". Google states no length limit. The skill never truncates to a character count; it writes what the page needs and lets Google display what it will.
+## Next, in order
 
-## Scope rules
+1. On Greg's PC: `python scripts\fix_meta.py hsfamilylaw --probe --cache` (real API; expect the same 22 rows, plus page text pulled for the drafts' `text_chars`). Then `--sheet` to create the `meta` tab and push the 22 rows.
+2. Greg reviews in the sheet: copy a proposal into `new_*` where it is right, edit where not, `status` → `approved`.
+3. `--fix` (staging dry): check `no post` rows and the `rendered` column (does Yoast append the brand to a literal title on this site?). Then `--fix --apply` on staging, view source on two pages, then `--fix --apply --target live`.
+4. First real run of `--rollback` on staging against the staging backup, to prove it.
+5. Ahrefs recrawl: "Meta description missing" 59 → 42 (archives remain). GSC CTR check after four weeks on the rewritten pages.
+6. Second site on Yoast with a different builder (markheardfuel or setcomcorp, Elementor) to see whether bios/templates generalise; then an AIOSEO site (cmitsolutions) to decide whether a `wp_aioseo_posts` writer is worth it.
 
-- **In:** indexable, non-archive pages: core pages, people/bio pages, posts, products. On hsfamilylaw that is 17 pages without a description plus the SERP-mismatch list.
-- **Out, routed elsewhere:** category/tag/author archives and `/page/N/` (Yoast taxonomy templates or noindex → `indexation-review`); the homepage title when it comes from Yoast's site-wide template (`wpseo_titles` option; propose, don't automate); non-indexable pages (skip entirely; Patrick Stox's point that descriptions on noindexed pages are wasted work).
-- **Queue order:** GSC impressions × (1 - CTR) first, so a page with 17,609 impressions at 0.22% CTR (`/how-much-does-a-divorce-cost-in-georgia-in-2026/`) outranks a bio with 300 impressions, which outranks any zero-impression page. Without GSC, fall back to Ahrefs `traffic`, then to page type (core > people > post).
+## Open items
 
-## Drafting rules (encode these; they are the standard, not taste)
-
-Sources: Google title links and snippet docs, Ahrefs title-tag study (76% rewritten per SEL Q1 2025; brand removal and boilerplate are the top rewrite triggers), Ahrefs meta description study.
-
-Titles (only where Google is rewriting, or missing/duplicate):
-- Describe the page, match the visible H1's meaning, one brand suffix (`| Hastings Shadmehry` style from the site's existing convention), no keyword lists, no city lists separated by pipes, no stale years (the `2026` URL whose title still says 2025 is the canonical example).
-- Keep what Google kept. `serp_title` shows what Google chose to display; if Google's version is better, propose Google's version.
-- Never change a title Google is already using as-is (`is_page_title_used_in_serp` true) unless it's also missing or duplicate.
-
-Descriptions:
-- Unique per page, written from the page's own text (`page_text_md`), one or two sentences that answer "what will I find here", including the top GSC query naturally when there is one. Programmatic generation from page data is explicitly fine per Google; templated bios ("<Name> is a <role> at <firm> in <city> practicing <areas>") are acceptable if the fields are real.
-- No claims the page doesn't make. For a law firm, no outcome promises; for medical spas, no treatment-result claims. Draft from what's on the page, nothing more.
-- Mark every draft with how it was made (`from page text`, `templated from fields`, `from GSC query`) so the reviewer knows what to look hardest at.
-
-## Review sheet tab `meta`
-
-Columns: `url | page_type | impressions | ctr | position | top_query | current_title | serp_title | proposed_title | new_title | current_description | proposed_description | new_description | basis | status | note | updated`
-
-Humans edit `new_title`, `new_description`, `status`, `note` only. `status`: `pending` → `approved` (human) → `applied <date>` (script). Blank `new_*` at apply time means "leave that field alone"; `skip` leaves the row alone. Re-running `--sheet` refreshes metrics and current values, never overwrites `new_*`.
-
-## Write path
-
-- **Yoast (31 sites):** postmeta `_yoast_wpseo_title`, `_yoast_wpseo_metadesc` via `set_meta.php` (`update_post_meta`; Yoast reads them directly, no cache beyond page cache → `wp cache flush`). Verify by fetching the page and checking `<title>` and `<meta name="description">` after apply; Yoast may append the separator/brand from its template if the literal title lacks it, so confirm the rendered form in the dry run's report.
-- **AIOSEO (cmitsolutions, glomedspa):** AIOSEO stores per-post SEO in its own table `wp_aioseo_posts` (`title`, `description` columns), not postmeta. Out of scope for v1; the skill reports these two as "manual in AIOSEO" until a second PHP writer exists.
-- **Products (WooCommerce):** same Yoast meta on the product post. Title/description templates in Yoast often cover products adequately; include only products that Ahrefs flags.
-- **Backup:** before values per post in `changes/<provider>/<slug>/<stamp>-fix-meta-<target>.json`; rollback through `restore_changes.py` (extend it to understand meta rows if it doesn't already).
-
-## Run order
-
-```
-python scripts\fix_meta.py <slug> --probe                 # queue + drafts → reports/<slug>/meta-<crawl>.md, nothing written anywhere else
-python scripts\fix_meta.py <slug> --sheet                 # push drafts to the "meta" tab
-   (human reviews in the sheet)
-python scripts\fix_meta.py <slug> --fix                   # dry run from approved rows, on staging
-python scripts\fix_meta.py <slug> --fix --apply           # staging
-python scripts\fix_meta.py <slug> --fix --apply --target live
-```
-
-## Verification
-
-- Ahrefs recrawl: "Meta description missing" should drop by the number of real pages written (archives remain until `indexation-review`); "Page and SERP titles do not match" is a lagging signal, since Google has to recrawl and decide again.
-- GSC after 4 weeks: CTR on the rewritten pages vs. the 90 days before, via `gsc-page-history`. That is the number that justifies this skill; record before/after in the report.
-
-## Open questions for the build chat
-
-- Brand suffix convention per client: read it from the current titles (most common suffix) or set `meta.brand_suffix` in the client file? Suggest: detect, write to the client file, let Greg correct.
-- Where drafts come from: the build chat drafting them itself from `page_text_md` is fine for 17 pages; across 40 sites it needs a batched drafting step (one model call per page with the page text and the GSC query), which the probe can do and cache in the report.
-- Whether to let the skill propose Yoast *templates* for post types/taxonomies (one change covers many pages) in addition to per-page writes. Likely yes, as FLAG output in the report.
+- `--draft` untested end to end; first run with `--max-pages 3` on a site without hand drafts.
+- `indexation-review` is now the gating skill for the 42 archive rows (Yoast taxonomy description template or noindex); the homepage title (Google leads with the brand) is a Yoast template decision, not a per-page write.
+- Yoast templates as FLAG output (one change covers many pages) not built; the report routes archives but does not propose a template string.
+- Sheet rows marked `applied` are skipped by later `--sheet` runs; a human clears them if the page needs another pass.
+- `review_sheets.py status` does not count the `meta` tab yet.

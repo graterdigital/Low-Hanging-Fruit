@@ -1,0 +1,85 @@
+{
+  "_about": "Hand drafts read by scripts/fix_meta.py --probe (path -> title/description/basis). Drafted 2026-11-02 from each page's own text (live pages, crawl 2026-10-29). Titles here override the probe's rule-based proposal; descriptions fill pages Ahrefs flags as missing one. Nothing here reaches the site until approved in the review sheet.",
+
+  "/how-much-does-a-divorce-cost-in-georgia-in-2026/": {
+    "title": "How Much Does a Divorce Cost in Georgia in 2026? - Hastings Shadmehry",
+    "description": "What a divorce costs in Georgia in 2026: average attorney fees, court costs, custody and support expenses, and the factors that move the total up or down.",
+    "basis": "stale year (title and description said 2025); description rewritten from page text; brand suffix added to match the site's convention"
+  },
+  "/mediation-attorneys-make-divorce-easier/": {
+    "title": "Mediation Attorneys Make Divorce Easier - Hastings Shadmehry",
+    "basis": "rewritten to H1 (Google already shows the H1); casing fixed from the H1's 'Mediation attorneys'"
+  },
+
+  "/divorce/alimony/": {
+    "description": "How alimony works in Georgia: temporary, rehabilitative and permanent support, the factors a judge weighs, and when alimony can be modified after divorce. Guidance from Hastings Shadmehry's Alpharetta alimony attorneys.",
+    "basis": "from page text; top GSC query 'how much alimony will i have to pay' answered by the page's factors section"
+  },
+  "/contact-us/": {
+    "description": "Contact Hastings Shadmehry, Alpharetta divorce and family law attorneys: call 770-641-8200, send a message, or visit 3650 Mansell Road, Suite 475. Office hours Monday to Friday.",
+    "basis": "from page text (form, phone, address, hours)"
+  },
+  "/client-experience/": {
+    "description": "What working with Hastings Shadmehry looks like, step by step: intake, case strategy, case management and resolution, with regular check-ins and clear explanations of what comes next.",
+    "basis": "from page text (the four named stages)"
+  },
+  "/careers/": {
+    "description": "Hastings Shadmehry is hiring senior and associate family law attorneys in Alpharetta, GA. Competitive pay, bonuses, 401(k) match, health benefits, paid time off and room to grow. Apply online.",
+    "basis": "from page text (open roles and listed benefits); edit when the openings change"
+  },
+  "/resource-links/": {
+    "title": "Georgia Family Law Resources & Links - Hastings Shadmehry",
+    "description": "Links for Georgia family law matters: the state child support calculator, metro Atlanta family courts and parenting seminars, Fulton County domestic relations forms, and legal directories.",
+    "basis": "title: the current one is two titles concatenated; description from page text"
+  },
+  "/what-our-clients-say/": {
+    "description": "Reviews from Hastings Shadmehry clients on their divorce, custody and family law cases, in their own words.",
+    "basis": "from page text; the reviews widget renders client-side (see ai-discoverability), so the description stays general"
+  },
+
+  "/firm/mali-shadmehry/": {
+    "description": "Mali Shadmehry is a Partner at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, alimony, adoption and prenuptial agreements. Emory Law, Georgia Bar 2015.",
+    "basis": "templated from fields (role, areas of practice, education, bar admission on the page)"
+  },
+  "/firm/madison-alexander/": {
+    "description": "Madison Alexander is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, custody and visitation, modifications, appeals and equitable caregiver cases. Mercer Law.",
+    "basis": "templated from fields plus the bio's stated focus areas"
+  },
+  "/firm/elizabeth-findley/": {
+    "description": "Elizabeth Findley is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, paternity and legitimation. A former public defender in juvenile court; Mercer Law, Georgia Bar 2016.",
+    "basis": "templated from fields plus the bio's first paragraph"
+  },
+  "/firm/nicole-crites/": {
+    "description": "Nicole Crites is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, custody and support, guardian ad litem work and family violence matters, with a preference for collaborative resolutions where they work.",
+    "basis": "templated from fields plus the bio"
+  },
+  "/firm/jordan-alexis-fox/": {
+    "description": "Jordan Alexis Fox is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, adoption and family violence matters, with a focus on cases involving children. Emory Law.",
+    "basis": "templated from fields plus the bio"
+  },
+  "/firm/lily-lutton/": {
+    "description": "Lily Lutton is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing family law exclusively since 2018: divorce, child custody and support, paternity, alimony and modifications. Mercer Law.",
+    "basis": "templated from fields plus the bio; this page already earns a 20% CTR, so keep the description close to what searchers see now"
+  },
+  "/firm/sarah-price/": {
+    "description": "Sarah Price Smith is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing custody, divorce and complex family matters, including military families' custody, relocation and deployment issues. Georgia State Law.",
+    "basis": "templated from fields plus the bio (H1 is 'Sarah Price Smith'; the title says 'Sarah Price')"
+  },
+  "/firm/lisa-malas/": {
+    "description": "Lisa Malas is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with 24 years in family and juvenile law, including 17 as a Special Assistant Attorney General for DFCS. Guardian ad litem and certified mediator.",
+    "basis": "templated from fields plus the bio"
+  },
+  "/firm/cathy-cooper/": {
+    "description": "Cathy Cooper is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with over 30 years of experience in complex divorce and custody cases, including high-net-worth matters involving closely held businesses and executive compensation.",
+    "basis": "templated from fields plus the bio"
+  },
+  "/firm/rhonda-smith/": {
+    "title": "Rhonda Smith - Senior Attorney - Hastings Shadmehry",
+    "description": "Rhonda Smith is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with more than twenty years of family law litigation experience, including a clerkship with a Baton Rouge family court judge. LSU Law.",
+    "basis": "title: the only bio title without a role, added to match the others; description templated from fields plus the bio"
+  },
+  "/firm/kristy-seidenberg/": {
+    "description": "Kristy Seidenberg is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with over 20 years in Georgia practice as an attorney, mediator and guardian ad litem, with degrees in education, counseling and law.",
+    "basis": "templated from fields plus the bio"
+  }
+}

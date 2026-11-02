@@ -1,0 +1,861 @@
+{
+ "data": {
+  "pid": 9704538,
+  "crawl": "2026-10-29",
+  "health": 94,
+  "gsc_window": "2026-08-03 to 2026-11-01",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 59
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 25
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Hastings Shadmehry",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://hsfamilylaw.com/how-much-does-a-divorce-cost-in-georgia-in-2026/",
+    "path": "/how-much-does-a-divorce-cost-in-georgia-in-2026/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "stale year",
+    "why": "title says 2025, URL/H1 say 2026",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/how-much-does-a-divorce-cost-in-georgia-in-2026/",
+     "keywords_count": 1502,
+     "top_keyword": "how much does a divorce cost in ga",
+     "clicks": 27,
+     "impressions": 16107,
+     "ctr": 0.1676,
+     "position": 6.67,
+     "traffic_value": null
+    },
+    "traffic": 96.0,
+    "score": 16080.004668,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How Much Does a Divorce Cost in Georgia in 2025?",
+    "serp_title": "How Much Does a Divorce Cost in Georgia in 2026?",
+    "h1": "How Much Does a Divorce Cost in Georgia in 2026?",
+    "current_description": "Wondering how much a divorce costs in Georgia in 2025? Learn average fees, court costs, custody expenses, and what affects the total price.",
+    "proposed_title": "How Much Does a Divorce Cost in Georgia in 2026? - Hastings Shadmehry",
+    "proposed_description": "What a divorce costs in Georgia in 2026: average attorney fees, court costs, custody and support expenses, and the factors that move the total up or down.",
+    "basis": [
+     "title: hand draft: stale year (title and description said 2025); description rewritten from page text; brand suffix added to match the site's convention",
+     "description: hand draft: stale year (title and description said 2025); description rewritten from page text; brand suffix added to match the site's convention"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://hsfamilylaw.com/2026-child-support/",
+    "path": "/2026-child-support/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/2026-child-support/",
+     "keywords_count": 2002,
+     "top_keyword": "new child support laws 2026",
+     "clicks": 192,
+     "impressions": 12324,
+     "ctr": 1.5579,
+     "position": 3.62,
+     "traffic_value": null
+    },
+    "traffic": 100.0,
+    "score": 12132.004404,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "2026 Georgia Child Support Law Changes Guide - Updates & Info - Hastings Shadmehry",
+    "serp_title": "2026 Georgia Child Support Law Changes Guide",
+    "h1": "2026 Georgia Child Support Law Changes Guide",
+    "current_description": "Complete guide to 2026 Georgia child support law changes. New worksheet, parenting time adjustments, and custody updates explained.",
+    "proposed_title": "2026 Georgia Child Support Law Changes Guide - Hastings Shadmehry",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://hsfamilylaw.com/divorce/property-debt-division/",
+    "path": "/divorce/property-debt-division/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Hasting Shadmehry'",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/divorce/property-debt-division/",
+     "keywords_count": 91,
+     "top_keyword": "is georgia a community property state",
+     "clicks": 5,
+     "impressions": 5310,
+     "ctr": 0.0942,
+     "position": 8.58,
+     "traffic_value": null
+    },
+    "traffic": 48.0,
+    "score": 5304.99798,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Divorce & Property Division - Divorce Attorney - Hasting Shadmehry",
+    "serp_title": "Divorce & Property Division - Divorce Attorney",
+    "h1": "Our Alpharetta Divorce Attorneys Master Divorce and Property Division",
+    "current_description": "\"Navigate divorce and property division with skilled Alpharetta attorneys at Hastings Shadmehry. Focused on protecting your assets and future",
+    "proposed_title": "Divorce & Property Division - Divorce Attorney - Hastings Shadmehry",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/divorce/alimony/",
+    "path": "/divorce/alimony/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/divorce/alimony/",
+     "keywords_count": 39,
+     "top_keyword": "how much alimony will i have to pay",
+     "clicks": 0,
+     "impressions": 2779,
+     "ctr": 0.0,
+     "position": 11.79,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2779.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dedicated Alpharetta Alimony Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Alpharetta Alimony Attorney's Guide to Spousal Support (Alimony) and Alimony Modification",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "How alimony works in Georgia: temporary, rehabilitative and permanent support, the factors a judge weighs, and when alimony can be modified after divorce. Guidance from Hastings Shadmehry's Alpharetta alimony attorneys.",
+    "basis": [
+     "description: hand draft: from page text; top GSC query 'how much alimony will i have to pay' answered by the page's factors section"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/contact-us/",
+    "path": "/contact-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/contact-us/",
+     "keywords_count": 52,
+     "top_keyword": "hs family",
+     "clicks": 1,
+     "impressions": 1787,
+     "ctr": 0.056,
+     "position": 9.9,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1785.99928,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Contact Our Alpharetta Divorce & Family Law Attorneys - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Contact Us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Contact Hastings Shadmehry, Alpharetta divorce and family law attorneys: call 770-641-8200, send a message, or visit 3650 Mansell Road, Suite 475. Office hours Monday to Friday.",
+    "basis": [
+     "description: hand draft: from page text (form, phone, address, hours)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/mali-shadmehry/",
+    "path": "/firm/mali-shadmehry/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/mali-shadmehry/",
+     "keywords_count": 23,
+     "top_keyword": "mali shadmehry",
+     "clicks": 15,
+     "impressions": 1334,
+     "ctr": 1.1244,
+     "position": 3.15,
+     "traffic_value": null
+    },
+    "traffic": 11.0,
+    "score": 1319.0005039999999,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Mali Shadmehry - Partner - Hastings Shadmehry",
+    "serp_title": "Mali Shadmehry - Partner",
+    "h1": "Mali C. Shadmehry",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mali Shadmehry is a Partner at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, alimony, adoption and prenuptial agreements. Emory Law, Georgia Bar 2015.",
+    "basis": [
+     "description: hand draft: templated from fields (role, areas of practice, education, bar admission on the page)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/client-experience/",
+    "path": "/client-experience/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/client-experience/",
+     "keywords_count": 47,
+     "top_keyword": "alpharetta divorce attorney",
+     "clicks": 0,
+     "impressions": 1116,
+     "ctr": 0.0,
+     "position": 8.73,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1116.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Hastings Shadmehry Client Experience - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "The Hastings Shadmehry Client Experience",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "What working with Hastings Shadmehry looks like, step by step: intake, case strategy, case management and resolution, with regular check-ins and clear explanations of what comes next.",
+    "basis": [
+     "description: hand draft: from page text (the four named stages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/careers/",
+    "path": "/careers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/careers/",
+     "keywords_count": 43,
+     "top_keyword": "alpharetta divorce lawyer",
+     "clicks": 0,
+     "impressions": 1083,
+     "ctr": 0.0,
+     "position": 8.79,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1083.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Join the Wolf Pack - Careers - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Join the Firm",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Hastings Shadmehry is hiring senior and associate family law attorneys in Alpharetta, GA. Competitive pay, bonuses, 401(k) match, health benefits, paid time off and room to grow. Apply online.",
+    "basis": [
+     "description: hand draft: from page text (open roles and listed benefits); edit when the openings change"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Careers_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/madison-alexander/",
+    "path": "/firm/madison-alexander/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/madison-alexander/",
+     "keywords_count": 26,
+     "top_keyword": "madison alexander",
+     "clicks": 4,
+     "impressions": 1019,
+     "ctr": 0.3925,
+     "position": 7.54,
+     "traffic_value": null
+    },
+    "traffic": 1.0,
+    "score": 1015.0004250000001,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Madison Alexander - Attorney - Hastings Shadmehry",
+    "serp_title": "Madison Alexander - Attorney",
+    "h1": "Madison Alexander",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Madison Alexander is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, custody and visitation, modifications, appeals and equitable caregiver cases. Mercer Law.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio's stated focus areas"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/elizabeth-findley/",
+    "path": "/firm/elizabeth-findley/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/elizabeth-findley/",
+     "keywords_count": 39,
+     "top_keyword": "elizabeth findley",
+     "clicks": 34,
+     "impressions": 714,
+     "ctr": 4.7619,
+     "position": 8.93,
+     "traffic_value": null
+    },
+    "traffic": 17.0,
+    "score": 680.000034,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Elizabeth Findley - Family Law & Divorce Attorney - Hastings Shadmehry",
+    "serp_title": "Elizabeth Findley - Family Law & Divorce Attorney",
+    "h1": "Elizabeth Findley",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Elizabeth Findley is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, paternity and legitimation. A former public defender in juvenile court; Mercer Law, Georgia Bar 2016.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio's first paragraph"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/nicole-crites/",
+    "path": "/firm/nicole-crites/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/nicole-crites/",
+     "keywords_count": 23,
+     "top_keyword": "nicole crites attorney",
+     "clicks": 37,
+     "impressions": 561,
+     "ctr": 6.5953,
+     "position": 7.72,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 524.000367,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Nicole Crites - Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Nicole Crites",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Nicole Crites is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, custody and support, guardian ad litem work and family violence matters, with a preference for collaborative resolutions where they work.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/what-our-clients-say/",
+    "path": "/what-our-clients-say/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/what-our-clients-say/",
+     "keywords_count": 20,
+     "top_keyword": "dustin mccrary reviews",
+     "clicks": 0,
+     "impressions": 310,
+     "ctr": 0.0,
+     "position": 6.31,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 310.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Our Clients Say - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "What Our Clients Say",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Reviews from Hastings Shadmehry clients on their divorce, custody and family law cases, in their own words.",
+    "basis": [
+     "description: hand draft: from page text; the reviews widget renders client-side (see ai-discoverability), so the description stays general"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/User_Generated_Content/Testimonials"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/jordan-alexis-fox/",
+    "path": "/firm/jordan-alexis-fox/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/jordan-alexis-fox/",
+     "keywords_count": 10,
+     "top_keyword": "jordan fox attorney",
+     "clicks": 7,
+     "impressions": 298,
+     "ctr": 2.349,
+     "position": 7.7,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 290.99998,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Jordan Alexis Fox - Associate Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Jordan Alexis Fox",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Jordan Alexis Fox is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing divorce, child custody and support, adoption and family violence matters, with a focus on cases involving children. Emory Law.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/lily-lutton/",
+    "path": "/firm/lily-lutton/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/lily-lutton/",
+     "keywords_count": 24,
+     "top_keyword": "lily lutton attorney",
+     "clicks": 64,
+     "impressions": 314,
+     "ctr": 20.3821,
+     "position": 5.97,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 250.000206,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Lily Lutton - Attorney - Hastings Shadmehry",
+    "serp_title": "Lily Lutton - Attorney",
+    "h1": "Lily Lutton",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Lily Lutton is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, practicing family law exclusively since 2018: divorce, child custody and support, paternity, alimony and modifications. Mercer Law.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio; this page already earns a 20% CTR, so keep the description close to what searchers see now"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/sarah-price/",
+    "path": "/firm/sarah-price/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/sarah-price/",
+     "keywords_count": 21,
+     "top_keyword": "sarah price attorney",
+     "clicks": 4,
+     "impressions": 167,
+     "ctr": 2.3952,
+     "position": 10.06,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 163.00001600000002,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Sarah Price - Associate Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Sarah Price Smith",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Sarah Price Smith is an Associate Attorney at Hastings Shadmehry in Alpharetta, GA, practicing custody, divorce and complex family matters, including military families' custody, relocation and deployment issues. Georgia State Law.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio (H1 is 'Sarah Price Smith'; the title says 'Sarah Price')"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/mediation-attorneys-make-divorce-easier/",
+    "path": "/mediation-attorneys-make-divorce-easier/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/mediation-attorneys-make-divorce-easier/",
+     "keywords_count": 18,
+     "top_keyword": "divorce mediation attorney",
+     "clicks": 0,
+     "impressions": 152,
+     "ctr": 0.0,
+     "position": 28.32,
+     "traffic_value": null
+    },
+    "traffic": 26.0,
+    "score": 152.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Mediation Attorneys for Easier Divorce | Alpharetta Divorce Mediation",
+    "serp_title": "Mediation attorneys Make Divorce Easier",
+    "h1": "Mediation attorneys Make Divorce Easier",
+    "current_description": "Divorce is never an easy process. Those who have been through the painful procedure, and mediation attorneys who work through the process with clients,",
+    "proposed_title": "Mediation Attorneys Make Divorce Easier - Hastings Shadmehry",
+    "proposed_description": "",
+    "basis": [
+     "title: hand draft: rewritten to H1 (Google already shows the H1); casing fixed from the H1's 'Mediation attorneys'"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/lisa-malas/",
+    "path": "/firm/lisa-malas/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/lisa-malas/",
+     "keywords_count": 23,
+     "top_keyword": "lisa malas",
+     "clicks": 8,
+     "impressions": 149,
+     "ctr": 5.3691,
+     "position": 13.2,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 141.00004099999998,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Lisa Malas - Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Lisa Malas",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Lisa Malas is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with 24 years in family and juvenile law, including 17 as a Special Assistant Attorney General for DFCS. Guardian ad litem and certified mediator.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/divorce-mediation-helps-children/",
+    "path": "/divorce-mediation-helps-children/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/divorce-mediation-helps-children/",
+     "keywords_count": 14,
+     "top_keyword": "site:hsfamilylaw.com",
+     "clicks": 0,
+     "impressions": 135,
+     "ctr": 0.0,
+     "position": 8.34,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 135.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Divorce Mediation Helps Children with Divorce | Hastings Shadmehry",
+    "serp_title": "How Divorce Mediation Helps The Children",
+    "h1": "How Divorce Mediation Helps The Children",
+    "current_description": "Marriage doesn’t always work out, and there’s certainly no reason to beat yourself up if you end up filing for divorce. The really hard part though is",
+    "proposed_title": "How Divorce Mediation Helps The Children - Hastings Shadmehry",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/cathy-cooper/",
+    "path": "/firm/cathy-cooper/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/cathy-cooper/",
+     "keywords_count": 19,
+     "top_keyword": "cathy cooper",
+     "clicks": 2,
+     "impressions": 94,
+     "ctr": 2.1276,
+     "position": 11.69,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 92.000056,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Cathy Cooper - Senior Attorney - Hastings Shadmehry",
+    "serp_title": "Cathy Cooper - Senior Attorney",
+    "h1": "Cathy Cooper",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Cathy Cooper is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with over 30 years of experience in complex divorce and custody cases, including high-net-worth matters involving closely held businesses and executive compensation.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/rhonda-smith/",
+    "path": "/firm/rhonda-smith/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/rhonda-smith/",
+     "keywords_count": 12,
+     "top_keyword": "rhonda butterfield",
+     "clicks": 0,
+     "impressions": 50,
+     "ctr": 0.0,
+     "position": 10.42,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 50.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Rhonda Smith - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Rhonda Smith",
+    "current_description": "",
+    "proposed_title": "Rhonda Smith - Senior Attorney - Hastings Shadmehry",
+    "proposed_description": "Rhonda Smith is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with more than twenty years of family law litigation experience, including a clerkship with a Baton Rouge family court judge. LSU Law.",
+    "basis": [
+     "title: hand draft: title: the only bio title without a role, added to match the others; description templated from fields plus the bio",
+     "description: hand draft: title: the only bio title without a role, added to match the others; description templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/firm/kristy-seidenberg/",
+    "path": "/firm/kristy-seidenberg/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/firm/kristy-seidenberg/",
+     "keywords_count": 5,
+     "top_keyword": "kristyne seidenberg",
+     "clicks": 4,
+     "impressions": 16,
+     "ctr": 25.0,
+     "position": 4.38,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 12.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Kristy Seidenberg - Senior Attorney - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Kristy Seidenberg",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Kristy Seidenberg is a Senior Attorney at Hastings Shadmehry in Alpharetta, GA, with over 20 years in Georgia practice as an attorney, mediator and guardian ad litem, with degrees in education, counseling and law.",
+    "basis": [
+     "description: hand draft: templated from fields plus the bio"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://hsfamilylaw.com/resource-links/",
+    "path": "/resource-links/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://hsfamilylaw.com/resource-links/",
+     "keywords_count": 3,
+     "top_keyword": "site:hsfamilylaw.com",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 38.2,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Divorce & Family Law LinksPrenuptial Agreements - Alpharetta Divorce Law - Hastings Shadmehry",
+    "serp_title": "",
+    "h1": "Resources & Links",
+    "current_description": "",
+    "proposed_title": "Georgia Family Law Resources & Links - Hastings Shadmehry",
+    "proposed_description": "Links for Georgia family law matters: the state child support calculator, metro Atlanta family courts and parenting seminars, Fulton County domestic relations forms, and legal directories.",
+    "basis": [
+     "title: hand draft: title: the current one is two titles concatenated; description from page text",
+     "description: hand draft: title: the current one is two titles concatenated; description from page text"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Services_Page"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/blog/page/8/",
+    "/tag/dads/",
+    "/category/collaborative-divorce/",
+    "/blog/",
+    "/category/families/page/2/",
+    "/category/collaborative-divorce/page/3/",
+    "/category/families/custody/",
+    "/category/mediation/",
+    "/category/collaborative-divorce/page/4/",
+    "/category/military-divorce/",
+    "/blog/page/13/",
+    "/category/families/page/4/",
+    "/tag/families/",
+    "/category/divorce-faq/",
+    "/category/divorce/",
+    "/blog/page/10/",
+    "/blog/page/5/",
+    "/category/same-sex-marriage/",
+    "/blog/page/11/",
+    "/category/families/page/3/",
+    "/blog/page/2/",
+    "/category/divorce/page/2/",
+    "/tag/child-custody/",
+    "/blog/page/6/",
+    "/category/firm-news/",
+    "/blog/page/7/",
+    "/category/uncategorized/page/2/",
+    "/category/uncategorized/",
+    "/category/collaborative-divorce/page/2/",
+    "/category/families/",
+    "/tag/divorce/",
+    "/category/families/page/5/",
+    "/category/uncategorized/page/3/",
+    "/tag/children/",
+    "/blog/page/12/",
+    "/category/collaborative-divorce/page/5/",
+    "/category/firm-news/page/2/",
+    "/blog/page/3/",
+    "/blog/page/9/",
+    "/blog/page/4/",
+    "/tag/coparenting/",
+    "/category/divorce-faq/page/2/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}
