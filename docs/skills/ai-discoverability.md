@@ -60,6 +60,7 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 ## Fix loop (2026-11-02)
 
 - Sheet tab is the queue (internal only; clients never see it). `status: fix` → `--fix` applies; only Article-type (Yoast meta via `scripts/php/set_article_type.php`) is automated today; robots is a separate confirmed flow; page size routes to fix-images; the rest flip to `flag` with the route. Backups + `--rollback-article`.
+- 2026-11-02: first sheet-driven fix applied — ruggeddepot Article type set on 39 buying-guide pages (live), `"@type":"Article"` confirmed in the page source. Lesson: `--fix` now defaults to live; the staging dry run showed 18 "no post" because the hub/spoke pages were newer than the staging copy.
 - `scripts/ai_discoverability_cycle.py` = weekly Task Scheduler job: sheet refresh → fixes → roster → commit/push. Not yet scheduled; first run should be by hand with a couple of `fix` rows set (ruggeddepot's Article row is the obvious first one — 39 buying-guide pages, all genuine articles).
 - Candidates for the next automated fix, in order of how often they appear across the 31 tabs: Organization schema (needs name/logo/sameAs from the client file → Yoast `wpseo_titles` options), WooCommerce products-per-page for the slow-pagination pattern.
 
