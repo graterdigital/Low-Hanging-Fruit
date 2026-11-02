@@ -1,6 +1,6 @@
 # Low-Hanging-Fruit Toolkit: Plan v1.2
 
-Last updated 2026-10-30. Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
+Last updated 2026-11-02. Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
 This doc is the source of truth for the build. Update it when a decision changes; don't rely on chat history.
 
 ## 0. Status
@@ -23,7 +23,7 @@ This doc is the source of truth for the build. Update it when a decision changes
 - `new_client.py <domain>`: find the Ahrefs project by domain, match the Kinsta/WP Engine environment from the SSH sync, fingerprint the stack, write `clients/<slug>.yaml`. Makes "add to Ahrefs, run the batch" true for the ~60 environments with no client file.
 - `redirect-rules` (APPROVE): GSC-driven. "Page with redirect" and 404s that still get impressions, plus each site's skipped-list homepage redirects, get real 301 targets in the redirect plugin. Sibling of fix-redirect-links; first inputs are hsfamilylaw's 4 and miuraboiler's `events-old/*` (23 pages).
 - `ai-discoverability` v1 built 2026-10-30: report + roster + managed robots.txt block (APPROVE) + SSH probe. hsfamilylaw blocks nothing; 4 schema notices and 1 JS-rendered page routed. Decided: agency default policy allow/allow in every client file; Microsoft's `indexnow` plugin is the roster standard (Ahrefs auto-submission too expensive). IndexNow done 2026-11-02: Microsoft plugin with verified key file on 28 sites, 3 more on Yoast Premium (WP Engine needs a physical key file; the skill writes it); decide on the three sites with a pre-existing block list (forwardfacing, miuraboiler, setcomcorp). Handoff: `docs/skills/ai-discoverability.md`.
-- `fix-meta` (needs an approval loop for drafted text; proposal: a CSV in `changes/` Greg edits and the skill reads back).
+- `fix-meta`: specified 2026-11-02 (`docs/skills/fix-meta.md`). Uses the review-sheet tab pattern from ai-discoverability and the Yoast per-post writer pattern from `set_article_type.php`. Not built.
 
 **Roster facts that shape the build**
 - 31 of 35 WordPress sites run Yoast; 2 run AIOSEO (cmitsolutions, glomedspa). No Rank Math.
