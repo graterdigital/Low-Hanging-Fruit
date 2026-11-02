@@ -396,7 +396,7 @@
    "served_to_webp_browser": {
     "status": 200,
     "content_type": "image/jpeg",
-    "bytes": 17975191
+    "bytes": 16778625
    }
   },
   {
@@ -494,7 +494,7 @@
    "served_to_webp_browser": {
     "status": 200,
     "content_type": "image/jpeg",
-    "bytes": 1093215
+    "bytes": 1041536
    }
   }
  ],
@@ -2521,5 +2521,5 @@
  "slug": "nouveauspa",
  "crawl": "2026-10-29",
  "target": "staging",
- "generated": "2026-11-02-0931"
+ "generated": "2026-11-02-1039"
 }

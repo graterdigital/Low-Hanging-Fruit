@@ -1,0 +1,712 @@
+{
+ "home_host": "prdskynbarstg.wpenginepowered.com",
+ "env": {
+  "uploads_basedir": "/sites/prdskynbarstg/wp-content/uploads",
+  "uploads_baseurl": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads",
+  "php": "8.4.27",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 400,
+    "height": 400,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [
+  {
+   "url": "https://skynbaratlanta.com/wp-content/uploads/2026/03/32.png",
+   "path": "/wp-content/uploads/2026/03/32.png",
+   "attachment_id": 1095,
+   "file": "/sites/prdskynbarstg/wp-content/uploads/2026/03/32.png",
+   "bytes": 1919034,
+   "mime": "image/png",
+   "width": 1080,
+   "height": 1080,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 1,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "32-400x400.png",
+     "w": 400,
+     "h": 400,
+     "bytes": 223909
+    },
+    "large": {
+     "file": "32-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 1506541
+    },
+    "thumbnail": {
+     "file": "32-150x150.png",
+     "w": 150,
+     "h": 150,
+     "bytes": 34802
+    },
+    "medium_large": {
+     "file": "32-768x768.png",
+     "w": 768,
+     "h": 768,
+     "bytes": 854043
+    },
+    "large_high": {
+     "file": "32-1024x1024.png",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 1506541
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 0,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1581080,
+    "incoming_all_links": 1,
+    "content_type": "image/png"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/webp",
+    "bytes": 1448788
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 8,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/magnifying-glass-solid-full.svg",
+   "alt": "",
+   "tag": "<img width=\"640\" height=\"640\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/magnifying-glass-solid-full.svg\" alt=\"\" />",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?elementor_library=site-header",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Site Header",
+   "tier": "B"
+  },
+  {
+   "post_id": 8,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/menu.svg",
+   "alt": "",
+   "tag": "<img width=\"18\" height=\"16\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/menu.svg\" alt=\"\" />",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?elementor_library=site-header",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Site Header",
+   "tier": "B"
+  },
+  {
+   "post_id": 8,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/magnifying-glass-solid-full.svg",
+   "alt": "",
+   "tag": "<img width=\"640\" height=\"640\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/magnifying-glass-solid-full.svg\" alt=\"\" />",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?elementor_library=site-header",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Site Header",
+   "tier": "B"
+  },
+  {
+   "post_id": 136,
+   "where": "post_content",
+   "src": "https://skynbar.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+   "alt": "",
+   "tag": "<img src=\"https://skynbar.com/wp-content/plugins/elementor/assets/images/placeholder.png\" title=\"\" alt=\"\" loading=\"lazy\" />",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?elementor_library=image-with-text",
+   "post_type": "elementor_library",
+   "post_status": "publish",
+   "title": "Image With Text",
+   "tier": "B"
+  },
+  {
+   "post_id": 2,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/10.webp",
+   "alt": "",
+   "tag": "<img width=\"750\" height=\"417\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/10.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/10.webp 750w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/10-400x222.webp 400w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Home",
+   "tier": "B"
+  },
+  {
+   "post_id": 2,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931.webp",
+   "alt": "",
+   "tag": "<img width=\"750\" height=\"1127\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931.webp 750w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_993",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Home",
+   "tier": "B"
+  },
+  {
+   "post_id": 2,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/ZO_Image.webp",
+   "alt": "",
+   "tag": "<img width=\"750\" height=\"363\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/ZO_Image.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/ZO_Image.webp 750w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/ZO_Image",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Home",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Skynbar_August_2023-66-s_websize.webp",
+   "alt": "",
+   "tag": "<img width=\"750\" height=\"1125\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Skynbar_August_2023-66-s_websize.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Skynbar_August_2023-66-s_websize.webp 750w, https://prdskynbarstg.wpengi",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Screen_Shot_2022-08-08_at_11.32.11_PM.webp",
+   "alt": "",
+   "tag": "<img width=\"750\" height=\"1050\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Screen_Shot_2022-08-08_at_11.32.11_PM.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Screen_Shot_2022-08-08_at_11.32.11_PM.webp 750w, https://prdskynbar",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0709-scaled.jpg",
+   "alt": "",
+   "tag": "<img width=\"1707\" height=\"2560\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0709-scaled.jpg\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0709-scaled.jpg 1707w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0659-scaled.jpg",
+   "alt": "",
+   "tag": "<img width=\"1707\" height=\"2560\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0659-scaled.jpg\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/KVP_0659-scaled.jpg 1707w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931-1.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"827\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931-1.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9931-1.webp 550w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4818.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"366\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4818.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4818.webp 550w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4818",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4714.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"826\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4714.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4714.webp 550w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4714",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9207.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"826\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9207.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9207.webp 550w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_9207",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 45,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP1991.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"367\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP1991.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP1991.webp 550w, https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP1991-40",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/about/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "About",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design-1.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design-1.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design-1.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_1.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_1.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_1.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_2.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_2.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_2.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_4.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_4.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_4.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_5.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_5.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_5.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 483,
+   "where": "post_content",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_3.webp",
+   "alt": "",
+   "tag": "<img width=\"550\" height=\"266\" src=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_3.webp\" alt=\"\" srcset=\"https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design_3.webp 550w, https://prdskynbarstg.wpenginepowered.com/w",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "B"
+  },
+  {
+   "post_id": 319,
+   "where": "featured_image(attachment 320)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP2138_2.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/led-red-light-therapy/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "LED Red Light Therapy",
+   "tier": "C"
+  },
+  {
+   "post_id": 373,
+   "where": "featured_image(attachment 374)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP2168.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/ultherapy/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Ultherapy",
+   "tier": "C"
+  },
+  {
+   "post_id": 393,
+   "where": "featured_image(attachment 394)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_8609_1.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/aquagold-fine-touch/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Aquagold Fine Touch",
+   "tier": "C"
+  },
+  {
+   "post_id": 407,
+   "where": "featured_image(attachment 408)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_4157.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/microneedling/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Microneedling",
+   "tier": "C"
+  },
+  {
+   "post_id": 439,
+   "where": "featured_image(attachment 440)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DS_Web_Tx_Face_Image.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/dermasweep/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "DermaSweep",
+   "tier": "C"
+  },
+  {
+   "post_id": 461,
+   "where": "featured_image(attachment 462)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/1.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/tixel/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Tixel",
+   "tier": "C"
+  },
+  {
+   "post_id": 468,
+   "where": "featured_image(attachment 469)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Shutterstock_2052669314_2.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/prf-ezgel/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "PRF & EzGel",
+   "tier": "C"
+  },
+  {
+   "post_id": 483,
+   "where": "featured_image(attachment 484)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Copy_of_Untitled_Design.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/treatments/skincare/",
+   "post_type": "treatments",
+   "post_status": "publish",
+   "title": "Skincare",
+   "tier": "C"
+  },
+  {
+   "post_id": 651,
+   "where": "featured_image(attachment 652)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/Skynbar_August_2023-115-s.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/holiday-beauty-skin-hacks-that-will-keep-your-skin-glowing-throughout-the-holiday/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Holiday Beauty Skin Hacks That Will Keep Your Skin Glowing Throughout the Holiday",
+   "tier": "C"
+  },
+  {
+   "post_id": 659,
+   "where": "featured_image(attachment 660)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/A_Buckhead_Aesthetician_s_Insider_s_Guide_to_Hydrafacial.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/a-buckhead-aestheticians-insiders-guide-to-hydrafacial/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "A Buckhead Aesthetician’s Insider’s Guide to Hydrafacial",
+   "tier": "C"
+  },
+  {
+   "post_id": 665,
+   "where": "featured_image(attachment 666)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/O8vyvvxA.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/maureens-summer-beauty-routine/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Maureen’s Summer Beauty Routine",
+   "tier": "C"
+  },
+  {
+   "post_id": 669,
+   "where": "featured_image(attachment 671)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/QsAPfyyc.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/the-complete-guide-to-ultherapy/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Complete Guide to Ultherapy",
+   "tier": "C"
+  },
+  {
+   "post_id": 672,
+   "where": "featured_image(attachment 673)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/4JQ_xJbw.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/what-does-your-skin-really-need/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Does Your Skin Really Need?",
+   "tier": "C"
+  },
+  {
+   "post_id": 675,
+   "where": "featured_image(attachment 676)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/c8mJpspY.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/four-foods-maureen-will-never-eat/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Four Foods Maureen Will Never Eat",
+   "tier": "C"
+  },
+  {
+   "post_id": 678,
+   "where": "featured_image(attachment 679)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_8639_1.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/the-power-of-protein-for-skin-overall-health/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Power of Protein for Skin & Overall Health",
+   "tier": "C"
+  },
+  {
+   "post_id": 681,
+   "where": "featured_image(attachment 682)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_7909.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/one-of-my-absolute-favorite-skin-care-lines/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "One of My Absolute Favorite Skin Care Lines",
+   "tier": "C"
+  },
+  {
+   "post_id": 684,
+   "where": "featured_image(attachment 685)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP2007_5-1.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/collagen-boosting-tips/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Collagen Boosting Tips",
+   "tier": "C"
+  },
+  {
+   "post_id": 687,
+   "where": "featured_image(attachment 688)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_5002-2.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/the-benefits-of-microdermabrasion/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Benefits of Microdermabrasion",
+   "tier": "C"
+  },
+  {
+   "post_id": 690,
+   "where": "featured_image(attachment 691)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/MNP2138_2-2.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/red-light-therapy-is-it-the-latest-fountain-of-youth/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Red Light Therapy is it the Latest “Fountain of Youth”",
+   "tier": "C"
+  },
+  {
+   "post_id": 1048,
+   "where": "featured_image(attachment 394)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/DSC_8609_1.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?post_type=treatments&p=1048",
+   "post_type": "treatments",
+   "post_status": "draft",
+   "title": "Aquagold Fine Touch (DUPLICATE)",
+   "tier": "D"
+  },
+  {
+   "post_id": 1136,
+   "where": "featured_image(attachment 660)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2025/07/A_Buckhead_Aesthetician_s_Insider_s_Guide_to_Hydrafacial.webp",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/hydrafacial-atlanta/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "HydraFacial In Atlanta: How It Works, Who It’s For, And How Often You Should Book One",
+   "tier": "C"
+  },
+  {
+   "post_id": 1183,
+   "where": "featured_image(attachment 1184)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/skynbar-b12-injections-what-to-know-before-treatment-01-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?p=1183",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "B12 Injections At SkynBar: What To Know Before Treatment",
+   "tier": "D"
+  },
+  {
+   "post_id": 1186,
+   "where": "featured_image(attachment 1187)",
+   "src": "https://prdskynbarstg.wpenginepowered.com/wp-content/uploads/2026/08/skynbar-b12-injections-what-to-know-before-treatment-02-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://prdskynbarstg.wpenginepowered.com/?p=1186",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "What Is A B12 Injection And How Does It Work?",
+   "tier": "D"
+  }
+ ],
+ "broken": [],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "e-floating-buttons",
+  "elementor_library",
+  "treatments",
+  "wppopups-templates"
+ ],
+ "products": [],
+ "slug": "skynbaratlanta",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-1042"
+}

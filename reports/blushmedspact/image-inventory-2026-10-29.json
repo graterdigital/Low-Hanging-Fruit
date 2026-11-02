@@ -1,0 +1,223 @@
+{
+ "home_host": "blushmedspastg.wpenginepowered.com",
+ "env": {
+  "uploads_basedir": "/sites/blushmedspastg/wp-content/uploads",
+  "uploads_baseurl": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads",
+  "php": "8.4.27",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "portfolio-thumb": {
+    "width": 600,
+    "height": 403,
+    "crop": true
+   },
+   "nectar_small_square": {
+    "width": 140,
+    "height": 140,
+    "crop": true
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [],
+ "alt": [
+  {
+   "post_id": 504,
+   "where": "post_content",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-JUVEDERM-bg-300x300.jpg",
+   "alt": "",
+   "tag": "<img class=\" wp-image-295 alignright\" src=\"https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-JUVEDERM-bg-300x300.jpg\" alt=\"\" width=\"401\" height=\"401\" />",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/uncategorized/juvederm-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Juvederm’s New Formula in 2025: What It Means for Results",
+   "tier": "B"
+  },
+  {
+   "post_id": 504,
+   "where": "featured_image(attachment 296)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-JUVEDERM.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/uncategorized/juvederm-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Juvederm’s New Formula in 2025: What It Means for Results",
+   "tier": "C"
+  },
+  {
+   "post_id": 513,
+   "where": "featured_image(attachment 370)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/BlushHair-Res-2.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/trending-treatments/mens-aesthetics-in-2025/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Men’s Aesthetics in 2025: The Rise of Brotox and Fillers",
+   "tier": "C"
+  },
+  {
+   "post_id": 526,
+   "where": "featured_image(attachment 340)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-botox.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/trending-treatments/preventative-botox-20s-30s-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Preventative Botox in Your 20s and 30s: The Investment That Pays Off for Decades",
+   "tier": "C"
+  },
+  {
+   "post_id": 551,
+   "where": "featured_image(attachment 275)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-Hydrafacial-2.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/uncategorized/hydrafacial-vs-traditional-facials/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Hydrafacial vs. Traditional Facials: What Connecticut Residents Need to Know",
+   "tier": "C"
+  },
+  {
+   "post_id": 552,
+   "where": "featured_image(attachment 254)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/05/Blush-Diamondglow-Hero-A.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/uncategorized/medical-weight-loss-connecticut-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Medical Weight Loss in Connecticut: Your 2026 Guide",
+   "tier": "C"
+  },
+  {
+   "post_id": 568,
+   "where": "featured_image(attachment 271)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2025/06/Blush-botox-bg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/trending-treatments/nefertiti-lift/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What Is a Nefertiti Lift – and Is It the Best-Kept Secret in Non-Surgical Jawline Contouring?",
+   "tier": "C"
+  },
+  {
+   "post_id": 608,
+   "where": "featured_image(attachment 609)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2026/07/Nefertiti-Lift-Non-Surgical-Jawline-Contouring-Blush-Med-Spa.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/?p=608",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "What Is a Nefertiti Lift – and Is It the Best-Kept Secret in Non-Surgical Jawline Contouring?",
+   "tier": "D"
+  },
+  {
+   "post_id": 615,
+   "where": "featured_image(attachment 616)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2026/08/PDO-Thread-Lift-Blush-Med-Spa.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/?p=615",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "PDO Thread Lift: The “Non-Surgical Facelift” Everyone’s Curious About",
+   "tier": "D"
+  },
+  {
+   "post_id": 618,
+   "where": "featured_image(attachment 619)",
+   "src": "https://blushmedspastg.wpenginepowered.com/wp-content/uploads/2026/08/Sculptra-in-2026-Blush-Med-Spa.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://blushmedspastg.wpenginepowered.com/?p=618",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Sculptra In 2026: Why Collagen-Stimulating Injectables Are Replacing Traditional Fillers",
+   "tier": "D"
+  }
+ ],
+ "broken": [],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "wppopups-templates"
+ ],
+ "products": [],
+ "slug": "blushmedspact",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-1032"
+}

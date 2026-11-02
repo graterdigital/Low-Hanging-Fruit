@@ -1,0 +1,557 @@
+{
+ "home_host": "everbodyprostg.wpenginepowered.com",
+ "env": {
+  "uploads_basedir": "/sites/everbodyprostg/wp-content/uploads",
+  "uploads_baseurl": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 1920,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [],
+ "alt": [
+  {
+   "post_id": 121,
+   "where": "postmeta:neighborhood#12455",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/arlington-1.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-499\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/arlington-1.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/logan-circle/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Logan Circle",
+   "tier": "B"
+  },
+  {
+   "post_id": 121,
+   "where": "postmeta:neighborhood#12455",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1528\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/logan-circle/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Logan Circle",
+   "tier": "B"
+  },
+  {
+   "post_id": 121,
+   "where": "postmeta:neighborhood#12455",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1529\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/logan-circle/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Logan Circle",
+   "tier": "B"
+  },
+  {
+   "post_id": 122,
+   "where": "postmeta:neighborhood#12379",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/1-1.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1631\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/1-1.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/flatiron/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Flatiron",
+   "tier": "B"
+  },
+  {
+   "post_id": 122,
+   "where": "postmeta:neighborhood#12379",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2-2.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1632\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2-2.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/flatiron/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Flatiron",
+   "tier": "B"
+  },
+  {
+   "post_id": 122,
+   "where": "postmeta:neighborhood#12379",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3-2.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1634\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3-2.png\" alt=\"\" width=\"108\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/flatiron/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Flatiron",
+   "tier": "B"
+  },
+  {
+   "post_id": 125,
+   "where": "postmeta:neighborhood#12151",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/1-4.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1819\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/1-4.png\" alt=\"\" width=\"109\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/williamsburg/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Williamsburg",
+   "tier": "B"
+  },
+  {
+   "post_id": 125,
+   "where": "postmeta:neighborhood#12151",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2-4.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1820\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/2-4.png\" alt=\"\" width=\"109\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/williamsburg/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Williamsburg",
+   "tier": "B"
+  },
+  {
+   "post_id": 125,
+   "where": "postmeta:neighborhood#12151",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3-5.png",
+   "alt": "",
+   "tag": "<img class=\"alignnone size-full wp-image-1821\" src=\"https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/3-5.png\" alt=\"\" width=\"109\" height=\"109\" />",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/williamsburg/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Williamsburg",
+   "tier": "B"
+  },
+  {
+   "post_id": 143,
+   "where": "featured_image(attachment 146)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/lead-gen-popup-desktop.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/popup/take-20-off-your-first-visit/",
+   "post_type": "popup",
+   "post_status": "publish",
+   "title": "Take 20% Off Your First Visit",
+   "tier": "C"
+  },
+  {
+   "post_id": 465,
+   "where": "featured_image(attachment 467)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/card-mercedes.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/providers/mercedes-doan/",
+   "post_type": "providers",
+   "post_status": "publish",
+   "title": "Mercedes Doan",
+   "tier": "C"
+  },
+  {
+   "post_id": 485,
+   "where": "featured_image(attachment 486)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/card-stacy.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/providers/stacy-garrity/",
+   "post_type": "providers",
+   "post_status": "publish",
+   "title": "Stacy Garrity",
+   "tier": "C"
+  },
+  {
+   "post_id": 488,
+   "where": "featured_image(attachment 489)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/card-elizabeth.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/providers/elizabeth-ranelli/",
+   "post_type": "providers",
+   "post_status": "publish",
+   "title": "Elizabeth Ranelli",
+   "tier": "C"
+  },
+  {
+   "post_id": 491,
+   "where": "featured_image(attachment 492)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/card-mica.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/providers/mica-ogilvie/",
+   "post_type": "providers",
+   "post_status": "publish",
+   "title": "Mica O’Gilvie",
+   "tier": "C"
+  },
+  {
+   "post_id": 121,
+   "where": "featured_image(attachment 502)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/logan_circle.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/logan-circle/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Logan Circle",
+   "tier": "C"
+  },
+  {
+   "post_id": 125,
+   "where": "featured_image(attachment 504)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/williamsburg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/williamsburg/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Williamsburg",
+   "tier": "C"
+  },
+  {
+   "post_id": 122,
+   "where": "featured_image(attachment 507)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/flatiron.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/locations/flatiron/",
+   "post_type": "locations",
+   "post_status": "publish",
+   "title": "Flatiron",
+   "tier": "C"
+  },
+  {
+   "post_id": 568,
+   "where": "featured_image(attachment 594)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/morpheus8_rf_microneedling_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/morpheus8/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Morpheus8 RF Microneedling",
+   "tier": "C"
+  },
+  {
+   "post_id": 566,
+   "where": "featured_image(attachment 582)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/clear_brilliant_laser_facial_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/clear-and-brilliant-laser-facial/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Clear + Brilliant® Laser Facial",
+   "tier": "C"
+  },
+  {
+   "post_id": 564,
+   "where": "featured_image(attachment 589)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/hydrafacial_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/hydrafacial/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Hydrafacial™",
+   "tier": "C"
+  },
+  {
+   "post_id": 562,
+   "where": "featured_image(attachment 596)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/sculptra_lp.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/sculptra/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Sculptra®",
+   "tier": "C"
+  },
+  {
+   "post_id": 559,
+   "where": "featured_image(attachment 583)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/Cosmetic-Dermatology-Package_Botox_Wrinkle-Relaxers_Everbody-PackagesLP-2x.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/botox/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Botox® & Wrinkle Relaxers",
+   "tier": "C"
+  },
+  {
+   "post_id": 557,
+   "where": "featured_image(attachment 588)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/emsculpt_neo_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/emsculpt-neo/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Emsculpt® NEO",
+   "tier": "C"
+  },
+  {
+   "post_id": 555,
+   "where": "featured_image(attachment 2778)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/06/laser-hair-removal-everbody-featured-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/laser-hair-removal/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Laser Hair Removal",
+   "tier": "C"
+  },
+  {
+   "post_id": 551,
+   "where": "featured_image(attachment 598)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/vi_peel_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/vi-peel/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "VI Peel®",
+   "tier": "C"
+  },
+  {
+   "post_id": 549,
+   "where": "featured_image(attachment 2766)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/06/Limmecca-IPL-Photofacial-Everbody.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/ipl-laser-photofacial/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Lumecca IPL Photofacial",
+   "tier": "C"
+  },
+  {
+   "post_id": 547,
+   "where": "featured_image(attachment 590)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/keravive_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/keravive/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Keravive™",
+   "tier": "C"
+  },
+  {
+   "post_id": 544,
+   "where": "featured_image(attachment 2775)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/06/plasma-hair-restoration-everbody-ft-img.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/plasma-hair-restoration/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Plasma Hair Restoration",
+   "tier": "C"
+  },
+  {
+   "post_id": 542,
+   "where": "featured_image(attachment 597)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/trusculpt_id_lp.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/trusculpt/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "truSculpt® iD",
+   "tier": "C"
+  },
+  {
+   "post_id": 540,
+   "where": "featured_image(attachment 587)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/emsculpt_body_toning.jpeg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/emsculpt-body-contouring/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Emsculpt® Body Toning",
+   "tier": "C"
+  },
+  {
+   "post_id": 2362,
+   "where": "featured_image(attachment 2761)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/06/diamond-glow-facial-everbodyh.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/diamondglow-facial/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "DiamondGlow™ Facial",
+   "tier": "C"
+  },
+  {
+   "post_id": 2667,
+   "where": "featured_image(attachment 583)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2025/05/Cosmetic-Dermatology-Package_Botox_Wrinkle-Relaxers_Everbody-PackagesLP-2x.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/?p=2667",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Botox in NYC: How to Find the Right Injector and Actually Get Natural Results",
+   "tier": "D"
+  },
+  {
+   "post_id": 2738,
+   "where": "featured_image(attachment 2742)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/05/everbody-cooltone-treatment-featured-image.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/cooltone/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "CoolTone®",
+   "tier": "C"
+  },
+  {
+   "post_id": 536,
+   "where": "featured_image(attachment 2756)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/06/kybella-treatment-everbody.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/treatment/kybella/",
+   "post_type": "treatment",
+   "post_status": "publish",
+   "title": "Kybella®",
+   "tier": "C"
+  },
+  {
+   "post_id": 2800,
+   "where": "featured_image(attachment 2801)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/08/Botox-in-NYC-EverBody.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/?p=2800",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Botox in NYC: How to Find the Right Injector and Actually Get Natural Results",
+   "tier": "D"
+  },
+  {
+   "post_id": 2803,
+   "where": "featured_image(attachment 2805)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/08/Emsculpt-Neo-NYC-EverBody.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/?p=2803",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Emsculpt Neo NYC: What It Actually Does, Who It’s for, and Whether It’s Worth It",
+   "tier": "D"
+  },
+  {
+   "post_id": 2806,
+   "where": "featured_image(attachment 2807)",
+   "src": "https://everbodyprostg.wpenginepowered.com/wp-content/uploads/2026/08/Clear-and-Brilliant-NYC-EverBody.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://everbodyprostg.wpenginepowered.com/?p=2806",
+   "post_type": "post",
+   "post_status": "draft",
+   "title": "Clear + Brilliant in NYC: Is It the Right Laser for Pores, Texture, and Everyday Glow",
+   "tier": "D"
+  }
+ ],
+ "broken": [],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "wppopups-templates",
+  "faqs",
+  "locations",
+  "popup",
+  "press",
+  "providers",
+  "reviews",
+  "treatment"
+ ],
+ "products": [],
+ "slug": "everbody",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-1036"
+}
