@@ -60,6 +60,10 @@ Live. The script asks you to type the slug (`--yes` skips that for vetted unatte
 
 Commit the `changes/<provider>/<slug>/*.md` logs, not the backup folder.
 
+## Running a whole roster
+
+`python scripts/batch_fix_meta.py` (optionally `--provider kinsta`, `--only a,b`, `--skip c`) runs the review half on every client with an Ahrefs project: probe, then the `meta` tab push for sites that have a review sheet. Model drafts are on whenever `ANTHROPIC_API_KEY` is in `.env` (`--no-draft` turns them off); `--max-pages` caps the page-text pulls per site (about 50 Ahrefs units each). Summary in `changes/<provider or _all>/_batch-<stamp>-fix-meta-review.md`. After the humans have approved rows, `--fix` (staging dry) → `--fix --apply` → `--fix --apply --target live --yes` runs the apply per site in the same loop; a site with nothing approved or a non-Yoast plugin is reported, not failed.
+
 ## Rollback
 
 `python scripts/fix_meta.py <slug> --rollback changes/<provider>/<slug>/backup/<stamp>-fix-meta-<target>.json` (dry; add `--apply`). Restores each field to its before-value only while the field still holds exactly what the fix wrote; anything edited since is reported and left alone. An empty before-value deletes the meta row, so Yoast falls back to its template.

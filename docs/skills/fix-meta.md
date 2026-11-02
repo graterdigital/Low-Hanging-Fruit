@@ -1,6 +1,6 @@
 # Handoff: fix-meta
 
-Status as of 2026-11-02 (afternoon): **built, v1. Probe run on hsfamilylaw against the 2026-10-29 crawl; 22-row queue with drafts in `reports/hsfamilylaw/meta-2026-10-29.md`. Nothing pushed to the sheet, nothing written to the site.** `--sheet`, `--fix` and `--rollback` are written to the existing patterns but have not been run against a real sheet or server yet; the PHP is lint-clean but untested in WordPress. Mirror of the project doc `claude/skill-fix-meta.md`; update both.
+Status as of 2026-11-02 15:00: **built, v1, and live on hsfamilylaw: 22 titles/descriptions approved in the sheet, applied on staging (14:16) and live (`changes/kinsta/hsfamilylaw/2026-11-02-*-fix-meta-live-apply.md`), sheet rows `applied 2026-11-02`.** The staging log confirmed Yoast uses a custom title literally (brand suffix once). `--rollback` proven as a dry run against the staging backup. `scripts/batch_fix_meta.py` added the same afternoon for the roster run (review: probe + sheet per site; fix: per-site apply loop); first roster run pending. Mirror of the project doc `claude/skill-fix-meta.md`; update both.
 
 ## Purpose
 
