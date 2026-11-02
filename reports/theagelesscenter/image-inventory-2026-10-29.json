@@ -1,0 +1,208 @@
+{
+ "home_host": "agelesscentstg.wpengine.com",
+ "env": {
+  "uploads_basedir": "/sites/agelesscentstg/wp-content/uploads",
+  "uploads_baseurl": "https://agelesscentstg.wpengine.com/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "full_hd": {
+    "width": 1920,
+    "height": 0,
+    "crop": [
+     "center",
+     "center"
+    ]
+   },
+   "large_high": {
+    "width": 1024,
+    "height": 0,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   },
+   "woocommerce_thumbnail": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "woocommerce_single": {
+    "width": 600,
+    "height": 0,
+    "crop": false
+   },
+   "woocommerce_gallery_thumbnail": {
+    "width": 100,
+    "height": 100,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [],
+ "alt": [
+  {
+   "post_id": 6143,
+   "where": "post_content",
+   "src": "",
+   "alt": "",
+   "tag": "<img src=\"\" alt=\"\" title=\"telegram adult channels ✓ Discover 99+ Best Adult Channels Now ➤\"/>",
+   "page_url": "https://agelesscentstg.wpengine.com/telegram-adult-channels/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "telegram adult channels ✓ Discover 99+ Best Adult Channels Now ➤",
+   "tier": "B"
+  },
+  {
+   "post_id": 4963,
+   "where": "postmeta:flexible_2_editor#118703",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/11/atlanta-hydrafacial-treatments-the-ageless-center-1.png",
+   "alt": "",
+   "tag": "<img class=\"alignright size-full wp-image-4969\" src=\"https://agelesscentstg.wpengine.com/wp-content/uploads/2023/11/atlanta-hydrafacial-treatments-the-ageless-center-1.png\" alt=\"\" width=\"600\" height=\"600\" />",
+   "page_url": "https://agelesscentstg.wpengine.com/?post_type=procedures&p=4963",
+   "post_type": "procedures",
+   "post_status": "draft",
+   "title": "Hydrafacial",
+   "tier": "D"
+  },
+  {
+   "post_id": 147,
+   "where": "postmeta:flexible_0_editor#10619",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2021/10/Liquid-Facelift_Restylane_Before-After.jpg",
+   "alt": "",
+   "tag": "<img class=\"aligncenter wp-image-557 size-full\" src=\"https://agelesscentstg.wpengine.com/wp-content/uploads/2021/10/Liquid-Facelift_Restylane_Before-After.jpg\" alt=\"\" width=\"600\" height=\"300\" />",
+   "page_url": "https://agelesscentstg.wpengine.com/nonsurgical-liquid-facelift/",
+   "post_type": "procedures",
+   "post_status": "publish",
+   "title": "Non-Surgical Liquid Facelift",
+   "tier": "B"
+  },
+  {
+   "post_id": 5056,
+   "where": "postmeta:flexible_2_editor#122772",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/12/weightloss-program-the-ageless-center.png",
+   "alt": "",
+   "tag": "<img class=\"alignright size-full wp-image-5057\" src=\"https://agelesscentstg.wpengine.com/wp-content/uploads/2023/12/weightloss-program-the-ageless-center.png\" alt=\"\" width=\"600\" height=\"600\" />",
+   "page_url": "https://agelesscentstg.wpengine.com/weight-loss-program/",
+   "post_type": "procedures",
+   "post_status": "publish",
+   "title": "Weight Loss Program",
+   "tier": "B"
+  }
+ ],
+ "broken": [
+  {
+   "post_id": 4963,
+   "where": "postmeta:flexible_2_editor#118703",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/11/atlanta-hydrafacial-treatments-the-ageless-center-1.png",
+   "page_url": "https://agelesscentstg.wpengine.com/?post_type=procedures&p=4963"
+  },
+  {
+   "post_id": 147,
+   "where": "postmeta:flexible_0_editor#10619",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2021/10/Liquid-Facelift_Restylane_Before-After.jpg",
+   "page_url": "https://agelesscentstg.wpengine.com/nonsurgical-liquid-facelift/"
+  },
+  {
+   "post_id": 4551,
+   "where": "postmeta:flexible_3_editor_one#109506",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/06/dysport-vs-botox-units-the-ageless-center.png",
+   "page_url": "https://agelesscentstg.wpengine.com/dysport/"
+  },
+  {
+   "post_id": 4551,
+   "where": "postmeta:flexible_4_editor_one#109768",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/06/dysport-vs-botox-units-the-ageless-center.png",
+   "page_url": "https://agelesscentstg.wpengine.com/dysport/"
+  },
+  {
+   "post_id": 4941,
+   "where": "postmeta:flexible_2_editor#117906",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/11/altanta-skinpen-treatments-the-ageless-center-683x1024.png",
+   "page_url": "https://agelesscentstg.wpengine.com/skinpen-microneedling/"
+  },
+  {
+   "post_id": 5056,
+   "where": "postmeta:flexible_2_editor#122772",
+   "src": "https://agelesscentstg.wpengine.com/wp-content/uploads/2023/12/weightloss-program-the-ageless-center.png",
+   "page_url": "https://agelesscentstg.wpengine.com/weight-loss-program/"
+  }
+ ],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "product",
+  "procedures",
+  "wppopups-templates"
+ ],
+ "products": [],
+ "slug": "theagelesscenter",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-0935"
+}

@@ -1,0 +1,2525 @@
+{
+ "home_host": "nouveaudayold.wpenginepowered.com",
+ "env": {
+  "uploads_basedir": "/sites/nouveaudayold/wp-content/uploads",
+  "uploads_baseurl": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads",
+  "php": "8.2.35",
+  "imagick": "ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org",
+  "gd": "2.3.0",
+  "gd_webp": true,
+  "bin": {
+   "pngquant": null,
+   "oxipng": null,
+   "optipng": null,
+   "cwebp": null,
+   "jpegoptim": null,
+   "convert": null,
+   "magick": null
+  },
+  "big_image_size_threshold": 2560,
+  "registered_sizes": {
+   "thumbnail": {
+    "width": 150,
+    "height": 150,
+    "crop": true
+   },
+   "medium": {
+    "width": 300,
+    "height": 300,
+    "crop": false
+   },
+   "medium_large": {
+    "width": 768,
+    "height": 0,
+    "crop": false
+   },
+   "large": {
+    "width": 1024,
+    "height": 1024,
+    "crop": false
+   },
+   "1536x1536": {
+    "width": 1536,
+    "height": 1536,
+    "crop": false
+   },
+   "2048x2048": {
+    "width": 2048,
+    "height": 2048,
+    "crop": false
+   },
+   "post-thumbnail": {
+    "width": 1568,
+    "height": 9999,
+    "crop": false
+   },
+   "gform-image-choice-sm": {
+    "width": 300,
+    "height": 300,
+    "crop": true
+   },
+   "gform-image-choice-md": {
+    "width": 400,
+    "height": 400,
+    "crop": true
+   },
+   "gform-image-choice-lg": {
+    "width": 600,
+    "height": 600,
+    "crop": true
+   },
+   "woocommerce_thumbnail": {
+    "width": 450,
+    "height": 450,
+    "crop": true
+   },
+   "woocommerce_single": {
+    "width": 600,
+    "height": 0,
+    "crop": false
+   },
+   "woocommerce_gallery_thumbnail": {
+    "width": 100,
+    "height": 100,
+    "crop": true
+   }
+  }
+ },
+ "webp": {
+  "webp-express": "absent",
+  "enable-media-replace": "absent",
+  "shortpixel": "absent",
+  "smush": "absent",
+  "ewww": "absent",
+  "imagify": "absent",
+  "optimole": "absent",
+  "litespeed": "absent",
+  "converter-for-media": "absent"
+ },
+ "files": [
+  {
+   "url": "https://nouveauspa.com/wp-content/uploads/2024/05/Nouveau-Cupping-Massage.jpg",
+   "path": "/wp-content/uploads/2024/05/Nouveau-Cupping-Massage.jpg",
+   "attachment_id": 55640,
+   "file": "/sites/nouveaudayold/wp-content/uploads/2024/05/Nouveau-Cupping-Massage.jpg",
+   "bytes": 33331512,
+   "mime": "image/jpeg",
+   "width": 8688,
+   "height": 5792,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "Nouveau-Cupping-Massage-300x200.jpg",
+     "w": 300,
+     "h": 200,
+     "bytes": 23038
+    },
+    "large": {
+     "file": "Nouveau-Cupping-Massage-1024x683.jpg",
+     "w": 1024,
+     "h": 683,
+     "bytes": 141139
+    },
+    "thumbnail": {
+     "file": "Nouveau-Cupping-Massage-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 12417
+    },
+    "medium_large": {
+     "file": "Nouveau-Cupping-Massage-768x512.jpg",
+     "w": 768,
+     "h": 512,
+     "bytes": 87359
+    },
+    "woocommerce_thumbnail": {
+     "file": "Nouveau-Cupping-Massage-450x450.jpg",
+     "w": 450,
+     "h": 450,
+     "bytes": 49123
+    },
+    "woocommerce_single": {
+     "file": "Nouveau-Cupping-Massage-600x400.jpg",
+     "w": 600,
+     "h": 400,
+     "bytes": 59794
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "Nouveau-Cupping-Massage-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 9076
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 33331512,
+    "incoming_all_links": 1,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 33331512
+   }
+  },
+  {
+   "url": "https://nouveauspa.com/wp-content/uploads/2024/12/couples-massage.jpg",
+   "path": "/wp-content/uploads/2024/12/couples-massage.jpg",
+   "attachment_id": 55850,
+   "file": "/sites/nouveaudayold/wp-content/uploads/2024/12/couples-massage.jpg",
+   "bytes": 28190863,
+   "mime": "image/jpeg",
+   "width": 8688,
+   "height": 5792,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "couples-massage-300x200.jpg",
+     "w": 300,
+     "h": 200,
+     "bytes": 21270
+    },
+    "large": {
+     "file": "couples-massage-1024x683.jpg",
+     "w": 1024,
+     "h": 683,
+     "bytes": 127555
+    },
+    "thumbnail": {
+     "file": "couples-massage-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 12449
+    },
+    "medium_large": {
+     "file": "couples-massage-768x512.jpg",
+     "w": 768,
+     "h": 512,
+     "bytes": 80377
+    },
+    "woocommerce_thumbnail": {
+     "file": "couples-massage-450x450.jpg",
+     "w": 450,
+     "h": 450,
+     "bytes": 49561
+    },
+    "woocommerce_single": {
+     "file": "couples-massage-600x400.jpg",
+     "w": 600,
+     "h": 400,
+     "bytes": 54997
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "couples-massage-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 9214
+    },
+    "wc-pdf-product-vouchers-voucher-thumb": {
+     "file": "couples-massage-100x67.jpg",
+     "w": 100,
+     "h": 67,
+     "bytes": 8291
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 28190863,
+    "incoming_all_links": 6,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 28190863
+   }
+  },
+  {
+   "url": "https://nouveauspa.com/wp-content/uploads/2024/06/Nouveau-Post-Winter-rejuvenation-blog.jpg",
+   "path": "/wp-content/uploads/2024/06/Nouveau-Post-Winter-rejuvenation-blog.jpg",
+   "attachment_id": 55646,
+   "file": "/sites/nouveaudayold/wp-content/uploads/2024/06/Nouveau-Post-Winter-rejuvenation-blog.jpg",
+   "bytes": 19862799,
+   "mime": "image/jpeg",
+   "width": 9504,
+   "height": 6336,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "Nouveau-Post-Winter-rejuvenation-blog-300x200.jpg",
+     "w": 300,
+     "h": 200,
+     "bytes": 17492
+    },
+    "large": {
+     "file": "Nouveau-Post-Winter-rejuvenation-blog-1024x683.jpg",
+     "w": 1024,
+     "h": 683,
+     "bytes": 79192
+    },
+    "medium_large": {
+     "file": "Nouveau-Post-Winter-rejuvenation-blog-768x512.jpg",
+     "w": 768,
+     "h": 512,
+     "bytes": 53476
+    },
+    "woocommerce_single": {
+     "file": "Nouveau-Post-Winter-rejuvenation-blog-600x400.jpg",
+     "w": 600,
+     "h": 400,
+     "bytes": 38952
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 18242607,
+    "incoming_all_links": 4,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 18242607
+   }
+  },
+  {
+   "url": "https://nouveauspa.com/wp-content/uploads/2024/11/couples-massage.jpg",
+   "path": "/wp-content/uploads/2024/11/couples-massage.jpg",
+   "attachment_id": 55824,
+   "file": "/sites/nouveaudayold/wp-content/uploads/2024/11/couples-massage.jpg",
+   "bytes": 17975191,
+   "mime": "image/jpeg",
+   "width": 8192,
+   "height": 4693,
+   "is_scaled_variant": false,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "couples-massage-300x172.jpg",
+     "w": 300,
+     "h": 172,
+     "bytes": 16376
+    },
+    "large": {
+     "file": "couples-massage-1024x587.jpg",
+     "w": 1024,
+     "h": 587,
+     "bytes": 77870
+    },
+    "thumbnail": {
+     "file": "couples-massage-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 10935
+    },
+    "medium_large": {
+     "file": "couples-massage-768x440.jpg",
+     "w": 768,
+     "h": 440,
+     "bytes": 51160
+    },
+    "1536x1536": {
+     "file": "couples-massage-1536x880.jpg",
+     "w": 1536,
+     "h": 880,
+     "bytes": 143557
+    },
+    "post-thumbnail": {
+     "file": "couples-massage-1568x898.jpg",
+     "w": 1568,
+     "h": 898,
+     "bytes": 149131
+    },
+    "woocommerce_thumbnail": {
+     "file": "couples-massage-450x450.jpg",
+     "w": 450,
+     "h": 450,
+     "bytes": 36437
+    },
+    "woocommerce_single": {
+     "file": "couples-massage-600x344.jpg",
+     "w": 600,
+     "h": 344,
+     "bytes": 36792
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "couples-massage-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 8429
+    },
+    "wc-pdf-product-vouchers-voucher-thumb": {
+     "file": "couples-massage-100x57.jpg",
+     "w": 100,
+     "h": 57,
+     "bytes": 7485
+    }
+   },
+   "original_image": null,
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 17975191,
+    "incoming_all_links": 4,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 17975191
+   }
+  },
+  {
+   "url": "https://nouveauspa.com/wp-content/uploads/2024/12/mud-detox-for-skin-scaled.jpg",
+   "path": "/wp-content/uploads/2024/12/mud-detox-for-skin-scaled.jpg",
+   "attachment_id": 55848,
+   "file": "/sites/nouveaudayold/wp-content/uploads/2024/12/mud-detox-for-skin-scaled.jpg",
+   "bytes": 1093215,
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1752,
+   "is_scaled_variant": true,
+   "refs": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "thumbnail_refs": 0
+   },
+   "sizes": {
+    "medium": {
+     "file": "mud-detox-for-skin-300x205.jpg",
+     "w": 300,
+     "h": 205,
+     "bytes": 30837
+    },
+    "large": {
+     "file": "mud-detox-for-skin-1024x701.jpg",
+     "w": 1024,
+     "h": 701,
+     "bytes": 216195
+    },
+    "thumbnail": {
+     "file": "mud-detox-for-skin-150x150.jpg",
+     "w": 150,
+     "h": 150,
+     "bytes": 15787
+    },
+    "medium_large": {
+     "file": "mud-detox-for-skin-768x526.jpg",
+     "w": 768,
+     "h": 526,
+     "bytes": 132628
+    },
+    "1536x1536": {
+     "file": "mud-detox-for-skin-1536x1051.jpg",
+     "w": 1536,
+     "h": 1051,
+     "bytes": 439893
+    },
+    "2048x2048": {
+     "file": "mud-detox-for-skin-2048x1401.jpg",
+     "w": 2048,
+     "h": 1401,
+     "bytes": 733972
+    },
+    "post-thumbnail": {
+     "file": "mud-detox-for-skin-1568x1073.jpg",
+     "w": 1568,
+     "h": 1073,
+     "bytes": 455925
+    },
+    "woocommerce_thumbnail": {
+     "file": "mud-detox-for-skin-450x450.jpg",
+     "w": 450,
+     "h": 450,
+     "bytes": 71424
+    },
+    "woocommerce_single": {
+     "file": "mud-detox-for-skin-600x411.jpg",
+     "w": 600,
+     "h": 411,
+     "bytes": 88652
+    },
+    "woocommerce_gallery_thumbnail": {
+     "file": "mud-detox-for-skin-100x100.jpg",
+     "w": 100,
+     "h": 100,
+     "bytes": 10765
+    },
+    "wc-pdf-product-vouchers-voucher-thumb": {
+     "file": "mud-detox-for-skin-100x68.jpg",
+     "w": 100,
+     "h": 68,
+     "bytes": 9370
+    }
+   },
+   "original_image": "mud-detox-for-skin.jpg",
+   "is_featured_image_of": 1,
+   "in_acf_image_fields": 0,
+   "ahrefs": {
+    "size": 1041536,
+    "incoming_all_links": 1,
+    "content_type": "image/jpeg"
+   },
+   "served_to_webp_browser": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 1093215
+   }
+  }
+ ],
+ "alt": [
+  {
+   "post_id": 55175,
+   "where": "featured_image(attachment 55176)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/arnica-muscle-relief.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/arnica-muscle-relief-body-treatment/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Arnica Muscle Relief",
+   "tier": "C"
+  },
+  {
+   "post_id": 55179,
+   "where": "featured_image(attachment 55180)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/body-bronzing.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/body-bronzing-the-sunless-miracle/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Body Bronzing",
+   "tier": "C"
+  },
+  {
+   "post_id": 55181,
+   "where": "featured_image(attachment 55182)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/herbal-detox-purification.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/herbal-detox-purification/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Herbal Detox Purification",
+   "tier": "C"
+  },
+  {
+   "post_id": 55183,
+   "where": "featured_image(attachment 55184)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/coconut-escape-body-treatment.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/kukui-coconut-escape/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Kukui Coconut Escape",
+   "tier": "C"
+  },
+  {
+   "post_id": 55185,
+   "where": "featured_image(attachment 55186)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/mineral-mud-detox.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/mineral-mud-detox-body-treatment/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Mineral Mud Detox",
+   "tier": "C"
+  },
+  {
+   "post_id": 55177,
+   "where": "featured_image(attachment 55178)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/vichy-waterfall-experience.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/vichy-waterfall-experience/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Vichy Waterfall Experience",
+   "tier": "C"
+  },
+  {
+   "post_id": 55189,
+   "where": "featured_image(attachment 55602)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/volcanic-mud.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/volcanic-mud/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Volcanic Mud",
+   "tier": "C"
+  },
+  {
+   "post_id": 55199,
+   "where": "featured_image(attachment 55201)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Polish-Change.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/polish-change/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Polish Change",
+   "tier": "C"
+  },
+  {
+   "post_id": 55211,
+   "where": "featured_image(attachment 55217)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/couples-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-30-min/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Couples Massage – 30 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55214,
+   "where": "featured_image(attachment 55217)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/couples-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-60-min/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Couples Massage ? 60 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55219,
+   "where": "featured_image(attachment 55217)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/couples-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-90-min/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Couples Massage – 90 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55228,
+   "where": "featured_image(attachment 55229)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/nouveau-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-30-minute/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Massage – 30 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55231,
+   "where": "featured_image(attachment 55229)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/nouveau-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-60-minute/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Massage – 60 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55232,
+   "where": "featured_image(attachment 55229)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/nouveau-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-90-minute/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Massage – 90 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55236,
+   "where": "featured_image(attachment 55237)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/prenatal-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/prenatal-massage/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Prenatal Massage – 60 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 55238,
+   "where": "featured_image(attachment 55239)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Childs-Pedicure.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/childs-pedicure/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Child’s Pedicure",
+   "tier": "C"
+  },
+  {
+   "post_id": 55240,
+   "where": "featured_image(attachment 55241)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Express-Pedicure.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/express-pedicure/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Express Pedicure",
+   "tier": "C"
+  },
+  {
+   "post_id": 55242,
+   "where": "featured_image(attachment 55243)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Nouveau-Signature-Pedicure.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/nouveau-signature-pedicure/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Spa Pedicure",
+   "tier": "C"
+  },
+  {
+   "post_id": 55251,
+   "where": "featured_image(attachment 55252)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/the-nouveau-facial.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/the-nouveau-facial/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Facial",
+   "tier": "C"
+  },
+  {
+   "post_id": 55259,
+   "where": "featured_image(attachment 55260)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gentlemans-escape.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/for-men/the-gentlemans-escape/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Gentleman’s Escape (Mulitple)",
+   "tier": "C"
+  },
+  {
+   "post_id": 55261,
+   "where": "featured_image(attachment 55262)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gift-certificate.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/100-gift-certificate/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "$100 Gift Certificate",
+   "tier": "C"
+  },
+  {
+   "post_id": 55271,
+   "where": "featured_image(attachment 55262)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gift-certificate.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/250-gift-certificate/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "$250 Gift Certificate",
+   "tier": "C"
+  },
+  {
+   "post_id": 55274,
+   "where": "featured_image(attachment 55262)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gift-certificate.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/50-gift-certificate/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "$50 Gift Certificate",
+   "tier": "C"
+  },
+  {
+   "post_id": 55276,
+   "where": "featured_image(attachment 55262)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gift-certificate.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/500-gift-certificate/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "$500 Gift Certificate",
+   "tier": "C"
+  },
+  {
+   "post_id": 55277,
+   "where": "featured_image(attachment 55679)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/powerhouse-facial.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/powerhouse-facial/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Powerhouse Facial",
+   "tier": "C"
+  },
+  {
+   "post_id": 55284,
+   "where": "featured_image(attachment 55285)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/skin-renewal-facial.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/mini-glow-facial/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Mini Glow Facial",
+   "tier": "C"
+  },
+  {
+   "post_id": 55292,
+   "where": "featured_image(attachment 55293)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Mens-Haircuts.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/for-men/haircut-and-style-men/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Haircut And Style – Men",
+   "tier": "C"
+  },
+  {
+   "post_id": 55296,
+   "where": "featured_image(attachment 55599)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/root-touchup.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/root-touch-up/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Root Touch Up",
+   "tier": "C"
+  },
+  {
+   "post_id": 55297,
+   "where": "featured_image(attachment 55298)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/shampoo-and-style.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/shampoo-and-style-ladies/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Shampoo and Blowout",
+   "tier": "C"
+  },
+  {
+   "post_id": 55299,
+   "where": "featured_image(attachment 55600)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/full-blonding-session.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/full-blonding-session/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Custom dimensional color session",
+   "tier": "C"
+  },
+  {
+   "post_id": 55300,
+   "where": "featured_image(attachment 55601)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gloss.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/gloss/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Gloss & Tone Session",
+   "tier": "C"
+  },
+  {
+   "post_id": 55301,
+   "where": "featured_image(attachment 55597)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/partial-blonding.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/partial-blonding-session/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Partial dimensional Color Session",
+   "tier": "C"
+  },
+  {
+   "post_id": 55302,
+   "where": "featured_image(attachment 55303)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/hydrotherapy-silk-bath-.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/hydrotherapy-micro-silk-bath/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Hydrotherapy Micro-Silk Bath",
+   "tier": "C"
+  },
+  {
+   "post_id": 55304,
+   "where": "featured_image(attachment 55305)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/steam-room.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/steam-room/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Steam Room",
+   "tier": "C"
+  },
+  {
+   "post_id": 55306,
+   "where": "featured_image(attachment 55307)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/steamy-wonder.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/steamy-wonder/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Steamy Wonder",
+   "tier": "C"
+  },
+  {
+   "post_id": 55322,
+   "where": "featured_image(attachment 55324)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/couple-retreat-spa-day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/couples-retreat/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Couples Retreat",
+   "tier": "C"
+  },
+  {
+   "post_id": 55325,
+   "where": "featured_image(attachment 55326)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/decadent-delight.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/decadent-delight/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Decadent Delight",
+   "tier": "C"
+  },
+  {
+   "post_id": 55327,
+   "where": "featured_image(attachment 55328)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/express-yourself-spa-day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/express-yourself/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Express Yourself",
+   "tier": "C"
+  },
+  {
+   "post_id": 55329,
+   "where": "featured_image(attachment 55330)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/gentlemans-escape-1.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/just-for-men-the-gentlemans-escape/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Gentleman’s Escape (Mulitple)",
+   "tier": "C"
+  },
+  {
+   "post_id": 55331,
+   "where": "featured_image(attachment 55332)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/mother-to-be-spa-day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/mother-to-be-spa-day/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Mother-To-Be Spa Day",
+   "tier": "C"
+  },
+  {
+   "post_id": 55333,
+   "where": "featured_image(attachment 55334)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Nouveau-Spa-Day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/nouveau-spa-day/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Spa Day",
+   "tier": "C"
+  },
+  {
+   "post_id": 55335,
+   "where": "featured_image(attachment 55336)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/sweet-16-spa-day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/sweet-16-spa-day-teens-13-18/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Sweet 16 Spa Day",
+   "tier": "C"
+  },
+  {
+   "post_id": 55337,
+   "where": "featured_image(attachment 55338)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/detox-day.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/the-detox-day/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Detox Day",
+   "tier": "C"
+  },
+  {
+   "post_id": 55339,
+   "where": "featured_image(attachment 55626)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Shutterstock_278101235-1.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/the-ultimate-spa-day/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Ultimate Spa Day",
+   "tier": "C"
+  },
+  {
+   "post_id": 55341,
+   "where": "featured_image(attachment 55342)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Back.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/back/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Back",
+   "tier": "C"
+  },
+  {
+   "post_id": 55345,
+   "where": "featured_image(attachment 55346)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Bikini-Extended.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/bikini-extended/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Bikini Extended",
+   "tier": "C"
+  },
+  {
+   "post_id": 55347,
+   "where": "featured_image(attachment 55348)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/brazilian-wax.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brazilian/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Brazilian",
+   "tier": "C"
+  },
+  {
+   "post_id": 55349,
+   "where": "featured_image(attachment 55350)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Brows-and-Chin.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brow-chin/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Brows & Chin",
+   "tier": "C"
+  },
+  {
+   "post_id": 55352,
+   "where": "featured_image(attachment 55353)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Brows-and-Lips.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brow-lip/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Brows & Lip",
+   "tier": "C"
+  },
+  {
+   "post_id": 55354,
+   "where": "featured_image(attachment 55355)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Brows.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brows/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Brow Shaping",
+   "tier": "C"
+  },
+  {
+   "post_id": 55357,
+   "where": "featured_image(attachment 55358)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/chest-.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/chest/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Chest",
+   "tier": "C"
+  },
+  {
+   "post_id": 55359,
+   "where": "featured_image(attachment 55360)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Chin.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/chin/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Chin",
+   "tier": "C"
+  },
+  {
+   "post_id": 55361,
+   "where": "featured_image(attachment 55362)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Forearms.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/forearms/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Half Arms",
+   "tier": "C"
+  },
+  {
+   "post_id": 55363,
+   "where": "featured_image(attachment 55364)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Full-Arms.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-arm/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Full Arm",
+   "tier": "C"
+  },
+  {
+   "post_id": 55365,
+   "where": "featured_image(attachment 55366)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Full-Face.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-face/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Full Face",
+   "tier": "C"
+  },
+  {
+   "post_id": 55367,
+   "where": "featured_image(attachment 55368)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Full-Leg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-leg/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Full Leg",
+   "tier": "C"
+  },
+  {
+   "post_id": 55369,
+   "where": "featured_image(attachment 55370)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Half-Leg.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/half-leg/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Half Leg",
+   "tier": "C"
+  },
+  {
+   "post_id": 55371,
+   "where": "featured_image(attachment 55372)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Underarms.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/underarms/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Underarms",
+   "tier": "C"
+  },
+  {
+   "post_id": 55373,
+   "where": "featured_image(attachment 55374)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Upper-Lip-Waxing.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/upper-lip/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Upper Lip",
+   "tier": "C"
+  },
+  {
+   "post_id": 55585,
+   "where": "featured_image(attachment 55586)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Nouveau-Day-Spa_Interior-Skin-OVERVIEW-1.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/skin-2/",
+   "post_type": "page",
+   "post_status": "publish",
+   "title": "Skin",
+   "tier": "C"
+  },
+  {
+   "post_id": 55638,
+   "where": "featured_image(attachment 55640)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Nouveau-Cupping-Massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/cupping-therapy-in-kennewick-wa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Cupping Therapy in Kennewick, WA",
+   "tier": "C"
+  },
+  {
+   "post_id": 55641,
+   "where": "featured_image(attachment 55642)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/Nouveau-Stone-Massage-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/discover-relaxation-with-a-stone-massage-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Discover Relaxation with A Stone Massage at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55643,
+   "where": "featured_image(attachment 55644)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/Massage-Therapy-Nouveau-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/your-guide-to-massage-therapy/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Your Guide to Massage Therapy",
+   "tier": "C"
+  },
+  {
+   "post_id": 55645,
+   "where": "featured_image(attachment 55646)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/Nouveau-Post-Winter-rejuvenation-blog.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/post-winter-rejuvenation/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Post-Winter Rejuvenation",
+   "tier": "C"
+  },
+  {
+   "post_id": 55647,
+   "where": "featured_image(attachment 55648)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/Nouveau-self-care-blog-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/self-care-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Self-Care at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55649,
+   "where": "featured_image(attachment 55650)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/Spa-treatments-at-Nouveau-Blog-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/embrace-the-romance-with-luxurious-spa-treatments/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Embrace the Romance with Luxurious Spa Treatments",
+   "tier": "C"
+  },
+  {
+   "post_id": 55651,
+   "where": "featured_image(attachment 55656)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/04/vichy-waterfall-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/what-is-the-vichy-waterfall-experience-at-nouveau/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What is the Vichy Waterfall Experience at Nouveau?",
+   "tier": "C"
+  },
+  {
+   "post_id": 55653,
+   "where": "featured_image(attachment 55654)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/06/enzyme-firming-facial-blog-at-Nouveau-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/what-is-the-enzyme-firming-facial/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What is the Enzyme Firming Facial?",
+   "tier": "C"
+  },
+  {
+   "post_id": 55815,
+   "where": "featured_image(attachment 55816)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/10/mud-mask-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/get-summer-ready-at-nouveau-day-spa-with-the-mineral-mud-detox-treatment/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Get Summer Ready at Nouveau Day Spa with the Mineral Mud Detox Treatment",
+   "tier": "C"
+  },
+  {
+   "post_id": 55817,
+   "where": "featured_image(attachment 55818)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/10/vichy-waterfall-experience-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/unveiling-the-wonders-of-vichy-waterfall-experience-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Unveiling the Wonders of Vichy Waterfall Experience at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55823,
+   "where": "featured_image(attachment 55824)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/11/couples-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/experience-the-ultimate-relaxation-with-couples-massage-in-kennewick-this-summer/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Experience the Ultimate Relaxation with Couples Massage in Kennewick this Summer",
+   "tier": "C"
+  },
+  {
+   "post_id": 55825,
+   "where": "featured_image(attachment 55826)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/11/mineral-mud-detox-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/unearth-the-power-of-mineral-mud-detox-at-nouveau-day-spa-this-summer/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Unearth the Power of Mineral Mud Detox at Nouveau Day Spa this Summer",
+   "tier": "C"
+  },
+  {
+   "post_id": 55829,
+   "where": "featured_image(attachment 55830)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/11/cupping-massage-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/uncover-the-autumn-secrets-of-cupping-massage-in-richland-wa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Uncover the Autumn Secrets of Cupping Massage in Richland, WA",
+   "tier": "C"
+  },
+  {
+   "post_id": 55832,
+   "where": "featured_image(attachment 55833)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/11/deep-pore-cleansing-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/the-power-of-deep-pore-cleansing-in-kennewick-wa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Power of Deep Pore Cleansing in Kennewick, WA",
+   "tier": "C"
+  },
+  {
+   "post_id": 55834,
+   "where": "featured_image(attachment 55835)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/11/cupping-massage-2-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/the-art-of-cupping-massage-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "The Art of Cupping Massage at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55839,
+   "where": "featured_image(attachment 55840)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/deep-pore-cleansing-2-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/discover-deep-pore-cleansing-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Discover Deep Pore Cleansing at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55841,
+   "where": "featured_image(attachment 55842)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/hydro-spa-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/relax-with-the-vichy-waterfall-experience-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Relax with the Vichy Waterfall Experience at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55843,
+   "where": "featured_image(attachment 55844)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/vichy-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/discover-the-magic-of-the-vichy-waterfall-experience-in-umatilla-washington/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Discover the Magic of the Vichy Waterfall Experience in Umatilla, Washington",
+   "tier": "C"
+  },
+  {
+   "post_id": 55845,
+   "where": "featured_image(attachment 55846)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/pore-cleansing-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/unveil-radiant-skin-this-fall-with-deep-pore-cleansing-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Unveil Radiant Skin This Fall with Deep Pore Cleansing at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55847,
+   "where": "featured_image(attachment 55848)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/mud-detox-for-skin-scaled.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/mineral-mud-detox-holiday-glow-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Mineral Mud Detox Holiday Glow at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 55849,
+   "where": "featured_image(attachment 55850)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/12/couples-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/experience-the-magic-of-a-couples-massage-at-nouveau-day-spa/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "Experience the Magic of a Couples Massage at Nouveau Day Spa",
+   "tier": "C"
+  },
+  {
+   "post_id": 56047,
+   "where": "featured_image(attachment 55237)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/prenatal-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/prenatal-massage-90-minute/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Prenatal Massage – 90 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 56048,
+   "where": "featured_image(attachment 55229)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/nouveau-massage.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-120-minute/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Nouveau Massage – 120 Minute",
+   "tier": "C"
+  },
+  {
+   "post_id": 56053,
+   "where": "featured_image(attachment 56054)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2025/12/What-is-Lymphatic-Drainage-Massage-blof-FI.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/lymphatic-drainage-massage-kennewick-guide/",
+   "post_type": "post",
+   "post_status": "publish",
+   "title": "What is Lymphatic Drainage Massage? Benefits, Techniques, and What to Expect",
+   "tier": "C"
+  },
+  {
+   "post_id": 56123,
+   "where": "featured_image(attachment 56124)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2025/12/default_featured.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/?post_type=product&p=56123",
+   "post_type": "product",
+   "post_status": "private",
+   "title": "Private: Gift Card Product Demo",
+   "tier": "D"
+  },
+  {
+   "post_id": 56126,
+   "where": "featured_image(attachment 56124)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2025/12/default_featured.png",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/b36714c11a32134e943c3754470c79bc/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Product as gift",
+   "tier": "C"
+  },
+  {
+   "post_id": 56370,
+   "where": "featured_image(attachment 55571)",
+   "src": "https://nouveaudayold.wpenginepowered.com/wp-content/uploads/2024/05/Nouveau-Day-Spa_Interior-Gift-Cards-OVERVIEW.jpg",
+   "alt": null,
+   "tag": "_wp_attachment_image_alt empty",
+   "page_url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/gift-card-test/",
+   "post_type": "product",
+   "post_status": "publish",
+   "title": "Gift Card Test",
+   "tier": "C"
+  }
+ ],
+ "broken": [],
+ "scanned_post_types": [
+  "post",
+  "page",
+  "education",
+  "testimonial",
+  "product",
+  "wppopups-templates",
+  "gallery"
+ ],
+ "products": [
+  {
+   "id": 55175,
+   "title": "Arnica Muscle Relief",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/arnica-muscle-relief-body-treatment/",
+   "images": [
+    {
+     "attachment_id": 55176,
+     "role": "featured",
+     "file": "arnica-muscle-relief.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55177,
+   "title": "Vichy Waterfall Experience",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/vichy-waterfall-experience/",
+   "images": [
+    {
+     "attachment_id": 55178,
+     "role": "featured",
+     "file": "vichy-waterfall-experience.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55179,
+   "title": "Body Bronzing",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/body-bronzing-the-sunless-miracle/",
+   "images": [
+    {
+     "attachment_id": 55180,
+     "role": "featured",
+     "file": "body-bronzing.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55181,
+   "title": "Herbal Detox Purification",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/herbal-detox-purification/",
+   "images": [
+    {
+     "attachment_id": 55182,
+     "role": "featured",
+     "file": "herbal-detox-purification.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55183,
+   "title": "Kukui Coconut Escape",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/kukui-coconut-escape/",
+   "images": [
+    {
+     "attachment_id": 55184,
+     "role": "featured",
+     "file": "coconut-escape-body-treatment.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55185,
+   "title": "Mineral Mud Detox",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/mineral-mud-detox-body-treatment/",
+   "images": [
+    {
+     "attachment_id": 55186,
+     "role": "featured",
+     "file": "mineral-mud-detox.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55189,
+   "title": "Volcanic Mud",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/body-treatments/volcanic-mud/",
+   "images": [
+    {
+     "attachment_id": 55602,
+     "role": "featured",
+     "file": "volcanic-mud.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55190,
+   "title": "Child's Manicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/childs-manicure/",
+   "images": [
+    {
+     "attachment_id": 55193,
+     "role": "featured",
+     "file": "Childs-Manicure.jpg",
+     "alt": "Kids nail services at Kennewick’s family-friendly nail spa"
+    }
+   ]
+  },
+  {
+   "id": 55194,
+   "title": "Express Manicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/express-manicure/",
+   "images": [
+    {
+     "attachment_id": 55195,
+     "role": "featured",
+     "file": "Express-Manicure.jpg",
+     "alt": "Fresh express manicure results at top-rated nail spa Kennewick"
+    }
+   ]
+  },
+  {
+   "id": 55199,
+   "title": "Polish Change",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/polish-change/",
+   "images": [
+    {
+     "attachment_id": 55201,
+     "role": "featured",
+     "file": "Polish-Change.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55203,
+   "title": "Shellac Manicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/shellac-manicure/",
+   "images": [
+    {
+     "attachment_id": 55668,
+     "role": "featured",
+     "file": "manicure-at-nouveau.jpg",
+     "alt": "Elegant manicure at nail spa in Kennewick with soft pink polish"
+    }
+   ]
+  },
+  {
+   "id": 55205,
+   "title": "Spa Manicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/manicures/signature-spa-manicure/",
+   "images": [
+    {
+     "attachment_id": 55204,
+     "role": "featured",
+     "file": "Shellac-Manicure.jpg",
+     "alt": "Fresh shellac manicure results at top-rated nail spa Kennewick"
+    }
+   ]
+  },
+  {
+   "id": 55211,
+   "title": "Couples Massage - 30 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-30-min/",
+   "images": [
+    {
+     "attachment_id": 55217,
+     "role": "featured",
+     "file": "couples-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55214,
+   "title": "Couples Massage ? 60 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-60-min/",
+   "images": [
+    {
+     "attachment_id": 55217,
+     "role": "featured",
+     "file": "couples-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55219,
+   "title": "Couples Massage - 90 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/couples-massage-90-min/",
+   "images": [
+    {
+     "attachment_id": 55217,
+     "role": "featured",
+     "file": "couples-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55228,
+   "title": "Nouveau Massage - 30 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-30-minute/",
+   "images": [
+    {
+     "attachment_id": 55229,
+     "role": "featured",
+     "file": "nouveau-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55231,
+   "title": "Nouveau Massage - 60 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-60-minute/",
+   "images": [
+    {
+     "attachment_id": 55229,
+     "role": "featured",
+     "file": "nouveau-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55232,
+   "title": "Nouveau Massage - 90 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-90-minute/",
+   "images": [
+    {
+     "attachment_id": 55229,
+     "role": "featured",
+     "file": "nouveau-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55236,
+   "title": "Prenatal Massage - 60 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/prenatal-massage/",
+   "images": [
+    {
+     "attachment_id": 55237,
+     "role": "featured",
+     "file": "prenatal-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55238,
+   "title": "Child's Pedicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/childs-pedicure/",
+   "images": [
+    {
+     "attachment_id": 55239,
+     "role": "featured",
+     "file": "Childs-Pedicure.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55240,
+   "title": "Express Pedicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/express-pedicure/",
+   "images": [
+    {
+     "attachment_id": 55241,
+     "role": "featured",
+     "file": "Express-Pedicure.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55242,
+   "title": "Spa Pedicure",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/pedicures/nouveau-signature-pedicure/",
+   "images": [
+    {
+     "attachment_id": 55243,
+     "role": "featured",
+     "file": "Nouveau-Signature-Pedicure.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55249,
+   "title": "Acne Treatment",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/signature-skin-treatments/acne-treatments/",
+   "images": [
+    {
+     "attachment_id": 55664,
+     "role": "featured",
+     "file": "acne-treatment-at-nouveau.jpg",
+     "alt": "Smiling woman applying cream as part of acne treatment and skin care at Kennewick spa"
+    }
+   ]
+  },
+  {
+   "id": 55251,
+   "title": "Nouveau Facial",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/the-nouveau-facial/",
+   "images": [
+    {
+     "attachment_id": 55252,
+     "role": "featured",
+     "file": "the-nouveau-facial.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55256,
+   "title": "Express Dermaplaning",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/dermaplaning/",
+   "images": [
+    {
+     "attachment_id": 55598,
+     "role": "featured",
+     "file": "dermaplaning.jpg",
+     "alt": "Expert dermaplaning treatment in Kennewick, WA, gently exfoliating the skin to remove peach fuzz and reveal a smoother, brighter complexion."
+    }
+   ]
+  },
+  {
+   "id": 55259,
+   "title": "Gentleman's Escape (Mulitple)",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/for-men/the-gentlemans-escape/",
+   "images": [
+    {
+     "attachment_id": 55260,
+     "role": "featured",
+     "file": "gentlemans-escape.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55261,
+   "title": "$100 Gift Certificate",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/100-gift-certificate/",
+   "images": [
+    {
+     "attachment_id": 55262,
+     "role": "featured",
+     "file": "gift-certificate.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55271,
+   "title": "$250 Gift Certificate",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/250-gift-certificate/",
+   "images": [
+    {
+     "attachment_id": 55262,
+     "role": "featured",
+     "file": "gift-certificate.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55274,
+   "title": "$50 Gift Certificate",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/50-gift-certificate/",
+   "images": [
+    {
+     "attachment_id": 55262,
+     "role": "featured",
+     "file": "gift-certificate.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55276,
+   "title": "$500 Gift Certificate",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/gift-cards/500-gift-certificate/",
+   "images": [
+    {
+     "attachment_id": 55262,
+     "role": "featured",
+     "file": "gift-certificate.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55277,
+   "title": "Powerhouse Facial",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/powerhouse-facial/",
+   "images": [
+    {
+     "attachment_id": 55679,
+     "role": "featured",
+     "file": "powerhouse-facial.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55279,
+   "title": "All-Over Color",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/all-over-color/",
+   "images": [
+    {
+     "attachment_id": 55282,
+     "role": "featured",
+     "file": "All-Over-Color.jpg",
+     "alt": "Vibrant red hair after professional hair coloring in Kennewick, WA, showcasing rich color, shine, and expert salon styling."
+    }
+   ]
+  },
+  {
+   "id": 55284,
+   "title": "Mini Glow Facial",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/facials/mini-glow-facial/",
+   "images": [
+    {
+     "attachment_id": 55285,
+     "role": "featured",
+     "file": "skin-renewal-facial.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55292,
+   "title": "Haircut And Style - Men",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/for-men/haircut-and-style-men/",
+   "images": [
+    {
+     "attachment_id": 55293,
+     "role": "featured",
+     "file": "Mens-Haircuts.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55294,
+   "title": "Haircut And Style - Ladies",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/haircut-and-style-ladies/",
+   "images": [
+    {
+     "attachment_id": 55295,
+     "role": "featured",
+     "file": "Womens-Haircuts.jpg",
+     "alt": "A woman getting a haircut in Kennewick, WA."
+    }
+   ]
+  },
+  {
+   "id": 55296,
+   "title": "Root Touch Up",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/root-touch-up/",
+   "images": [
+    {
+     "attachment_id": 55599,
+     "role": "featured",
+     "file": "root-touchup.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55297,
+   "title": "Shampoo and Blowout",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/shampoo-and-style-ladies/",
+   "images": [
+    {
+     "attachment_id": 55298,
+     "role": "featured",
+     "file": "shampoo-and-style.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55299,
+   "title": "Custom dimensional color session",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/full-blonding-session/",
+   "images": [
+    {
+     "attachment_id": 55600,
+     "role": "featured",
+     "file": "full-blonding-session.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55300,
+   "title": "Gloss & Tone Session",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/gloss/",
+   "images": [
+    {
+     "attachment_id": 55601,
+     "role": "featured",
+     "file": "gloss.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55301,
+   "title": "Partial dimensional Color Session",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/hair-and-nails/hair/partial-blonding-session/",
+   "images": [
+    {
+     "attachment_id": 55597,
+     "role": "featured",
+     "file": "partial-blonding.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55302,
+   "title": "Hydrotherapy Micro-Silk Bath",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/hydrotherapy-micro-silk-bath/",
+   "images": [
+    {
+     "attachment_id": 55303,
+     "role": "featured",
+     "file": "hydrotherapy-silk-bath-.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55304,
+   "title": "Steam Room",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/steam-room/",
+   "images": [
+    {
+     "attachment_id": 55305,
+     "role": "featured",
+     "file": "steam-room.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55306,
+   "title": "Steamy Wonder",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/hydro-spa/steamy-wonder/",
+   "images": [
+    {
+     "attachment_id": 55307,
+     "role": "featured",
+     "file": "steamy-wonder.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55311,
+   "title": "Bio-Hydroderm Facial",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/signature-skin-treatments/bio-hydroderm/",
+   "images": [
+    {
+     "attachment_id": 55313,
+     "role": "featured",
+     "file": "bio-hydroderm-.jpg",
+     "alt": "Glowing skin after Bio-Hydraderm facial, part of advanced skin treatments in Kennewick"
+    }
+   ]
+  },
+  {
+   "id": 55318,
+   "title": "Microdermabrasion Facial",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/skin/signature-skin-treatments/microdermabrasion/",
+   "images": [
+    {
+     "attachment_id": 55319,
+     "role": "featured",
+     "file": "microdermabrasion-scaled.jpg",
+     "alt": "Client receiving microdermabrasion as part of skin treatments in Kennewick"
+    }
+   ]
+  },
+  {
+   "id": 55322,
+   "title": "Couples Retreat",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/couples-retreat/",
+   "images": [
+    {
+     "attachment_id": 55324,
+     "role": "featured",
+     "file": "couple-retreat-spa-day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55325,
+   "title": "Decadent Delight",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/decadent-delight/",
+   "images": [
+    {
+     "attachment_id": 55326,
+     "role": "featured",
+     "file": "decadent-delight.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55327,
+   "title": "Express Yourself",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/express-yourself/",
+   "images": [
+    {
+     "attachment_id": 55328,
+     "role": "featured",
+     "file": "express-yourself-spa-day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55329,
+   "title": "Gentleman's Escape (Mulitple)",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/just-for-men-the-gentlemans-escape/",
+   "images": [
+    {
+     "attachment_id": 55330,
+     "role": "featured",
+     "file": "gentlemans-escape-1.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55331,
+   "title": "Mother-To-Be Spa Day",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/mother-to-be-spa-day/",
+   "images": [
+    {
+     "attachment_id": 55332,
+     "role": "featured",
+     "file": "mother-to-be-spa-day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55333,
+   "title": "Nouveau Spa Day",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/nouveau-spa-day/",
+   "images": [
+    {
+     "attachment_id": 55334,
+     "role": "featured",
+     "file": "Nouveau-Spa-Day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55335,
+   "title": "Sweet 16 Spa Day",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/sweet-16-spa-day-teens-13-18/",
+   "images": [
+    {
+     "attachment_id": 55336,
+     "role": "featured",
+     "file": "sweet-16-spa-day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55337,
+   "title": "Detox Day",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/the-detox-day/",
+   "images": [
+    {
+     "attachment_id": 55338,
+     "role": "featured",
+     "file": "detox-day.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55339,
+   "title": "Ultimate Spa Day",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/spa-days/the-ultimate-spa-day/",
+   "images": [
+    {
+     "attachment_id": 55626,
+     "role": "featured",
+     "file": "Shutterstock_278101235-1.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55341,
+   "title": "Back",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/back/",
+   "images": [
+    {
+     "attachment_id": 55342,
+     "role": "featured",
+     "file": "Back.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55345,
+   "title": "Bikini Extended",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/bikini-extended/",
+   "images": [
+    {
+     "attachment_id": 55346,
+     "role": "featured",
+     "file": "Bikini-Extended.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55347,
+   "title": "Brazilian",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brazilian/",
+   "images": [
+    {
+     "attachment_id": 55348,
+     "role": "featured",
+     "file": "brazilian-wax.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55349,
+   "title": "Brows & Chin",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brow-chin/",
+   "images": [
+    {
+     "attachment_id": 55350,
+     "role": "featured",
+     "file": "Brows-and-Chin.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55352,
+   "title": "Brows & Lip",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brow-lip/",
+   "images": [
+    {
+     "attachment_id": 55353,
+     "role": "featured",
+     "file": "Brows-and-Lips.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55354,
+   "title": "Brow Shaping",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/brows/",
+   "images": [
+    {
+     "attachment_id": 55355,
+     "role": "featured",
+     "file": "Brows.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55357,
+   "title": "Chest",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/chest/",
+   "images": [
+    {
+     "attachment_id": 55358,
+     "role": "featured",
+     "file": "chest-.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55359,
+   "title": "Chin",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/chin/",
+   "images": [
+    {
+     "attachment_id": 55360,
+     "role": "featured",
+     "file": "Chin.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55361,
+   "title": "Half Arms",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/forearms/",
+   "images": [
+    {
+     "attachment_id": 55362,
+     "role": "featured",
+     "file": "Forearms.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55363,
+   "title": "Full Arm",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-arm/",
+   "images": [
+    {
+     "attachment_id": 55364,
+     "role": "featured",
+     "file": "Full-Arms.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55365,
+   "title": "Full Face",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-face/",
+   "images": [
+    {
+     "attachment_id": 55366,
+     "role": "featured",
+     "file": "Full-Face.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55367,
+   "title": "Full Leg",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/full-leg/",
+   "images": [
+    {
+     "attachment_id": 55368,
+     "role": "featured",
+     "file": "Full-Leg.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55369,
+   "title": "Half Leg",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/half-leg/",
+   "images": [
+    {
+     "attachment_id": 55370,
+     "role": "featured",
+     "file": "Half-Leg.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55371,
+   "title": "Underarms",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/underarms/",
+   "images": [
+    {
+     "attachment_id": 55372,
+     "role": "featured",
+     "file": "Underarms.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 55373,
+   "title": "Upper Lip",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/waxing/upper-lip/",
+   "images": [
+    {
+     "attachment_id": 55374,
+     "role": "featured",
+     "file": "Upper-Lip-Waxing.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 56047,
+   "title": "Prenatal Massage - 90 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/prenatal-massage-90-minute/",
+   "images": [
+    {
+     "attachment_id": 55237,
+     "role": "featured",
+     "file": "prenatal-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 56048,
+   "title": "Nouveau Massage - 120 Minute",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/massage-therapy/nouveau-massage-120-minute/",
+   "images": [
+    {
+     "attachment_id": 55229,
+     "role": "featured",
+     "file": "nouveau-massage.jpg",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 56123,
+   "title": "Gift Card Product Demo",
+   "url": "https://nouveaudayold.wpenginepowered.com/?post_type=product&p=56123",
+   "images": [
+    {
+     "attachment_id": 56124,
+     "role": "featured",
+     "file": "default_featured.png",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 56126,
+   "title": "Product as gift",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/b36714c11a32134e943c3754470c79bc/",
+   "images": [
+    {
+     "attachment_id": 56124,
+     "role": "featured",
+     "file": "default_featured.png",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "id": 56370,
+   "title": "Gift Card Test",
+   "url": "https://nouveaudayold.wpenginepowered.com/shop/day-spa/gift-card-test/",
+   "images": [
+    {
+     "attachment_id": 55571,
+     "role": "featured",
+     "file": "Nouveau-Day-Spa_Interior-Gift-Cards-OVERVIEW.jpg",
+     "alt": ""
+    }
+   ]
+  }
+ ],
+ "slug": "nouveauspa",
+ "crawl": "2026-10-29",
+ "target": "staging",
+ "generated": "2026-11-02-0931"
+}
