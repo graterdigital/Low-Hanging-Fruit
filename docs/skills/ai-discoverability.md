@@ -1,6 +1,6 @@
 # Handoff: ai-discoverability
 
-Status as of 2026-11-02: **built, v1. IndexNow plugin live on 28 WordPress sites (11 Kinsta 2026-10-30, 17 WP Engine 2026-11-02); 3 sites already on Yoast Premium. Key files confirmed on all 11 Kinsta sites; WP Engine serves .txt statically so the plugin's key file is unreachable there — `--apply` now writes a physical `<key>.txt`; rerun pending.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
+Status as of 2026-11-02: **built, v1. IndexNow plugin live on 28 WordPress sites (11 Kinsta 2026-10-30, 17 WP Engine 2026-11-02); 3 sites already on Yoast Premium. IndexNow done: 28 sites run Microsoft's plugin with a verified key file (11 Kinsta, 17 WP Engine), 3 more on Yoast Premium.** Report path tested end to end on hsfamilylaw (crawl 2026-10-29); robots.txt proposal, idempotence and unblock tested against the live file offline; `--probe` and `--apply-robots` written but not yet run against a real server. Mirror of the project doc `claude/skill-ai-discoverability.md`; update both.
 
 Files: `skills/ai-discoverability/SKILL.md` (the procedure), `scripts/ai_discoverability.py` (report, roster, probe, robots apply), `reports/hsfamilylaw/ai-discoverability-2026-10-29.md` (first report), `ai:` block in `clients/_template.yaml` and `clients/hsfamilylaw.yaml`.
 
@@ -49,11 +49,14 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - 2026-11-02 WP Engine rerun with the web-root fix: installed on 22plasticsurgery, 22spamd, aveluremedspa, curatemedspa, destinationaesthetics, esthetixmd, everbody, glomedspa, h-md, newradiancenow, nouveauspa, purskinclinic, reflectionscenter, skynbaratlanta, synergymedaesthetics, theagelesscenter, theclinique. blushmedspact and livingyoungcenter already on Yoast Premium. Skipped: backto30 (static), dermguy and legalatlanta (no SSH alias).
 - Key-file check: Microsoft's plugin stores the key **base64-encoded** in `indexnow-admin_api_key` (`indexnow-is_valid_api_key` = 2 once validated). hsfamilylaw: decoded key served at `/<key>.txt` on 2026-11-02, no rewrite flush needed. `confirm_key` now decodes base64; the dry run records `ai.observed.indexnow_key_served: yes` per site.
 - 2026-11-02 key-file check across the roster: all 11 Kinsta sites serve `/<key>.txt`. None of the 17 WP Engine sites do: WP Engine answers `.txt` requests at the edge (4xx) and never hands them to WordPress, so the plugin's rewrite-served key never appears and Bing cannot validate the key. Fix: write a physical `<key>.txt` in the web root (`write_key_file`, run by `--install-indexnow --apply` when the plugin is present but the file is not served). Kinsta routes unknown `.txt` paths to WordPress, which is why it worked there.
+- 2026-11-02 11:00 WP Engine: physical `<key>.txt` written on all 17 sites, each re-fetched and served. 22spamd had lost the plugin between Friday's install and today (reason unknown; reinstalled, key file written). `ai.observed.indexnow_key_served: yes` on 28 client files.
 - Yoast and IndexNow: only Yoast SEO **Premium** pings IndexNow (ruggeddepot, blushmedspact on this roster). Free Yoast has the `enable_index_now` option but no code behind it; that is why the Microsoft plugin goes on the free-Yoast sites.
 
 ## Open items
 
-- Rerun `--install-indexnow --provider wpengine` (dry, then `--apply --yes`) with the web-root fix; rerun the Kinsta dry run to confirm key files are served. ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings.
+- ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings (Yoast Premium already pings).
+- 22spamd: watch whether the plugin disappears again (a staging push over live, or a plugin-cleanup routine, would do it); the dry run will say "would install" if so.
+- No SSH alias yet: dermguy, legalatlanta (WP Engine), plus the five with no crawl; they get the plugin once `ssh_config_sync` fills them in.
 - forwardfacing / miuraboiler / setcomcorp: find out who added the block list; keep (record `training_bots: block`) or let the skill replace it.
 - First real `--probe` and `--apply-robots` run (staging first). The virtual→file handover carries Yoast's Sitemap line as static text; confirm Yoast's file editor then shows that file.
 - `--all` roster run once the API key is on the machine, to see whether any of the 40 sites blocks anything today.
