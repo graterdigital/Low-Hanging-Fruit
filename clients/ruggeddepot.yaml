@@ -50,6 +50,10 @@ ai:
   observed:                      # written by ai-discoverability; do not edit by hand
     indexnow_plugin: Yoast SEO Premium (IndexNow built in, on by default)
     indexnow_key_served: unconfirmed
+    crawl: 2026-11-02
+    blocked_search_bots: []
+    blocked_training_bots: []
+    indexnow_status: Indexnow_not_changed, Indexnow_success
 
 rules:
   # Tier overrides. Skills may be stricter than their defaults here, never looser.
