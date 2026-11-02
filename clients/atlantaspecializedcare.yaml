@@ -47,6 +47,7 @@ ai:
   policy_confirmed_by: "Grater Digital default, Greg 2026-10-30; per-client opt-out on request"
   observed:                      # written by ai-discoverability; do not edit by hand
     indexnow_plugin: IndexNow (Microsoft Bing, free)
+    indexnow_key_served: unconfirmed
 
 rules:
   visible_copy_changes: approve   # skills may be stricter than their default tier, never looser
