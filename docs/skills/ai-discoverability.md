@@ -57,7 +57,7 @@ Ahrefs recrawl: the three bot-access checks reflect robots.txt within one crawl.
 - ruggeddepot: turn Ahrefs auto-submission off in that project's crawl settings (Yoast Premium already pings).
 - 22spamd: watch whether the plugin disappears again (a staging push over live, or a plugin-cleanup routine, would do it); the dry run will say "would install" if so.
 - No SSH alias yet: dermguy, legalatlanta (WP Engine), plus the five with no crawl; they get the plugin once `ssh_config_sync` fills them in.
-- forwardfacing / miuraboiler / setcomcorp: find out who added the block list; keep (record `training_bots: block`) or let the skill replace it.
+- forwardfacing / miuraboiler / setcomcorp: Greg's call 2026-11-02 is to leave their existing block list alone for now. Do not run `--apply-robots` on them; the report will keep proposing removal until their `ai:` block is set to match live or a client decides.
 - First real `--probe` and `--apply-robots` run (staging first). The virtual→file handover carries Yoast's Sitemap line as static text; confirm Yoast's file editor then shows that file.
 - `--all` roster run once the API key is on the machine, to see whether any of the 40 sites blocks anything today.
 - Sample size: the hsfamilylaw report used 25 pages (built from cached MCP pulls); the script default is 40.
