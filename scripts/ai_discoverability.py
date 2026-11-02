@@ -772,7 +772,7 @@ def main():
     ap.add_argument("--cache", action="store_true", help="keep/reuse raw Ahrefs responses in tmp/ahrefs-cache/<slug>/")
     ap.add_argument("--apply-robots", action="store_true", dest="apply_robots", help="work on the target's robots.txt from the proposed file (dry unless --apply)")
     ap.add_argument("--apply", action="store_true")
-    ap.add_argument("--target", choices=["staging", "live"], default="staging")
+    ap.add_argument("--target", choices=["staging", "live"], default=None, help="robots: default staging; --fix: default live (staging copies go stale)")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
     ap.add_argument("--no-client-write", action="store_true", dest="nowrite", help="don't touch clients/<slug>.yaml")
@@ -789,6 +789,7 @@ def main():
     global args_nowrite; args_nowrite = args.nowrite
     load_env()
     if args.all and args.fix:
+        if args.target is None: args.target = "live"
         for f in sorted((ROOT / "clients").glob("*.yaml")):
             if f.name.startswith("_"): continue
             c = yaml.safe_load(f.read_text(encoding="utf-8")) or {}; c.setdefault("slug", f.stem)
@@ -819,6 +820,7 @@ def main():
     pid = (client.get("ahrefs") or {}).get("site_audit_project_id")
     if not pid or str(pid) in ("0", "unknown"): sys.exit(f"clients/{args.slug}.yaml has no ahrefs.site_audit_project_id")
 
+    if args.target is None: args.target = "live" if args.fix else "staging"
     if args.rollback_article:
         return rollback_article(client, args.rollback_article, args.apply)
     if args.fix:

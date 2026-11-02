@@ -14,12 +14,19 @@ $type = $job['type'] ?? 'Article';
 $rows = [];
 foreach ($job['urls'] as $url) {
     $row = ['url' => $url, 'id' => 0, 'post_type' => '', 'title' => '', 'before' => '', 'after' => $type, 'status' => ''];
-    $id = url_to_postid($url);
+    // Match on path only: the URL comes from Ahrefs with the live hostname, and this may be a staging install.
+    $path = parse_url($url, PHP_URL_PATH) ?: '/';
+    $id = url_to_postid(home_url($path));
     if (!$id) {
-        // url_to_postid misses some rewrites; try the path as a page slug chain
-        $path = trim(parse_url($url, PHP_URL_PATH), '/');
-        $p = $path ? get_page_by_path($path, OBJECT, get_post_types(['public' => true])) : null;
+        $slug = trim($path, '/');
+        $p = $slug ? get_page_by_path($slug, OBJECT, get_post_types(['public' => true])) : null;
         if ($p) $id = $p->ID;
+    }
+    if (!$id && !empty($slug)) {
+        // last resort: any public post whose post_name is the last path segment
+        $last = basename($slug);
+        $q = get_posts(['name' => $last, 'post_type' => get_post_types(['public' => true]), 'post_status' => 'publish', 'numberposts' => 1, 'fields' => 'ids']);
+        if ($q) $id = $q[0];
     }
     if (!$id) { $row['status'] = 'no post'; $rows[] = $row; continue; }
     $post = get_post($id);
