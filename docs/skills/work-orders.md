@@ -1,35 +1,36 @@
 # Handoff: work-orders
 
-Status as of 2026-11-02: specified, not built. Mirror of the project doc `claude/skill-work-orders.md`; update both. Process definition is in `docs/issue-routing.md` §3; this is the build spec.
+Status as of 2026-11-03: **built, v1.** `scripts/work_orders.py` + `skills/work-orders/SKILL.md`. Tested offline on hsfamilylaw (crawl 2026-11-03, health 97): 27 active issue types → 10 work orders (3 client decisions). The sheet upsert, `cleared` stamping and the decisions write-back were exercised against a mocked sheet; the first real `--sheet` run is Greg's, on his PC (needs the service-account key). Mirror of the project doc `claude/skill-work-orders.md`; update both. Process definition is in `docs/issue-routing.md` §3.
 
 ## Purpose
 
 Collect every item that needs a human (manual fixes, client decisions, skill-routed exceptions) into one "work orders" tab per client review sheet plus a roster view, fed from the latest Ahrefs crawl through `routes.yaml`, auto-cleared on the next crawl.
 
-## Build on
+## What was built
 
-- `routes.yaml`: handler per issue type. Add `what_to_do` and `decider` fields to the `manual` entries as they get written (the AI-discoverability `WHAT_TO_DO` dict is the model; move it into routes.yaml so there is one copy).
-- `scripts/review_sheets.py` (`gc`, `sheet_for`) and `ai_discoverability.py::push_sheet` for the upsert pattern (script owns metrics, humans own status/note, `cleared <date>` when gone).
-- `build_redirect_map.py` Ahrefs helpers; `Api` cache class in `ai_discoverability.py`.
-- Skill outputs that already list human items: fix-redirect-links `skipped` + `-options.md`; fix-images exception CSVs; ai-discoverability routed rows; site-triage "Not examined" section; fix-meta's out-of-scope list.
+- `scripts/work_orders.py <slug> [--cache] [--sheet] [--decisions]`, `--all`, `--roster [--sheet]`. Report `reports/<slug>/work-orders-<crawl>.md` + `.json`; roster `reports/_roster/work-orders-<date>.md`. Same `Api` cache layout as ai_discoverability (`tmp/ahrefs-cache/<slug>/`).
+- `routes.yaml` now carries `what_to_do` and `decider` on the six `manual` entries, on the twelve AI-discoverability checks (with a per-check `route` and `tier`, moved out of `ai_discoverability.py`, which now reads them from routes.yaml so there is one copy), on the schema rows, and `tier: decide` on the intent rows (noindex ×3, nofollow page, orphan page, the three bot-policy checks). The header of routes.yaml documents the fields and the work-order rule.
+- Rule (in the script, no list of its own): handler `manual` → always; tier `FLAG` or `decide` → yes; handler still `proposed` in `handlers:` → "skill pending" row, drops off when the skill is built; `review`/unmapped → classify; plus routed-out items from fix-redirect-links (skipped list by reason via `SKIP_REASONS`, wp_options log), fix-images (product-alt exceptions), fix-meta (routed rows), and any `*-workorders.json` a skill writes.
+- Two merges that matter: the four noindex/nofollow issues fold into one "Pages hidden from Google: confirm intent" row (one client question, not four); "Indexable page not in sitemap" / "OG URL not matching canonical" are skipped when every URL is `/page/N/` (Yoast by design, as the hsfamilylaw triage parked them).
+- Client briefs: one paragraph per `decider: client` row in the report (hidden pages, homepage-redirect targets, off-site link, bot policy, orphans have specific text; the rest get a generic paragraph from `what_to_do`).
+- Decisions: sheet row `done` + note `decision: …` → `rules.decisions` in the client file (text edit, comments kept, as `"<date> <id>: <text>"`); rows with a recorded decision are left off every later run until the line is deleted.
+- Sheet tab `work orders` (15 columns, humans own owner/status/decision_or_note), `cleared <date>` when an issue leaves the crawl, un-cleared if it returns. Agency sheet: tabs `work orders` and `by client`, rebuilt each run, id from `clients/_agency.yaml` → `review.agency_sheet_id` (file not created yet; Greg makes the blank sheet "LHF work orders" in the shared folder first).
 
-## Script
+## hsfamilylaw, crawl 2026-11-03 (health 97)
 
-`scripts/work_orders.py <slug> [--sheet] [--roster] [--all]`
+The crawl already shows fix-meta's work (description missing 59 → 13, all archives) and the archive template fixes (H1 missing and orphan pages are gone). What is left for a human, by traffic at stake: the hand-coded LegalService schema block (43 pages, 335 traffic, FLAG: validator first), Organization schema (skill pending, 164), four homepage-redirect URLs that need real targets (client decision, first `redirect-rules` input), confirm `/terms/`, `/privacy-policy/`, `/andrea-hastings-top-one-percent/` are meant to be hidden (client), the `/podcast/` off-site link (client), `/page/1/` pagination template (7 archives, diff by hand), the client-side reviews widget on `/what-our-clients-say/`, Yoast author archives (one setting), nofollow on the two legal pages (fine; skill pending), and the pasted image path on `/understanding-roles-collaborative-divorce-team/`.
 
-1. Pull `site-audit-issues` for the client; keep `crawled > 0`; map each to `routes.yaml`.
-2. Rows for: handler `manual`; any `decide` tier; routed-out items from skill reports in `reports/<slug>/` and `changes/<provider>/<slug>/` (parse the skipped/exception sections; each skill should also emit a small `*-workorders.json` going forward so parsing isn't needed).
-3. For each row pull up to 10 example URLs with `traffic` (page-explorer, one call per issue) and sum traffic as `traffic_at_stake`.
-4. Upsert to the `work orders` tab: key = issue name (or `skill:item` for routed items). Never overwrite `owner`, `status`, `decision_or_note`. Set `cleared <date>` when an issue is no longer active and status isn't already done.
-5. `--roster`: one tab `work orders` on the agency sheet (new client file key `review.agency_sheet_id` in `clients/_agency.yaml`), all open rows across clients sorted by traffic_at_stake, plus a per-client count table.
-6. Decisions: when `status` is `done` and `decision_or_note` starts with `decision:`, write the decision into the client file (`rules.decisions:` list with date) so skills can read it.
+## Next, in order
 
-## Columns
+1. Greg, on his PC: pull, `python scripts\work_orders.py hsfamilylaw --cache` (real API, same 10 rows expected), then `--sheet`, open the tab, set status/owner on a couple of rows, put `decision: …` on one, `--decisions`, check `clients/hsfamilylaw.yaml`.
+2. Create the blank "LHF work orders" sheet in the LHF Review Sheets folder, add `clients/_agency.yaml` with `review: {agency_sheet_id: <id>}`, then `--all --cache --sheet` and `--roster --sheet`.
+3. Read the roster output across the 40 projects: the point of the first run is to see whether "skill pending" rows swamp it (cmitsolutions, ruggeddepot) and whether the `review` (unclassified) rows are worth classifying now.
+4. Wire into the weekly cycle (`ai_discoverability_cycle.py` or a sibling) after the Monday crawls.
 
-`id | issue | handler | tier | urls_affected | traffic_at_stake | what_to_do | decider | owner | status | decision_or_note | opened | updated | cleared`
+## Open items
 
-## Open questions
-
-- Agency sheet location (same Drive folder, named "LHF work orders").
-- Whether a weekly cycle script (`ai_discoverability_cycle.py` exists as a model) should run work-orders across the roster after each crawl.
-- Email brief generation for `decider: client` rows: template per issue in routes.yaml, filled with the client's name and URLs.
+- Skills should write `*-workorders.json` for their human items; today the script parses fix-redirect-links' map and options log, fix-images' exception CSV and fix-meta's JSON.
+- `traffic_at_stake` is Ahrefs organic traffic summed over the top 200 flagged pages; GSC impressions where connected would be better for ordering.
+- Brief text per issue could live in routes.yaml next to `what_to_do`; today the specific briefs are in `brief_for()`.
+- Template diffs are the finding skill's job (site-triage names them; nothing writes them yet); the work order should link the diff once one exists.
+- `review_sheets.py status` does not count this tab or the `meta` tab.

@@ -67,21 +67,20 @@ TRAINING_BOTS_FALLBACK = ["Applebot-Extended", "ClaudeBot", "DeepseekBot", "GPTB
                           "anthropic-ai", "xAI-Bot"]
 NEVER_BLOCK = {"googlebot"}   # blocking Googlebot removes the page from Search itself, AI Overviews included
 
-# Where each AI Discoverability check goes. (skill, tier, one-line reason)
-ROUTES = {
-    "Indexable page blocked from all AI search bots":  ("ai-discoverability", "APPROVE", "robots.txt policy; compare with the client's `ai:` block"),
-    "Indexable page blocked from some AI search bots": ("ai-discoverability", "APPROVE", "robots.txt policy; compare with the client's `ai:` block"),
-    "Inconsistent AI training bot policy":             ("ai-discoverability", "APPROVE", "robots.txt groups disagree; one managed block fixes it"),
-    "Main content requires JavaScript rendering":      ("theme/plugin (by hand)", "FLAG", "the plugin or widget rendering the main copy client-side needs server-side output or fallback text"),
-    "Slow server response for AI crawlers":            ("hosting/cache", "FLAG", "TTFB, not a crawl fix; check server cache and the host's APM"),
-    "Page size exceeds 2 MB crawl limit":              ("fix-images", "AUTO", "page weight; images are almost always the cause"),
-    "Similar AI-generated content":                    ("content (Phase 4)", "FLAG", "near-duplicate generated copy; rewrite or consolidate"),
-    "Article page missing Article schema":             ("schema-check", "FLAG", "Ahrefs' ML classed the page as an article; Yoast emits Article only for posts"),
-    "Category page missing ItemList schema":           ("schema-check", "FLAG", "archive/listing page without ItemList"),
-    "FAQ page missing FAQPage schema":                 ("schema-check", "FLAG", "FAQ rich results are gone from Google (2026-05-07); add FAQPage only if it matches visible Q&A and the client wants it for other engines"),
-    "Organization schema missing or incomplete":       ("schema-check", "FLAG", "usually the homepage; the SEO plugin's Organization settings (name, logo, sameAs) fill it"),
-    "Product page missing Product schema":             ("schema-check", "FLAG", "WooCommerce emits Product; a non-Woo product page needs the SEO plugin's schema type set"),
-}
+# Where each AI Discoverability check goes: (skill, tier, one-line reason). Read from routes.yaml (fields route/tier/what_to_do on each
+# check) so work-orders and this script share one copy; the dict here is only the shape.
+def _routes_from_yaml():
+    routes, what = {}, {}
+    try:
+        for r in (yaml.safe_load((ROOT / "routes.yaml").read_text(encoding="utf-8")) or {}).get("routes", []):
+            if r.get("category") != CATEGORY and r.get("handler") != "ai-discoverability": continue
+            routes[r["name"]] = (r.get("route") or r["handler"], r.get("tier") or "FLAG", r.get("what_to_do") or r.get("note") or "")
+            if r.get("what_to_do"): what[r["name"]] = r["what_to_do"]
+    except Exception as e:
+        log(f"routes.yaml not read ({e}); using built-in fallbacks")
+    return routes, what
+ROUTES, WHAT_TO_DO = _routes_from_yaml()
+ROUTES.setdefault("Page size exceeds 2 MB crawl limit", ("fix-images", "AUTO", "page weight; images are almost always the cause"))
 
 args_nowrite = False
 def log(*a): print(*a, file=sys.stderr)
@@ -274,7 +273,7 @@ def write_report(client, data, robots_status, robots_text, proposed, blocked_pol
     for i in active:
         name = i["name"]; skill, tier, why = ROUTES.get(name, ("human", "FLAG", "not in this skill's routing table yet"))
         pages = per.get(name, [])
-        out += [f"### {name} ({i['crawled']}, {i.get('importance')}) → {skill} · {tier}", "", why[:1].upper() + why[1:] + ".", ""]
+        out += [f"### {name} ({i['crawled']}, {i.get('importance')}) → {skill} · {tier}", "", why[:1].upper() + why[1:] + ("" if why.endswith(".") else "."), ""]
         if "JavaScript" in name:
             sus = [x for x in (client.get("platform", {}).get("plugins_seen") or []) + (client.get("platform", {}).get("plugins_active") or []) if any(k in x for k in JS_WIDGET_PLUGINS)]
             if sus: out += [f"Client-side widget plugins on this site (from the client file): {', '.join(sorted(set(sus)))}. One of these is the usual suspect; the fix is server-rendered output or static fallback text in the template.", ""]
@@ -588,20 +587,7 @@ def install_indexnow_batch(args):
 # ---------- review sheet tab ----------
 SHEET_TAB = "ai discoverability"
 SHEET_COLS = ["check", "importance", "urls_flagged", "route", "tier", "what_to_do", "example_urls", "status", "note", "updated"]
-WHAT_TO_DO = {
-    "Indexable page blocked from all AI search bots":  "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
-    "Indexable page blocked from some AI search bots": "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
-    "Inconsistent AI training bot policy":             "robots.txt groups disagree; the managed block replaces them (skill).",
-    "Main content requires JavaScript rendering":      "Find the widget rendering the main copy client-side (reviews/feed plugin) and give it server-side output or fallback text.",
-    "Slow server response for AI crawlers":            "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
-    "Page size exceeds 2 MB crawl limit":              "Run fix-images on these pages.",
-    "Similar AI-generated content":                    "Near-duplicate generated copy; rewrite or consolidate (content phase).",
-    "Article page missing Article schema":             "Guides built as pages: set Yoast's per-page Article type (meta _yoast_wpseo_schema_article_type) so Article/author/date are emitted.",
-    "Category page missing ItemList schema":           "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
-    "FAQ page missing FAQPage schema":                 "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
-    "Organization schema missing or incomplete":       "Fill Organization in the SEO plugin: name, logo, sameAs, contact.",
-    "Product page missing Product schema":             "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
-}
+WHAT_TO_DO.setdefault("Page size exceeds 2 MB crawl limit", "Run fix-images on these pages.")
 
 def push_sheet(client, data):
     """Upsert one row per active AI Discoverability check on the client's review sheet. Humans own status/note; counts and examples refresh each run."""

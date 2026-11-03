@@ -1,5 +1,10 @@
 generated: '2026-11-02'
 source: Ahrefs site-audit-issues across 40 projects (latest crawls)
+# Per-route optional fields (read by scripts/work_orders.py and ai_discoverability.py):
+#   route: where the item really goes when the handler is a hub (ai-discoverability routes most of its checks elsewhere)
+#   tier: AUTO | APPROVE | FLAG | decide | none   (decide = a choice for a human, not a task)
+#   what_to_do: one line a human can act on; decider: agency | client
+# A route becomes a work order when its handler is manual, its tier is FLAG or decide, its handler is a skill still 'proposed', or it is unclassified ('review').
 handlers:
   fix-redirect-links: built
   fix-images: built
@@ -90,6 +95,8 @@ routes:
   issue_ids:
   - b5f8f6d0-8f91-4af3-8569-6ea442f122e7
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+  what_to_do: 'If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.'
+  decider: agency
 - name: Pages dropped from Top 10
   handler: monitor
   tier: none
@@ -134,7 +141,7 @@ routes:
   note: drafted, reviewed in the sheet, written through the SEO plugin
 - name: Noindex page
   handler: indexation-review
-  tier: APPROVE
+  tier: decide
   sites: 28
   urls: 8234
   importance: Warning
@@ -142,6 +149,8 @@ routes:
   issue_ids:
   - c64d588b-d0f4-11e7-8ed1-001e67ed4656
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+  what_to_do: Confirm each noindexed page is meant to be hidden (legal pages, press releases usually are). Record the answer in rules.decisions so nobody asks twice.
+  decider: client
 - name: Meta description too short
   handler: ignore
   tier: none
@@ -163,6 +172,8 @@ routes:
   issue_ids:
   - c64d7cbc-d0f4-11e7-8ed1-001e67ed4656
   note: hosting/cache/theme; needs a timing tool, not a crawl
+  what_to_do: 'Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host''s APM; deep pagination = cold cache. Hosting or theme ticket.'
+  decider: agency
 - name: Changed pages not submitted to IndexNow
   handler: ai-discoverability
   tier: APPROVE/FLAG
@@ -184,6 +195,8 @@ routes:
   - c64d9d0b-d0f4-11e7-8ed1-001e67ed4656
   - 838c947a-001a-11e8-823b-001e67ed4656
   note: 'almost always a template: triage names the post type, the fix is a theme edit'
+  what_to_do: 'Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.'
+  decider: agency
 - name: Multiple H1 tags
   handler: ignore
   tier: none
@@ -207,7 +220,7 @@ routes:
   note: 'one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap'
 - name: Noindex follow page
   handler: indexation-review
-  tier: APPROVE
+  tier: decide
   sites: 23
   urls: 2850
   importance: Notice
@@ -215,9 +228,11 @@ routes:
   issue_ids:
   - f485750c-10a0-11e8-a32a-001e67ed4656
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+  what_to_do: Confirm the noindex is intended; if yes, nothing to do.
+  decider: client
 - name: Article page missing Article schema
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: APPROVE
   sites: 23
   urls: 639
   importance: Notice
@@ -225,6 +240,9 @@ routes:
   issue_ids:
   - 854c2345-b0f8-4853-9677-2a2d5064bb6d
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: ai-discoverability
+  what_to_do: 'Guides built as pages: set Yoast''s per-page Article type (meta _yoast_wpseo_schema_article_type) so Article/author/date are emitted.'
+  decider: agency
 - name: 4XX page
   handler: fix-broken-links
   tier: AUTO/APPROVE
@@ -266,6 +284,8 @@ routes:
   issue_ids:
   - c873e18c-d53c-4df3-b402-dbd1d8a0e72b
   note: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual
+  what_to_do: 'Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).'
+  decider: agency
 - name: Page has nofollow outgoing internal links
   handler: nofollow-audit
   tier: APPROVE
@@ -277,6 +297,8 @@ routes:
   - 864b441c-00b1-11e8-bfe2-001e67ed4656
   - c64da7a0-d0f4-11e7-8ed1-001e67ed4656
   note: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)
+  what_to_do: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.
+  decider: agency
 - name: Open Graph URL not matching canonical
   handler: ignore
   tier: none
@@ -339,6 +361,8 @@ routes:
   - c64d81a5-d0f4-11e7-8ed1-001e67ed4656
   - ed48318e-001b-11e8-8cdd-001e67ed4656
   note: two things print a <title>; diagnose the plugin/theme once per site (cmitsolutions 494 pages = one cause)
+  what_to_do: 'Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.'
+  decider: agency
 - name: No. of referring domains dropped
   handler: monitor
   tier: none
@@ -361,7 +385,7 @@ routes:
   note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
 - name: Slow server response for AI crawlers
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 15
   urls: 1108
   importance: Warning
@@ -369,9 +393,12 @@ routes:
   issue_ids:
   - dd9582b9-6fec-4d9a-94f3-c67013fc26a1
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: hosting/cache
+  what_to_do: 'TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host''s APM.'
+  decider: agency
 - name: FAQ page missing FAQPage schema
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 15
   urls: 45
   importance: Notice
@@ -379,9 +406,12 @@ routes:
   issue_ids:
   - 7000a1e4-98df-4349-91dc-519adc4e8b11
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: schema-check
+  what_to_do: FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.
+  decider: client
 - name: Orphan page (has no incoming internal links)
   handler: indexation-review
-  tier: APPROVE
+  tier: decide
   sites: 14
   urls: 6097
   importance: Error/Warning
@@ -390,9 +420,11 @@ routes:
   - c64d7e96-d0f4-11e7-8ed1-001e67ed4656
   - 944b9296-00b2-11e8-aeb8-001e67ed4656
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+  what_to_do: 'Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.'
+  decider: client
 - name: Category page missing ItemList schema
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 14
   urls: 1122
   importance: Notice
@@ -400,9 +432,12 @@ routes:
   issue_ids:
   - a9e4af25-cc90-4451-a072-af97bc60672e
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: schema-check
+  what_to_do: 'Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.'
+  decider: agency
 - name: Structured data has schema.org validation error
   handler: schema-fix
-  tier: APPROVE
+  tier: FLAG
   sites: 13
   urls: 6623
   importance: Notice
@@ -410,9 +445,11 @@ routes:
   issue_ids:
   - c22e9647-5a8f-4352-8b38-14cb66d7f101
   note: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual
+  what_to_do: 'Run the top page through the Schema Markup Validator to get the failing property; hand-coded blocks in the theme (hsfamilylaw''s LegalService) are a template edit.'
+  decider: agency
 - name: Nofollow page
   handler: indexation-review
-  tier: APPROVE
+  tier: decide
   sites: 13
   urls: 5386
   importance: Warning
@@ -420,9 +457,11 @@ routes:
   issue_ids:
   - c64d7a9c-d0f4-11e7-8ed1-001e67ed4656
   note: usually intent; confirm with the client file before changing
+  what_to_do: Confirm the nofollow is intended (terms/privacy usually are); if yes, nothing to do.
+  decider: client
 - name: Product page missing Product schema
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 13
   urls: 148
   importance: Warning
@@ -430,9 +469,12 @@ routes:
   issue_ids:
   - d20993c3-06e6-4e1d-9888-6e1646fe2872
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: schema-check
+  what_to_do: Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.
+  decider: agency
 - name: Noindex and nofollow page
   handler: indexation-review
-  tier: APPROVE
+  tier: decide
   sites: 12
   urls: 5384
   importance: Notice
@@ -440,6 +482,8 @@ routes:
   issue_ids:
   - c64d3765-d0f4-11e7-8ed1-001e67ed4656
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
+  what_to_do: Confirm the noindex is intended; if yes, nothing to do.
+  decider: client
 - name: Page has nofollow and dofollow incoming internal links
   handler: ignore
   tier: none
@@ -633,6 +677,8 @@ routes:
   issue_ids:
   - c64d859f-d0f4-11e7-8ed1-001e67ed4656
   note: hosting/cache/theme; needs a timing tool, not a crawl
+  what_to_do: Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.
+  decider: agency
 - name: Word count changed
   handler: monitor
   tier: none
@@ -827,7 +873,7 @@ routes:
   note: change-tracking, feeds content phase; not a defect
 - name: Inconsistent AI training bot policy
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: decide
   sites: 2
   urls: 525
   importance: Notice
@@ -835,9 +881,12 @@ routes:
   issue_ids:
   - 12f55bdd-c905-4076-a19e-300ca2b63e70
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: ai-discoverability
+  what_to_do: robots.txt groups disagree; the managed block replaces them (skill).
+  decider: client
 - name: Indexable page blocked from some AI search bots
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: decide
   sites: 2
   urls: 525
   importance: Notice
@@ -845,6 +894,9 @@ routes:
   issue_ids:
   - 0f6ec0d9-db0f-4518-bc71-8a85c488dd26
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: ai-discoverability
+  what_to_do: 'Set the client''s ai: policy, then apply the managed robots.txt block (skill).'
+  decider: client
 - name: Canonical URL changed
   handler: monitor
   tier: none
@@ -866,6 +918,8 @@ routes:
   - c64da01e-d0f4-11e7-8ed1-001e67ed4656
   - 684a079a-430e-11ea-9add-001e67ed2cd7
   note: content decision
+  what_to_do: 'Content call: expand, merge or noindex the page. Client decides what the page is for.'
+  decider: client
 - name: Page has no outgoing links
   handler: manual
   tier: FLAG
@@ -877,6 +931,8 @@ routes:
   - c64d86f0-d0f4-11e7-8ed1-001e67ed4656
   - 2632db12-00b1-11e8-a1b8-001e67ed4656
   note: content decision
+  what_to_do: 'Content call: add relevant internal links or accept it (thank-you and utility pages are fine).'
+  decider: client
 - name: Multiple meta description tags
   handler: fix-meta
   tier: APPROVE
@@ -1051,7 +1107,7 @@ routes:
   note: not yet classified; rare on this roster
 - name: Main content requires JavaScript rendering
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 1
   urls: 1
   importance: Warning
@@ -1059,6 +1115,9 @@ routes:
   issue_ids:
   - a69b2b51-5202-49a2-96ae-d5c7fabdec4e
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: theme/plugin (by hand)
+  what_to_do: Find the widget rendering the main copy client-side (reviews/feed plugin) and give it server-side output or fallback text.
+  decider: agency
 - name: Non-canonical page specified as canonical one
   handler: review
   tier: '?'
@@ -1301,7 +1360,7 @@ routes:
   note: not yet classified; rare on this roster
 - name: Indexable page blocked from all AI search bots
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: decide
   sites: 0
   urls: 0
   importance: Warning
@@ -1309,6 +1368,9 @@ routes:
   issue_ids:
   - 08e86644-7958-4ea5-ba05-8af25f3a310c
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: ai-discoverability
+  what_to_do: 'Set the client''s ai: policy, then apply the managed robots.txt block (skill).'
+  decider: client
 - name: JavaScript redirects
   handler: review
   tier: '?'
@@ -1561,7 +1623,7 @@ routes:
   note: not yet classified; rare on this roster
 - name: Similar AI-generated content
   handler: ai-discoverability
-  tier: APPROVE/FLAG
+  tier: FLAG
   sites: 0
   urls: 0
   importance: Warning
@@ -1569,6 +1631,9 @@ routes:
   issue_ids:
   - 47ecb343-5ef9-47f7-b417-476a10702c22
   note: robots policy, IndexNow, Article type via sheet; the rest routed
+  route: content (Phase 4)
+  what_to_do: Near-duplicate generated copy; rewrite or consolidate (content phase).
+  decider: client
 - name: Sitemap has syntax error
   handler: review
   tier: '?'

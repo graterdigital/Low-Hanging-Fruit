@@ -1,6 +1,6 @@
 # Low-Hanging-Fruit Toolkit: Plan v1.2
 
-Last updated 2026-11-02. Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
+Last updated 2026-11-03. Pilot site: hsfamilylaw.com (Ahrefs Site Audit project 9704538).
 This doc is the source of truth for the build. Update it when a decision changes; don't rely on chat history.
 
 ## 0. Status
@@ -27,7 +27,8 @@ This doc is the source of truth for the build. Update it when a decision changes
 
 **Roster-wide issue routing (2026-11-02)**
 - `routes.yaml` maps all 184 Ahrefs issue types to a handler; `docs/issue-routing.md` has the analysis and the manual-fix process; rollup data in `reports/_roster/`.
-- New skills queued, in order: `fix-social-tags` (AUTO, 23 sites), `fix-broken-links` (22 sites), `indexation-review` (31 sites), `redirect-rules`, `schema-fix` (21 sites), `nofollow-audit` (ruggeddepot 8k / miuraboiler 3k). Spec'd: `work-orders` (`docs/skills/work-orders.md`) for everything manual.
+- New skills queued, in order: `fix-social-tags` (AUTO, 23 sites), `fix-broken-links` (22 sites), `indexation-review` (31 sites), `redirect-rules`, `schema-fix` (21 sites), `nofollow-audit` (ruggeddepot 8k / miuraboiler 3k).
+- `work-orders` v1 built 2026-11-03 (`scripts/work_orders.py`, `skills/work-orders/SKILL.md`): manual/FLAG/decide/skill-pending issues plus skill-routed exceptions → `reports/<slug>/work-orders-<crawl>.md`, `work orders` sheet tab, roster view, client briefs, decisions written back to `rules.decisions`. routes.yaml now carries `what_to_do`/`decider`/per-check `route` (ai_discoverability reads them from there). hsfamilylaw: 10 items, 3 client decisions. First real sheet run and the agency sheet (`clients/_agency.yaml`) are next. Handoff: `docs/skills/work-orders.md`.
 
 **Roster facts that shape the build**
 - 31 of 35 WordPress sites run Yoast; 2 run AIOSEO (cmitsolutions, glomedspa). No Rank Math.
@@ -101,6 +102,7 @@ Second test site, livingyoungcenter.com (health 48): three sitewide links (a fin
 - `fix-images` (weight in place AUTO; alt and broken images APPROVE). **Done on hsfamilylaw 2026-10-29 (live). Recrawl + WebP-serving re-probe pending; `alt-text-apply` next.** Format conversion is out of scope (plugin/host job: Kinsta CDN).
 - `indexation-review` (archives, sitemap, noindex, APPROVE)
 - `schema-check` (FLAG)
+- `work-orders` (read-only; the human backlog). **Built 2026-11-03 (v1); pilot report on hsfamilylaw.** Handoff: `docs/skills/work-orders.md`.
 - `verify`: compare the next crawl against the baseline.
 
 **Phase 2: Analytics validator.** FLAG only.
