@@ -50,6 +50,8 @@ python scripts/fix_images.py <slug>
 
 Pulls each oversized file over `scp` into `changes/<provider>/<slug>/backup/<stamp>-fix-images-staging/orig/`, compresses it into `new/`, and writes `changes/<provider>/<slug>/<stamp>-fix-images-staging-dry.md` with before/after bytes and the steps per file. Nothing is pushed. Open a few of the `new/` files next to their `orig/` at 100%: headshots and anything with gradients or text are the ones to look at. If one looks wrong, exclude it with `--only` on the next run or raise `--png-quality` (pngquant only, e.g. `80-95`).
 
+`--lossless` never changes pixels: PNGs go through oxipng/optipng only, JPEGs through jpegoptim, no resize, no pngquant; `--min-gain` drops to 3. Use it for photographs saved as PNG (headshots) when the client will not accept any visible change; expect 5–25%. Needs `oxipng` (or `optipng`) on PATH; without one the file is skipped, never quantized.
+
 Defaults: `--max-edge 2560`, `--min-gain 15` (a file that doesn't shrink by at least 15% is left alone), `--png-quality 80-98` (pngquant's floor–ceiling; visually lossless on photos, and pngquant refuses rather than going below the floor), `--jpeg-quality 82`. Flat graphics can take `--png-quality 65-85` with `--only` to target them.
 
 **Look before you apply, every time.** Open the headshots and anything with a smooth gradient from `new/` next to `orig/` at 100%. The staging apply is not the review step; it is confirmation of a review already done. A run that was applied twice (a second pass over already-quantized files) compounds the damage, so never rerun apply on the same files without restoring first.
@@ -106,6 +108,8 @@ If no WebP delivery exists on the site, say so in the handoff; on Kinsta, turn o
 Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files kept under `--min-gain`. Record the result in the client file (`platform.image_optimization_plugin`, and a note on what the probe found) and in the skill handoff doc.
 
 ## Rollback
+
+`scripts/restore_images.py <slug> --target <staging|live> --all|--only <names> [--webp]` pushes the `orig/` copies back from the **oldest** backup for that target (a later run's `orig/` is an earlier run's output). Dry runs count: they pull the same files, their rows just say `would replace`. The script verifies each file's byte size on the server afterwards and exits non-zero when nothing matched instead of flushing caches over nothing.
 
 `backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. `python scripts/restore_images.py <slug> --target <t> --only <names>` (or `--all`) pushes them back, rewrites the `.webp` siblings with `--webp`, and purges caches; it defaults to the **oldest** run's backup for that target, because a later run's `orig/` is the earlier run's output, not the real original. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
 
