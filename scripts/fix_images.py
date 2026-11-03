@@ -83,7 +83,7 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_qual
     """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name.
     lossless=True: no pngquant, no Pillow quantize, no JPEG quality cap. max_edge still applies (a downscale changes
     pixels, but it is a plain resample, not a palette); after that the file is re-packed losslessly with oxipng/optipng
-    or jpegoptim. Without a resize expect 5-25% on photos. If no lossless tool is on PATH the file is SKIPPED."""
+    or jpegoptim, falling back to Pillow's own lossless PNG writer. Without a resize expect 5-25% on photos."""
     from PIL import Image
     steps = []
     ext = src.suffix.lower()
@@ -114,7 +114,9 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_qual
                         r = subprocess.run(args, capture_output=True)
                         if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
                         steps.append(f"{opt} lossless"); return steps
-                shutil.copyfile(src, dst); steps.append("SKIPPED: lossless needs `pip install pyoxipng` (or oxipng/optipng on PATH)"); return steps
+                # Pillow fallback: same pixels, zlib level 9 with filter search. A few % behind oxipng, nothing to install.
+                im2 = Image.open(work); im2.load()
+                im2.save(dst, "PNG", optimize=True, compress_level=9); steps.append("Pillow lossless (zlib 9)"); return steps
             if ext in (".jpg", ".jpeg"):
                 if have("jpegoptim"):
                     shutil.copyfile(work, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
