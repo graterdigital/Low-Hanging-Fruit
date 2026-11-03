@@ -1,6 +1,6 @@
 # Handoff: fix-images
 
-Status as of 2026-10-30 12:50. Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+Status as of 2026-11-03 (staging headshot restore fix + --lossless; see the 2026-11-03 section). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
 
 ## What the skill does
 
