@@ -102,13 +102,19 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_qual
         # no quantizer, no JPEG re-encode: only a lossless re-pack of the (possibly resized) pixels
         try:
             if ext == ".png":
+                try:
+                    import oxipng   # pip install pyoxipng: same engine as the oxipng binary, no PATH setup
+                    oxipng.optimize(str(work), str(dst), level=4, strip=oxipng.StripChunks.safe())
+                    steps.append("pyoxipng lossless"); return steps
+                except ImportError:
+                    pass
                 for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", "--out", str(dst), str(work)]),
                                   ("optipng", ["optipng", "-o5", "-strip", "all", "-quiet", "-out", str(dst), str(work)])):
                     if have(opt):
                         r = subprocess.run(args, capture_output=True)
                         if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
                         steps.append(f"{opt} lossless"); return steps
-                shutil.copyfile(src, dst); steps.append("SKIPPED: no oxipng/optipng on PATH (lossless needs one)"); return steps
+                shutil.copyfile(src, dst); steps.append("SKIPPED: lossless needs `pip install pyoxipng` (or oxipng/optipng on PATH)"); return steps
             if ext in (".jpg", ".jpeg"):
                 if have("jpegoptim"):
                     shutil.copyfile(work, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
