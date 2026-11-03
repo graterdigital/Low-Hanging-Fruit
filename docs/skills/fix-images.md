@@ -22,7 +22,7 @@ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng`
 ## 2026-11-03: staging restore that did nothing, and `--lossless`
 
 - Greg ran `restore_images.py hsfamilylaw --target staging --all --webp` on 11-02 and staging still showed the posterised headshots. Cause: the 10-30 "oldest run" default picked `2026-10-29-1443-fix-images-staging`, which is the **dry run**; its `result.json` rows say `would replace`, and the restore only accepted `replaced`, so it matched 0 files, pushed nothing, flushed caches and wrote a "Restored 0" log. Fixed: dry-run rows are restorable (their `orig/` is the same server pull), the picker takes the oldest run that has rows, 0 matches is an error, and every pushed file is size-checked on the server. Live was never affected (its restore on 10-29 used `--result` on the 15:03 apply).
-- `fix_images.py --lossless`: oxipng/optipng for PNG, jpegoptim for JPEG, no pngquant, no Pillow, no resize, `--min-gain` 3. For photos-as-PNG this is a 5–25% shave, not the 60–80% pngquant gives; it is the only mode that leaves pixels untouched. Needs `oxipng` on Greg's PC (`winget install oxipng` or the GitHub release zip on PATH).
+- `fix_images.py --lossless`: oxipng/optipng for PNG, jpegoptim for JPEG, no pngquant, no Pillow quantizer, `--min-gain` 3. `--max-edge` still resizes first (Lanczos, then lossless re-pack); on its own the re-pack is a 5–25% shave, with `--max-edge 1200` the headshots should land ~60% smaller. Sub-sizes are regenerated from the resized original on apply and then re-packed the same way. Needs `oxipng` on Greg's PC (`winget install oxipng` or the GitHub release zip on PATH).
 
 ## Where things stand (2026-10-30 12:50)
 

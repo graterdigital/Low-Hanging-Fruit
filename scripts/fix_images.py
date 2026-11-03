@@ -81,30 +81,15 @@ def have(bin_): return shutil.which(bin_) is not None
 
 def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_quality=82, allow_pillow=False, lossless=False):
     """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name.
-    lossless=True: pixels are never changed. PNGs go through oxipng/optipng only (no pngquant, no Pillow quantize),
-    JPEGs through jpegoptim without a quality cap; no resize. Expect 5-25% on photos, more on PNGs saved without
-    compression. If no lossless tool is on PATH the file is SKIPPED, never quantized."""
+    lossless=True: no pngquant, no Pillow quantize, no JPEG quality cap. max_edge still applies (a downscale changes
+    pixels, but it is a plain resample, not a palette); after that the file is re-packed losslessly with oxipng/optipng
+    or jpegoptim. Without a resize expect 5-25% on photos. If no lossless tool is on PATH the file is SKIPPED."""
     from PIL import Image
     steps = []
     ext = src.suffix.lower()
     im = Image.open(src); im.load()
     w, h = im.size
     work = src
-    if lossless:
-        if ext == ".png":
-            for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", "--out", str(dst), str(src)]),
-                              ("optipng", ["optipng", "-o5", "-strip", "all", "-quiet", "-out", str(dst), str(src)])):
-                if have(opt):
-                    r = subprocess.run(args, capture_output=True)
-                    if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
-                    steps.append(f"{opt} lossless"); return steps
-            shutil.copyfile(src, dst); steps.append("SKIPPED: no oxipng/optipng on PATH (lossless needs one)"); return steps
-        if ext in (".jpg", ".jpeg"):
-            if have("jpegoptim"):
-                shutil.copyfile(src, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
-                steps.append("jpegoptim lossless"); return steps
-            shutil.copyfile(src, dst); steps.append("SKIPPED: no jpegoptim on PATH (lossless needs it)"); return steps
-        shutil.copyfile(src, dst); steps.append("unsupported type, copied"); return steps
     if max(w, h) > max_edge:
         scale = max_edge / max(w, h)
         im = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
@@ -113,6 +98,25 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_qual
         if ext == ".png": im.save(tmp, "PNG", optimize=True)
         else: im.save(tmp, "JPEG", quality=95, subsampling=0)
         work = tmp
+    if lossless:
+        # no quantizer, no JPEG re-encode: only a lossless re-pack of the (possibly resized) pixels
+        try:
+            if ext == ".png":
+                for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", "--out", str(dst), str(work)]),
+                                  ("optipng", ["optipng", "-o5", "-strip", "all", "-quiet", "-out", str(dst), str(work)])):
+                    if have(opt):
+                        r = subprocess.run(args, capture_output=True)
+                        if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
+                        steps.append(f"{opt} lossless"); return steps
+                shutil.copyfile(src, dst); steps.append("SKIPPED: no oxipng/optipng on PATH (lossless needs one)"); return steps
+            if ext in (".jpg", ".jpeg"):
+                if have("jpegoptim"):
+                    shutil.copyfile(work, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
+                    steps.append("jpegoptim lossless"); return steps
+                shutil.copyfile(src, dst); steps.append("SKIPPED: no jpegoptim on PATH (lossless needs it)"); return steps
+            shutil.copyfile(work, dst); steps.append("unsupported type, copied"); return steps
+        finally:
+            if work != src: Path(work).unlink(missing_ok=True)
     if ext == ".png":
         if have("pngquant"):
             r = subprocess.run(["pngquant", "--quality", png_quality, "--speed", "1", "--strip", "--force", "--output", str(dst), str(work)], capture_output=True)
@@ -430,7 +434,7 @@ def main(argv=None):
     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
-    ap.add_argument("--lossless", action="store_true", help="never change pixels: oxipng/optipng for PNG, jpegoptim for JPEG, no resize, no pngquant. Photos saved as PNG only shrink 5-25%% this way; --min-gain drops to 3 unless given")
+    ap.add_argument("--lossless", action="store_true", help="no quantizer, no JPEG re-encode: oxipng/optipng for PNG, jpegoptim for JPEG. --max-edge still applies (a Lanczos downscale, then lossless re-pack at the new size). Without a resize, photos saved as PNG only shrink 5-25%%; --min-gain drops to 3 unless given")
     ap.add_argument("--allow-pillow", action="store_true", help="let Pillow's 256-colour quantizer handle PNGs when pngquant is missing. OFF by default: it visibly damages photos (hsfamilylaw headshots, 2026-10-29)")
     ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
@@ -532,8 +536,7 @@ def main(argv=None):
         print(f"note: inventory was taken on {inv.get('target')}; file paths are re-resolved on {args.target} by relative upload path")
     mode = "apply" if args.apply else "dry"
     if args.lossless and "--min-gain" not in sys.argv: args.min_gain = 3
-    if args.lossless: args.max_edge = 10 ** 6   # never resize in lossless mode
-    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, {'LOSSLESS, no resize' if args.lossless else f'max edge {args.max_edge}px'}, min gain {args.min_gain}%")
+    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, {'LOSSLESS, ' if args.lossless else ''}max edge {args.max_edge}px, min gain {args.min_gain}%")
     if args.target == "live" and args.apply: confirm_live(args.slug, len(files), alias, args.yes)
 
     bdir = cdir / "backup" / f"{stamp}-fix-images-{args.target}"; (bdir / "orig").mkdir(parents=True); (bdir / "new").mkdir()
@@ -606,7 +609,7 @@ def main(argv=None):
         print(f"Object cache flush: {'ok' if flush[0] else 'FAILED'}; host/CDN cache purge: {'ok' if cdn[0] else 'not available'} {cdn[1]}")
 
     before = sum(r["before"] or 0 for r in results); after = sum((r["after"] if r["action"] in ("replaced", "would replace") else r["before"]) or 0 for r in results)
-    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · {'lossless (oxipng/optipng, jpegoptim; no resize)' if args.lossless else f'max edge {args.max_edge}px · PNG {args.png_quality} · JPEG q{args.jpeg_quality}'} · min gain {args.min_gain}%", "",
+    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · max edge {args.max_edge}px · {'lossless (oxipng/optipng, jpegoptim)' if args.lossless else f'PNG {args.png_quality} · JPEG q{args.jpeg_quality}'} · min gain {args.min_gain}%", "",
            f"Tools: pngquant {'yes' if have('pngquant') else 'no (Pillow quantize)'}, oxipng {'yes' if have('oxipng') else 'no'}, optipng {'yes' if have('optipng') else 'no'}, jpegoptim {'yes' if have('jpegoptim') else 'no'}", "",
            f"**{fmt(before)} → {fmt(after)}** across {len(results)} files ({len([r for r in results if r['action'] in ('replaced','would replace')])} {'replaced' if mode=='apply' else 'would be replaced'}).", "",
            "| file | kind | attachment | before | after | gain | steps | action |", "|---|---|---|---|---|---|---|---|"]
