@@ -155,14 +155,22 @@ def page_kind(row):
     if ml.startswith("/Product") or "/product/" in urlpath(row["url"]): return "product"
     return "core"
 
+BRAND_NOUNS = {"spa", "center", "centre", "clinic", "law", "llc", "inc", "firm", "group", "medical", "surgery", "aesthetics", "dental", "company", "associates", "attorneys", "lawyers", "dermatology", "plastic"}
+GENERIC = BRAND_NOUNS | {"the", "and", "&", "of", "med", "co", "in", "near", "me"}
+
 def classify_title(row, brand, sep):
     """What Google did with the title, and whether a new title is worth proposing. Returns (kind, proposed, why)."""
     title = first(row.get("title")); serp = (row.get("serp_title") or "").strip(); h1 = first(row.get("h1")).strip()
     path = urlpath(row["url"]); core = without_brand(title, brand)
-    # a second, different brand-looking tail (typo: "Hasting Shadmehry")
     m = list(SEP_RE.finditer(title)); tail = title[m[-1].end():].strip() if m else ""
+    head = title[: m[-1].start()].strip() if m else title.strip()      # title minus whatever its last segment is
+    # a second, different brand-looking tail (typo: "Hasting Shadmehry")
     if brand and tail and tail.lower() != brand.lower() and 0 < lev(tail, brand) <= 2:
-        return "brand typo", f"{title[: m[-1].start()].strip()}{sep}{brand}", f"brand suffix reads '{tail}'"
+        return "brand typo", f"{head}{sep}{brand}", f"brand suffix reads '{tail}'"
+    # a tail that is some OTHER business's name (template left over from a previous site build)
+    tw = set(tail.lower().split())
+    if brand and tail and len(tail) <= 50 and (tw & BRAND_NOUNS) and not (tw - GENERIC) & (set(brand.lower().split()) - GENERIC):
+        return "other brand", f"{head}{sep}{brand}", f"title ends in '{tail}', which is not this site's brand"
     if re.search(r"[a-z][A-Z][a-z]", core) and h1:   # two titles glued together ("LinksPrenuptial")
         return "glued", f"{h1}{sep}{brand}" if brand else h1, "title is two titles concatenated; H1 used instead"
     years_t = set(re.findall(r"\b20\d\d\b", title)); years_u = set(re.findall(r"\b20\d\d\b", path + " " + h1))
@@ -173,13 +181,14 @@ def classify_title(row, brand, sep):
     if row.get("is_page_title_used_in_serp") is True: return "used as-is", "", ""
     if not serp: return "no serp title", "", "Ahrefs has no SERP title for this page"
     s = serp.rstrip(" .…").lower()
-    if s == core.lower() or s == title.lower(): return "brand dropped", "", "Google shows the title minus the brand suffix; normal, nothing to do"
-    if serp.endswith(("...", "…")) and core.lower().startswith(s): return "truncated", "", "display truncation only"
+    if s in (core.lower(), title.lower(), head.lower()): return "brand dropped", "", "Google shows the title minus its suffix; normal, nothing to do"
+    if serp.endswith(("...", "…")) and (title.lower().startswith(s) or core.lower().startswith(s)): return "truncated", "", "display truncation only"
     if h1 and s == without_brand(h1, brand).lower():
         return "rewritten to H1", f"{h1}{sep}{brand}" if brand else h1, "Google replaced the title with the H1; proposing the H1 as the title"
     if brand and s.startswith(brand.lower()):
         return "brand moved first", "", "Google leads with the brand (navigational queries); leave"
-    return "rewritten", f"{serp.rstrip(' .…')}{sep}{brand}" if brand and not serp.endswith(("...", "…")) else "", f"Google shows '{serp}'"
+    if serp.endswith(("...", "…")): return "rewritten (truncated)", "", f"Google shows '{serp}'; cut off, so nothing proposed"
+    return "rewritten", f"{serp.rstrip(' .…')}{sep}{brand}" if brand else serp, f"Google shows '{serp}'"
 
 # ---------- page text ----------
 def main_text(md, max_chars=3500):
@@ -222,15 +231,31 @@ def template_bio(name, role, areas, brand, city):
     r = (role or "attorney").lower()
     return f"{name} is {'an' if r[0] in 'aeiou' else 'a'} {r} at {brand or 'the firm'}{where}, practicing {a}."
 
-def model_draft(client, row, text, brand, sep, top_query):
-    """One Anthropic API call. Returns {"title":..,"description":..} or None. ANTHROPIC_API_KEY from .env; model from LHF_DRAFT_MODEL."""
+def model_draft(client, row, text, brand, sep, top_query, cache_dir=None):
+    """One Anthropic API call. Returns {"title":..,"description":..} or None. ANTHROPIC_API_KEY from .env; model from LHF_DRAFT_MODEL.
+    With --cache the result is kept in tmp/ahrefs-cache/<slug>/draft-<path>.json keyed by a hash of the inputs, so reruns are free."""
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key: return None
+    import hashlib
+    sig = hashlib.sha1((text + str(top_query) + str(row.get("want_title")) + PROMPT_VERSION).encode("utf-8")).hexdigest()[:12]
+    cf = cache_dir / ("draft-" + re.sub(r"\W+", "-", urlpath(row["url"])).strip("-")[:80] + ".json") if cache_dir else None
+    if cf and cf.exists():
+        try:
+            c = json.loads(cf.read_text(encoding="utf-8"))
+            if c.get("sig") == sig: return c.get("draft")
+        except Exception: pass
+    got = _model_draft(client, row, text, brand, sep, top_query, key)
+    if cf and got: cf.write_text(json.dumps({"sig": sig, "draft": got}, ensure_ascii=False), encoding="utf-8")
+    return got
+
+PROMPT_VERSION = "2"
+
+def _model_draft(client, row, text, brand, sep, top_query, key):
     vertical = client.get("vertical", "")
     rules = (f"You write SEO titles and meta descriptions for {client.get('name', client['domain'])} ({client['domain']}), vertical: {vertical}.\n"
              "Rules (Google Search Central): describe the page accurately, unique per page, no keyword lists, no city lists with pipes, no stale years, "
              f"one brand suffix at the end of a title exactly as '{sep.strip()} {brand}' when a brand is given. No character limit, but keep the title one phrase and the description one or two sentences "
-             "that answer 'what will I find here'. Work the top search query in naturally only if the page really answers it. Make no claim the page does not make: "
+             "that answer 'what will I find here'. State what the page contains; no calls to action (no 'book', 'contact', 'call today', 'learn more'), no 'Meet X' openers, no filler about appointments unless the page is a contact or booking page. Work the top search query in naturally only if the page really answers it. Make no claim the page does not make: "
              "for a law firm no outcome promises or superlatives; for a medical spa no treatment-result claims. Write from the page text only. "
              "Return JSON only: {\"title\": \"...\" or \"\", \"description\": \"...\"}. Return an empty title unless asked to draft one.")
     ask = (f"URL: {row['url']}\nH1: {first(row.get('h1'))}\nCurrent title: {first(row.get('title'))}\nGoogle shows: {row.get('serp_title') or ''}\n"
@@ -282,7 +307,7 @@ def build_queue(client, data, api, args):
             cur_d = first(p.get("meta_description"))
             if yrs and new_y and yrs[-1] in cur_d and yrs[-1] != new_y[-1]:
                 stale_desc = cur_d.replace(yrs[-1], new_y[-1]); want_d = True
-        if not want_d and not want_t and tkind in ("brand dropped", "truncated", "used as-is", "brand moved first", "no serp title", ""):
+        if not want_d and not want_t:
             # nothing to write; keep it in the report's "no action" list only
             rows.append({"url": url, "path": path, "page_type": kind, "action": "none", "title_kind": tkind, "why": twhy, "gsc": g, "traffic": p.get("traffic") or 0,
                          "current_title": first(p.get("title")), "serp_title": p.get("serp_title") or "", "current_description": first(p.get("meta_description")), "reasons": p["reasons"]})
@@ -311,7 +336,7 @@ def build_queue(client, data, api, args):
             r["text_chars"] = len(text)
             got = None
             if args.draft and text:
-                got = model_draft(client, r, text, brand, sep, r["gsc"].get("top_keyword"))
+                got = model_draft(client, r, text, brand, sep, r["gsc"].get("top_keyword"), api.dir)
             if got and got.get("description"):
                 r["proposed_description"] = got["description"].strip(); r["basis"].append("description: from page text (model draft)")
                 if got.get("title") and r["want_title"] and not r["proposed_title"]: r["proposed_title"] = got["title"].strip(); r["basis"].append("title: model draft")
@@ -323,6 +348,7 @@ def build_queue(client, data, api, args):
         elif r["want_description"] and not r["proposed_description"]:
             r["basis"].append("description: needs draft (page text not pulled; raise --max-pages)")
         if seo == "aioseo": r["basis"].append("manual in AIOSEO (no writer yet)")
+        r["basis"] = list(dict.fromkeys(r["basis"]))
     return {"brand": brand, "sep": sep, "rows": rows, "todo": todo, "routed": routed, "seo_plugin": seo}
 
 # ---------- report ----------
@@ -417,9 +443,14 @@ def push_sheet(client, data, q):
             updates.append((rn, merged))
         else:
             appends.append(new)
+    queued = {r["url"] for r in q["todo"]}; dropped = 0
+    ci = {c: i for i, c in enumerate(SHEET_COLS)}
+    for url, (rn, old) in existing.items():
+        if url in queued or old[ci["status"]] != "pending" or old[ci["new_title"]].strip() or old[ci["new_description"]].strip(): continue
+        updates.append((rn, old[:ci["status"]] + [f"dropped {today}", old[ci["note"]], f"{today} (no longer in the queue)"])); dropped += 1
     for rn, v in updates: ws.update(range_name=f"A{rn}:{chr(64 + len(SHEET_COLS))}{rn}", values=[v], value_input_option="RAW")
     if appends: ws.append_rows(appends, value_input_option="RAW")
-    return f"{len(appends)} added, {len(updates)} refreshed on '{SHEET_TAB}' ({sh.url})"
+    return f"{len(appends)} added, {len(updates) - dropped} refreshed, {dropped} dropped on '{SHEET_TAB}' ({sh.url})"
 
 # ---------- apply ----------
 def ssh(alias, cmd, inp=None):

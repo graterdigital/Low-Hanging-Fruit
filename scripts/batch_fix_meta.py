@@ -54,7 +54,7 @@ def main():
     ap.add_argument("--max-pages", type=int, default=40, dest="max_pages")
     ap.add_argument("--no-draft", action="store_true", dest="no_draft", help="review mode: skip model drafts even if ANTHROPIC_API_KEY is set")
     ap.add_argument("--no-sheet", action="store_true", dest="no_sheet", help="review mode: reports only")
-    ap.add_argument("--cache", action="store_true")
+    ap.add_argument("--no-cache", action="store_true", dest="no_cache", help="re-pull Ahrefs responses and re-draft instead of reusing tmp/ahrefs-cache/")
     ap.add_argument("--fix", action="store_true"); ap.add_argument("--apply", action="store_true")
     ap.add_argument("--target", choices=["staging", "live"], default="staging"); ap.add_argument("--yes", action="store_true")
     a = ap.parse_args()
@@ -77,7 +77,7 @@ def main():
             res = "ok" if code == 0 else "error"
             detail = re.sub(r"^\S+: ", "", last)[:220]
         else:
-            args = [slug, "--probe", "--max-pages", str(a.max_pages)] + (["--draft"] if draft else []) + (["--cache"] if a.cache else [])
+            args = [slug, "--probe", "--max-pages", str(a.max_pages)] + (["--draft"] if draft else []) + ([] if a.no_cache else ["--cache"])
             code, out = run(args)
             if code != 0:
                 res, detail = "error", (out.strip().splitlines() or [""])[-1][:220]
