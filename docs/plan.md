@@ -30,6 +30,9 @@ This doc is the source of truth for the build. Update it when a decision changes
 - New skills queued, in order: `fix-social-tags` (AUTO, 23 sites), `fix-broken-links` (22 sites), `indexation-review` (31 sites), `redirect-rules`, `schema-fix` (21 sites), `nofollow-audit` (ruggeddepot 8k / miuraboiler 3k).
 - `work-orders` v1 built 2026-11-03 (`scripts/work_orders.py`, `skills/work-orders/SKILL.md`): manual/FLAG/decide/skill-pending issues plus skill-routed exceptions → `reports/<slug>/work-orders-<crawl>.md`, `work orders` sheet tab, roster view, client briefs, decisions written back to `rules.decisions`. routes.yaml now carries `what_to_do`/`decider`/per-check `route` (ai_discoverability reads them from there). hsfamilylaw: 10 items, 3 client decisions. 2026-11-09: sheet carries the whole report (`client_brief` column, `work orders summary` tab); first fleet run done on all 41 clients (31 sheets). Traffic at stake waiting on unbuilt skills: fix-broken-links 18k, fix-social-tags 12.8k, schema-fix 6.8k → build order. reflectionscenter (health 14, 38k at stake) is the outlier site. Agency sheet (`clients/_agency.yaml`) and 10 client sheets still to create. Handoff: `docs/skills/work-orders.md`.
 
+**Roster (2026-11-09)**
+- 34 active client files. Seven retired 2026-11-09 and moved to `clients/_retired/` (out of every batch): backto30, naturalenclosures, legalatlanta, reflectionscenter, liftaesthetics, nouveauspa, sjklawfirm.
+
 **Roster facts that shape the build**
 - 31 of 35 WordPress sites run Yoast; 2 run AIOSEO (cmitsolutions, glomedspa). No Rank Math.
 - Builders: Elementor 14, block editor 12, WPBakery 3, Divi 1, Oxygen 1. hsfamilylaw is ACF Pro + classic editor, so links live mostly in postmeta.
