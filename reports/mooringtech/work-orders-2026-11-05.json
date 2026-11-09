@@ -1,0 +1,990 @@
+{
+ "slug": "mooringtech",
+ "domain": "mooringtech.com",
+ "crawl": "2026-11-05",
+ "health": 93,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 48,
+   "traffic_at_stake": 51,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/collections/cases-straps",
+     19,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-tablets",
+     11,
+     "traffic"
+    ],
+    [
+     "/collections/havis-vehicle-mounts-and-docking-stations",
+     8,
+     "traffic"
+    ],
+    [
+     "/collections/power-adapters",
+     6,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-batteries",
+     5,
+     "traffic"
+    ],
+    [
+     "/collections/toughbook-55-vehicle-docks",
+     1,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-cf-33-accessories",
+     1,
+     "traffic"
+    ],
+    [
+     "/blogs/news?page=3",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-g2-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections/toughbook-33-vehicle-docking-stations",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 41,
+   "traffic_at_stake": 51,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/collections/cases-straps",
+     19,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-tablets",
+     11,
+     "traffic"
+    ],
+    [
+     "/collections/havis-vehicle-mounts-and-docking-stations",
+     8,
+     "traffic"
+    ],
+    [
+     "/collections/power-adapters",
+     6,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-batteries",
+     5,
+     "traffic"
+    ],
+    [
+     "/collections/toughbook-55-vehicle-docks",
+     1,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-cf-33-accessories",
+     1,
+     "traffic"
+    ],
+    [
+     "/collections/panasonic-toughbook-g2-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections/toughbook-33-vehicle-docking-stations",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections/featured",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-url-has-no-incoming-internal-links",
+   "issue": "Canonical URL has no incoming internal links",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 330,
+   "traffic_at_stake": 51,
+   "traffic_note": " (top 200 of 330)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/products/lps-138",
+     20,
+     "traffic"
+    ],
+    [
+     "/products/cf-veb331u",
+     14,
+     "traffic"
+    ],
+    [
+     "/products/cf-33uz02ham",
+     10,
+     "traffic"
+    ],
+    [
+     "/products/cf-lnddc120",
+     4,
+     "traffic"
+    ],
+    [
+     "/products/fz-vzsu1hu",
+     3,
+     "traffic"
+    ],
+    [
+     "/products/cf-33tz-0mam",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-55jz00jbm",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/ds-gtc-413",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-vzsut11u",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/pkg-ds-gtc-902-bw",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 492,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/search?q=+cradles",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/laptops-for-automotive-tuning",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-20-with-512gb-ssd",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-a3-with-4g-lte-via-verizon",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/new-mk2-available-units-30-60-day-lead-time-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-33-mk2-i7-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-40-ram-upgrades-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-n1-current-models-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-55-front-expansion-area-quick-release",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links-nonindexable",
+   "issue": "Orphan page (has no incoming internal links)  (non-indexable pages)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 490,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 490)",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/products/toughbook-20-with-512gb-ssd",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-a3-with-4g-lte-via-verizon",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/new-mk2-available-units-30-60-day-lead-time-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-33-mk2-i7-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-40-ram-upgrades-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-n1-current-models-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-55-front-expansion-area-quick-release",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-i5-processor-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-54-prime-with-intel-core-i7-7600u-2-80ghz",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty-nonindexable",
+   "issue": "H1 tag missing or empty  (non-indexable pages)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 492,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 492)",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/products/toughbook-20-with-512gb-ssd",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-a3-with-4g-lte-via-verizon",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/new-mk2-available-units-30-60-day-lead-time-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-33-mk2-i7-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-40-ram-upgrades-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-n1-current-models-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-55-front-expansion-area-quick-release",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-i5-processor-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-54-prime-with-intel-core-i7-7600u-2-80ghz",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 11,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/products/c-eb25-a12-1p",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/ds-pan-1116",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/ds-pan-1503",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7170-0867-00",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-1732",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-1266",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0035",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-0986",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/gad2x8",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-vnp021u",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/products/ds-pan-1116",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/ds-pan-1503",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-1266",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-0986",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7170-1109-03",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:css-file-size-too-large",
+   "issue": "CSS file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/cdn/shop/t/40/assets/theme.scss.css?v=123564639967827357421790793080",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-schema-org-validation-error",
+   "issue": "Structured data has schema.org validation error",
+   "handler": "schema-fix",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Run the top page through the Schema Markup Validator to get the failing property; hand-coded blocks in the theme (hsfamilylaw's LegalService) are a template edit.",
+   "examples": [
+    [
+     "/products/custom-toughbook-solutions-for-alaska-state-agencies",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-page-in-sitemap",
+   "issue": "Noindex page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 491,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 491)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/products/toughbook-20-with-512gb-ssd",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-a3-with-4g-lte-via-verizon",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/new-mk2-available-units-30-60-day-lead-time-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-33-mk2-i7-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-40-ram-upgrades-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-accessories",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-n1-current-models-1",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/fz-55-front-expansion-area-quick-release",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-54-i5-processor-units",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/toughbook-54-prime-with-intel-core-i7-7600u-2-80ghz",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-google-rich-results-validation-error",
+   "issue": "Structured data has Google rich results validation error",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 12,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/products/7300-0082",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7170-0244",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0171",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-0565-03",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0106",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0332",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7160-0531-02",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0083",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0035",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/7300-0033",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:non-canonical-page-in-sitemap",
+   "issue": "Non-canonical page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 10,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/pages/diagnostics-for-agricultural-equipment",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/military-laptops-buying-guide",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/field-service-laptops-tablets",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/diesel-truck-diagnostics",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/government-laptops-buying-guide",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/vehicle-laptop-mounts-for-cars-and-trucks",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/fire-ems-laptops",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/police-laptops-buying-guide",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/marine-boat-diagnostics",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/laptops-for-automotive-tuning",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/blogs/news?page=3",
+     0,
+     "traffic"
+    ],
+    [
+     "/blogs/news?page=2",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections",
+     0,
+     "traffic"
+    ],
+    [
+     "/cart",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/search?q=+cradles",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/laptops-for-automotive-tuning",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:5xx-page-in-sitemap",
+   "issue": "5XX page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/products/7160-1261-01",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-became-non-indexable",
+   "issue": "Indexable page became non-indexable",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/products/7160-1261-01",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/collections/ram-rugged-vehicle-mounts-for-phones-tablets-and-laptops",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/%3Ca%20href=%22https://www.dodig.mil/reports.html/Article/1118917/improvements-needed-with-tracking-and-configuring-army-commercial-mobile-devices/%22%3Ehttps://www.dodig.mil/reports.html/Article/1118917/improvements-needed-with-tracking-and-configuring-army-commercial-mobile-devices/%3C/a%3E%20",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-aa6373am",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/collections/ram-rugged-vehicle-mounts-for-phones-tablets-and-laptops",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/%3Ca%20href=%22https://www.dodig.mil/reports.html/Article/1118917/improvements-needed-with-tracking-and-configuring-army-commercial-mobile-devices/%22%3Ehttps://www.dodig.mil/reports.html/Article/1118917/improvements-needed-with-tracking-and-configuring-army-commercial-mobile-devices/%3C/a%3E%20",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/cf-aa6373am",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page-nonindexable",
+   "issue": "Page has links to broken page  (non-indexable pages)",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/pages/military-laptops-buying-guide",
+     0,
+     "traffic"
+    ],
+    [
+     "/pages/vehicle-laptop-mounts-for-cars-and-trucks",
+     0,
+     "traffic"
+    ],
+    [
+     "/collections/desktop-docks/products/fz-vcbn11u",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:5xx-page",
+   "issue": "5XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/products/7160-1261-01",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/products/fz-vcbn11u",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,236 @@
+{
+ "slug": "fenceworksofga",
+ "domain": "fenceworksofga.com",
+ "crawl": "2026-11-05",
+ "health": 98,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 679,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     679,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/category/gates-and-entries/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/temporary-fencing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/farm-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/composite-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/athletic-facilities/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:redirects-to-homepage",
+   "issue": "Links to redirect, skipped by fix-redirect-links: redirects to homepage",
+   "handler": "redirect-rules",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Each old URL needs a real redirect target (redirect-rules) or the link removed; GSC impressions decide the order.",
+   "examples": [
+    [
+     "/",
+     1,
+     "links"
+    ]
+   ],
+   "decider": "client",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/category/picket-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/farm-fences/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:category-chain-link-fence-category-ranch",
+   "issue": "Pages fix-meta routed to ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/']",
+   "handler": "['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 36,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/category/chain-link-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/11/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/17/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/ranch-rail-split-rail-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/picket-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/chain-link-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/7/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/10/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/16/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": [
+  [
+   "Indexable page not in sitemap",
+   43,
+   "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"
+  ]
+ ]
+}

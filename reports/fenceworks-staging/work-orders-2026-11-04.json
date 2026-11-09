@@ -1,0 +1,545 @@
+{
+ "slug": "fenceworks-staging",
+ "domain": "stg-fenceworksofgeorgia-fwstaging.kinsta.cloud",
+ "crawl": "2026-11-04",
+ "health": 75,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 294,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex page.",
+   "examples": [
+    [
+     "/news/page/21/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/page/15/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links-nonindexable",
+   "issue": "Orphan page (has no incoming internal links)  (non-indexable pages)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/category/athletic-facilities/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/gates-and-entries/",
+     0,
+     "traffic"
+    ],
+    [
+     "/editable-sections-demo-safe-to-edit/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/farm-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/composite-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/temporary-fencing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 92,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about-us/products-and-service-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/right-fence-material/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-paint-a-vinyl-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/reviews/",
+     0,
+     "traffic"
+    ],
+    [
+     "/summer-decorate-picket-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tips-winterizing-fence-fenceworks-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/begin-back-yard-renovation-new-fence/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ],
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-28.json"
+  },
+  {
+   "id": "issue:noindex-in-html-and-http-header",
+   "issue": "Noindex in HTML and HTTP header",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 293,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 293)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/news/page/21/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/page/15/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 293,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 293)",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/news/page/21/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/page/15/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-incoming-internal-links-only-nonindexable",
+   "issue": "Page has nofollow incoming internal links only  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 287,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 287)",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
+   "examples": [
+    [
+     "/news/page/21/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/page/15/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-page-in-sitemap",
+   "issue": "Noindex page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 235,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 235)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about-us/products-and-service-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/plan-fence-project-winter-fenceworks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/right-fence-material/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:nofollow-in-html-and-http-header",
+   "issue": "Nofollow in HTML and HTTP header",
+   "handler": "review",
+   "tier": "?",
+   "urls_affected": 293,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 293)",
+   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "examples": [
+    [
+     "/news/page/21/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cages-enclosures-installation-experts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/wooden-privacy-fence/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/page/15/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prep-fence-fall-weather/",
+     0,
+     "traffic"
+    ],
+    [
+     "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/4-tips-wooden-fence-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/classic-wood-fences-atlanta-ga/",
+     0,
+     "traffic"
+    ],
+    [
+     "/atlanta-metal-fences/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fence-building-steering-clear-mishaps/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

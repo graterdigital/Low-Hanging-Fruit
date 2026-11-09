@@ -1,0 +1,856 @@
+{
+ "slug": "technikpackaging",
+ "domain": "technikpackaging.com",
+ "crawl": "2026-11-05",
+ "health": 90,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 103,
+   "traffic_at_stake": 53,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/",
+     37,
+     "traffic"
+    ],
+    [
+     "/product-category/custom-solutions/",
+     9,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/condiments/",
+     4,
+     "traffic"
+    ],
+    [
+     "/product-category/packaging-equipment/automatic-bottling-lines/",
+     3,
+     "traffic"
+    ],
+    [
+     "/category/uncategorized/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/dry-foods/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/industrial/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact-us/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/candy-packaging-equipment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/liquids/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 37,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     37,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 34,
+   "traffic_at_stake": 16,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/product-category/custom-solutions/",
+     9,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/condiments/",
+     4,
+     "traffic"
+    ],
+    [
+     "/product-category/packaging-equipment/automatic-bottling-lines/",
+     3,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/dry-foods/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/candy-packaging-equipment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/liquids/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/packaging-equipment/stick-packers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/pet-foods/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/industries/frozen-foods/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cache-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 44,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2016/05/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cart/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2018/08/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2018/05/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2018/12/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2017/04/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2017/09/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/product-category/uncategorized/",
+     0,
+     "traffic"
+    ],
+    [
+     "/vertical-baggers-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:no-incoming-internal-links-sitemap-or-or",
+   "issue": "Links to redirect, skipped by fix-redirect-links: no incoming internal links (sitemap or orphan entry)",
+   "handler": "manual",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "fix-redirect-links skipped these; read the reason and decide: redirect rule, link edit by hand, or leave.",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "issue:structured-data-has-schema-org-validation-error",
+   "issue": "Structured data has schema.org validation error",
+   "handler": "schema-fix",
+   "tier": "FLAG",
+   "urls_affected": 52,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Run the top page through the Schema Markup Validator to get the failing property; hand-coded blocks in the theme (hsfamilylaw's LegalService) are a template edit.",
+   "examples": [
+    [
+     "/product/triapex-hv2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/triapex-lds/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/jw-ccm-av-tray-former/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/dienst-hk-ii-n/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/pegasus-premade-bag-filling-and-sealing-machine/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/triapex-dr2a/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/dienst-dls-i-iii/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/dienst-hk-ii-a/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/triapex-ds1b/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/triapex-vxnd/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/featured-product-spotlight-jw-ccm-mv/",
+     0,
+     "traffic"
+    ],
+    [
+     "/featured-product-spotlight-triapex-hu/",
+     0,
+     "traffic"
+    ],
+    [
+     "/featured-product-spotlight-triapex-hu-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/featured-product-spotlight-jw-ccm-mv-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:css-file-size-too-large",
+   "issue": "CSS file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/wp-content/cache/min/1/wp-content/themes/technikpackag/assets/css/custom.css?ver=1784556209",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1784556209",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/themes/technikpackag/assets/css/foundation.css?ver=1784556209",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:pagination-page-1-comes-from-the-theme-t",
+   "issue": "Links to redirect, skipped by fix-redirect-links: pagination /page/1/ comes from the theme template, not content",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Theme template edit: emit the archive root for page 1 (WordPress paginate_links does by default). Diff by hand.",
+   "examples": [
+    [
+     "/news/page/1/",
+     7,
+     "links"
+    ],
+    [
+     "/category/news/page/1/",
+     6,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "redirect-links:wp-options",
+   "issue": "wp_options rows still carrying old URLs (widgets, menus, theme/plugin settings)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Fix by hand in the admin (Appearance > Widgets/Menus, theme and plugin settings); list in 2026-10-30-0957-fix-redirect-links-live-options.md.",
+   "examples": [
+    [
+     "clarity_collect_batch",
+     0,
+     ""
+    ],
+    [
+     "options_text_under",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "2026-10-30-0957-fix-redirect-links-live-options.md"
+  },
+  {
+   "id": "fix-meta:product-category-custom-solutions-catego",
+   "issue": "Pages fix-meta routed to ['/product-category/custom-solutions/', '/category/uncategorized/', '/category/news/page/7/', '/cache-2/', '/news/page/4/', '/cache-3/', '/category/news/page/3/', '/news/page/5/', '/news/page/7/', '/product-category/uncategorized/', '/category/news/page/6/', '/category/snack-foods/', '/news/', '/shop/page/4/', '/category/dried-foods/', '/news/page/3/', '/product-category/packaging-equipment/cup-pod-fill-seal-machines/', '/news/page/8/', '/category/news/page/2/', '/news/page/2/', '/cache/', '/category/vertical-baggers/', '/shop/', '/category/news/page/5/', '/news/page/6/', '/category/industrial/', '/category/news/', '/category/pharmaceutical/', '/shop/page/2/', '/category/news/page/4/', '/shop/page/3/', '/product-category/industries/condiments/', '/product-category/packaging-equipment/automatic-bottling-lines/']",
+   "handler": "['/product-category/custom-solutions/', '/category/uncategorized/', '/category/news/page/7/', '/cache-2/', '/news/page/4/', '/cache-3/', '/category/news/page/3/', '/news/page/5/', '/news/page/7/', '/product-category/uncategorized/', '/category/news/page/6/', '/category/snack-foods/', '/news/', '/shop/page/4/', '/category/dried-foods/', '/news/page/3/', '/product-category/packaging-equipment/cup-pod-fill-seal-machines/', '/news/page/8/', '/category/news/page/2/', '/news/page/2/', '/cache/', '/category/vertical-baggers/', '/shop/', '/category/news/page/5/', '/news/page/6/', '/category/industrial/', '/category/news/', '/category/pharmaceutical/', '/shop/page/2/', '/category/news/page/4/', '/shop/page/3/', '/product-category/industries/condiments/', '/product-category/packaging-equipment/automatic-bottling-lines/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/category/news/page/4/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-page-in-sitemap",
+   "issue": "Noindex page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/cart/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:302-redirect",
+   "issue": "302 redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page-in-sitemap",
+   "issue": "4XX page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/author/tatelyngraterdigital-com/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-in-html-and-http-header",
+   "issue": "Noindex in HTML and HTTP header",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/my-account/lost-password/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/featured-product-spotlight-jw-ccm-mv-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-in-multiple-sitemaps",
+   "issue": "Page in multiple sitemaps",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/shop/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-google-rich-results-validation-error",
+   "issue": "Structured data has Google rich results validation error",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 7,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/product/triapex-hv2d-premium-recloseable-top-bagger/",
+     0,
+     "traffic"
+    ],
+    [
+     "/author/tatelyngraterdigital-com/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/stick-pack/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/bottling-lines/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/pick-place-systems/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/pharmaceutical/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/stickpack-machines-sachet/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 7,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/product/triapex-hv2d-premium-recloseable-top-bagger/",
+     0,
+     "traffic"
+    ],
+    [
+     "/author/tatelyngraterdigital-com/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/stick-pack/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/bottling-lines/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/pick-place-systems/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/pharmaceutical/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/stickpack-machines-sachet/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/industries-that-benefit-most-from-automated-packaging-machinery-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/automated-packing-equipment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/stick-packers-cater-consumers-move/",
+     0,
+     "traffic"
+    ],
+    [
+     "/considering-automating-your-product-packing-technik-packaging-machinery-offers-custom-solutions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/automating-product-packing-custom-solutions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": [
+  [
+   "Indexable page not in sitemap",
+   44,
+   "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"
+  ]
+ ]
+}

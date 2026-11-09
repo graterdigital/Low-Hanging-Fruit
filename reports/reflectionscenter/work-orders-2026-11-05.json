@@ -1,0 +1,1380 @@
+{
+ "slug": "reflectionscenter",
+ "domain": "reflectionscenter.com",
+ "crawl": "2026-11-05",
+ "health": 14,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 2052,
+   "traffic_at_stake": 14951,
+   "traffic_note": " (top 200 of 2052)",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/before-after-photos-new-jersey/rf-microneedling/",
+     3206,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/rosacea/",
+     1177,
+     "traffic"
+    ],
+    [
+     "/how-many-syringes-of-filler-do-i-need/",
+     746,
+     "traffic"
+    ],
+    [
+     "/gallery/juvederm-lip-filler-for-very-thin-lips/",
+     488,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/sebaceous-hyperplasia/",
+     471,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/laser-liposuction/",
+     457,
+     "traffic"
+    ],
+    [
+     "/",
+     455,
+     "traffic"
+    ],
+    [
+     "/plasma-pen-dangers-and-alternative-treatments/",
+     346,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/botox-fillers/botox-for-the-nasal-tip/",
+     284,
+     "traffic"
+    ],
+    [
+     "/botox-for-tmj/",
+     273,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-schema-org-validation-error",
+   "issue": "Structured data has schema.org validation error",
+   "handler": "schema-fix",
+   "tier": "FLAG",
+   "urls_affected": 2133,
+   "traffic_at_stake": 14903,
+   "traffic_note": " (top 200 of 2133)",
+   "what_to_do": "Run the top page through the Schema Markup Validator to get the failing property; hand-coded blocks in the theme (hsfamilylaw's LegalService) are a template edit.",
+   "examples": [
+    [
+     "/before-after-photos-new-jersey/rf-microneedling/",
+     3206,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/rosacea/",
+     1177,
+     "traffic"
+    ],
+    [
+     "/how-many-syringes-of-filler-do-i-need/",
+     746,
+     "traffic"
+    ],
+    [
+     "/gallery/juvederm-lip-filler-for-very-thin-lips/",
+     488,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/sebaceous-hyperplasia/",
+     471,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/laser-liposuction/",
+     457,
+     "traffic"
+    ],
+    [
+     "/",
+     455,
+     "traffic"
+    ],
+    [
+     "/plasma-pen-dangers-and-alternative-treatments/",
+     346,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/botox-fillers/botox-for-the-nasal-tip/",
+     284,
+     "traffic"
+    ],
+    [
+     "/botox-for-tmj/",
+     273,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1324,
+   "traffic_at_stake": 8315,
+   "traffic_note": " (top 200 of 1324)",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/before-after-photos-new-jersey/rf-microneedling/",
+     3206,
+     "traffic"
+    ],
+    [
+     "/gallery/juvederm-lip-filler-for-very-thin-lips/",
+     488,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/sebaceous-hyperplasia/",
+     471,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/laser-liposuction/",
+     457,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/melasma-treatment/",
+     264,
+     "traffic"
+    ],
+    [
+     "/gallery/botox-injection-nasal-tip-lift/",
+     230,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-technologies/dermal-fillers/collagen-stimulating-injections/",
+     153,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/botox-fillers/fat-dissolving-injections/",
+     136,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/body/stretch-mark/",
+     121,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/sofwave/",
+     111,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 312,
+   "traffic_at_stake": 116,
+   "traffic_note": " (top 200 of 312)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/monthly-promos",
+     51,
+     "traffic"
+    ],
+    [
+     "/patient-stories/they-always-make-me-look-so-beautiful/",
+     27,
+     "traffic"
+    ],
+    [
+     "/patient-stories/rebecca-acne-treatment-patient/",
+     14,
+     "traffic"
+    ],
+    [
+     "/patient-stories/you-guys-at-reflections-are-so-wonderful/",
+     11,
+     "traffic"
+    ],
+    [
+     "/patient-stories/removing-tattooed-freckles-that-turned-out-too-dark-unnatural/",
+     8,
+     "traffic"
+    ],
+    [
+     "/apple-stem-cells-the-next-anti-aging-phenomena/",
+     4,
+     "traffic"
+    ],
+    [
+     "/patient-stories/lasers-skincare-didnt-work-for-my-melasma-until-i-tried-tranexamic-acid-txa-pills/",
+     1,
+     "traffic"
+    ],
+    [
+     "/patient-stories/show-stopping-results-from-acne-scar-surgery/",
+     0,
+     "traffic"
+    ],
+    [
+     "/patient-stories/coolsculpting-review-i-threw-out-my-spanx/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/ideal-eyes-undereye/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 29,
+   "traffic_at_stake": 87,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/gallery/marionette-lines-around-mouth-filler-results-for-woman-in-her-late-60s/",
+     45,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-technologies/body-sculpting-fat-reduction/coolsculpting/",
+     23,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/surgical/lower-facelift/",
+     9,
+     "traffic"
+    ],
+    [
+     "/about/our-locations/bridgewater-twp-nj/",
+     4,
+     "traffic"
+    ],
+    [
+     "/gallery/botox-for-under-eye-wrinkles-frown-lines/",
+     4,
+     "traffic"
+    ],
+    [
+     "/about/our-locations/livingston-nj/",
+     2,
+     "traffic"
+    ],
+    [
+     "/people-look-into-laser-tattoo-removal-to-expand-career-opportunities/",
+     0,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/jowls-jawline-sag/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/under-eye-wrinkles-treated-with-botox-injections/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/dollars-sense/rewards-plus/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 9,
+   "traffic_at_stake": 76,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/before-after-photos-new-jersey/q-switched-lasers/",
+     40,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/q-switched-yag/",
+     36,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/face/defenage-skincare-products/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/sebacia/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/qwo/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/belotero/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/refyne/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/q-switched-ruby-laser/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/arms/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 14,
+   "traffic_at_stake": 74,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/gallery/marionette-lines-around-mouth-filler-results-for-woman-in-her-late-60s/",
+     45,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-technologies/body-sculpting-fat-reduction/coolsculpting/",
+     23,
+     "traffic"
+    ],
+    [
+     "/about/our-locations/bridgewater-twp-nj/",
+     4,
+     "traffic"
+    ],
+    [
+     "/about/our-locations/livingston-nj/",
+     2,
+     "traffic"
+    ],
+    [
+     "/people-look-into-laser-tattoo-removal-to-expand-career-opportunities/",
+     0,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/jowls-jawline-sag/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/dollars-sense/rewards-plus/",
+     0,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa-conditions/face/hair-loss-thinning-hair/",
+     0,
+     "traffic"
+    ],
+    [
+     "/prepare-for-summers-leg-baring-fashions-with-laser-hair-removal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/five-hottest-medical-spa-treatments-right-now/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-incomplete",
+   "issue": "X (Twitter) card incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 186,
+   "traffic_at_stake": 61,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/patient-stories/they-always-make-me-look-so-beautiful/",
+     27,
+     "traffic"
+    ],
+    [
+     "/patient-stories/rebecca-acne-treatment-patient/",
+     14,
+     "traffic"
+    ],
+    [
+     "/patient-stories/you-guys-at-reflections-are-so-wonderful/",
+     11,
+     "traffic"
+    ],
+    [
+     "/patient-stories/removing-tattooed-freckles-that-turned-out-too-dark-unnatural/",
+     8,
+     "traffic"
+    ],
+    [
+     "/patient-stories/lasers-skincare-didnt-work-for-my-melasma-until-i-tried-tranexamic-acid-txa-pills/",
+     1,
+     "traffic"
+    ],
+    [
+     "/patient-stories/show-stopping-results-from-acne-scar-surgery/",
+     0,
+     "traffic"
+    ],
+    [
+     "/patient-stories/coolsculpting-review-i-threw-out-my-spanx/",
+     0,
+     "traffic"
+    ],
+    [
+     "/patient-stories/its-really-something-to-do-for-me-my-experience-with-fillers-at-74/",
+     0,
+     "traffic"
+    ],
+    [
+     "/patient-stories/looking-forward-to-my-laser-lipo-procedure-for-under-my-chin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/patient-stories/i-regained-my-confidence/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-page-receives-organic-traffic",
+   "issue": "3XX page receives organic traffic",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 54,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/gallery",
+     43,
+     "traffic"
+    ],
+    [
+     "/gallery-category/lip-filler/",
+     11,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:faq-page-missing-faqpage-schema",
+   "issue": "FAQ page missing FAQPage schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 1,
+   "traffic_note": "",
+   "what_to_do": "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
+   "examples": [
+    [
+     "/restylane-faq-your-questions-answered/",
+     1,
+     "traffic"
+    ],
+    [
+     "/microneedling-faq-your-questions-answered/",
+     0,
+     "traffic"
+    ],
+    [
+     "/kybella-faq-your-questions-answered/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 72,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/review-us/leave-us-a-review-sl/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-sh/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-jc/",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-al/",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ap/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ms/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ellern/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/author/dlm_seo/",
+     0,
+     "traffic"
+    ],
+    [
+     "/sitemap/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/connecting-cosmetic-surgery-mental-health-with-dr-mitchell-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/1cc-silk-for-under-eyes-filler-results/",
+     0,
+     "traffic"
+    ],
+    [
+     "/schedule-free-consultation/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:low-word-count",
+   "issue": "Low word count",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Content call: expand, merge or noindex the page. Client decides what the page is for.",
+   "examples": [
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/connecting-cosmetic-surgery-mental-health-with-dr-mitchell-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/1cc-silk-for-under-eyes-filler-results/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-no-outgoing-links",
+   "issue": "Page has no outgoing links",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Content call: add relevant internal links or accept it (thank-you and utility pages are fine).",
+   "examples": [
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/connecting-cosmetic-surgery-mental-health-with-dr-mitchell-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/1cc-silk-for-under-eyes-filler-results/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to ['/']",
+   "handler": "['/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:before-after-photos-new-jersey-q-switche",
+   "issue": "Pages fix-meta routed to ['/before-after-photos-new-jersey/q-switched-lasers/', '/before-after-photos-new-jersey/q-switched-yag/']",
+   "handler": "['/before-after-photos-new-jersey/q-switched-lasers/', '/before-after-photos-new-jersey/q-switched-yag/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/about/dollars-sense/financing-options/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 50,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/yes-you-still-have-time-to-look-your-best-for-high-school-reunions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/beauty-may-not-be-skin-deep-after-all/",
+     0,
+     "traffic"
+    ],
+    [
+     "/turn-your-frown-upside-down-consider-a-cosmetic-procedure-to-boost-youthfulness-and-self-esteem/",
+     0,
+     "traffic"
+    ],
+    [
+     "/a-surprisingly-good-use-for-nicotine/",
+     0,
+     "traffic"
+    ],
+    [
+     "/what-is-a-varicose-vein-anyway/",
+     0,
+     "traffic"
+    ],
+    [
+     "/americans-shape-up-with-the-help-of-laser-liposuction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/rapidtat-laser-tattoo-removal-procedure/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/ultherapy-ultrasound-skin-tightening-treatment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/laser-lipo-post-pregnancy-is-this-the-new-tummy-tuck/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 22,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/review-us/leave-us-a-review-sl/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-sh/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-jc/",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-al/",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ap/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ms/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-ellern/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/botox-for-mens-forehead-treatment-guide/",
+     0,
+     "traffic"
+    ],
+    [
+     "/restylane-defyne-in-millburn-nj/",
+     0,
+     "traffic"
+    ],
+    [
+     "/restylane-kysse-in-west-orange-nj/",
+     0,
+     "traffic"
+    ],
+    [
+     "/restylane-refyne-in-millburn-nj/",
+     0,
+     "traffic"
+    ],
+    [
+     "/microneedling-faq-your-questions-answered/",
+     0,
+     "traffic"
+    ],
+    [
+     "/everything-you-need-to-know-about-botox/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-in-multiple-sitemaps",
+   "issue": "Page in multiple sitemaps",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/restylane-kysse-in-west-orange-nj/",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-is-now-a-treatment-option-for-canadians-who-experience-chronic-migraines/",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-injections-are-best-left-to-trained-professionals-doctors-say/",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-or-fillers-may-be-perfect-complement-to-cosmetic-dental-procedures/",
+     0,
+     "traffic"
+    ],
+    [
+     "/restylane-kysse-in-millburn-nj/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:broken-redirect",
+   "issue": "Broken redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/laser-hair-removal-hurt-much/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-missing",
+   "issue": "Open Graph tags missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/connecting-cosmetic-surgery-mental-health-with-dr-mitchell-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/1cc-silk-for-under-eyes-filler-results/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-missing",
+   "issue": "X (Twitter) card missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/news/connecting-cosmetic-surgery-mental-health-with-dr-mitchell-chasin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/1cc-silk-for-under-eyes-filler-results/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 88,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/?post_type=gallery&p=2937",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3245",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3906",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=9174",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3755",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3829",
+     0,
+     "traffic"
+    ],
+    [
+     "/?page_id=979",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=9223",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3501",
+     0,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/botox-fillershttps://www.reflectionscenter.com/new-jersey-medical-spa/botox-fillers/botox-for-the-nasal-tip/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 88,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/?post_type=gallery&p=2937",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3245",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3906",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=9174",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3755",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3829",
+     0,
+     "traffic"
+    ],
+    [
+     "/?page_id=979",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=9223",
+     0,
+     "traffic"
+    ],
+    [
+     "/?post_type=gallery&p=3501",
+     0,
+     "traffic"
+    ],
+    [
+     "/new-jersey-medical-spa/botox-fillershttps://www.reflectionscenter.com/new-jersey-medical-spa/botox-fillers/botox-for-the-nasal-tip/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page-nonindexable",
+   "issue": "Page has links to broken page  (non-indexable pages)",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 82,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/tag/volume/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/in-the-media/page/6/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/in-the-media/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/microneedling/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/aging-lips/",
+     0,
+     "traffic"
+    ],
+    [
+     "/review-us/leave-us-a-review-sl/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/aging/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/anti-aging/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/wrinkles/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/laser-hair-removal/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:duplicate-pages-without-canonical",
+   "issue": "Duplicate pages without canonical",
+   "handler": "review",
+   "tier": "?",
+   "urls_affected": 41,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "examples": [
+    [
+     "/about/news/tv/page/11/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/print/page/11/",
+     0,
+     "traffic"
+    ],
+    [
+     "/kybella-double-chin-fat-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/print/page/9/",
+     0,
+     "traffic"
+    ],
+    [
+     "/before-after-photos-new-jersey/Thread-Lifts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/online/page/7/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/tv/page/9/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/tv/page/20/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/online/page/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/news/tv/page/16/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

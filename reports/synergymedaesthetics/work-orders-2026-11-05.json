@@ -1,0 +1,511 @@
+{
+ "slug": "synergymedaesthetics",
+ "domain": "synergymedaesthetics.com",
+ "crawl": "2026-11-05",
+ "health": 97,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 73,
+   "traffic_at_stake": 339,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/location/kennewick/",
+     154,
+     "traffic"
+    ],
+    [
+     "/location/yakima/",
+     81,
+     "traffic"
+    ],
+    [
+     "/",
+     70,
+     "traffic"
+    ],
+    [
+     "/contact/kennewick-location/",
+     15,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     12,
+     "traffic"
+    ],
+    [
+     "/hair-body/laser-hair-removal/",
+     6,
+     "traffic"
+    ],
+    [
+     "/contact/yakima-location/",
+     1,
+     "traffic"
+    ],
+    [
+     "/faqs/how-often-can-i-receive-a-coolpeel-treatment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/does-the-suction-applicator-leave-marks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/hair-body/sculptra-butt-lift/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 43,
+   "traffic_at_stake": 82,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/",
+     70,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     12,
+     "traffic"
+    ],
+    [
+     "/faqs/how-often-can-i-receive-a-coolpeel-treatment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/does-the-suction-applicator-leave-marks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/meet-our-team/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/how-long-is-the-treatment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/are-there-any-side-effects-of-botox/",
+     0,
+     "traffic"
+    ],
+    [
+     "/treatments/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/are-there-any-side-effects-associated-with-injectables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/is-there-any-downtime-after-facials-prf-treatments-or-synergy-lift-treatments/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 70,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     70,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 10,
+   "traffic_at_stake": 7,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/face/",
+     7,
+     "traffic"
+    ],
+    [
+     "/faqs/does-the-suction-applicator-leave-marks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/meet-our-team/",
+     0,
+     "traffic"
+    ],
+    [
+     "/treatments/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectables/wrinkle-relaxers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/what-are-the-potential-side-effects-of-dysport/",
+     0,
+     "traffic"
+    ],
+    [
+     "/skin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/hair-body/",
+     0,
+     "traffic"
+    ],
+    [
+     "/treatments/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectables/fillers-injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-points-to-redirect",
+   "issue": "Canonical points to redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 4,
+   "traffic_at_stake": 7,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/face/",
+     7,
+     "traffic"
+    ],
+    [
+     "/skin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/hair-body/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 4,
+   "traffic_at_stake": 7,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/face/",
+     7,
+     "traffic"
+    ],
+    [
+     "/skin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/hair-body/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:treatments-page-2",
+   "issue": "Pages fix-meta routed to ['/treatments/page/2/']",
+   "handler": "['/treatments/page/2/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/faqs/does-the-suction-applicator-leave-marks/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:non-canonical-page-in-sitemap",
+   "issue": "Non-canonical page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/skin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/hair-body/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/meet-rene-your-expert-injector-in-eastern-washington/",
+     0,
+     "traffic"
+    ],
+    [
+     "/skin-care-basics-simple-but-necessary/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:redirect-loop",
+   "issue": "Redirect loop",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/meet-rene-your-expert-injector-in-eastern-washington/",
+     0,
+     "traffic"
+    ],
+    [
+     "/skin-care-basics-simple-but-necessary/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:broken-redirect",
+   "issue": "Broken redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/category/gallery/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/category/home/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/category/home/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": [
+  [
+   "Indexable page not in sitemap",
+   1,
+   "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"
+  ]
+ ]
+}

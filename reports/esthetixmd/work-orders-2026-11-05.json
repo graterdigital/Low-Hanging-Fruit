@@ -1,0 +1,390 @@
+{
+ "slug": "esthetixmd",
+ "domain": "esthetixmd.com",
+ "crawl": "2026-11-05",
+ "health": 99,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 2,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/pelvic-suite/ultra-femme-360/",
+     2,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/blog/category/coolsculpting/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/dysport-case-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/body-treatments/page/5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/men-and-women-in-bend-or-look-thinner-and-younger-with-kybella-injection-treatment/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/injectables/page/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/gallery-category/sculptra/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/weight-loss/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:blog-category-ultra-femme-360",
+   "issue": "Pages fix-meta routed to ['/blog/category/ultra-femme-360/']",
+   "handler": "['/blog/category/ultra-femme-360/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/about-us/financing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-schema-org-validation-error",
+   "issue": "Structured data has schema.org validation error",
+   "handler": "schema-fix",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Run the top page through the Schema Markup Validator to get the failing property; hand-coded blocks in the theme (hsfamilylaw's LegalService) are a template edit.",
+   "examples": [
+    [
+     "/body-contouring/coolsculpting-educational-videos/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 17,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/blog/category/coolsculpting/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/body-treatments/page/7/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/emsculpt/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/body-treatments/page/5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/facial-skin-tightening/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/body-treatments/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/body-treatments/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/coolsculpting/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/juvederm-ultra-and-ultra-plus/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/injectables/page/4/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/gallery/zwave-case-3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/medical-weight-loss-case-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-missing",
+   "issue": "Open Graph tags missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/subscribe-and-save/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-missing",
+   "issue": "X (Twitter) card missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/subscribe-and-save/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/medspa-near-prineville-or/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medspa-near-la-pine-or/",
+     0,
+     "traffic"
+    ],
+    [
+     "/pelvic-suite/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/pelvic-suite/co2-lift-v/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/pelvic-suite/co2-lift-v/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

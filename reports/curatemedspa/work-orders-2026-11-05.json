@@ -1,0 +1,550 @@
+{
+ "slug": "curatemedspa",
+ "domain": "curatemedspa.com",
+ "crawl": "2026-11-05",
+ "health": 99,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 128,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     128,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 10,
+   "traffic_at_stake": 68,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/dermal-fillers/",
+     61,
+     "traffic"
+    ],
+    [
+     "/iv-hydration-therapy/",
+     6,
+     "traffic"
+    ],
+    [
+     "/dermal-fillers-vs-botox-guide/",
+     1,
+     "traffic"
+    ],
+    [
+     "/services/vitamin-injections/",
+     0,
+     "traffic"
+    ],
+    [
+     "/home-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/laser-hair-removal-chattanooga-winter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/skin-tightening-2025/",
+     0,
+     "traffic"
+    ],
+    [
+     "/sculptra/",
+     0,
+     "traffic"
+    ],
+    [
+     "/anti-aging-2025/",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 9,
+   "traffic_at_stake": 61,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/dermal-fillers/",
+     61,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/vitamin-injections/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/cooltone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/dermal-fillers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/pdo-threads/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/iv-therapy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/pdo-threads/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 11,
+   "traffic_at_stake": 21,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/locations/murfreesboro/",
+     13,
+     "traffic"
+    ],
+    [
+     "/treatment-for-excessive-sweating-in-2025/",
+     5,
+     "traffic"
+    ],
+    [
+     "/locations/nashville/",
+     3,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/ooltewah/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/knoxville/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 6,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/iv-hydration-therapy/",
+     6,
+     "traffic"
+    ],
+    [
+     "/skin-tightening-2025/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/tag/weekly-newsletter/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/locations/ooltewah/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/pdo-threads/",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/knoxville/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/pdo-threads/",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/chattanooga/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty-nonindexable",
+   "issue": "H1 tag missing or empty  (non-indexable pages)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/weekly-newsletter/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to ['/']",
+   "handler": "['/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-from-http-to-https",
+   "issue": "Canonical from HTTP to HTTPS",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 7,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/dermal-fillers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact/",
+     0,
+     "traffic"
+    ],
+    [
+     "/injectable-services/",
+     0,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/sculptra/",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:302-redirect",
+   "issue": "302 redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/the-reserve/button/kGsxVn6q2byOry4L6MmhemRaCrG7ManT",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve/button/lzcaWCTg8PzTOmn61hzMK7NRlzRUwn8s",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve/button/dxlw6rQl2S3ys4HISh7cz8sSTh4rPfEL",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve/button/Xrgf82x5KKylCzDZXia51t2t7Mbry1Ci",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve/button/kSFwFAqmAAx8vxHUhFgU4bDCV5z1AkyD",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/dermal-fillers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:https-to-http-redirect",
+   "issue": "HTTPS to HTTP redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/injectable-services/?utm_source=chatgpt.com",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/the-reserve",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-missing",
+   "issue": "X (Twitter) card missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/the-reserve",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,470 @@
+{
+ "slug": "markheardfuel",
+ "domain": "markheardfuel.com",
+ "crawl": "2026-11-05",
+ "health": 90,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 31,
+   "traffic_at_stake": 20,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/service-areas/gainesville-ga-propane",
+     18,
+     "traffic"
+    ],
+    [
+     "/service-areas/jasper-ga-propane",
+     2,
+     "traffic"
+    ],
+    [
+     "/thank-you-refill",
+     0,
+     "traffic"
+    ],
+    [
+     "/service-areas/dawsonville-ga-propane",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/new-account-setup",
+     0,
+     "traffic"
+    ],
+    [
+     "/services",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/cache-5",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/pay-bill",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/cache-4",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/thank-you-refill",
+     0,
+     "traffic"
+    ],
+    [
+     "/services",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-new-service",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you",
+     0,
+     "traffic"
+    ],
+    [
+     "/service-areas",
+     0,
+     "traffic"
+    ],
+    [
+     "/local-propane-service",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex page.",
+   "examples": [
+    [
+     "/privacy-policy",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:url-has-a-query-string",
+   "issue": "Links to redirect, skipped by fix-redirect-links: URL has a query string",
+   "handler": "manual",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "fix-redirect-links skipped these; read the reason and decide: redirect rule, link edit by hand, or leave.",
+   "examples": [
+    [
+     "/?utm_campaign=gmb",
+     2,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "issue:css-file-size-too-large",
+   "issue": "CSS file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/wp-content/cache/min/1/wp-content/plugins/widget-google-reviews/assets/7.2/css/public-main.css?ver=1793235247",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/themes/markheard/assets/css/custom.css?ver=1793235247",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1793235364",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/themes/markheard/assets/css/foundation.css?ver=1793235247",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/plugins/business-reviews-bundle/assets/2.1.1/css/public-main.css?ver=1793235247",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:faq-page-missing-faqpage-schema",
+   "issue": "FAQ page missing FAQPage schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
+   "examples": [
+    [
+     "/faqs/propane-safety-faqs",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/underground-propane-tanks",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/why-choose-propane",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs/ordering-information",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:blog-blog-cache",
+   "issue": "Pages fix-meta routed to ['/blog', '/blog/cache']",
+   "handler": "['/blog', '/blog/cache']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "redirect-links:wp-options",
+   "issue": "wp_options rows still carrying old URLs (widgets, menus, theme/plugin settings)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Fix by hand in the admin (Appearance > Widgets/Menus, theme and plugin settings); list in 2026-10-30-1103-fix-redirect-links-live-options.md.",
+   "examples": [
+    [
+     "su_presets_button",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "2026-10-30-1103-fix-redirect-links-live-options.md"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/local-propane-service",
+     0,
+     "traffic"
+    ],
+    [
+     "/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/privacy-policy",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/thank-you-refill",
+     0,
+     "traffic"
+    ],
+    [
+     "/services",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you-new-service",
+     0,
+     "traffic"
+    ],
+    [
+     "/thank-you",
+     0,
+     "traffic"
+    ],
+    [
+     "/faqs",
+     0,
+     "traffic"
+    ],
+    [
+     "/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/submit-service-request/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-choose-propane/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/submit-service-request/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-choose-propane/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

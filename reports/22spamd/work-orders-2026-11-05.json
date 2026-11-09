@@ -1,0 +1,355 @@
+{
+ "slug": "22spamd",
+ "domain": "22spamd.com",
+ "crawl": "2026-11-05",
+ "health": 99,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 67,
+   "traffic_at_stake": 100,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/",
+     91,
+     "traffic"
+    ],
+    [
+     "/service/pixel-laser-skin-resurfacing/",
+     6,
+     "traffic"
+    ],
+    [
+     "/about-us/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/dermaplaning/",
+     1,
+     "traffic"
+    ],
+    [
+     "/membership/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/pixel-precision-skin-renewal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/lola-ramirez/",
+     0,
+     "traffic"
+    ],
+    [
+     "/service/coolsculpting-elite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/high-tech-beauty-suite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-mcdonald/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 67,
+   "traffic_at_stake": 100,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/",
+     91,
+     "traffic"
+    ],
+    [
+     "/service/pixel-laser-skin-resurfacing/",
+     6,
+     "traffic"
+    ],
+    [
+     "/about-us/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/dermaplaning/",
+     1,
+     "traffic"
+    ],
+    [
+     "/membership/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/pixel-precision-skin-renewal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/lola-ramirez/",
+     0,
+     "traffic"
+    ],
+    [
+     "/service/coolsculpting-elite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/high-tech-beauty-suite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-mcdonald/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 17,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/people/lola-ramirez/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-mcdonald/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/hailey-brazier/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/sumer-christensen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/brandi-salway/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/kelsee-hyde/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/mari-english/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-johnson/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/masha-melnik/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/allie-sweat/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ],
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/makayley-riding/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/blog/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 7,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/good-faith-estimate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financial-policies/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-of-use/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,1335 @@
+{
+ "slug": "nativecustomstone",
+ "domain": "nativecustomstone.com",
+ "crawl": "2026-11-05",
+ "health": 88,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 161,
+   "traffic_at_stake": 42,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/",
+     34,
+     "traffic"
+    ],
+    [
+     "/castle-rock/",
+     7,
+     "traffic"
+    ],
+    [
+     "/rubble-stone/",
+     1,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/check-out-how-this-diyer-used-go-stone-to-bring-the-outdoors-in/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-backyard-firepit-with-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/see-native-custom-stones-customfit-panels-on-food-networks-the-kitchen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-use-native-custom-stones-go-stone-as-a-decorating-tool/",
+     0,
+     "traffic"
+    ],
+    [
+     "/stone-veneer-panels-can-be-a-weekend-project/",
+     0,
+     "traffic"
+    ],
+    [
+     "/native-custom-stone-partners-with-builddirect-to-distribute-products/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 87,
+   "traffic_at_stake": 35,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/",
+     34,
+     "traffic"
+    ],
+    [
+     "/rubble-stone/",
+     1,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-backyard-firepit-with-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/stone-veneer-panels-can-be-a-weekend-project/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/manufactured-stone/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/go-stone-single-electric-box-accent/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-avoid-weather-damage-to-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-you-should-use-stack-stone-veneer-for-your-outdoor-kitchen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/page/7/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 34,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     34,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
+   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 407,
+   "traffic_at_stake": 2,
+   "traffic_note": " (top 200 of 407)",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/ledge-stone/",
+     2,
+     "traffic"
+    ],
+    [
+     "/product/stack-stone-sample-board/",
+     0,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/this-article-could-change-your-mind-about-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/use-native-custom-stones-go-brick-for-a-magnificent-makeover/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/bigger-in-real-life-fireplace-installation-using-go-stone/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/use-go-stone-for-indoor-custom-stone-work/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-importance-of-sealing-your-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-should-you-choose-manufactured-stone-over-natural-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-brick-and-go-stone-for-diy-projects/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-became-non-indexable",
+   "issue": "Indexable page became non-indexable",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 52,
+   "traffic_at_stake": 2,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/ledge-stone/",
+     2,
+     "traffic"
+    ],
+    [
+     "/the-importance-of-sealing-your-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-should-you-choose-manufactured-stone-over-natural-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-beautiful-custom-stone-patio/",
+     0,
+     "traffic"
+    ],
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-brick-and-go-stone-for-diy-projects/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-care-for-a-cultured-stone-fireplace/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-diy-with-go-stone-manufactured-stone-for-interior-walls/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-brick-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-brick-brick-veneer/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-from-https-to-http",
+   "issue": "Canonical from HTTPS to HTTP",
+   "handler": "review",
+   "tier": "?",
+   "urls_affected": 142,
+   "traffic_at_stake": 2,
+   "traffic_note": "",
+   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "examples": [
+    [
+     "/ledge-stone/",
+     2,
+     "traffic"
+    ],
+    [
+     "/this-article-could-change-your-mind-about-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/use-native-custom-stones-go-brick-for-a-magnificent-makeover/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/bigger-in-real-life-fireplace-installation-using-go-stone/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/use-go-stone-for-indoor-custom-stone-work/",
+     0,
+     "traffic"
+    ],
+    [
+     "/use-native-custom-stones-go-brick-for-a-magnificent-makeover/9/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-beauty-of-river-rock-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/custom-stone-for-kitchens-bathrooms/",
+     0,
+     "traffic"
+    ],
+    [
+     "/choosing-the-right-manufactured-stone-fireplace-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-advantages-of-faux-stone-paneling/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 9,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cart/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/lost-password/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/custom-stone/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/custom-stone/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/custom-stone/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 9,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/category/custom-stone-bathroom/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/manufactured-stone-fireplace/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/installation-and-care/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/adhered-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/leed-projects/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/panel/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/custom-stone-accents/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/general/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/manufactured-stone2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links-nonindexable",
+   "issue": "Orphan page (has no incoming internal links)  (non-indexable pages)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-brick-brick-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/tips-and-tricks/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:date-archive-redirecting-to-the-homepage",
+   "issue": "Links to redirect, skipped by fix-redirect-links: date archive redirecting to the homepage",
+   "handler": "redirect-rules",
+   "tier": "decide",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Each old URL needs a real redirect target (redirect-rules) or the link removed; GSC impressions decide the order.",
+   "examples": [
+    [
+     "/2020/02/15/",
+     1,
+     "links"
+    ],
+    [
+     "/2020/02/15/",
+     1,
+     "links"
+    ]
+   ],
+   "decider": "client",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "redirect-links:no-incoming-internal-links-sitemap-or-or",
+   "issue": "Links to redirect, skipped by fix-redirect-links: no incoming internal links (sitemap or orphan entry)",
+   "handler": "manual",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "fix-redirect-links skipped these; read the reason and decide: redirect rule, link edit by hand, or leave.",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 179,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/roi-when-using-manufactured-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-importance-of-sealing-your-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-should-you-choose-manufactured-stone-over-natural-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/stone-veneer-panels-can-be-a-weekend-project/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-beautiful-custom-stone-patio/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-beauty-of-river-rock-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-advantages-of-using-go-stone-panels-for-your-home/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-install-diy-stone-panels-go-stone-the-easy-way/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-benefits-of-manufactured-vs-natural-stone/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 39,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/category/custom-stone-bathroom/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/manufactured-stone/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/custom-stone-fireplace/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/faux-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/faux-stone-paneling/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/manufactured-stone-fireplace/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/tips-and-tricks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/custom-stone-kitchen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/diy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty-nonindexable",
+   "issue": "H1 tag missing or empty  (non-indexable pages)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 20,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/category/maintenance-and-installation/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-brick-brick-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-stone-panels/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/tips-and-advice/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/page/5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/lunch-learn-program/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/custom-stone-kitchen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/lost-password/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:pagination-page-1-comes-from-the-theme-t",
+   "issue": "Links to redirect, skipped by fix-redirect-links: pagination /page/1/ comes from the theme template, not content",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 15,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Theme template edit: emit the archive root for page 1 (WordPress paginate_links does by default). Diff by hand.",
+   "examples": [
+    [
+     "/category/maintenance-and-installation/page/1/",
+     4,
+     "links"
+    ],
+    [
+     "/category/maintenance-and-installation/page/1/",
+     4,
+     "links"
+    ],
+    [
+     "/category/manufactured-stone/page/1/",
+     3,
+     "links"
+    ],
+    [
+     "/category/maintenance-and-installation/diy/page/1/",
+     2,
+     "links"
+    ],
+    [
+     "/tag/custom-stone/page/1/",
+     2,
+     "links"
+    ],
+    [
+     "/category/faux-stone-veneer/page/1/",
+     2,
+     "links"
+    ],
+    [
+     "/category/faux-stone-paneling/page/1/",
+     1,
+     "links"
+    ],
+    [
+     "/category/go-stone-panels/page/1/",
+     1,
+     "links"
+    ],
+    [
+     "/category/custom-stone-fireplace/page/1/",
+     1,
+     "links"
+    ],
+    [
+     "/category/custom-stone-kitchen/page/1/",
+     1,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "issue:css-file-size-too-large",
+   "issue": "CSS file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/wp-content/cache/min/1/wp-content/themes/nativecustomstone/assets/css/foundation.css?ver=1793270021",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=1793270021",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/themes/nativecustomstone/assets/css/foundation.css?ver=1793270021",
+     0,
+     "traffic"
+    ],
+    [
+     "/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=1793270021",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:category-custom-stone-bathroom-category-",
+   "issue": "Pages fix-meta routed to ['/category/custom-stone-bathroom/', '/category/manufactured-stone/page/3/', '/category/custom-stone-fireplace/page/2/', '/category/faux-stone-veneer/', '/category/maintenance-and-installation/page/3/', '/category/faux-stone-paneling/', '/category/manufactured-stone-fireplace/', '/category/tips-and-tricks/', '/category/custom-stone-kitchen/', '/category/maintenance-and-installation/diy/', '/category/installation-and-care/', '/category/stone/', '/category/go-stone-panels/', '/category/go-stone-panels/page/2/', '/category/go-brick-brick-veneer/', '/category/uncategorized/', '/category/adhered-stone-veneer/', '/category/manufactured-stone/', '/category/maintenance-and-installation/', '/category/panel/', '/category/faux-stone-paneling/page/2/', '/category/maintenance-and-installation/diy/page/2/', '/category/custom-stone-accents/', '/category/custom-stone-fireplace/', '/category/general/', '/category/maintenance-and-installation/diy/page/3/', '/category/maintenance-and-installation/tips-and-advice/page/2/', '/category/custom-stone-kitchen/page/2/', '/category/faux-stone-veneer/page/2/', '/category/faux-stone-veneer/page/3/', '/category/maintenance-and-installation/page/5/', '/category/maintenance-and-installation/page/4/', '/category/manufactured-stone2/', '/stone/', '/category/maintenance-and-installation/tips-and-advice/', '/category/uncategorized/page/2/', '/category/maintenance-and-installation/page/2/', '/category/manufactured-stone/page/2/', '/category/manufactured-stone/page/4/']",
+   "handler": "['/category/custom-stone-bathroom/', '/category/manufactured-stone/page/3/', '/category/custom-stone-fireplace/page/2/', '/category/faux-stone-veneer/', '/category/maintenance-and-installation/page/3/', '/category/faux-stone-paneling/', '/category/manufactured-stone-fireplace/', '/category/tips-and-tricks/', '/category/custom-stone-kitchen/', '/category/maintenance-and-installation/diy/', '/category/installation-and-care/', '/category/stone/', '/category/go-stone-panels/', '/category/go-stone-panels/page/2/', '/category/go-brick-brick-veneer/', '/category/uncategorized/', '/category/adhered-stone-veneer/', '/category/manufactured-stone/', '/category/maintenance-and-installation/', '/category/panel/', '/category/faux-stone-paneling/page/2/', '/category/maintenance-and-installation/diy/page/2/', '/category/custom-stone-accents/', '/category/custom-stone-fireplace/', '/category/general/', '/category/maintenance-and-installation/diy/page/3/', '/category/maintenance-and-installation/tips-and-advice/page/2/', '/category/custom-stone-kitchen/page/2/', '/category/faux-stone-veneer/page/2/', '/category/faux-stone-veneer/page/3/', '/category/maintenance-and-installation/page/5/', '/category/maintenance-and-installation/page/4/', '/category/manufactured-stone2/', '/stone/', '/category/maintenance-and-installation/tips-and-advice/', '/category/uncategorized/page/2/', '/category/maintenance-and-installation/page/2/', '/category/manufactured-stone/page/2/', '/category/manufactured-stone/page/4/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/stone/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/product/double-light-switch-box-accent/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-from-http-to-https",
+   "issue": "Canonical from HTTP to HTTPS",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 147,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/product/stack-stone-sample-board/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-importance-of-sealing-your-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-should-you-choose-manufactured-stone-over-natural-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-brick-and-go-stone-for-diy-projects/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-beautiful-custom-stone-patio/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-advantages-of-using-go-stone-panels-for-your-home/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-install-diy-stone-panels-go-stone-the-easy-way/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/roi-when-using-manufactured-stone/5/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:non-canonical-page-in-sitemap",
+   "issue": "Non-canonical page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 60,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/product/stack-stone-sample-board/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-importance-of-sealing-your-manufactured-stone-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/why-should-you-choose-manufactured-stone-over-natural-stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-create-a-beautiful-custom-stone-patio/",
+     0,
+     "traffic"
+    ],
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/go-brick-and-go-stone-for-diy-projects/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-to-care-for-a-cultured-stone-fireplace/",
+     0,
+     "traffic"
+    ],
+    [
+     "/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-url-has-no-incoming-internal-links",
+   "issue": "Canonical URL has no incoming internal links",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 8,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/category/tips-and-tricks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/custom-stone-kitchen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/stone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-stone-panels/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/go-brick-brick-veneer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/maintenance-and-installation/tips-and-advice/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-page-in-sitemap",
+   "issue": "Noindex page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/cart/",
+     0,
+     "traffic"
+    ],
+    [
+     "/my-account/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:author-archive",
+   "issue": "Links to redirect, skipped by fix-redirect-links: author archive",
+   "handler": "indexation-review",
+   "tier": "APPROVE",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Yoast > Search Appearance > Archives: disable author archives (or the author sitemap); one setting removes them all.",
+   "examples": [
+    [
+     "/author/welcome/",
+     39,
+     "links"
+    ],
+    [
+     "/author/welcome/",
+     18,
+     "links"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "issue:302-redirect",
+   "issue": "302 redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/checkout/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:https-to-http-redirect",
+   "issue": "HTTPS to HTTP redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/wp-content/uploads/2015/01/Go-Stone_New-Brochure_12-19-13.pdf",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-in-multiple-sitemaps",
+   "issue": "Page in multiple sitemaps",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/shop/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/wp-content/uploads/2015/09/customfit-fn-thekitchen.jpg",
+     0,
+     "traffic"
+    ],
+    [
+     "/stone/page/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/wp-content/uploads/2015/09/customfit-fn-thekitchen.jpg",
+     0,
+     "traffic"
+    ],
+    [
+     "/stone/page/2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/see-native-custom-stones-customfit-panels-on-food-networks-the-kitchen/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page-nonindexable",
+   "issue": "Page has links to broken page  (non-indexable pages)",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/see-native-custom-stones-customfit-panels-on-food-networks-the-kitchen/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

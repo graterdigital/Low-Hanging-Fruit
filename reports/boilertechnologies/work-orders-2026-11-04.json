@@ -1,0 +1,440 @@
+{
+ "slug": "boilertechnologies",
+ "domain": "boilertechnologies.com",
+ "crawl": "2026-11-04",
+ "health": 96,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:structured-data-has-google-rich-results-validation-error",
+   "issue": "Structured data has Google rich results validation error",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 227,
+   "traffic_at_stake": 91,
+   "traffic_note": " (top 200 of 227)",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/boiler-services-west-palm-beach",
+     28,
+     "traffic"
+    ],
+    [
+     "/boiler-services-fort-myers",
+     14,
+     "traffic"
+    ],
+    [
+     "/boiler-services-miami",
+     11,
+     "traffic"
+    ],
+    [
+     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
+     8,
+     "traffic"
+    ],
+    [
+     "/ex-series-steam-boilers",
+     8,
+     "traffic"
+    ],
+    [
+     "/manufacturing-and-industrial-plants",
+     5,
+     "traffic"
+    ],
+    [
+     "/product",
+     4,
+     "traffic"
+    ],
+    [
+     "/boiler-supplier-miami",
+     3,
+     "traffic"
+    ],
+    [
+     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
+     3,
+     "traffic"
+    ],
+    [
+     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
+     3,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 226,
+   "traffic_at_stake": 91,
+   "traffic_note": " (top 200 of 226)",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/boiler-services-west-palm-beach",
+     28,
+     "traffic"
+    ],
+    [
+     "/boiler-services-fort-myers",
+     14,
+     "traffic"
+    ],
+    [
+     "/boiler-services-miami",
+     11,
+     "traffic"
+    ],
+    [
+     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
+     8,
+     "traffic"
+    ],
+    [
+     "/ex-series-steam-boilers",
+     8,
+     "traffic"
+    ],
+    [
+     "/manufacturing-and-industrial-plants",
+     5,
+     "traffic"
+    ],
+    [
+     "/product",
+     4,
+     "traffic"
+    ],
+    [
+     "/boiler-supplier-miami",
+     3,
+     "traffic"
+    ],
+    [
+     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
+     3,
+     "traffic"
+    ],
+    [
+     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
+     3,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 20,
+   "traffic_at_stake": 14,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/boiler-services-fort-myers",
+     14,
+     "traffic"
+    ],
+    [
+     "/boiler-services-kissimmee",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-ocala",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-jacksonville",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-boiler-dealer-tampa",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-sarasota",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-gainesville",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-cape-coral",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-lakewood-ranch",
+     0,
+     "traffic"
+    ],
+    [
+     "/commercial-water-heater-orlando",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 4,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/product",
+     4,
+     "traffic"
+    ],
+    [
+     "/gallery",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 11,
+   "traffic_at_stake": 3,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/boiler-supplier-miami",
+     3,
+     "traffic"
+    ],
+    [
+     "/boiler-pumps-pinellas-park",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/industrial-electric-boilers-over-traditional-heating-systems",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-boiler-services-fort-lauderdale",
+     0,
+     "traffic"
+    ],
+    [
+     "/industrial-commercial-boiler-bloomingdale",
+     0,
+     "traffic"
+    ],
+    [
+     "/industrial-commercial-boiler-egypt-lake-leto",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-boiler-services-st-petersburg",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-pumps-palm-harbor",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-in-englewood",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/how-to-optimize-your-industrial-boilers-maximum-efficiency",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 2,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     2,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 8,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/boiler-pumps-pinellas-park",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-boiler-services-fort-lauderdale",
+     0,
+     "traffic"
+    ],
+    [
+     "/industrial-commercial-boiler-bloomingdale",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-boiler-services-st-petersburg",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-pumps-palm-harbor",
+     0,
+     "traffic"
+    ],
+    [
+     "/boiler-services-in-englewood",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/how-to-optimize-your-industrial-boilers-maximum-efficiency",
+     0,
+     "traffic"
+    ],
+    [
+     "/modular-steam-boiler-west-palm-beach",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/miura-brand-hub",
+     0,
+     "traffic"
+    ],
+    [
+     "/industrial-commercial-boiler-egypt-lake-leto",
+     0,
+     "traffic"
+    ],
+    [
+     "/modular-steam-boiler-fort-lauderdale",
+     0,
+     "traffic"
+    ],
+    [
+     "/hvac-circulator-pump-port-st-lucie",
+     0,
+     "traffic"
+    ],
+    [
+     "/hvac-circulator-pump-wesley-chapel",
+     0,
+     "traffic"
+    ],
+    [
+     "/modular-steam-boiler-west-palm-beach",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/miura-brand-hub",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

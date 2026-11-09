@@ -1,0 +1,541 @@
+{
+ "slug": "h-md",
+ "domain": "h-md.com",
+ "crawl": "2026-11-05",
+ "health": 98,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 227,
+   "traffic_at_stake": 477,
+   "traffic_note": " (top 200 of 227)",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/",
+     312,
+     "traffic"
+    ],
+    [
+     "/services/dermal-fillers",
+     106,
+     "traffic"
+    ],
+    [
+     "/services/dysport",
+     25,
+     "traffic"
+    ],
+    [
+     "/services/coolsculpting-elite",
+     17,
+     "traffic"
+    ],
+    [
+     "/our-locations/tulsa",
+     6,
+     "traffic"
+    ],
+    [
+     "/injectables",
+     5,
+     "traffic"
+    ],
+    [
+     "/our_team/aunisty-moore",
+     2,
+     "traffic"
+    ],
+    [
+     "/about/our-team",
+     1,
+     "traffic"
+    ],
+    [
+     "/our-locations/okc",
+     1,
+     "traffic"
+    ],
+    [
+     "/contact-us",
+     1,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 312,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     312,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 54,
+   "traffic_at_stake": 9,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/our-locations/tulsa",
+     6,
+     "traffic"
+    ],
+    [
+     "/about/our-team",
+     1,
+     "traffic"
+    ],
+    [
+     "/our-locations/okc",
+     1,
+     "traffic"
+    ],
+    [
+     "/contact-us",
+     1,
+     "traffic"
+    ],
+    [
+     "/before_after/5",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/page/4",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/le",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/master-injector",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/page/12",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 35,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/category/blog/page/4",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/le",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/master-injector",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/page/12",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/aprn",
+     0,
+     "traffic"
+    ],
+    [
+     "/team_locations/okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog",
+     0,
+     "traffic"
+    ],
+    [
+     "/specialty/pa-c",
+     0,
+     "traffic"
+    ],
+    [
+     "/position/injectors/page/2",
+     0,
+     "traffic"
+    ],
+    [
+     "/position/aestheticians-and-administrative-staff",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 12,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/consider-liposuction-neck-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/smooth-signs-aging-botox",
+     0,
+     "traffic"
+    ],
+    [
+     "/say-goodbye-fine-lines-wrinkles-radiesse-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/5-simple-ways-to-manage-female-incontinence-this-summer",
+     0,
+     "traffic"
+    ],
+    [
+     "/tired-thinning-hair-learn-hair-restoration-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/refresh-skin-microneedling",
+     0,
+     "traffic"
+    ],
+    [
+     "/get-summer-ready-laser-hair-removal-oklahoma-city",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-oklahoma-city-candidate",
+     0,
+     "traffic"
+    ],
+    [
+     "/enjoy-lasting-results-laser-hair-removal-oklahoma-city",
+     0,
+     "traffic"
+    ],
+    [
+     "/get-smoother-skin-laser-hair-removal-okc",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 8,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/say-goodbye-fine-lines-wrinkles-radiesse-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/tired-thinning-hair-learn-hair-restoration-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/refresh-skin-microneedling",
+     0,
+     "traffic"
+    ],
+    [
+     "/get-summer-ready-laser-hair-removal-oklahoma-city",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-oklahoma-city-candidate",
+     0,
+     "traffic"
+    ],
+    [
+     "/get-smoother-skin-laser-hair-removal-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/volumize-with-juvederm-in-oklahoma-city",
+     0,
+     "traffic"
+    ],
+    [
+     "/consider-xeomin-okc",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/say-goodbye-fine-lines-wrinkles-radiesse-okc",
+     0,
+     "traffic"
+    ],
+    [
+     "/treat-dynamic-wrinkles-botox-cosmetic",
+     0,
+     "traffic"
+    ],
+    [
+     "/botox-oklahoma-city-candidate",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:category-blog-page-4-category-blog-page-",
+   "issue": "Pages fix-meta routed to ['/category/blog/page/4', '/category/blog/page/12', '/category/blog', '/position/injectors/page/2', '/category/blog/page/5', '/services/page/3', '/category/blog/page/6', '/category/blog/page/2', '/services/page/2', '/category/blog/page/9', '/category/blog/page/11', '/category/blog/page/3', '/category/blog/page/7', '/category/blog/page/10', '/category/blog/page/13', '/category/blog/page/8']",
+   "handler": "['/category/blog/page/4', '/category/blog/page/12', '/category/blog', '/position/injectors/page/2', '/category/blog/page/5', '/services/page/3', '/category/blog/page/6', '/category/blog/page/2', '/services/page/2', '/category/blog/page/9', '/category/blog/page/11', '/category/blog/page/3', '/category/blog/page/7', '/category/blog/page/10', '/category/blog/page/13', '/category/blog/page/8']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/financing",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/service_type/laser-procedures",
+     0,
+     "traffic"
+    ],
+    [
+     "/service_type/medical-aesthetics",
+     0,
+     "traffic"
+    ],
+    [
+     "/service_type/injectables",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/health-optimization/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/health-optimization/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/improve-overall-wellness-bioidentical-hormones-oklahoma-city",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": [
+  [
+   "Indexable page not in sitemap",
+   15,
+   "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"
+  ]
+ ]
+}

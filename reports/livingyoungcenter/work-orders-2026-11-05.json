@@ -1,0 +1,431 @@
+{
+ "slug": "livingyoungcenter",
+ "domain": "livingyoungcenter.com",
+ "crawl": "2026-11-05",
+ "health": 48,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 91,
+   "traffic_at_stake": 580,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/",
+     217,
+     "traffic"
+    ],
+    [
+     "/wellness-health/lipolean/",
+     123,
+     "traffic"
+    ],
+    [
+     "/blog/lip-filler-in-tampa-the-complete-guide/",
+     53,
+     "traffic"
+    ],
+    [
+     "/tampa-bay-med-spa/best-med-spa-in-st-pete/",
+     41,
+     "traffic"
+    ],
+    [
+     "/tampa-bay-med-spa/best-med-spa-odessa/",
+     29,
+     "traffic"
+    ],
+    [
+     "/non-surgical-nose-job/",
+     24,
+     "traffic"
+    ],
+    [
+     "/blog/how-many-units-of-botox/",
+     17,
+     "traffic"
+    ],
+    [
+     "/acne-scar-treatment/",
+     13,
+     "traffic"
+    ],
+    [
+     "/wellness-health/peptide-therapy/",
+     13,
+     "traffic"
+    ],
+    [
+     "/blog/peptide-therapy-tampa-guide/",
+     11,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/category/med-spa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ],
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/resources/financing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/blog/hrt-women-tampa-bay-guide/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/wellness-health/specialty-testing/multiple-autoimmune-reactivity-screen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/wellness-health/specialty-testing/heavy-metal-testing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-points-to-redirect",
+   "issue": "Canonical points to redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/?page_id=9288",
+     0,
+     "traffic"
+    ],
+    [
+     "/testosterone-therapy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:non-canonical-page-in-sitemap",
+   "issue": "Non-canonical page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/testosterone-therapy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 10,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/locations/seminole/",
+     0,
+     "traffic"
+    ],
+    [
+     "/seminole/",
+     0,
+     "traffic"
+    ],
+    [
+     "/st-petersburg/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/radiesse/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/treatment-areas/",
+     0,
+     "traffic"
+    ],
+    [
+     "/odessa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/black-friday-specials-2025/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/lip-augmentation/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/rha-fillers/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 10,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/locations/seminole/",
+     0,
+     "traffic"
+    ],
+    [
+     "/seminole/",
+     0,
+     "traffic"
+    ],
+    [
+     "/st-petersburg/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/radiesse/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/treatment-areas/",
+     0,
+     "traffic"
+    ],
+    [
+     "/odessa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/black-friday-specials-2025/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/lip-augmentation/",
+     0,
+     "traffic"
+    ],
+    [
+     "/medical-spa/dermal-fillers/brands/rha-fillers/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page-nonindexable",
+   "issue": "Page has links to broken page  (non-indexable pages)",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/category/med-spa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/?page_id=9288",
+     0,
+     "traffic"
+    ],
+    [
+     "/testosterone-therapy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/injectables/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": [
+  [
+   "Indexable page not in sitemap",
+   1,
+   "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"
+  ]
+ ]
+}

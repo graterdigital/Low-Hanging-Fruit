@@ -1,0 +1,290 @@
+{
+ "slug": "naturalenclosures",
+ "domain": "naturalenclosures.com",
+ "crawl": "2026-11-05",
+ "health": 100,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:open-graph-tags-missing",
+   "issue": "Open Graph tags missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 195,
+   "traffic_at_stake": 56,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/how-long-should-i-wait-to-paint-a-rained-on-fence/",
+     22,
+     "traffic"
+    ],
+    [
+     "/",
+     17,
+     "traffic"
+    ],
+    [
+     "/how-to-repair-your-chain-link-fence/",
+     6,
+     "traffic"
+    ],
+    [
+     "/fences-commercial-properties/",
+     4,
+     "traffic"
+    ],
+    [
+     "/stain-seal-fence-summer/",
+     3,
+     "traffic"
+    ],
+    [
+     "/how-much-does-a-wood-privacy-fence-cost-in-2025/",
+     2,
+     "traffic"
+    ],
+    [
+     "/picking-right-dog-fence-atlanta/",
+     1,
+     "traffic"
+    ],
+    [
+     "/paint-a-wooden-picket-fence/",
+     1,
+     "traffic"
+    ],
+    [
+     "/how-to-check-wood-fences-for-damage/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact-us/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-missing",
+   "issue": "X (Twitter) card missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 195,
+   "traffic_at_stake": 56,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/how-long-should-i-wait-to-paint-a-rained-on-fence/",
+     22,
+     "traffic"
+    ],
+    [
+     "/",
+     17,
+     "traffic"
+    ],
+    [
+     "/how-to-repair-your-chain-link-fence/",
+     6,
+     "traffic"
+    ],
+    [
+     "/fences-commercial-properties/",
+     4,
+     "traffic"
+    ],
+    [
+     "/stain-seal-fence-summer/",
+     3,
+     "traffic"
+    ],
+    [
+     "/how-much-does-a-wood-privacy-fence-cost-in-2025/",
+     2,
+     "traffic"
+    ],
+    [
+     "/picking-right-dog-fence-atlanta/",
+     1,
+     "traffic"
+    ],
+    [
+     "/paint-a-wooden-picket-fence/",
+     1,
+     "traffic"
+    ],
+    [
+     "/how-to-check-wood-fences-for-damage/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact-us/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-url-has-no-incoming-internal-links",
+   "issue": "Canonical URL has no incoming internal links",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 17,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/",
+     17,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 17,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     17,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 24,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/projects/4-tall-aluminum-flush-top-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/6-shadow-box-french-gothic-post-fence-with-a-10-double-gate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/6-tall-captop-wood-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/stunning-6-stockade-wood-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/aluminum-fence-for-parking-lot-and-pool-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/6-ft-board-on-board-scallop-top-pet-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/6-ft-stockade-fence-with-hidden-posts/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/beautiful-6-white-pvc-fence/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/gorgeous-6-captop-wood-fence-with-a-10-double-gate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/projects/fence-removal-and-new-installation-of-a-5-aluminum-flush-top-fence/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:faq-page-missing-faqpage-schema",
+   "issue": "FAQ page missing FAQPage schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
+   "examples": [
+    [
+     "/questions-when-building-fence-atlanta/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/cache/",
+     0,
+     "traffic"
+    ],
+    [
+     "/3-benefits-backyard-fence-2/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

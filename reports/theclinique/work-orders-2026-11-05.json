@@ -1,0 +1,605 @@
+{
+ "slug": "theclinique",
+ "domain": "theclinique.com",
+ "crawl": "2026-11-05",
+ "health": 98,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:organization-schema-missing-or-incomplete",
+   "issue": "Organization schema missing or incomplete",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 164,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     164,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 8,
+   "traffic_at_stake": 164,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/",
+     164,
+     "traffic"
+    ],
+    [
+     "/about/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/facial-concerns/wrinkle-reduction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/facial-concerns/jowls/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/body-concerns/stretch-marks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/exploring-the-top-treatment-areas-for-botox-dysport/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/skin-concerns/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/facial-concerns/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-nofollow-outgoing-internal-links",
+   "issue": "Page has nofollow outgoing internal links",
+   "handler": "nofollow-audit",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 11,
+   "traffic_at_stake": 3,
+   "traffic_note": "",
+   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/privacy-policy/",
+     3,
+     "traffic"
+    ],
+    [
+     "/blog/everything-you-need-to-know-about-laser-tattoo-removal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/santa-rosa-beach-promotions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/are-superficial-chemical-peels-obsolete-the-spectra-laser-peel-hollywood-peel-might-make-that-happen/",
+     0,
+     "traffic"
+    ],
+    [
+     "/open-house/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/injectables/dermal-fillers/skinvive-by-juvederm/",
+     0,
+     "traffic"
+    ],
+    [
+     "/about/our-office/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/injectables/injectable-butt-lift/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/dont-forget-the-hands-and-decollete-when-thinking-about-your-cosmetic-refinements/",
+     0,
+     "traffic"
+    ],
+    [
+     "/open-house-social-media/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 273,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/face/injectables/dermal-fillers/skinvive-by-juvederm/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/injectables/injectable-butt-lift/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/1223-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/1499-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/254725-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/chemicalpeels2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/1372-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/924-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-parkland/1407-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery/lips-8/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/gallery-category-parkland/advatx-laser/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/skin/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/tixel/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-parkland/coolsculpting/page/12/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to ['/']",
+   "handler": "['/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "issue:faq-page-missing-faqpage-schema",
+   "issue": "FAQ page missing FAQPage schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing.",
+   "examples": [
+    [
+     "/blog/commonly-asked-questions-about-lip-filler-problems/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:multiple-title-tags",
+   "issue": "Multiple title tags",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting.",
+   "examples": [
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/face/injectables/hylenex/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 265,
+   "traffic_at_stake": 0,
+   "traffic_note": " (top 200 of 265)",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/gallery-category-parkland/face/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/injectables-dermal-fillers/page/14/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-parkland/face/page/10/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-cooper-city/injectables-dermal-fillers/page/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/genius-infini/page/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-cooper-city/non-surgical-face-lift/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/genius-infini/page/5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-cooper-city/non-surgical-face-lift/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category-parkland/butt-lift/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/injectables-dermal-fillers/page/15/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:broken-redirect",
+   "issue": "Broken redirect",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/medspa-south-florida/facial-body-treatments/venus-legacy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-became-non-indexable",
+   "issue": "Indexable page became non-indexable",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/about/out-of-town-clients/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-missing",
+   "issue": "Open Graph tags missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/subscribe-notifications/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-missing",
+   "issue": "X (Twitter) card missing",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/subscribe-notifications/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 8,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/about/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cooper-city-home-page/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/lasers/advatx/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/skin-concerns/melasma/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/facial-concerns/pigmented-lesions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/team/sandy-weiner/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/skin/ellacor/",
+     0,
+     "traffic"
+    ],
+    [
+     "/body/venus-legacy-rf/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 8,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/about/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cooper-city-home-page/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/lasers/advatx/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/skin-concerns/melasma/",
+     0,
+     "traffic"
+    ],
+    [
+     "/conditions/facial-concerns/pigmented-lesions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/team/sandy-weiner/",
+     0,
+     "traffic"
+    ],
+    [
+     "/face/skin/ellacor/",
+     0,
+     "traffic"
+    ],
+    [
+     "/body/venus-legacy-rf/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:canonical-points-to-4xx",
+   "issue": "Canonical points to 4XX",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/team/alicia-budda/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,1115 @@
+{
+ "slug": "setcomcorp",
+ "domain": "setcomcorp.com",
+ "crawl": "2026-11-04",
+ "health": 94,
+ "generated": "2026-11-09",
+ "rows": [
+  {
+   "id": "issue:inconsistent-ai-training-bot-policy",
+   "issue": "Inconsistent AI training bot policy",
+   "handler": "ai-discoverability",
+   "tier": "decide",
+   "urls_affected": 113,
+   "traffic_at_stake": 265,
+   "traffic_note": "",
+   "what_to_do": "robots.txt groups disagree; the managed block replaces them (skill).",
+   "examples": [
+    [
+     "/",
+     222,
+     "traffic"
+    ],
+    [
+     "/industry/police-motor/",
+     9,
+     "traffic"
+    ],
+    [
+     "/police-motorcycle-rodeo-course-maps/",
+     8,
+     "traffic"
+    ],
+    [
+     "/products/headsets/5b-headset/",
+     7,
+     "traffic"
+    ],
+    [
+     "/products/",
+     6,
+     "traffic"
+    ],
+    [
+     "/industry/fire/",
+     4,
+     "traffic"
+    ],
+    [
+     "/products/systems/900-max/",
+     3,
+     "traffic"
+    ],
+    [
+     "/support/",
+     3,
+     "traffic"
+    ],
+    [
+     "/2026-police-motorcycle-training-events/",
+     2,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax-fire/",
+     1,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-blocked-from-some-ai-search-bots",
+   "issue": "Indexable page blocked from some AI search bots",
+   "handler": "ai-discoverability",
+   "tier": "decide",
+   "urls_affected": 113,
+   "traffic_at_stake": 265,
+   "traffic_note": "",
+   "what_to_do": "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
+   "examples": [
+    [
+     "/",
+     222,
+     "traffic"
+    ],
+    [
+     "/industry/police-motor/",
+     9,
+     "traffic"
+    ],
+    [
+     "/police-motorcycle-rodeo-course-maps/",
+     8,
+     "traffic"
+    ],
+    [
+     "/products/headsets/5b-headset/",
+     7,
+     "traffic"
+    ],
+    [
+     "/products/",
+     6,
+     "traffic"
+    ],
+    [
+     "/industry/fire/",
+     4,
+     "traffic"
+    ],
+    [
+     "/products/systems/900-max/",
+     3,
+     "traffic"
+    ],
+    [
+     "/support/",
+     3,
+     "traffic"
+    ],
+    [
+     "/2026-police-motorcycle-training-events/",
+     2,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax-fire/",
+     1,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:slow-page",
+   "issue": "Slow page",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 156,
+   "traffic_at_stake": 250,
+   "traffic_note": "",
+   "what_to_do": "Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/",
+     222,
+     "traffic"
+    ],
+    [
+     "/industry/police-motor/",
+     9,
+     "traffic"
+    ],
+    [
+     "/products/headsets/5b-headset/",
+     7,
+     "traffic"
+    ],
+    [
+     "/products/",
+     6,
+     "traffic"
+    ],
+    [
+     "/products/systems/900-max/",
+     3,
+     "traffic"
+    ],
+    [
+     "/2026-police-motorcycle-training-events/",
+     2,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax-fire/",
+     1,
+     "traffic"
+    ],
+    [
+     "/portable-radio-adapter-cables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/right-side-slide-in-snap-plate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/arff/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:h1-tag-missing-or-empty",
+   "issue": "H1 tag missing or empty",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 68,
+   "traffic_at_stake": 24,
+   "traffic_note": "",
+   "what_to_do": "Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply.",
+   "examples": [
+    [
+     "/police-motorcycle-rodeo-course-maps/",
+     8,
+     "traffic"
+    ],
+    [
+     "/products/",
+     6,
+     "traffic"
+    ],
+    [
+     "/industry/fire/",
+     4,
+     "traffic"
+    ],
+    [
+     "/support/",
+     3,
+     "traffic"
+    ],
+    [
+     "/2026-police-motorcycle-training-events/",
+     2,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax-fire/",
+     1,
+     "traffic"
+    ],
+    [
+     "/portable-radio-adapter-cables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/arff/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact-thanks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/quote/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:product-page-missing-product-schema",
+   "issue": "Product page missing Product schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 30,
+   "traffic_at_stake": 11,
+   "traffic_note": "",
+   "what_to_do": "Check whether these are quote-only products (no price = no Offer, schema adds nothing) or misclassified category pages.",
+   "examples": [
+    [
+     "/products/headsets/5b-headset/",
+     7,
+     "traffic"
+    ],
+    [
+     "/products/systems/900-max/",
+     3,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax-fire/",
+     1,
+     "traffic"
+    ],
+    [
+     "/products/accessories/radio-routing-controller/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/radio-cables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/police-motor/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/vented-headset-cup/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/police-motor/half-shell-helmet-kit/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/clip-on-liberator-max/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/police-motor-tatelyn-test/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:category-page-missing-itemlist-schema",
+   "issue": "Category page missing ItemList schema",
+   "handler": "schema-check",
+   "tier": "FLAG",
+   "urls_affected": 4,
+   "traffic_at_stake": 6,
+   "traffic_note": "",
+   "what_to_do": "Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave.",
+   "examples": [
+    [
+     "/products/",
+     6,
+     "traffic"
+    ],
+    [
+     "/portable-radio-adapter-cables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/",
+     0,
+     "traffic"
+    ],
+    [
+     "/radio-designator-list/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:hidden-pages-confirm-intent",
+   "issue": "Pages hidden from Google (noindex/nofollow): confirm intent",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 51,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page.",
+   "examples": [
+    [
+     "/product/right-side-slide-in-snap-plate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/outer-acoustical-pad-for-cs-style-headsets/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/nascar/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/left-side-slide-in-snap-plate/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/fire-department-communications/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/inner-acoustical-pad-for-cs-style-headsets/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/travis-county-esd-12/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/agricultural-research/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/setcom/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/communication/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:orphan-page-has-no-incoming-internal-links",
+   "issue": "Orphan page (has no incoming internal links)",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 25,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first.",
+   "examples": [
+    [
+     "/contact-thanks/",
+     0,
+     "traffic"
+    ],
+    [
+     "/thanks-for-requesting-a-quote/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/police-motor/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/fire-rescue-boat/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/police-boat/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2023-police-motorcycle-training-events/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/incident-command/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/work-boats/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/snow-plows/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:date-archive-redirecting-to-the-homepage",
+   "issue": "Links to redirect, skipped by fix-redirect-links: date archive redirecting to the homepage",
+   "handler": "redirect-rules",
+   "tier": "decide",
+   "urls_affected": 11,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Each old URL needs a real redirect target (redirect-rules) or the link removed; GSC impressions decide the order.",
+   "examples": [
+    [
+     "/2026/10/21/",
+     2,
+     "links"
+    ],
+    [
+     "/2026/06/22/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/06/04/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/05/04/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/10/07/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/05/18/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/01/09/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/01/28/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/09/10/",
+     1,
+     "links"
+    ],
+    [
+     "/2026/09/24/",
+     1,
+     "links"
+    ]
+   ],
+   "decider": "client",
+   "importance": "",
+   "source": "redirect-map-2026-10-28.json"
+  },
+  {
+   "id": "issue:slow-server-response-for-ai-crawlers",
+   "issue": "Slow server response for AI crawlers",
+   "handler": "hosting/cache",
+   "tier": "FLAG",
+   "urls_affected": 12,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM.",
+   "examples": [
+    [
+     "/products/accessories/radio-cables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/drone-operations/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/headsets/6b-headset/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/headsets/8b-headset/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/towing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/accessories/headset-strap-extension/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/police-motor/wired-cable-kit-portable-only/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "redirect-links:wp-options",
+   "issue": "wp_options rows still carrying old URLs (widgets, menus, theme/plugin settings)",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 7,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Fix by hand in the admin (Appearance > Widgets/Menus, theme and plugin settings); list in 2026-10-30-1056-fix-redirect-links-live-options.md.",
+   "examples": [
+    [
+     "clarity_collect_batch",
+     0,
+     ""
+    ],
+    [
+     "clarity_collect_batch",
+     0,
+     ""
+    ],
+    [
+     "monsterinsights_report_data_overview",
+     0,
+     ""
+    ],
+    [
+     "clarity_collect_batch",
+     0,
+     ""
+    ],
+    [
+     "clarity_collect_batch",
+     0,
+     ""
+    ],
+    [
+     "ywraq_return_to_shop_url",
+     0,
+     ""
+    ],
+    [
+     "ywraq_return_to_shop_after_sent_the_request_url",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "2026-10-30-1056-fix-redirect-links-live-options.md"
+  },
+  {
+   "id": "fix-meta:",
+   "issue": "Pages fix-meta routed to []",
+   "handler": "[]",
+   "tier": "FLAG",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "noindex",
+     0,
+     ""
+    ],
+    [
+     "non-200",
+     0,
+     ""
+    ],
+    [
+     "homepage title",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-28.json"
+  },
+  {
+   "id": "fix-meta:products-2026-police-motorcycle-training",
+   "issue": "Pages fix-meta routed to ['/products/', '/2026-police-motorcycle-training-events/', '/blog/', '/products/accessories/', '/blog/page/2/', '/shop/page/2/', '/dealers/', '/shop/page/3/']",
+   "handler": "['/products/', '/2026-police-motorcycle-training-events/', '/blog/', '/products/accessories/', '/blog/page/2/', '/shop/page/2/', '/dealers/', '/shop/page/3/']",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [
+    [
+     "archive",
+     0,
+     ""
+    ]
+   ],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-28.json"
+  },
+  {
+   "id": "issue:css-file-size-too-large",
+   "issue": "CSS file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Builder/theme CSS; minify or defer via the cache/optimizer plugin. Hosting or theme ticket.",
+   "examples": [
+    [
+     "/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1793160607",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:indexable-page-not-in-sitemap",
+   "issue": "Indexable page not in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/blog/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/page/3/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:noindex-page-in-sitemap",
+   "issue": "Noindex page in sitemap",
+   "handler": "indexation-review",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 4,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/product-category/wired-headset-system/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/liberatormax-wireless-accessories/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/liberatormax-wireless-consumables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product-category/police-motor-system/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:structured-data-has-google-rich-results-validation-error",
+   "issue": "Structured data has Google rich results validation error",
+   "handler": "schema-fix",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/product/overhead-support-strap-13/",
+     0,
+     "traffic"
+    ],
+    [
+     "/product/overhead-support-strap-19/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:3xx-redirect-in-sitemap",
+   "issue": "3XX redirect in sitemap",
+   "handler": "redirect-rules",
+   "tier": "APPROVE (skill pending)",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/2025-police-motorcycle-training-events/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:open-graph-tags-incomplete",
+   "issue": "Open Graph tags incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/shop/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/page/3/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:x-twitter-card-incomplete",
+   "issue": "X (Twitter) card incomplete",
+   "handler": "fix-social-tags",
+   "tier": "AUTO (skill pending)",
+   "urls_affected": 3,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/shop/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shop/page/3/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:4xx-page",
+   "issue": "4XX page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 14,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/products/950-977-vehicle-intercom-system/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/single-person-wireless-intercom-system/",
+     0,
+     "traffic"
+    ],
+    [
+     "/index.php?gf-download=2026%2F02%2FPeach-State-Flyer.png&form-id=6&field-id=25&hash=4ab0857e2222251b41a49f1730466f49d28da8cdac162551daeb478e5400ddc6",
+     0,
+     "traffic"
+    ],
+    [
+     "/index.php?gf-download=2025%2F12%2FIMG_9072.png&form-id=6&field-id=25&hash=c901944ab0f4dacfc0b482539b3c52cf2e66b8e82cc5565ee557f5c13b243ebd",
+     0,
+     "traffic"
+    ],
+    [
+     "/index.php?gf-download=2026%2F01%2F2026-Panther-Prowl-Motorcycle-Rodeo-Motorman-Tribute-Flier-final.pdf&form-id=6&field-id=25&hash=254803182fee7d35de1eef6ea0e70b4bd238d82d937bd3b9b51e8188f7861cf9",
+     0,
+     "traffic"
+    ],
+    [
+     "/index.php?gf-download=2025%2F11%2F2026-Bold-City-flyer.png&form-id=6&field-id=25&hash=7aadf87557860352a8918a5505287aa887ceeb2d5dc7b8364a0059732dd68693",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/systems/1310-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/index.php?gf-download=2025%2F12%2FSMART-2026-FLYER.pdf&form-id=6&field-id=25&hash=d94ce7a0ce6cd9501e8dbf3ab9893e2ce68d2f597d35ec658ed2cd26b02f8ba0",
+     0,
+     "traffic"
+    ],
+    [
+     "/fire-multi-user-wireless-intercom-headset-system.html",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/liberatormax%F0%9F%94%A5/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:page-has-links-to-broken-page",
+   "issue": "Page has links to broken page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 10,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/solutions/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2023-police-motorcycle-training-events/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/incident-command/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/page/2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/wildland-brush-truck/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/crane/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/headsets/liberatormax/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/drilling/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/construction/",
+     0,
+     "traffic"
+    ],
+    [
+     "/industry/commercial-fishing/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:404-page",
+   "issue": "404 page",
+   "handler": "fix-broken-links",
+   "tier": "AUTO/APPROVE (skill pending)",
+   "urls_affected": 9,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/products/950-977-vehicle-intercom-system/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/single-person-wireless-intercom-system/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/systems/1310-2/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fire-multi-user-wireless-intercom-headset-system.html",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/liberatormax%F0%9F%94%A5/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/liberatormax-headset/",
+     0,
+     "traffic"
+    ],
+    [
+     "/products/police-motor/liberator-wireless/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/2024-police-motorcycle-training-events/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  }
+ ],
+ "skipped": []
+}
