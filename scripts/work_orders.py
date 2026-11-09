@@ -39,7 +39,8 @@ from build_redirect_map import load_env, ahrefs  # noqa: E402
 
 TAB = "work orders"
 COLS = ["id", "issue", "handler", "tier", "urls_affected", "traffic_at_stake", "what_to_do", "example_urls", "decider",
-        "owner", "status", "decision_or_note", "opened", "updated", "cleared"]
+        "owner", "status", "decision_or_note", "opened", "updated", "cleared", "client_brief"]
+SUMMARY_TAB = "work orders summary"                        # rebuilt each run: crawl header, skipped on purpose, decisions on file
 HUMAN = ("owner", "status", "decision_or_note")          # never overwritten by the script
 OPEN_STATUSES = ("", "open", "needs decision", "in progress")
 PAGE_LIMIT = 200                                           # URLs pulled per issue for traffic_at_stake; above this it is a sample
@@ -309,10 +310,13 @@ def open_tab(sh, cols, tab=TAB):
     vals = ws.get_all_values(); head = vals[0] if vals else []
     if head != cols:
         if not any(r for r in vals[1:] if any(r)): ws.clear(); ws.update("A1", [cols], value_input_option="RAW"); ws.freeze(rows=1); vals = [cols]
+        elif head == cols[:len(head)]:                      # columns added since the tab was made: extend the header, keep the rows
+            if ws.col_count < len(cols): ws.add_cols(len(cols) - ws.col_count)
+            ws.update("A1", [cols], value_input_option="RAW"); vals[0] = cols
         else: sys.exit(f"'{tab}' tab has unexpected columns {head}; expected {cols}")
     return ws, vals
 
-def push_sheet(client, crawl, rows):
+def push_sheet(client, crawl, rows, health=None, skipped=(), n_issues=None):
     from review_sheets import gc
     sid = sheet_id(client)
     if not sid: return f"no review sheet (review.alt_sheet_id) for {client['slug']}; run review_sheets.py setup"
@@ -321,18 +325,44 @@ def push_sheet(client, crawl, rows):
     stamp = f"{today()} (crawl {crawl})"; updates, appends = [], []
     for r in sort_rows(rows):
         vals_new = [r["id"], r["issue"], r["handler"], r["tier"], r["urls_affected"], f"{r['traffic_at_stake']}{r['traffic_note']}", r["what_to_do"], ex_text(r), r["decider"]]
+        brief = brief_for(r, client) if r["decider"] == "client" and r["tier"].startswith("decide") else ""
         if r["id"] in existing:
             rownum, old = existing[r["id"]]
-            updates.append((rownum, vals_new + [old[9], old[10] or "open", old[11], old[12] or today(), stamp, ""]))   # back from cleared if it returned
+            updates.append((rownum, vals_new + [old[9], old[10] or "open", old[11], old[12] or today(), stamp, "", brief]))   # back from cleared if it returned
         else:
-            appends.append(vals_new + ["", "open", "", today(), stamp, ""])
+            appends.append(vals_new + ["", "open", "", today(), stamp, "", brief])
     live = {r["id"] for r in rows}
     for rid, (rownum, old) in existing.items():
         if rid not in live and not old[14]:
-            updates.append((rownum, old[:13] + [stamp, today()]))
-    for rownum, v in updates: ws.update(range_name=f"A{rownum}:O{rownum}", values=[v], value_input_option="RAW")
+            updates.append((rownum, old[:13] + [stamp, today(), old[15]]))
+    last = chr(ord("A") + len(COLS) - 1)
+    for rownum, v in updates: ws.update(range_name=f"A{rownum}:{last}{rownum}", values=[v], value_input_option="RAW")
     if appends: ws.append_rows(appends, value_input_option="RAW")
-    return f"{len(appends)} added, {len(updates)} updated on '{TAB}' ({sh.url})"
+    push_summary(sh, client, crawl, rows, health, skipped, n_issues, existing)
+    return f"{len(appends)} added, {len(updates)} updated on '{TAB}', '{SUMMARY_TAB}' rebuilt ({sh.url})"
+
+def push_summary(sh, client, crawl, rows, health, skipped, n_issues, existing):
+    """Everything in the .md report that is not a row: header counts, skipped on purpose, decisions on file, run history. Rebuilt each run."""
+    try: ws = sh.worksheet(SUMMARY_TAB)
+    except Exception: ws = sh.add_worksheet(SUMMARY_TAB, rows=100, cols=4)
+    old = ws.get_all_values()
+    history = [r for r in old[1:] if len(r) > 1 and r[0] == "run"]      # keep earlier runs' lines
+    decide = [r for r in rows if r["tier"].startswith("decide")]
+    open_n = sum(1 for _, (_, o) in existing.items() if (o[10] or "open").strip().lower() in OPEN_STATUSES and not o[14])
+    out = [["section", "item", "detail", "note"],
+           ["site", client["domain"], f"Ahrefs project {client['ahrefs']['site_audit_project_id']}", ""],
+           ["crawl", crawl, f"health {health}", f"{n_issues} active issue types"],
+           ["work orders", len(rows), f"{len(decide)} decisions ({sum(1 for r in decide if r['decider'] == 'client')} client)", f"{sum(1 for r in rows if 'skill pending' in r['tier'])} waiting on a skill not yet built"],
+           ["traffic at stake", sum(r["traffic_at_stake"] for r in rows), "Ahrefs organic traffic summed over flagged pages (top 200 per issue)", ""],
+           ["how to use", "owner / status / decision_or_note are yours on the 'work orders' tab", "status: open -> needs decision -> in progress -> done | won't fix", "note starting 'decision:' on a done row is copied to the client file by --decisions"],
+           ["", "", "", ""]]
+    out += [["skipped on purpose", n, f"{c} URLs", why] for n, c, why in skipped] or [["skipped on purpose", "none", "", ""]]
+    out += [["", "", "", ""]]
+    recorded = ((client.get("rules") or {}).get("decisions") or [])
+    out += [["decision on file", d.split(" ", 2)[1].rstrip(":") if len(d.split(" ", 2)) > 1 else "", d.split(" ", 2)[2] if len(d.split(" ", 2)) > 2 else d, d.split(" ", 1)[0]] for d in recorded] or [["decision on file", "none yet", "", ""]]
+    out += [["", "", "", ""]]
+    out += [["run", today(), f"crawl {crawl}, health {health}", f"{len(rows)} work orders, {len(decide)} decisions"]] + history
+    ws.clear(); ws.update("A1", out, value_input_option="RAW"); ws.freeze(rows=1)
 
 def pull_decisions(client, apply=True):
     """status 'done' + decision_or_note starting 'decision:' -> rules.decisions in the client file (text edit, comments kept)."""
@@ -411,7 +441,7 @@ def run_one(slug, args, handlers, by_id):
     rows = [r for r in rows if r["id"] not in decided]          # a recorded decision closes the row until someone deletes it from the client file
     report = write_report(client, crawl, health, rows, skipped, len(issues))
     print(f"{slug}: crawl {crawl}, health {health}, {len(issues)} active issue types -> {len(rows)} work orders ({len([r for r in rows if r['tier'].startswith('decide')])} decisions) · {report.relative_to(ROOT)}")
-    if args.sheet: print("  sheet:", push_sheet(client, crawl, rows))
+    if args.sheet: print("  sheet:", push_sheet(client, crawl, rows, health, skipped, len(issues)))
     if args.decisions: print("  decisions:", pull_decisions(client))
 
 def main():

@@ -1,6 +1,6 @@
 # Handoff: work-orders
 
-Status as of 2026-11-03: **built, v1.** `scripts/work_orders.py` + `skills/work-orders/SKILL.md`. Tested offline on hsfamilylaw (crawl 2026-11-03, health 97): 27 active issue types → 10 work orders (3 client decisions). The sheet upsert, `cleared` stamping and the decisions write-back were exercised against a mocked sheet; the first real `--sheet` run is Greg's, on his PC (needs the service-account key). Mirror of the project doc `claude/skill-work-orders.md`; update both. Process definition is in `docs/issue-routing.md` §3.
+Status as of 2026-11-09: **built, v1.1** (sheet now carries the whole report: `client_brief` column + `work orders summary` tab). `scripts/work_orders.py` + `skills/work-orders/SKILL.md`. Tested offline on hsfamilylaw (crawl 2026-11-03, health 97): 27 active issue types → 10 work orders (3 client decisions). The sheet upsert, `cleared` stamping and the decisions write-back were exercised against a mocked sheet; the first real `--sheet` run is Greg's, on his PC (needs the service-account key). Mirror of the project doc `claude/skill-work-orders.md`; update both. Process definition is in `docs/issue-routing.md` §3.
 
 ## Purpose
 
@@ -14,7 +14,7 @@ Collect every item that needs a human (manual fixes, client decisions, skill-rou
 - Two merges that matter: the four noindex/nofollow issues fold into one "Pages hidden from Google: confirm intent" row (one client question, not four); "Indexable page not in sitemap" / "OG URL not matching canonical" are skipped when every URL is `/page/N/` (Yoast by design, as the hsfamilylaw triage parked them).
 - Client briefs: one paragraph per `decider: client` row in the report (hidden pages, homepage-redirect targets, off-site link, bot policy, orphans have specific text; the rest get a generic paragraph from `what_to_do`).
 - Decisions: sheet row `done` + note `decision: …` → `rules.decisions` in the client file (text edit, comments kept, as `"<date> <id>: <text>"`); rows with a recorded decision are left off every later run until the line is deleted.
-- Sheet tab `work orders` (15 columns, humans own owner/status/decision_or_note), `cleared <date>` when an issue leaves the crawl, un-cleared if it returns. Agency sheet: tabs `work orders` and `by client`, rebuilt each run, id from `clients/_agency.yaml` → `review.agency_sheet_id` (file not created yet; Greg makes the blank sheet "LHF work orders" in the shared folder first).
+- Sheet tab `work orders` (16 columns incl. `client_brief`, humans own owner/status/decision_or_note); tab `work orders summary` rebuilt each run with the crawl header, skipped-on-purpose, decisions on file and a run history, so the sheet is the single place for all fix data (Greg's call 2026-11-09). A tab made with the old 15-column header is extended in place, `cleared <date>` when an issue leaves the crawl, un-cleared if it returns. Agency sheet: tabs `work orders` and `by client`, rebuilt each run, id from `clients/_agency.yaml` → `review.agency_sheet_id` (file not created yet; Greg makes the blank sheet "LHF work orders" in the shared folder first).
 
 ## hsfamilylaw, crawl 2026-11-03 (health 97)
 
