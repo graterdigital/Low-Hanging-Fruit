@@ -8,7 +8,7 @@ Collect every item that needs a human (manual fixes, client decisions, skill-rou
 
 ## What was built
 
-- `scripts/work_orders.py <slug> [--cache] [--sheet] [--decisions]`, `--all`, `--roster [--sheet]`. Report `reports/<slug>/work-orders-<crawl>.md` + `.json`; roster `reports/_roster/work-orders-<date>.md`. Same `Api` cache layout as ai_discoverability (`tmp/ahrefs-cache/<slug>/`).
+- `scripts/work_orders.py <slug> [--cache] [--sheet] [--decisions]`, `--all`, `--roster [--sheet]`. Report `reports/<slug>/work-orders-<crawl>.md` + `.json`; roster `reports/_roster/work-orders-<date>.md`. Cache in its own folder `tmp/ahrefs-cache/<slug>/work-orders/` and every Ahrefs call pinned to `date=<crawl>` (2026-11-09: Greg's first real run picked up ai_discoverability's stale `issues.json` from 10-29 while the page calls hit the current crawl → blank example columns and health 94 on a crawl that was already 97).
 - `routes.yaml` now carries `what_to_do` and `decider` on the six `manual` entries, on the twelve AI-discoverability checks (with a per-check `route` and `tier`, moved out of `ai_discoverability.py`, which now reads them from routes.yaml so there is one copy), on the schema rows, and `tier: decide` on the intent rows (noindex ×3, nofollow page, orphan page, the three bot-policy checks). The header of routes.yaml documents the fields and the work-order rule.
 - Rule (in the script, no list of its own): handler `manual` → always; tier `FLAG` or `decide` → yes; handler still `proposed` in `handlers:` → "skill pending" row, drops off when the skill is built; `review`/unmapped → classify; plus routed-out items from fix-redirect-links (skipped list by reason via `SKIP_REASONS`, wp_options log), fix-images (product-alt exceptions), fix-meta (routed rows), and any `*-workorders.json` a skill writes.
 - Two merges that matter: the four noindex/nofollow issues fold into one "Pages hidden from Google: confirm intent" row (one client question, not four); "Indexable page not in sitemap" / "OG URL not matching canonical" are skipped when every URL is `/page/N/` (Yoast by design, as the hsfamilylaw triage parked them).
@@ -22,7 +22,7 @@ The crawl already shows fix-meta's work (description missing 59 → 13, all arch
 
 ## Next, in order
 
-1. Greg, on his PC: pull, `python scripts\work_orders.py hsfamilylaw --cache` (real API, same 10 rows expected), then `--sheet`, open the tab, set status/owner on a couple of rows, put `decision: …` on one, `--decisions`, check `clients/hsfamilylaw.yaml`.
+1. First real `--sheet` run done 2026-11-09 (sheet 15clsGl0RA5BRuYQFyiWzxxy_kVcrXcdH5P5Lt9QdSKU, tabs `work orders` + `work orders summary`), against the stale 10-29 crawl; the rerun on the current crawl clears the four rows that no longer exist (orphan, H1, 3XX in sitemap, FAQ). Next: set status/owner on a couple of rows, put `decision: …` on one, `--decisions`, check `clients/hsfamilylaw.yaml`.
 2. Create the blank "LHF work orders" sheet in the LHF Review Sheets folder, add `clients/_agency.yaml` with `review: {agency_sheet_id: <id>}`, then `--all --cache --sheet` and `--roster --sheet`.
 3. Read the roster output across the 40 projects: the point of the first run is to see whether "skill pending" rows swamp it (cmitsolutions, ruggeddepot) and whether the `review` (unclassified) rows are worth classifying now.
 4. Wire into the weekly cycle (`ai_discoverability_cycle.py` or a sibling) after the Monday crawls.

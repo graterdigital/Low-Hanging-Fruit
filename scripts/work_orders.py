@@ -2,7 +2,7 @@
 """Work orders: everything that needs a human, in one place per client, fed from the latest Ahrefs crawl through routes.yaml.
 
     python scripts/work_orders.py <slug>                   # report only -> reports/<slug>/work-orders-<crawl>.md (+ .json)
-    python scripts/work_orders.py <slug> --cache           # keep/reuse the raw Ahrefs responses in tmp/ahrefs-cache/<slug>/ (offline reruns)
+    python scripts/work_orders.py <slug> --cache           # keep/reuse raw Ahrefs responses in tmp/ahrefs-cache/<slug>/work-orders/ (offline reruns)
     python scripts/work_orders.py <slug> --sheet           # also upsert the "work orders" tab on the client's review sheet
     python scripts/work_orders.py <slug> --decisions       # read decisions back from the sheet into clients/<slug>.yaml (rules.decisions)
     python scripts/work_orders.py --all [--sheet] [--cache]  # every client with an Ahrefs project
@@ -74,9 +74,10 @@ def load_client(slug):
 def provider_of(c): return str((c.get("hosting") or {}).get("provider") or "other").lower() or "other"
 
 class Api:
-    """Ahrefs with an optional on-disk cache (same layout as ai_discoverability.py: tmp/ahrefs-cache/<slug>/<name>.json)."""
+    """Ahrefs with an optional on-disk cache in tmp/ahrefs-cache/<slug>/work-orders/ (own folder: ai_discoverability's cache uses the
+    same file names and a stale issues.json from it once produced a report against the wrong crawl)."""
     def __init__(self, slug, cache):
-        self.dir = ROOT / "tmp" / "ahrefs-cache" / slug if cache else None
+        self.dir = ROOT / "tmp" / "ahrefs-cache" / slug / "work-orders" if cache else None
         if self.dir: self.dir.mkdir(parents=True, exist_ok=True)
     def get(self, name, path, **params):
         f = self.dir / f"{name}.json" if self.dir else None
@@ -89,11 +90,12 @@ def pull(client, api):
     pid = client["ahrefs"]["site_audit_project_id"]
     hs = (api.get("project", "site-audit/projects", project_id=pid).get("healthscores") or [{}])[0]
     crawl = (hs.get("date") or "")[:10] or today()
-    issues = [i for i in api.get("issues", "site-audit/issues", project_id=pid).get("issues", []) if (i.get("crawled") or 0) > 0]
+    # every later call carries date=crawl so issues and pages come from the same crawl, whatever is cached
+    issues = [i for i in api.get(f"issues-{crawl}", "site-audit/issues", project_id=pid, date=crawl).get("issues", []) if (i.get("crawled") or 0) > 0]
     return pid, crawl, hs.get("health_score"), issues
 
-def pages_for(api, pid, issue_id):
-    return api.get(f"pages-{issue_id}", "site-audit/page-explorer", project_id=pid, issue_id=issue_id, select="url,traffic",
+def pages_for(api, pid, issue_id, crawl):
+    return api.get(f"pages-{crawl}-{issue_id}", "site-audit/page-explorer", project_id=pid, issue_id=issue_id, date=crawl, select="url,traffic",
                    order_by="traffic:desc", limit=PAGE_LIMIT).get("pages", [])
 
 # ---------- rows ----------
@@ -113,13 +115,14 @@ def issue_rows(client, api, handlers, by_id, pid, crawl, issues):
         if not yes: continue
         name = i["name"]; handler = route["handler"] if route else "review"
         tier = str(route.get("tier") or "") if route else "?"
-        pages = pages_for(api, pid, i["issue_id"])
+        pages = pages_for(api, pid, i["issue_id"], crawl)
         urls = [p["url"] for p in pages]
         if urls and all(PAGINATION.search(path_of(u)) for u in urls) and name in ("Indexable page not in sitemap", "Open Graph URL not matching canonical"):
             skipped.append((name, i["crawled"], "all URLs are /page/N/ pagination: Yoast leaves them out of the sitemap and sets og:url to page 1 by design"))
             continue
         traffic = round(sum(float(p.get("traffic") or 0) for p in pages))
-        sampled = f" (top {PAGE_LIMIT} of {i['crawled']})" if i["crawled"] > len(pages) else ""
+        if not pages: log(f"  {name}: Ahrefs returned no pages for issue {i['issue_id']} on crawl {crawl}")
+        sampled = f" (top {PAGE_LIMIT} of {i['crawled']})" if i["crawled"] > len(pages) >= PAGE_LIMIT else ""
         if kind == "skill pending":
             what = f"Skill `{handler}` is planned but not built; until then: " + (route.get("what_to_do") or route.get("note") or "")
         elif kind == "review":
@@ -309,10 +312,10 @@ def open_tab(sh, cols, tab=TAB):
         ws = sh.add_worksheet(tab, rows=200, cols=len(cols)); ws.append_row(cols); ws.freeze(rows=1); return ws, [cols]
     vals = ws.get_all_values(); head = vals[0] if vals else []
     if head != cols:
-        if not any(r for r in vals[1:] if any(r)): ws.clear(); ws.update("A1", [cols], value_input_option="RAW"); ws.freeze(rows=1); vals = [cols]
+        if not any(r for r in vals[1:] if any(r)): ws.clear(); ws.update(values=[cols], range_name="A1", value_input_option="RAW"); ws.freeze(rows=1); vals = [cols]
         elif head == cols[:len(head)]:                      # columns added since the tab was made: extend the header, keep the rows
             if ws.col_count < len(cols): ws.add_cols(len(cols) - ws.col_count)
-            ws.update("A1", [cols], value_input_option="RAW"); vals[0] = cols
+            ws.update(values=[cols], range_name="A1", value_input_option="RAW"); vals[0] = cols
         else: sys.exit(f"'{tab}' tab has unexpected columns {head}; expected {cols}")
     return ws, vals
 
@@ -362,7 +365,7 @@ def push_summary(sh, client, crawl, rows, health, skipped, n_issues, existing):
     out += [["decision on file", d.split(" ", 2)[1].rstrip(":") if len(d.split(" ", 2)) > 1 else "", d.split(" ", 2)[2] if len(d.split(" ", 2)) > 2 else d, d.split(" ", 1)[0]] for d in recorded] or [["decision on file", "none yet", "", ""]]
     out += [["", "", "", ""]]
     out += [["run", today(), f"crawl {crawl}, health {health}", f"{len(rows)} work orders, {len(decide)} decisions"]] + history
-    ws.clear(); ws.update("A1", out, value_input_option="RAW"); ws.freeze(rows=1)
+    ws.clear(); ws.update(values=out, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
 
 def pull_decisions(client, apply=True):
     """status 'done' + decision_or_note starting 'decision:' -> rules.decisions in the client file (text edit, comments kept)."""
@@ -420,11 +423,11 @@ def roster(args):
         if not sid: print("no agency sheet: put its id in clients/_agency.yaml under review.agency_sheet_id (a blank sheet 'LHF work orders' in the shared folder)"); return
         cols = ["client"] + COLS[:9] + ["status", "opened"]
         sh = gc().open_by_key(sid); ws, _ = open_tab(sh, cols)
-        ws.clear(); ws.update("A1", [cols] + [[r["client"], r["id"], r["issue"], r["handler"], r["tier"], r["urls_affected"], f"{r['traffic_at_stake']}{r['traffic_note']}",
-                                                r["what_to_do"], ex_text(r), r["decider"], "", r["crawl"]] for r in rows], value_input_option="RAW"); ws.freeze(rows=1)
+        ws.clear(); ws.update(range_name="A1", value_input_option="RAW", values=[cols] + [[r["client"], r["id"], r["issue"], r["handler"], r["tier"], r["urls_affected"], f"{r['traffic_at_stake']}{r['traffic_note']}",
+                                                r["what_to_do"], ex_text(r), r["decider"], "", r["crawl"]] for r in rows]); ws.freeze(rows=1)
         try: cw = sh.worksheet("by client")
         except Exception: cw = sh.add_worksheet("by client", rows=100, cols=5)
-        cw.clear(); cw.update("A1", [["client", "crawl", "items", "decisions", "traffic at stake"]] + [[c, v["crawl"], v["rows"], v["decide"], v["traffic"]] for c, v in sorted(per.items(), key=lambda kv: -kv[1]["traffic"])], value_input_option="RAW")
+        cw.clear(); cw.update(range_name="A1", value_input_option="RAW", values=[["client", "crawl", "items", "decisions", "traffic at stake"]] + [[c, v["crawl"], v["rows"], v["decide"], v["traffic"]] for c, v in sorted(per.items(), key=lambda kv: -kv[1]["traffic"])])
         print(f"Agency sheet: {sh.url} ({len(rows)} rows; the roster tab is rebuilt each run, per-client tabs keep their status)")
 
 # ---------- main ----------
