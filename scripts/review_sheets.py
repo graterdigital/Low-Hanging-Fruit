@@ -106,6 +106,10 @@ LEGACY = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "cur
 
 def open_tab(client_gs, sheet_id):
     sh = client_gs.open_by_key(sheet_id)
+    return sh, alt_tab(sh)
+
+def alt_tab(sh):
+    """Find or create the 'alt text' tab on an open spreadsheet, upgrade old column layouts in place, set the status dropdown."""
     try:
         ws = sh.worksheet(TAB)
     except Exception:
@@ -135,7 +139,7 @@ def open_tab(client_gs, sheet_id):
     elif head != COLS:
         sys.exit(f"'{TAB}' tab has unexpected columns {head}; expected {COLS}")
     set_status_dropdown(ws, COLS)
-    return sh, ws
+    return ws
 
 def read_rows(ws):
     vals = ws.get_all_values()
@@ -274,7 +278,7 @@ def apply_dropdowns(sh):
         if ws.title not in STATUS_VALUES: continue
         head = ws.row_values(1)
         if ws.title == TAB:
-            open_tab(sh.client, sh.id); done.append(ws.title); continue   # open_tab upgrades the columns and sets the dropdown
+            alt_tab(sh); done.append(ws.title); continue   # alt_tab upgrades the columns and sets the dropdown
         if "status" not in head: print(f"  '{ws.title}': no status column in {head}; skipped"); continue
         if set_status_dropdown(ws, head): done.append(ws.title)
     return done
