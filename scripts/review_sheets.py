@@ -123,7 +123,7 @@ def alt_tab(sh):
     elif head == LEGACY:   # upgrade in place: insert status before note, add 'added' and 'applied'
         vals = ws.get_all_values()
         new = [COLS] + [r[:9] + [("merged" if (r[8] if len(r) > 8 else "").strip() else "pending"), (r[9] if len(r) > 9 else ""), "2026-10-30", ""] for r in vals[1:] if any(r)]
-        ws.clear(); ws.update("A1", new, value_input_option="RAW"); ws.freeze(rows=1)
+        ws.clear(); ws.update(values=new, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
         print(f"  upgraded '{TAB}' tab to the current columns ({len(new) - 1} rows)")
     elif head == COLS_V1:   # upgrade in place: 'applied <date>' statuses become status 'applied' + the date in the new `applied` column
         vals = ws.get_all_values(); si = COLS.index("status"); moved = 0
@@ -134,7 +134,7 @@ def alt_tab(sh):
             if st.lower().startswith("applied"): date = st[len("applied"):].strip(); r[si] = "applied"; moved += 1
             new.append(r[:len(COLS_V1)] + [date])
         if ws.col_count < len(COLS): ws.add_cols(len(COLS) - ws.col_count)
-        ws.update("A1", new, value_input_option="RAW"); ws.freeze(rows=1)
+        ws.update(values=new, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
         print(f"  upgraded '{TAB}' tab: added the `applied` column ({moved} rows moved their date into it)")
     elif head != COLS:
         sys.exit(f"'{TAB}' tab has unexpected columns {head}; expected {COLS}")
@@ -204,7 +204,7 @@ def cmd_push(a):
         existing = read_rows(ws); edited = [r for r in existing if r["new_alt"].strip() and r["status"] == "pending"]
         if edited and not getattr(a, "yes", False):
             sys.exit(f"{a.slug}: --reset would drop {len(edited)} human-edited pending rows; rerun with --yes if that is intended")
-        ws.clear(); ws.update("A1", [COLS], value_input_option="RAW"); ws.freeze(rows=1); print(f"  tab cleared ({len(existing)} rows dropped)")
+        ws.clear(); ws.update(values=[COLS], range_name="A1", value_input_option="RAW"); ws.freeze(rows=1); print(f"  tab cleared ({len(existing)} rows dropped)")
     have = {r["image_key"] for r in read_rows(ws)}
     path = newest_alt_csv(a.slug, provider)
     review, _ = review_rows_from_csv(path, domain)
