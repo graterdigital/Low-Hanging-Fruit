@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
-"""Shrink oversized images in place (same URL, same format), and inventory alt-text and broken-image work.
+"""Resize oversized images in place (same URL, same format, NO lossy compression), and inventory alt-text and broken-image work.
 
     python scripts/fix_images.py <slug> --probe                 # inventory: server tools, WebP serving, file facts, alt/broken scan
-    python scripts/fix_images.py <slug>                         # dry run on staging: pull files, compress locally, report before/after
-    python scripts/fix_images.py <slug> --apply                 # push the compressed files to staging, regenerate thumbnails, flush caches
+    python scripts/fix_images.py <slug>                         # dry run on staging: pull files, resize locally, report before/after
+    python scripts/fix_images.py <slug> --apply                 # push the resized files to staging, regenerate thumbnails, flush caches
     python scripts/fix_images.py <slug> --target live --apply   # same on live (asks you to type the slug; --yes skips)
 
 Inputs: clients/<slug>.yaml (SSH aliases, provider, domain) and the Ahrefs Site Audit "Image file size too large" issue
 (AHREFS_API_KEY in .env), cached in reports/<slug>/image-inventory-<crawl-date>.json after --probe (--inventory to pick one).
-Compression runs on this machine: pngquant + oxipng/optipng when on PATH, else Pillow; JPEGs are re-encoded with Pillow.
     python scripts/fix_images.py <slug> --alt-csv                  # review sheet of every image without alt, with drafted suggestions
     python scripts/fix_images.py <slug> --alt-apply <csv>           # dry run of the reviewed sheet on staging; add --apply / --target live as above
 
-Anything longer than --max-edge pixels (default 2560, WordPress's own big-image threshold) is resized first.
-A file is only replaced when the result is at least --min-gain percent smaller (default 15). Originals are kept in
-changes/<provider>/<slug>/backup/ (git-ignored). Alt text and broken images are reported, never written, by this script.
+RESIZE ONLY. The only pixel change this script makes is a Lanczos downscale of files whose longest edge is over --max-edge
+(default 2560, WordPress's own big-image threshold); the result is saved in the same format at full quality (PNG lossless,
+JPEG q95 no chroma subsampling). Files already within --max-edge are left untouched and reported as "no resize needed".
+There is no quantizer, no palette reduction, no JPEG quality cap: lossy compression was removed on 2026-11-09 after it
+visibly damaged client headshots (hsfamilylaw). Originals are kept in changes/<provider>/<slug>/backup/ (git-ignored).
+Alt text and broken images are reported, never written, by this script.
 """
 import argparse, csv, json, re, shutil, subprocess, sys, datetime, os, urllib.request, urllib.error
 from pathlib import Path
@@ -76,83 +78,32 @@ def webp_served(url):
     except Exception as e:
         return 0, str(e)[:80], 0
 
-# ---------------------------------------------------------------- local compression
+# ---------------------------------------------------------------- local resize (no lossy compression)
 def have(bin_): return shutil.which(bin_) is not None
 
-def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_quality=82, allow_pillow=False, lossless=False):
-    """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name.
-    lossless=True: no pngquant, no Pillow quantize, no JPEG quality cap. max_edge still applies (a downscale changes
-    pixels, but it is a plain resample, not a palette); after that the file is re-packed losslessly with oxipng/optipng
-    or jpegoptim, falling back to Pillow's own lossless PNG writer. Without a resize expect 5-25% on photos."""
+def resize_only(src: Path, dst: Path, max_edge: int):
+    """Write src to dst, downscaled with Lanczos if its longest edge exceeds max_edge; otherwise do nothing.
+    Returns (steps, changed). Same format, same name. PNG is saved losslessly; JPEG at q95 with no chroma subsampling
+    (a resize has to re-encode a JPEG; q95/4:4:4 is the no-visible-loss setting). No quantizer, no quality cap, ever."""
     from PIL import Image
-    steps = []
     ext = src.suffix.lower()
     im = Image.open(src); im.load()
     w, h = im.size
-    work = src
-    if max(w, h) > max_edge:
-        scale = max_edge / max(w, h)
-        im = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
-        steps.append(f"resized {w}x{h} -> {im.size[0]}x{im.size[1]}")
-        tmp = dst.with_suffix(".resized" + ext)
-        if ext == ".png": im.save(tmp, "PNG", optimize=True)
-        else: im.save(tmp, "JPEG", quality=95, subsampling=0)
-        work = tmp
-    if lossless:
-        # no quantizer, no JPEG re-encode: only a lossless re-pack of the (possibly resized) pixels
-        try:
-            if ext == ".png":
-                try:
-                    import oxipng   # pip install pyoxipng: same engine as the oxipng binary, no PATH setup
-                    oxipng.optimize(str(work), str(dst), level=4, strip=oxipng.StripChunks.safe())
-                    steps.append("pyoxipng lossless"); return steps
-                except ImportError:
-                    pass
-                for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", "--out", str(dst), str(work)]),
-                                  ("optipng", ["optipng", "-o5", "-strip", "all", "-quiet", "-out", str(dst), str(work)])):
-                    if have(opt):
-                        r = subprocess.run(args, capture_output=True)
-                        if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
-                        steps.append(f"{opt} lossless"); return steps
-                # Pillow fallback: same pixels, zlib level 9 with filter search. A few % behind oxipng, nothing to install.
-                im2 = Image.open(work); im2.load()
-                im2.save(dst, "PNG", optimize=True, compress_level=9); steps.append("Pillow lossless (zlib 9)"); return steps
-            if ext in (".jpg", ".jpeg"):
-                if have("jpegoptim"):
-                    shutil.copyfile(work, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
-                    steps.append("jpegoptim lossless"); return steps
-                shutil.copyfile(src, dst); steps.append("SKIPPED: no jpegoptim on PATH (lossless needs it)"); return steps
-            shutil.copyfile(work, dst); steps.append("unsupported type, copied"); return steps
-        finally:
-            if work != src: Path(work).unlink(missing_ok=True)
+    if max(w, h) <= max_edge:
+        return [f"{w}x{h} within {max_edge}px, no resize needed"], False
+    if ext not in (".png", ".jpg", ".jpeg"):
+        return [f"{w}x{h} over {max_edge}px but {ext} is not handled, left alone"], False
+    scale = max_edge / max(w, h)
+    im2 = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
+    exif = im.info.get("exif")
     if ext == ".png":
-        if have("pngquant"):
-            r = subprocess.run(["pngquant", "--quality", png_quality, "--speed", "1", "--strip", "--force", "--output", str(dst), str(work)], capture_output=True)
-            if r.returncode == 0: steps.append("pngquant " + png_quality)
-            elif r.returncode == 99: shutil.copyfile(work, dst); steps.append("pngquant: quality floor not met, kept pixels")
-            else: sys.exit("pngquant failed: " + r.stderr.decode("utf-8", "replace"))
-        elif not allow_pillow:
-            shutil.copyfile(src, dst); steps.append("SKIPPED: pngquant not on PATH and --allow-pillow not set")
-            if work != src: Path(work).unlink(missing_ok=True)
-            return steps
-        else:
-            im2 = Image.open(work); im2.load()
-            has_alpha = im2.mode in ("RGBA", "LA") or (im2.mode == "P" and "transparency" in im2.info)
-            method = Image.Quantize.FASTOCTREE if has_alpha else Image.Quantize.MEDIANCUT
-            q = im2.convert("RGBA" if has_alpha else "RGB").quantize(colors=256, method=method, dither=Image.Dither.FLOYDSTEINBERG)
-            q.save(dst, "PNG", optimize=True); steps.append("Pillow quantize 256 colors")
-        for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", str(dst)]), ("optipng", ["optipng", "-o2", "-quiet", str(dst)])):
-            if have(opt): subprocess.run(args, capture_output=True); steps.append(opt); break
-    elif ext in (".jpg", ".jpeg"):
-        im2 = Image.open(work); im2.load()
-        if im2.mode not in ("RGB", "L"): im2 = im2.convert("RGB")
-        im2.save(dst, "JPEG", quality=jpeg_quality, optimize=True, progressive=True)
-        steps.append(f"JPEG q{jpeg_quality} progressive")
-        if have("jpegoptim"): subprocess.run(["jpegoptim", "--strip-all", "-q", str(dst)], capture_output=True); steps.append("jpegoptim")
+        im2.save(dst, "PNG", optimize=True, compress_level=9)
     else:
-        shutil.copyfile(work, dst); steps.append("unsupported type, copied")
-    if work != src: Path(work).unlink(missing_ok=True)
-    return steps
+        if im2.mode not in ("RGB", "L"): im2 = im2.convert("RGB")
+        kw = {"quality": 95, "subsampling": 0, "optimize": True, "progressive": True}
+        if exif: kw["exif"] = exif
+        im2.save(dst, "JPEG", **kw)
+    return [f"resized {w}x{h} -> {im2.size[0]}x{im2.size[1]} (Lanczos, {'PNG lossless' if ext == '.png' else 'JPEG q95 4:4:4'})"], True
 
 
 # ---------------------------------------------------------------- alt text
@@ -435,19 +386,16 @@ def main(argv=None):
     ap.add_argument("--inventory", help="inventory JSON to use; default: newest reports/<slug>/image-inventory-*.json")
     ap.add_argument("--target", choices=["staging", "live"], default="staging")
     ap.add_argument("--apply", action="store_true")
-    ap.add_argument("--max-edge", type=int, default=2560)
-    ap.add_argument("--min-gain", type=int, default=15, help="percent; smaller gains leave the file alone")
-    ap.add_argument("--png-quality", default="80-98", help="pngquant min-max; 80-98 is visually lossless on photos, 65-85 is fine for flat graphics")
-    ap.add_argument("--jpeg-quality", type=int, default=82)
+    ap.add_argument("--max-edge", type=int, default=2560, help="longest edge in px; anything larger is downscaled (Lanczos) and saved at full quality. The ONLY pixel change this script makes")
     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
     ap.add_argument("--webroot", default="public")
     ap.add_argument("--yes", action="store_true")
-    ap.add_argument("--lossless", action="store_true", help="no quantizer, no JPEG re-encode: oxipng/optipng for PNG, jpegoptim for JPEG. --max-edge still applies (a Lanczos downscale, then lossless re-pack at the new size). Without a resize, photos saved as PNG only shrink 5-25%%; --min-gain drops to 3 unless given")
-    ap.add_argument("--allow-pillow", action="store_true", help="let Pillow's 256-colour quantizer handle PNGs when pngquant is missing. OFF by default: it visibly damages photos (hsfamilylaw headshots, 2026-10-29)")
     ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
     ap.add_argument("--product-alt", action="store_true", help="WooCommerce: set empty product image alts from the product title (featured, gallery, variations); dry unless --apply")
     ap.add_argument("--alt-apply", metavar="CSV", help="write the reviewed alt CSV back to the site (dry unless --apply)")
+    removed = {"--min-gain", "--png-quality", "--jpeg-quality", "--lossless", "--allow-pillow"} & set(a.split("=")[0] for a in (argv if argv is not None else sys.argv[1:]))
+    if removed: sys.exit(f"{', '.join(sorted(removed))}: lossy compression was removed from fix-images on 2026-11-09 (it damaged client images). This script only resizes files over --max-edge; there is no quality setting.")
     args = ap.parse_args(argv)
     load_env()
 
@@ -534,7 +482,7 @@ def main(argv=None):
     try:
         import PIL  # noqa
     except ImportError:
-        sys.exit("pip install pillow  (and optionally put pngquant + oxipng on PATH for better PNG results)")
+        sys.exit("pip install pillow")
     inv_path = Path(args.inventory) if args.inventory else (sorted(rdir.glob("image-inventory-*.json")) or [None])[-1]
     if not inv_path: sys.exit(f"No inventory for {args.slug}; run with --probe first.")
     inv = json.loads(inv_path.read_text(encoding="utf-8"))
@@ -543,8 +491,7 @@ def main(argv=None):
     if args.target != inv.get("target"):
         print(f"note: inventory was taken on {inv.get('target')}; file paths are re-resolved on {args.target} by relative upload path")
     mode = "apply" if args.apply else "dry"
-    if args.lossless and "--min-gain" not in sys.argv: args.min_gain = 3
-    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, {'LOSSLESS, ' if args.lossless else ''}max edge {args.max_edge}px, min gain {args.min_gain}%")
+    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, RESIZE ONLY (no lossy compression), max edge {args.max_edge}px")
     if args.target == "live" and args.apply: confirm_live(args.slug, len(files), alias, args.yes)
 
     bdir = cdir / "backup" / f"{stamp}-fix-images-{args.target}"; (bdir / "orig").mkdir(parents=True); (bdir / "new").mkdir()
@@ -553,20 +500,21 @@ def main(argv=None):
     remote_base = out.strip()
     if code != 0 or not remote_base.startswith("/"): sys.exit(f"Could not resolve uploads dir on {alias}: {out} ")
     results = []
-    def process(rel, attachment_id, kind, max_edge):
-        """Pull one remote file, compress it locally, push it back on apply. Returns the result row."""
+    def process(rel, attachment_id, max_edge):
+        """Pull one remote file, resize it locally if it is over max_edge, push it back on apply. Returns the result row."""
         remote = f"{remote_base}/{rel}"
         local_o = bdir / "orig" / Path(rel).name; local_n = bdir / "new" / Path(rel).name
-        row = {"path": rel, "kind": kind, "attachment_id": attachment_id, "remote": remote, "before": None, "after": None, "steps": [], "action": None, "gain_pct": None}
+        row = {"path": rel, "kind": "original", "attachment_id": attachment_id, "remote": remote, "before": None, "after": None, "steps": [], "action": None, "gain_pct": None}
         ok, err = scp(f"{alias}:{remote}", str(local_o))
         if not ok: row["action"] = f"PULL FAILED: {err}"; print(f"  !! {rel}: pull failed {err}"); return row
         row["before"] = local_o.stat().st_size
-        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality, args.allow_pillow, args.lossless)
+        row["steps"], changed = resize_only(local_o, local_n, max_edge)
+        if not changed:
+            row["after"] = row["before"]; row["gain_pct"] = 0.0; row["action"] = "kept (no resize needed)"
+            print(f"  -- {rel}: {fmt(row['before'])}, {row['steps'][-1]}"); return row
         row["after"] = local_n.stat().st_size
         gain = 100 * (1 - row["after"] / row["before"]) if row["before"] else 0
         row["gain_pct"] = round(gain, 1)
-        if any(st.startswith("SKIPPED") for st in row["steps"]): row["action"] = "skipped (no tool)"; print(f"  -- {rel}: {row['steps'][-1]}"); return row
-        if gain < args.min_gain: row["action"] = "kept (gain below threshold)"; print(f"  -- {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%), kept"); return row
         if mode == "apply":
             ok, err = scp(str(local_n), f"{alias}:{remote}")
             row["action"] = "replaced" if ok else f"PUSH FAILED: {err}"
@@ -578,28 +526,13 @@ def main(argv=None):
     regenerated = {}
     for f in files:
         rel = re.sub(r"^.*?/uploads/", "", f["path"])
-        row = process(rel, f.get("attachment_id"), "original", args.max_edge)
+        row = process(rel, f.get("attachment_id"), args.max_edge)
         results.append(row)
-        if "FAILED" in (row["action"] or ""): continue
-        sizes = f.get("sizes") or {}
-        # Sub-sizes are what pages actually load (the 1024px "large" of a photo-PNG can be 1.5 MB on its own).
-        # WordPress saves resized PNGs as truecolor, so regenerating from a quantized original would NOT shrink them:
-        # compress each existing sub-size file in place too. If the original was resized, regenerate first so the
-        # metadata and any dimension-bound sub-sizes match, then compress whatever files that produced.
-        if any(st.startswith("resized") for st in row["steps"]) and row["action"] == "replaced" and f.get("attachment_id"):
+        # Sub-sizes are never touched directly. When the original was downscaled, WordPress regenerates them from the
+        # new original so metadata and dimension-bound sizes match; when it was not, nothing on the server changes.
+        if row["action"] == "replaced" and f.get("attachment_id"):
             code, out, err = wp(alias, args.webroot, f"media regenerate {f['attachment_id']} --yes")
             regenerated[f["attachment_id"]] = (code == 0, (out + err).strip().splitlines()[-1:])
-            code, out, err = wp(alias, args.webroot, f"post meta get {f['attachment_id']} _wp_attachment_metadata --format=json")
-            try: sizes = json.loads(out).get("sizes", {}) if code == 0 else sizes
-            except json.JSONDecodeError: pass
-        seen = set()
-        for name, sz in sizes.items():
-            fn = sz.get("file") if isinstance(sz, dict) else None
-            if not fn:  # inventory rows only carry w/h/bytes; derive the WordPress name
-                fn = re.sub(r"(\.\w+)$", f"-{sz['w']}x{sz['h']}\\1", Path(rel).name)
-            if fn in seen: continue
-            seen.add(fn)
-            results.append(process(str(Path(rel).parent / fn).replace("\\", "/"), f.get("attachment_id"), f"sub-size {name}", 10 ** 6))
 
     regen = regenerated or None; flush = cdn = webp_purge = None
     if mode == "apply":
@@ -617,20 +550,19 @@ def main(argv=None):
         print(f"Object cache flush: {'ok' if flush[0] else 'FAILED'}; host/CDN cache purge: {'ok' if cdn[0] else 'not available'} {cdn[1]}")
 
     before = sum(r["before"] or 0 for r in results); after = sum((r["after"] if r["action"] in ("replaced", "would replace") else r["before"]) or 0 for r in results)
-    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · max edge {args.max_edge}px · {'lossless (oxipng/optipng, jpegoptim)' if args.lossless else f'PNG {args.png_quality} · JPEG q{args.jpeg_quality}'} · min gain {args.min_gain}%", "",
-           f"Tools: pngquant {'yes' if have('pngquant') else 'no (Pillow quantize)'}, oxipng {'yes' if have('oxipng') else 'no'}, optipng {'yes' if have('optipng') else 'no'}, jpegoptim {'yes' if have('jpegoptim') else 'no'}", "",
+    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · **RESIZE ONLY** (Lanczos downscale over {args.max_edge}px, saved at full quality; no lossy compression)", "",
            f"**{fmt(before)} → {fmt(after)}** across {len(results)} files ({len([r for r in results if r['action'] in ('replaced','would replace')])} {'replaced' if mode=='apply' else 'would be replaced'}).", "",
            "| file | kind | attachment | before | after | gain | steps | action |", "|---|---|---|---|---|---|---|---|"]
     for r in results: log.append(f"| `{r['path']}` | {r['kind']} | {r['attachment_id'] or '-'} | {fmt(r['before'])} | {fmt(r['after'])} | {r.get('gain_pct') if r.get('gain_pct') is not None else '-'}% | {'; '.join(r['steps'])} | {r['action']} |")
     if mode == "apply":
-        log += ["", f"Thumbnails regenerated (only where the original was resized): {regen}", f"Stale .webp removed: {webp_purge}", f"Object cache flush: {flush}", f"Host/CDN purge: {cdn}"]
+        log += ["", f"Thumbnails regenerated (where the original was resized): {regen}", f"Stale .webp removed: {webp_purge}", f"Object cache flush: {flush}", f"Host/CDN purge: {cdn}"]
     log += ["", "## Rollback", "", f"Originals are in `backup/{bdir.name}/orig/`. To restore one: `scp backup/.../orig/<name> {alias}:<remote path from the table>` then `wp media regenerate <id> --yes`.",
             "", "## Not done by this run", "", "Alt text and broken/redirected images are in the probe report (`reports/<slug>/images-<crawl>.md`) and are APPROVE-tier, per page."]
     lpath = cdir / f"{stamp}-fix-images-{args.target}-{mode}.md"
     lpath.write_text("\n".join(log) + "\n", encoding="utf-8")
     (bdir / "result.json").write_text(json.dumps(results, indent=1), encoding="utf-8")
-    n_o = len([r for r in results if r["kind"] == "original"]); n_s = len(results) - n_o
-    print(f"\n{fmt(before)} -> {fmt(after)} across {n_o} originals + {n_s} sub-size files\nLog: {lpath}\nFiles: {bdir}")
+    n_r = len([r for r in results if r["action"] in ("replaced", "would replace")])
+    print(f"\n{fmt(before)} -> {fmt(after)} across {len(results)} originals ({n_r} over {args.max_edge}px{' resized' if mode == 'apply' else ' would be resized'}, {len(results) - n_r} left untouched)\nLog: {lpath}\nFiles: {bdir}")
 
 if __name__ == "__main__":
     main()

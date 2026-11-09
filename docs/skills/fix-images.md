@@ -1,23 +1,37 @@
 # Handoff: fix-images
 
-Status as of 2026-11-03 (staging headshot restore fix + --lossless; see the 2026-11-03 section). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+Status as of 2026-11-09 (**lossy compression removed; the script is resize-only now**; see the 2026-11-09 section first). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
 
 ## What the skill does
 
-Shrinks oversized images **in place, same URL, same format** (resize over 2560px long edge, lossy-PNG quantize / JPEG re-encode), regenerates thumbnails for those attachments, purges stale WebP conversions and caches. AUTO tier. Also inventories alt-text gaps and broken/redirected image sources for APPROVE work, but never writes alt text or content.
+Downscales oversized images **in place, same URL, same format** when their longest edge is over `--max-edge` (default 2560px), saved at full quality, then regenerates thumbnails for those attachments and purges caches. Files within the limit are not touched. **No lossy compression of any kind** (removed 2026-11-09). AUTO tier. Also inventories alt-text gaps and broken/redirected image sources for APPROVE work, but never writes alt text or content.
 
 Decision made this chat: no format conversion and no URL swaps in this skill. WebP delivery is the plugin's/host's job; this skill shrinks the originals everything is derived from.
 
 ## Where it lives
 
 - `skills/fix-images/SKILL.md`: procedure, tiers, defaults, rollback.
-- `scripts/fix_images.py`: runner. `--probe` → `reports/<slug>/image-inventory-<crawl>.json` + `images-<crawl>.md`; default = dry run (pull + compress locally, no push); `--apply`; `--target live`; `--yes`; `--alt-csv` (review sheet, no SSH); `--alt-apply <csv>` (dry/apply/live like the rest); `--only`, `--max-edge`, `--min-gain`, `--png-quality`, `--jpeg-quality`. Reuses `build_redirect_map.py`'s `.env`/Ahrefs helpers.
+- `scripts/fix_images.py`: runner. `--probe` → `reports/<slug>/image-inventory-<crawl>.json` + `images-<crawl>.md`; default = dry run (pull + resize locally, no push); `--apply`; `--target live`; `--yes`; `--alt-csv` (review sheet, no SSH); `--alt-apply <csv>` (dry/apply/live like the rest); `--only`, `--max-edge`. (`--min-gain`, `--png-quality`, `--jpeg-quality`, `--lossless`, `--allow-pillow` were removed 2026-11-09 and the script refuses them.) Reuses `build_redirect_map.py`'s `.env`/Ahrefs helpers.
 - `scripts/review_sheets.py` (2026-10-30): one persistent Google Sheet per client, id in `clients/<slug>.yaml` → `review.alt_sheet_id`; `setup / push / pull / mark-applied / status`; service account auth (docs/setup-machine.md). Batch pushes new images automatically. Replaces the hand-uploaded dated sheets; the five made by hand on 10-30 are recorded in the client files and get upgraded in place on first `push`.
 - `scripts/php/apply_alt.php`: writes alt from the reviewed CSV (featured → `_wp_attachment_image_alt`; inline → attribute replace/insert on the matching `<img>` by src path, host-agnostic). Regex unit-tested locally; not yet run on a site.
 - `scripts/php/image_inventory.php`: read-only, runs via `wp eval-file`. Server tools, optimizer-plugin state (WebP Express config + converted-file counts), per-file facts (attachment ID, dims, sub-sizes, references, featured/ACF use), `<img>`-without-alt scan over post_content + postmeta, missing-file scan.
-- Logs: `changes/<provider>/<slug>/<stamp>-fix-images-<target>-<dry|apply>.md`; originals in `backup/<stamp>-fix-images-<target>/orig/`, compressed in `new/` (git-ignored).
+- Logs: `changes/<provider>/<slug>/<stamp>-fix-images-<target>-<dry|apply>.md`; originals in `backup/<stamp>-fix-images-<target>/orig/`, resized copies in `new/` (git-ignored).
 
-Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Live-tested on hsfamilylaw 2026-10-29 with the Pillow path only (no pngquant on Greg's PC yet).
+Resizing runs on Greg's PC (needs `pip install pillow` only; no binaries).
+
+## 2026-11-09: lossy compression removed
+
+Greg's call after the hsfamilylaw headshots: "the image compression is too strong and resulted in client-visible overly compressed images. Remove that step and strictly resize as applicable." Done in `fix_images.py`:
+
+- `compress()` is gone, replaced by `resize_only()`: Lanczos downscale when the longest edge is over `--max-edge`, saved as PNG lossless (alpha kept) or JPEG q95 4:4:4 (a resized JPEG has to be re-encoded; that is the no-visible-loss setting). Otherwise the file is not written at all and the row says `kept (no resize needed)`.
+- Sub-size files are no longer pulled or rewritten. When an original is downscaled, `wp media regenerate` rebuilds them from it; otherwise nothing on the server changes.
+- No quality flags exist. `--min-gain`, `--png-quality`, `--jpeg-quality`, `--lossless`, `--allow-pillow` make the script exit with a message. Applying twice is harmless now.
+- `batch_fix_images.py` reports "over max-edge" per site instead of MB saved by compression; sites whose flagged files are all within the limit are marked *flagged but within max-edge (nothing to resize)*.
+- SKILL.md has a "No lossy compression. Resize only." section with what to recommend instead for heavy-but-not-huge files: a lower `--max-edge` with `--only` (still a plain resize), the host CDN's image optimization (Kinsta/WPE compress on delivery, originals untouched), or the client re-exporting as JPEG (URL change, by hand).
+
+What this means for the existing flagged files: hsfamilylaw's 12 headshots (1.5–2.8 MB, under 2560px) stay on the Ahrefs list; Kinsta CDN optimization is already on there, so browsers get a compressed copy anyway. The Kinsta/WPE batch dry runs from 10-29 and 11-02 were produced by the old compression code and must not be applied; rerun the dry runs with the new script before any apply. The 15 hsfamilylaw graphics already compressed on live 10-29 are left as they are (Greg said they look fine); restore with `restore_images.py hsfamilylaw --target live --only <names> --webp` if that changes.
+
+Staging on hsfamilylaw still had the posterised headshots as of 11-02 (the 11-03 restore fix below addressed the cause; rerun `python scripts/restore_images.py hsfamilylaw --target staging --all --webp` and check `/firm/mali-shadmehry/` on staging).
 
 ## 2026-11-03: staging restore that did nothing, and `--lossless`
 
@@ -36,7 +50,7 @@ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng`
 1. Rerun on Greg's PC: `foreach ($s in "meshautomationinc","miuraboiler","setcomcorp","slepianfirm","technikpackaging","ruggeddepot") { python scripts/review_sheets.py setup $s; python scripts/review_sheets.py push $s }` then `status`, commit `clients/`.
 2. ruggeddepot live (product-alt apply + theme patch), see above.
 3. Greg (or overwatch@) fills `new_alt` in the sheets; then per site `review_sheets.py pull <slug>` → `fix_images.py <slug> --alt-apply <csv>` dry → `--apply` → `--target live --apply` → `review_sheets.py mark-applied <slug>`. forwardfacing can skip review (rule-filled).
-4. Compression applies, per site, after looking at `backup/<stamp>-fix-images-staging/new/` vs `orig/`: `fix_images.py <slug> --apply` then `--target live --apply`. A `batch_apply_images.py` with a `--reviewed <slugs>` gate is designed but not built.
+4. Resize applies, per site, after a **fresh** dry run with the resize-only script (old dry runs are compression output, discard them): `fix_images.py <slug>` → look at `new/` vs `orig/` → `--apply` → `--target live --apply`. A `batch_apply_images.py` with a `--reviewed <slugs>` gate is designed but not built.
 5. Delete the five hand-made sheets in greg@'s Drive (dated "alt text review 2026-10-29/30"); their ids were retired from the client files. Rotate the service-account key that was pasted into chat (Cloud Console → service account → Keys → delete `ae5a2fd2…`; the live key is `9a12a0ed…`).
 6. Kinsta ticket: remove WebP Express Nginx rules on hsfamilylaw (both environments).
 
@@ -59,12 +73,10 @@ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng`
 
 ## Open items
 
-- pngquant on Greg's PC: headshots would likely go from ~60% to 70–80% reduction and with less banding risk; rerun `--target live --apply` after installing (idempotent enough: already-quantized files just shrink a bit more or stay under the floor).
 - Alt drafts without seeing the image are the weak spot: a vision pass (fetch each image, describe it) would make the sheet near-final. Needs the images reachable from wherever the pass runs.
 - Thumbnail regeneration for files with no attachment ID (edited `-eNNNN` copies, direct uploads): compressed by path, thumbs untouched. See what the probe finds.
 - `scripts/batch_fix_images.py --provider kinsta`: review-only batch (probe → staging dry run → alt sheet per site, nothing pushed), summary in `changes/kinsta/_batch-<stamp>-fix-images-review.md`. Built 2026-10-29 evening, first run pending. Applies stay per site after the visual check.
 - Elementor/WPBakery sites: image references in builder JSON are not an issue for this skill (URLs don't change), but the alt scan only reads `<img>` tags; builder widgets keep alt in their JSON. Extend the scan when the first builder site runs.
-- Server-side compression (Imagick/pngquant on the host) if the local round-trip proves slow on sites with hundreds of files.
 
 ## Theme gotcha found on ruggeddepot (2026-10-30)
 

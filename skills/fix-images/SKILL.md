@@ -1,6 +1,6 @@
 ---
 name: fix-images
-description: Shrink a WordPress site's oversized images in place (same URL, same format), regenerate their thumbnails, and inventory alt-text, broken-image and redirected-image work for review. Use this whenever a triage report or Ahrefs lists "Image file size too large", "Missing alt text", "Image broken", "Image redirects", "Page has broken image" or "Page has redirected image" for a client site, or the user asks to compress, optimize, or clean up a site's images or alt tags. Weight fixes are AUTO tier; alt text and broken images are APPROVE. Always probe and dry-run on staging first.
+description: Resize a WordPress site's oversized images in place (same URL, same format, downscale only, never lossy compression), regenerate their thumbnails, and inventory alt-text, broken-image and redirected-image work for review. Use this whenever a triage report or Ahrefs lists "Image file size too large", "Missing alt text", "Image broken", "Image redirects", "Page has broken image" or "Page has redirected image" for a client site, or the user asks to resize, optimize, or clean up a site's images or alt tags. Resizes are AUTO tier; alt text and broken images are APPROVE. Always probe and dry-run on staging first.
 ---
 
 # fix-images
@@ -9,21 +9,29 @@ Three different problems hide under "images" in an audit, and they need three di
 
 | Problem | What Ahrefs calls it | Tier | What this skill does |
 |---|---|---|---|
-| Oversized originals (multi-MB PNGs, 4000px headshots shown at 400px) | Image file size too large | **AUTO** | Pull, compress and resize on your machine, push back under the same name, regenerate thumbnails. Nothing a visitor reads changes. |
+| Oversized originals (4000px+ files shown at 400px) | Image file size too large | **AUTO** | Pull, **downscale anything over `--max-edge`** on your machine at full quality, push back under the same name, regenerate thumbnails. Files already within the limit are not touched. No lossy compression, ever (see below). |
 | Images with no `alt` | Missing alt text | **APPROVE** | Find every `<img>` without alt (Ahrefs only gives per-page counts), put them in a CSV with drafted text, a human reviews, the skill writes it back. |
 | Broken or redirected image sources | Image broken, Image redirects, Page has broken/redirected image | **APPROVE** | List them per page. These are re-uploads or removals, done by hand. |
 
-Not this skill: converting to WebP/AVIF and swapping references (that is a delivery concern; a plugin or the host does it from the originals this skill shrinks), lazy-loading, `width`/`height` attributes, theme CSS images, writing the alt text itself (a human does, in the sheet).
+Not this skill: lossy compression of any kind (removed, see below), converting to WebP/AVIF and swapping references (that is a delivery concern; a plugin or the host CDN does it from the originals), lazy-loading, `width`/`height` attributes, theme CSS images, writing the alt text itself (a human does, in the sheet).
+
+## No lossy compression. Resize only.
+
+**Removed 2026-11-09.** Earlier versions quantized PNGs (Pillow 256-colour, then pngquant) and re-encoded JPEGs at q82. Pillow's quantizer visibly wrecked the hsfamilylaw attorney headshots on live (2026-10-29), they had to be restored from backup, and the client saw them. The lesson generalised: a quality setting that is "visually lossless" on one photo is not on the next, and nobody is going to eyeball 500 files per site before an apply. So the script no longer has a quality setting at all. The flags `--min-gain`, `--png-quality`, `--jpeg-quality`, `--lossless`, `--allow-pillow` are gone and the script refuses them.
+
+What it does now, and all it does: if a flagged file's longest edge is over `--max-edge` (default 2560px, WordPress's own `big_image_size_threshold`), it is downscaled with Lanczos and saved in the same format at full quality (PNG lossless; JPEG q95 with 4:4:4 chroma, the no-visible-loss setting, because a resized JPEG has to be re-encoded). Alpha is preserved. A file already within `--max-edge` is left byte-for-byte as it was and reported as "no resize needed". Sub-size files are never touched directly: when an original is downscaled, `wp media regenerate` rebuilds them from the new original.
+
+Consequence: a 2.5 MB headshot that is only 1800px wide stays 2.5 MB and stays on the Ahrefs list. That is the correct outcome for this skill. The levers for such files are (a) a lower `--max-edge` for a run limited with `--only` (a headshot never renders above ~1200px, so `--max-edge 1200 --only headshots` is still a plain resize), (b) the host's CDN image optimization (Kinsta/WP Engine both have one; it compresses on delivery and leaves the originals alone), or (c) the client re-exporting the photo as JPEG, which changes the URL and is a by-hand job. Say which applies in the handoff rather than tightening quality.
 
 ## Why "in place, same format"
 
-Replacing `big.png` with a smaller `big.png` keeps every URL, every `srcset`, every ACF field and every CSS reference valid, so it can run unattended. Converting to `.jpg` or `.webp` changes URLs and needs a reference rewrite plus redirects; that is a different, APPROVE-tier job and almost never needed when a WebP plugin is active. A lossy-PNG quantize (256 colours, dithered) typically cuts a photo-saved-as-PNG by 60–80% with no visible change at display size; resizing anything over 2560px on the long edge (WordPress's own `big_image_size_threshold`) does the rest.
+Replacing `big.png` with a smaller `big.png` keeps every URL, every `srcset`, every ACF field and every CSS reference valid, so it can run unattended. Converting to `.jpg` or `.webp` changes URLs and needs a reference rewrite plus redirects; that is a different, APPROVE-tier job and almost never needed when the host's CDN serves WebP.
 
 ## What you need
 
 1. `clients/<slug>.yaml` with `hosting.ssh_alias`, `hosting.staging_environment`, `hosting.provider` and `ahrefs.site_audit_project_id`.
 2. `AHREFS_API_KEY` in `.env` at the repo root.
-3. On the machine that runs the script: Python with `pillow` and `pyyaml`, and **`pngquant` on PATH** (optionally `oxipng`). Without pngquant, PNGs are skipped: Pillow's 256-colour quantizer is only usable for flat graphics and visibly ruins photographs saved as PNG, which is what most oversized PNGs on client sites are (headshots, hero photos). `--allow-pillow` overrides that for a run you have looked at.
+3. On the machine that runs the script: Python with `pillow` and `pyyaml`. No pngquant, oxipng or other binaries: nothing is compressed.
 4. A fresh staging copy of live.
 
 ## Step 1: probe
@@ -34,13 +42,13 @@ python scripts/fix_images.py <slug> --probe
 
 Reads the "Image file size too large" issue from Ahrefs, ships `scripts/php/image_inventory.php` to the site (`wp eval-file`, read-only) and writes `reports/<slug>/image-inventory-<crawl>.json` plus a readable `reports/<slug>/images-<crawl>.md`. Read the report before anything else. It answers:
 
-- **Can the server compress?** PHP Imagick/GD, and whether `pngquant`, `cwebp`, `convert` exist there. (v1 compresses locally regardless; this is for later.)
+- **Server tools:** PHP Imagick/GD, and whether `cwebp`, `convert` exist there (`cwebp` matters for `regen_webp_siblings.py`).
 - **Is a WebP plugin active and actually converting?** WebP Express / ShortPixel / Smush / EWWW / Imagify / Optimole state, the WebP Express config, how many `.webp` files exist, and, per oversized file, what a Chrome-like request with `Accept: image/webp` really receives on the live URL. If browsers already get a `.webp`, Ahrefs flagging the PNG is partly a crawler artifact (its crawler does not send that header): the originals still matter (they feed every conversion and thumbnail, and non-WebP clients), but the user should know the live impact is smaller than the audit implies. If the plugin is active and browsers still get the PNG, the plugin is misconfigured; fix that first, by hand.
-- **Per file:** attachment ID, path on disk, bytes, dimensions, the largest registered sub-size (if the original is 4000px and the biggest sub-size is 1536px, nothing on the site shows the original), how many posts/meta/options reference it or its `-WxH` thumbnails, whether it is a featured image or sits in an ACF image field. A file referenced nowhere in the database is a theme or CSS image (e.g. a background) or unused; it still gets shrunk, since the URL doesn't change.
+- **Per file:** attachment ID, path on disk, bytes, dimensions, the largest registered sub-size (if the original is 4000px and the biggest sub-size is 1536px, nothing on the site shows the original), how many posts/meta/options reference it or its `-WxH` thumbnails, whether it is a featured image or sits in an ACF image field. A file referenced nowhere in the database is a theme or CSS image (e.g. a background) or unused; it is still resized if over the limit, since the URL doesn't change. **Dimensions are the column that matters now:** a flagged file within `--max-edge` will not change, and the report should say so up front.
 - **Alt text:** every `<img>` in `post_content` or non-underscore postmeta with no `alt` or `alt=""`, with page URL, post type and the tag; plus featured images whose attachment has no alt. `alt=""` on a decorative image is correct and should be left alone; the human reviewing the list decides.
 - **Broken sources:** `<img src>` on this host whose file is missing from `uploads/`.
 
-Sanity checks: the file count should match Ahrefs; every file should resolve to an attachment ID (one that doesn't is a direct upload or an `-e123456789` edited copy whose metadata lives under a different name; it is still compressed by path, but thumbnails can't be regenerated for it); the `served_to_webp_browser` column should be consistent across files.
+Sanity checks: the file count should match Ahrefs; every file should resolve to an attachment ID (one that doesn't is a direct upload or an `-e123456789` edited copy whose metadata lives under a different name; it is still resized by path, but thumbnails can't be regenerated for it); the `served_to_webp_browser` column should be consistent across files.
 
 ## Step 2: dry run on staging
 
@@ -48,13 +56,9 @@ Sanity checks: the file count should match Ahrefs; every file should resolve to 
 python scripts/fix_images.py <slug>
 ```
 
-Pulls each oversized file over `scp` into `changes/<provider>/<slug>/backup/<stamp>-fix-images-staging/orig/`, compresses it into `new/`, and writes `changes/<provider>/<slug>/<stamp>-fix-images-staging-dry.md` with before/after bytes and the steps per file. Nothing is pushed. Open a few of the `new/` files next to their `orig/` at 100%: headshots and anything with gradients or text are the ones to look at. If one looks wrong, exclude it with `--only` on the next run or raise `--png-quality` (pngquant only, e.g. `80-95`).
+Pulls each flagged file over `scp` into `changes/<provider>/<slug>/backup/<stamp>-fix-images-staging/orig/`, writes a downscaled copy into `new/` for the ones over `--max-edge`, and writes `changes/<provider>/<slug>/<stamp>-fix-images-staging-dry.md` with dimensions, before/after bytes and the action per file (`would replace` or `kept (no resize needed)`). Nothing is pushed. Often most or all rows are "kept": that means the site's problem is weight-per-pixel, not pixel count, and this skill has nothing to do there (see "No lossy compression" above for what to recommend instead).
 
-`--lossless` skips every quantizer and JPEG re-encode: PNGs go through oxipng/optipng only, JPEGs through jpegoptim; `--min-gain` drops to 3. `--max-edge` still applies, and that is where the real gain is for photos saved as PNG: a 1920px headshot that renders at 1024px, resized to `--max-edge 1200` and re-packed losslessly, drops ~60% with no palette or dithering artefacts. Without a resize expect 5–25%. Uses `pyoxipng` or `oxipng`/`optipng` when present, otherwise Pillow's own lossless writer (a few % larger); nothing to install.
-
-Defaults: `--max-edge 2560`, `--min-gain 15` (a file that doesn't shrink by at least 15% is left alone), `--png-quality 80-98` (pngquant's floor–ceiling; visually lossless on photos, and pngquant refuses rather than going below the floor), `--jpeg-quality 82`. Flat graphics can take `--png-quality 65-85` with `--only` to target them.
-
-**Look before you apply, every time.** Open the headshots and anything with a smooth gradient from `new/` next to `orig/` at 100%. The staging apply is not the review step; it is confirmation of a review already done. A run that was applied twice (a second pass over already-quantized files) compounds the damage, so never rerun apply on the same files without restoring first.
+Options: `--max-edge N` (default 2560) and `--only a,b` (substrings of the path) to resize a specific group harder, e.g. `--only headshot,attorney --max-edge 1200`. Still look at `new/` next to `orig/` for a couple of files: a downscale is safe, but a wrong `--max-edge` on a hero image that really is shown at 2400px wide is a visible softening. Applying twice is harmless (a file already at the limit is left alone), unlike the old compression.
 
 ## Step 3: apply on staging, then live
 
@@ -63,9 +67,9 @@ python scripts/fix_images.py <slug> --apply
 python scripts/fix_images.py <slug> --target live --apply        # type the slug; --yes for vetted unattended runs
 ```
 
-The dry run and apply both work on the original **and every registered sub-size file** of each attachment (the 1024px `large` of a photo saved as PNG is often 1–1.5 MB by itself, and that is what pages actually load). WordPress writes resized PNGs as truecolor, so regenerating thumbnails from a quantized original would not shrink them; each sub-size file is compressed in place instead. `wp media regenerate` runs only when an original had to be resized, so the metadata and dimension-bound sub-sizes match, and the sub-sizes that produces are then compressed too.
+Apply pushes the downscaled originals back under the same names and runs `wp media regenerate <id> --yes` for each one, so attachment metadata and every dimension-bound sub-size match the new original. Sub-size files of untouched originals are not changed.
 
-Apply pushes the compressed files back under the same names, flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
+Apply then flushes the object cache, and tries the host's full-page/CDN purge (`wp kinsta cache purge --all` on Kinsta). Each step's result is in the log. Then load two or three affected pages on the target and check the images look right and the page weight dropped (DevTools → Network, filter Img).
 
 Commit the `changes/<provider>/<slug>/*.md` logs; the `backup/` folders stay local.
 
@@ -105,18 +109,19 @@ If no WebP delivery exists on the site, say so in the handoff; on Kinsta, turn o
 
 ## After
 
-Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files kept under `--min-gain`. Record the result in the client file (`platform.image_optimization_plugin`, and a note on what the probe found) and in the skill handoff doc.
+Trigger an Ahrefs recrawl. "Image file size too large" drops only by the files that were actually downscaled; everything reported "no resize needed" stays flagged, and the handoff should list those with the recommended non-script fix (CDN optimization, or a client re-export). Record the result in the client file (`platform.image_optimization_plugin`, and a note on what the probe found) and in the skill handoff doc.
 
 ## Rollback
 
 `scripts/restore_images.py <slug> --target <staging|live> --all|--only <names> [--webp]` pushes the `orig/` copies back from the **oldest** backup for that target (a later run's `orig/` is an earlier run's output). Dry runs count: they pull the same files, their rows just say `would replace`. The script verifies each file's byte size on the server afterwards and exits non-zero when nothing matched instead of flushing caches over nothing.
 
-`backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. `python scripts/restore_images.py <slug> --target <t> --only <names>` (or `--all`) pushes them back, rewrites the `.webp` siblings with `--webp`, and purges caches; it defaults to the **oldest** run's backup for that target, because a later run's `orig/` is the earlier run's output, not the real original. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
+`backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. `python scripts/restore_images.py <slug> --target <t> --only <names>` (or `--all`) pushes them back, rewrites the `.webp` siblings with `--webp`, and purges caches; it defaults to the **oldest** run's backup for that target, because a later run's `orig/` is the earlier run's output, not the real original. After a restore, run `wp media regenerate <id> --yes` for each restored attachment so the sub-sizes match the original again.
 
 ## Scope and limits
 
 - WordPress over SSH + WP-CLI + scp, Kinsta webroot `public`, WP Engine `sites/<install>`.
 - Only files Ahrefs flags are touched. A site-wide sweep of `uploads/` is deliberate scope creep for later; Ahrefs' threshold is the agreed definition of "too large".
-- PNG stays PNG, JPEG stays JPEG. GIF, SVG, AVIF, WebP originals are copied through untouched.
+- PNG stays PNG, JPEG stays JPEG, full quality, alpha preserved. GIF, SVG, AVIF, WebP originals are never changed, even when over `--max-edge`.
+- No lossy compression. There is no flag to turn it back on; if someone wants it, that is a new, separately reviewed skill, not an option here.
 - Writes files and attachment metadata (via regenerate) only. Never touches `post_content`, postmeta text, options or theme files.
 - `.webp` siblings are left alone unless `--purge-webp` is passed. Learned on hsfamilylaw: Kinsta's Nginx kept serving `name.png.webp` to WebP-capable browsers after WebP Express was removed, so deleting the siblings of the 26 replaced files broke exactly those 26 images (the photo looked "missing"; the file on disk was fine). After replacing an image on such a host, regenerate its sibling instead: `python scripts/regen_webp_siblings.py <slug> --target <staging|live>` (uses `cwebp` on the server and picks the naming from the existing files). The real fix is having the host remove the plugin's rewrite rules.
