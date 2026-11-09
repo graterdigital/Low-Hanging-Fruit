@@ -137,7 +137,33 @@ def issue_rows(client, api, handlers, by_id, pid, crawl, issues):
                      "what_to_do": what, "examples": [(path_of(p["url"]), int(p.get("traffic") or 0), "traffic") for p in pages[:EXAMPLES]],
                      "decider": (route or {}).get("decider") or ("agency" if kind != "decide" else "client"),
                      "importance": i.get("importance") or "", "source": "ahrefs"})
-    return merge_intent(rows), skipped
+    return collapse_pending(merge_policy(merge_intent(rows))), skipped
+
+POLICY = ("issue:indexable-page-blocked-from-all-ai-search-bots", "issue:indexable-page-blocked-from-some-ai-search-bots", "issue:inconsistent-ai-training-bot-policy")
+def merge_policy(rows):
+    """The three robots.txt bot-policy checks are one client decision (and count the same pages), so one row."""
+    hits = [r for r in rows if r["id"] in POLICY]
+    if len(hits) < 2: return rows
+    top = max(hits, key=lambda r: r["traffic_at_stake"])
+    merged = dict(top, id="issue:ai-bot-policy-decide", issue="AI crawler policy (robots.txt): client decision",
+                  what_to_do="Set the client's ai: policy (allow/block search bots, allow/block training bots), then ai-discoverability applies the managed robots.txt block. Ahrefs issues folded in: " + ", ".join(r["issue"] for r in hits) + ".")
+    return [r for r in rows if r not in hits] + [merged]
+
+def collapse_pending(rows):
+    """One row per not-yet-built skill per client ('waiting on fix-broken-links: 3 issues, 3311 URLs') instead of one per issue:
+    half the fleet's rows were skill-pending on the first run and buried the work people can do today."""
+    pend = [r for r in rows if "skill pending" in r["tier"]]
+    if not pend: return rows
+    out = [r for r in rows if r not in pend]
+    by = {}
+    for r in pend: by.setdefault(r["handler"], []).append(r)
+    for skill, rs in by.items():
+        rs.sort(key=lambda r: -r["traffic_at_stake"])
+        out.append({"id": f"pending:{skill}", "issue": f"Waiting on skill `{skill}` ({len(rs)} issue type{'s' if len(rs) != 1 else ''}): " + "; ".join(f"{r['issue']} ({r['urls_affected']})" for r in rs),
+                    "handler": skill, "tier": "skill pending", "urls_affected": sum(r["urls_affected"] for r in rs), "traffic_at_stake": max(r["traffic_at_stake"] for r in rs), "traffic_note": "",
+                    "what_to_do": f"Nothing by hand unless urgent: `{skill}` is queued in the plan and this row disappears when it ships. Until then: " + (rs[0]["what_to_do"].split("until then: ", 1)[-1]),
+                    "examples": rs[0]["examples"], "decider": "agency", "importance": max(r["importance"] for r in rs), "source": "ahrefs"})
+    return out
 
 INTENT = ("issue:noindex-page", "issue:noindex-follow-page", "issue:noindex-and-nofollow-page", "issue:nofollow-page")
 def merge_intent(rows):
@@ -214,12 +240,14 @@ def skill_rows(client):
     # 4. fix-meta: rows it routed elsewhere
     mj = newest([(rdir, "meta-*.json")])
     if mj:
-        q = (json.loads(mj.read_text(encoding="utf-8")).get("queue") or {}); routed = q.get("routed") or []
-        if isinstance(routed, dict): routed = [dict(v, path=k) if isinstance(v, dict) else {"path": k, "route": str(v)} for k, v in routed.items()]
+        q = (json.loads(mj.read_text(encoding="utf-8")).get("queue") or {}); routed = q.get("routed") or {}
         groups = {}
-        for r in routed:
-            key = (r.get("route") or r.get("to") or r.get("action") or "routed")
-            groups.setdefault(key, []).append(r.get("path") or path_of(r.get("url") or ""))
+        if isinstance(routed, dict):                      # fix-meta writes {"<route>": [paths]}
+            for key, paths in routed.items(): groups[str(key)] = [str(x) for x in (paths if isinstance(paths, list) else [paths])]
+        else:                                             # older shape: list of {path/url, route}
+            for r in routed:
+                key = (r.get("route") or r.get("to") or r.get("action") or "routed")
+                groups.setdefault(str(key), []).append(r.get("path") or path_of(r.get("url") or ""))
         for key, paths in groups.items():
             if "archive" in key or "indexation" in key: continue      # the archive decision is already a decide row from the crawl
             rows.append({"id": "fix-meta:" + slugify(str(key))[:40], "issue": f"Pages fix-meta routed to {key}", "handler": str(key), "tier": "FLAG",
@@ -239,8 +267,8 @@ def skill_rows(client):
     for r in rows: seen[r["id"]] = r
     return list(seen.values())
 
-TIER_ORDER = {"decide": 0, "FLAG": 1, "APPROVE": 2, "AUTO": 3}
-def sort_rows(rows): return sorted(rows, key=lambda r: (-r["traffic_at_stake"], TIER_ORDER.get(r["tier"].split()[0], 9), -r["urls_affected"], r["id"]))
+TIER_ORDER = {"decide": 0, "FLAG": 1, "APPROVE": 2, "AUTO": 3, "skill": 8}
+def sort_rows(rows): return sorted(rows, key=lambda r: (r["tier"] == "skill pending", -r["traffic_at_stake"], TIER_ORDER.get(r["tier"].split()[0], 9), -r["urls_affected"], r["id"]))   # pending rows sink
 
 # ---------- report ----------
 def ex_text(r, sep="\n"):
@@ -285,7 +313,7 @@ def brief_for(r, client):
         return (f"{n} page{'s' if n != 1 else ''} on {client['domain']} {'are' if n != 1 else 'is'} set so Google does not index {'them' if n != 1 else 'it'} (or does not follow {'their' if n != 1 else 'its'} links). "
                 "That is normal for legal pages, thank-you pages and press releases, so we expect this is deliberate. Two options: (a) leave them hidden, which we recommend if they are not pages you want people to find in Google; "
                 "(b) tell us which ones should be visible and we will switch them on. We will not change anything until you confirm.")
-    if "blocked" in r["id"] or "training-bot" in r["id"]:
+    if "blocked" in r["id"] or "training-bot" in r["id"] or r["id"] == "issue:ai-bot-policy-decide":
         return (f"Some AI crawlers are blocked from {client['domain']}. Allowing AI search bots (ChatGPT, Perplexity, Claude search) lets those tools cite the site in their answers; "
                 "allowing training bots (GPTBot, ClaudeBot, Google-Extended) puts the content into future models. Our default is allow both; blocking training bots does not affect Google Search. "
                 "Tell us if you want training bots blocked and we will set it.")
@@ -403,7 +431,7 @@ def roster(args):
         if not files: continue
         d = json.loads(files[-1].read_text(encoding="utf-8"))
         for r in d["rows"]: rows.append(dict(r, client=p.stem, crawl=d["crawl"]))
-    rows = sorted(rows, key=lambda r: (-r["traffic_at_stake"], TIER_ORDER.get(r["tier"].split()[0], 9), r["client"], r["id"]))
+    rows = sorted(rows, key=lambda r: (r["tier"] == "skill pending", -r["traffic_at_stake"], TIER_ORDER.get(r["tier"].split()[0], 9), r["client"], r["id"]))
     per = {}
     for r in rows:
         c = per.setdefault(r["client"], {"rows": 0, "decide": 0, "traffic": 0, "crawl": r["crawl"]})

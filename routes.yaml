@@ -1006,105 +1006,125 @@ routes:
   - bef5195b-d8a7-4316-845e-2ee45a0724a4
   note: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
 - name: Nofollow in HTML and HTTP header
-  handler: review
-  tier: '?'
+  handler: nofollow-audit
+  tier: APPROVE
   sites: 1
   urls: 293
   importance: Warning
   category: Indexability
   issue_ids:
   - c64daaa3-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'nofollow set twice (meta tag and X-Robots-Tag header): staging sites do this on purpose; on a live site remove the header one.'
+  decider: agency
 - name: Canonical from HTTPS to HTTP
-  handler: review
-  tier: '?'
+  handler: redirect-rules
+  tier: APPROVE
   sites: 1
   urls: 142
   importance: Notice
   category: Indexability
   issue_ids:
   - c64dafd9-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'Canonical tag points at the http:// URL: the SEO plugin''s site URL or WordPress home/siteurl still says http. One setting.'
+  decider: agency
 - name: Page has broken CSS
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 87
   importance: Warning
   category: CSS
   issue_ids:
   - 3a68909c-feb5-11e8-a4c3-001e67ed4657
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'A stylesheet the page loads 404s or errors: usually a plugin removed without cleaning its enqueue, or a CDN path. Find the URL in the page source, fix the enqueue or re-add the file.'
+  decider: agency
 - name: Duplicate pages without canonical
-  handler: review
-  tier: '?'
+  handler: indexation-review
+  tier: APPROVE
   sites: 1
   urls: 41
   importance: Error
   category: Duplicates
   issue_ids:
   - c64d5626-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'Same content at several URLs with no canonical: parameter variants or trailing-slash pairs. Set the canonical in the SEO plugin or redirect the variant.'
+  decider: agency
 - name: CSS broken
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 28
   importance: Warning
   category: CSS
   issue_ids:
   - c64d358b-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'The CSS file itself returns an error; same fix as ''Page has broken CSS'' (one file, many pages).'
+  decider: agency
 - name: JavaScript broken
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 4
   importance: Error
   category: JavaScript
   issue_ids:
   - c64dab77-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'The script file itself returns an error; same fix as ''Page has broken JavaScript''.'
+  decider: agency
 - name: Page has broken JavaScript
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 4
   importance: Error
   category: JavaScript
   issue_ids:
   - 56c9d152-feb4-11e8-b65d-001e67ed4657
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'A script the page loads 404s or errors: plugin remnant or CDN path. Fix the enqueue; check the console on one page.'
+  decider: agency
 - name: Noindex page became indexable
-  handler: review
-  tier: '?'
+  handler: indexation-review
+  tier: decide
   sites: 1
   urls: 3
   importance: Notice
   category: Indexability
   issue_ids:
   - e73a0779-4292-4db3-9a3f-973b20947167
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'Pages that were noindexed last crawl are now indexable: confirm it was deliberate (a plugin update or a theme switch can reset it).'
+  decider: client
 - name: HTML file size too large
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 2
   importance: Warning
   category: Usability and performance
   issue_ids:
   - c64da874-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'HTML over Ahrefs'' size threshold: inline CSS/JS from a builder or an embedded data blob. Usually one template; check what inflates it.'
+  decider: agency
 - name: 500 page
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 1
   importance: Error
   category: Internal pages
   issue_ids:
   - c64d40b0-d0f4-11e7-8ed1-001e67ed4656
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'Server error on request: open the URL, read the host''s PHP error log for that path. Hosting ticket if it is not a plugin fatal.'
+  decider: agency
 - name: Main content requires JavaScript rendering
   handler: ai-discoverability
   tier: FLAG
@@ -1119,15 +1139,17 @@ routes:
   what_to_do: Find the widget rendering the main copy client-side (reviews/feed plugin) and give it server-side output or fallback text.
   decider: agency
 - name: Non-canonical page specified as canonical one
-  handler: review
-  tier: '?'
+  handler: indexation-review
+  tier: APPROVE
   sites: 1
   urls: 1
   importance: Warning
   category: Indexability
   issue_ids:
   - 80403128-3bd4-11e8-96e0-001e67ed4657
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'Page A canonicals to B, but B canonicals elsewhere: a canonical chain, usually from a plugin and a theme both setting it. Fix the source setting.'
+  decider: agency
 - name: Page size exceeds 2 MB crawl limit
   handler: fix-images
   tier: AUTO/APPROVE
@@ -1139,25 +1161,29 @@ routes:
   - 910e33d1-443b-4606-b950-deb7c659510f
   note: weight AUTO, alt text APPROVE via review sheet; broken image src APPROVE
 - name: Robots.txt is not accessible
-  handler: review
-  tier: '?'
+  handler: manual
+  tier: FLAG
   sites: 1
   urls: 1
   importance: Error
   category: Other
   issue_ids:
   - 91326507-26f0-4b4b-a680-bfdff5dd74c7
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'robots.txt returned an error during the crawl: check it loads now (host block, WAF, or a plugin serving it). Transient if it loads.'
+  decider: agency
 - name: Robots.txt rules disallow to crawl
-  handler: review
-  tier: '?'
+  handler: indexation-review
+  tier: decide
   sites: 1
   urls: 1
   importance: Notice
   category: Other
   issue_ids:
   - b366c49a-f514-45e5-9d9a-66cfff18f68b
-  note: not yet classified; rare on this roster
+  note: classified 2026-11-09 from the first fleet work-orders run
+  what_to_do: 'robots.txt blocks pages Ahrefs found linked: confirm the block is intended (admin, cart, search) or lift it.'
+  decider: client
 - name: 403 page receives organic traffic
   handler: review
   tier: '?'

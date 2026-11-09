@@ -19,11 +19,11 @@ Decided entirely by `routes.yaml`, per Ahrefs issue type:
 
 - handler `manual` → always (template edits, hosting tickets, content calls). These entries carry `what_to_do` and `decider`.
 - tier `FLAG` → diagnose first; tier `decide` → a choice, not a task (noindex intent, bot policy, orphan pages, where a dead URL should go). `decide` rows have a `decider: agency | client`; client rows get a one-paragraph brief in the report.
-- handler is a skill whose status in the `handlers:` map is still `proposed` → "skill pending": real work nobody is doing yet. These drop off the list the day the skill's status changes to `built`, so the backlog stays honest.
+- handler is a skill whose status in the `handlers:` map is still `proposed` → one "skill pending" row per skill per client (`pending:<skill>`, listing the issue types it covers), sorted to the bottom. Real work nobody is doing yet; the row disappears the day the skill's status changes to `built`. (First fleet run: half of all rows were per-issue pending rows and buried the work people can do today, hence the collapse.)
 - handler `review` or an issue id not in routes.yaml → "classify this in routes.yaml".
 - Items a built skill routed to a human: fix-redirect-links `skipped` (grouped by reason, each reason mapped to a handler in `SKIP_REASONS`; host-variant redirects are expected and make no row), its `-options.md` wp_options hits, fix-images product-alt exception CSVs, fix-meta's routed rows, and any `*-workorders.json` a skill writes next to its report (format in the script docstring; new skills should write that instead of relying on the parser).
 
-Never on the list: `ignore`, `monitor`, and anything a built or specified skill handles. Two automatic skips: "Indexable page not in sitemap" / "Open Graph URL not matching canonical" when every URL is `/page/N/` (Yoast by design), and the four noindex/nofollow issues, which are folded into one "Pages hidden from Google: confirm intent" row because the client answers one question, not four.
+Never on the list: `ignore`, `monitor`, and anything a built or specified skill handles. Two automatic skips: "Indexable page not in sitemap" / "Open Graph URL not matching canonical" when every URL is `/page/N/` (Yoast by design), the four noindex/nofollow issues, which are folded into one "Pages hidden from Google: confirm intent" row because the client answers one question, not four; and the three robots.txt bot-policy checks, folded into one "AI crawler policy" row for the same reason.
 
 Rows whose id has a decision in the client file's `rules.decisions` are left off until someone deletes that line.
 
