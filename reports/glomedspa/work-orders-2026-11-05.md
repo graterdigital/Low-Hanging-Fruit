@@ -1,6 +1,6 @@
 # Work orders: glomedspa.com
 
-Ahrefs Site Audit project 9704537 · crawl 2026-11-05 · health 96 · 35 active issue types → 14 work orders (1 decisions, 6 waiting on a skill not yet built) · generated 2026-11-09
+Ahrefs Site Audit project 9704537 · crawl 2026-11-05 · health 96 · 35 active issue types → 12 work orders (1 decisions, 3 waiting on a skill not yet built) · generated 2026-11-09
 
 Everything here needs a human: a template edit, a hosting ticket, a content call, or a client decision. Skills handle the rest and never show up on this list. Rows and counts refresh from each crawl; a row disappears (sheet: `cleared <date>`) when the crawl no longer shows the issue. Decisions go in the sheet's `decision_or_note` as `decision: …` and `--decisions` copies them into `clients/<slug>.yaml` → `rules.decisions`.
 
@@ -10,16 +10,14 @@ Everything here needs a human: a template edit, a hosting ticket, a content call
 | 2 | Slow page | manual | FLAG | 5 | 1 | agency | Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket. |
 | 3 | Pages hidden from Google (noindex/nofollow): confirm intent | indexation-review | decide | 6 | 0 | client | Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Nofollow page, Noindex and nofollow page, Noindex page. |
 | 4 | H1 tag missing or empty  (non-indexable pages) | manual | FLAG | 6 | 0 | agency | Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply. |
-| 5 | Pages fix-meta routed to [] | [] | FLAG | 3 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
-| 6 | Pages fix-meta routed to ['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/'] | ['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/'] | FLAG | 1 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
-| 7 | FAQ page missing FAQPage schema | schema-check | FLAG | 1 | 0 | client | FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing. |
-| 8 | Multiple title tags | manual | FLAG | 1 | 0 | agency | Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting. |
-| 9 | Page has nofollow outgoing internal links  (non-indexable pages) | nofollow-audit | APPROVE (skill pending) | 6 | 0 | agency | Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting. |
-| 10 | Page has nofollow incoming internal links only  (non-indexable pages) | nofollow-audit | APPROVE (skill pending) | 4 | 0 | agency | Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k) |
-| 11 | Indexable page not in sitemap | indexation-review | APPROVE (skill pending) | 2 | 0 | agency | Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin. |
-| 12 | Sitemap in the wrong format | indexation-review | APPROVE (skill pending) | 1 | 0 | agency | Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision |
-| 13 | Open Graph tags missing | fix-social-tags | AUTO (skill pending) | 10 | 0 | agency | Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
-| 14 | X (Twitter) card missing | fix-social-tags | AUTO (skill pending) | 10 | 0 | agency | Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
+| 5 | FAQ page missing FAQPage schema | schema-check | FLAG | 1 | 0 | client | FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists and the client wants it for Bing. |
+| 6 | Multiple title tags | manual | FLAG | 1 | 0 | agency | Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting. |
+| 7 | Pages fix-meta routed to homepage title | homepage title | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 8 | Pages fix-meta routed to noindex | noindex | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 9 | Pages fix-meta routed to non-200 | non-200 | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 10 | Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags missing (10); X (Twitter) card missing (10) | fix-social-tags | skill pending | 20 | 0 | agency | Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
+| 11 | Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow incoming internal links only  (non-indexable pages) (4); Page has nofollow outgoing internal links  (non-indexable pages) (6) | nofollow-audit | skill pending | 10 | 0 | agency | Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k) |
+| 12 | Waiting on skill `indexation-review` (2 issue types): Indexable page not in sitemap (2); Sitemap in the wrong format (1) | indexation-review | skill pending | 3 | 0 | agency | Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin. |
 
 ## Per item
 
@@ -79,25 +77,7 @@ Template edit: add an <h1> to the archive/post-type template the triage names; d
 - `/category/blog/page/2/`
 - `/author/infoeagleeyemarketinginc-com/page/4/`
 
-### 5. Pages fix-meta routed to []
-
-`fix-meta:` · [] · FLAG · decider: agency · source: meta-2026-10-29.json
-
-See the fix-meta report's 'Routed elsewhere' section.
-
-- `noindex`
-- `non-200`
-- `homepage title`
-
-### 6. Pages fix-meta routed to ['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/']
-
-`fix-meta:category-injectables-author-infoeagleeye` · ['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/'] · FLAG · decider: agency · source: meta-2026-10-29.json
-
-See the fix-meta report's 'Routed elsewhere' section.
-
-- `archive`
-
-### 7. FAQ page missing FAQPage schema
+### 5. FAQ page missing FAQPage schema
 
 `issue:faq-page-missing-faqpage-schema` · schema-check · FLAG · decider: client
 
@@ -105,7 +85,7 @@ FAQ rich results are gone from Google (2026-05). Add only if visible Q&A exists 
 
 - `/answers-to-common-questions-about-skinvive-by-juvederm/`
 
-### 8. Multiple title tags
+### 6. Multiple title tags
 
 `issue:multiple-title-tags` · manual · FLAG · decider: agency
 
@@ -113,52 +93,32 @@ Two things print <title>: find the second (theme header, builder, plugin) once p
 
 - `/financing/`
 
-### 9. Page has nofollow outgoing internal links  (non-indexable pages)
+### 7. Pages fix-meta routed to homepage title
 
-`issue:page-has-nofollow-outgoing-internal-links-nonindexable` · nofollow-audit · APPROVE (skill pending) · decider: agency
+`fix-meta:homepage-title` · homepage title · FLAG · decider: agency · source: meta-2026-10-29.json
 
-Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.
+See the fix-meta report's 'Routed elsewhere' section.
 
-- `/author/infoeagleeyemarketinginc-com/page/3/`
-- `/category/blog/page/3/`
-- `/author/infoeagleeyemarketinginc-com/page/2/`
-- `/author/infoeagleeyemarketinginc-com/page/5/`
-- `/category/blog/page/2/`
-- `/author/infoeagleeyemarketinginc-com/page/4/`
 
-### 10. Page has nofollow incoming internal links only  (non-indexable pages)
+### 8. Pages fix-meta routed to noindex
 
-`issue:page-has-nofollow-incoming-internal-links-only-nonindexable` · nofollow-audit · APPROVE (skill pending) · decider: agency
+`fix-meta:noindex` · noindex · FLAG · decider: agency · source: meta-2026-10-29.json
 
-Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)
+See the fix-meta report's 'Routed elsewhere' section.
 
-- `/author/infoeagleeyemarketinginc-com/page/3/`
-- `/category/blog/page/3/`
-- `/author/infoeagleeyemarketinginc-com/page/5/`
-- `/author/infoeagleeyemarketinginc-com/page/4/`
 
-### 11. Indexable page not in sitemap
+### 9. Pages fix-meta routed to non-200
 
-`issue:indexable-page-not-in-sitemap` · indexation-review · APPROVE (skill pending) · decider: agency
+`fix-meta:non-200` · non-200 · FLAG · decider: agency · source: meta-2026-10-29.json
 
-Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.
+See the fix-meta report's 'Routed elsewhere' section.
 
-- `/author/infoeagleeyemarketinginc-com/`
-- `/author/devgraterdigital-com/`
 
-### 12. Sitemap in the wrong format
+### 10. Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags missing (10); X (Twitter) card missing (10)
 
-`issue:sitemap-in-the-wrong-format` · indexation-review · APPROVE (skill pending) · decider: agency
+`pending:fix-social-tags` · fix-social-tags · skill pending · decider: agency
 
-Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision
-
-- `/sitemap.rss`
-
-### 13. Open Graph tags missing
-
-`issue:open-graph-tags-missing` · fix-social-tags · AUTO (skill pending) · decider: agency
-
-Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
+Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
 
 - `/category/injectables/`
 - `/author/infoeagleeyemarketinginc-com/`
@@ -170,23 +130,29 @@ Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin set
 - `/author/devgraterdigital-com/`
 - `/category/lasers/`
 - `/category/microneedling/`
+- … 10 more in Ahrefs
 
-### 14. X (Twitter) card missing
+### 11. Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow incoming internal links only  (non-indexable pages) (4); Page has nofollow outgoing internal links  (non-indexable pages) (6)
 
-`issue:x-twitter-card-missing` · fix-social-tags · AUTO (skill pending) · decider: agency
+`pending:nofollow-audit` · nofollow-audit · skill pending · decider: agency
 
-Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
+Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)
 
-- `/category/injectables/`
+- `/author/infoeagleeyemarketinginc-com/page/3/`
+- `/category/blog/page/3/`
+- `/author/infoeagleeyemarketinginc-com/page/5/`
+- `/author/infoeagleeyemarketinginc-com/page/4/`
+- … 6 more in Ahrefs
+
+### 12. Waiting on skill `indexation-review` (2 issue types): Indexable page not in sitemap (2); Sitemap in the wrong format (1)
+
+`pending:indexation-review` · indexation-review · skill pending · decider: agency
+
+Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.
+
 - `/author/infoeagleeyemarketinginc-com/`
-- `/category/skin/`
-- `/category/pdo-threads/`
-- `/category/blog/`
-- `/category/dlm-faq/`
-- `/category/chemical-peels/`
 - `/author/devgraterdigital-com/`
-- `/category/lasers/`
-- `/category/microneedling/`
+- … 1 more in Ahrefs
 
 ## Client briefs
 

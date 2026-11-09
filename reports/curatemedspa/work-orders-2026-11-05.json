@@ -6,26 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 128,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     128,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:slow-page",
    "issue": "Slow page",
    "handler": "manual",
@@ -82,131 +62,6 @@
     ],
     [
      "/botox/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links",
-   "issue": "Page has nofollow outgoing internal links",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 9,
-   "traffic_at_stake": 61,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/dermal-fillers/",
-     61,
-     "traffic"
-    ],
-    [
-     "/privacy-policy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/vitamin-injections/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/cooltone/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/dermal-fillers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/pdo-threads/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/iv-therapy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/pdo-threads/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 11,
-   "traffic_at_stake": 21,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/locations/murfreesboro/",
-     13,
-     "traffic"
-    ],
-    [
-     "/treatment-for-excessive-sweating-in-2025/",
-     5,
-     "traffic"
-    ],
-    [
-     "/locations/nashville/",
-     3,
-     "traffic"
-    ],
-    [
-     "/privacy-policy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/locations/ooltewah/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/financing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-reserve",
-     0,
-     "traffic"
-    ],
-    [
-     "/locations/knoxville/",
-     0,
-     "traffic"
-    ],
-    [
-     "/terms-conditions/",
      0,
      "traffic"
     ]
@@ -331,9 +186,9 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to ['/']",
-   "handler": "['/']",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
    "tier": "FLAG",
    "urls_affected": 1,
    "traffic_at_stake": 0,
@@ -341,7 +196,7 @@
    "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
    "examples": [
     [
-     "homepage title",
+     "/",
      0,
      ""
     ]
@@ -371,14 +226,187 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:canonical-from-http-to-https",
-   "issue": "Canonical from HTTP to HTTPS",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 7,
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 1,
+   "traffic_at_stake": 128,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     128,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links (9); Page has nofollow outgoing internal links  (non-indexable pages) (2)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 11,
+   "traffic_at_stake": 61,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/dermal-fillers/",
+     61,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/vitamin-injections/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/cooltone/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/dermal-fillers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/pdo-threads/",
+     0,
+     "traffic"
+    ],
+    [
+     "/services/iv-therapy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/pdo-threads/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags incomplete (11); X (Twitter) card missing (1)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 12,
+   "traffic_at_stake": 21,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/locations/murfreesboro/",
+     13,
+     "traffic"
+    ],
+    [
+     "/treatment-for-excessive-sweating-in-2025/",
+     5,
+     "traffic"
+    ],
+    [
+     "/locations/nashville/",
+     3,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/ooltewah/",
+     0,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/the-reserve",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/knoxville/",
+     0,
+     "traffic"
+    ],
+    [
+     "/terms-conditions/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (3 issue types): Canonical from HTTP to HTTPS (7); 302 redirect (5); HTTPS to HTTP redirect (1)",
+   "handler": "redirect-rules",
+   "tier": "skill pending",
+   "urls_affected": 13,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
    "examples": [
     [
      "/dermal-fillers/",
@@ -417,123 +445,18 @@
     ]
    ],
    "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:302-redirect",
-   "issue": "302 redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 5,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/the-reserve/button/kGsxVn6q2byOry4L6MmhemRaCrG7ManT",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-reserve/button/lzcaWCTg8PzTOmn61hzMK7NRlzRUwn8s",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-reserve/button/dxlw6rQl2S3ys4HISh7cz8sSTh4rPfEL",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-reserve/button/Xrgf82x5KKylCzDZXia51t2t7Mbry1Ci",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-reserve/button/kSFwFAqmAAx8vxHUhFgU4bDCV5z1AkyD",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
    "importance": "Warning",
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/dermal-fillers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/privacy-policy/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:https-to-http-redirect",
-   "issue": "HTTPS to HTTP redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/injectable-services/?utm_source=chatgpt.com",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (1)",
    "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
-   "examples": [
-    [
-     "/the-reserve",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:x-twitter-card-missing",
-   "issue": "X (Twitter) card missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
    "examples": [
     [
      "/the-reserve",

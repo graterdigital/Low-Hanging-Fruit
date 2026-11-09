@@ -6,136 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 67,
-   "traffic_at_stake": 100,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
-   "examples": [
-    [
-     "/",
-     91,
-     "traffic"
-    ],
-    [
-     "/service/pixel-laser-skin-resurfacing/",
-     6,
-     "traffic"
-    ],
-    [
-     "/about-us/",
-     1,
-     "traffic"
-    ],
-    [
-     "/service/dermaplaning/",
-     1,
-     "traffic"
-    ],
-    [
-     "/membership/",
-     1,
-     "traffic"
-    ],
-    [
-     "/service/pixel-precision-skin-renewal/",
-     0,
-     "traffic"
-    ],
-    [
-     "/people/lola-ramirez/",
-     0,
-     "traffic"
-    ],
-    [
-     "/service/coolsculpting-elite/",
-     0,
-     "traffic"
-    ],
-    [
-     "/high-tech-beauty-suite/",
-     0,
-     "traffic"
-    ],
-    [
-     "/people/jamie-mcdonald/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links",
-   "issue": "Page has nofollow outgoing internal links",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 67,
-   "traffic_at_stake": 100,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/",
-     91,
-     "traffic"
-    ],
-    [
-     "/service/pixel-laser-skin-resurfacing/",
-     6,
-     "traffic"
-    ],
-    [
-     "/about-us/",
-     1,
-     "traffic"
-    ],
-    [
-     "/service/dermaplaning/",
-     1,
-     "traffic"
-    ],
-    [
-     "/membership/",
-     1,
-     "traffic"
-    ],
-    [
-     "/service/pixel-precision-skin-renewal/",
-     0,
-     "traffic"
-    ],
-    [
-     "/people/lola-ramirez/",
-     0,
-     "traffic"
-    ],
-    [
-     "/service/coolsculpting-elite/",
-     0,
-     "traffic"
-    ],
-    [
-     "/high-tech-beauty-suite/",
-     0,
-     "traffic"
-    ],
-    [
-     "/people/jamie-mcdonald/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -201,41 +71,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 4,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ],
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:slow-page",
    "issue": "Slow page",
    "handler": "manual",
@@ -281,17 +116,104 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links (67); Page has nofollow outgoing internal links  (non-indexable pages) (1)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 68,
+   "traffic_at_stake": 100,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
    "examples": [
     [
-     "/blog/2/",
+     "/",
+     91,
+     "traffic"
+    ],
+    [
+     "/service/pixel-laser-skin-resurfacing/",
+     6,
+     "traffic"
+    ],
+    [
+     "/about-us/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/dermaplaning/",
+     1,
+     "traffic"
+    ],
+    [
+     "/membership/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/pixel-precision-skin-renewal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/lola-ramirez/",
+     0,
+     "traffic"
+    ],
+    [
+     "/service/coolsculpting-elite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/high-tech-beauty-suite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-mcdonald/",
      0,
      "traffic"
     ]
@@ -301,14 +223,79 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (67)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 67,
+   "traffic_at_stake": 100,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/",
+     91,
+     "traffic"
+    ],
+    [
+     "/service/pixel-laser-skin-resurfacing/",
+     6,
+     "traffic"
+    ],
+    [
+     "/about-us/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/dermaplaning/",
+     1,
+     "traffic"
+    ],
+    [
+     "/membership/",
+     1,
+     "traffic"
+    ],
+    [
+     "/service/pixel-precision-skin-renewal/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/lola-ramirez/",
+     0,
+     "traffic"
+    ],
+    [
+     "/service/coolsculpting-elite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/high-tech-beauty-suite/",
+     0,
+     "traffic"
+    ],
+    [
+     "/people/jamie-mcdonald/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (7)",
    "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 7,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
    "examples": [
     [
      "/blog/",

@@ -6,126 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 88,
-   "traffic_at_stake": 433,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/therapies/erp-therapy/",
-     113,
-     "traffic"
-    ],
-    [
-     "/our-expertise/neurodiversity/autism/",
-     111,
-     "traffic"
-    ],
-    [
-     "/therapies/grief-counseling/",
-     60,
-     "traffic"
-    ],
-    [
-     "/our-expertise/executive-functioning/",
-     39,
-     "traffic"
-    ],
-    [
-     "/blog/page/7/",
-     21,
-     "traffic"
-    ],
-    [
-     "/therapies/group-therapy/",
-     18,
-     "traffic"
-    ],
-    [
-     "/therapies/cbt-therapy/",
-     14,
-     "traffic"
-    ],
-    [
-     "/therapies/chronic-illness-acquired-disability/",
-     13,
-     "traffic"
-    ],
-    [
-     "/therapies/psychodynamic-therapy/",
-     9,
-     "traffic"
-    ],
-    [
-     "/home/mental-health-superbill/",
-     9,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 8,
-   "traffic_at_stake": 118,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/our-expertise/neurodiversity/autism/",
-     111,
-     "traffic"
-    ],
-    [
-     "/",
-     6,
-     "traffic"
-    ],
-    [
-     "/therapies/dbt-therapy/",
-     1,
-     "traffic"
-    ],
-    [
-     "/teen-mental-health-expert-help-in-atlanta/",
-     0,
-     "traffic"
-    ],
-    [
-     "/therapies/lgbtq-counseling/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/neurodiversity/adhd/",
-     0,
-     "traffic"
-    ],
-    [
-     "/confronting-unresolved-issues-from-your-past-midlife-is-a-natural-time-of-reflection/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:orphan-page-has-no-incoming-internal-links",
    "issue": "Orphan page (has no incoming internal links)",
    "handler": "indexation-review",
@@ -163,26 +43,6 @@
    ],
    "decider": "client",
    "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 6,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     6,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
    "source": "ahrefs"
   },
   {
@@ -228,6 +88,26 @@
    ],
    "decider": "client",
    "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:robots-txt-rules-disallow-to-crawl",
+   "issue": "Robots.txt rules disallow to crawl",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "robots.txt blocks pages Ahrefs found linked: confirm the block is intended (admin, cart, search) or lift it.",
+   "examples": [
+    [
+     "/robots.txt",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
    "source": "ahrefs"
   },
   {
@@ -311,36 +191,6 @@
    "source": "redirect-map-2026-10-29.json"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:faq-page-missing-faqpage-schema",
    "issue": "FAQ page missing FAQPage schema",
    "handler": "schema-check",
@@ -366,26 +216,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:category-body-image-category-ocd-categor",
-   "issue": "Pages fix-meta routed to ['/category/body-image/', '/category/ocd/', '/category/substance-abuse/', '/category/eating-disorder/', '/category/mental-health/page/2/', '/category/couples-counseling/', '/category/teen-mental-health/', '/category/counseling/page/2/', '/category/counselor/', '/category/depression/', '/category/panic-attack/', '/category/counseling/page/3/', '/category/executive-function/', '/category/counseling/', '/category/mental-disorders/', '/category/adhd/', '/category/mental-health/', '/category/anxiety/page/2/', '/category/anxiety/', '/category/depression/page/2/', '/category/family-counseling/', '/category/medication-management/', '/category/insurance/', '/blog/page/7/']",
-   "handler": "['/category/body-image/', '/category/ocd/', '/category/substance-abuse/', '/category/eating-disorder/', '/category/mental-health/page/2/', '/category/couples-counseling/', '/category/teen-mental-health/', '/category/counseling/page/2/', '/category/counselor/', '/category/depression/', '/category/panic-attack/', '/category/counseling/page/3/', '/category/executive-function/', '/category/counseling/', '/category/mental-disorders/', '/category/adhd/', '/category/mental-health/', '/category/anxiety/page/2/', '/category/anxiety/', '/category/depression/page/2/', '/category/family-counseling/', '/category/medication-management/', '/category/insurance/', '/blog/page/7/']",
-   "tier": "FLAG",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -406,27 +236,159 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:4xx-page-in-sitemap",
-   "issue": "4XX page in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 3,
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (88)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 88,
+   "traffic_at_stake": 433,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
    "examples": [
     [
-     "/author/graterdev/",
+     "/therapies/erp-therapy/",
+     113,
+     "traffic"
+    ],
+    [
+     "/our-expertise/neurodiversity/autism/",
+     111,
+     "traffic"
+    ],
+    [
+     "/therapies/grief-counseling/",
+     60,
+     "traffic"
+    ],
+    [
+     "/our-expertise/executive-functioning/",
+     39,
+     "traffic"
+    ],
+    [
+     "/blog/page/7/",
+     21,
+     "traffic"
+    ],
+    [
+     "/therapies/group-therapy/",
+     18,
+     "traffic"
+    ],
+    [
+     "/therapies/cbt-therapy/",
+     14,
+     "traffic"
+    ],
+    [
+     "/therapies/chronic-illness-acquired-disability/",
+     13,
+     "traffic"
+    ],
+    [
+     "/therapies/psychodynamic-therapy/",
+     9,
+     "traffic"
+    ],
+    [
+     "/home/mental-health-superbill/",
+     9,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (3 issue types): Page has links to broken page (8); 404 page (8); 4XX page (8)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 24,
+   "traffic_at_stake": 118,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/our-expertise/neurodiversity/autism/",
+     111,
+     "traffic"
+    ],
+    [
+     "/",
+     6,
+     "traffic"
+    ],
+    [
+     "/therapies/dbt-therapy/",
+     1,
+     "traffic"
+    ],
+    [
+     "/teen-mental-health-expert-help-in-atlanta/",
      0,
      "traffic"
     ],
     [
-     "/author/joegraterdigital-com/",
+     "/therapies/lgbtq-counseling/",
      0,
      "traffic"
     ],
     [
-     "/author/tatelyninteractivesearchmarketing-com/",
+     "/our-expertise/neurodiversity/adhd/",
+     0,
+     "traffic"
+    ],
+    [
+     "/confronting-unresolved-issues-from-your-past-midlife-is-a-natural-time-of-reflection/",
+     0,
+     "traffic"
+    ],
+    [
+     "/our-expertise/",
      0,
      "traffic"
     ]
@@ -436,18 +398,18 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
    "urls_affected": 1,
-   "traffic_at_stake": 0,
+   "traffic_at_stake": 6,
    "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
    "examples": [
     [
-     "/privacy-policy/",
-     0,
+     "/",
+     6,
      "traffic"
     ]
    ],
@@ -456,32 +418,17 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 8,
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): 4XX page in sitemap (3)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 3,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
    "examples": [
     [
      "/author/graterdev/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/individual-therapy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/mood-dysrerulation/",
-     0,
-     "traffic"
-    ],
-    [
-     "/areas-of-expertise/rehabilitation-counseling/",
      0,
      "traffic"
     ],
@@ -491,17 +438,7 @@
      "traffic"
     ],
     [
-     "/tel:6787804342",
-     0,
-     "traffic"
-    ],
-    [
      "/author/tatelyninteractivesearchmarketing-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/family-therapy/",
      0,
      "traffic"
     ]
@@ -511,72 +448,17 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 8,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/author/graterdev/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/individual-therapy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/mood-dysrerulation/",
-     0,
-     "traffic"
-    ],
-    [
-     "/areas-of-expertise/rehabilitation-counseling/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/joegraterdigital-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tel:6787804342",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/tatelyninteractivesearchmarketing-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/our-expertise/family-therapy/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:robots-txt-rules-disallow-to-crawl",
-   "issue": "Robots.txt rules disallow to crawl",
-   "handler": "review",
-   "tier": "?",
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (1 issue type): Page has nofollow outgoing internal links  (non-indexable pages) (1)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
    "examples": [
     [
-     "/robots.txt",
+     "/privacy-policy/",
      0,
      "traffic"
     ]

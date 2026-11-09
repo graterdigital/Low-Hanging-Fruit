@@ -6,79 +6,14 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:inconsistent-ai-training-bot-policy",
-   "issue": "Inconsistent AI training bot policy",
+   "id": "issue:ai-bot-policy-decide",
+   "issue": "AI crawler policy (robots.txt): client decision",
    "handler": "ai-discoverability",
    "tier": "decide",
    "urls_affected": 453,
    "traffic_at_stake": 2096,
    "traffic_note": " (top 200 of 453)",
-   "what_to_do": "robots.txt groups disagree; the managed block replaces them (skill).",
-   "examples": [
-    [
-     "/steam-boilers-101/",
-     631,
-     "traffic"
-    ],
-    [
-     "/",
-     536,
-     "traffic"
-    ],
-    [
-     "/low-pressure-steam-vs-high-pressure-steam/",
-     148,
-     "traffic"
-    ],
-    [
-     "/products-category/steam-boilers/",
-     70,
-     "traffic"
-    ],
-    [
-     "/how-do-modular-boilers-work/",
-     45,
-     "traffic"
-    ],
-    [
-     "/how-to-find-the-most-efficient-industrial-steam-boiler/",
-     43,
-     "traffic"
-    ],
-    [
-     "/how-are-steam-boilers-used-in-hospitals/",
-     40,
-     "traffic"
-    ],
-    [
-     "/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
-     40,
-     "traffic"
-    ],
-    [
-     "/what-is-a-boiler-turndown-ratio/",
-     39,
-     "traffic"
-    ],
-    [
-     "/products/feedwater-tanks/",
-     38,
-     "traffic"
-    ]
-   ],
-   "decider": "client",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-blocked-from-some-ai-search-bots",
-   "issue": "Indexable page blocked from some AI search bots",
-   "handler": "ai-discoverability",
-   "tier": "decide",
-   "urls_affected": 453,
-   "traffic_at_stake": 2096,
-   "traffic_note": " (top 200 of 453)",
-   "what_to_do": "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
+   "what_to_do": "Set the client's ai: policy (allow/block search bots, allow/block training bots), then ai-discoverability applies the managed robots.txt block. Ahrefs issues folded in: Inconsistent AI training bot policy, Indexable page blocked from some AI search bots.",
    "examples": [
     [
      "/steam-boilers-101/",
@@ -201,71 +136,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:structured-data-has-google-rich-results-validation-error",
-   "issue": "Structured data has Google rich results validation error",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2919,
-   "traffic_at_stake": 2079,
-   "traffic_note": " (top 200 of 2919)",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
-   "examples": [
-    [
-     "/steam-boilers-101/",
-     631,
-     "traffic"
-    ],
-    [
-     "/",
-     536,
-     "traffic"
-    ],
-    [
-     "/low-pressure-steam-vs-high-pressure-steam/",
-     148,
-     "traffic"
-    ],
-    [
-     "/products-category/steam-boilers/",
-     70,
-     "traffic"
-    ],
-    [
-     "/how-do-modular-boilers-work/",
-     45,
-     "traffic"
-    ],
-    [
-     "/how-to-find-the-most-efficient-industrial-steam-boiler/",
-     43,
-     "traffic"
-    ],
-    [
-     "/how-are-steam-boilers-used-in-hospitals/",
-     40,
-     "traffic"
-    ],
-    [
-     "/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
-     40,
-     "traffic"
-    ],
-    [
-     "/what-is-a-boiler-turndown-ratio/",
-     39,
-     "traffic"
-    ],
-    [
-     "/products/feedwater-tanks/",
-     38,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -328,91 +198,6 @@
    ],
    "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 536,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     536,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 10,
-   "traffic_at_stake": 536,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/",
-     536,
-     "traffic"
-    ],
-    [
-     "/miura-warranty/",
-     0,
-     "traffic"
-    ],
-    [
-     "/miura-america-honored-with-2026-trsa-community-service-award/",
-     0,
-     "traffic"
-    ],
-    [
-     "/privacy-policy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/contact/",
-     0,
-     "traffic"
-    ],
-    [
-     "/how-pressure-simulations-benefit-steam-generation-efficiency/",
-     0,
-     "traffic"
-    ],
-    [
-     "/miura-donates-ppe-to-medical-centers-assisted-living-facilities/",
-     0,
-     "traffic"
-    ],
-    [
-     "/fast-boiler-delivery-avoid-winter-downtime/",
-     0,
-     "traffic"
-    ],
-    [
-     "/november-2025-newsletter/",
-     0,
-     "traffic"
-    ],
-    [
-     "/7-easy-steps-to-getting-an-emergency-steam-boiler/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   },
   {
@@ -562,136 +347,6 @@
     ],
     [
      "/products/ro-systems/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 47,
-   "traffic_at_stake": 17,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
-   "examples": [
-    [
-     "/tag/modular-water-tube-boilers/",
-     11,
-     "traffic"
-    ],
-    [
-     "/tag/industrial-laundry/",
-     5,
-     "traffic"
-    ],
-    [
-     "/tag/boiler-maintenance-safety/",
-     1,
-     "traffic"
-    ],
-    [
-     "/tag/trap-energy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/miura/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/rental-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/miura-technician/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/show/",
-     0,
-     "traffic"
-    ],
-    [
-     "/reps/boiler-masters-inc/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/industrial-boiler-rentals/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 47,
-   "traffic_at_stake": 17,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/tag/modular-water-tube-boilers/",
-     11,
-     "traffic"
-    ],
-    [
-     "/tag/industrial-laundry/",
-     5,
-     "traffic"
-    ],
-    [
-     "/tag/boiler-maintenance-safety/",
-     1,
-     "traffic"
-    ],
-    [
-     "/tag/trap-energy/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/miura/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/rental-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/miura-technician/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/show/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/miscellaneous/",
-     0,
-     "traffic"
-    ],
-    [
-     "/reps/boiler-masters-inc/",
      0,
      "traffic"
     ]
@@ -1256,9 +911,9 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to ['/']",
-   "handler": "['/']",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
    "tier": "FLAG",
    "urls_affected": 1,
    "traffic_at_stake": 0,
@@ -1266,7 +921,7 @@
    "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
    "examples": [
     [
-     "homepage title",
+     "/",
      0,
      ""
     ]
@@ -1276,34 +931,322 @@
    "source": "meta-2026-10-29.json"
   },
   {
-   "id": "fix-meta:may-2026-newsletter-august-2025-newslett",
-   "issue": "Pages fix-meta routed to ['/may-2026-newsletter/', '/august-2025-newsletter/', '/august-2026-newsletter/', '/february-2026-newsletter/', '/products-category/steam-boilers/', '/category/videos/how-to/']",
-   "handler": "['/may-2026-newsletter/', '/august-2025-newsletter/', '/august-2026-newsletter/', '/february-2026-newsletter/', '/products-category/steam-boilers/', '/category/videos/how-to/']",
+   "id": "issue:500-page",
+   "issue": "500 page",
+   "handler": "manual",
    "tier": "FLAG",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "what_to_do": "Server error on request: open the URL, read the host's PHP error log for that path. Hosting ticket if it is not a plugin fatal.",
    "examples": [
     [
-     "archive",
+     "/products/",
      0,
-     ""
+     "traffic"
     ]
    ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
    "decider": "agency",
    "importance": "",
    "source": "meta-2026-10-29.json"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (2 issue types): Structured data has Google rich results validation error (2919); Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 2920,
+   "traffic_at_stake": 2079,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/steam-boilers-101/",
+     631,
+     "traffic"
+    ],
+    [
+     "/",
+     536,
+     "traffic"
+    ],
+    [
+     "/low-pressure-steam-vs-high-pressure-steam/",
+     148,
+     "traffic"
+    ],
+    [
+     "/products-category/steam-boilers/",
+     70,
+     "traffic"
+    ],
+    [
+     "/how-do-modular-boilers-work/",
+     45,
+     "traffic"
+    ],
+    [
+     "/how-to-find-the-most-efficient-industrial-steam-boiler/",
+     43,
+     "traffic"
+    ],
+    [
+     "/how-are-steam-boilers-used-in-hospitals/",
+     40,
+     "traffic"
+    ],
+    [
+     "/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
+     40,
+     "traffic"
+    ],
+    [
+     "/what-is-a-boiler-turndown-ratio/",
+     39,
+     "traffic"
+    ],
+    [
+     "/products/feedwater-tanks/",
+     38,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (5 issue types): Page has links to broken page (10); 404 page (11); 4XX page (11); 5XX page (1); Page has links to broken page  (non-indexable pages) (7)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 40,
+   "traffic_at_stake": 536,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/",
+     536,
+     "traffic"
+    ],
+    [
+     "/miura-warranty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-america-honored-with-2026-trsa-community-service-award/",
+     0,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/contact/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-pressure-simulations-benefit-steam-generation-efficiency/",
+     0,
+     "traffic"
+    ],
+    [
+     "/miura-donates-ppe-to-medical-centers-assisted-living-facilities/",
+     0,
+     "traffic"
+    ],
+    [
+     "/fast-boiler-delivery-avoid-winter-downtime/",
+     0,
+     "traffic"
+    ],
+    [
+     "/november-2025-newsletter/",
+     0,
+     "traffic"
+    ],
+    [
+     "/7-easy-steps-to-getting-an-emergency-steam-boiler/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (3 issue types): Indexable page not in sitemap (47); Canonical URL has no incoming internal links (1); 5XX page in sitemap (1)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 49,
+   "traffic_at_stake": 17,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/tag/modular-water-tube-boilers/",
+     11,
+     "traffic"
+    ],
+    [
+     "/tag/industrial-laundry/",
+     5,
+     "traffic"
+    ],
+    [
+     "/tag/boiler-maintenance-safety/",
+     1,
+     "traffic"
+    ],
+    [
+     "/tag/trap-energy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/miura/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/rental-boilers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/miura-technician/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/show/",
+     0,
+     "traffic"
+    ],
+    [
+     "/reps/boiler-masters-inc/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/industrial-boiler-rentals/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (47)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 47,
+   "traffic_at_stake": 17,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/tag/modular-water-tube-boilers/",
+     11,
+     "traffic"
+    ],
+    [
+     "/tag/industrial-laundry/",
+     5,
+     "traffic"
+    ],
+    [
+     "/tag/boiler-maintenance-safety/",
+     1,
+     "traffic"
+    ],
+    [
+     "/tag/trap-energy/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/miura/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/rental-boilers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/miura-technician/",
+     0,
+     "traffic"
+    ],
+    [
+     "/tag/show/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/videos/miscellaneous/",
+     0,
+     "traffic"
+    ],
+    [
+     "/reps/boiler-masters-inc/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links  (non-indexable pages) (3088); Page has nofollow outgoing internal links (2)",
    "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 3088,
+   "tier": "skill pending",
+   "urls_affected": 3090,
    "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 3088)",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
    "examples": [
     [
      "/events/category/trade-shows/list/?tribe-bar-date=2026-05-25",
@@ -1361,249 +1304,14 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:302-redirect",
-   "issue": "302 redirect",
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (5 issue types): Canonical from HTTP to HTTPS (1); Canonical points to redirect (4); 302 redirect (13); Broken redirect (9); 3XX redirect in sitemap (3)",
    "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 13,
+   "tier": "skill pending",
+   "urls_affected": 30,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/l/312261/2026-02-12/nz6c1/312261/1770913004YCaBk8Nt/Reverse_Osmosis_Press_Release.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-05-15/p2flq/312261/1778859194Aakd9mTw/Beige_Minimalist_Mood_Photo_Collage.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2025-12-10/nxg4x/312261/1765380118nVrbchaw/Learn_more_button.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-02-12/nz6jt/312261/1770923602QuPBdhk2/FEB2026_NewsletterHeader.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-02-12/nz6cj/312261/1770915986Aw96zpzh/BP_Panel_Live.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-02-12/nz6cx/312261/1770916670DOOP6yQQ/F_B_Blog_Header.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-02-12/nz6cq/312261/1770916394duDvbmY7/Scale_Blog_Header.jpeg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-02-12/nz6ct/312261/1770916642mPpY3CJO/Open_House_Outlook_Email_Header.png",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-05-15/p2fr4/312261/1778870855FH836MUe/MAY2026_NewsletterHeader.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/l/312261/2026-05-15/p2fm1/312261/1778861444gS6FgI9E/2026_06_Open_House_Registration_Card_Part1.jpg",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:broken-redirect",
-   "issue": "Broken redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 9,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/tag/lx/",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/{{Unsubscribe}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/{{Unsubscribe}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/{{{EmailPreferenceCenter}}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/{{{EmailPreferenceCenter}}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/november-2025-newsletter/{{Unsubscribe}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/{{{EmailPreferenceCenter}}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/{{Unsubscribe}}",
-     0,
-     "traffic"
-    ],
-    [
-     "/november-2025-newsletter/{{{EmailPreferenceCenter}}}",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:canonical-points-to-redirect",
-   "issue": "Canonical points to redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 4,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/tag/brewery-distillery-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/efficient-boilers/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/efficient-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/nox-emissions/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:3xx-redirect-in-sitemap",
-   "issue": "3XX redirect in sitemap",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/august-2024-newsletter/",
-     0,
-     "traffic"
-    ],
-    [
-     "/product-listings/",
-     0,
-     "traffic"
-    ],
-    [
-     "/case-studies/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links",
-   "issue": "Page has nofollow outgoing internal links",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/events/",
-     0,
-     "traffic"
-    ],
-    [
-     "/events/page/2/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:5xx-page-in-sitemap",
-   "issue": "5XX page in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/products/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:canonical-from-http-to-https",
-   "issue": "Canonical from HTTP to HTTPS",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
    "examples": [
     [
      "/products/ro-systems/",
@@ -1612,247 +1320,7 @@
     ]
    ],
    "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:canonical-url-has-no-incoming-internal-links",
-   "issue": "Canonical URL has no incoming internal links",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/events/page/2/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 11,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/november-2025-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/lx-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ],
-    [
-     "/november-2025-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 11,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/november-2025-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/august-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/may-2026-newsletter/%7B%7B%7BEmailPreferenceCenter",
-     0,
-     "traffic"
-    ],
-    [
-     "/tag/lx-boilers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/february-2026-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ],
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ],
-    [
-     "/november-2025-newsletter/%7B%7BUnsubscribe",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page-nonindexable",
-   "issue": "Page has links to broken page  (non-indexable pages)",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 7,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/reps/thermal-product-solutions/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/?fwp_video_categories=success-stories",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/page/2/?fwp_video_categories=all",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/?fwp_video_categories=all",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/",
-     0,
-     "traffic"
-    ],
-    [
-     "/reps/atlanta-southeast-branch/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/videos/page/2/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:500-page",
-   "issue": "500 page",
-   "handler": "review",
-   "tier": "?",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
-   "examples": [
-    [
-     "/products/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:5xx-page",
-   "issue": "5XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/products/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   }
  ],

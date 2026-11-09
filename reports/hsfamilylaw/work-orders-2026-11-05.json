@@ -71,26 +71,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 164,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     164,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "redirect-links:redirects-to-homepage",
    "issue": "Links to redirect, skipped by fix-redirect-links: redirects to homepage",
    "handler": "redirect-rules",
@@ -286,31 +266,6 @@
    "source": "redirect-map-2026-10-29.json"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/terms/",
-     0,
-     "traffic"
-    ],
-    [
-     "/privacy-policy/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "redirect-links:looks-like-a-pasted-file-path-one-post-s",
    "issue": "Links to redirect, skipped by fix-redirect-links: looks like a pasted file path (one post's broken image)",
    "handler": "fix-images",
@@ -329,6 +284,51 @@
    "decider": "agency",
    "importance": "",
    "source": "redirect-map-2026-10-29.json"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 1,
+   "traffic_at_stake": 164,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     164,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (1 issue type): Page has nofollow outgoing internal links  (non-indexable pages) (2)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/terms/",
+     0,
+     "traffic"
+    ],
+    [
+     "/privacy-policy/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
   }
  ],
  "skipped": [

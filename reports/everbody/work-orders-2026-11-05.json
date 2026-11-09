@@ -6,71 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 26,
-   "traffic_at_stake": 1165,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/",
-     1061,
-     "traffic"
-    ],
-    [
-     "/locations/",
-     59,
-     "traffic"
-    ],
-    [
-     "/treatment/",
-     33,
-     "traffic"
-    ],
-    [
-     "/locations/greenwich-village/",
-     4,
-     "traffic"
-    ],
-    [
-     "/providers/",
-     3,
-     "traffic"
-    ],
-    [
-     "/locations/south-windsor/",
-     2,
-     "traffic"
-    ],
-    [
-     "/faq/",
-     2,
-     "traffic"
-    ],
-    [
-     "/financing/",
-     1,
-     "traffic"
-    ],
-    [
-     "/press/",
-     0,
-     "traffic"
-    ],
-    [
-     "/locations/gaithersburg/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:faq-page-missing-faqpage-schema",
    "issue": "FAQ page missing FAQPage schema",
    "handler": "schema-check",
@@ -88,26 +23,6 @@
    ],
    "decider": "client",
    "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:3xx-page-receives-organic-traffic",
-   "issue": "3XX page receives organic traffic",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 2,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/locations",
-     2,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   },
   {
@@ -241,56 +156,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
-   "id": "fix-meta:treatment",
-   "issue": "Pages fix-meta routed to ['/treatment/']",
-   "handler": "['/treatment/']",
-   "tier": "FLAG",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -311,14 +176,141 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (26)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 26,
+   "traffic_at_stake": 1165,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/",
+     1061,
+     "traffic"
+    ],
+    [
+     "/locations/",
+     59,
+     "traffic"
+    ],
+    [
+     "/treatment/",
+     33,
+     "traffic"
+    ],
+    [
+     "/locations/greenwich-village/",
+     4,
+     "traffic"
+    ],
+    [
+     "/providers/",
+     3,
+     "traffic"
+    ],
+    [
+     "/locations/south-windsor/",
+     2,
+     "traffic"
+    ],
+    [
+     "/faq/",
+     2,
+     "traffic"
+    ],
+    [
+     "/financing/",
+     1,
+     "traffic"
+    ],
+    [
+     "/press/",
+     0,
+     "traffic"
+    ],
+    [
+     "/locations/gaithersburg/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (1 issue type): 3XX page receives organic traffic (1)",
+   "handler": "redirect-rules",
+   "tier": "skill pending",
+   "urls_affected": 1,
+   "traffic_at_stake": 2,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "examples": [
+    [
+     "/locations",
+     2,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (1)",
    "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
    "examples": [
     [
      "/press/",

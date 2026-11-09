@@ -6,136 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:structured-data-has-google-rich-results-validation-error",
-   "issue": "Structured data has Google rich results validation error",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 227,
-   "traffic_at_stake": 91,
-   "traffic_note": " (top 200 of 227)",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
-   "examples": [
-    [
-     "/boiler-services-west-palm-beach",
-     28,
-     "traffic"
-    ],
-    [
-     "/boiler-services-fort-myers",
-     14,
-     "traffic"
-    ],
-    [
-     "/boiler-services-miami",
-     11,
-     "traffic"
-    ],
-    [
-     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
-     8,
-     "traffic"
-    ],
-    [
-     "/ex-series-steam-boilers",
-     8,
-     "traffic"
-    ],
-    [
-     "/manufacturing-and-industrial-plants",
-     5,
-     "traffic"
-    ],
-    [
-     "/product",
-     4,
-     "traffic"
-    ],
-    [
-     "/boiler-supplier-miami",
-     3,
-     "traffic"
-    ],
-    [
-     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
-     3,
-     "traffic"
-    ],
-    [
-     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
-     3,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 226,
-   "traffic_at_stake": 91,
-   "traffic_note": " (top 200 of 226)",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/boiler-services-west-palm-beach",
-     28,
-     "traffic"
-    ],
-    [
-     "/boiler-services-fort-myers",
-     14,
-     "traffic"
-    ],
-    [
-     "/boiler-services-miami",
-     11,
-     "traffic"
-    ],
-    [
-     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
-     8,
-     "traffic"
-    ],
-    [
-     "/ex-series-steam-boilers",
-     8,
-     "traffic"
-    ],
-    [
-     "/manufacturing-and-industrial-plants",
-     5,
-     "traffic"
-    ],
-    [
-     "/product",
-     4,
-     "traffic"
-    ],
-    [
-     "/boiler-supplier-miami",
-     3,
-     "traffic"
-    ],
-    [
-     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
-     3,
-     "traffic"
-    ],
-    [
-     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
-     3,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:orphan-page-has-no-incoming-internal-links",
    "issue": "Orphan page (has no incoming internal links)",
    "handler": "indexation-review",
@@ -291,26 +161,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 2,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     2,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:slow-server-response-for-ai-crawlers",
    "issue": "Slow server response for AI crawlers",
    "handler": "hosting/cache",
@@ -428,6 +278,136 @@
     [
      "/miura",
      0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (2 issue types): Structured data has Google rich results validation error (227); Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 228,
+   "traffic_at_stake": 91,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "examples": [
+    [
+     "/boiler-services-west-palm-beach",
+     28,
+     "traffic"
+    ],
+    [
+     "/boiler-services-fort-myers",
+     14,
+     "traffic"
+    ],
+    [
+     "/boiler-services-miami",
+     11,
+     "traffic"
+    ],
+    [
+     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
+     8,
+     "traffic"
+    ],
+    [
+     "/ex-series-steam-boilers",
+     8,
+     "traffic"
+    ],
+    [
+     "/manufacturing-and-industrial-plants",
+     5,
+     "traffic"
+    ],
+    [
+     "/product",
+     4,
+     "traffic"
+    ],
+    [
+     "/boiler-supplier-miami",
+     3,
+     "traffic"
+    ],
+    [
+     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
+     3,
+     "traffic"
+    ],
+    [
+     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
+     3,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (226)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 226,
+   "traffic_at_stake": 91,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/boiler-services-west-palm-beach",
+     28,
+     "traffic"
+    ],
+    [
+     "/boiler-services-fort-myers",
+     14,
+     "traffic"
+    ],
+    [
+     "/boiler-services-miami",
+     11,
+     "traffic"
+    ],
+    [
+     "/blog/miura-boiler-systems-explained-compact-design-powerful-output",
+     8,
+     "traffic"
+    ],
+    [
+     "/ex-series-steam-boilers",
+     8,
+     "traffic"
+    ],
+    [
+     "/manufacturing-and-industrial-plants",
+     5,
+     "traffic"
+    ],
+    [
+     "/product",
+     4,
+     "traffic"
+    ],
+    [
+     "/boiler-supplier-miami",
+     3,
+     "traffic"
+    ],
+    [
+     "/blog/5-benefits-of-industrial-steam-boilers-for-manufacturing",
+     3,
+     "traffic"
+    ],
+    [
+     "/boiler-systems-and-water-heaters-for-hotels-resorts-and-country-clubs",
+     3,
      "traffic"
     ]
    ],

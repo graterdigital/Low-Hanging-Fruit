@@ -71,71 +71,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 113,
-   "traffic_at_stake": 211,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/",
-     82,
-     "traffic"
-    ],
-    [
-     "/material-handling/robotic-stacking-systems/",
-     42,
-     "traffic"
-    ],
-    [
-     "/material-handling/automated-pallet-handling/",
-     40,
-     "traffic"
-    ],
-    [
-     "/robotic-machining-finishing/robotic-polishing/",
-     16,
-     "traffic"
-    ],
-    [
-     "/robotic-palletizing-systems/collaborative-robots/",
-     13,
-     "traffic"
-    ],
-    [
-     "/robotic-palletizing-systems/",
-     6,
-     "traffic"
-    ],
-    [
-     "/automotive-manufacturing-automation/",
-     5,
-     "traffic"
-    ],
-    [
-     "/pre_eng_sol/",
-     3,
-     "traffic"
-    ],
-    [
-     "/robotic-machining-finishing/",
-     1,
-     "traffic"
-    ],
-    [
-     "/material-handling/automated-conveyor-systems/",
-     1,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -198,26 +133,6 @@
    ],
    "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 82,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     82,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
    "source": "ahrefs"
   },
   {
@@ -348,71 +263,6 @@
    ],
    "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 25,
-   "traffic_at_stake": 1,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/material-handling/automated-conveyor-systems/",
-     1,
-     "traffic"
-    ],
-    [
-     "/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/shop/",
-     0,
-     "traffic"
-    ],
-    [
-     "/product-brands/siemens/",
-     0,
-     "traffic"
-    ],
-    [
-     "/warehouse-automation-systems-vs-traditional-storage-workflows-2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/brand/fanuc/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/made-for/boxes/",
-     0,
-     "traffic"
-    ],
-    [
-     "/product-brands/mesh/",
-     0,
-     "traffic"
-    ],
-    [
-     "/brand/yaskawa/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   },
   {
@@ -716,36 +566,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "redirect-links:pagination-page-1-comes-from-the-theme-t",
    "issue": "Links to redirect, skipped by fix-redirect-links: pagination /page/1/ comes from the theme template, not content",
    "handler": "manual",
@@ -831,77 +651,189 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:categorycpt-vision-category-tending-prod",
-   "issue": "Pages fix-meta routed to ['/categorycpt/vision/', '/category/tending/', '/product-brands/siemens/', '/categorycpt/material-handling/page/2/', '/categorycpt/palletizing/page/3/', '/brand/fanuc/', '/category/finishing/', '/made-for/boxes/', '/product-brands/mesh/', '/brand/yaskawa/', '/category/news/', '/product-category/palletizing/', '/categorycpt/additional-expertise/', '/made-for/totes/', '/categorycpt/palletizing/page/2/', '/category/vision/', '/product-brands/siemens/page/2/', '/product-brands/rockwell/', '/category/palletizing/', '/categorycpt/assembly/', '/product-brands/mesh/page/2/', '/category/assembly/', '/category/palletizing/page/2/', '/category/uncategorized/', '/brand/abb/', '/made-for/pails/', '/categorycpt/cobots/', '/categorycpt/robotic-tending/', '/made-for/bags/', '/product-brands/rockwell/page/2/', '/product-category/palletizing/page/2/']",
-   "handler": "['/categorycpt/vision/', '/category/tending/', '/product-brands/siemens/', '/categorycpt/material-handling/page/2/', '/categorycpt/palletizing/page/3/', '/brand/fanuc/', '/category/finishing/', '/made-for/boxes/', '/product-brands/mesh/', '/brand/yaskawa/', '/category/news/', '/product-category/palletizing/', '/categorycpt/additional-expertise/', '/made-for/totes/', '/categorycpt/palletizing/page/2/', '/category/vision/', '/product-brands/siemens/page/2/', '/product-brands/rockwell/', '/category/palletizing/', '/categorycpt/assembly/', '/product-brands/mesh/page/2/', '/category/assembly/', '/category/palletizing/page/2/', '/category/uncategorized/', '/brand/abb/', '/made-for/pails/', '/categorycpt/cobots/', '/categorycpt/robotic-tending/', '/made-for/bags/', '/product-brands/rockwell/page/2/', '/product-category/palletizing/page/2/']",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
    "tier": "FLAG",
-   "urls_affected": 1,
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
    "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
+   "examples": [],
    "decider": "agency",
    "importance": "",
    "source": "meta-2026-10-29.json"
   },
   {
-   "id": "issue:canonical-url-has-no-incoming-internal-links",
-   "issue": "Canonical URL has no incoming internal links",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 9,
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (113)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 113,
+   "traffic_at_stake": 211,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
    "examples": [
     [
-     "/categorycpt/vision/",
+     "/",
+     82,
+     "traffic"
+    ],
+    [
+     "/material-handling/robotic-stacking-systems/",
+     42,
+     "traffic"
+    ],
+    [
+     "/material-handling/automated-pallet-handling/",
+     40,
+     "traffic"
+    ],
+    [
+     "/robotic-machining-finishing/robotic-polishing/",
+     16,
+     "traffic"
+    ],
+    [
+     "/robotic-palletizing-systems/collaborative-robots/",
+     13,
+     "traffic"
+    ],
+    [
+     "/robotic-palletizing-systems/",
+     6,
+     "traffic"
+    ],
+    [
+     "/automotive-manufacturing-automation/",
+     5,
+     "traffic"
+    ],
+    [
+     "/pre_eng_sol/",
+     3,
+     "traffic"
+    ],
+    [
+     "/robotic-machining-finishing/",
+     1,
+     "traffic"
+    ],
+    [
+     "/material-handling/automated-conveyor-systems/",
+     1,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 1,
+   "traffic_at_stake": 82,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     82,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (3 issue types): Page has links to broken page (25); 404 page (5); 4XX page (5)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 35,
+   "traffic_at_stake": 1,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/material-handling/automated-conveyor-systems/",
+     1,
+     "traffic"
+    ],
+    [
+     "/blog/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/robotic-grinding/",
+     "/shop/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/material-handling/",
+     "/product-brands/siemens/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/additional-expertise/",
+     "/warehouse-automation-systems-vs-traditional-storage-workflows-2/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/palletizing/",
+     "/brand/fanuc/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/assembly/",
+     "/blog/page/2/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/cobots/",
+     "/made-for/boxes/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/robotic-tending/",
+     "/product-brands/mesh/",
      0,
      "traffic"
     ],
     [
-     "/categorycpt/amr-agv/",
+     "/brand/yaskawa/",
      0,
      "traffic"
     ]
@@ -911,14 +843,34 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:canonical-points-to-redirect",
-   "issue": "Canonical points to redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 3,
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (4 issue types): Noindex in HTML and HTTP header (1); Canonical URL has no incoming internal links (9); Noindex page in sitemap (2); Page in multiple sitemaps (1)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 13,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/my-account/lost-password/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (3 issue types): Canonical points to redirect (3); 302 redirect (1); 3XX redirect in sitemap (1)",
+   "handler": "redirect-rules",
+   "tier": "skill pending",
+   "urls_affected": 5,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
    "examples": [
     [
      "/case_studies/page/2/?categorycpt=vision",
@@ -937,103 +889,18 @@
     ]
    ],
    "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:noindex-page-in-sitemap",
-   "issue": "Noindex page in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/cart/",
-     0,
-     "traffic"
-    ],
-    [
-     "/my-account/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:302-redirect",
-   "issue": "302 redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/checkout/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
    "importance": "Warning",
    "source": "ahrefs"
   },
   {
-   "id": "issue:3xx-redirect-in-sitemap",
-   "issue": "3XX redirect in sitemap",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/checkout/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:noindex-in-html-and-http-header",
-   "issue": "Noindex in HTML and HTTP header",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/my-account/lost-password/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (1 issue type): Page has nofollow outgoing internal links  (non-indexable pages) (1)",
    "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
    "examples": [
     [
      "/cart/",
@@ -1043,106 +910,6 @@
    ],
    "decider": "agency",
    "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-in-multiple-sitemaps",
-   "issue": "Page in multiple sitemaps",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/shop/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 5,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/warehouse-robotics-types-use-cases-system-design/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/page/4/",
-     0,
-     "traffic"
-    ],
-    [
-     "/automated-material-handling/robotic-case-packers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/?page_id=4306",
-     0,
-     "traffic"
-    ],
-    [
-     "/core/flexible-automation/assemblyjoining-methods/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 5,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/warehouse-robotics-types-use-cases-system-design/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/page/4/",
-     0,
-     "traffic"
-    ],
-    [
-     "/automated-material-handling/robotic-case-packers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/?page_id=4306",
-     0,
-     "traffic"
-    ],
-    [
-     "/core/flexible-automation/assemblyjoining-methods/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   }
  ],

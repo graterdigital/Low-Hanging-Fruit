@@ -6,79 +6,14 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:inconsistent-ai-training-bot-policy",
-   "issue": "Inconsistent AI training bot policy",
+   "id": "issue:ai-bot-policy-decide",
+   "issue": "AI crawler policy (robots.txt): client decision",
    "handler": "ai-discoverability",
    "tier": "decide",
    "urls_affected": 72,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "robots.txt groups disagree; the managed block replaces them (skill).",
-   "examples": [
-    [
-     "/episodes/why-great-employees-struggle-in-the-wrong-role-fractional-integrator-nicole-mennicke-episode-113/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/meet-the-wolf-pack-family-law-stalwart-elizabeth-findley-episode-65/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/winning-family-law-firm-secrets-divorce-faqs-episode-20/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/handling-pet-custody-in-divorce-episode-22/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/resilience-perspective-life-after-cancer-cdre-jill-heineck-episode-112/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/meet-the-partners-andee-hastings-and-her-passion-for-family-law-episode-52/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/meet-the-partners-mali-shadmehry-family-law-attorney-and-trailblazer-episode-53/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/the-art-of-dog-rescue-with-jason-flatt-forward-facing-102/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/meet-the-wolf-pack-family-law-attorney-lisa-malas-episode-39/",
-     0,
-     "traffic"
-    ],
-    [
-     "/episodes/when-to-file-for-divorce-timing-strategy-impact-episode-51/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "client",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-blocked-from-some-ai-search-bots",
-   "issue": "Indexable page blocked from some AI search bots",
-   "handler": "ai-discoverability",
-   "tier": "decide",
-   "urls_affected": 72,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Set the client's ai: policy, then apply the managed robots.txt block (skill).",
+   "what_to_do": "Set the client's ai: policy (allow/block search bots, allow/block training bots), then ai-discoverability applies the managed robots.txt block. Ahrefs issues folded in: Inconsistent AI training bot policy, Indexable page blocked from some AI search bots.",
    "examples": [
     [
      "/episodes/why-great-employees-struggle-in-the-wrong-role-fractional-integrator-nicole-mennicke-episode-113/",
@@ -191,41 +126,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 4,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ],
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty",
    "issue": "H1 tag missing or empty",
    "handler": "manual",
@@ -266,14 +166,81 @@
    "source": "2026-10-30-1002-fix-redirect-links-live-options.md"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (3 issue types): 404 page (2); 4XX page (2); Page has links to broken page (2)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 6,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/author/developer/",
+     0,
+     "traffic"
+    ],
+    [
+     "/cdn-cgi/l/email-protection",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (1 issue type): Page has nofollow outgoing internal links  (non-indexable pages) (1)",
    "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
    "examples": [
     [
      "/privacy-policy/",
@@ -283,81 +250,6 @@
    ],
    "decider": "agency",
    "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/author/developer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/author/developer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/host/mali-shadmehry/",
-     0,
-     "traffic"
-    ],
-    [
-     "/host/andee-hastings/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   }
  ],

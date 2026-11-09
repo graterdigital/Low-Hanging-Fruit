@@ -171,6 +171,31 @@
    "source": "ahrefs"
   },
   {
+   "id": "issue:noindex-page-became-indexable",
+   "issue": "Noindex page became indexable",
+   "handler": "indexation-review",
+   "tier": "decide",
+   "urls_affected": 2,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Pages that were noindexed last crawl are now indexable: confirm it was deliberate (a plugin update or a theme switch can reset it).",
+   "examples": [
+    [
+     "/dallas-tx-1036/client-reviews/",
+     0,
+     "traffic"
+    ],
+    [
+     "/shenandoah-va-1096/blog/category/it-strategy-infrastructure/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "client",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
    "id": "issue:slow-page",
    "issue": "Slow page",
    "handler": "manual",
@@ -626,1219 +651,14 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6116,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 6116)",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
-   "examples": [
-    [
-     "/lasvegas-nv-1206/blog/law-firm-it-support-in-las-vegas-your-fractional-it-department/",
-     0,
-     "traffic"
-    ],
-    [
-     "/wilmington-nc-1168/",
-     0,
-     "traffic"
-    ],
-    [
-     "/powellspoint-nc-1156/contact-us/",
-     0,
-     "traffic"
-    ],
-    [
-     "/stcharles-mo-1093/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/sanantonio-tx-1120/blog/mac-malware-turns-icloud-calendars-into-a-data-theft-trap/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boise-id-1183/it-infrastructure-for-manufacturing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/blog/finance-firms-face-new-phishing-techniques-heres-how-to-stay-ahead/",
-     0,
-     "traffic"
-    ],
-    [
-     "/miami-fl-1208/compliance/",
-     0,
-     "traffic"
-    ],
-    [
-     "/greenville-sc-1006/business-data-compliance-greenville/",
-     0,
-     "traffic"
-    ],
-    [
-     "/everett-wa-1158/managed-it-solutions-for-defense-contractors-in-everett-wa/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-incoming-internal-links-only",
-   "issue": "Page has nofollow incoming internal links only",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 826,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 826)",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
-   "examples": [
-    [
-     "/it-solutions-support-from-cmit-solutions-of-erie-transforms-mental-health-agencys-technology/",
-     0,
-     "traffic"
-    ],
-    [
-     "/how-consumer-grade-video-chat-paved-way-for-cmit-impression/",
-     0,
-     "traffic"
-    ],
-    [
-     "/southlake-tx-1197/blog/three-reasons-why-your-small-business-should-invest-in-it-help-desk-support/",
-     0,
-     "traffic"
-    ],
-    [
-     "/microsoft-rolls-out-new-cybersecurity-protections/",
-     0,
-     "traffic"
-    ],
-    [
-     "/philadelphia-pa-1200/blog/copilot-webinar/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tampa-fl-1078/blog/what-is-it-help-desk-support/",
-     0,
-     "traffic"
-    ],
-    [
-     "/plymouth-mn-1102/blog/excel-just-gave-cells-a-major-upgrade/",
-     0,
-     "traffic"
-    ],
-    [
-     "/ready-to-take-your-business-to-the-next-level/",
-     0,
-     "traffic"
-    ],
-    [
-     "/austin-tx-1128/blog/why-retailers-are-rethinking-point-of-sale-security-after-a-rise-in-breaches/",
-     0,
-     "traffic"
-    ],
-    [
-     "/clearlake-tx-1106/blog/ready-to-take-your-business-to-the-next-level/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 466,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 466)",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/houston-tx-1192/resources/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tempe-az-1141/blog/category/blogs/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/sanmateo-ca-1060/managed-it-services-in-san-carlos/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/stlouis-mo-1042/resources/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boston-ma-1089/blog/page/3/",
-     0,
-     "traffic"
-    ],
-    [
-     "/westchester-ny-1180/resources/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/upper-east-side-ny-1258/resources/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/tampa-fl-1078/resources/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/plymouth-mn-1102/blog/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boston-ma-1020/blog/page/3/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:structured-data-has-google-rich-results-validation-error",
-   "issue": "Structured data has Google rich results validation error",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 218,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 218)",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
-   "examples": [
-    [
-     "/oakpark-il-1005/blog/finance-firms-face-new-phishing-techniques-heres-how-to-stay-ahead/",
-     0,
-     "traffic"
-    ],
-    [
-     "/bothell-wa-1091/blog/wi-fi-7-and-the-future-of-business-connectivity-what-smbs-need-to-know/",
-     0,
-     "traffic"
-    ],
-    [
-     "/kenosha-wi-1018/blog/data-backup-disaster-recovery-the-silent-lifeline-of-southeast-wisconsin-businesses/",
-     0,
-     "traffic"
-    ],
-    [
-     "/des-moines-ia-1210/blog/the-ceos-guide-to-vciso-in-des-moines-why-mid-sized-businesses-are-making-the-switch-in-2026/",
-     0,
-     "traffic"
-    ],
-    [
-     "/charleston-sc-1165/blog/windows-11-for-business-unlocking-new-levels-of-productivity-and-security/",
-     0,
-     "traffic"
-    ],
-    [
-     "/birmingham-al-1149/blog/what-happens-when-your-business-it-systems-go-down-the-real-cost-of-downtime/",
-     0,
-     "traffic"
-    ],
-    [
-     "/austin-tx-1052/blog/your-office-manager-is-not-your-it-department-and-that-is-nobodys-fault/",
-     0,
-     "traffic"
-    ],
-    [
-     "/bothell-wa-1091/blog/how-cyber-insurance-requirements-are-changing-business-it-strategies-in-2026/",
-     0,
-     "traffic"
-    ],
-    [
-     "/sanmarcos-tx-1047/blog/client-spotlight-how-the-faust-hotel-stopped-firefighting-it/",
-     0,
-     "traffic"
-    ],
-    [
-     "/kenosha-wi-1018/blog/remote-work-is-permanent-is-your-it-infrastructure-built-to-support-it-securely/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:broken-redirect",
-   "issue": "Broken redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 102,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/corporate/blog/7-reasons-why-you-should-take-disaster-preparedness-seriously",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/cloud/cloud-storage/",
-     0,
-     "traffic"
-    ],
-    [
-     "/corporate/blog/9-reasons-why-quickbooks-still-rules-accounting-world-even-cloud-takes-over",
-     0,
-     "traffic"
-    ],
-    [
-     "/location-directory/cmit-solutions-of-bellevue-kirkland-and-redmond/",
-     0,
-     "traffic"
-    ],
-    [
-     "/corporate/blog/how-recognize-and-avoid-pdf-based-malware",
-     0,
-     "traffic"
-    ],
-    [
-     "/corporate/blog/what-can-changing-face-microsoft-office-do-you",
-     0,
-     "traffic"
-    ],
-    [
-     "/corporate/blog/five-password-management-tools-and-why-you-need-use-them",
-     0,
-     "traffic"
-    ],
-    [
-     "/cmit-solutions-of-seattle-downtown/proactive-it-services/",
-     0,
-     "traffic"
-    ],
-    [
-     "/local-weekly-tips/hacking-for-gold/",
-     0,
-     "traffic"
-    ],
-    [
-     "/corporate/blog/top-10-reasons-why-hipaa-compliance-should-matter-you",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-incoming-internal-links-only-nonindexable",
-   "issue": "Page has nofollow incoming internal links only  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 60,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
-   "examples": [
-    [
-     "/category/quick-tips/page/41/",
-     0,
-     "traffic"
-    ],
-    [
-     "/richardson-tx-1049/blog/should-you-ban-ai-on-fridays/",
-     0,
-     "traffic"
-    ],
-    [
-     "/roanoke-va-1017/blog/category/local-it/page/3/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/in-the-news/page/4/",
-     0,
-     "traffic"
-    ],
-    [
-     "/newyork-ny-1095/blog/why-your-old-antivirus-wont-cut-it/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/quick-tips/page/8/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/case-studies/page/4/",
-     0,
-     "traffic"
-    ],
-    [
-     "/richardson-tx-1049/blog/is-data-security-your-top-priority/",
-     0,
-     "traffic"
-    ],
-    [
-     "/richardson-tx-1049/blog/how-to-stop-ai-projects-stalling/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/cybersecurity/page/5/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:canonical-points-to-redirect",
-   "issue": "Canonical points to redirect",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 20,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/sanantonio-tx-1098/managed-it-services-san-antonio/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boston-ma-1020/cybersecurity/",
-     0,
-     "traffic"
-    ],
-    [
-     "/burlington-nj-1230/lp/unified-communications/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boston-ma-1020/industry/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boston-ma-1020/compliance/",
-     0,
-     "traffic"
-    ],
-    [
-     "/burlington-nj-1230/lp/it-service-package/",
-     0,
-     "traffic"
-    ],
-    [
-     "/burlington-nj-1230/lp/it-support-service-in-burlington-area/",
-     0,
-     "traffic"
-    ],
-    [
-     "/burlington-nj-1230/lp/cybersecurity-service-in-gurlington-area/",
-     0,
-     "traffic"
-    ],
-    [
-     "/burlington-nj-1230/lp/need-productivity-applications-in-burlington-area/",
-     0,
-     "traffic"
-    ],
-    [
-     "/novasouth-va-1254/network-management/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:canonical-url-has-no-incoming-internal-links",
-   "issue": "Canonical URL has no incoming internal links",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 14,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/oakpark-il-1005/industries-legal/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-healthcare/",
-     0,
-     "traffic"
-    ],
-    [
-     "/lp/franchise/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-non-profit/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-education/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-government/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-construction/",
-     0,
-     "traffic"
-    ],
-    [
-     "/frederick-md-1072/lp/productivity-applications/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-real-estate/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/industries-engineering/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-nofollow-outgoing-internal-links",
-   "issue": "Page has nofollow outgoing internal links",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 13,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/how-to-prevent-password-resets/",
-     0,
-     "traffic"
-    ],
-    [
-     "/why-cmit-solutions-new-automatic-patch-management-for-adobe-java-itunes-and-firefox-is-critical-for-small-business/",
-     0,
-     "traffic"
-    ],
-    [
-     "/ocala-fl-1255/blog/exciting-news-cmit-solutions-opens-in-ocala-fl-bringing-expert-it-support-to-the-heart-of-north-central-florida/",
-     0,
-     "traffic"
-    ],
-    [
-     "/go-multimedia-with-windows-live-writer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/should-you-store-your-medical-records-on-the-cloud-a-10-point-checklist/",
-     0,
-     "traffic"
-    ],
-    [
-     "/use-email-signatures-to-ensure-people-have-your-contact-info/",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-snipping-tool-captures-screen-shots-in-a-snap-2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/pdfs-and-protected-mode/",
-     0,
-     "traffic"
-    ],
-    [
-     "/what-does-any-to-any-mean/",
-     0,
-     "traffic"
-    ],
-    [
-     "/austin-tx-1079/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:non-canonical-page-in-sitemap",
-   "issue": "Non-canonical page in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 7,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/lp/it-budget-review/",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-ai-assistant-on-your-keychain-is-still-an-endpoint/",
-     0,
-     "traffic"
-    ],
-    [
-     "/webinars/it-budget-season-series-part-ii-three-places-your-2027-ai-budget-needs-to-go/",
-     0,
-     "traffic"
-    ],
-    [
-     "/lp/it-budget/",
-     0,
-     "traffic"
-    ],
-    [
-     "/lp/find-your-it-model/",
-     0,
-     "traffic"
-    ],
-    [
-     "/ai-just-beat-12-cpas-at-month-end-close-what-it-actually-means/",
-     0,
-     "traffic"
-    ],
-    [
-     "/lp/scenthound/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:3xx-redirect-in-sitemap",
-   "issue": "3XX redirect in sitemap",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/industries/hotel-it-support/",
-     0,
-     "traffic"
-    ],
-    [
-     "/network-security/",
-     0,
-     "traffic"
-    ],
-    [
-     "/video-cherry-hill-cpa-firm-stays-secure-with-reliable-and-proactive-it-support/",
-     0,
-     "traffic"
-    ],
-    [
-     "/industries/hospitality/",
-     0,
-     "traffic"
-    ],
-    [
-     "/industries/hospitality-networking-solutions/",
-     0,
-     "traffic"
-    ],
-    [
-     "/industries/finance-and-insurance/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-became-non-indexable",
-   "issue": "Indexable page became non-indexable",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/statesville-nc-1218/resources/",
-     0,
-     "traffic"
-    ],
-    [
-     "/erie-pa-1030/about/",
-     0,
-     "traffic"
-    ],
-    [
-     "/folsom-ca-1233/",
-     0,
-     "traffic"
-    ],
-    [
-     "/raleigh-nc-1248/resources/",
-     0,
-     "traffic"
-    ],
-    [
-     "/denver-co-1228/managed-it-services/",
-     0,
-     "traffic"
-    ],
-    [
-     "/greenville-sc-1006/tools-and-calculators/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-in-multiple-sitemaps",
-   "issue": "Page in multiple sitemaps",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/the-snipping-tool-captures-screen-shots-in-a-snap/",
-     0,
-     "traffic"
-    ],
-    [
-     "/how-powerful-is-video-as-a-promotional-tool/",
-     0,
-     "traffic"
-    ],
-    [
-     "/case-study/when-the-midnight-it-call-gets-answered/",
-     0,
-     "traffic"
-    ],
-    [
-     "/the-snipping-tool-captures-screen-shots-in-a-snap-2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/case-study/public-safety-cybersecurity-how-cmit-solutions-helps-madison-fire-department-protect-critical-operations/",
-     0,
-     "traffic"
-    ],
-    [
-     "/use-ctrlk-to-add-hyperlinks-in-gmail-messages/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:noindex-page-in-sitemap",
-   "issue": "Noindex page in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/category/featured/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/uncategorized/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:redirect-loop",
-   "issue": "Redirect loop",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/stcharles-mo-1093/why-cmit/",
-     0,
-     "traffic"
-    ],
-    [
-     "/siliconvalley-ca-1019/why-cmit/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:sitemap-in-the-wrong-format",
-   "issue": "Sitemap in the wrong format",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/sitemap.rss",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 6177,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 6177)",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/wilmington-nc-1168/",
-     0,
-     "traffic"
-    ],
-    [
-     "/powellspoint-nc-1156/contact-us/",
-     0,
-     "traffic"
-    ],
-    [
-     "/stcharles-mo-1093/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/sanantonio-tx-1120/blog/mac-malware-turns-icloud-calendars-into-a-data-theft-trap/",
-     0,
-     "traffic"
-    ],
-    [
-     "/it-solutions-support-from-cmit-solutions-of-erie-transforms-mental-health-agencys-technology/",
-     0,
-     "traffic"
-    ],
-    [
-     "/boise-id-1183/it-infrastructure-for-manufacturing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/blog/finance-firms-face-new-phishing-techniques-heres-how-to-stay-ahead/",
-     0,
-     "traffic"
-    ],
-    [
-     "/greenville-sc-1006/business-data-compliance-greenville/",
-     0,
-     "traffic"
-    ],
-    [
-     "/everett-wa-1158/managed-it-solutions-for-defense-contractors-in-everett-wa/",
-     0,
-     "traffic"
-    ],
-    [
-     "/how-consumer-grade-video-chat-paved-way-for-cmit-impression/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-missing",
-   "issue": "Open Graph tags missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/bellevue-wa-1140/blog/author/dstewart/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:x-twitter-card-missing",
-   "issue": "X (Twitter) card missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/bellevue-wa-1140/blog/author/dstewart/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 738,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 738)",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/boise-id-1183/it-infrastructure-for-manufacturing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/miami-fl-1208/compliance/",
-     0,
-     "traffic"
-    ],
-    [
-     "/greenville-sc-1006/business-data-compliance-greenville/",
-     0,
-     "traffic"
-    ],
-    [
-     "/how-consumer-grade-video-chat-paved-way-for-cmit-impression/",
-     0,
-     "traffic"
-    ],
-    [
-     "/philadelphia-pa-1200/blog/ransomware/",
-     0,
-     "traffic"
-    ],
-    [
-     "/brandon-lakeland-fl-1222/compliance/",
-     0,
-     "traffic"
-    ],
-    [
-     "/birmingham-al-1149/unified-communications/",
-     0,
-     "traffic"
-    ],
-    [
-     "/philadelphia-pa-1200/blog/copilot-webinar/",
-     0,
-     "traffic"
-    ],
-    [
-     "/sanmarcos-tx-1047/contact-us/",
-     0,
-     "traffic"
-    ],
-    [
-     "/charleston-sc-1165/blog/how-to-identify-business-processes-ready-for-ai-automation/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 295,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 295)",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/blog/top-10-reasons-why-windows-81-worth-upgrade",
-     0,
-     "traffic"
-    ],
-    [
-     "/wp-content/uploads/2012/04/phisher.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/what-is-spoofing-in-cyber-security/+18003992648",
-     0,
-     "traffic"
-    ],
-    [
-     "/cincinnati-oh-1088/industry/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/hardware-purchasing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/why-strong-network-security-must-wake-shellshock-bug",
-     0,
-     "traffic"
-    ],
-    [
-     "/charleston-sc-1165/?page_id=4",
-     0,
-     "traffic"
-    ],
-    [
-     "/birmingham-al-1149/accessibility/",
-     0,
-     "traffic"
-    ],
-    [
-     "/wp-content/uploads/2015/02/iStock_000029894058Large_0.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/your-small-business-prepared-natural-disaster",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 289,
-   "traffic_at_stake": 0,
-   "traffic_note": " (top 200 of 289)",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/blog/top-10-reasons-why-windows-81-worth-upgrade",
-     0,
-     "traffic"
-    ],
-    [
-     "/wp-content/uploads/2012/04/phisher.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/what-is-spoofing-in-cyber-security/+18003992648",
-     0,
-     "traffic"
-    ],
-    [
-     "/cincinnati-oh-1088/industry/",
-     0,
-     "traffic"
-    ],
-    [
-     "/services/hardware-purchasing/",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/why-strong-network-security-must-wake-shellshock-bug",
-     0,
-     "traffic"
-    ],
-    [
-     "/charleston-sc-1165/?page_id=4",
-     0,
-     "traffic"
-    ],
-    [
-     "/birmingham-al-1149/accessibility/",
-     0,
-     "traffic"
-    ],
-    [
-     "/wp-content/uploads/2015/02/iStock_000029894058Large_0.jpg",
-     0,
-     "traffic"
-    ],
-    [
-     "/blog/your-small-business-prepared-natural-disaster",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page-nonindexable",
-   "issue": "Page has links to broken page  (non-indexable pages)",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 111,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/oakpark-il-1005/it-service/compliance/?utm_source=direct&utm_medium=direct",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/Industries-accounting/",
-     0,
-     "traffic"
-    ],
-    [
-     "/austin-tx-1052/client-reviews/",
-     0,
-     "traffic"
-    ],
-    [
-     "/lasvegas-nv-1206/blog/category/local-it/page/10/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/Industries-government/?utm_source=direct&utm_medium=direct",
-     0,
-     "traffic"
-    ],
-    [
-     "/lasvegas-nv-1206/blog/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/miami-fl-1208/blog/page/2/",
-     0,
-     "traffic"
-    ],
-    [
-     "/chicago-il-1223/blog/page/3/",
-     0,
-     "traffic"
-    ],
-    [
-     "/oakpark-il-1005/it-service/productivity-applications/?utm_source=direct&utm_medium=direct",
-     0,
-     "traffic"
-    ],
-    [
-     "/birmingham-al-1149/cybersecurity-birmingham//",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:page-has-broken-css",
    "issue": "Page has broken CSS",
-   "handler": "review",
-   "tier": "?",
+   "handler": "manual",
+   "tier": "FLAG",
    "urls_affected": 85,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "A stylesheet the page loads 404s or errors: usually a plugin removed without cleaning its enqueue, or a CDN path. Find the URL in the page source, fix the enqueue or re-add the file.",
    "examples": [
     [
      "/concord-ca-1107/it-guidance/",
@@ -1898,12 +718,12 @@
   {
    "id": "issue:css-broken",
    "issue": "CSS broken",
-   "handler": "review",
-   "tier": "?",
+   "handler": "manual",
+   "tier": "FLAG",
    "urls_affected": 27,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "The CSS file itself returns an error; same fix as 'Page has broken CSS' (one file, many pages).",
    "examples": [
     [
      "/long-beach-ca-1217/it-self-assessment/styles.css",
@@ -1963,12 +783,12 @@
   {
    "id": "issue:javascript-broken",
    "issue": "JavaScript broken",
-   "handler": "review",
-   "tier": "?",
+   "handler": "manual",
+   "tier": "FLAG",
    "urls_affected": 6,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "The script file itself returns an error; same fix as 'Page has broken JavaScript'.",
    "examples": [
     [
      "/dallas-tx-1036/ai-services/form-handler.js",
@@ -2008,12 +828,12 @@
   {
    "id": "issue:page-has-broken-javascript",
    "issue": "Page has broken JavaScript",
-   "handler": "review",
-   "tier": "?",
+   "handler": "manual",
+   "tier": "FLAG",
    "urls_affected": 6,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "A script the page loads 404s or errors: plugin remnant or CDN path. Fix the enqueue; check the console on one page.",
    "examples": [
     [
      "/dallas-tx-1036/it-service-cybersecurity/",
@@ -2051,14 +871,169 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:canonical-points-to-4xx",
-   "issue": "Canonical points to 4XX",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 4,
+   "id": "issue:html-file-size-too-large",
+   "issue": "HTML file size too large",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 2,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "what_to_do": "HTML over Ahrefs' size threshold: inline CSS/JS from a builder or an embedded data blob. Usually one template; check what inflates it.",
+   "examples": [
+    [
+     "/long-beach-ca-1217/about/",
+     0,
+     "traffic"
+    ],
+    [
+     "/bothell-wa-1091/about/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "issue:robots-txt-is-not-accessible",
+   "issue": "Robots.txt is not accessible",
+   "handler": "manual",
+   "tier": "FLAG",
+   "urls_affected": 1,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "robots.txt returned an error during the crawl: check it loads now (host block, WAF, or a plugin serving it). Transient if it loads.",
+   "examples": [
+    [
+     "/robots.txt",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Error",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (3 issue types): Open Graph tags incomplete (6177); Open Graph tags missing (1); X (Twitter) card missing (1)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 6179,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/wilmington-nc-1168/",
+     0,
+     "traffic"
+    ],
+    [
+     "/powellspoint-nc-1156/contact-us/",
+     0,
+     "traffic"
+    ],
+    [
+     "/stcharles-mo-1093/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/sanantonio-tx-1120/blog/mac-malware-turns-icloud-calendars-into-a-data-theft-trap/",
+     0,
+     "traffic"
+    ],
+    [
+     "/it-solutions-support-from-cmit-solutions-of-erie-transforms-mental-health-agencys-technology/",
+     0,
+     "traffic"
+    ],
+    [
+     "/boise-id-1183/it-infrastructure-for-manufacturing/",
+     0,
+     "traffic"
+    ],
+    [
+     "/oakpark-il-1005/blog/finance-firms-face-new-phishing-techniques-heres-how-to-stay-ahead/",
+     0,
+     "traffic"
+    ],
+    [
+     "/greenville-sc-1006/business-data-compliance-greenville/",
+     0,
+     "traffic"
+    ],
+    [
+     "/everett-wa-1158/managed-it-solutions-for-defense-contractors-in-everett-wa/",
+     0,
+     "traffic"
+    ],
+    [
+     "/how-consumer-grade-video-chat-paved-way-for-cmit-impression/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (8 issue types): Indexable page became non-indexable (6); Non-canonical page specified as canonical one (1); Canonical URL has no incoming internal links (14); Indexable page not in sitemap (6116); Noindex page in sitemap (2); Non-canonical page in sitemap (7); Page in multiple sitemaps (6); Sitemap in the wrong format (1)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 6153,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
+   "examples": [
+    [
+     "/statesville-nc-1218/resources/",
+     0,
+     "traffic"
+    ],
+    [
+     "/erie-pa-1030/about/",
+     0,
+     "traffic"
+    ],
+    [
+     "/folsom-ca-1233/",
+     0,
+     "traffic"
+    ],
+    [
+     "/raleigh-nc-1248/resources/",
+     0,
+     "traffic"
+    ],
+    [
+     "/denver-co-1228/managed-it-services/",
+     0,
+     "traffic"
+    ],
+    [
+     "/greenville-sc-1006/tools-and-calculators/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (6 issue types): Canonical points to 4XX (4); 404 page (289); 4XX page (295); 5XX page (2); Page has links to broken page  (non-indexable pages) (111); Page has links to broken page (738)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 1439,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
    "examples": [
     [
      "/greenville-sc-1006/cmit-business-risk/",
@@ -2082,51 +1057,66 @@
     ]
    ],
    "decider": "agency",
-   "importance": "Error",
+   "importance": "Warning",
    "source": "ahrefs"
   },
   {
-   "id": "issue:5xx-page",
-   "issue": "5XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 2,
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (4 issue types): Page has nofollow incoming internal links only  (non-indexable pages) (60); Page has nofollow incoming internal links only (826); Page has nofollow outgoing internal links  (non-indexable pages) (466); Page has nofollow outgoing internal links (13)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 1365,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
    "examples": [
     [
-     "/erie-pa-1030/about/",
+     "/category/quick-tips/page/41/",
      0,
      "traffic"
     ],
     [
-     "/erie-pa-1030/partners-and-certifications/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:html-file-size-too-large",
-   "issue": "HTML file size too large",
-   "handler": "review",
-   "tier": "?",
-   "urls_affected": 2,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
-   "examples": [
-    [
-     "/long-beach-ca-1217/about/",
+     "/richardson-tx-1049/blog/should-you-ban-ai-on-fridays/",
      0,
      "traffic"
     ],
     [
-     "/bothell-wa-1091/about/",
+     "/roanoke-va-1017/blog/category/local-it/page/3/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/in-the-news/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/newyork-ny-1095/blog/why-your-old-antivirus-wont-cut-it/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/quick-tips/page/8/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/case-studies/page/4/",
+     0,
+     "traffic"
+    ],
+    [
+     "/richardson-tx-1049/blog/is-data-security-your-top-priority/",
+     0,
+     "traffic"
+    ],
+    [
+     "/richardson-tx-1049/blog/how-to-stop-ai-projects-stalling/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/cybersecurity/page/5/",
      0,
      "traffic"
     ]
@@ -2136,22 +1126,62 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:noindex-page-became-indexable",
-   "issue": "Noindex page became indexable",
-   "handler": "review",
-   "tier": "?",
-   "urls_affected": 2,
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Structured data has Google rich results validation error (218)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 218,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
    "examples": [
     [
-     "/dallas-tx-1036/client-reviews/",
+     "/oakpark-il-1005/blog/finance-firms-face-new-phishing-techniques-heres-how-to-stay-ahead/",
      0,
      "traffic"
     ],
     [
-     "/shenandoah-va-1096/blog/category/it-strategy-infrastructure/",
+     "/bothell-wa-1091/blog/wi-fi-7-and-the-future-of-business-connectivity-what-smbs-need-to-know/",
+     0,
+     "traffic"
+    ],
+    [
+     "/kenosha-wi-1018/blog/data-backup-disaster-recovery-the-silent-lifeline-of-southeast-wisconsin-businesses/",
+     0,
+     "traffic"
+    ],
+    [
+     "/des-moines-ia-1210/blog/the-ceos-guide-to-vciso-in-des-moines-why-mid-sized-businesses-are-making-the-switch-in-2026/",
+     0,
+     "traffic"
+    ],
+    [
+     "/charleston-sc-1165/blog/windows-11-for-business-unlocking-new-levels-of-productivity-and-security/",
+     0,
+     "traffic"
+    ],
+    [
+     "/birmingham-al-1149/blog/what-happens-when-your-business-it-systems-go-down-the-real-cost-of-downtime/",
+     0,
+     "traffic"
+    ],
+    [
+     "/austin-tx-1052/blog/your-office-manager-is-not-your-it-department-and-that-is-nobodys-fault/",
+     0,
+     "traffic"
+    ],
+    [
+     "/bothell-wa-1091/blog/how-cyber-insurance-requirements-are-changing-business-it-strategies-in-2026/",
+     0,
+     "traffic"
+    ],
+    [
+     "/sanmarcos-tx-1047/blog/client-spotlight-how-the-faust-hotel-stopped-firefighting-it/",
+     0,
+     "traffic"
+    ],
+    [
+     "/kenosha-wi-1018/blog/remote-work-is-permanent-is-your-it-infrastructure-built-to-support-it-securely/",
      0,
      "traffic"
     ]
@@ -2161,37 +1191,62 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:non-canonical-page-specified-as-canonical-one",
-   "issue": "Non-canonical page specified as canonical one",
-   "handler": "review",
-   "tier": "?",
-   "urls_affected": 1,
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (4 issue types): Canonical points to redirect (20); Broken redirect (102); Redirect loop (2); 3XX redirect in sitemap (6)",
+   "handler": "redirect-rules",
+   "tier": "skill pending",
+   "urls_affected": 130,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
    "examples": [
     [
-     "/boston-ma-1020/accounting-firm/",
+     "/sanantonio-tx-1098/managed-it-services-san-antonio/",
      0,
      "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:robots-txt-is-not-accessible",
-   "issue": "Robots.txt is not accessible",
-   "handler": "review",
-   "tier": "?",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Not classified in routes.yaml yet: decide the handler and tier there (note: not yet classified; rare on this roster)",
-   "examples": [
+    ],
     [
-     "/robots.txt",
+     "/boston-ma-1020/cybersecurity/",
+     0,
+     "traffic"
+    ],
+    [
+     "/burlington-nj-1230/lp/unified-communications/",
+     0,
+     "traffic"
+    ],
+    [
+     "/boston-ma-1020/industry/",
+     0,
+     "traffic"
+    ],
+    [
+     "/boston-ma-1020/compliance/",
+     0,
+     "traffic"
+    ],
+    [
+     "/burlington-nj-1230/lp/it-service-package/",
+     0,
+     "traffic"
+    ],
+    [
+     "/burlington-nj-1230/lp/it-support-service-in-burlington-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/burlington-nj-1230/lp/cybersecurity-service-in-gurlington-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/burlington-nj-1230/lp/need-productivity-applications-in-burlington-area/",
+     0,
+     "traffic"
+    ],
+    [
+     "/novasouth-va-1254/network-management/",
      0,
      "traffic"
     ]

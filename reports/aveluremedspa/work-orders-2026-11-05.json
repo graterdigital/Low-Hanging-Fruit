@@ -6,71 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links",
-   "issue": "Page has nofollow outgoing internal links",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 51,
-   "traffic_at_stake": 99,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/locations/creve-coeur/",
-     18,
-     "traffic"
-    ],
-    [
-     "/locations/rochester/",
-     14,
-     "traffic"
-    ],
-    [
-     "/treatments/ultherapy/",
-     12,
-     "traffic"
-    ],
-    [
-     "/locations/in-greenwood/",
-     12,
-     "traffic"
-    ],
-    [
-     "/locations/ocala/",
-     12,
-     "traffic"
-    ],
-    [
-     "/locations/waterford/",
-     9,
-     "traffic"
-    ],
-    [
-     "/locations/buffalo/",
-     9,
-     "traffic"
-    ],
-    [
-     "/locations/mi-novi/",
-     7,
-     "traffic"
-    ],
-    [
-     "/locations/mi-grand-rapids/",
-     2,
-     "traffic"
-    ],
-    [
-     "/treatments/laser-hair-removal/",
-     2,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:slow-page",
    "issue": "Slow page",
    "handler": "manual",
@@ -169,56 +104,6 @@
    "decider": "agency",
    "importance": "Warning",
    "source": "ahrefs"
-  },
-  {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
-   "id": "fix-meta:faqs-page-6-faqs-page-4-treatments-treat",
-   "issue": "Pages fix-meta routed to ['/faqs/page/6/', '/faqs/page/4/', '/treatments/', '/treatments/page/2/', '/treatments_category/facial-peels/', '/faqs/page/2/', '/faqs/page/5/', '/faqs/page/7/', '/faqs/page/8/', '/treatments_category/injectables/', '/treatments_category/lasers/', '/faqs/page/9/', '/faqs/page/3/', '/treatments_category/body/']",
-   "handler": "['/faqs/page/6/', '/faqs/page/4/', '/treatments/', '/treatments/page/2/', '/treatments_category/facial-peels/', '/faqs/page/2/', '/faqs/page/5/', '/faqs/page/7/', '/faqs/page/8/', '/treatments_category/injectables/', '/treatments_category/lasers/', '/faqs/page/9/', '/faqs/page/3/', '/treatments_category/body/']",
-   "tier": "FLAG",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
   },
   {
    "id": "issue:category-page-missing-itemlist-schema",
@@ -321,14 +206,121 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links (51); Page has nofollow outgoing internal links  (non-indexable pages) (6)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 57,
+   "traffic_at_stake": 99,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "examples": [
+    [
+     "/locations/creve-coeur/",
+     18,
+     "traffic"
+    ],
+    [
+     "/locations/rochester/",
+     14,
+     "traffic"
+    ],
+    [
+     "/treatments/ultherapy/",
+     12,
+     "traffic"
+    ],
+    [
+     "/locations/in-greenwood/",
+     12,
+     "traffic"
+    ],
+    [
+     "/locations/ocala/",
+     12,
+     "traffic"
+    ],
+    [
+     "/locations/waterford/",
+     9,
+     "traffic"
+    ],
+    [
+     "/locations/buffalo/",
+     9,
+     "traffic"
+    ],
+    [
+     "/locations/mi-novi/",
+     7,
+     "traffic"
+    ],
+    [
+     "/locations/mi-grand-rapids/",
+     2,
+     "traffic"
+    ],
+    [
+     "/treatments/laser-hair-removal/",
+     2,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (10)",
    "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 10,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
    "examples": [
     [
      "/faqs/page/6/",
@@ -386,59 +378,14 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
-   "examples": [
-    [
-     "/treatments/?e-filter-fac3b0a-treatments_category=body",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/uncategorized/",
-     0,
-     "traffic"
-    ],
-    [
-     "/treatments/?e-filter-fac3b0a-treatments_category=facial-peels",
-     0,
-     "traffic"
-    ],
-    [
-     "/treatments/?e-page-fac3b0a=2",
-     0,
-     "traffic"
-    ],
-    [
-     "/treatments/?e-filter-fac3b0a-treatments_category=injectables",
-     0,
-     "traffic"
-    ],
-    [
-     "/treatments/?e-filter-fac3b0a-treatments_category=lasers",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
    "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 1,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
    "examples": [
     [
      "/",

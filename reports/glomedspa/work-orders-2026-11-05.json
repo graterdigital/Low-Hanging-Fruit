@@ -201,56 +201,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
-   "id": "fix-meta:category-injectables-author-infoeagleeye",
-   "issue": "Pages fix-meta routed to ['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/']",
-   "handler": "['/category/injectables/', '/author/infoeagleeyemarketinginc-com/', '/category/skin/', '/category/pdo-threads/', '/category/blog/', '/category/dlm-faq/', '/category/chemical-peels/', '/author/devgraterdigital-com/', '/category/lasers/', '/category/microneedling/']",
-   "tier": "FLAG",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:faq-page-missing-faqpage-schema",
    "issue": "FAQ page missing FAQPage schema",
    "handler": "schema-check",
@@ -291,14 +241,121 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-outgoing-internal-links-nonindexable",
-   "issue": "Page has nofollow outgoing internal links  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 6,
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags missing (10); X (Twitter) card missing (10)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 20,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/category/injectables/",
+     0,
+     "traffic"
+    ],
+    [
+     "/author/infoeagleeyemarketinginc-com/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/skin/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/pdo-threads/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/blog/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/dlm-faq/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/chemical-peels/",
+     0,
+     "traffic"
+    ],
+    [
+     "/author/devgraterdigital-com/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/lasers/",
+     0,
+     "traffic"
+    ],
+    [
+     "/category/microneedling/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:nofollow-audit",
+   "issue": "Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow incoming internal links only  (non-indexable pages) (4); Page has nofollow outgoing internal links  (non-indexable pages) (6)",
+   "handler": "nofollow-audit",
+   "tier": "skill pending",
+   "urls_affected": 10,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
    "examples": [
     [
      "/author/infoeagleeyemarketinginc-com/page/3/",
@@ -311,17 +368,7 @@
      "traffic"
     ],
     [
-     "/author/infoeagleeyemarketinginc-com/page/2/",
-     0,
-     "traffic"
-    ],
-    [
      "/author/infoeagleeyemarketinginc-com/page/5/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/blog/page/2/",
      0,
      "traffic"
     ],
@@ -336,49 +383,14 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:page-has-nofollow-incoming-internal-links-only-nonindexable",
-   "issue": "Page has nofollow incoming internal links only  (non-indexable pages)",
-   "handler": "nofollow-audit",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 4,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `nofollow-audit` is planned but not built; until then: find what adds rel=nofollow to internal links (theme, plugin, editor habit); if systematic, one fix clears thousands (ruggeddepot 8k, miuraboiler 3k)",
-   "examples": [
-    [
-     "/author/infoeagleeyemarketinginc-com/page/3/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/blog/page/3/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/infoeagleeyemarketinginc-com/page/5/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/infoeagleeyemarketinginc-com/page/4/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (2 issue types): Indexable page not in sitemap (2); Sitemap in the wrong format (1)",
    "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 2,
+   "tier": "skill pending",
+   "urls_affected": 3,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
    "examples": [
     [
      "/author/infoeagleeyemarketinginc-com/",
@@ -387,162 +399,12 @@
     ],
     [
      "/author/devgraterdigital-com/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:sitemap-in-the-wrong-format",
-   "issue": "Sitemap in the wrong format",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/sitemap.rss",
      0,
      "traffic"
     ]
    ],
    "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-missing",
-   "issue": "Open Graph tags missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 10,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/category/injectables/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/infoeagleeyemarketinginc-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/skin/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/pdo-threads/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/dlm-faq/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/chemical-peels/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/devgraterdigital-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/lasers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/microneedling/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:x-twitter-card-missing",
-   "issue": "X (Twitter) card missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 10,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/category/injectables/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/infoeagleeyemarketinginc-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/skin/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/pdo-threads/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/blog/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/dlm-faq/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/chemical-peels/",
-     0,
-     "traffic"
-    ],
-    [
-     "/author/devgraterdigital-com/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/lasers/",
-     0,
-     "traffic"
-    ],
-    [
-     "/category/microneedling/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
    "source": "ahrefs"
   }
  ],

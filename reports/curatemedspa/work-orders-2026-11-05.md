@@ -1,39 +1,29 @@
 # Work orders: curatemedspa.com
 
-Ahrefs Site Audit project 9704524 · crawl 2026-11-05 · health 99 · 35 active issue types → 16 work orders (1 decisions, 9 waiting on a skill not yet built) · generated 2026-11-09
+Ahrefs Site Audit project 9704524 · crawl 2026-11-05 · health 99 · 35 active issue types → 14 work orders (1 decisions, 5 waiting on a skill not yet built) · generated 2026-11-09
 
 Everything here needs a human: a template edit, a hosting ticket, a content call, or a client decision. Skills handle the rest and never show up on this list. Rows and counts refresh from each crawl; a row disappears (sheet: `cleared <date>`) when the crawl no longer shows the issue. Decisions go in the sheet's `decision_or_note` as `decision: …` and `--decisions` copies them into `clients/<slug>.yaml` → `rules.decisions`.
 
 | # | item | goes to | tier | URLs | traffic | decider | what to do |
 |---|---|---|---|---|---|---|---|
-| 1 | Organization schema missing or incomplete | schema-fix | APPROVE (skill pending) | 1 | 128 | agency | Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file). |
-| 2 | Slow page | manual | FLAG | 10 | 68 | agency | Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket. |
-| 3 | Page has nofollow outgoing internal links | nofollow-audit | APPROVE (skill pending) | 9 | 61 | agency | Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting. |
-| 4 | Open Graph tags incomplete | fix-social-tags | AUTO (skill pending) | 11 | 21 | agency | Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
-| 5 | Slow server response for AI crawlers | hosting/cache | FLAG | 2 | 6 | agency | TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM. |
-| 6 | Pages hidden from Google (noindex/nofollow): confirm intent | indexation-review | decide | 1 | 0 | client | Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page. |
-| 7 | H1 tag missing or empty | manual | FLAG | 6 | 0 | agency | Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply. |
-| 8 | H1 tag missing or empty  (non-indexable pages) | manual | FLAG | 2 | 0 | agency | Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply. |
-| 9 | Pages fix-meta routed to ['/'] | ['/'] | FLAG | 1 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
-| 10 | Multiple title tags | manual | FLAG | 1 | 0 | agency | Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting. |
-| 11 | Canonical from HTTP to HTTPS | redirect-rules | APPROVE (skill pending) | 7 | 0 | agency | Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions |
-| 12 | 302 redirect | redirect-rules | APPROVE (skill pending) | 5 | 0 | agency | Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions |
-| 13 | Page has nofollow outgoing internal links  (non-indexable pages) | nofollow-audit | APPROVE (skill pending) | 2 | 0 | agency | Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting. |
-| 14 | HTTPS to HTTP redirect | redirect-rules | APPROVE (skill pending) | 1 | 0 | agency | Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions |
-| 15 | Indexable page not in sitemap | indexation-review | APPROVE (skill pending) | 1 | 0 | agency | Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin. |
-| 16 | X (Twitter) card missing | fix-social-tags | AUTO (skill pending) | 1 | 0 | agency | Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
+| 1 | Slow page | manual | FLAG | 10 | 68 | agency | Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traffic and the host's APM; deep pagination = cold cache. Hosting or theme ticket. |
+| 2 | Slow server response for AI crawlers | hosting/cache | FLAG | 2 | 6 | agency | TTFB. Check which pages: deep pagination = cold cache (raise products-per-page); single pages at 5 s+ = PHP, run the host's APM. |
+| 3 | Pages hidden from Google (noindex/nofollow): confirm intent | indexation-review | decide | 1 | 0 | client | Confirm each hidden page is meant to be (legal pages, thank-you pages and press releases usually are); record the answer in rules.decisions. Ahrefs issues folded in: Noindex follow page, Noindex page. |
+| 4 | H1 tag missing or empty | manual | FLAG | 6 | 0 | agency | Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply. |
+| 5 | H1 tag missing or empty  (non-indexable pages) | manual | FLAG | 2 | 0 | agency | Template edit: add an <h1> to the archive/post-type template the triage names; diff goes in changes/<provider>/<slug>/ for a human to apply. |
+| 6 | Pages fix-meta routed to homepage title | homepage title | FLAG | 1 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 7 | Multiple title tags | manual | FLAG | 1 | 0 | agency | Two things print <title>: find the second (theme header, builder, plugin) once per site and remove it; usually one setting. |
+| 8 | Pages fix-meta routed to noindex | noindex | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 9 | Pages fix-meta routed to non-200 | non-200 | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 10 | Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1) | schema-fix | skill pending | 1 | 128 | agency | Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file). |
+| 11 | Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links (9); Page has nofollow outgoing internal links  (non-indexable pages) (2) | nofollow-audit | skill pending | 11 | 61 | agency | Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting. |
+| 12 | Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags incomplete (11); X (Twitter) card missing (1) | fix-social-tags | skill pending | 12 | 21 | agency | Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
+| 13 | Waiting on skill `redirect-rules` (3 issue types): Canonical from HTTP to HTTPS (7); 302 redirect (5); HTTPS to HTTP redirect (1) | redirect-rules | skill pending | 13 | 0 | agency | Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions |
+| 14 | Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (1) | indexation-review | skill pending | 1 | 0 | agency | Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin. |
 
 ## Per item
 
-### 1. Organization schema missing or incomplete
-
-`issue:organization-schema-missing-or-incomplete` · schema-fix · APPROVE (skill pending) · decider: agency
-
-Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).
-
-- `/` (128 traffic)
-
-### 2. Slow page
+### 1. Slow page
 
 `issue:slow-page` · manual · FLAG · decider: agency
 
@@ -50,41 +40,7 @@ Not page weight if HTML is small: run PageSpeed/WebPageTest on the top 3 by traf
 - `/anti-aging-2025/`
 - `/botox/`
 
-### 3. Page has nofollow outgoing internal links
-
-`issue:page-has-nofollow-outgoing-internal-links` · nofollow-audit · APPROVE (skill pending) · decider: agency
-
-Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.
-
-- `/dermal-fillers/` (61 traffic)
-- `/privacy-policy/`
-- `/blog/`
-- `/services/vitamin-injections/`
-- `/services/cooltone/`
-- `/services/dermal-fillers/`
-- `/services/pdo-threads/`
-- `/services/iv-therapy/`
-- `/pdo-threads/`
-
-### 4. Open Graph tags incomplete
-
-`issue:open-graph-tags-incomplete` · fix-social-tags · AUTO (skill pending) · decider: agency
-
-Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
-
-- `/locations/murfreesboro/` (13 traffic)
-- `/treatment-for-excessive-sweating-in-2025/` (5 traffic)
-- `/locations/nashville/` (3 traffic)
-- `/privacy-policy/`
-- `/locations/ooltewah/`
-- `/blog/`
-- `/financing/`
-- `/the-reserve`
-- `/locations/knoxville/`
-- `/terms-conditions/`
-- … 1 more in Ahrefs
-
-### 5. Slow server response for AI crawlers
+### 2. Slow server response for AI crawlers
 
 `issue:slow-server-response-for-ai-crawlers` · hosting/cache · FLAG · decider: agency
 
@@ -93,7 +49,7 @@ TTFB. Check which pages: deep pagination = cold cache (raise products-per-page);
 - `/iv-hydration-therapy/` (6 traffic)
 - `/skin-tightening-2025/`
 
-### 6. Pages hidden from Google (noindex/nofollow): confirm intent
+### 3. Pages hidden from Google (noindex/nofollow): confirm intent
 
 `issue:hidden-pages-confirm-intent` · indexation-review · decide · decider: client
 
@@ -101,7 +57,7 @@ Confirm each hidden page is meant to be (legal pages, thank-you pages and press 
 
 - `/tag/weekly-newsletter/`
 
-### 7. H1 tag missing or empty
+### 4. H1 tag missing or empty
 
 `issue:h1-tag-missing-or-empty` · manual · FLAG · decider: agency
 
@@ -114,7 +70,7 @@ Template edit: add an <h1> to the archive/post-type template the triage names; d
 - `/pdo-threads/`
 - `/locations/chattanooga/`
 
-### 8. H1 tag missing or empty  (non-indexable pages)
+### 5. H1 tag missing or empty  (non-indexable pages)
 
 `issue:h1-tag-missing-or-empty-nonindexable` · manual · FLAG · decider: agency
 
@@ -123,15 +79,15 @@ Template edit: add an <h1> to the archive/post-type template the triage names; d
 - `/terms-conditions/`
 - `/tag/weekly-newsletter/`
 
-### 9. Pages fix-meta routed to ['/']
+### 6. Pages fix-meta routed to homepage title
 
-`fix-meta:` · ['/'] · FLAG · decider: agency · source: meta-2026-10-29.json
+`fix-meta:homepage-title` · homepage title · FLAG · decider: agency · source: meta-2026-10-29.json
 
 See the fix-meta report's 'Routed elsewhere' section.
 
-- `homepage title`
+- `/`
 
-### 10. Multiple title tags
+### 7. Multiple title tags
 
 `issue:multiple-title-tags` · manual · FLAG · decider: agency
 
@@ -139,11 +95,68 @@ Two things print <title>: find the second (theme header, builder, plugin) once p
 
 - `/financing/`
 
-### 11. Canonical from HTTP to HTTPS
+### 8. Pages fix-meta routed to noindex
 
-`issue:canonical-from-http-to-https` · redirect-rules · APPROVE (skill pending) · decider: agency
+`fix-meta:noindex` · noindex · FLAG · decider: agency · source: meta-2026-10-29.json
 
-Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions
+See the fix-meta report's 'Routed elsewhere' section.
+
+
+### 9. Pages fix-meta routed to non-200
+
+`fix-meta:non-200` · non-200 · FLAG · decider: agency · source: meta-2026-10-29.json
+
+See the fix-meta report's 'Routed elsewhere' section.
+
+
+### 10. Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)
+
+`pending:schema-fix` · schema-fix · skill pending · decider: agency
+
+Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).
+
+- `/` (128 traffic)
+
+### 11. Waiting on skill `nofollow-audit` (2 issue types): Page has nofollow outgoing internal links (9); Page has nofollow outgoing internal links  (non-indexable pages) (2)
+
+`pending:nofollow-audit` · nofollow-audit · skill pending · decider: agency
+
+Nothing by hand unless urgent: `nofollow-audit` is queued in the plan and this row disappears when it ships. Until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.
+
+- `/dermal-fillers/` (61 traffic)
+- `/privacy-policy/`
+- `/blog/`
+- `/services/vitamin-injections/`
+- `/services/cooltone/`
+- `/services/dermal-fillers/`
+- `/services/pdo-threads/`
+- `/services/iv-therapy/`
+- `/pdo-threads/`
+- … 2 more in Ahrefs
+
+### 12. Waiting on skill `fix-social-tags` (2 issue types): Open Graph tags incomplete (11); X (Twitter) card missing (1)
+
+`pending:fix-social-tags` · fix-social-tags · skill pending · decider: agency
+
+Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
+
+- `/locations/murfreesboro/` (13 traffic)
+- `/treatment-for-excessive-sweating-in-2025/` (5 traffic)
+- `/locations/nashville/` (3 traffic)
+- `/privacy-policy/`
+- `/locations/ooltewah/`
+- `/blog/`
+- `/financing/`
+- `/the-reserve`
+- `/locations/knoxville/`
+- `/terms-conditions/`
+- … 2 more in Ahrefs
+
+### 13. Waiting on skill `redirect-rules` (3 issue types): Canonical from HTTP to HTTPS (7); 302 redirect (5); HTTPS to HTTP redirect (1)
+
+`pending:redirect-rules` · redirect-rules · skill pending · decider: agency
+
+Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions
 
 - `/dermal-fillers/`
 - `/contact/`
@@ -152,49 +165,13 @@ Skill `redirect-rules` is planned but not built; until then: fix the rule itself
 - `/sculptra/`
 - `/botox/`
 - `/terms-conditions/`
+- … 6 more in Ahrefs
 
-### 12. 302 redirect
+### 14. Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (1)
 
-`issue:302-redirect` · redirect-rules · APPROVE (skill pending) · decider: agency
+`pending:indexation-review` · indexation-review · skill pending · decider: agency
 
-Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions
-
-- `/the-reserve/button/kGsxVn6q2byOry4L6MmhemRaCrG7ManT`
-- `/the-reserve/button/lzcaWCTg8PzTOmn61hzMK7NRlzRUwn8s`
-- `/the-reserve/button/dxlw6rQl2S3ys4HISh7cz8sSTh4rPfEL`
-- `/the-reserve/button/Xrgf82x5KKylCzDZXia51t2t7Mbry1Ci`
-- `/the-reserve/button/kSFwFAqmAAx8vxHUhFgU4bDCV5z1AkyD`
-
-### 13. Page has nofollow outgoing internal links  (non-indexable pages)
-
-`issue:page-has-nofollow-outgoing-internal-links-nonindexable` · nofollow-audit · APPROVE (skill pending) · decider: agency
-
-Skill `nofollow-audit` is planned but not built; until then: Find what adds rel=nofollow (theme/plugin option vs editor habit). Two legal pages = fine; thousands = one setting.
-
-- `/dermal-fillers/`
-- `/privacy-policy/`
-
-### 14. HTTPS to HTTP redirect
-
-`issue:https-to-http-redirect` · redirect-rules · APPROVE (skill pending) · decider: agency
-
-Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions
-
-- `/injectable-services/?utm_source=chatgpt.com`
-
-### 15. Indexable page not in sitemap
-
-`issue:indexable-page-not-in-sitemap` · indexation-review · APPROVE (skill pending) · decider: agency
-
-Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.
-
-- `/the-reserve`
-
-### 16. X (Twitter) card missing
-
-`issue:x-twitter-card-missing` · fix-social-tags · AUTO (skill pending) · decider: agency
-
-Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
+Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.
 
 - `/the-reserve`
 

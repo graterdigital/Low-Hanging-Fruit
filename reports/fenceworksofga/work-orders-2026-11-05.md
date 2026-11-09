@@ -1,30 +1,23 @@
 # Work orders: fenceworksofga.com
 
-Ahrefs Site Audit project 9799850 · crawl 2026-11-05 · health 98 · 19 active issue types → 7 work orders (2 decisions, 2 waiting on a skill not yet built) · generated 2026-11-09
+Ahrefs Site Audit project 9799850 · crawl 2026-11-05 · health 98 · 19 active issue types → 8 work orders (2 decisions, 2 waiting on a skill not yet built) · generated 2026-11-09
 
 Everything here needs a human: a template edit, a hosting ticket, a content call, or a client decision. Skills handle the rest and never show up on this list. Rows and counts refresh from each crawl; a row disappears (sheet: `cleared <date>`) when the crawl no longer shows the issue. Decisions go in the sheet's `decision_or_note` as `decision: …` and `--decisions` copies them into `clients/<slug>.yaml` → `rules.decisions`.
 
 | # | item | goes to | tier | URLs | traffic | decider | what to do |
 |---|---|---|---|---|---|---|---|
-| 1 | Organization schema missing or incomplete | schema-fix | APPROVE (skill pending) | 1 | 679 | agency | Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file). |
-| 2 | Orphan page (has no incoming internal links) | indexation-review | decide | 5 | 0 | client | Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first. |
-| 3 | Links to redirect, skipped by fix-redirect-links: redirects to homepage | redirect-rules | decide | 1 | 0 | client | Each old URL needs a real redirect target (redirect-rules) or the link removed; GSC impressions decide the order. |
-| 4 | Pages fix-meta routed to [] | [] | FLAG | 3 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
-| 5 | Category page missing ItemList schema | schema-check | FLAG | 2 | 0 | agency | Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave. |
-| 6 | Pages fix-meta routed to ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/'] | ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/'] | FLAG | 1 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
-| 7 | Open Graph tags incomplete | fix-social-tags | AUTO (skill pending) | 36 | 0 | agency | Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
+| 1 | Orphan page (has no incoming internal links) | indexation-review | decide | 5 | 0 | client | Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catalog sites (mooringtech 4.7k) need a look at how the catalog is linked first. |
+| 2 | Links to redirect, skipped by fix-redirect-links: redirects to homepage | redirect-rules | decide | 1 | 0 | client | Each old URL needs a real redirect target (redirect-rules) or the link removed; GSC impressions decide the order. |
+| 3 | Category page missing ItemList schema | schema-check | FLAG | 2 | 0 | agency | Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_graph filter. Usually leave. |
+| 4 | Pages fix-meta routed to homepage title | homepage title | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 5 | Pages fix-meta routed to noindex | noindex | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 6 | Pages fix-meta routed to non-200 | non-200 | FLAG | 0 | 0 | agency | See the fix-meta report's 'Routed elsewhere' section. |
+| 7 | Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1) | schema-fix | skill pending | 1 | 679 | agency | Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file). |
+| 8 | Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (36) | fix-social-tags | skill pending | 36 | 0 | agency | Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap |
 
 ## Per item
 
-### 1. Organization schema missing or incomplete
-
-`issue:organization-schema-missing-or-incomplete` · schema-fix · APPROVE (skill pending) · decider: agency
-
-Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).
-
-- `/` (679 traffic)
-
-### 2. Orphan page (has no incoming internal links)
+### 1. Orphan page (has no incoming internal links)
 
 `issue:orphan-page-has-no-incoming-internal-links` · indexation-review · decide · decider: client
 
@@ -36,7 +29,7 @@ Per page: link it from somewhere relevant, noindex it, or merge/delete it. Catal
 - `/category/composite-fence/`
 - `/category/athletic-facilities/`
 
-### 3. Links to redirect, skipped by fix-redirect-links: redirects to homepage
+### 2. Links to redirect, skipped by fix-redirect-links: redirects to homepage
 
 `redirect-links:redirects-to-homepage` · redirect-rules · decide · decider: client · source: redirect-map-2026-10-29.json
 
@@ -44,17 +37,7 @@ Each old URL needs a real redirect target (redirect-rules) or the link removed; 
 
 - `/` (1 links)
 
-### 4. Pages fix-meta routed to []
-
-`fix-meta:` · [] · FLAG · decider: agency · source: meta-2026-10-29.json
-
-See the fix-meta report's 'Routed elsewhere' section.
-
-- `noindex`
-- `non-200`
-- `homepage title`
-
-### 5. Category page missing ItemList schema
+### 3. Category page missing ItemList schema
 
 `issue:category-page-missing-itemlist-schema` · schema-check · FLAG · decider: agency
 
@@ -63,19 +46,40 @@ Ahrefs preference, not a Google feature. Optional: ItemList via wpseo_schema_gra
 - `/category/picket-fence/`
 - `/category/farm-fences/`
 
-### 6. Pages fix-meta routed to ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/']
+### 4. Pages fix-meta routed to homepage title
 
-`fix-meta:category-chain-link-fence-category-ranch` · ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/'] · FLAG · decider: agency · source: meta-2026-10-29.json
+`fix-meta:homepage-title` · homepage title · FLAG · decider: agency · source: meta-2026-10-29.json
 
 See the fix-meta report's 'Routed elsewhere' section.
 
-- `archive`
 
-### 7. Open Graph tags incomplete
+### 5. Pages fix-meta routed to noindex
 
-`issue:open-graph-tags-incomplete` · fix-social-tags · AUTO (skill pending) · decider: agency
+`fix-meta:noindex` · noindex · FLAG · decider: agency · source: meta-2026-10-29.json
 
-Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
+See the fix-meta report's 'Routed elsewhere' section.
+
+
+### 6. Pages fix-meta routed to non-200
+
+`fix-meta:non-200` · non-200 · FLAG · decider: agency · source: meta-2026-10-29.json
+
+See the fix-meta report's 'Routed elsewhere' section.
+
+
+### 7. Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)
+
+`pending:schema-fix` · schema-fix · skill pending · decider: agency
+
+Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).
+
+- `/` (679 traffic)
+
+### 8. Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (36)
+
+`pending:fix-social-tags` · fix-social-tags · skill pending · decider: agency
+
+Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap
 
 - `/category/chain-link-fence/`
 - `/category/wooden-privacy-fence/page/11/`

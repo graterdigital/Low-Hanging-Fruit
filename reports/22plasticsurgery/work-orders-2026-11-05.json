@@ -71,91 +71,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 126,
-   "traffic_at_stake": 630,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/",
-     151,
-     "traffic"
-    ],
-    [
-     "/video-resources/",
-     90,
-     "traffic"
-    ],
-    [
-     "/breast-augmentation-gone-wrong/",
-     74,
-     "traffic"
-    ],
-    [
-     "/gallery/",
-     68,
-     "traffic"
-    ],
-    [
-     "/doctor/dr-katherine-vandenberg/",
-     57,
-     "traffic"
-    ],
-    [
-     "/consultation-and-pre-op-prep/",
-     37,
-     "traffic"
-    ],
-    [
-     "/blog/",
-     29,
-     "traffic"
-    ],
-    [
-     "/get-a-jump-start-on-your-summer-body/",
-     23,
-     "traffic"
-    ],
-    [
-     "/what-is-vaginal-rejuvenation-surgery-a-comprehensive-beginners-guide/",
-     18,
-     "traffic"
-    ],
-    [
-     "/renuvion/",
-     18,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 151,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     151,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:slow-page",
    "issue": "Slow page",
    "handler": "manual",
@@ -263,111 +178,6 @@
    ],
    "decider": "agency",
    "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 39,
-   "traffic_at_stake": 79,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
-   "examples": [
-    [
-     "/doctor/dr-katherine-vandenberg/",
-     57,
-     "traffic"
-    ],
-    [
-     "/gallery-category/breast-lift/",
-     18,
-     "traffic"
-    ],
-    [
-     "/gallery-category/mommy-makeover/",
-     3,
-     "traffic"
-    ],
-    [
-     "/gallery-category/breast-augmentation-revision/",
-     1,
-     "traffic"
-    ],
-    [
-     "/gallery-category/blepharoplasty-gallery/",
-     0,
-     "traffic"
-    ],
-    [
-     "/gallery-category/breast-reduction-gallery/",
-     0,
-     "traffic"
-    ],
-    [
-     "/gallery-category/labiaplasty/",
-     0,
-     "traffic"
-    ],
-    [
-     "/gallery-category/neck-lift/",
-     0,
-     "traffic"
-    ],
-    [
-     "/gallery-category/tummy-tuck/",
-     0,
-     "traffic"
-    ],
-    [
-     "/gallery-category/brachioplasty-gallery/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:3xx-page-receives-organic-traffic",
-   "issue": "3XX page receives organic traffic",
-   "handler": "redirect-rules",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 18,
-   "traffic_note": "",
-   "what_to_do": "Skill `redirect-rules` is planned but not built; until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
-   "examples": [
-    [
-     "/gallery",
-     18,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-in-multiple-sitemaps",
-   "issue": "Page in multiple sitemaps",
-   "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 3,
-   "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: SEO-plugin sitemap and index settings; noindex is usually intent, so confirm before changing; orphans get a link/noindex/merge decision",
-   "examples": [
-    [
-     "/gender-confirming-top-surgery/",
-     3,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
    "source": "ahrefs"
   },
   {
@@ -486,56 +296,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
-   "id": "fix-meta:gallery-category-gynecomastia-gallery-ca",
-   "issue": "Pages fix-meta routed to ['/gallery-category/gynecomastia/', '/gallery-category/neck-liposuction/', '/gallery-category/facial-feminization/', '/gallery-category/facial-implants/', '/gallery-category/lip-surgery/', '/gallery-category/laser-resurfacing/', '/blog/', '/gallery-category/breast-augmentation-revision/']",
-   "handler": "['/gallery-category/gynecomastia/', '/gallery-category/neck-liposuction/', '/gallery-category/facial-feminization/', '/gallery-category/facial-implants/', '/gallery-category/lip-surgery/', '/gallery-category/laser-resurfacing/', '/blog/', '/gallery-category/breast-augmentation-revision/']",
-   "tier": "FLAG",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:faq-page-missing-faqpage-schema",
    "issue": "FAQ page missing FAQPage schema",
    "handler": "schema-check",
@@ -556,17 +316,189 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:structured-data-has-google-rich-results-validation-error",
-   "issue": "Structured data has Google rich results validation error",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Organization from client file (name, logo, sameAs) via the SEO plugin; validation errors diagnosed per site, hand-coded blocks go manual",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (126)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 126,
+   "traffic_at_stake": 630,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
    "examples": [
     [
-     "/dr-katherine-vandenberg-bio/",
+     "/",
+     151,
+     "traffic"
+    ],
+    [
+     "/video-resources/",
+     90,
+     "traffic"
+    ],
+    [
+     "/breast-augmentation-gone-wrong/",
+     74,
+     "traffic"
+    ],
+    [
+     "/gallery/",
+     68,
+     "traffic"
+    ],
+    [
+     "/doctor/dr-katherine-vandenberg/",
+     57,
+     "traffic"
+    ],
+    [
+     "/consultation-and-pre-op-prep/",
+     37,
+     "traffic"
+    ],
+    [
+     "/blog/",
+     29,
+     "traffic"
+    ],
+    [
+     "/get-a-jump-start-on-your-summer-body/",
+     23,
+     "traffic"
+    ],
+    [
+     "/what-is-vaginal-rejuvenation-surgery-a-comprehensive-beginners-guide/",
+     18,
+     "traffic"
+    ],
+    [
+     "/renuvion/",
+     18,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (2 issue types): Organization schema missing or incomplete (1); Structured data has Google rich results validation error (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 2,
+   "traffic_at_stake": 151,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     151,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (2 issue types): Indexable page not in sitemap (39); Page in multiple sitemaps (1)",
+   "handler": "indexation-review",
+   "tier": "skill pending",
+   "urls_affected": 40,
+   "traffic_at_stake": 79,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "examples": [
+    [
+     "/doctor/dr-katherine-vandenberg/",
+     57,
+     "traffic"
+    ],
+    [
+     "/gallery-category/breast-lift/",
+     18,
+     "traffic"
+    ],
+    [
+     "/gallery-category/mommy-makeover/",
+     3,
+     "traffic"
+    ],
+    [
+     "/gallery-category/breast-augmentation-revision/",
+     1,
+     "traffic"
+    ],
+    [
+     "/gallery-category/blepharoplasty-gallery/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/breast-reduction-gallery/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/labiaplasty/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/neck-lift/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/tummy-tuck/",
+     0,
+     "traffic"
+    ],
+    [
+     "/gallery-category/brachioplasty-gallery/",
      0,
      "traffic"
     ]
@@ -576,18 +508,18 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
+   "id": "pending:redirect-rules",
+   "issue": "Waiting on skill `redirect-rules` (1 issue type): 3XX page receives organic traffic (1)",
+   "handler": "redirect-rules",
+   "tier": "skill pending",
    "urls_affected": 1,
-   "traffic_at_stake": 0,
+   "traffic_at_stake": 18,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "what_to_do": "Nothing by hand unless urgent: `redirect-rules` is queued in the plan and this row disappears when it ships. Until then: fix the rule itself in the redirect plugin: collapse chains, 302→301, retarget loops and homepage dumps, chase 404s that still get impressions",
    "examples": [
     [
-     "/artas-hair-restoration/",
-     0,
+     "/gallery",
+     18,
      "traffic"
     ]
    ],
@@ -596,37 +528,17 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (3 issue types): 404 page (1); 4XX page (1); Page has links to broken page (1)",
    "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 1,
+   "tier": "skill pending",
+   "urls_affected": 3,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
    "examples": [
     [
      "/artas-hair-restoration/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/22-plastic-surgery-salt-lake-city/",
      0,
      "traffic"
     ]

@@ -6,26 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:organization-schema-missing-or-incomplete",
-   "issue": "Organization schema missing or incomplete",
-   "handler": "schema-fix",
-   "tier": "APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 679,
-   "traffic_note": "",
-   "what_to_do": "Skill `schema-fix` is planned but not built; until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
-   "examples": [
-    [
-     "/",
-     679,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:orphan-page-has-no-incoming-internal-links",
    "issue": "Orphan page (has no incoming internal links)",
    "handler": "indexation-review",
@@ -86,36 +66,6 @@
    "source": "redirect-map-2026-10-29.json"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 3,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:category-page-missing-itemlist-schema",
    "issue": "Category page missing ItemList schema",
    "handler": "schema-check",
@@ -141,34 +91,76 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:category-chain-link-fence-category-ranch",
-   "issue": "Pages fix-meta routed to ['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/']",
-   "handler": "['/category/chain-link-fence/', '/category/ranch-rail-split-rail-fence/', '/category/chain-link-fence/page/2/', '/category/cages-enclosures/', '/category/commercial-fences-and-gates/', '/category/steel-aluminum-fence/page/2/', '/category/gates-and-entries/', '/category/temporary-fencing/', '/category/farm-fences/', '/category/steel-aluminum-fence/', '/category/horizontal-modern/', '/category/composite-fence/', '/category/athletic-facilities/', '/category/commercial-gates/']",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
    "tier": "FLAG",
-   "urls_affected": 1,
+   "urls_affected": 0,
    "traffic_at_stake": 0,
    "traffic_note": "",
    "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ]
-   ],
+   "examples": [],
    "decider": "agency",
    "importance": "",
    "source": "meta-2026-10-29.json"
   },
   {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:schema-fix",
+   "issue": "Waiting on skill `schema-fix` (1 issue type): Organization schema missing or incomplete (1)",
+   "handler": "schema-fix",
+   "tier": "skill pending",
+   "urls_affected": 1,
+   "traffic_at_stake": 679,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `schema-fix` is queued in the plan and this row disappears when it ships. Until then: Fill Organization in the SEO plugin: name, logo, sameAs, contact (schema-fix will do this from the client file).",
+   "examples": [
+    [
+     "/",
+     679,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Notice",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (1 issue type): Open Graph tags incomplete (36)",
    "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 36,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
    "examples": [
     [
      "/category/chain-link-fence/",

@@ -6,96 +6,6 @@
  "generated": "2026-11-09",
  "rows": [
   {
-   "id": "issue:page-has-links-to-broken-page",
-   "issue": "Page has links to broken page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 161,
-   "traffic_at_stake": 1468,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/chapter-13-calculator/",
-     407,
-     "traffic"
-    ],
-    [
-     "/athens-truck-accident-lawyer/",
-     225,
-     "traffic"
-    ],
-    [
-     "/personal-injury/sr13-form/",
-     106,
-     "traffic"
-    ],
-    [
-     "/bankruptcy/chapter-7/",
-     80,
-     "traffic"
-    ],
-    [
-     "/buford-personal-injury-lawyers/",
-     80,
-     "traffic"
-    ],
-    [
-     "/personal-injury/georgia-car-accident-lawyer/",
-     60,
-     "traffic"
-    ],
-    [
-     "/bankruptcy/chapter-13/",
-     58,
-     "traffic"
-    ],
-    [
-     "/duluth-personal-injury-lawyer/",
-     49,
-     "traffic"
-    ],
-    [
-     "/athens-dog-bite-lawyer/",
-     44,
-     "traffic"
-    ],
-    [
-     "/bankruptcy/",
-     44,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:x-twitter-card-missing",
-   "issue": "X (Twitter) card missing",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 2,
-   "traffic_at_stake": 203,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/",
-     203,
-     "traffic"
-    ],
-    [
-     "/resources/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
    "id": "issue:structured-data-has-schema-org-validation-error",
    "issue": "Structured data has schema.org validation error",
    "handler": "schema-fix",
@@ -356,41 +266,6 @@
    "source": "ahrefs"
   },
   {
-   "id": "fix-meta:",
-   "issue": "Pages fix-meta routed to []",
-   "handler": "[]",
-   "tier": "FLAG",
-   "urls_affected": 4,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
-   "examples": [
-    [
-     "archive",
-     0,
-     ""
-    ],
-    [
-     "noindex",
-     0,
-     ""
-    ],
-    [
-     "non-200",
-     0,
-     ""
-    ],
-    [
-     "homepage title",
-     0,
-     ""
-    ]
-   ],
-   "decider": "agency",
-   "importance": "",
-   "source": "meta-2026-10-29.json"
-  },
-  {
    "id": "issue:h1-tag-missing-or-empty-nonindexable",
    "issue": "H1 tag missing or empty  (non-indexable pages)",
    "handler": "manual",
@@ -411,14 +286,146 @@
    "source": "ahrefs"
   },
   {
-   "id": "issue:indexable-page-not-in-sitemap",
-   "issue": "Indexable page not in sitemap",
+   "id": "fix-meta:homepage-title",
+   "issue": "Pages fix-meta routed to homepage title",
+   "handler": "homepage title",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:noindex",
+   "issue": "Pages fix-meta routed to noindex",
+   "handler": "noindex",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "fix-meta:non-200",
+   "issue": "Pages fix-meta routed to non-200",
+   "handler": "non-200",
+   "tier": "FLAG",
+   "urls_affected": 0,
+   "traffic_at_stake": 0,
+   "traffic_note": "",
+   "what_to_do": "See the fix-meta report's 'Routed elsewhere' section.",
+   "examples": [],
+   "decider": "agency",
+   "importance": "",
+   "source": "meta-2026-10-29.json"
+  },
+  {
+   "id": "pending:fix-broken-links",
+   "issue": "Waiting on skill `fix-broken-links` (4 issue types): Page has links to broken page (161); 404 page (1); 4XX page (1); Page has links to broken page  (non-indexable pages) (12)",
+   "handler": "fix-broken-links",
+   "tier": "skill pending",
+   "urls_affected": 175,
+   "traffic_at_stake": 1468,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-broken-links` is queued in the plan and this row disappears when it ships. Until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
+   "examples": [
+    [
+     "/chapter-13-calculator/",
+     407,
+     "traffic"
+    ],
+    [
+     "/athens-truck-accident-lawyer/",
+     225,
+     "traffic"
+    ],
+    [
+     "/personal-injury/sr13-form/",
+     106,
+     "traffic"
+    ],
+    [
+     "/bankruptcy/chapter-7/",
+     80,
+     "traffic"
+    ],
+    [
+     "/buford-personal-injury-lawyers/",
+     80,
+     "traffic"
+    ],
+    [
+     "/personal-injury/georgia-car-accident-lawyer/",
+     60,
+     "traffic"
+    ],
+    [
+     "/bankruptcy/chapter-13/",
+     58,
+     "traffic"
+    ],
+    [
+     "/duluth-personal-injury-lawyer/",
+     49,
+     "traffic"
+    ],
+    [
+     "/athens-dog-bite-lawyer/",
+     44,
+     "traffic"
+    ],
+    [
+     "/bankruptcy/",
+     44,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:fix-social-tags",
+   "issue": "Waiting on skill `fix-social-tags` (2 issue types): X (Twitter) card missing (2); Open Graph tags incomplete (5)",
+   "handler": "fix-social-tags",
+   "tier": "skill pending",
+   "urls_affected": 7,
+   "traffic_at_stake": 203,
+   "traffic_note": "",
+   "what_to_do": "Nothing by hand unless urgent: `fix-social-tags` is queued in the plan and this row disappears when it ships. Until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
+   "examples": [
+    [
+     "/",
+     203,
+     "traffic"
+    ],
+    [
+     "/resources/",
+     0,
+     "traffic"
+    ]
+   ],
+   "decider": "agency",
+   "importance": "Warning",
+   "source": "ahrefs"
+  },
+  {
+   "id": "pending:indexation-review",
+   "issue": "Waiting on skill `indexation-review` (1 issue type): Indexable page not in sitemap (5)",
    "handler": "indexation-review",
-   "tier": "APPROVE (skill pending)",
+   "tier": "skill pending",
    "urls_affected": 5,
    "traffic_at_stake": 0,
    "traffic_note": "",
-   "what_to_do": "Skill `indexation-review` is planned but not built; until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
+   "what_to_do": "Nothing by hand unless urgent: `indexation-review` is queued in the plan and this row disappears when it ships. Until then: If every URL is /page/N/ pagination, Yoast leaves those out by design: nothing to do (work-orders skips that case). Otherwise a sitemap setting in the SEO plugin.",
    "examples": [
     [
      "/personal-injury/georgia-sb68-tort-reform/",
@@ -448,151 +455,6 @@
    ],
    "decider": "agency",
    "importance": "Notice",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:open-graph-tags-incomplete",
-   "issue": "Open Graph tags incomplete",
-   "handler": "fix-social-tags",
-   "tier": "AUTO (skill pending)",
-   "urls_affected": 5,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-social-tags` is planned but not built; until then: one SEO-plugin setting per site: default social image and X cards on; roster-wide, cheap",
-   "examples": [
-    [
-     "/personal-injury/georgia-sb68-tort-reform/",
-     0,
-     "traffic"
-    ],
-    [
-     "/personal-injury/catastrophic-injury-attorney/",
-     0,
-     "traffic"
-    ],
-    [
-     "/personal-injury/atlanta-hit-and-run-attorney/",
-     0,
-     "traffic"
-    ],
-    [
-     "/personal-injury/atlanta-workers-compensation-attorneys/",
-     0,
-     "traffic"
-    ],
-    [
-     "/personal-injury/tuck-accident-attorney/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:page-has-links-to-broken-page-nonindexable",
-   "issue": "Page has links to broken page  (non-indexable pages)",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 12,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/Duluth-dui-accident-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Athens-pedestrian-accident-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Duluth-hit-and-run-accident-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Duluth-uber-accident%20lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Duluth-motorcycle-accident-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Duluth-truck-accident-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Duluth-spinal-cord-injury-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Athens-dog-bite-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/Athens-wrongful-death-lawyer/",
-     0,
-     "traffic"
-    ],
-    [
-     "/bankruptcy/bankruptcy-claim/bankruptcy-claim-thanks/",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Warning",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:404-page",
-   "issue": "404 page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
-   "source": "ahrefs"
-  },
-  {
-   "id": "issue:4xx-page",
-   "issue": "4XX page",
-   "handler": "fix-broken-links",
-   "tier": "AUTO/APPROVE (skill pending)",
-   "urls_affected": 1,
-   "traffic_at_stake": 0,
-   "traffic_note": "",
-   "what_to_do": "Skill `fix-broken-links` is planned but not built; until then: sibling of fix-redirect-links: 404 target with an obvious replacement → rewrite (AUTO); otherwise unlink or pick a target (APPROVE)",
-   "examples": [
-    [
-     "/cdn-cgi/l/email-protection",
-     0,
-     "traffic"
-    ]
-   ],
-   "decider": "agency",
-   "importance": "Error",
    "source": "ahrefs"
   }
  ],
