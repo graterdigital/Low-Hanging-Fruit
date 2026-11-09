@@ -592,7 +592,7 @@ WHAT_TO_DO.setdefault("Page size exceeds 2 MB crawl limit", "Run fix-images on t
 def push_sheet(client, data):
     """Upsert one row per active AI Discoverability check on the client's review sheet. Humans own status/note; counts and examples refresh each run."""
     sys.path.insert(0, str(HERE))
-    from review_sheets import gc, sheet_for
+    from review_sheets import gc, set_status_dropdown
     sid = ((client.get("review") or {}).get("alt_sheet_id") or "").strip()
     if not sid or sid == "unknown": return f"no review sheet (review.alt_sheet_id) for {client['slug']}"
     g = gc(); sh = g.open_by_key(sid)
@@ -603,6 +603,7 @@ def push_sheet(client, data):
     if head != SHEET_COLS:
         if not any(r for r in rows[1:] if any(r)): ws.clear(); ws.update("A1", [SHEET_COLS], value_input_option="RAW"); ws.freeze(rows=1); rows = [SHEET_COLS]
         else: return f"'{SHEET_TAB}' tab on {client['slug']} has unexpected columns {head}"
+    set_status_dropdown(ws, SHEET_COLS)   # status is a strict dropdown: open | fix | flag | done | cleared (dates live in `updated`)
     existing = {r[0]: (idx + 2, r + [""] * (len(SHEET_COLS) - len(r))) for idx, r in enumerate(rows[1:]) if r and r[0]}
     today = datetime.date.today().isoformat()
     active = {i["name"]: i for i in data["issues"] if (i.get("crawled") or 0) > 0}
@@ -614,13 +615,14 @@ def push_sheet(client, data):
         if (i.get("crawled") or 0) > 10: ex += f"\n… {i['crawled'] - 10} more in Ahrefs"
         if name in existing:
             r, old = existing[name]
-            status = old[7] if old[7] and not old[7].startswith("cleared") else "open"
+            status = old[7] if old[7] and not old[7].startswith("cleared") else "open"   # back from cleared if the check returned
+            if status.startswith("done "): status = "done"   # pre-dropdown rows carried the date in the status
             updates.append((r, [name, i.get("importance") or "", i.get("crawled") or 0, skill, tier, WHAT_TO_DO.get(name, ""), ex, status, old[8], f"{today} (crawl {data['crawl']})"]))
         else:
             appends.append([name, i.get("importance") or "", i.get("crawled") or 0, skill, tier, WHAT_TO_DO.get(name, ""), ex, "open", "", f"{today} (crawl {data['crawl']})"])
     for name, (r, old) in existing.items():
         if name not in active and old[7] and not old[7].startswith("cleared"):
-            updates.append((r, old[:2] + [0] + old[3:7] + [f"cleared {today}", old[8], f"{today} (crawl {data['crawl']})"]))
+            updates.append((r, old[:2] + [0] + old[3:7] + ["cleared", old[8], f"{today} (crawl {data['crawl']}; cleared)"]))
     for r, vals in updates: ws.update(range_name=f"A{r}:J{r}", values=[vals], value_input_option="RAW")
     if appends: ws.append_rows(appends, value_input_option="RAW")
     return f"{len(appends)} added, {len(updates)} updated on '{SHEET_TAB}' ({sh.url})"
@@ -707,8 +709,9 @@ def fix_from_sheet(client, api, args):
             if data is None: data = pull(client, api, sample_limit=5)
             urls = [p["url"] for p in data["per_issue"].get(name, [])]
             verdict, detail = fix_article_schema(client, urls, args.apply, args.target, parse_skips(note))
-            status = f"done {today}" if verdict == "done" else ("fix" if verdict in ("dry",) else f"{verdict}")
-            newnote = (note + " | " if note else "") + f"{today}: {detail}"
+            # status stays within the dropdown: done | fix (dry run, still queued) | flag (skip / failed / nothing to set: the verdict goes in the note)
+            status = "done" if verdict == "done" else ("fix" if verdict == "dry" else "flag")
+            newnote = (note + " | " if note else "") + f"{today}: {verdict}: {detail}"
         elif name in ROBOTS_CHECKS:
             status, newnote = "fix", (note + " | " if note else "") + f"{today}: robots.txt is applied by `--apply-robots` once the ai: policy is set; not run from the sheet"
         elif name == "Page size exceeds 2 MB crawl limit":

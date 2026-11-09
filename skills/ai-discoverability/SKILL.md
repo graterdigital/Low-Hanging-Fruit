@@ -99,11 +99,11 @@ Not WordPress, or `rules.do_not_touch` lists `robots.txt`: the script stops; han
 python scripts/ai_discoverability.py <slug> --sheet          # one client
 python scripts/ai_discoverability.py --all --sheet           # every client with review.alt_sheet_id
 ```
-Writes an `ai discoverability` tab on the client's existing review sheet (the same sheet `review_sheets.py` uses for alt text): one row per active check with `urls_flagged`, `route`, `tier`, `what_to_do`, up to 10 example URLs with traffic, and `status` / `note` for the humans. Reruns refresh counts and examples, keep `status` and `note`, and stamp `cleared <date>` on a check that no longer has URLs. Zero-count checks are not listed.
+Writes an `ai discoverability` tab on the client's existing review sheet (the same sheet `review_sheets.py` uses for alt text): one row per active check with `urls_flagged`, `route`, `tier`, `what_to_do`, up to 10 example URLs with traffic, and `status` / `note` for the humans. Reruns refresh counts and examples, keep `status` and `note`, and set `status` to `cleared` (date in `updated`) on a check that no longer has URLs. Zero-count checks are not listed.
 
 ## Fixing from the sheet, and keeping it running
 
-The tab is the queue. `status` values: `open` (new, nobody looked), `fix` (a human wants the automated fix), `flag` (no automated fix; routed), `done <date>`, `cleared <date>` (Ahrefs no longer flags it), or anything else you type (`skip`, `client declined`). Only `fix` triggers anything.
+The tab is the queue. `status` is a strict dropdown (nothing else can be typed): `open` (new, nobody looked), `fix` (a human wants the automated fix), `flag` (no automated fix, or a fix that could not run; the reason is in `note`), `done` (applied), `cleared` (Ahrefs no longer flags it). Dates are in `updated`. Only `fix` triggers anything; free text goes in `note`.
 
 ```
 python scripts/ai_discoverability.py <slug> --fix                     # dry: what each "fix" row would do
@@ -116,7 +116,7 @@ What `fix` does per check:
 - **Page size exceeds 2 MB** → note: run `fix-images`.
 - Everything else → status flips to `flag` with the route in the note. These are hand-offs by nature (hosting, theme, client assets).
 
-On apply the row becomes `done <date>` with the result counts in `note`; a dry run leaves it at `fix` and appends what it would do.
+On apply the row becomes `done` with the result counts in `note`; a dry run leaves it at `fix` and appends what it would do; a skip or failure flips it to `flag` with the reason in `note`.
 
 **Weekly cycle.** `scripts/ai_discoverability_cycle.py` runs, in order: `git pull`, `--all --sheet` (new checks land as `open`, gone ones get `cleared`), `--all --fix --apply --yes`, `--all` (roster doc), commit and push. Schedule it on the machine with the keys (one line, in the script's docstring: `schtasks /Create ... /SC WEEKLY /D MON /ST 07:10`). The human part of the loop is a weekly skim of the tabs: set `fix` or `skip` on the `open` rows, add `skip:` paths where needed. The cycle log is `changes/_cycle-ai-discoverability.log`.
 

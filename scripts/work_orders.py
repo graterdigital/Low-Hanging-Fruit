@@ -348,10 +348,11 @@ def open_tab(sh, cols, tab=TAB):
     return ws, vals
 
 def push_sheet(client, crawl, rows, health=None, skipped=(), n_issues=None):
-    from review_sheets import gc
+    from review_sheets import gc, set_status_dropdown
     sid = sheet_id(client)
     if not sid: return f"no review sheet (review.alt_sheet_id) for {client['slug']}; run review_sheets.py setup"
     g = gc(); sh = g.open_by_key(sid); ws, vals = open_tab(sh, COLS)
+    set_status_dropdown(ws, COLS)   # status is a strict dropdown: open | needs decision | in progress | done | won't fix
     existing = {r[0]: (i + 2, r + [""] * (len(COLS) - len(r))) for i, r in enumerate(vals[1:]) if r and r[0]}
     stamp = f"{today()} (crawl {crawl})"; updates, appends = [], []
     for r in sort_rows(rows):

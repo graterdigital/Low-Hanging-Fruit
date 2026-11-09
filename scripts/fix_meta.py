@@ -7,7 +7,7 @@
        (a human fills new_title / new_description and sets status to "approved")
     python scripts/fix_meta.py <slug> --fix                    # dry run of the approved rows on staging
     python scripts/fix_meta.py <slug> --fix --apply            # write them on staging
-    python scripts/fix_meta.py <slug> --fix --apply --target live [--yes]   # live; type the slug to confirm; rows become "applied <date>"
+    python scripts/fix_meta.py <slug> --fix --apply --target live [--yes]   # live; type the slug to confirm; rows become "applied" (date in `updated`)
     python scripts/fix_meta.py <slug> --rollback changes/<provider>/<slug>/backup/<stamp>-fix-meta-<target>.json [--apply]
 
 APPROVE tier, always: searchers read this text. The skill never truncates to a character count and never writes anything a
@@ -415,7 +415,7 @@ def sheet_rows_from_queue(q, data, today):
     return rows
 
 def open_meta_tab(client):
-    from review_sheets import gc
+    from review_sheets import gc, set_status_dropdown
     sid = ((client.get("review") or {}).get("alt_sheet_id") or "").strip()
     if not sid or sid == "unknown": sys.exit(f"no review sheet (review.alt_sheet_id) in clients/{client['slug']}.yaml; run: python scripts/review_sheets.py setup {client['slug']}")
     g = gc(); sh = g.open_by_key(sid)
@@ -426,6 +426,7 @@ def open_meta_tab(client):
     if head != SHEET_COLS:
         if not any(r for r in vals[1:] if any(r)): ws.clear(); ws.update("A1", [SHEET_COLS], value_input_option="RAW"); ws.freeze(rows=1); vals = [SHEET_COLS]
         else: sys.exit(f"'{SHEET_TAB}' tab has unexpected columns {head}; expected {SHEET_COLS}")
+    set_status_dropdown(ws, SHEET_COLS)   # status is a strict dropdown: pending | approved | skip | applied | dropped (dates live in `updated`)
     return sh, ws, vals
 
 def push_sheet(client, data, q):
@@ -439,7 +440,9 @@ def push_sheet(client, data, q):
             rn, old = existing[new[0]]
             if old[SHEET_COLS.index("status")].startswith("applied"): continue   # done; the next crawl decides whether it comes back
             merged = [old[i] if SHEET_COLS[i] in HUMAN_COLS else new[i] for i in range(len(SHEET_COLS))]
-            if not merged[SHEET_COLS.index("status")]: merged[SHEET_COLS.index("status")] = "pending"
+            si = SHEET_COLS.index("status")
+            if not merged[si]: merged[si] = "pending"
+            elif merged[si].startswith("dropped "): merged[si] = "dropped"   # pre-dropdown rows carried the date in the status
             updates.append((rn, merged))
         else:
             appends.append(new)
@@ -447,7 +450,7 @@ def push_sheet(client, data, q):
     ci = {c: i for i, c in enumerate(SHEET_COLS)}
     for url, (rn, old) in existing.items():
         if url in queued or old[ci["status"]] != "pending" or old[ci["new_title"]].strip() or old[ci["new_description"]].strip(): continue
-        updates.append((rn, old[:ci["status"]] + [f"dropped {today}", old[ci["note"]], f"{today} (no longer in the queue)"])); dropped += 1
+        updates.append((rn, old[:ci["status"]] + ["dropped", old[ci["note"]], f"{today} (dropped: no longer in the queue)"])); dropped += 1
     for rn, v in updates: ws.update(range_name=f"A{rn}:{chr(64 + len(SHEET_COLS))}{rn}", values=[v], value_input_option="RAW")
     if appends: ws.append_rows(appends, value_input_option="RAW")
     return f"{len(appends)} added, {len(updates) - dropped} refreshed, {dropped} dropped on '{SHEET_TAB}' ({sh.url})"
@@ -553,7 +556,7 @@ def fix_from_sheet(client, args):
         today = datetime.date.today().isoformat(); byurl = {r["url"]: r for r in rows}
         for rn, r, t, d in approved:
             st = byurl.get(r[ci["url"]], {}).get("status")
-            if st == "set": ws.update(range_name=f"{chr(65 + ci['status'])}{rn}:{chr(65 + ci['updated'])}{rn}", values=[[f"applied {today}", r[ci["note"]], f"{today} (applied)"]], value_input_option="RAW")
+            if st == "set": ws.update(range_name=f"{chr(65 + ci['status'])}{rn}:{chr(65 + ci['updated'])}{rn}", values=[["applied", r[ci["note"]], f"{today} (applied)"]], value_input_option="RAW")
             elif st and st != "already": ws.update(range_name=f"{chr(65 + ci['note'])}{rn}", values=[[(r[ci['note']] + " | " if r[ci['note']] else "") + f"{today}: {st}"]], value_input_option="RAW")
     return f"{mode} on {args.target} ({alias}): " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())) + f" · log {logp}"
 

@@ -37,7 +37,7 @@ Tiebreaker is Google Search Central (title links, snippets), then the Ahrefs tit
 
 `python scripts/fix_meta.py <slug> --sheet` upserts one row per queued URL on the `meta` tab of the client's review sheet (created if missing). Columns: `url | page_type | impressions | ctr | position | top_query | current_title | serp_title | proposed_title | new_title | current_description | proposed_description | new_description | basis | status | note | updated`.
 
-Humans edit `new_title`, `new_description`, `status` and `note` only. A rerun refreshes metrics, current values, proposals and basis and never touches those four. `status`: `pending` → `approved` (human) → `applied <date>` (script, after the live apply). Blank `new_*` at apply time means leave that field alone; `skip` in a field means the same; a row with neither field filled is ignored. Rows already `applied` are left alone by later `--sheet` runs; if the next crawl still flags the page it is a new row only once the applied row is cleared by a human.
+Humans edit `new_title`, `new_description`, `status` and `note` only. A rerun refreshes metrics, current values, proposals and basis and never touches those four. `status` is a strict dropdown: `pending` → `approved` (human) → `applied` (script, after the live apply; date in `updated`); `skip` parks a row; `dropped` is set by the script when a URL leaves the queue. Blank `new_*` at apply time means leave that field alone; `skip` in a field means the same; a row with neither field filled is ignored. Rows already `applied` are left alone by later `--sheet` runs; if the next crawl still flags the page it is a new row only once the applied row is cleared by a human.
 
 Copy the proposal into `new_*` when it is right as it stands: the script writes what is in `new_*`, never what is in `proposed_*`.
 
@@ -56,7 +56,7 @@ Apply on staging. Before-values of every written row are saved to `changes/<prov
 ```
 python scripts/fix_meta.py <slug> --fix --apply --target live
 ```
-Live. The script asks you to type the slug (`--yes` skips that for vetted unattended runs; with neither a terminal nor `--yes` it aborts). After the apply it re-fetches every written page from outside and logs the public `<title>` and description; an unchanged value minutes after the apply is the edge cache. Rows that were set become `applied <date>` on the sheet; a row that failed gets the reason in `note`.
+Live. The script asks you to type the slug (`--yes` skips that for vetted unattended runs; with neither a terminal nor `--yes` it aborts). After the apply it re-fetches every written page from outside and logs the public `<title>` and description; an unchanged value minutes after the apply is the edge cache. Rows that were set become `applied` on the sheet (date in `updated`); a row that failed gets the reason in `note`.
 
 Commit the `changes/<provider>/<slug>/*.md` logs, not the backup folder.
 

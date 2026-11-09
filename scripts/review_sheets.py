@@ -6,6 +6,7 @@
     python scripts/review_sheets.py pull <slug>            # read decisions back: merge new_alt into the repo CSV, mark rows "merged"
     python scripts/review_sheets.py mark-applied <slug>    # after --alt-apply: stamp merged rows "applied <date>"
     python scripts/review_sheets.py status                 # one line per client: sheet id, pending / merged / applied counts
+    python scripts/review_sheets.py dropdowns <slug>|--all # (re)apply the strict status dropdowns on every toolkit tab
 
 Credentials: a Google service account. Put the JSON key at the path in GOOGLE_SERVICE_ACCOUNT (environment or .env at the
 repo root; default secrets/google-service-account.json, git-ignored). Service accounts cannot own Drive files, so `setup`
@@ -13,9 +14,13 @@ creates each sheet inside the folder GOOGLE_SHEETS_FOLDER (.env), a folder a hum
 client_email, or let `setup` create the sheet as the service account and share it with the humans in --share.
 Needs: pip install gspread google-auth
 
-Tab "alt text" columns: image_key | tier | uses | on_pages | example_page | image | current_alt | suggestion | new_alt | status | note | added
-status: pending (needs a human) -> merged (pulled into the repo CSV) -> applied <date>; "skip" (or a blank new_alt at pull time) leaves the image alone.
-A human only edits new_alt (and note). Everything else is written by the scripts.
+Tab "alt text" columns: image_key | tier | uses | on_pages | example_page | image | current_alt | suggestion | new_alt | status | note | added | applied
+status: pending (needs a human) -> merged (pulled into the repo CSV) -> applied (date in the `applied` column); "skip" leaves the image alone.
+A human only edits new_alt (and note; status is a strict dropdown). Everything else is written by the scripts.
+
+Every status column the toolkit writes (alt text, ai discoverability, meta, work orders) is a strict dropdown; the allowed values per
+tab live in STATUS_VALUES below and `set_status_dropdown()` applies them. `python scripts/review_sheets.py dropdowns <slug>|--all`
+retrofits existing sheets.
 """
 import argparse, csv, datetime, os, re, sys
 from pathlib import Path
@@ -28,7 +33,29 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_redirect_map import load_env
 TAB = "alt text"
-COLS = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "current_alt", "suggestion", "new_alt", "status", "note", "added"]
+COLS = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "current_alt", "suggestion", "new_alt", "status", "note", "added", "applied"]
+COLS_V1 = COLS[:-1]   # tabs made before 2026-11-09 (status carried "applied <date>"; the date now has its own column)
+
+# Allowed status values per tab. Humans pick from a strict dropdown; scripts write only these values too (dates go in their own
+# column: alt `applied`, ai/meta `updated`, work orders `cleared`). Keep the first value = the state a new row starts in.
+STATUS_VALUES = {
+    "alt text":           ["pending", "merged", "skip", "applied"],
+    "ai discoverability": ["open", "fix", "flag", "done", "cleared"],
+    "meta":               ["pending", "approved", "skip", "applied", "dropped"],
+    "work orders":        ["open", "needs decision", "in progress", "done", "won't fix"],
+}
+
+def set_status_dropdown(ws, cols, values=None, col="status"):
+    """Strict ONE_OF_LIST data validation on the `status` column from row 2 to the end of the tab, so a human can only pick
+    an allowed value. Rerunning replaces the rule on the same range (idempotent). Raw Sheets API call so it works on any gspread."""
+    values = values or STATUS_VALUES.get(ws.title)
+    if not values or col not in cols: return False
+    ci = cols.index(col)
+    ws.spreadsheet.batch_update({"requests": [{"setDataValidation": {
+        "range": {"sheetId": ws.id, "startRowIndex": 1, "startColumnIndex": ci, "endColumnIndex": ci + 1},
+        "rule": {"condition": {"type": "ONE_OF_LIST", "values": [{"userEnteredValue": v} for v in values]},
+                 "strict": True, "showCustomUi": True, "inputMessage": f"{col}: " + " | ".join(values)}}}]})
+    return True
 
 def client_path(slug): return ROOT / "clients" / f"{slug}.yaml"
 def load_client(slug): return yaml.safe_load(client_path(slug).read_text(encoding="utf-8"))
@@ -83,19 +110,31 @@ def open_tab(client_gs, sheet_id):
         ws = sh.worksheet(TAB)
     except Exception:
         first = sh.sheet1
-        if first.row_values(1) in (LEGACY, COLS):   # a hand-made sheet: adopt its first tab
+        if first.row_values(1) in (LEGACY, COLS_V1, COLS):   # a hand-made sheet: adopt its first tab
             first.update_title(TAB); ws = first
         else:
             ws = sh.add_worksheet(TAB, rows=200, cols=len(COLS)); ws.append_row(COLS); ws.freeze(rows=1)
     head = ws.row_values(1)
     if not head: ws.append_row(COLS); ws.freeze(rows=1)
-    elif head == LEGACY:   # upgrade in place: insert status before note, add 'added'
+    elif head == LEGACY:   # upgrade in place: insert status before note, add 'added' and 'applied'
         vals = ws.get_all_values()
-        new = [COLS] + [r[:9] + [("merged" if (r[8] if len(r) > 8 else "").strip() else "pending"), (r[9] if len(r) > 9 else ""), "2026-10-30"] for r in vals[1:] if any(r)]
+        new = [COLS] + [r[:9] + [("merged" if (r[8] if len(r) > 8 else "").strip() else "pending"), (r[9] if len(r) > 9 else ""), "2026-10-30", ""] for r in vals[1:] if any(r)]
         ws.clear(); ws.update("A1", new, value_input_option="RAW"); ws.freeze(rows=1)
         print(f"  upgraded '{TAB}' tab to the current columns ({len(new) - 1} rows)")
+    elif head == COLS_V1:   # upgrade in place: 'applied <date>' statuses become status 'applied' + the date in the new `applied` column
+        vals = ws.get_all_values(); si = COLS.index("status"); moved = 0
+        new = [COLS]
+        for r in vals[1:]:
+            if not any(r): continue
+            r = r + [""] * (len(COLS_V1) - len(r)); st = r[si].strip(); date = ""
+            if st.lower().startswith("applied"): date = st[len("applied"):].strip(); r[si] = "applied"; moved += 1
+            new.append(r[:len(COLS_V1)] + [date])
+        if ws.col_count < len(COLS): ws.add_cols(len(COLS) - ws.col_count)
+        ws.update("A1", new, value_input_option="RAW"); ws.freeze(rows=1)
+        print(f"  upgraded '{TAB}' tab: added the `applied` column ({moved} rows moved their date into it)")
     elif head != COLS:
         sys.exit(f"'{TAB}' tab has unexpected columns {head}; expected {COLS}")
+    set_status_dropdown(ws, COLS)
     return sh, ws
 
 def read_rows(ws):
@@ -167,7 +206,7 @@ def cmd_push(a):
     review, _ = review_rows_from_csv(path, domain)
     today = datetime.date.today().isoformat()
     new = [[r["image_key"], r["tier"], r["uses"], r["on_pages"], r["example_page"], r["image"], r["current_alt"], r["suggestion"], r["new_alt"],
-            "merged" if r["new_alt"] else "pending", r["note"], today] for r in review if r["image_key"] not in have]
+            "merged" if r["new_alt"] else "pending", r["note"], today, ""] for r in review if r["image_key"] not in have]
     # WooCommerce: the product-alt exception list (shared model photos, one-word titles) also needs a human
     exc_files = sorted((ROOT / "changes" / provider / a.slug).glob("*-fix-images-product-alt-exceptions.csv"))
     n_exc = 0
@@ -176,7 +215,7 @@ def cmd_push(a):
             key = f"product-attachment:{e['attachment_id']}"
             if key in have: continue
             new.append([key, "P", e["used_by_products"], e["used_by_products"], e.get("example_products", "")[:200], e["file"], "", e.get("suggestion", ""), "",
-                        "pending", "product image: " + e.get("reason", ""), today]); n_exc += 1
+                        "pending", "product image: " + e.get("reason", ""), today, ""]); n_exc += 1
     if new: ws.append_rows(new, value_input_option="RAW")
     print(f"{a.slug}: {len(new)} new rows appended ({len(review) - (len(new) - n_exc)} already on the sheet) from {path.name}" + (f" + {n_exc} product-alt exceptions" if n_exc else "") + f": {sh.url}")
 
@@ -205,10 +244,14 @@ def cmd_pull(a):
 
 def cmd_mark(a):
     sid = sheet_for(a.slug); g = gc(); sh, ws = open_tab(g, sid)
-    sheet_rows = read_rows(ws); status_col = COLS.index("status") + 1; today = datetime.date.today().isoformat()
-    updates = [{"range": f"{chr(64 + status_col)}{i + 2}", "values": [[f"applied {today}"]]} for i, r in enumerate(sheet_rows) if r["status"] == "merged"]
+    sheet_rows = read_rows(ws); today = datetime.date.today().isoformat()
+    sc, ac = chr(65 + COLS.index("status")), chr(65 + COLS.index("applied"))
+    updates = []
+    for i, r in enumerate(sheet_rows):
+        if r["status"] != "merged": continue
+        updates += [{"range": f"{sc}{i + 2}", "values": [["applied"]]}, {"range": f"{ac}{i + 2}", "values": [[today]]}]
     if updates: ws.batch_update(updates, value_input_option="RAW")
-    print(f"{a.slug}: {len(updates)} rows marked applied {today}")
+    print(f"{a.slug}: {len(updates) // 2} rows marked applied {today}")
 
 def cmd_status(a):
     g = gc()
@@ -224,6 +267,32 @@ def cmd_status(a):
         except Exception as e:
             print(f"{p.stem:26} ERROR {str(e)[:80]}")
 
+def apply_dropdowns(sh):
+    """Put the strict status dropdown on every toolkit tab the sheet has (and migrate the alt tab's columns). Returns the tabs done."""
+    done = []
+    for ws in sh.worksheets():
+        if ws.title not in STATUS_VALUES: continue
+        head = ws.row_values(1)
+        if ws.title == TAB:
+            open_tab(sh.client, sh.id); done.append(ws.title); continue   # open_tab upgrades the columns and sets the dropdown
+        if "status" not in head: print(f"  '{ws.title}': no status column in {head}; skipped"); continue
+        if set_status_dropdown(ws, head): done.append(ws.title)
+    return done
+
+def cmd_dropdowns(a):
+    g = gc()
+    slugs = [a.slug] if a.slug else [p.stem for p in sorted((ROOT / "clients").glob("*.yaml")) if not p.name.startswith("_")]
+    for slug in slugs:
+        c = load_client(slug); sid = (c.get("review") or {}).get("alt_sheet_id")
+        if not sid or sid == "unknown":
+            if a.slug: sys.exit(f"clients/{slug}.yaml has no review.alt_sheet_id")
+            continue
+        try:
+            sh = g.open_by_key(sid); tabs = apply_dropdowns(sh)
+            print(f"{slug:26} dropdowns on: {', '.join(tabs) or '(no toolkit tabs yet)'}  {sh.url}")
+        except Exception as e:
+            print(f"{slug:26} ERROR {str(e)[:100]}")
+
 def main():
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("setup"); s.add_argument("slug"); s.add_argument("--share", action="append", help="email to share with (repeatable)"); s.set_defaults(f=cmd_setup)
@@ -231,7 +300,10 @@ def main():
     s = sub.add_parser("pull"); s.add_argument("slug"); s.set_defaults(f=cmd_pull)
     s = sub.add_parser("mark-applied"); s.add_argument("slug"); s.set_defaults(f=cmd_mark)
     s = sub.add_parser("status"); s.set_defaults(f=cmd_status)
-    a = ap.parse_args(); a.f(a)
+    s = sub.add_parser("dropdowns", help="(re)apply the strict status dropdowns on every toolkit tab of a client's sheet"); s.add_argument("slug", nargs="?"); s.add_argument("--all", action="store_true"); s.set_defaults(f=cmd_dropdowns)
+    a = ap.parse_args()
+    if a.cmd == "dropdowns" and not a.slug and not a.all: ap.error("dropdowns needs a slug or --all")
+    a.f(a)
 
 if __name__ == "__main__":
     main()

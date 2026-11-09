@@ -47,7 +47,7 @@ Cost: one `site-audit-issues` call per client plus one page-explorer call (≤20
 
 Columns: `id | issue | handler | tier | urls_affected | traffic_at_stake | what_to_do | example_urls | decider | owner | status | decision_or_note | opened | updated | cleared | client_brief`. `client_brief` is the paste-ready paragraph for client decisions (same text as the report's Client briefs section).
 
-Humans edit `owner`, `status`, `decision_or_note` only. `status`: `open` → `needs decision` → `in progress` → `done` / `won't fix`. Every run refreshes counts, traffic, what-to-do and examples and never touches the three human columns. A row whose issue is gone from the crawl gets `cleared <date>`; if it returns, `cleared` is blanked and the row is live again with its old status.
+Humans edit `owner`, `status`, `decision_or_note` only. `status` is a strict dropdown: `open` → `needs decision` → `in progress` → `done` / `won't fix`. Every run refreshes counts, traffic, what-to-do and examples and never touches the three human columns. A row whose issue is gone from the crawl gets `cleared <date>`; if it returns, `cleared` is blanked and the row is live again with its old status.
 
 `--decisions`: a row with `status` done/won't fix and `decision_or_note` starting `decision:` is appended to `rules.decisions` in the client file as `"<date> <id>: <text>"` (text edit, comments preserved). Skills read `rules.decisions` before asking the same question; this skill drops the row.
 
