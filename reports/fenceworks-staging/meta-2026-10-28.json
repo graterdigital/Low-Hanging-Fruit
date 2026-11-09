@@ -1,0 +1,39 @@
+{
+ "data": {
+  "pid": 10134365,
+  "crawl": "2026-10-28",
+  "health": 75,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 0
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "",
+  "sep": " - ",
+  "todo": [],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "unknown",
+  "rows": []
+ }
+}

@@ -1,0 +1,366 @@
+{
+ "data": {
+  "pid": 9704529,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 15
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 14
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Avelure Med Spa",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://aveluremedspa.com/locations/rochester/",
+    "path": "/locations/rochester/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Rochester, NY | Botox & Skin Care'",
+    "gsc": {},
+    "traffic": 14.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Rochester, NY | Botox & Skin Care | Avelure",
+    "serp_title": "Med Spa Rochester, NY | Botox & Skin Care",
+    "h1": "Rochester",
+    "current_description": "Discover Avelure Med Spa in Rochester. We offer advanced fillers, Botox, and skin treatments in a refined, modern space. Schedule your consultation.",
+    "proposed_title": "Med Spa Rochester, NY | Botox & Skin Care - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/in-greenwood/",
+    "path": "/locations/in-greenwood/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Greenwood, IN | Botox & Skin Care'",
+    "gsc": {},
+    "traffic": 12.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Greenwood, IN | Botox & Skin Care | Avelure",
+    "serp_title": "Med Spa Greenwood, IN | Botox & Skin Care",
+    "h1": "Greenwood",
+    "current_description": "Visit Avelure Med Spa in Greenwood for personalized aesthetic treatments, including fillers and laser hair removal. Start your beauty journey here.",
+    "proposed_title": "Med Spa Greenwood, IN | Botox & Skin Care - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/ocala/",
+    "path": "/locations/ocala/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Ocala - Botox & Laser Hair Removal'",
+    "gsc": {},
+    "traffic": 12.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Ocala, FL | Botox & Laser Hair Removal | Avelure",
+    "serp_title": "Ocala - Botox & Laser Hair Removal",
+    "h1": "Ocala",
+    "current_description": "Experience the Avelure difference in Ocala. We specialize in science-backed beauty treatments like fillers, CoolSculpting, and more. Book now.",
+    "proposed_title": "Ocala - Botox & Laser Hair Removal - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/treatments/ultherapy/",
+    "path": "/treatments/ultherapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Ultherapy'",
+    "gsc": {},
+    "traffic": 12.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Ultherapy® - Avelure Med Spa",
+    "serp_title": "Ultherapy",
+    "h1": "Ultherapy®",
+    "current_description": "Lift and tighten your face, neck, and chest without surgery. Experience Ultherapy® ultrasound technology for gradual, natural looking lift.",
+    "proposed_title": "Ultherapy - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/buffalo/",
+    "path": "/locations/buffalo/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Buffalo, NY (Amherst) | Botox & Fillers'",
+    "gsc": {},
+    "traffic": 9.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Buffalo, NY (Amherst) | Botox & Fillers | Avelure",
+    "serp_title": "Med Spa Buffalo, NY (Amherst) | Botox & Fillers",
+    "h1": "Buffalo",
+    "current_description": "Buffalo's premier destination for Botox and aesthetic care. Avelure Med Spa in Amherst delivers natural results with expert precision. Book online!",
+    "proposed_title": "Med Spa Buffalo, NY (Amherst) | Botox & Fillers - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/waterford/",
+    "path": "/locations/waterford/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Orlando (Waterford Lakes) | Botox'",
+    "gsc": {},
+    "traffic": 9.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Orlando (Waterford Lakes) | Botox | Avelure",
+    "serp_title": "Med Spa Orlando (Waterford Lakes) | Botox",
+    "h1": "Waterford",
+    "current_description": "Avelure Med Spa Waterford Lakes offers Orlando’s best in Botox, fillers, and skin care. Expert aesthetic care in a modern space. Book today!",
+    "proposed_title": "Med Spa Orlando (Waterford Lakes) | Botox - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/mi-novi/",
+    "path": "/locations/mi-novi/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Novi, MI | Botox & Laser Hair Removal'",
+    "gsc": {},
+    "traffic": 7.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Novi, MI | Botox & Laser Hair Removal | Avelure",
+    "serp_title": "Med Spa Novi, MI | Botox & Laser Hair Removal",
+    "h1": "Novi",
+    "current_description": "Look and feel your most confident at Avelure Med Spa Novi. Expert-led treatments including fillers, facials, and more. Schedule your appointment.",
+    "proposed_title": "Med Spa Novi, MI | Botox & Laser Hair Removal - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/mi-grand-rapids/",
+    "path": "/locations/mi-grand-rapids/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa Grand Rapids, MI | Botox & Skin Care'",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Grand Rapids, MI | Botox & Skin Care | Avelure",
+    "serp_title": "Med Spa Grand Rapids, MI | Botox & Skin Care",
+    "h1": "Grand Rapids",
+    "current_description": "Premium med spa services in Grand Rapids. Avelure offers Botox, DiamondGlow, and laser hair removal as well as complete med spa services",
+    "proposed_title": "Med Spa Grand Rapids, MI | Botox & Skin Care - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://aveluremedspa.com/treatments/coolsculpting/",
+    "path": "/treatments/coolsculpting/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting® - Avelure Med Spa",
+    "serp_title": "CoolSculpting",
+    "h1": "CoolSculpting®",
+    "current_description": "Eliminate stubborn fat permanently with CoolSculpting®. Non invasive fat reduction designed to contour and sculpt treated areas.",
+    "proposed_title": "CoolSculpting® - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://aveluremedspa.com/faqs/",
+    "path": "/faqs/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FAQs Archive - Avelure Med Spa",
+    "serp_title": "",
+    "h1": "FAQs",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find answers to common questions about treatments at Avelure Med Spa, including Juvederm®, Radiesse®, CoolTone®, and Botox®. Browse by category to see what to expect before, during, and after your appointment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://aveluremedspa.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | Avelure Med Spa",
+    "serp_title": "",
+    "h1": "Timeless beauty, on your terms.",
+    "current_description": "The Art of Timeless Beauty Timeless beauty, on your terms. The most powerful transformations are subtle, intentional, and natural. Invest in your timeless",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Pricing_Page"
+   },
+   {
+    "url": "https://aveluremedspa.com/locations/ofallon/",
+    "path": "/locations/ofallon/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa O'Fallon, MO | Botox, Fillers & Laser'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa O’Fallon, MO | Botox, Fillers & Laser | Avelure",
+    "serp_title": "Med Spa O'Fallon, MO | Botox, Fillers & Laser",
+    "h1": "O’Fallon",
+    "current_description": "Avelure Med Spa in O’Fallon offers expert Botox, skin rejuvenation, and body contouring. Discover science-led beauty in a modern, refined space.",
+    "proposed_title": "Med Spa O'Fallon, MO | Botox, Fillers & Laser - Avelure Med Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/faqs/page/6/",
+    "/faqs/page/4/",
+    "/treatments/",
+    "/treatments/page/2/",
+    "/treatments_category/facial-peels/",
+    "/faqs/page/2/",
+    "/faqs/page/5/",
+    "/faqs/page/7/",
+    "/faqs/page/8/",
+    "/treatments_category/injectables/",
+    "/treatments_category/lasers/",
+    "/faqs/page/9/",
+    "/faqs/page/3/",
+    "/treatments_category/body/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

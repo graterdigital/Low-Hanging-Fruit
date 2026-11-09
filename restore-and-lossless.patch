@@ -1,0 +1,243 @@
+diff --git a/docs/skills/fix-images.md b/docs/skills/fix-images.md
+index e08b342..88c1126 100644
+--- a/docs/skills/fix-images.md
++++ b/docs/skills/fix-images.md
+@@ -1,6 +1,6 @@
+ # Handoff: fix-images
+ 
+-Status as of 2026-10-30 12:50. Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
++Status as of 2026-11-03 (staging headshot restore fix + --lossless; see the 2026-11-03 section). Read this at the start of the chat dedicated to this skill. The repo is the source of truth: github.com/graterdigital/Low-Hanging-Fruit, cloned on Greg's PC at `C:\Users\greg\Documents\Low-Hanging-Fruit`. Mirror of the project doc `claude/skill-fix-images.md`; update both.
+ 
+ ## What the skill does
+ 
+@@ -19,7 +19,12 @@ Decision made this chat: no format conversion and no URL swaps in this skill. We
+ 
+ Compression runs on Greg's PC (needs `pip install pillow`; `pngquant` + `oxipng` on PATH are better but optional and the log records which was used). Live-tested on hsfamilylaw 2026-10-29 with the Pillow path only (no pngquant on Greg's PC yet).
+ 
+-## Where things stand (2026-10-30 12:50) — read this first
++## 2026-11-03: staging restore that did nothing, and `--lossless`
++
++- Greg ran `restore_images.py hsfamilylaw --target staging --all --webp` on 11-02 and staging still showed the posterised headshots. Cause: the 10-30 "oldest run" default picked `2026-10-29-1443-fix-images-staging`, which is the **dry run**; its `result.json` rows say `would replace`, and the restore only accepted `replaced`, so it matched 0 files, pushed nothing, flushed caches and wrote a "Restored 0" log. Fixed: dry-run rows are restorable (their `orig/` is the same server pull), the picker takes the oldest run that has rows, 0 matches is an error, and every pushed file is size-checked on the server. Live was never affected (its restore on 10-29 used `--result` on the 15:03 apply).
++- `fix_images.py --lossless`: oxipng/optipng for PNG, jpegoptim for JPEG, no pngquant, no Pillow quantizer, `--min-gain` 3. `--max-edge` still resizes first (Lanczos, then lossless re-pack); on its own the re-pack is a 5–25% shave, with `--max-edge 1200` the headshots should land ~60% smaller. Sub-sizes are regenerated from the resized original on apply and then re-packed the same way. Needs `pip install pyoxipng` on the machine (the oxipng engine as a Python package; no PATH setup, no winget entry exists).
++
++## Where things stand (2026-10-30 12:50)
+ 
+ **Done**
+ - hsfamilylaw: 15 graphics compressed on live; 11 headshots restored to originals; 95 alt texts applied live; WebP Express removed, Kinsta CDN optimisation on; theme untouched.
+diff --git a/scripts/fix_images.py b/scripts/fix_images.py
+index cd062da..a3dcde3 100644
+--- a/scripts/fix_images.py
++++ b/scripts/fix_images.py
+@@ -79,8 +79,11 @@ def webp_served(url):
+ # ---------------------------------------------------------------- local compression
+ def have(bin_): return shutil.which(bin_) is not None
+ 
+-def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_quality=82, allow_pillow=False):
+-    """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name."""
++def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_quality=82, allow_pillow=False, lossless=False):
++    """Write a smaller version of src to dst. Returns a list of steps taken. Same format, same name.
++    lossless=True: no pngquant, no Pillow quantize, no JPEG quality cap. max_edge still applies (a downscale changes
++    pixels, but it is a plain resample, not a palette); after that the file is re-packed losslessly with oxipng/optipng
++    or jpegoptim. Without a resize expect 5-25% on photos. If no lossless tool is on PATH the file is SKIPPED."""
+     from PIL import Image
+     steps = []
+     ext = src.suffix.lower()
+@@ -95,6 +98,31 @@ def compress(src: Path, dst: Path, max_edge: int, png_quality="80-98", jpeg_qual
+         if ext == ".png": im.save(tmp, "PNG", optimize=True)
+         else: im.save(tmp, "JPEG", quality=95, subsampling=0)
+         work = tmp
++    if lossless:
++        # no quantizer, no JPEG re-encode: only a lossless re-pack of the (possibly resized) pixels
++        try:
++            if ext == ".png":
++                try:
++                    import oxipng   # pip install pyoxipng: same engine as the oxipng binary, no PATH setup
++                    oxipng.optimize(str(work), str(dst), level=4, strip=oxipng.StripChunks.safe())
++                    steps.append("pyoxipng lossless"); return steps
++                except ImportError:
++                    pass
++                for opt, args in (("oxipng", ["oxipng", "-o", "4", "--strip", "safe", "-q", "--out", str(dst), str(work)]),
++                                  ("optipng", ["optipng", "-o5", "-strip", "all", "-quiet", "-out", str(dst), str(work)])):
++                    if have(opt):
++                        r = subprocess.run(args, capture_output=True)
++                        if r.returncode != 0 or not dst.exists(): sys.exit(f"{opt} failed: " + r.stderr.decode("utf-8", "replace"))
++                        steps.append(f"{opt} lossless"); return steps
++                shutil.copyfile(src, dst); steps.append("SKIPPED: lossless needs `pip install pyoxipng` (or oxipng/optipng on PATH)"); return steps
++            if ext in (".jpg", ".jpeg"):
++                if have("jpegoptim"):
++                    shutil.copyfile(work, dst); subprocess.run(["jpegoptim", "--strip-all", "--all-progressive", "-q", str(dst)], capture_output=True)
++                    steps.append("jpegoptim lossless"); return steps
++                shutil.copyfile(src, dst); steps.append("SKIPPED: no jpegoptim on PATH (lossless needs it)"); return steps
++            shutil.copyfile(work, dst); steps.append("unsupported type, copied"); return steps
++        finally:
++            if work != src: Path(work).unlink(missing_ok=True)
+     if ext == ".png":
+         if have("pngquant"):
+             r = subprocess.run(["pngquant", "--quality", png_quality, "--speed", "1", "--strip", "--force", "--output", str(dst), str(work)], capture_output=True)
+@@ -412,6 +440,7 @@ def main(argv=None):
+     ap.add_argument("--only", help="comma-separated substrings; process only files whose path contains one")
+     ap.add_argument("--webroot", default="public")
+     ap.add_argument("--yes", action="store_true")
++    ap.add_argument("--lossless", action="store_true", help="no quantizer, no JPEG re-encode: oxipng/optipng for PNG, jpegoptim for JPEG. --max-edge still applies (a Lanczos downscale, then lossless re-pack at the new size). Without a resize, photos saved as PNG only shrink 5-25%%; --min-gain drops to 3 unless given")
+     ap.add_argument("--allow-pillow", action="store_true", help="let Pillow's 256-colour quantizer handle PNGs when pngquant is missing. OFF by default: it visibly damages photos (hsfamilylaw headshots, 2026-10-29)")
+     ap.add_argument("--purge-webp", action="store_true", help="also delete .webp siblings of replaced files. OFF by default: on Kinsta (and any host where WebP rewrite rules outlive the plugin) a missing .webp breaks the image")
+     ap.add_argument("--alt-csv", action="store_true", help="write changes/<provider>/<slug>/<stamp>-fix-images-alt.csv from the inventory for review (no SSH)")
+@@ -512,7 +541,8 @@ def main(argv=None):
+     if args.target != inv.get("target"):
+         print(f"note: inventory was taken on {inv.get('target')}; file paths are re-resolved on {args.target} by relative upload path")
+     mode = "apply" if args.apply else "dry"
+-    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, max edge {args.max_edge}px, min gain {args.min_gain}%")
++    if args.lossless and "--min-gain" not in sys.argv: args.min_gain = 3
++    print(f"{mode.upper()} on {args.target} ({alias}): {len(files)} files, {'LOSSLESS, ' if args.lossless else ''}max edge {args.max_edge}px, min gain {args.min_gain}%")
+     if args.target == "live" and args.apply: confirm_live(args.slug, len(files), alias, args.yes)
+ 
+     bdir = cdir / "backup" / f"{stamp}-fix-images-{args.target}"; (bdir / "orig").mkdir(parents=True); (bdir / "new").mkdir()
+@@ -529,11 +559,11 @@ def main(argv=None):
+         ok, err = scp(f"{alias}:{remote}", str(local_o))
+         if not ok: row["action"] = f"PULL FAILED: {err}"; print(f"  !! {rel}: pull failed {err}"); return row
+         row["before"] = local_o.stat().st_size
+-        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality, args.allow_pillow)
++        row["steps"] = compress(local_o, local_n, max_edge, args.png_quality, args.jpeg_quality, args.allow_pillow, args.lossless)
+         row["after"] = local_n.stat().st_size
+         gain = 100 * (1 - row["after"] / row["before"]) if row["before"] else 0
+         row["gain_pct"] = round(gain, 1)
+-        if any(st.startswith("SKIPPED") for st in row["steps"]): row["action"] = "skipped (no pngquant)"; print(f"  -- {rel}: skipped, pngquant not on PATH"); return row
++        if any(st.startswith("SKIPPED") for st in row["steps"]): row["action"] = "skipped (no tool)"; print(f"  -- {rel}: {row['steps'][-1]}"); return row
+         if gain < args.min_gain: row["action"] = "kept (gain below threshold)"; print(f"  -- {rel}: {fmt(row['before'])} -> {fmt(row['after'])} ({gain:.0f}%), kept"); return row
+         if mode == "apply":
+             ok, err = scp(str(local_n), f"{alias}:{remote}")
+@@ -585,7 +615,7 @@ def main(argv=None):
+         print(f"Object cache flush: {'ok' if flush[0] else 'FAILED'}; host/CDN cache purge: {'ok' if cdn[0] else 'not available'} {cdn[1]}")
+ 
+     before = sum(r["before"] or 0 for r in results); after = sum((r["after"] if r["action"] in ("replaced", "would replace") else r["before"]) or 0 for r in results)
+-    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · max edge {args.max_edge}px · min gain {args.min_gain}% · PNG {args.png_quality} · JPEG q{args.jpeg_quality}", "",
++    log = [f"# fix-images: {host} ({args.target})", "", f"Run {stamp} · mode **{mode}** · alias `{alias}` · provider `{provider}` · inventory `{inv_path.name}` · max edge {args.max_edge}px · {'lossless (oxipng/optipng, jpegoptim)' if args.lossless else f'PNG {args.png_quality} · JPEG q{args.jpeg_quality}'} · min gain {args.min_gain}%", "",
+            f"Tools: pngquant {'yes' if have('pngquant') else 'no (Pillow quantize)'}, oxipng {'yes' if have('oxipng') else 'no'}, optipng {'yes' if have('optipng') else 'no'}, jpegoptim {'yes' if have('jpegoptim') else 'no'}", "",
+            f"**{fmt(before)} → {fmt(after)}** across {len(results)} files ({len([r for r in results if r['action'] in ('replaced','would replace')])} {'replaced' if mode=='apply' else 'would be replaced'}).", "",
+            "| file | kind | attachment | before | after | gain | steps | action |", "|---|---|---|---|---|---|---|---|"]
+diff --git a/scripts/restore_images.py b/scripts/restore_images.py
+index 49270a1..10e8f4e 100644
+--- a/scripts/restore_images.py
++++ b/scripts/restore_images.py
+@@ -2,12 +2,18 @@
+ """Put original image files back from a fix-images backup.
+ 
+     python scripts/restore_images.py <slug> --target live --only madison-alexander,sarah-price      # named files (+ their sub-sizes)
+-    python scripts/restore_images.py <slug> --target live --all                                     # everything that run replaced
++    python scripts/restore_images.py <slug> --target live --all                                     # everything that run touched
+     python scripts/restore_images.py <slug> --target live --all --dry                               # list only
+ 
+-Reads changes/<provider>/<slug>/backup/<stamp>-fix-images-<target>/result.json (newest for the target unless --result),
+-pushes each matching file's `orig/` copy back to the remote path recorded there, rewrites the .webp sibling with cwebp
+-when --webp is given (for hosts that serve name.webp), and flushes caches. Writes a short log next to the other logs.
++Reads changes/<provider>/<slug>/backup/<stamp>-fix-images-<target>/result.json, pushes each matching file's `orig/`
++copy back to the remote path recorded there, rewrites the .webp sibling with cwebp when --webp is given (for hosts
++that serve name.webp), flushes caches, and verifies the remote byte size against the pushed copy.
++
++Which backup: the OLDEST run for the target unless --result names one. Every run (dry or apply) pulls the server's
++files into orig/ before compressing, so the oldest run's orig/ is the true original; a later run's orig/ is the
++earlier run's output. Dry runs count: their rows say "would replace" instead of "replaced", but the orig/ copy is the
++same pull. (2026-11-02: the first staging run was a dry run, so filtering on "replaced" only found 0 files and
++restored nothing; that is why this reads both.)
+ """
+ import argparse, datetime, json, subprocess, sys
+ from pathlib import Path
+@@ -18,18 +24,23 @@ except ImportError:
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+ SKIP = "handl-utm-grabber-v3"
++RESTORABLE = ("replaced", "would replace")
+ 
+ def run(args, inp=None):
+     r = subprocess.run(args, input=inp, capture_output=True)
+     return r.returncode, r.stdout.decode("utf-8", "replace"), r.stderr.decode("utf-8", "replace")
+ 
++def load_rows(res: Path):
++    return [r for r in json.loads(res.read_text(encoding="utf-8")) if r.get("action") in RESTORABLE]
++
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("slug"); ap.add_argument("--target", choices=["staging", "live"], default="staging")
+     ap.add_argument("--only", help="comma-separated substrings of file paths to restore")
+     ap.add_argument("--all", action="store_true"); ap.add_argument("--dry", action="store_true")
+     ap.add_argument("--webp", action="store_true", help="also rewrite name.webp next to each restored file with cwebp -q 85")
+-    ap.add_argument("--result"); ap.add_argument("--webroot", default="public")
++    ap.add_argument("--result", help="a specific backup's result.json (default: the oldest run for the target)")
++    ap.add_argument("--webroot", default="public")
+     a = ap.parse_args()
+     if not a.only and not a.all: sys.exit("give --only <substrings> or --all")
+     client = yaml.safe_load((ROOT / "clients" / f"{a.slug}.yaml").read_text(encoding="utf-8"))
+@@ -40,14 +51,18 @@ def main():
+     if a.result:
+         res = Path(a.result).resolve()
+     else:
+-        # Oldest run for this target: a later run's "orig" is the earlier run's output, not the real original.
+         runs = sorted((cdir / "backup").glob(f"*-fix-images-{a.target}/result.json"))
+-        if not runs: sys.exit(f"no fix-images backup for {a.target}")
+-        res = runs[0]
+-        if len(runs) > 1: print(f"note: {len(runs)} runs found for {a.target}; restoring from the OLDEST ({res.parent.name}), which holds the true originals. Use --result to pick another.")
++        if not runs: sys.exit(f"no fix-images backup for {a.target} under {cdir / 'backup'}")
++        # Oldest run that actually holds pulled files. A later run's orig/ is an earlier run's output, not the real original.
++        res = next((r for r in runs if load_rows(r)), None)
++        if res is None: sys.exit(f"{len(runs)} runs found for {a.target} but none has restorable rows (replaced / would replace)")
++        was_dry = not any(r.get("action") == "replaced" for r in load_rows(res))
++        print(f"{len(runs)} run(s) for {a.target}; restoring from the OLDEST with pulled files: {res.parent.name}"
++              + (" (a dry run; its orig/ is the server's file as of that pull)" if was_dry else "") + ". Use --result to pick another.")
+     bdir = res.parent
+-    rows = [r for r in json.loads(res.read_text(encoding="utf-8")) if r.get("action") == "replaced"]
++    rows = load_rows(res)
+     if a.only: rows = [r for r in rows if any(s in r["path"] for s in a.only.split(","))]
++    if not rows: sys.exit(f"0 files match in {bdir.name}; nothing restored (check --only, or --result)")
+     print(f"{len(rows)} files to restore on {a.target} ({alias}) from {bdir.name}")
+     done, failed = [], []
+     for r in rows:
+@@ -58,6 +73,18 @@ def main():
+         if code == 0: done.append(r); print(f"  OK {r['path']} ({local.stat().st_size//1024} KB)")
+         else: failed.append((r["path"], err.strip())); print(f"  !! {r['path']}: {err.strip()}")
+     if a.dry: return
++    # verify: remote byte size must equal the pushed copy
++    verified = mismatched = 0
++    if done:
++        script = "\n".join(f"stat -c '%s %n' '{r['remote']}'" for r in done) + "\n"
++        code, out, err = run(["ssh", alias, "bash -s"], script.encode("utf-8"))
++        sizes = {line.split(" ", 1)[1]: int(line.split(" ", 1)[0]) for line in out.splitlines() if " " in line}
++        for r in done:
++            want = (bdir / "orig" / Path(r["path"]).name).stat().st_size
++            got = sizes.get(r["remote"])
++            if got == want: verified += 1
++            else: mismatched += 1; print(f"  ?? {r['path']}: remote is {got} bytes, pushed {want}")
++        print(f"verified on server: {verified} match, {mismatched} mismatch")
+     if a.webp and done:
+         script = "\n".join(f"cwebp -quiet -q 85 '{r['remote']}' -o '{r['remote'].rsplit('.',1)[0]}.webp' && echo OK || echo FAIL {r['remote']}" for r in done) + "\n"
+         code, out, err = run(["ssh", alias, "bash -s"], script.encode("utf-8"))
+@@ -66,7 +93,7 @@ def main():
+         code, out, err = run(["ssh", alias, c]); print((out + err).strip().splitlines()[-1:] or ["(no output)"])
+     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
+     log = [f"# fix-images: restore originals on {client['domain']} ({a.target})", "", f"Run {stamp} · alias `{alias}` · from `{bdir.name}` · filter `{a.only or 'all'}` · webp siblings {'rewritten' if a.webp else 'untouched'}", "",
+-           f"Restored {len(done)}, failed {len(failed)}.", ""] + [f"- `{r['path']}`" for r in done] + [f"- FAILED `{p}`: {e}" for p, e in failed]
++           f"Restored {len(done)}, failed {len(failed)}, size-verified on server {verified} (mismatch {mismatched}).", ""] + [f"- `{r['path']}`" for r in done] + [f"- FAILED `{p}`: {e}" for p, e in failed]
+     (cdir / f"{stamp}-fix-images-{a.target}-restore.md").write_text("\n".join(log) + "\n", encoding="utf-8")
+     print(f"Log: {cdir / f'{stamp}-fix-images-{a.target}-restore.md'}")
+ 
+diff --git a/skills/fix-images/SKILL.md b/skills/fix-images/SKILL.md
+index b3d4b27..4562313 100644
+--- a/skills/fix-images/SKILL.md
++++ b/skills/fix-images/SKILL.md
+@@ -50,6 +50,8 @@ python scripts/fix_images.py <slug>
+ 
+ Pulls each oversized file over `scp` into `changes/<provider>/<slug>/backup/<stamp>-fix-images-staging/orig/`, compresses it into `new/`, and writes `changes/<provider>/<slug>/<stamp>-fix-images-staging-dry.md` with before/after bytes and the steps per file. Nothing is pushed. Open a few of the `new/` files next to their `orig/` at 100%: headshots and anything with gradients or text are the ones to look at. If one looks wrong, exclude it with `--only` on the next run or raise `--png-quality` (pngquant only, e.g. `80-95`).
+ 
++`--lossless` skips every quantizer and JPEG re-encode: PNGs go through oxipng/optipng only, JPEGs through jpegoptim; `--min-gain` drops to 3. `--max-edge` still applies, and that is where the real gain is for photos saved as PNG: a 1920px headshot that renders at 1024px, resized to `--max-edge 1200` and re-packed losslessly, drops ~60% with no palette or dithering artefacts. Without a resize expect 5–25%. Needs `pip install pyoxipng` (or `oxipng`/`optipng` on PATH); without one the file is skipped, never quantized.
++
+ Defaults: `--max-edge 2560`, `--min-gain 15` (a file that doesn't shrink by at least 15% is left alone), `--png-quality 80-98` (pngquant's floor–ceiling; visually lossless on photos, and pngquant refuses rather than going below the floor), `--jpeg-quality 82`. Flat graphics can take `--png-quality 65-85` with `--only` to target them.
+ 
+ **Look before you apply, every time.** Open the headshots and anything with a smooth gradient from `new/` next to `orig/` at 100%. The staging apply is not the review step; it is confirmation of a review already done. A run that was applied twice (a second pass over already-quantized files) compounds the damage, so never rerun apply on the same files without restoring first.
+@@ -107,6 +109,8 @@ Trigger an Ahrefs recrawl. "Image file size too large" should drop to the files
+ 
+ ## Rollback
+ 
++`scripts/restore_images.py <slug> --target <staging|live> --all|--only <names> [--webp]` pushes the `orig/` copies back from the **oldest** backup for that target (a later run's `orig/` is an earlier run's output). Dry runs count: they pull the same files, their rows just say `would replace`. The script verifies each file's byte size on the server afterwards and exits non-zero when nothing matched instead of flushing caches over nothing.
++
+ `backup/<stamp>-fix-images-<target>/orig/` holds every replaced file byte-for-byte, originals and sub-sizes alike. `python scripts/restore_images.py <slug> --target <t> --only <names>` (or `--all`) pushes them back, rewrites the `.webp` siblings with `--webp`, and purges caches; it defaults to the **oldest** run's backup for that target, because a later run's `orig/` is the earlier run's output, not the real original. Only if an original was resized is `wp media regenerate <id> --yes` needed afterwards.
+ 
+ ## Scope and limits

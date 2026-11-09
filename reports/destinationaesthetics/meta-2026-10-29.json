@@ -1,0 +1,996 @@
+{
+ "data": {
+  "pid": 9704522,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 43
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 29
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Destination Aesthetics Medical Spa",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://www.destinationaesthetics.com/location/roseville/",
+    "path": "/location/roseville/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/roseville/",
+     "keywords_count": 2141,
+     "top_keyword": "destination aesthetics roseville",
+     "clicks": 182,
+     "impressions": 39411,
+     "ctr": 0.4618,
+     "position": 29.470528,
+     "traffic_value": 422.7
+    },
+    "traffic": 102.0,
+    "score": 39229.000002,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Med Spa in DA Roseville - Destination Aesthetics",
+    "serp_title": "Med Spa in DA Roseville - Destination Aesthetics",
+    "h1": "DA Roseville",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Destination Aesthetics Medical Spa in Roseville, at 10006 Foothills Boulevard just off Highway 65 at Blue Oaks Boulevard. See hours, services, and providers, call (916) 844-4913, or request a complimentary consultation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3118
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/location/sacramento/",
+    "path": "/location/sacramento/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in DA Sacramento'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/sacramento/",
+     "keywords_count": 1772,
+     "top_keyword": "destination aesthetics sacramento",
+     "clicks": 243,
+     "impressions": 36512,
+     "ctr": 0.6655,
+     "position": 27.411261,
+     "traffic_value": 477.05
+    },
+    "traffic": 133.0,
+    "score": 36269.01264,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Med Spa in DA Sacramento - Destination Aesthetics",
+    "serp_title": "Med Spa in DA Sacramento",
+    "h1": "DA Sacramento",
+    "current_description": "",
+    "proposed_title": "Med Spa in DA Sacramento | Destination Aesthetics Medical Spa",
+    "proposed_description": "Find the address, hours, phone numbers, services and team for our Sacramento medical spa at 768 University Avenue. Request a complimentary consultation or book online.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3038
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Destination Aesthetics'; homepage title comes from Yoast's site-wide template, change it there",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/",
+     "keywords_count": 1124,
+     "top_keyword": "destination aesthetics",
+     "clicks": 507,
+     "impressions": 25215,
+     "ctr": 2.0107,
+     "position": 28.919174,
+     "traffic_value": 1323.47
+    },
+    "traffic": 563.0,
+    "score": 24708.001995,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Med Spa in El Dorado Hills, Elk Grove, Folsom, Roseville & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "Destination Aesthetics",
+    "h1": "Difference",
+    "current_description": "Destination Aesthetics is your home for exceptional med spa service with locations across the Sacramento area. Our experienced team will help you look and feel amazing with facials, injectables, and more.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/location/elk-grove/",
+    "path": "/location/elk-grove/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in DA Elk Grove - Sacramento'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/elk-grove/",
+     "keywords_count": 1092,
+     "top_keyword": "destination aesthetics",
+     "clicks": 173,
+     "impressions": 15860,
+     "ctr": 1.0908,
+     "position": 15.136885,
+     "traffic_value": 548.01
+    },
+    "traffic": 87.0,
+    "score": 15686.99912,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Med Spa in DA Elk Grove - Destination Aesthetics",
+    "serp_title": "Med Spa in DA Elk Grove - Sacramento",
+    "h1": "DA ELK GROVE",
+    "current_description": "",
+    "proposed_title": "Med Spa in DA Elk Grove - Sacramento | Destination Aesthetics Medical Spa",
+    "proposed_description": "Find the Destination Aesthetics medical spa in Elk Grove, including the address on Laguna Springs Drive, hours, providers, and the face, neck, and body services offered. You can also request a complimentary consultation or book online.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3152
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/location/el-dorado-hills/",
+    "path": "/location/el-dorado-hills/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in DA El Dorado Hills - Sacramento'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/el-dorado-hills/",
+     "keywords_count": 655,
+     "top_keyword": "destination aesthetics",
+     "clicks": 63,
+     "impressions": 14091,
+     "ctr": 0.4471,
+     "position": 11.014406,
+     "traffic_value": 125.5
+    },
+    "traffic": 64.0,
+    "score": 14027.999139,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Med Spa in DA El Dorado Hills - Destination Aesthetics",
+    "serp_title": "Med Spa in DA El Dorado Hills - Sacramento",
+    "h1": "DA El Dorado Hills",
+    "current_description": "",
+    "proposed_title": "Med Spa in DA El Dorado Hills - Sacramento | Destination Aesthetics Medical Spa",
+    "proposed_description": "Find the Destination Aesthetics El Dorado Hills med spa on Suncast Ln., with hours, phone numbers, providers and a list of face, neck and body services. Request a complimentary consultation or book online.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 2974
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/skin/laser-skin-rejuvenation/",
+    "path": "/services/skin/laser-skin-rejuvenation/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Laser Skin Rejuvenation - Sacramento'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/skin/laser-skin-rejuvenation/",
+     "keywords_count": 789,
+     "top_keyword": "erbium laser near me",
+     "clicks": 11,
+     "impressions": 12777,
+     "ctr": 0.0861,
+     "position": 30.023949,
+     "traffic_value": 14.4
+    },
+    "traffic": 0,
+    "score": 12765.999003,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Laser Skin Rejuvenation for El Dorado Hills, Folsom, Napa, & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "Laser Skin Rejuvenation - Sacramento",
+    "h1": "Laser Skin Rejuvenation",
+    "current_description": "Reveal your most radiant skin with laser skin rejuvenation at Destination Aesthetics' Sacramento-area med spa locations. Explore vein treatment, fractional resurfacing, and more.",
+    "proposed_title": "Laser Skin Rejuvenation - Sacramento | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/location/folsom/",
+    "path": "/location/folsom/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in DA Folsom'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/folsom/",
+     "keywords_count": 673,
+     "top_keyword": "destination aesthetics",
+     "clicks": 71,
+     "impressions": 11533,
+     "ctr": 0.6156,
+     "position": 16.791294,
+     "traffic_value": 191.1
+    },
+    "traffic": 27.0,
+    "score": 11462.002852,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Med Spa in DA Folsom - Destination Aesthetics",
+    "serp_title": "Med Spa in DA Folsom",
+    "h1": "Folsom",
+    "current_description": "",
+    "proposed_title": "Med Spa in DA Folsom | Destination Aesthetics Medical Spa",
+    "proposed_description": "Find address, hours, providers and the full list of face, neck and body services at the Destination Aesthetics Medical Spa in Folsom, CA. Request a complimentary consultation or call (916) 844-4913.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3056
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/skin/microneedling/",
+    "path": "/services/skin/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/skin/microneedling/",
+     "keywords_count": 303,
+     "top_keyword": "microneedling sacramento",
+     "clicks": 57,
+     "impressions": 8320,
+     "ctr": 0.6851,
+     "position": 28.941105,
+     "traffic_value": 55.91
+    },
+    "traffic": 73.0,
+    "score": 8262.999679999999,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Microneedling (SkinPen® & Vivace® RF) for Elk Grove, Folsom, Roseville, & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "Microneedling - Sacramento",
+    "h1": "Microneedling",
+    "current_description": "Rejuvenate your skin with SkinPen and Vivace RF microneedling at Destination Aesthetics' Sacramento-area med spa locations. Learn about recovery, results, and more.",
+    "proposed_title": "Microneedling | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/body/coolsculpting-elite/",
+    "path": "/services/body/coolsculpting-elite/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/body/coolsculpting-elite/",
+     "keywords_count": 376,
+     "top_keyword": "coolsculpting sacramento",
+     "clicks": 7,
+     "impressions": 8173,
+     "ctr": 0.0856,
+     "position": 27.328765,
+     "traffic_value": 18.5
+    },
+    "traffic": 20.0,
+    "score": 8166.003912,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting® Elite for Elk Grove, Folsom, Roseville, & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "CoolSculpting® Elite for Elk Grove, Folsom, Roseville, ...",
+    "h1": "CoolSculpting® Elite",
+    "current_description": "Sculpt your shape nonsurgically with CoolSculpting Elite at Destination Aesthetics' Sacramento-area locations. These treatments are more efficient, more comfortable, and faster than regular CoolSculpting!",
+    "proposed_title": "CoolSculpting® Elite | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/location/napa/",
+    "path": "/location/napa/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in DA Napa'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/location/napa/",
+     "keywords_count": 838,
+     "top_keyword": "destination aesthetics napa",
+     "clicks": 116,
+     "impressions": 8070,
+     "ctr": 1.4374,
+     "position": 24.751425,
+     "traffic_value": 73.78
+    },
+    "traffic": 19.0,
+    "score": 7954.00182,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Med Spa in DA Napa - Destination Aesthetics",
+    "serp_title": "Med Spa in DA Napa",
+    "h1": "DA Napa",
+    "current_description": "",
+    "proposed_title": "Med Spa in DA Napa | Destination Aesthetics Medical Spa",
+    "proposed_description": "Destination Aesthetics Napa, formerly Lift Aesthetics, is a medical spa at 1834 First St offering injectables, facials, skin resurfacing, and body contouring with the same team patients already know. Find hours, directions, services, and how to book a consultation.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3476
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/face/botox-dysport/",
+    "path": "/services/face/botox-dysport/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'BOTOX® & Dysport - Sacramento'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/face/botox-dysport/",
+     "keywords_count": 262,
+     "top_keyword": "botox sacramento",
+     "clicks": 22,
+     "impressions": 6944,
+     "ctr": 0.3168,
+     "position": 14.749135,
+     "traffic_value": 84.0
+    },
+    "traffic": 36.0,
+    "score": 6922.001408,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "BOTOX® Cosmetic & Dysport® for Elk Grove, Folsom, Roseville, & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "BOTOX® & Dysport - Sacramento",
+    "h1": "BOTOX® & Dysport®",
+    "current_description": "Reveal smoother, younger-looking skin with BOTOX Cosmetic and Dysport at Destination Aesthetics' Sacramento-area med spa locations, including El Dorado Hills. Learn about recovery, results, and more.",
+    "proposed_title": "BOTOX® & Dysport - Sacramento | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/face/dermal-fillers/",
+    "path": "/services/face/dermal-fillers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Dermal Fillers - Juvéderm® - Restylane®'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/face/dermal-fillers/",
+     "keywords_count": 239,
+     "top_keyword": "juvederm near me",
+     "clicks": 2,
+     "impressions": 5611,
+     "ctr": 0.0356,
+     "position": 23.198182,
+     "traffic_value": 4.6
+    },
+    "traffic": 16.0,
+    "score": 5609.002484,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Dermal Fillers - Juvéderm® - Restylane® - Destination Aesthetics",
+    "serp_title": "Dermal Fillers - Juvéderm® - Restylane®",
+    "h1": "Dermal Fillers",
+    "current_description": "Elevate your look with dermal fillers such as Juvéderm at Destination Aesthetics' Sacramento-area med spa locations. Book Online Today!",
+    "proposed_title": "Dermal Fillers - Juvéderm® - Restylane® | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/skin/hydrafacial/",
+    "path": "/services/skin/hydrafacial/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/skin/hydrafacial/",
+     "keywords_count": 191,
+     "top_keyword": "hydrafacial sacramento",
+     "clicks": 34,
+     "impressions": 3591,
+     "ctr": 0.9468,
+     "position": 15.179615,
+     "traffic_value": 36.7
+    },
+    "traffic": 94.0,
+    "score": 3557.000412,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "HydraFacial® for Elk Grove, Folsom, Roseville, & Sacramento, CA | Destination Aesthetics Medical Spa",
+    "serp_title": "HydraFacial® for Elk Grove, Folsom, Roseville, & ...",
+    "h1": "HydraFacial®",
+    "current_description": "Hydrate and cleanse your skin like never before with HydraFacial at Destination Aesthetics' Sacramento-area med spa locations. Discover what this luxurious treatment can do for your skin.",
+    "proposed_title": "HydraFacial® | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/choose-a-location/",
+    "path": "/choose-a-location/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/choose-a-location/",
+     "keywords_count": 39,
+     "top_keyword": "destination aesthetics folsom",
+     "clicks": 5,
+     "impressions": 1793,
+     "ctr": 0.2789,
+     "position": 12.092582,
+     "traffic_value": 6.1
+    },
+    "traffic": 3.0,
+    "score": 1787.999323,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Choose a Location | Destination Aesthetics Medical Spa",
+    "serp_title": "Choose a Location | Destination Aesthetics Medical Spa",
+    "h1": "Choose a Location",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find a Destination Aesthetics medical spa near you, with addresses and hours for El Dorado Hills, Sacramento, Folsom, Elk Grove, Roseville and Napa, plus a way to request a complimentary consultation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 1727
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/services/face/vitamin-b12-injections/",
+    "path": "/services/face/vitamin-b12-injections/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Vitamin B12 Injections in Sacramento – Support Weight Loss'",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/services/face/vitamin-b12-injections/",
+     "keywords_count": 155,
+     "top_keyword": "where can i get a b12 shot",
+     "clicks": 0,
+     "impressions": 1235,
+     "ctr": 0.0,
+     "position": 30.19757,
+     "traffic_value": null
+    },
+    "traffic": 4.0,
+    "score": 1235.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Vitamin B12 Injections in Sacramento – Support Weight Loss - Destination Aesthetics",
+    "serp_title": "Vitamin B12 Injections in Sacramento – Support Weight Loss",
+    "h1": "Vitamin B12 Injections",
+    "current_description": "Recharge your energy and metabolism with Vitamin B12 injections at Destination Aesthetics™ in Sacramento. These medical-grade shots support weight loss, reduce fatigue, and promote overall wellness so you feel vibrant and balanced every day.",
+    "proposed_title": "Vitamin B12 Injections in Sacramento – Support Weight Loss | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/blog/dark-skin-med-spa-treatments/",
+    "path": "/blog/dark-skin-med-spa-treatments/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/blog/dark-skin-med-spa-treatments/",
+     "keywords_count": 94,
+     "top_keyword": "medical spa treatments roseville",
+     "clicks": 0,
+     "impressions": 649,
+     "ctr": 0.0,
+     "position": 45.761171,
+     "traffic_value": null
+    },
+    "traffic": 4.0,
+    "score": 649.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Dark Skin & Med Spa Treatments in Roseville, CA: What You Need to Know | Destination Aesthetics | Destination Aesthetics Medical Spa",
+    "serp_title": "Dark Skin & Med Spa Treatments: What You Need to Know",
+    "h1": "Dark Skin & Med Spa Treatments: What You Need to Know",
+    "current_description": "The skincare pros at Destination Aesthetics med spa in Roseville, CA, share a few things men and women with dark skin need to know before trying their first treatment.",
+    "proposed_title": "Dark Skin & Med Spa Treatments: What You Need to Know | Destination Aesthetics Medical Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/blog/everything-you-need-to-know-about-dermaplaning/",
+    "path": "/blog/everything-you-need-to-know-about-dermaplaning/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/blog/everything-you-need-to-know-about-dermaplaning/",
+     "keywords_count": 53,
+     "top_keyword": "destination aesthetics",
+     "clicks": 0,
+     "impressions": 411,
+     "ctr": 0.0,
+     "position": 18.832116,
+     "traffic_value": null
+    },
+    "traffic": 10.0,
+    "score": 411.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Everything You Need To Know About Dermaplaning | Destination Aesthetics Medical Spa",
+    "serp_title": "Everything You Need To Know About Dermaplaning",
+    "h1": "Everything You Need To Know About Dermaplaning",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what dermaplaning is, how an esthetician performs it, and what to expect afterward, with insights from Destination Aesthetics staff. Includes how to book at our Folsom, Roseville, or Elk Grove locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/about/our-team/",
+    "path": "/about/our-team/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/about/our-team/",
+     "keywords_count": 26,
+     "top_keyword": "destination aesthetics jobs",
+     "clicks": 2,
+     "impressions": 173,
+     "ctr": 1.1561,
+     "position": 21.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 170.999947,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Our Team Archive - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "Our Team",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet the Destination Aesthetics team: our medical director and founder, nurse injectors, nurse practitioners, a PA-C, licensed estheticians, and the managers at each of our locations. This page introduces our staff but doesn't list job openings.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 2905
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.destinationaesthetics.com/financing/",
+     "keywords_count": 29,
+     "top_keyword": "destination aesthetics el dorado hills",
+     "clicks": 0,
+     "impressions": 161,
+     "ctr": 0.0,
+     "position": 40.993789,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 161.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Payment Options | Destination Aesthetics™",
+    "serp_title": "",
+    "h1": "Your beauty journey, your timeline.",
+    "current_description": "",
+    "proposed_title": "Financing Options for Treatments | Destination Aesthetics Medical Spa",
+    "proposed_description": "Explore financing for your treatments, including 0% APR availability, approvals up to $50,000, and no hard credit checks. Choose your location to get started, with offices in El Dorado Hills, Sacramento, Folsom, Elk Grove, Roseville, and Napa.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Pricing_Page",
+    "text_chars": 1608
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/open-payments-database/",
+    "path": "/open-payments-database/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Open Payments Database - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "Notice to Patients: Open Payments Database (AB 1278)",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A patient notice about the federal Open Payments database (AB 1278), with a link to the CMS Open Payments page. It explains that the Physician Payments Sunshine Act makes public payments over $10 from drug, device and biologic manufacturers to physicians and teaching hospitals.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 1698
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/service/",
+    "path": "/service/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Services Archive - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse Destination Aesthetics' medical spa services across face, skin, body, and wellness, from BOTOX® and dermal fillers to HydraFacial®, microneedling, CoolSculpting® Elite, and weight loss injections. Choose a treatment to learn more or book a consultation at one of our Northern California locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Services_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/3-syringe-package-for-only-2100/",
+    "path": "/specials-events/3-syringe-package-for-only-2100/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "3 SYRINGE PACKAGE FOR ONLY $2100* - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "3 SYRINGE PACKAGE FOR ONLY $2100*",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A 3-syringe filler package for $2,100 (up to a $2,550 value) that you can build from any combination of Juvéderm and Restylane fillers. See the terms, including Allē and #DAlife points, and where to purchase.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 1729
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/acne-awareness-month/",
+    "path": "/specials-events/acne-awareness-month/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Acne Awareness Month! - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "Acne Awareness Month!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Save 25% on select Clenziderm, SkinMedica, and ZO Skin Health acne products during Acne Awareness Month. The offer is in office only and ends June 30, 2025.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 1728
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/buy-2-syringes-of-juvederm-filler-get-1-free/",
+    "path": "/specials-events/buy-2-syringes-of-juvederm-filler-get-1-free/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Buy 2 Syringes Of JUVÉDERM® Filler, Get 1 FREE! - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "Buy 2 Syringes Of JUVÉDERM® Filler, Get 1 FREE!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Buy two full syringes of Juvéderm and get a third of equal or lesser value free when all three are used in the same appointment. See the offer terms and the Destination Aesthetics locations where it's available.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 1508
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/free-laser-hair-removal/",
+    "path": "/specials-events/free-laser-hair-removal/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FREE* Laser Hair Removal! - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "FREE* Laser Hair Removal!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Get a free laser hair removal treatment on the upper lip or chin at the El Dorado Hills or Roseville location, a $150 value. Terms apply, including one offer per person and a required virtual consultation before your appointment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 1650
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/free-zo-skin-health-wrinkle-texture-repair-retinol/",
+    "path": "/specials-events/free-zo-skin-health-wrinkle-texture-repair-retinol/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FREE ZO® Skin Health Wrinkle + Texture Repair Retinol! - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "FREE ZO® Skin Health Wrinkle + Texture Repair Retinol!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Buy the ZO® Pigment Kit and get a travel size ZO® Wrinkle + Texture Repair Retinol free while supplies last. See what the kit includes, the offer terms, and locations across Northern California.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 1759
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/specials-events/sofwave-now-at-da-roseville/",
+    "path": "/specials-events/sofwave-now-at-da-roseville/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "SOFWAVE™ Now At #DA Roseville! - Destination Aesthetics",
+    "serp_title": "",
+    "h1": "SOFWAVE™ Now At #DA Roseville!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Sofwave™, an ultrasound-based skin treatment, is now offered exclusively at Destination Aesthetics in Roseville. See the limited-time offers: buy 2 areas and get 1 free, or buy 1 area and get 25% off the second.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2002
+   },
+   {
+    "url": "https://www.destinationaesthetics.com/blog/how-to-prepare-for-laser-hair-removal/",
+    "path": "/blog/how-to-prepare-for-laser-hair-removal/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How To Prepare For Laser Hair Removal | Destination Aesthetics Medical Spa",
+    "serp_title": "",
+    "h1": "How To Prepare For Laser Hair Removal",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how to get ready for laser hair removal, including when to stop waxing, why to shave beforehand, how sun exposure matters, and which medications and skincare products to tell your provider about. Tips come from the Destination Aesthetics Folsom team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/location/el-dorado-hills/page/4/",
+    "/location/napa/page/3/",
+    "/location/folsom/page/3/",
+    "/service/page/2/",
+    "/location/napa/page/2/",
+    "/location/roseville/page/3/",
+    "/location/folsom/page/4/",
+    "/service/page/4/",
+    "/location/sacramento/page/3/",
+    "/location/elk-grove/page/4/",
+    "/about/our-team/page/2/",
+    "/location/elk-grove/page/3/",
+    "/location/roseville/page/4/",
+    "/location/elk-grove/page/2/",
+    "/service/page/3/",
+    "/about/our-team/page/4/",
+    "/about/our-team/page/3/",
+    "/location/sacramento/page/2/",
+    "/location/el-dorado-hills/page/3/",
+    "/location/el-dorado-hills/page/2/",
+    "/location/roseville/page/2/",
+    "/location/sacramento/page/4/",
+    "/location/folsom/page/2/",
+    "/location/roseville/page/5/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": [
+    "/"
+   ]
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

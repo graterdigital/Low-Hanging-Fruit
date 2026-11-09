@@ -1,0 +1,2708 @@
+{
+ "data": {
+  "pid": 9799850,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 113
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 14
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "FenceWorks of Georgia",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://www.fenceworksofga.com/how-to-extend-the-height-of-a-fence/",
+    "path": "/how-to-extend-the-height-of-a-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 14.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Extend the Height of a Fence? | FenceWorks of Georgia",
+    "serp_title": "How to Extend the Height of a Fence?",
+    "h1": "How to Extend the Height of a Fence?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why homeowners raise their fence height and the steps involved, from removing old posts to setting taller ones in concrete and adding rails. Includes a tools and materials list, a rail-count guide by fence height, and local regulation tips.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/do-i-need-fence-around-my-pool/",
+    "path": "/do-i-need-fence-around-my-pool/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 8.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Do I Need a Fence Around My Pool? | FenceWorks of Georgia",
+    "serp_title": "Do I Need a Fence Around My Pool?",
+    "h1": "Do I Need a Fence Around My Pool?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find out whether your pool needs a fence, how building codes and insurance factor in, and how mesh, vinyl, aluminum, glass, and wood pool fences compare. Includes tips for choosing an installer in the Atlanta area.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/what-type-of-fence-would-be-best/",
+    "path": "/what-type-of-fence-would-be-best/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 5.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Type of Fence Would be Best for Your Home? | FenceWorks of Georgia",
+    "serp_title": "What Type of Fence Would be Best for Your Home?",
+    "h1": "What Type of Fence Would be Best for Your Home?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Start with why you need a fence, whether privacy, pool safety, security or looks, then weigh your home's style, upkeep and personal taste. This guide walks through the questions to ask before choosing a fence type.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3341
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-close-to-a-road-can-a-fence-be-in-georgia/",
+    "path": "/how-close-to-a-road-can-a-fence-be-in-georgia/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 3.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How Close to a Road Can a Fence Be in Georgia? | FenceWorks of Georgia",
+    "serp_title": "How Close to a Road Can a Fence Be in Georgia?",
+    "h1": "How Close to a Road Can a Fence Be in Georgia?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Georgia has no statewide rule on how close a fence can be to a road, so placement depends on local ordinances, HOA rules, property lines, easements, and sight lines at intersections. This guide covers each factor and how to find your boundaries and check local requirements.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/decorating-chain-link/",
+    "path": "/decorating-chain-link/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Ideas for Decorating Your Chain Link Fence | FenceWorks of Georgia",
+    "serp_title": "Ideas for Decorating Your Chain Link Fence",
+    "h1": "Ideas for Decorating Your Chain Link Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Five easy ways to dress up a chain link fence, from painting it to weaving in bamboo or vinyl slats to building privacy panels, plus when replacing it may make more sense.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3398
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-maintenance-tips-for-moisture-and-mold/",
+    "path": "/fence-maintenance-tips-for-moisture-and-mold/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Maintenance Tips for Moisture and Mold | FenceWorks of Georgia",
+    "serp_title": "Fence Maintenance Tips for Moisture and Mold",
+    "h1": "Fence Maintenance Tips for Moisture and Mold",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how moisture and mold affect wood and vinyl fences, what damage to look for in posts, boards, rails and gates, and how to clean off mold and mildew.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/research-your-fence-regulations-before-you-build/",
+    "path": "/research-your-fence-regulations-before-you-build/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Research Your Fence Regulations Before You Build | FenceWorks of Georgia",
+    "serp_title": "Research Your Fence Regulations Before You Build",
+    "h1": "Research Your Fence Regulations Before You Build",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why to check local and HOA fence rules before you build, including the three main areas they cover: fence height, materials, and setback distance from the road.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 2604
+   },
+   {
+    "url": "https://www.fenceworksofga.com/weeds-on-fence-line/",
+    "path": "/weeds-on-fence-line/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Tips: How to Keep Weeds off the Fence Line | FenceWorks of Georgia",
+    "serp_title": "Fence Tips: How to Keep Weeds off the Fence Line",
+    "h1": "Fence Tips: How to Keep Weeds off the Fence Line",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Four ways to keep weeds off a fence line: chemical sprays, heat, vinegar, and hand pulling and tilling. Also covers mulching to prevent regrowth and checking with neighbors before treating.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/athletic-field-tennis-court-fencing-atlanta/",
+    "path": "/athletic-field-tennis-court-fencing-atlanta/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Athletic Field & Tennis Court Fencing Atlanta | FenceWorks",
+    "serp_title": "Athletic field & tennis court fencing contractors in Atlanta, GA",
+    "h1": "Athletic field & tennis court fencing contractors in Atlanta, GA",
+    "current_description": "Athletic field and tennis court fencing contractors for metro Atlanta schools, parks, HOAs, and sports facilities. Rated 4.9★ by 950+ neighbors. Free on-site estimates.",
+    "proposed_title": "Athletic field & tennis court fencing contractors in Atlanta, GA | FenceWorks of Georgia",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/classic-wood-fences-atlanta-ga/",
+    "path": "/classic-wood-fences-atlanta-ga/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Great Classic Wood Fences | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Great Classic Wood Fences",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why classic wood fences remain a favorite for Atlanta homes, from common uses like privacy and pet safety to choosing a wood such as cedar and keeping it maintained.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Product_Page",
+    "text_chars": 3279
+   },
+   {
+    "url": "https://www.fenceworksofga.com/great-dog-fences-for-atlanta-ga-pet-owners/",
+    "path": "/great-dog-fences-for-atlanta-ga-pet-owners/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Great Dog Fences for Pet Owners | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Great Dog Fences for Pet Owners",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how underground dog fences work for Atlanta homes where traditional fences aren't allowed, including marker placement and a step-by-step training routine for your dog.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/privacy-policy/",
+    "path": "/privacy-policy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Privacy Policy | FenceWorks of GA",
+    "serp_title": "",
+    "h1": "Privacy Policy",
+    "current_description": "",
+    "proposed_title": "Privacy Policy | FenceWorks of Georgia",
+    "proposed_description": "Read how FenceWorks of Georgia collects and uses information through cookies, web server logs, IP addresses and email, and when information may be disclosed. Includes notes on children's privacy and how information transmissions are protected.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Privacy_Policy_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/10-tips-on-how-to-choose-a-qualified-fence-company/",
+    "path": "/10-tips-on-how-to-choose-a-qualified-fence-company/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "10 Tips on How to Choose a Qualified Fence Company | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "10 Tips on How to Choose a Qualified Fence Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Ten practical tips for choosing a fence contractor, from asking neighbors for referrals and checking the Better Business Bureau to confirming insurance, comparing written estimates and watching deposit requests.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/3-benefits-vinyl-fences/",
+    "path": "/3-benefits-vinyl-fences/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Top 3 Benefits of Vinyl Fences | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Top 3 Benefits of Vinyl Fences",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Vinyl fences are popular for three reasons: they last for decades, they need little upkeep, and they have a lower environmental impact than many people assume. Here is how each benefit works.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3173
+   },
+   {
+    "url": "https://www.fenceworksofga.com/3-reasons-choose-vinyl-fence/",
+    "path": "/3-reasons-choose-vinyl-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "3 Reasons to Install a Vinyl Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "3 Reasons to Install a Vinyl Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare vinyl and wood fencing on cost, versatility, and durability, including why vinyl needs less upkeep and how upfront price differs from long-term maintenance costs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3137
+   },
+   {
+    "url": "https://www.fenceworksofga.com/3-reasons-install-split-rail-fence/",
+    "path": "/3-reasons-install-split-rail-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Top 3 Reasons to Install a Split Rail Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Top 3 Reasons to Install a Split Rail Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Split rail fences won't give you privacy, but they work well for marking property lines, dividing areas of a large yard, and keeping livestock in or out. Here are three reasons to consider one.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 2899
+   },
+   {
+    "url": "https://www.fenceworksofga.com/4-perks-chain-link-fences/",
+    "path": "/4-perks-chain-link-fences/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "4 Big Perks of Chain Link Fences | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "4 Big Perks of Chain Link Fences",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Four benefits of chain link fencing: very little maintenance, security against animals and trespassers, durability against the elements, and low cost compared with most other fence materials.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3011
+   },
+   {
+    "url": "https://www.fenceworksofga.com/5-things-know-build-fence/",
+    "path": "/5-things-know-build-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "5 Things to Know Before You Build Your Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "5 Things to Know Before You Build Your Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Five questions to answer before building a fence: its purpose, material, budget, HOA rules, and whether a living wall of hedges could work instead. Useful whether you DIY or hire a fence company.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3179
+   },
+   {
+    "url": "https://www.fenceworksofga.com/advantages-hiring-atlanta-fence-company-vs-diy/",
+    "path": "/advantages-hiring-atlanta-fence-company-vs-diy/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Advantages of Hiring an Atlanta Fence Company vs DIY | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Advantages of Hiring an Atlanta Fence Company vs DIY",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Weigh the pros and cons of building your own fence versus hiring a pro, including local codes and permits, materials and soil, skill level, and the true cost of your time. Includes how to request a free estimate in the greater Atlanta area.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Comparisons",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+    "path": "/alpharetta-ga-fence-company-tips-for-choosing-a-residential-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tips for Choosing a Residential Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Tips for Choosing a Residential Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Four questions to ask before you pick a residential fence: your budget, what the fence is for, the design you want, and any neighborhood restrictions. Written by an Alpharetta, GA fence company.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/are-electric-fences-legal-ga/",
+    "path": "/are-electric-fences-legal-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Are electric fences legal in residential areas in Georgia? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Are electric fences legal in residential areas in Georgia?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Georgia has no single statewide rule on electric fences, so local ordinances and HOA covenants decide what's allowed. This guide covers lot-size limits, warning signs, power limits, and permits to check before you install.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/atlanta-fence-company-best-fences-screening/",
+    "path": "/atlanta-fence-company-best-fences-screening/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Atlanta Fence Company: Best Fences for Screening | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Atlanta Fence Company: Best Fences for Screening",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how fences and screens differ and which materials suit screening, from lattice and trellis to solid wood, vinyl, stockade and close-set picket styles. Includes how to get ideas and a price estimate from FenceWorks of Georgia.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/atlanta-fence-company-best-rural-fencing-ideas/",
+    "path": "/atlanta-fence-company-best-rural-fencing-ideas/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Atlanta Fence Company: Best Rural Fencing Ideas | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Atlanta Fence Company: Best Rural Fencing Ideas",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare rural fence options for Georgia properties, including chain link, post and rail, solid board and picket, with notes on cost, containing animals, privacy and security.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/atlanta-fence-companys-top-tips-spring-cleaning-fencing/",
+    "path": "/atlanta-fence-companys-top-tips-spring-cleaning-fencing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Atlanta Fence Company’s Top Tips For Spring Cleaning Fencing | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Atlanta Fence Company’s Top Tips For Spring Cleaning Fencing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Spring cleaning tips for wooden, metal, and vinyl fences from an Atlanta fence company, including how to scrub, pressure wash, and prep a fence before staining, sealing, or painting.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/atlanta-fence-contractor/",
+    "path": "/atlanta-fence-contractor/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Proven Tips for Hiring the Best Atlanta Fence Contractor | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Proven Tips for Hiring the Best Atlanta Fence Contractor",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A checklist for hiring an Atlanta fence contractor: what to confirm with your building department and HOA first, then how to check licenses, complaints, and referrals before you sign.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3002
+   },
+   {
+    "url": "https://www.fenceworksofga.com/atlanta-garden-gates/",
+    "path": "/atlanta-garden-gates/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Art of Atlanta Garden Gates | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Art of Atlanta Garden Gates",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Tips for choosing an Atlanta garden gate, from matching your home's architecture to picking decorative hinges and latches, plus ideas like antique finds and reproductions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3313
+   },
+   {
+    "url": "https://www.fenceworksofga.com/backyard-insect-repellents/",
+    "path": "/backyard-insect-repellents/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Are My Options for Backyard Insect Repellents? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What Are My Options for Backyard Insect Repellents?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare options for keeping bugs out of your Georgia backyard, from DEET and other chemical repellents to tidying up, essential oils, repellent plants and bug zappers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/backyard-new-privacy-fence/",
+    "path": "/backyard-new-privacy-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Enjoy Your Backyard this Spring and Summer with a New Privacy Fence! | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Enjoy Your Backyard this Spring and Summer with a New Privacy Fence!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Five reasons to add a privacy fence to your backyard, from pool privacy and security to safe play space for kids and pets and added home value. Includes details on getting a free estimate from Fenceworks of Georgia.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/before-you-build-what-are-the-pool-fence-guidelines-in-atlanta-ga/",
+    "path": "/before-you-build-what-are-the-pool-fence-guidelines-in-atlanta-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Before You Build! What are the Pool Fence Guidelines in Atlanta, GA? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Before You Build! What are the Pool Fence Guidelines in Atlanta, GA?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A walk-through of an example pool fence installation in Atlanta, covering the guidelines it must meet, from gate height and latching to maximum openings and climbing clearance, before the pool can be filled.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 2932
+   },
+   {
+    "url": "https://www.fenceworksofga.com/benefits-of-metal-fences/",
+    "path": "/benefits-of-metal-fences/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Are the Benefits of Metal Fences, Like Aluminum and Steel | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What Are the Benefits of Metal Fences, Like Aluminum and Steel",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how aluminum and steel fences compare on cost, security, maintenance, rust resistance, and design flexibility, including how they can replicate classic wrought iron looks.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-commercial-fences-atlanta-ga/",
+    "path": "/best-commercial-fences-atlanta-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Commercial Fence Considerations | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Commercial Fence Considerations",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how commercial fences in Atlanta handle safety, protection of equipment and materials, and visibility from the road, and when wrought iron, chain link, or an electric gate may fit a business or job site.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3205
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-fences-for-pets/",
+    "path": "/best-fences-for-pets/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Best Fences for Pets | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Best Fences for Pets",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare chain link, metal, wood and vinyl fencing for keeping dogs and cats in your yard, plus design tips on height, spacing, crosspieces and digging.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-low-maintenance-fences-for-georgia-homeowners/",
+    "path": "/best-low-maintenance-fences-for-georgia-homeowners/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Best Low-Maintenance Fences for Georgia Homeowners | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Best Low-Maintenance Fences for Georgia Homeowners",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare low-maintenance fence options for Georgia homes, including vinyl, aluminum, chain-link, steel, and composite. Also covers climate, privacy, security, HOA rules, budget, and simple upkeep tips.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-material-for-atlanta-pool-fence/",
+    "path": "/best-material-for-atlanta-pool-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What is the Best Material for an Atlanta Pool Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What is the Best Material for an Atlanta Pool Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare aluminum, steel, wood, vinyl and chain link for an Atlanta pool fence, and see how the right material depends on whether it's a backyard, hotel or community pool.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3330
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-secure-metal-fencing/",
+    "path": "/best-secure-metal-fencing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Best Material for Secure Metal Fencing | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Best Material for Secure Metal Fencing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare aluminum, steel, and ornamental metal fencing for security, including rust resistance, cost, durability, and where each material works best for homes and businesses.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/best-security-fencing-fenceworks-georgia/",
+    "path": "/best-security-fencing-fenceworks-georgia/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Best Security Fencing by FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Best Security Fencing by FenceWorks of Georgia",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "What makes a fence secure: strength, height, and designs that resist climbing, plus how chain link, metal, vinyl, and wood compare and why gate access control matters. Written by FenceWorks of Georgia for homes and businesses.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/can-you-legally-extend-fence-post-heights-for-climbing-plants-in-atlanta/",
+    "path": "/can-you-legally-extend-fence-post-heights-for-climbing-plants-in-atlanta/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Can You Legally Extend Fence Post Heights for Climbing Plants in Atlanta? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Can You Legally Extend Fence Post Heights for Climbing Plants in Atlanta?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find out how Atlanta's zoning limits and HOA rules affect extending fence post heights for climbing plants, what can happen if you break them, and legal options like removable lattice panels.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/chain-link-pros-cons/",
+    "path": "/chain-link-pros-cons/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Pros and Cons of Chain Link Fences | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Pros and Cons of Chain Link Fences",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Weigh the benefits and drawbacks of chain link fencing: low cost, durability, and versatility against its utilitarian looks and open visibility. A useful read before choosing a fence for a yard, pool, or property line.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/choose-best-pool-fence/",
+    "path": "/choose-best-pool-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How do I Choose the Best Pool Fence? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How do I Choose the Best Pool Fence?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what to weigh when choosing an Atlanta pool fence, from the four-inch slat spacing limit and HOA rules to why wood and chain link fall short and why metal or heavy-duty vinyl is usually the better choice.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3041
+   },
+   {
+    "url": "https://www.fenceworksofga.com/choosing-best-fence-needs/",
+    "path": "/choosing-best-fence-needs/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Choosing the Best Fence for Your Needs | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Choosing the Best Fence for Your Needs",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how to match a fence to your needs, from privacy and security to safety, weather control, and looks, before you choose a style and material.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.fenceworksofga.com/diy-wooden-fence-repair/",
+    "path": "/diy-wooden-fence-repair/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "DIY Wooden Fence Repair | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "DIY Wooden Fence Repair",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A step-by-step DIY guide to repairing a wooden fence, including how to brace a wobbly post with 2x4s and how to replace a damaged rail and fence boards.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3047
+   },
+   {
+    "url": "https://www.fenceworksofga.com/do-i-need-a-permit-to-build-fence-in-georgia/",
+    "path": "/do-i-need-a-permit-to-build-fence-in-georgia/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Do I need a permit to build a fence in Georgia? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Do I need a permit to build a fence in Georgia?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/dont-let-summer-sunshine-affect-fence/",
+    "path": "/dont-let-summer-sunshine-affect-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Don’t Let the Summer Sunshine Affect Your Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Don’t Let the Summer Sunshine Affect Your Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/featured-on-hgtv-worst-yard-on-the-block/",
+    "path": "/featured-on-hgtv-worst-yard-on-the-block/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "FenceWorks of Georgia featured on HGTV's Worst Yard on the Block",
+    "serp_title": "",
+    "h1": "FenceWorks of Georgia featured on HGTV’s Worst Yard on the Block",
+    "current_description": "",
+    "proposed_title": "FenceWorks of Georgia featured on HGTV’s Worst Yard on the Block | FenceWorks of Georgia",
+    "proposed_description": "",
+    "basis": [
+     "title: glued",
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Story"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-building-steering-clear-mishaps/",
+    "path": "/fence-building-steering-clear-mishaps/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Building | Steering Clear of Mishaps | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fence Building | Steering Clear of Mishaps",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-cleaning-whats-best-way/",
+    "path": "/fence-cleaning-whats-best-way/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Cleaning | What’s the Best Way? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fence Cleaning | What’s the Best Way?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-construction-basics/",
+    "path": "/fence-construction-basics/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Construction Basics | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fence Construction Basics",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-installed-in-winter/",
+    "path": "/fence-installed-in-winter/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Can I Have a Fence Installed in the Winter? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Can I Have a Fence Installed in the Winter?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-maintenance-tips-seasons/",
+    "path": "/fence-maintenance-tips-seasons/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fence Maintenance Tips for All Seasons | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fence Maintenance Tips for All Seasons",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fence-tips-for-winter/",
+    "path": "/fence-tips-for-winter/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Best Tips for Painting or Staining Your Fence Before Winter | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Best Tips for Painting or Staining Your Fence Before Winter",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fencin-materials-depend-location/",
+    "path": "/fencin-materials-depend-location/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fencing Materials Depend on Location | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fencing Materials Depend on Location",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/fencing-makeover-ideas-atlanta-fence-contractor/",
+    "path": "/fencing-makeover-ideas-atlanta-fence-contractor/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fencing Makeover Ideas From Atlanta Fence Contractor | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Fencing Makeover Ideas From Atlanta Fence Contractor",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/great-dog-fence-options-atlanta-ga/",
+    "path": "/great-dog-fence-options-atlanta-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dog Fence Options | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Dog Fence Options",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-tall-can-a-fence-be-on-commercial-property/",
+    "path": "/how-tall-can-a-fence-be-on-commercial-property/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How tall can a fence be on commercial property in Georgia? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How tall can a fence be on commercial property in Georgia?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-fix-a-loose-fence-post/",
+    "path": "/how-to-fix-a-loose-fence-post/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Fix a Loose Fence Post? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Fix a Loose Fence Post?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-install-chain-link-dog-kennel/",
+    "path": "/how-to-install-chain-link-dog-kennel/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Install a Chain Link Dog Kennel | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Install a Chain Link Dog Kennel",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-paint-a-vinyl-fence/",
+    "path": "/how-to-paint-a-vinyl-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Paint a Vinyl Fence | FenceWorks of Georgia",
+    "serp_title": "How to Paint a Vinyl Fence",
+    "h1": "How to Paint a Vinyl Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-prepare-your-property-for-fence-installation/",
+    "path": "/how-to-prepare-your-property-for-fence-installation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Prepare Your Property for Fence Installation | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Prepare Your Property for Fence Installation",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-repair-a-hole-in-vinyl-fencing/",
+    "path": "/how-to-repair-a-hole-in-vinyl-fencing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Repair a Hole in Vinyl Fencing | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Repair a Hole in Vinyl Fencing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-repair-a-wooden-fence-pt-1-railing/",
+    "path": "/how-to-repair-a-wooden-fence-pt-1-railing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Repair a Wooden Fence Pt. 1 - Railing | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Repair a Wooden Fence Pt. 1 – Railing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-repair-a-wooden-fence-pt-2-fence-sections/",
+    "path": "/how-to-repair-a-wooden-fence-pt-2-fence-sections/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Repair a Wooden Fence Pt. 2 – Fence Sections | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Repair a Wooden Fence Pt. 2 – Fence Sections",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/how-to-take-care-of-your-new-wooden-fence/",
+    "path": "/how-to-take-care-of-your-new-wooden-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Take Care of Your New Wooden Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Take Care of Your New Wooden Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/incorporate-fences-spring-landscaping-plan/",
+    "path": "/incorporate-fences-spring-landscaping-plan/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Incorporate Fences Into Your Spring Landscaping Plan | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Incorporate Fences Into Your Spring Landscaping Plan",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/install-driveway-gates/",
+    "path": "/install-driveway-gates/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "3 Reasons to Protect Your Residence with a Drive Way Gate | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "3 Reasons to Protect Your Residence with a Drive Way Gate",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/install-pool-fence/",
+    "path": "/install-pool-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "3 Great Reasons to Install a Pool Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "3 Great Reasons to Install a Pool Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/installing-a-wood-picket-fence/",
+    "path": "/installing-a-wood-picket-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Installing a Wood Picket Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Installing a Wood Picket Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/keep-painted-fence-chipping/",
+    "path": "/keep-painted-fence-chipping/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Keep a Painted Fence from Chipping or Flaking | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Keep a Painted Fence from Chipping or Flaking",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/main-causes-fence-rot/",
+    "path": "/main-causes-fence-rot/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What are the Main Causes of Post and Fence Rot | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What are the Main Causes of Post and Fence Rot",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/much-will-new-fence-cost-atlanta-ga/",
+    "path": "/much-will-new-fence-cost-atlanta-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How Much Will a New Fence Cost in Atlanta, GA? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How Much Will a New Fence Cost in Atlanta, GA?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/now-perfect-time-install-new-fence/",
+    "path": "/now-perfect-time-install-new-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Now is the Perfect Time to Install Your New Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Now is the Perfect Time to Install Your New Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/options-wood-fences-atlanta/",
+    "path": "/options-wood-fences-atlanta/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "4 Best Options for Wood Fences in Atlanta | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "4 Best Options for Wood Fences in Atlanta",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/plan-fence-project-winter-fenceworks/",
+    "path": "/plan-fence-project-winter-fenceworks/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Plan Your Fence Project This Winter with FenceWorks",
+    "serp_title": "",
+    "h1": "Plan Your Fence Project This Winter with FenceWorks",
+    "current_description": "",
+    "proposed_title": "Plan Your Fence Project This Winter with FenceWorks | FenceWorks of Georgia",
+    "proposed_description": "",
+    "basis": [
+     "title: glued",
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/pool-fence-code-keeps-kids-safe/",
+    "path": "/pool-fence-code-keeps-kids-safe/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Pool Fence Code Keeps Kids Safe | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Pool Fence Code Keeps Kids Safe",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/reasons-not-to-diy/",
+    "path": "/reasons-not-to-diy/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "4 Reasons to Hire an Atlanta Fence Co, Instead of the DIY Option | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "4 Reasons to Hire an Atlanta Fence Co, Instead of the DIY Option",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/rebuild-fence-selling-home/",
+    "path": "/rebuild-fence-selling-home/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Should You Rebuild Your Fence Before Selling Your Home? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Should You Rebuild Your Fence Before Selling Your Home?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/remove-mildew-wooden-fence/",
+    "path": "/remove-mildew-wooden-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Remove Mildew From Your Wooden Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Remove Mildew From Your Wooden Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/repair-fences-gates-spring/",
+    "path": "/repair-fences-gates-spring/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Repair Fences and Gates Before Spring | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Repair Fences and Gates Before Spring",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/repair-restore-fencing-end-spring/",
+    "path": "/repair-restore-fencing-end-spring/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Repair and Restore Fencing Before the End of Spring | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Repair and Restore Fencing Before the End of Spring",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/repair-storm-damaged-fences/",
+    "path": "/repair-storm-damaged-fences/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Repair Storm Damaged Fences | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Repair Storm Damaged Fences",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/residential-fence-options-last-longest/",
+    "path": "/residential-fence-options-last-longest/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Which Residential Fence Options Last the Longest? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Which Residential Fence Options Last the Longest?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/right-time-new-fence/",
+    "path": "/right-time-new-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Right Time to Get Started on Your New Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Right Time to Get Started on Your New Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/sealing-wooden-fence/",
+    "path": "/sealing-wooden-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "4 Steps for Sealing Your Wooden Privacy Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "4 Steps for Sealing Your Wooden Privacy Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/stain-wooden-fence-get-looking-great/",
+    "path": "/stain-wooden-fence-get-looking-great/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Stain Your Wooden Fence and Get it Looking Great | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Stain Your Wooden Fence and Get it Looking Great",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/start-atlanta-fence-project-fall/",
+    "path": "/start-atlanta-fence-project-fall/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Start Your Atlanta Fence Project in the Fall | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Start Your Atlanta Fence Project in the Fall",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/step-by-step-guide-to-installing-a-split-rail-fence-in-ga/",
+    "path": "/step-by-step-guide-to-installing-a-split-rail-fence-in-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Step-by-Step Guide to Installing a Split Rail Fence in GA | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Step-by-Step Guide to Installing a Split Rail Fence in GA",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/suitable-swimming-pool-fencing-options-atlanta-fence-company/",
+    "path": "/suitable-swimming-pool-fencing-options-atlanta-fence-company/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Suitable Swimming Pool Fencing Options From Atlanta Fence Company | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Suitable Swimming Pool Fencing Options From Atlanta Fence Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/summer-decorate-picket-fence/",
+    "path": "/summer-decorate-picket-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Decorate Your Picket Fence for Summer | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "How to Decorate Your Picket Fence for Summer",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/summer-fence-maintenance-make-fence-last/",
+    "path": "/summer-fence-maintenance-make-fence-last/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Summer Fence Maintenance to Make Your Fence Last | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Summer Fence Maintenance to Make Your Fence Last",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/summer-fence-maintenance-wooden-fencing/",
+    "path": "/summer-fence-maintenance-wooden-fencing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Summer Fence Maintenance for Wooden Fencing | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Summer Fence Maintenance for Wooden Fencing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/the-easiest-fences-to-weed-and-maintain/",
+    "path": "/the-easiest-fences-to-weed-and-maintain/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Easiest Fences to Weed and Maintain | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Easiest Fences to Weed and Maintain",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/the-top-5-best-fence-materials/",
+    "path": "/the-top-5-best-fence-materials/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Top 4 Best Fence Materials | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "The Top 4 Best Fence Materials",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/tips-to-get-your-fence-and-backyard-ready-for-summer/",
+    "path": "/tips-to-get-your-fence-and-backyard-ready-for-summer/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tips to Get Your Fence and Backyard Ready for Summer | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Tips to Get Your Fence and Backyard Ready for Summer",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/tips-winterizing-fence-fenceworks-ga/",
+    "path": "/tips-winterizing-fence-fenceworks-ga/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Tips for Winterizing Your Fence by FenceWorks of GA",
+    "serp_title": "",
+    "h1": "Tips for Winterizing Your Fence by FenceWorks of GA",
+    "current_description": "",
+    "proposed_title": "Tips for Winterizing Your Fence by FenceWorks of GA | FenceWorks of Georgia",
+    "proposed_description": "",
+    "basis": [
+     "title: glued",
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/use-your-tax-refund-to-build-your-dream-fence/",
+    "path": "/use-your-tax-refund-to-build-your-dream-fence/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Use Your Tax Refund to Build Your Dream Fence | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Use Your Tax Refund to Build Your Dream Fence",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/value-fence-installation/",
+    "path": "/value-fence-installation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Will a Fence Installation Increase the Value of My Home? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Will a Fence Installation Increase the Value of My Home?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/what-do-you-put-on-wood-fence-to-protect-it/",
+    "path": "/what-do-you-put-on-wood-fence-to-protect-it/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Do You Put on a Wood Fence to Protect It? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What Do You Put on a Wood Fence to Protect It?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/what-is-the-best-way-to-extend-existing-fences/",
+    "path": "/what-is-the-best-way-to-extend-existing-fences/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What is the Best Way to Extend Existing Fences? | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What is the Best Way to Extend Existing Fences?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/what-type-of-fence-infographic/",
+    "path": "/what-type-of-fence-infographic/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Type of Fence is Best for Me? (Infographic) | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "What Type of Fence is Best for Me? (Infographic)",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Definitions"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/will-fence-survive-winter/",
+    "path": "/will-fence-survive-winter/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Will Your Fence Survive The Winter? More About Winter Fence Maintenance | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Will Your Fence Survive The Winter? More About Winter Fence Maintenance",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.fenceworksofga.com/winter-proofing-home/",
+    "path": "/winter-proofing-home/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Winter-Proofing Your Home Inside and Out | FenceWorks of Georgia",
+    "serp_title": "",
+    "h1": "Winter-Proofing Your Home Inside and Out",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/category/chain-link-fence/",
+    "/category/ranch-rail-split-rail-fence/",
+    "/category/chain-link-fence/page/2/",
+    "/category/cages-enclosures/",
+    "/category/commercial-fences-and-gates/",
+    "/category/steel-aluminum-fence/page/2/",
+    "/category/gates-and-entries/",
+    "/category/temporary-fencing/",
+    "/category/farm-fences/",
+    "/category/steel-aluminum-fence/",
+    "/category/horizontal-modern/",
+    "/category/composite-fence/",
+    "/category/athletic-facilities/",
+    "/category/commercial-gates/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

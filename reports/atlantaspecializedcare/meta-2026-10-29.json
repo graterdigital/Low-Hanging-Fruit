@@ -1,0 +1,2816 @@
+{
+ "data": {
+  "pid": 9704530,
+  "crawl": "2026-10-29",
+  "health": 87,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 106
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 28
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Atlanta Specialized Care",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://atlantaspecializedcare.com/therapies/cbt-therapy/",
+    "path": "/therapies/cbt-therapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/therapies/cbt-therapy/",
+     "keywords_count": 385,
+     "top_keyword": "cbt therapy near me",
+     "clicks": 11,
+     "impressions": 8085,
+     "ctr": 0.136,
+     "position": 13.989362,
+     "traffic_value": 25.4
+    },
+    "traffic": 14.0,
+    "score": 8074.0044,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Cognitive Behavior (CBT) Therapy in Atlanta & Alpharetta - Atlanta Specialized Care",
+    "serp_title": "Cognitive Behavioral Therapy (CBT) in Atlanta & Alpharetta",
+    "h1": "Cognitive Behavioral Therapy (CBT) in Atlanta & Alpharetta",
+    "current_description": "Discover how Cognitive Behavioral (CBT) Therapy at Atlanta Specialized Care helps manage anxiety, depression, trauma, and more with goal-focused strategies.",
+    "proposed_title": "Cognitive Behavioral Therapy (CBT) in Atlanta & Alpharetta - Atlanta Specialized Care",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-is-the-best-treatment-for-anxiety-and-panic-attacks/",
+    "path": "/what-is-the-best-treatment-for-anxiety-and-panic-attacks/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-is-the-best-treatment-for-anxiety-and-panic-attacks/",
+     "keywords_count": 445,
+     "top_keyword": "medications for panic attacks",
+     "clicks": 3,
+     "impressions": 4450,
+     "ctr": 0.0674,
+     "position": 25.810112,
+     "traffic_value": 3.3
+    },
+    "traffic": 8.0,
+    "score": 4447.0007000000005,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is The Best Treatment For Anxiety and Panic Attacks? - Atlanta Specialized Care",
+    "serp_title": "What Is The Best Treatment For Anxiety and Panic Attacks?",
+    "h1": "What Is The Best Treatment For Anxiety and Panic Attacks?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how psychotherapy such as cognitive behavioral therapy and medications including SSRIs, SNRIs, and benzodiazepines are used to treat anxiety and panic attacks, plus self-help habits that can support treatment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/most-common-types-of-eating-disorders/",
+    "path": "/most-common-types-of-eating-disorders/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/most-common-types-of-eating-disorders/",
+     "keywords_count": 191,
+     "top_keyword": "types of anorexia nervosa",
+     "clicks": 0,
+     "impressions": 3590,
+     "ctr": 0.0,
+     "position": 32.228133,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3590.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Most Common Types of Eating Disorders - Atlanta Specialized Care",
+    "serp_title": "Most Common Types of Eating Disorders",
+    "h1": "Most Common Types of Eating Disorders",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what an eating disorder is and how the most common types differ, including anorexia nervosa, bulimia nervosa, binge eating disorder, and ARFID, along with the symptoms and related conditions associated with each.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/therapies/blended-families/",
+    "path": "/therapies/blended-families/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Divorced & Blended Families Counseling in Atlanta & ...'",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/therapies/blended-families/",
+     "keywords_count": 93,
+     "top_keyword": "family counseling for divorced parents",
+     "clicks": 2,
+     "impressions": 1344,
+     "ctr": 0.1488,
+     "position": 17.158482,
+     "traffic_value": 2.0
+    },
+    "traffic": 0,
+    "score": 1342.000128,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Divorced & Blended Family Counseling in Atlanta & Alpharetta Atlanta Specialized Care",
+    "serp_title": "Divorced & Blended Families Counseling in Atlanta & ...",
+    "h1": "Divorced & Blended Families Counseling in Atlanta & Alpharetta",
+    "current_description": "Atlanta Specialized Care offers divorced & blended family counseling & resources to help families through complex issues.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/dr-michael-epstein/",
+    "path": "/team/dr-michael-epstein/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/dr-michael-epstein/",
+     "keywords_count": 45,
+     "top_keyword": "michael epstein psychiatrist",
+     "clicks": 153,
+     "impressions": 1058,
+     "ctr": 14.4612,
+     "position": 6.567107,
+     "traffic_value": 97.05
+    },
+    "traffic": 16.0,
+    "score": 905.0005040000001,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Michael Epstein, MD - Atlanta Specialized Care",
+    "serp_title": "Michael Epstein, MD",
+    "h1": "Michael Epstein, MD",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Dr. Michael Epstein, a board-certified child, adolescent and adult psychiatrist who offers in-person and telehealth care for anxiety, depression, ADHD, autism, developmental disabilities and OCD. Read about his training, background and collaborative approach to medication management.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-do-you-talk-about-in-grief-counseling/",
+    "path": "/what-do-you-talk-about-in-grief-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-do-you-talk-about-in-grief-counseling/",
+     "keywords_count": 64,
+     "top_keyword": "grief counselor atlanta ga",
+     "clicks": 1,
+     "impressions": 809,
+     "ctr": 0.1236,
+     "position": 54.169345,
+     "traffic_value": null
+    },
+    "traffic": 4.0,
+    "score": 808.000076,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Do You Talk About in Grief Counseling? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Do You Talk About in Grief Counseling?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what grief counseling is, which topics come up in sessions (feelings like guilt and sadness, coping skills, daily routines, and grief triggers), and how to see a grief counselor at Atlanta Specialized Care in Atlanta or Alpharetta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3459
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/weathering-emotional-storms-medication-and-therapy/",
+    "path": "/weathering-emotional-storms-medication-and-therapy/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/weathering-emotional-storms-medication-and-therapy/",
+     "keywords_count": 39,
+     "top_keyword": "psychiatric nurse practitioner atlanta",
+     "clicks": 1,
+     "impressions": 661,
+     "ctr": 0.1513,
+     "position": 20.172465,
+     "traffic_value": null
+    },
+    "traffic": 8.0,
+    "score": 659.999907,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Weathering Emotional Storms: Medication and Therapy - Atlanta Specialized Care",
+    "serp_title": "Weathering Emotional Storms: Medication and Therapy",
+    "h1": "Weathering Emotional Storms: Medication and Therapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Psychiatric nurse practitioner Katie Butler shares how she combines psychotropic medication and therapy to support clients with depression, anxiety, bipolar disorder, and ADHD. This post summarizes her article for the Aha! Connection and links to the full piece.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 1977
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/common-benefits-of-child-therapy-and-counseling/",
+    "path": "/common-benefits-of-child-therapy-and-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/common-benefits-of-child-therapy-and-counseling/",
+     "keywords_count": 83,
+     "top_keyword": "how to help with low self esteem atlanta",
+     "clicks": 0,
+     "impressions": 450,
+     "ctr": 0.0,
+     "position": 18.928889,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 450.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Common Benefits of Child Therapy and Counseling - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Common Benefits of Child Therapy and Counseling",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Wondering when a child might need a therapist? This guide covers common stressors like family changes, bullying, and low self-esteem, and how child counseling gives kids a space to work through big emotions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/mycala-cherry/",
+    "path": "/team/mycala-cherry/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/mycala-cherry/",
+     "keywords_count": 5,
+     "top_keyword": "mycala",
+     "clicks": 0,
+     "impressions": 419,
+     "ctr": 0.0,
+     "position": 7.67303,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 419.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Mycala Cherry - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Mycala Cherry",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Mycala Cherry, MS, LPC, NCC, a clinical therapist who provides individual and family therapy for adolescents, young adults, and families. Read about her training, specialties including trauma, anxiety, and depression, and her therapy approach.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/which-anxiety-disorder-types-are-the-most-common/",
+    "path": "/which-anxiety-disorder-types-are-the-most-common/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/which-anxiety-disorder-types-are-the-most-common/",
+     "keywords_count": 90,
+     "top_keyword": "different type of anxiety",
+     "clicks": 0,
+     "impressions": 417,
+     "ctr": 0.0,
+     "position": 35.748201,
+     "traffic_value": null
+    },
+    "traffic": 7.0,
+    "score": 417.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Which anxiety disorder types are the most common? - Atlanta Specialized Care",
+    "serp_title": "Which anxiety disorder types are the most common?",
+    "h1": "Which anxiety disorder types are the most common?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "An overview of the most common types of anxiety disorders, including generalized anxiety, OCD, PTSD, panic disorder, social anxiety, and specific phobias, with their symptoms and where to find anxiety treatment in Atlanta and Alpharetta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/therapies/rehabilitation-disability-counseling/",
+    "path": "/therapies/rehabilitation-disability-counseling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/therapies/rehabilitation-disability-counseling/",
+     "keywords_count": 58,
+     "top_keyword": "disability therapy services",
+     "clicks": 0,
+     "impressions": 398,
+     "ctr": 0.0,
+     "position": 31.525125,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 398.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Rehabilitation & Disability Counseling – Atlanta Specialized Care",
+    "serp_title": "Rehabilitation & Disability Counseling in Atlanta & Alpharetta",
+    "h1": "Rehabilitation & Disability Counseling in Atlanta & Alpharetta",
+    "current_description": "Discover expert disability counseling in Atlanta. Tailored therapy for physical disabilities, chronic illness, and adaptive mental health care.",
+    "proposed_title": "Rehabilitation & Disability Counseling in Atlanta & Alpharetta - Atlanta Specialized Care",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-to-tell-if-you-need-counseling/",
+    "path": "/how-to-tell-if-you-need-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/how-to-tell-if-you-need-counseling/",
+     "keywords_count": 50,
+     "top_keyword": "mental health counselor",
+     "clicks": 0,
+     "impressions": 345,
+     "ctr": 0.0,
+     "position": 36.072463,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 345.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How To Tell If You Need Counseling - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How To Tell If You Need Counseling",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn the warning signs that it may be time to see a mental health counselor, including intense emotions, substance use, social skill difficulties, and problems at work, and how counseling can help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/ross-mills/",
+    "path": "/team/ross-mills/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/ross-mills/",
+     "keywords_count": 16,
+     "top_keyword": "ross mills",
+     "clicks": 6,
+     "impressions": 203,
+     "ctr": 2.9556,
+     "position": 10.034482,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 197.000132,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Ross Mills - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Ross Mills",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Ross Mills, MS, APC, NCC, a clinical therapist at Atlanta Specialized Care Dunwoody who works with children, adolescents, and adults on issues such as anxiety, depression, substance use, ADHD, and autism. Learn about his Mercer University training, his therapy approaches, and the Executive Functioning groups he facilitates.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/can-i-see-the-same-therapist-for-depression-and-anxiety-counseling/",
+    "path": "/can-i-see-the-same-therapist-for-depression-and-anxiety-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/can-i-see-the-same-therapist-for-depression-and-anxiety-counseling/",
+     "keywords_count": 30,
+     "top_keyword": "what should i look for in a therapist who treats depression?",
+     "clicks": 0,
+     "impressions": 188,
+     "ctr": 0.0,
+     "position": 26.026595,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 188.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Can I See the Same Therapist for Depression and Anxiety Counseling? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Can I See the Same Therapist for Depression and Anxiety Counseling?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why one licensed therapist can treat both depression and anxiety, how the two conditions overlap, and why continuity of care matters. Also covers integrated treatment and medication management at Atlanta Specialized Care.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 2947
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/tatiana-matthews/",
+    "path": "/team/tatiana-matthews/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/tatiana-matthews/",
+     "keywords_count": 20,
+     "top_keyword": "tatiana matthews",
+     "clicks": 21,
+     "impressions": 202,
+     "ctr": 10.396,
+     "position": 10.40594,
+     "traffic_value": 2.0
+    },
+    "traffic": 49.0,
+    "score": 181.00008,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tatiana Kisil Matthews - Atlanta Specialized Care",
+    "serp_title": "Tatiana Kisil Matthews",
+    "h1": "Tatiana Kisil Matthews",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Tatiana Kisil Matthews, LPC, CRC, founder and clinical director of Atlanta Specialized Care, with her background, training, clinical focus areas, and her children's book on body safety.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/hello-world/",
+    "path": "/hello-world/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/hello-world/",
+     "keywords_count": 26,
+     "top_keyword": "male counseling",
+     "clicks": 0,
+     "impressions": 159,
+     "ctr": 0.0,
+     "position": 14.981132,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 159.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Advantages of Male Therapists: A Guide for Men Seeking Therapy - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Advantages of Male Therapists: A Guide for Men Seeking Therapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Ross Mills, MS, APC, NCC, outlines how a male therapist may help men in counseling, from understanding pressures around masculinity to a direct communication style, plus how to choose the right therapist for you.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3285
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/bre-curtin/",
+    "path": "/team/bre-curtin/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/bre-curtin/",
+     "keywords_count": 14,
+     "top_keyword": "bre curtin",
+     "clicks": 4,
+     "impressions": 155,
+     "ctr": 2.5806,
+     "position": 9.83871,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 151.00007,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bre Curtin - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Bre Curtin",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Bre Curtin, MS, NCC, LPC, a clinical therapist who provides individual and group therapy to children, adolescents and adults. Read about her education, the conditions she treats, and the approaches she uses, including CBT, DBT, play therapy and Exposure and Response Prevention.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/alexandra-alex-lewis/",
+    "path": "/team/alexandra-alex-lewis/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/alexandra-alex-lewis/",
+     "keywords_count": 5,
+     "top_keyword": "lewis counseling",
+     "clicks": 0,
+     "impressions": 150,
+     "ctr": 0.0,
+     "position": 18.299999,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 150.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Alexandra (Alex) Lewis - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Alexandra (Alex) Lewis",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Alex Lewis, Dunwoody Office Manager and Patient Coordinator at Atlanta Specialized Care, who greets patients and handles scheduling. Read about her background in psychology and childhood development and her plans for a master's in school counseling.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/jessica-fosse/",
+    "path": "/team/jessica-fosse/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/jessica-fosse/",
+     "keywords_count": 8,
+     "top_keyword": "jessica fosse",
+     "clicks": 8,
+     "impressions": 152,
+     "ctr": 5.2632,
+     "position": 12.513157,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 143.999936,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Jessica Fosse - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Jessica Fosse",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Jessica Fosse, MS, APC, CRC, a clinical therapist at Atlanta Specialized Care who works with children, teens, and adults on anxiety, depression, trauma, OCD, ADHD, and autism. Learn about her training in clinical rehabilitation counseling and her cognitive-behavioral, mindfulness, and person-centered approach.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/does-my-spouse-have-adhd-or-are-they-just-lazy/",
+    "path": "/does-my-spouse-have-adhd-or-are-they-just-lazy/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/does-my-spouse-have-adhd-or-are-they-just-lazy/",
+     "keywords_count": 37,
+     "top_keyword": "does my husband have adhd",
+     "clicks": 0,
+     "impressions": 139,
+     "ctr": 0.0,
+     "position": 23.84892,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 139.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Does My Spouse Have ADHD Or Are They Just Lazy? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Does My Spouse Have ADHD Or Are They Just Lazy?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how ADHD symptoms in a spouse, such as a short attention span, distractibility, disorganization, and procrastination, can differ from ordinary laziness. The page also explains the brain-based cause of ADD/ADHD and notes that a professional is needed to confirm a diagnosis.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/feeling-down-how-to-overcome-depression/",
+    "path": "/feeling-down-how-to-overcome-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/feeling-down-how-to-overcome-depression/",
+     "keywords_count": 3,
+     "top_keyword": "how to overcome depression atlanta ga",
+     "clicks": 0,
+     "impressions": 123,
+     "ctr": 0.0,
+     "position": 12.252032,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 123.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Feeling Down? How to Overcome Depression - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Feeling Down? How to Overcome Depression",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about the main types of depression, common symptoms of clinical depression, and treatment approaches such as talk therapy and medication, plus where to find care in Atlanta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/natalie-stadnick-uhl/",
+    "path": "/team/natalie-stadnick-uhl/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/natalie-stadnick-uhl/",
+     "keywords_count": 10,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 106,
+     "ctr": 0.0,
+     "position": 26.556603,
+     "traffic_value": null
+    },
+    "traffic": 42.0,
+    "score": 106.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Natalie Stadnick-Uhl - Atlanta Specialized Care",
+    "serp_title": "Natalie Stadnick-Uhl",
+    "h1": "Natalie Stadnick-Uhl",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Natalie Stadnick-Uhl, M.Div, LPC, CRC, a clinical therapist in Atlanta Specialized Care's Dunwoody office who offers individual therapy to pre-teens, adolescents, and adults. Learn about her background, her focus on neurodiversity, chronic illness, and executive functioning, and the counseling approaches she uses.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/theresa-westfall/",
+    "path": "/team/theresa-westfall/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/theresa-westfall/",
+     "keywords_count": 12,
+     "top_keyword": "theresa westfall",
+     "clicks": 12,
+     "impressions": 111,
+     "ctr": 10.8108,
+     "position": 10.756756,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 99.000012,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Theresa Westfall - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Theresa Westfall",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Theresa Westfall, MS, LPC, NCC, Clinical Director and therapist at Atlanta Specialized Care. Learn about her training in trauma therapies, DBT, ERP and CPS, and her work with children, adolescents, and adults.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/reasons-why-the-super-successful-are-depressed/",
+    "path": "/reasons-why-the-super-successful-are-depressed/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/reasons-why-the-super-successful-are-depressed/",
+     "keywords_count": 28,
+     "top_keyword": "why am i still depressed when my life is good",
+     "clicks": 0,
+     "impressions": 85,
+     "ctr": 0.0,
+     "position": 44.329412,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 85.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Reasons Why the Super Successful Are Depressed - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Reasons Why the Super Successful Are Depressed",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Why highly successful people can still struggle with depression, including high-functioning depression (persistent depressive disorder), common symptoms, and where to find depression treatment in Atlanta and Alpharetta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/navigating-mental-health-care-in-financial-hardship-a-guide/",
+    "path": "/navigating-mental-health-care-in-financial-hardship-a-guide/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/navigating-mental-health-care-in-financial-hardship-a-guide/",
+     "keywords_count": 8,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 80,
+     "ctr": 0.0,
+     "position": 64.8125,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 80.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Navigating Mental Health Care in Financial Hardship: A Guide - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Navigating Mental Health Care in Financial Hardship: A Guide",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Tatiana Matthews, MS, LPC, CRC summarizes ways to find mental health care on a tight budget, including sliding scale community clinics, student interns, free support groups, school evaluations for children, and medication discount programs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3188
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/substance-use-and-teens-how-to-know-if-your-teen-is-at-risk-and-what-to-do-about-it/",
+    "path": "/substance-use-and-teens-how-to-know-if-your-teen-is-at-risk-and-what-to-do-about-it/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/substance-use-and-teens-how-to-know-if-your-teen-is-at-risk-and-what-to-do-about-it/",
+     "keywords_count": 19,
+     "top_keyword": "atlanta substance use counseling",
+     "clicks": 0,
+     "impressions": 76,
+     "ctr": 0.0,
+     "position": 46.894737,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 76.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Substance Use and Teens: How to Know if Your Teen Is at Risk and What to Do About It - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Substance Use and Teens: How to Know if Your Teen Is at Risk and What to Do About It",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn the red flags that suggest a teen's substance use has gone beyond experimentation, how to talk with your teen about it, and when to bring in a substance abuse counselor in Atlanta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/cache/",
+    "path": "/cache/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/cache/",
+     "keywords_count": 14,
+     "top_keyword": "concierge therapy near me",
+     "clicks": 0,
+     "impressions": 71,
+     "ctr": 0.0,
+     "position": 26.84507,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 71.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "cache - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "cache",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A short archive entry from Atlanta Specialized Care, filed under ADHD, that points to the article \"How Much Is Therapy Without Insurance? Atlanta Self-Pay Pricing.\"",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 96
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/neitcha-thomsen/",
+    "path": "/team/neitcha-thomsen/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/neitcha-thomsen/",
+     "keywords_count": 5,
+     "top_keyword": "atlanta specialized care",
+     "clicks": 1,
+     "impressions": 56,
+     "ctr": 1.7857,
+     "position": 27.089285,
+     "traffic_value": 2.0
+    },
+    "traffic": 0,
+    "score": 55.000008,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Neitcha Thomsen - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Neitcha Thomsen",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Neitcha Thomsen, LCSW, Director of Rapid Access Assessments at Atlanta Specialized Care. Read about her background, the conditions she works with, and the therapy approaches she uses, including CBT, ERP, and CBT-I.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-to-tell-if-you-are-experiencing-a-panic-attack/",
+    "path": "/how-to-tell-if-you-are-experiencing-a-panic-attack/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/how-to-tell-if-you-are-experiencing-a-panic-attack/",
+     "keywords_count": 12,
+     "top_keyword": "yes to both",
+     "clicks": 0,
+     "impressions": 54,
+     "ctr": 0.0,
+     "position": 58.537036,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 54.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Tell if You Are Experiencing a Panic Attack - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How to Tell if You Are Experiencing a Panic Attack",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how panic attacks differ from ordinary fear, review common mental, emotional and physical symptoms, and see how counseling for anxiety and panic attacks is offered in Atlanta and Alpharetta, GA.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3439
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/tips-to-find-the-right-therapist-for-anxiety/",
+    "path": "/tips-to-find-the-right-therapist-for-anxiety/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/tips-to-find-the-right-therapist-for-anxiety/",
+     "keywords_count": 3,
+     "top_keyword": "how to find a therapist near me",
+     "clicks": 0,
+     "impressions": 51,
+     "ctr": 0.0,
+     "position": 2.372548,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 51.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tips to Find the Right Therapist for Anxiety - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Tips to Find the Right Therapist for Anxiety",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A guide to choosing a therapist for anxiety: what to look for, questions to ask a potential therapist, and how anxiety is treated with therapy or medication. Also covers anxiety care at Atlanta Specialized Care in Atlanta and Alpharetta, GA.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/use-abuse-or-addiction-how-to-tell-the-difference/",
+    "path": "/use-abuse-or-addiction-how-to-tell-the-difference/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/use-abuse-or-addiction-how-to-tell-the-difference/",
+     "keywords_count": 6,
+     "top_keyword": "alcohol and drug abuse counseling",
+     "clicks": 0,
+     "impressions": 51,
+     "ctr": 0.0,
+     "position": 57.235293,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 51.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Use, Abuse, or Addiction? How to Tell the Difference - Atlanta Specialized Care",
+    "serp_title": "Use, Abuse, or Addiction? How to Tell the Difference",
+    "h1": "Use, Abuse, or Addiction? How to Tell the Difference",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how nonaddictive use differs from substance abuse and addiction, including general daily alcohol guidelines and warning signs in behavior and mood. The page also explains how Atlanta Specialized Care's counseling team in Atlanta and Alpharetta can help with alcohol and drug abuse concerns.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3363
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/5-signs-it-is-time-to-get-into-couples-counseling/",
+    "path": "/5-signs-it-is-time-to-get-into-couples-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/5-signs-it-is-time-to-get-into-couples-counseling/",
+     "keywords_count": 1,
+     "top_keyword": "when to see a couples therapist in atlanta",
+     "clicks": 0,
+     "impressions": 49,
+     "ctr": 0.0,
+     "position": 17.714285,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 49.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "5 Signs It Is Time To Get Into Couples Counseling - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "5 Signs It Is Time To Get Into Couples Counseling",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Five signs it may be time to see a couples therapist, including trust issues, communication struggles, trauma, feeling less like a team, and considering marriage or divorce. Learn how couples counseling can help in each situation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/peggy-linly/",
+    "path": "/team/peggy-linly/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/peggy-linly/",
+     "keywords_count": 6,
+     "top_keyword": "linly-talker",
+     "clicks": 0,
+     "impressions": 42,
+     "ctr": 0.0,
+     "position": 37.690476,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 42.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Peggy Linly - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Peggy Linly",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Peggy Linly, part-time Office Manager at the Alpharetta office of Atlanta Specialized Care. Read about her background in finance and her life outside the office.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/erin-mills/",
+    "path": "/team/erin-mills/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/team/erin-mills/",
+     "keywords_count": 4,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 39,
+     "ctr": 0.0,
+     "position": 18.179486,
+     "traffic_value": null
+    },
+    "traffic": 11.0,
+    "score": 39.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Erin Mills - Atlanta Specialized Care",
+    "serp_title": "Erin Mills",
+    "h1": "Erin Mills",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Erin Mills, MSW, LCSW, a clinical therapist who works with adolescents, young adults, and adults on substance use, trauma, anxiety, and depression. Read about her training in DBT, CBT, and EMDR and her background in substance abuse treatment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/terms-of-service/",
+    "path": "/terms-of-service/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/terms-of-service/",
+     "keywords_count": 2,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 36,
+     "ctr": 0.0,
+     "position": 12.805555,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 36.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Terms of Service - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Terms of Service",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The terms for using the Atlanta Specialized Care website, covering informational-only content, intellectual property, user conduct, third-party links, liability, privacy, and Georgia governing law.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/T&C_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-are-the-different-types-of-depression/",
+    "path": "/what-are-the-different-types-of-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-are-the-different-types-of-depression/",
+     "keywords_count": 4,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 32,
+     "ctr": 0.0,
+     "position": 75.281249,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 32.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Are The Different Types of Depression? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Are The Different Types of Depression?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about the main types of depression, including major depressive disorder, persistent depressive disorder, bipolar, psychotic, seasonal, and perinatal or postpartum depression. The post also covers common symptoms and causes.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Definitions",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/medication-management-what-does-it-really-mean-to-me/",
+    "path": "/medication-management-what-does-it-really-mean-to-me/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/medication-management-what-does-it-really-mean-to-me/",
+     "keywords_count": 3,
+     "top_keyword": "what does medication mean",
+     "clicks": 0,
+     "impressions": 30,
+     "ctr": 0.0,
+     "position": 79.733333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 30.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Medication Management: What Does It Really Mean to Me? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Medication Management: What Does It Really Mean to Me?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what medication management means in mental health, why it's often paired with counseling, and how gene testing and a psychiatric nurse practitioner at Atlanta Specialized Care fit in.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Definitions",
+    "text_chars": 2743
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-is-the-main-cause-of-clinical-depression/",
+    "path": "/what-is-the-main-cause-of-clinical-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-is-the-main-cause-of-clinical-depression/",
+     "keywords_count": 7,
+     "top_keyword": "what is the main cause of clinical depression",
+     "clicks": 1,
+     "impressions": 20,
+     "ctr": 5.0,
+     "position": 4.75,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 19.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is the Main Cause of Clinical Depression? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Is the Main Cause of Clinical Depression?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why there's no single main cause of clinical depression, from genetics and brain chemistry to trauma, hormonal changes, and chronic illness. Also covers common symptoms and how counseling can help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-a-professional-counselor-can-improve-employee-performance/",
+    "path": "/how-a-professional-counselor-can-improve-employee-performance/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/how-a-professional-counselor-can-improve-employee-performance/",
+     "keywords_count": 4,
+     "top_keyword": "what impact do counseling services have on job performance?",
+     "clicks": 0,
+     "impressions": 10,
+     "ctr": 0.0,
+     "position": 38.7,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 10.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How A Professional Counselor Can Improve Employee Performance - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How A Professional Counselor Can Improve Employee Performance",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn the warning signs that an employee may need professional counseling, from missed deadlines and absenteeism to poor judgment, and how a workplace counselor can help managers address performance problems and support employees with mental health needs, ADHD, or autism.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-to-manage-your-body-image/",
+    "path": "/how-to-manage-your-body-image/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/how-to-manage-your-body-image/",
+     "keywords_count": 2,
+     "top_keyword": "therapy for body image issues atlanta",
+     "clicks": 0,
+     "impressions": 8,
+     "ctr": 0.0,
+     "position": 6.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 8.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How To Manage Your Body Image - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How To Manage Your Body Image",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Practical ways to manage body image, from focusing on your strengths to staying active, plus when to talk with a therapist at Atlanta Specialized Care in Atlanta and Alpharetta, GA.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3467
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-epidemic-of-teenage-perfectionism-in-north-metro-atlanta/",
+    "path": "/the-epidemic-of-teenage-perfectionism-in-north-metro-atlanta/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/the-epidemic-of-teenage-perfectionism-in-north-metro-atlanta/",
+     "keywords_count": 2,
+     "top_keyword": "treatment for ocd metro atlanta",
+     "clicks": 0,
+     "impressions": 8,
+     "ctr": 0.0,
+     "position": 44.625,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 8.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Epidemic Of Teenage Perfectionism In North Metro Atlanta - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Epidemic Of Teenage Perfectionism In North Metro Atlanta",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what maladaptive perfectionism looks like in teens, what drives it, how it can affect mental and physical health, and the signs parents in North Metro Atlanta can watch for. Also covers ways to help a teen with perfectionism.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/getting-help-with-medication-management-for-clinical-depression/",
+    "path": "/getting-help-with-medication-management-for-clinical-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/getting-help-with-medication-management-for-clinical-depression/",
+     "keywords_count": 2,
+     "top_keyword": "antidepressants therapy consultant",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 47.285714,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Getting Help with Medication Management for Clinical Depression - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Getting Help with Medication Management for Clinical Depression",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what to expect from medication management for clinical depression, including how antidepressants are started and adjusted, how side effects are monitored, and why therapy is often combined with medication.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3189
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-to-cope-with-walking-the-darkness-of-clinical-depression/",
+    "path": "/how-to-cope-with-walking-the-darkness-of-clinical-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/how-to-cope-with-walking-the-darkness-of-clinical-depression/",
+     "keywords_count": 1,
+     "top_keyword": "how is clinical depression treated",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 6.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Cope with Walking the Darkness of Clinical Depression - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How to Cope with Walking the Darkness of Clinical Depression",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what clinical depression is, its common symptoms, and how it is treated with counseling, cognitive behavioral therapy, and medication. Also covers who is affected and where to find professional depression counseling in Atlanta.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-is-obsessive-compulsive-disorder-ocd-and-how-to-treat-it/",
+    "path": "/what-is-obsessive-compulsive-disorder-ocd-and-how-to-treat-it/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-is-obsessive-compulsive-disorder-ocd-and-how-to-treat-it/",
+     "keywords_count": 4,
+     "top_keyword": "what is obsessive compulsive disorder",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 10.571429,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is Obsessive-Compulsive Disorder (OCD) and How to Treat It - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Is Obsessive-Compulsive Disorder (OCD) and How to Treat It",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-are-the-different-types-of-anxiety-disorders-and-how-do-i-know-which-one-i-have/",
+    "path": "/what-are-the-different-types-of-anxiety-disorders-and-how-do-i-know-which-one-i-have/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/what-are-the-different-types-of-anxiety-disorders-and-how-do-i-know-which-one-i-have/",
+     "keywords_count": 4,
+     "top_keyword": "how do i know i have anxiety",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 9.8,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Are the Different Types of Anxiety Disorders and How Do I Know Which One I Have? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Are the Different Types of Anxiety Disorders and How Do I Know Which One I Have?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/who-can-benefit-from-medication-management/",
+    "path": "/who-can-benefit-from-medication-management/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/who-can-benefit-from-medication-management/",
+     "keywords_count": 1,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 87.4,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Who Can Benefit from Medication Management? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Who Can Benefit from Medication Management?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/parenting-a-child-with-anxiety/",
+    "path": "/parenting-a-child-with-anxiety/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/parenting-a-child-with-anxiety/",
+     "keywords_count": 1,
+     "top_keyword": "site:atlantaspecializedcare.com",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0.0,
+     "position": 84.75,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 4.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Parenting a Child with Anxiety - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Parenting a Child with Anxiety",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/depression-the-bully-within/",
+    "path": "/depression-the-bully-within/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/depression-the-bully-within/",
+     "keywords_count": 1,
+     "top_keyword": "psychodynamic therapy atlanta",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 19.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Depression: The Bully Within - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Depression: The Bully Within",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/teen-mental-health-expert-help-in-atlanta/",
+    "path": "/teen-mental-health-expert-help-in-atlanta/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/teen-mental-health-expert-help-in-atlanta/",
+     "keywords_count": 1,
+     "top_keyword": "teen mental health atlanta",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 17.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Teen Mental Health: Expert Help in Atlanta - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Teen Mental Health: Expert Help in Atlanta",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/depression-a-guide-to-empathy-compassion-rather-than-blame-or-judgment/",
+    "path": "/depression-a-guide-to-empathy-compassion-rather-than-blame-or-judgment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/depression-a-guide-to-empathy-compassion-rather-than-blame-or-judgment/",
+     "keywords_count": 1,
+     "top_keyword": "another way to say depression",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 3.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Depression: A guide to empathy & compassion, rather than blame or judgment. - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Depression: A guide to empathy & compassion, rather than blame or judgment.",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/grief-counseling-what-are-the-5-stages-of-loss-and-grief/",
+    "path": "/grief-counseling-what-are-the-5-stages-of-loss-and-grief/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/grief-counseling-what-are-the-5-stages-of-loss-and-grief/",
+     "keywords_count": 1,
+     "top_keyword": "how do the stages of loss relate to grief",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 1.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Grief Counseling: What Are The 5 Stages of Loss and Grief? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Grief Counseling: What Are The 5 Stages of Loss and Grief?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/hr-has-booked-a-workplace-consultation-with-a-licensed-professional-counselor-what-should-i-expect/",
+    "path": "/hr-has-booked-a-workplace-consultation-with-a-licensed-professional-counselor-what-should-i-expect/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://atlantaspecializedcare.com/hr-has-booked-a-workplace-consultation-with-a-licensed-professional-counselor-what-should-i-expect/",
+     "keywords_count": 1,
+     "top_keyword": "hr counselor",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 28.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "HR Has Booked A Workplace Consultation With a Licensed Professional Counselor. What Should I Expect? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "HR Has Booked A Workplace Consultation With a Licensed Professional Counselor. What Should I Expect?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/catherine-hessing-gatson/",
+    "path": "/team/catherine-hessing-gatson/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Catherine Hessing-Gatson - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Catherine Hessing-Gatson",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/delaney-banzhof/",
+    "path": "/team/delaney-banzhof/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Delaney Banzhof - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Delaney Banzhof",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/team/katie-kearney/",
+    "path": "/team/katie-kearney/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Katie Kearney - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Katie Kearney",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/10-tips-to-make-your-recovery-from-substance-abuse-and-addiction-easier/",
+    "path": "/10-tips-to-make-your-recovery-from-substance-abuse-and-addiction-easier/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "10 Tips to Make Your Recovery from Substance Abuse and Addiction Easier - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "10 Tips to Make Your Recovery from Substance Abuse and Addiction Easier",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/anxiety-in-children-advice-for-helping-worried-kids-find-calm/",
+    "path": "/anxiety-in-children-advice-for-helping-worried-kids-find-calm/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Anxiety in Children – Advice for Helping Worried Kids Find Calm - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Anxiety in Children – Advice for Helping Worried Kids Find Calm",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/break-free-from-executive-dysfunction-strategies-for-regaining-control-and-reaching-goals/",
+    "path": "/break-free-from-executive-dysfunction-strategies-for-regaining-control-and-reaching-goals/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Break Free from Executive Dysfunction: Strategies for Regaining Control and Reaching Goals - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Break Free from Executive Dysfunction: Strategies for Regaining Control and Reaching Goals",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/confronting-unresolved-issues-from-your-past-midlife-is-a-natural-time-of-reflection/",
+    "path": "/confronting-unresolved-issues-from-your-past-midlife-is-a-natural-time-of-reflection/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Confronting Unresolved Issues from Your Past: Midlife is a Natural Time of Reflection - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Confronting Unresolved Issues from Your Past: Midlife is a Natural Time of Reflection",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/difference-between-an-eating-disorder-and-disordered-eating/",
+    "path": "/difference-between-an-eating-disorder-and-disordered-eating/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Difference Between an Eating Disorder and Disordered Eating - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Difference Between an Eating Disorder and Disordered Eating",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/distress-signals-for-mental-health-counseling/",
+    "path": "/distress-signals-for-mental-health-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Distress Signals for Mental Health Counseling - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Distress Signals for Mental Health Counseling",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-can-therapy-treat-depression/",
+    "path": "/how-can-therapy-treat-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How Can Therapy Treat Depression? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How Can Therapy Treat Depression?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/how-to-get-the-most-from-addiction-counseling/",
+    "path": "/how-to-get-the-most-from-addiction-counseling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Get the Most from Addiction Counseling - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "How to Get the Most from Addiction Counseling",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/introducing-a-holistic-view-of-mental-health-the-healing-power-of-nature/",
+    "path": "/introducing-a-holistic-view-of-mental-health-the-healing-power-of-nature/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Introducing a Holistic View of Mental Health: The Healing Power of Nature - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Introducing a Holistic View of Mental Health: The Healing Power of Nature",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Thought_Leadership"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/medication-management-strategies/",
+    "path": "/medication-management-strategies/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Medication Management Strategies - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Medication Management Strategies",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/navigating-substance-abuse-recovery-individual-vs-group-therapy/",
+    "path": "/navigating-substance-abuse-recovery-individual-vs-group-therapy/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Navigating Substance Abuse Recovery: Individual vs. Group Therapy - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Navigating Substance Abuse Recovery: Individual vs. Group Therapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/parents-and-responsibilities-managing-increased-responsibilities-as-parents/",
+    "path": "/parents-and-responsibilities-managing-increased-responsibilities-as-parents/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Parents and Responsibilities: Managing Increased Responsibilities as Parents - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Parents and Responsibilities: Managing Increased Responsibilities as Parents",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/procrastination-emotional-regulation/",
+    "path": "/procrastination-emotional-regulation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Procrastination & Emotional Regulation - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Procrastination & Emotional Regulation",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/social-anxiety/",
+    "path": "/social-anxiety/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Social Anxiety - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Social Anxiety",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Wiki"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/spotting-codependency-patterns-in-relationships-are-you-struggling-to-balance-your-own-needs-with-caring-for-others/",
+    "path": "/spotting-codependency-patterns-in-relationships-are-you-struggling-to-balance-your-own-needs-with-caring-for-others/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Spotting Codependency Patterns in Relationships: Are You Struggling to Balance Your Own Needs with Caring for Others? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Spotting Codependency Patterns in Relationships: Are You Struggling to Balance Your Own Needs with Caring for Others?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/substance-abuse-and-the-teenage-brain/",
+    "path": "/substance-abuse-and-the-teenage-brain/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Substance Abuse and the Teenage Brain - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Substance Abuse and the Teenage Brain",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/substance-abuse-counseling-how-it-can-help-those-who-are-addicted-to-drugs-or-alcohol/",
+    "path": "/substance-abuse-counseling-how-it-can-help-those-who-are-addicted-to-drugs-or-alcohol/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Substance Abuse Counseling: How It Can Help Those Who Are Addicted to Drugs or Alcohol - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Substance Abuse Counseling: How It Can Help Those Who Are Addicted to Drugs or Alcohol",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/substance-abuse-wealthy-upbringings-and-depression-the-link/",
+    "path": "/substance-abuse-wealthy-upbringings-and-depression-the-link/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Substance Abuse, Wealthy Upbringings, and Depression: The Link - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Substance Abuse, Wealthy Upbringings, and Depression: The Link",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-mental-health-connection-boundaries-as-a-tool-for-healing-and-growth/",
+    "path": "/the-mental-health-connection-boundaries-as-a-tool-for-healing-and-growth/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Mental Health Connection: Boundaries as a Tool for Healing and Growth - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Mental Health Connection: Boundaries as a Tool for Healing and Growth",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-mental-health-connection-breaking-free-from-shame/",
+    "path": "/the-mental-health-connection-breaking-free-from-shame/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Mental Health Connection: Breaking Free from Shame - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Mental Health Connection: Breaking Free from Shame",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-mental-health-connection-is-it-tech-use-or-abuse/",
+    "path": "/the-mental-health-connection-is-it-tech-use-or-abuse/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Mental Health Connection: Is it Tech Use or Abuse? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Mental Health Connection: Is it Tech Use or Abuse?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-mental-health-connection-what-to-know-about-disordered-eating-vs-eating-disorders/",
+    "path": "/the-mental-health-connection-what-to-know-about-disordered-eating-vs-eating-disorders/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Mental Health Connection: What to Know About Disordered Eating vs. Eating Disorders - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Mental Health Connection: What to Know About Disordered Eating vs. Eating Disorders",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-path-to-adulthood-is-filled-with-challenges-opportunities/",
+    "path": "/the-path-to-adulthood-is-filled-with-challenges-opportunities/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Path to Adulthood is filled with Challenges & Opportunities - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Path to Adulthood is filled with Challenges & Opportunities",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-signs-of-eating-disorder/",
+    "path": "/the-signs-of-eating-disorder/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Signs of Eating Disorder - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Signs of Eating Disorder",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/the-social-anxiety-theme-song/",
+    "path": "/the-social-anxiety-theme-song/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Social Anxiety Theme Song - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "The Social Anxiety Theme Song",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/top-methods-to-calm-anxiety/",
+    "path": "/top-methods-to-calm-anxiety/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Top Methods To Calm Anxiety - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Top Methods To Calm Anxiety",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/understanding-test-taking-anxiety/",
+    "path": "/understanding-test-taking-anxiety/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Understanding Test-Taking Anxiety - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Understanding Test-Taking Anxiety",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-is-clinical-depression/",
+    "path": "/what-is-clinical-depression/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is Clinical Depression? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Is Clinical Depression?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Definitions"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-is-involved-in-counseling-services/",
+    "path": "/what-is-involved-in-counseling-services/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is Involved in Counseling Services? - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What Is Involved in Counseling Services?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Definitions"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/what-you-need-to-know-about-anxiety-and-how-to-deal-with-it/",
+    "path": "/what-you-need-to-know-about-anxiety-and-how-to-deal-with-it/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What You Need to Know About Anxiety and How to Deal with It - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "What You Need to Know About Anxiety and How to Deal with It",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://atlantaspecializedcare.com/why-affluent-communities-of-north-atlanta-are-struggling-with-anxiety-depression-and-addiction/",
+    "path": "/why-affluent-communities-of-north-atlanta-are-struggling-with-anxiety-depression-and-addiction/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Why Affluent Communities Of North Atlanta Are Struggling With Anxiety, Depression, And Addiction - Atlanta Specialized Care",
+    "serp_title": "",
+    "h1": "Why Affluent Communities Of North Atlanta Are Struggling With Anxiety, Depression, And Addiction",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/category/body-image/",
+    "/category/ocd/",
+    "/category/substance-abuse/",
+    "/category/eating-disorder/",
+    "/category/mental-health/page/2/",
+    "/category/couples-counseling/",
+    "/category/teen-mental-health/",
+    "/category/counseling/page/2/",
+    "/category/counselor/",
+    "/category/depression/",
+    "/category/panic-attack/",
+    "/category/counseling/page/3/",
+    "/category/executive-function/",
+    "/category/counseling/",
+    "/category/mental-disorders/",
+    "/category/adhd/",
+    "/category/mental-health/",
+    "/category/anxiety/page/2/",
+    "/category/anxiety/",
+    "/category/depression/page/2/",
+    "/category/family-counseling/",
+    "/category/medication-management/",
+    "/category/insurance/",
+    "/blog/page/7/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

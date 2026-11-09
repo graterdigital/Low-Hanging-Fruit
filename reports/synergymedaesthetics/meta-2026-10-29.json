@@ -1,0 +1,121 @@
+{
+ "data": {
+  "pid": 9704552,
+  "crawl": "2026-10-29",
+  "health": 97,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 2
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 5
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Synergy MedAesthetics",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://synergymedaesthetics.com/hair-body/coolsculpting-elite/",
+    "path": "/hair-body/coolsculpting-elite/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting® Kennewick, Yakima | Synergy MedAesthetics",
+    "serp_title": "CoolSculpting® Kennewick, Yakima",
+    "h1": "CoolSculpting Elite",
+    "current_description": "Get rid of stubborn fat with CoolSculpting® at Synergy MedAesthetics. Serving Kennewick, Yakima, and surrounding areas.",
+    "proposed_title": "CoolSculpting Elite - Synergy MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://synergymedaesthetics.com/skin/hydrafacial/",
+    "path": "/skin/hydrafacial/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "HydraFacial™ Kennewick, Yakima | Synergy MedAesthetics",
+    "serp_title": "HydraFacial™ Kennewick, Yakima",
+    "h1": "HydraFacial",
+    "current_description": "Get glowing, hydrated skin with HydraFacial™ treatments at Synergy MedAesthetics. Serving Kennewick, Yakima. Book your facial today!",
+    "proposed_title": "HydraFacial - Synergy MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://synergymedaesthetics.com/treatments/",
+    "path": "/treatments/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Treatments Archive - Synergy Medaesthetics",
+    "serp_title": "",
+    "h1": "Treatments",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the skin rejuvenation treatments offered at Synergy MedAesthetics in Kennewick and Yakima, including wrinkle relaxers, fillers, CoolPeel, DiamondGlow, HydraFacial, facials and peels, and facial rejuvenation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/treatments/page/2/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -496,9 +496,11 @@ def main(argv=None):
 
     bdir = cdir / "backup" / f"{stamp}-fix-images-{args.target}"; (bdir / "orig").mkdir(parents=True); (bdir / "new").mkdir()
     # remote uploads root for this target (staging has a different absolute path than live)
-    code, out, _ = wp(alias, args.webroot, "eval 'echo wp_upload_dir()[\"basedir\"];'")
-    remote_base = out.strip()
-    if code != 0 or not remote_base.startswith("/"): sys.exit(f"Could not resolve uploads dir on {alias}: {out} ")
+    code, out, err = ssh(alias, f"cd {args.webroot} && wp --skip-plugins={SKIP_PLUGINS} eval-file -",
+                         b"<?php echo wp_upload_dir()['basedir'];")
+    remote_base = out.strip().splitlines()[-1].strip() if out.strip() else ""
+    if code != 0 or not remote_base.startswith("/"):
+        sys.exit(f"Could not resolve uploads dir on {alias} (exit {code}).\nstdout: {out[-500:]}\nstderr: {err[-500:]}")
     results = []
     def process(rel, attachment_id, max_edge):
         """Pull one remote file, resize it locally if it is over max_edge, push it back on apply. Returns the result row."""

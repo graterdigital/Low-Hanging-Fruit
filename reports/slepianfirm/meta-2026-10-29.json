@@ -1,0 +1,383 @@
+{
+ "data": {
+  "pid": 9704553,
+  "crawl": "2026-10-29",
+  "health": 92,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 2
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 13
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Slepian & Schwartz",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://www.slepianfirm.com/mortgage-loan-closing-disclosure-requirements/",
+    "path": "/mortgage-loan-closing-disclosure-requirements/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'CFPB Mortgage Loan | Atlanta Attorneys'",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/mortgage-loan-closing-disclosure-requirements/",
+     "keywords_count": 309,
+     "top_keyword": "what is aggregate adjustment on closing disclosure",
+     "clicks": 0,
+     "impressions": 5460,
+     "ctr": 0.0,
+     "position": 9.742674,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5460.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CFPB Mortgage Loan | Atlanta Attorneys | Slepian Firm",
+    "serp_title": "CFPB Mortgage Loan | Atlanta Attorneys",
+    "h1": "New CFPB Mortgage Loan Estimate and Closing Disclosure Requirements",
+    "current_description": "Learn what the new changes implemented by the CFPB mean for mortgage loan estimates and closing disclosure requirements.",
+    "proposed_title": "CFPB Mortgage Loan | Atlanta Attorneys | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.slepianfirm.com/what-our-clients-say/",
+    "path": "/what-our-clients-say/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/what-our-clients-say/",
+     "keywords_count": 88,
+     "top_keyword": "estate planning peachtree city",
+     "clicks": 0,
+     "impressions": 3463,
+     "ctr": 0.0,
+     "position": 5.814033,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3463.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Our Clients Say",
+    "serp_title": "",
+    "h1": "What Our Clients Say",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Share feedback about your experience with Slepian, Schwartz & Landgaard. This page points to review sites including Google, Facebook, Lawyers.com, Yelp, and SoTellUs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 233
+   },
+   {
+    "url": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-the-agent/",
+    "path": "/real-estate-attorney/closing-checklist-for-the-agent/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Closing Checklist for Real Estate Agent'",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-the-agent/",
+     "keywords_count": 96,
+     "top_keyword": "real estate closing checklist template",
+     "clicks": 4,
+     "impressions": 1566,
+     "ctr": 0.2554,
+     "position": 27.514687,
+     "traffic_value": 0.81
+    },
+    "traffic": 5.0,
+    "score": 1562.000436,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Closing Check List for Builders | Real Estate",
+    "serp_title": "Closing Checklist for Real Estate Agent",
+    "h1": "Closing Checklist for the Real Estate Agent",
+    "current_description": "Here is a comprehensive closing checklist for real estate agents. For assistance call Slepian & Schwartz today 770-486-1220",
+    "proposed_title": "Closing Checklist for Real Estate Agent | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Checklists"
+   },
+   {
+    "url": "https://www.slepianfirm.com/peachtree-city-criminal-defense-attorney/",
+    "path": "/peachtree-city-criminal-defense-attorney/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Peachtree City Criminal Defense Attorney'",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/peachtree-city-criminal-defense-attorney/",
+     "keywords_count": 148,
+     "top_keyword": "defense law firms near me",
+     "clicks": 3,
+     "impressions": 1540,
+     "ctr": 0.1948,
+     "position": 18.852597,
+     "traffic_value": 18.0
+    },
+    "traffic": 2.0,
+    "score": 1537.00008,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Peachtree City Criminal Defense Attorney | Peachtree City Litigation",
+    "serp_title": "Peachtree City Criminal Defense Attorney",
+    "h1": "Criminal Defense and Civil Litigation Attorneys",
+    "current_description": "Peachtree City criminal defense attorneys help clients in real trouble. If you have DUI, drug, felony, or civil litigation problems call now 770.486.1220",
+    "proposed_title": "Peachtree City Criminal Defense Attorney | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.slepianfirm.com/civil-litigation-vs-small-claims/",
+    "path": "/civil-litigation-vs-small-claims/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/civil-litigation-vs-small-claims/",
+     "keywords_count": 63,
+     "top_keyword": "is small claims court the same as civil court",
+     "clicks": 0,
+     "impressions": 1074,
+     "ctr": 0.0,
+     "position": 8.122904,
+     "traffic_value": null
+    },
+    "traffic": 2.0,
+    "score": 1074.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Civil Litigation Vs. Small Claims | Peachtree City Civil Litigation",
+    "serp_title": "Civil Litigation VS. Small Claims Court",
+    "h1": "Civil Litigation VS. Small Claims Court",
+    "current_description": "Civil litigation vs. small claims court? The difference? Call our Peachtree City Civil Litigation attorney today 770-486-1220 for an appointment today!",
+    "proposed_title": "Civil Litigation VS. Small Claims Court | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+    "path": "/real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/real-estate-attorney/closing-checklist-for-lenders-and-mortgage-brokers/",
+     "keywords_count": 79,
+     "top_keyword": "post closing mortgage checklist",
+     "clicks": 1,
+     "impressions": 836,
+     "ctr": 0.1196,
+     "position": 45.818181,
+     "traffic_value": null
+    },
+    "traffic": 10.0,
+    "score": 835.000144,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Closing Checklist for Lenders | Real Estate",
+    "serp_title": "Closing Checklist for Lenders and Mortgage Brokers",
+    "h1": "Closing Checklist for Lenders and Mortgage Brokers",
+    "current_description": "Here is a comprehensive closing checklist for mortgage brokers. For assistance call Slepian & Schwartz today 770-486-1220",
+    "proposed_title": "Closing Checklist for Lenders and Mortgage Brokers | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Checklists"
+   },
+   {
+    "url": "https://www.slepianfirm.com/georgia-law-affects-real-estate-sales-contracts/",
+    "path": "/georgia-law-affects-real-estate-sales-contracts/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/georgia-law-affects-real-estate-sales-contracts/",
+     "keywords_count": 40,
+     "top_keyword": "how many years must a georgia broker retain sales contracts?",
+     "clicks": 0,
+     "impressions": 122,
+     "ctr": 0.0,
+     "position": 9.885246,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 122.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "GA Law & Real Estate | Peachtree City Real Estate Attorney",
+    "serp_title": "How Georgia Law Affects Real Estate Sales Contracts",
+    "h1": "How Georgia Law Affects Real Estate Sales Contracts",
+    "current_description": "Learn more about how GA law affects real estate sales from our knowledgeable Peachtree City Real Estate attorney at Slepian & Schwartz.",
+    "proposed_title": "How Georgia Law Affects Real Estate Sales Contracts | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.slepianfirm.com/llc-vs-c-corp/",
+    "path": "/llc-vs-c-corp/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/llc-vs-c-corp/",
+     "keywords_count": 6,
+     "top_keyword": "ccorp",
+     "clicks": 0,
+     "impressions": 17,
+     "ctr": 0.0,
+     "position": 28.117647,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 17.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Peachtree City Business Lawyers | Difference in LLC and C Corp",
+    "serp_title": "What is the Difference between an LLC and a C Corp?",
+    "h1": "What is the Difference between an LLC and a C Corp?",
+    "current_description": "Our Peachtree City business lawyers can help you with the difference in LLC and C Corp business. Call 770-486-1220 for an appointment today.",
+    "proposed_title": "What is the Difference between an LLC and a C Corp? | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://www.slepianfirm.com/real-estate-attorney/closing-timeline-and-information/",
+    "path": "/real-estate-attorney/closing-timeline-and-information/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Closing Timeline and Closing Info. - Real Estate Law'",
+    "gsc": {
+     "page": "https://www.slepianfirm.com/real-estate-attorney/closing-timeline-and-information/",
+     "keywords_count": 4,
+     "top_keyword": "best closinglock competitors",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0.0,
+     "position": 22.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 4.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Real Estate Law | Closing Check List for Builders",
+    "serp_title": "Closing Timeline and Closing Info. - Real Estate Law",
+    "h1": "Closing Timeline and Closing Info.",
+    "current_description": "Here is a comprehensive closing timeline and additional info for real estate closings. For assistance call Slepian & Schwartz today 770-486-1220",
+    "proposed_title": "Closing Timeline and Closing Info. - Real Estate Law | Slepian & Schwartz",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.slepianfirm.com/sitemap/",
+    "path": "/sitemap/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FAQ",
+    "serp_title": "",
+    "h1": "FAQ",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse frequently asked questions for Slepian & Schwartz, a law firm. This page collects common questions people ask when looking for legal help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 5
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

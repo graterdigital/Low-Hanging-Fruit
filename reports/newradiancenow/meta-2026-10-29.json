@@ -1,0 +1,1489 @@
+{
+ "data": {
+  "pid": 9704544,
+  "crawl": "2026-10-29",
+  "health": 96,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 40
+   },
+   "Multiple meta description tags": {
+    "crawled": 1
+   },
+   "Multiple title tags": {
+    "crawled": 6
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 36
+   },
+   "Title tag missing or empty": {
+    "crawled": 1
+   }
+  }
+ },
+ "queue": {
+  "brand": "New Radiance",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://newradiancenow.com/locations/port-st-lucie/",
+    "path": "/locations/port-st-lucie/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Port St. Lucie Med Spa - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/locations/port-st-lucie/",
+     "keywords_count": 2647,
+     "top_keyword": "new radiance cosmetic center",
+     "clicks": 615,
+     "impressions": 38535,
+     "ctr": 1.5959,
+     "position": 12.783184,
+     "traffic_value": 1480.33
+    },
+    "traffic": 30.0,
+    "score": 37920.019935,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Port St. Lucie Med Spa | New Radiance Cosmetic Center",
+    "serp_title": "Port St. Lucie Med Spa - New Radiance Cosmetic Centers",
+    "h1": "Med Spa & Cosmetic Surgery Center in Port St. Lucie, FL",
+    "current_description": "Skin, face and body treatments at the New Radiance Port St. Lucie med spa, including injectables and lasers. See hours, directions and book a consult.",
+    "proposed_title": "Port St. Lucie Med Spa - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://newradiancenow.com/video/rf-microneedling-combined-with-radiofrequency/",
+    "path": "/video/rf-microneedling-combined-with-radiofrequency/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/rf-microneedling-combined-with-radiofrequency/",
+     "keywords_count": 344,
+     "top_keyword": "rf microneedling video",
+     "clicks": 4,
+     "impressions": 26625,
+     "ctr": 0.015,
+     "position": 27.869182,
+     "traffic_value": null
+    },
+    "traffic": 10.0,
+    "score": 26621.006250000002,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "RF Microneedling Combined With RadioFrequency | New Radiance",
+    "serp_title": "RF Microneedling Combined With RadioFrequency",
+    "h1": "RF Microneedling Combined With RadioFrequency",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about RF Microneedling Combined With RadioFrequency",
+    "proposed_title": "RF Microneedling Combined With RadioFrequency | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/locations/boca-raton/",
+    "path": "/locations/boca-raton/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://newradiancenow.com/locations/boca-raton/",
+     "keywords_count": 1042,
+     "top_keyword": "new radiance cosmetic center",
+     "clicks": 128,
+     "impressions": 23607,
+     "ctr": 0.5422,
+     "position": 15.333926,
+     "traffic_value": 250.9
+    },
+    "traffic": 95.0,
+    "score": 23479.002846,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Boca Raton Med Spa & Cosmetic Surgery | New Radiance",
+    "serp_title": "Med Spa & Cosmetic Surgery Center in Boca Raton, FL",
+    "h1": "Med Spa & Cosmetic Surgery Center in Boca Raton, FL",
+    "current_description": "Our Boca Raton center offers cosmetic surgery, injectables, lasers and body sculpting under one roof. See hours, directions and book a consultation.",
+    "proposed_title": "Med Spa & Cosmetic Surgery Center in Boca Raton, FL | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/locations/wellington/",
+    "path": "/locations/wellington/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Wellington, FL Med Spa - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/locations/wellington/",
+     "keywords_count": 1184,
+     "top_keyword": "new radiance wellington",
+     "clicks": 249,
+     "impressions": 16417,
+     "ctr": 1.5167,
+     "position": 8.12152,
+     "traffic_value": 792.91
+    },
+    "traffic": 77.0,
+    "score": 16168.003361,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Wellington, FL Med Spa | New Radiance Cosmetic Center",
+    "serp_title": "Wellington, FL Med Spa - New Radiance Cosmetic Centers",
+    "h1": "Med Spa & Cosmetic Surgery Center in Wellington, FL",
+    "current_description": "The New Radiance Wellington med spa offers injectables, body contouring and skin rejuvenation. Check hours, directions and available treatments here.",
+    "proposed_title": "Wellington, FL Med Spa - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://newradiancenow.com/video/how-cooltone-works/",
+    "path": "/video/how-cooltone-works/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/how-cooltone-works/",
+     "keywords_count": 229,
+     "top_keyword": "cooltone before and after",
+     "clicks": 4,
+     "impressions": 11020,
+     "ctr": 0.0363,
+     "position": 14.398547,
+     "traffic_value": 7.51
+    },
+    "traffic": 22.0,
+    "score": 11015.99974,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "How CoolTone Works | New Radiance",
+    "serp_title": "How CoolTone Works - New Radiance Cosmetic Centers",
+    "h1": "How CoolTone Works",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about How CoolTone Works",
+    "proposed_title": "How CoolTone Works | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/gallery-category/coolsculpting-chin/",
+    "path": "/gallery-category/coolsculpting-chin/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery-category/coolsculpting-chin/",
+     "keywords_count": 96,
+     "top_keyword": "coolsculpting double chin before and after",
+     "clicks": 11,
+     "impressions": 6928,
+     "ctr": 0.1588,
+     "position": 9.733689,
+     "traffic_value": 26.0
+    },
+    "traffic": 79.0,
+    "score": 6916.998336,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting Chin Treatment Before and After Photos in Boca Raton & Ft. Lauderdale",
+    "serp_title": "CoolSculpting Chin Treatment Gallery",
+    "h1": "CoolSculpting Chin Treatment Gallery",
+    "current_description": "View before and after photos for CoolSculpting Chin Treatment at New Radiance in Southeast Florida!",
+    "proposed_title": "CoolSculpting Chin Treatment Gallery | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/video/pdo-thread-lifts/",
+    "path": "/video/pdo-thread-lifts/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'PDO Thread Lifts - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/pdo-thread-lifts/",
+     "keywords_count": 221,
+     "top_keyword": "lifting threads bryant",
+     "clicks": 0,
+     "impressions": 5671,
+     "ctr": 0.0,
+     "position": 31.302415,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5671.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "PDO Thread Lifts | New Radiance",
+    "serp_title": "PDO Thread Lifts - New Radiance Cosmetic Centers",
+    "h1": "PDO Thread Lifts",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about PDO Thread Lifts",
+    "proposed_title": "PDO Thread Lifts - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/emsculpt-neo-vs-coolsculpting-which-is-right-for-you/",
+    "path": "/emsculpt-neo-vs-coolsculpting-which-is-right-for-you/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/emsculpt-neo-vs-coolsculpting-which-is-right-for-you/",
+     "keywords_count": 251,
+     "top_keyword": "emsculpt neo vs coolsculpting",
+     "clicks": 3,
+     "impressions": 5039,
+     "ctr": 0.0595,
+     "position": 9.905735,
+     "traffic_value": 7.56
+    },
+    "traffic": 35.0,
+    "score": 5036.001795,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "EmSculpt Neo vs CoolSculpting: Which Fits You?",
+    "serp_title": "EmSculpt Neo vs CoolSculpting: Which Is Right for You?",
+    "h1": "EmSculpt Neo vs CoolSculpting: Which Is Right for You?",
+    "current_description": "Compare EmSculpt Neo and CoolSculpting for body contouring. Learn how these treatments differ and find the right option for your goals with New Radiance.",
+    "proposed_title": "EmSculpt Neo vs CoolSculpting: Which Is Right for You? | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://newradiancenow.com/forehead-lift-browplasty/",
+    "path": "/forehead-lift-browplasty/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Forehead Lift & Browplasty in West Palm Beach & Port St. Lucie'",
+    "gsc": {
+     "page": "https://newradiancenow.com/forehead-lift-browplasty/",
+     "keywords_count": 127,
+     "top_keyword": "endoscopic brow lift near me",
+     "clicks": 1,
+     "impressions": 4750,
+     "ctr": 0.0211,
+     "position": 21.015157,
+     "traffic_value": 1.6
+    },
+    "traffic": 13.0,
+    "score": 4748.99775,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Brow Lift & Forehead Lift in Boca Raton | New Radiance",
+    "serp_title": "Forehead Lift & Browplasty in West Palm Beach & Port St. Lucie",
+    "h1": "Browplasty: Forehead Lift in South Florida",
+    "current_description": "A brow lift raises heavy brows and softens forehead creases for a more open, alert look. New Radiance surgeons operate in Boca Raton, South Florida.",
+    "proposed_title": "Forehead Lift & Browplasty in West Palm Beach & Port St. Lucie | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/breast-reduction-mammaplasty/",
+    "path": "/breast-reduction-mammaplasty/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Breast Reduction Surgery in West Palm Beach & Port St. Lucie'",
+    "gsc": {
+     "page": "https://newradiancenow.com/breast-reduction-mammaplasty/",
+     "keywords_count": 101,
+     "top_keyword": "breast reduction south florida",
+     "clicks": 1,
+     "impressions": 4019,
+     "ctr": 0.0249,
+     "position": 26.387907,
+     "traffic_value": 1.8
+    },
+    "traffic": 0,
+    "score": 4017.999269,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Breast Reduction Surgery in Boca Raton, FL | New Radiance",
+    "serp_title": "Breast Reduction Surgery in West Palm Beach & Port St. Lucie",
+    "h1": "Mammaplasty Breast Reduction in South Florida",
+    "current_description": "Breast reduction relieves neck, back and shoulder strain while improving proportion. New Radiance surgeons operate in Boca Raton and Port St. Lucie, FL.",
+    "proposed_title": "Breast Reduction Surgery in West Palm Beach & Port St. Lucie | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/bbl-laser-vs-moxi-which-is-right-for-you/",
+    "path": "/bbl-laser-vs-moxi-which-is-right-for-you/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://newradiancenow.com/bbl-laser-vs-moxi-which-is-right-for-you/",
+     "keywords_count": 198,
+     "top_keyword": "bbl vs moxi",
+     "clicks": 1,
+     "impressions": 3933,
+     "ctr": 0.0254,
+     "position": 13.91584,
+     "traffic_value": 1.0
+    },
+    "traffic": 11.0,
+    "score": 3932.001018,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "BBL Laser vs Moxi: Which Treatment Is Right?",
+    "serp_title": "BBL Laser vs Moxi: Which Is Right for You?",
+    "h1": "BBL Laser vs Moxi: Which Is Right for You?",
+    "current_description": "Compare BBL laser and Moxi treatments with New Radiance's expert team. Learn which light-based therapy suits your skin concerns and goals.",
+    "proposed_title": "BBL Laser vs Moxi: Which Is Right for You? | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://newradiancenow.com/gallery/smart-liposuction-case-1/",
+    "path": "/gallery/smart-liposuction-case-1/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Awake Liposuction Case 1 - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery/smart-liposuction-case-1/",
+     "keywords_count": 110,
+     "top_keyword": "awake bbl near me",
+     "clicks": 2,
+     "impressions": 3572,
+     "ctr": 0.056,
+     "position": 24.981802,
+     "traffic_value": 4.0
+    },
+    "traffic": 6.0,
+    "score": 3569.99968,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Awake Liposuction Case 1 Before and After Photos in Boca Raton & Ft. Lauderdale, FL",
+    "serp_title": "Awake Liposuction Case 1 - New Radiance Cosmetic Centers",
+    "h1": "Awake Liposuction Case 1",
+    "current_description": "View before and after photos for Awake Liposuction Case 1 at New Radiance Cosmetic Centers.",
+    "proposed_title": "Awake Liposuction Case 1 - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/gallery-category/coolsculpting-elite/",
+    "path": "/gallery-category/coolsculpting-elite/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery-category/coolsculpting-elite/",
+     "keywords_count": 81,
+     "top_keyword": "coolsculpting elite before and after",
+     "clicks": 1,
+     "impressions": 3404,
+     "ctr": 0.0294,
+     "position": 14.104288,
+     "traffic_value": null
+    },
+    "traffic": 5.0,
+    "score": 3402.999224,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting Elite Before and After Photos in Boca Raton & Ft. Lauderdale",
+    "serp_title": "CoolSculpting Elite Gallery - New Radiance Cosmetic Centers",
+    "h1": "CoolSculpting Elite Gallery",
+    "current_description": "View before and after photos for CoolSculpting Elite at New Radiance in Southeast Florida!",
+    "proposed_title": "CoolSculpting Elite Gallery | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/intensif-microneedling-for-acne-scars/",
+    "path": "/intensif-microneedling-for-acne-scars/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Microneedling for Acne Scars | West Palm Beach & Port St Lucie'",
+    "gsc": {
+     "page": "https://newradiancenow.com/intensif-microneedling-for-acne-scars/",
+     "keywords_count": 119,
+     "top_keyword": "microneedling treatment boca raton",
+     "clicks": 0,
+     "impressions": 1394,
+     "ctr": 0.0,
+     "position": 22.478479,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1394.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Microneedling for Acne Scars in Boca Raton | New Radiance",
+    "serp_title": "Microneedling for Acne Scars | West Palm Beach & Port St Lucie",
+    "h1": "Intensif Microneedling for Acne Scars in South Florida",
+    "current_description": "Intensif RF microneedling breaks up acne scarring and rebuilds smooth texture. New Radiance treats all skin tones in Boca Raton with minimal downtime.",
+    "proposed_title": "Microneedling for Acne Scars | West Palm Beach & Port St Lucie | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/video/how-ultherapy-works/",
+    "path": "/video/how-ultherapy-works/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'How Ultherapy Works - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/how-ultherapy-works/",
+     "keywords_count": 88,
+     "top_keyword": "ultherapy weston",
+     "clicks": 0,
+     "impressions": 1205,
+     "ctr": 0.0,
+     "position": 15.749377,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1205.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "How Ultherapy Works | New Radiance",
+    "serp_title": "How Ultherapy Works - New Radiance Cosmetic Centers",
+    "h1": "How Ultherapy Works",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about How Ultherapy Works",
+    "proposed_title": "How Ultherapy Works - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/transform-your-look-with-cosmetic-surgery/",
+    "path": "/transform-your-look-with-cosmetic-surgery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Face & Body Cosmetic Surgery in Boca Raton & Fort Lauderdale'",
+    "gsc": {
+     "page": "https://newradiancenow.com/transform-your-look-with-cosmetic-surgery/",
+     "keywords_count": 138,
+     "top_keyword": "non-surgica chin augmentation boca rotan",
+     "clicks": 0,
+     "impressions": 1074,
+     "ctr": 0.0,
+     "position": 29.702979,
+     "traffic_value": null
+    },
+    "traffic": 14.0,
+    "score": 1074.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Face & Body Cosmetic Surgery Boca Raton | New Radiance",
+    "serp_title": "Face & Body Cosmetic Surgery in Boca Raton & Fort Lauderdale",
+    "h1": "Cosmetic Surgery in Boca Raton & Ft. Lauderdale",
+    "current_description": "Weighing a surgical change? New Radiance combines face and body procedures into one coordinated plan for South Florida patients, staged around recovery.",
+    "proposed_title": "Face & Body Cosmetic Surgery in Boca Raton & Fort Lauderdale | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://newradiancenow.com/video/how-does-emsculpt-work/",
+    "path": "/video/how-does-emsculpt-work/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/how-does-emsculpt-work/",
+     "keywords_count": 39,
+     "top_keyword": "emsculpt west palm beach",
+     "clicks": 0,
+     "impressions": 636,
+     "ctr": 0.0,
+     "position": 15.654088,
+     "traffic_value": null
+    },
+    "traffic": 1.0,
+    "score": 636.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "How Does EmSculpt work | New Radiance",
+    "serp_title": "How Does EmSculpt work",
+    "h1": "How Does EmSculpt work",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about How Does EmSculpt work",
+    "proposed_title": "How Does EmSculpt work | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/accessibility-statement/",
+    "path": "/accessibility-statement/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Accessibility Statement: New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/accessibility-statement/",
+     "keywords_count": 44,
+     "top_keyword": "954-829-3942",
+     "clicks": 0,
+     "impressions": 292,
+     "ctr": 0.0,
+     "position": 22.29452,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 292.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Accessibility Statement | New Radiance Cosmetic Centers",
+    "serp_title": "Accessibility Statement: New Radiance Cosmetic Centers",
+    "h1": "Accessibility Statement",
+    "current_description": "New Radiance works to keep newradiancenow.com usable for every visitor. Read our accessibility commitment and how to report a barrier you encounter.",
+    "proposed_title": "Accessibility Statement: New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/gallery/sculpsure-laser-lipo-case-23/",
+    "path": "/gallery/sculpsure-laser-lipo-case-23/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery/sculpsure-laser-lipo-case-23/",
+     "keywords_count": 60,
+     "top_keyword": "sculpsure laser lipo",
+     "clicks": 0,
+     "impressions": 231,
+     "ctr": 0.0,
+     "position": 16.25974,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 231.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Sculpsure Laser Lipo Case 23 Before and After Photos in Boca Raton & Ft. Lauderdale, FL",
+    "serp_title": "Sculpsure Laser Lipo Case 23",
+    "h1": "Sculpsure Laser Lipo Case 23",
+    "current_description": "View before and after photos for Sculpsure Laser Lipo Case 23 at New Radiance Cosmetic Centers.",
+    "proposed_title": "Sculpsure Laser Lipo Case 23 | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/gallery-category/emsculpt/",
+    "path": "/gallery-category/emsculpt/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'EMSCULPT Gallery - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery-category/emsculpt/",
+     "keywords_count": 22,
+     "top_keyword": "emsculpt boca raton",
+     "clicks": 0,
+     "impressions": 214,
+     "ctr": 0.0,
+     "position": 28.705607,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 214.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "EMSCULPT Before and After Photos in Boca Raton & Ft. Lauderdale",
+    "serp_title": "EMSCULPT Gallery - New Radiance Cosmetic Centers",
+    "h1": "EMSCULPT Gallery",
+    "current_description": "View before and after photos for EMSCULPT at New Radiance in Southeast Florida!",
+    "proposed_title": "EMSCULPT Gallery - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://newradiancenow.com/financing/",
+     "keywords_count": 39,
+     "top_keyword": "both",
+     "clicks": 1,
+     "impressions": 213,
+     "ctr": 0.4695,
+     "position": 18.915493,
+     "traffic_value": 1.1
+    },
+    "traffic": 0,
+    "score": 211.999965,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | New Radiance Cosmetic Centers",
+    "serp_title": "",
+    "h1": "Med Spa Services Payment Options in South Florida",
+    "current_description": "New Radiance accepts major cards and offers third-party financing so treatment costs can be spread out. Ask about plans at your South Florida consult.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://newradiancenow.com/gallery/sculpsure-laser-lipo-case-5/",
+    "path": "/gallery/sculpsure-laser-lipo-case-5/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Sculpsure Laser Lipo Case 5 - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery/sculpsure-laser-lipo-case-5/",
+     "keywords_count": 7,
+     "top_keyword": "sculpsure near me",
+     "clicks": 0,
+     "impressions": 80,
+     "ctr": 0.0,
+     "position": 14.999999,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 80.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Sculpsure Laser Lipo Case 5 Before and After Photos in Boca Raton & Ft. Lauderdale, FL",
+    "serp_title": "Sculpsure Laser Lipo Case 5 - New Radiance Cosmetic Centers",
+    "h1": "Sculpsure Laser Lipo Case 5",
+    "current_description": "View before and after photos for Sculpsure Laser Lipo Case 5 at New Radiance Cosmetic Centers.",
+    "proposed_title": "Sculpsure Laser Lipo Case 5 - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/gallery/coolsculpting-elite-case-10/",
+    "path": "/gallery/coolsculpting-elite-case-10/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Coolsculpting Elite Case 10 - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/gallery/coolsculpting-elite-case-10/",
+     "keywords_count": 25,
+     "top_keyword": "thigh lift in port st. lucie",
+     "clicks": 0,
+     "impressions": 72,
+     "ctr": 0.0,
+     "position": 11.333333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 72.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Coolsculpting Elite Case 10 Before and After Photos in Boca Raton & Ft. Lauderdale, FL",
+    "serp_title": "Coolsculpting Elite Case 10 - New Radiance Cosmetic Centers",
+    "h1": "Coolsculpting Elite Case 10",
+    "current_description": "View before and after photos for Coolsculpting Elite Case 10 at New Radiance Cosmetic Centers.",
+    "proposed_title": "Coolsculpting Elite Case 10 - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://newradiancenow.com/video-category/pdo-thread-lifts/",
+    "path": "/video-category/pdo-thread-lifts/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://newradiancenow.com/video-category/pdo-thread-lifts/",
+     "keywords_count": 10,
+     "top_keyword": "thread lifts scranton",
+     "clicks": 0,
+     "impressions": 70,
+     "ctr": 0.0,
+     "position": 55.9,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 70.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "PDO Thread Lifts Archives | New Radiance",
+    "serp_title": "",
+    "h1": "Video Category: PDO Thread Lifts",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the PDO thread lift video category at New Radiance Now, a collection of five videos about PDO thread lift treatments from the medical spa.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 89
+   },
+   {
+    "url": "https://newradiancenow.com/video/video-4/",
+    "path": "/video/video-4/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Video 4 - New Radiance Cosmetic Centers'",
+    "gsc": {
+     "page": "https://newradiancenow.com/video/video-4/",
+     "keywords_count": 16,
+     "top_keyword": "radiance cosmetic center",
+     "clicks": 0,
+     "impressions": 69,
+     "ctr": 0.0,
+     "position": 31.405796,
+     "traffic_value": null
+    },
+    "traffic": 8.0,
+    "score": 69.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Video 4 | New Radiance",
+    "serp_title": "Video 4 - New Radiance Cosmetic Centers",
+    "h1": "Video 4",
+    "current_description": "If you are interested in learning more about our services, then I highly recommend watching our video about Video 4",
+    "proposed_title": "Video 4 - New Radiance Cosmetic Centers | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Video/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://offer.newradiancenow.com/beauty-bank",
+    "path": "/beauty-bank",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://offer.newradiancenow.com/beauty-bank",
+     "keywords_count": 7,
+     "top_keyword": "beauty bank",
+     "clicks": 1,
+     "impressions": 58,
+     "ctr": 1.7241,
+     "position": 17.741379,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 57.000022,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "",
+    "serp_title": "",
+    "h1": "Earn 3,000 points at sign up, a $300 value to use as you wish* — limited-time only!",
+    "current_description": "",
+    "proposed_title": "The Beauty Bank Membership: Monthly Credit for Treatments and Products | New Radiance",
+    "proposed_description": "Learn how the Beauty Bank membership works: monthly payments are banked as non-expiring credit for services and products, with Glow, Radiate and Flourish tiers, loyalty points and member perks. Choose a Boca Raton, Palm Beach Gardens, Port St. Lucie or Wellington location to join.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "multiple descriptions",
+     "title missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://newradiancenow.com/video-category/ultherapy/",
+    "path": "/video-category/ultherapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://newradiancenow.com/video-category/ultherapy/",
+     "keywords_count": 9,
+     "top_keyword": "site:newradiancenow.com",
+     "clicks": 0,
+     "impressions": 47,
+     "ctr": 0.0,
+     "position": 42.87234,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 47.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Ultherapy Archives | New Radiance",
+    "serp_title": "",
+    "h1": "Video Category: Ultherapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Watch a collection of Ultherapy videos from New Radiance, a medical spa. This page lists the videos in the Ultherapy category in one place.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 82
+   },
+   {
+    "url": "https://newradiancenow.com/video-category/microneedling/",
+    "path": "/video-category/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://newradiancenow.com/video-category/microneedling/",
+     "keywords_count": 7,
+     "top_keyword": "new radiance cosmetic centers boca raton",
+     "clicks": 0,
+     "impressions": 26,
+     "ctr": 0.0,
+     "position": 54.692307,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 26.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Microneedling Archives | New Radiance",
+    "serp_title": "",
+    "h1": "Video Category: Microneedling",
+    "current_description": "",
+    "proposed_title": "Microneedling Videos | New Radiance",
+    "proposed_description": "Browse the microneedling video category at New Radiance Now, which collects five videos on the treatment in one place.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 86
+   },
+   {
+    "url": "https://es.newradiancenow.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://es.newradiancenow.com/financing/",
+     "keywords_count": 1,
+     "top_keyword": "site:newradiancenow.com",
+     "clicks": 0,
+     "impressions": 16,
+     "ctr": 0.0,
+     "position": 23.0625,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 16.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Opciones de pago | Nuevos centros de cosmética Radiance",
+    "serp_title": "",
+    "h1": "Opciones de pago para servicios de spa médico en el sur de Florida.",
+    "current_description": "New Radiance acepta las principales tarjetas de crédito y ofrece financiamiento a través de terceros para que pueda distribuir el costo del tratamiento. Pregunte por los planes durante su consulta en el sur de Florida.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://es.newradiancenow.com/mini-facelift-vs-full-facelift-which-is-right-for-you/",
+    "path": "/mini-facelift-vs-full-facelift-which-is-right-for-you/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Minilifting facial vs. lifting facial completo - New Radiance'",
+    "gsc": {
+     "page": "https://es.newradiancenow.com/mini-facelift-vs-full-facelift-which-is-right-for-you/",
+     "keywords_count": 4,
+     "top_keyword": "minilifting facial",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 16.571428,
+     "traffic_value": null
+    },
+    "traffic": 1.0,
+    "score": 7.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Minilifting facial vs. lifting facial completo: ¿Cuál es el adecuado para usted?",
+    "serp_title": "Minilifting facial vs. lifting facial completo - New Radiance",
+    "h1": "Minilifting facial vs. lifting facial completo: ¿Cuál es el adecuado para usted?",
+    "current_description": "Compare las opciones de minilifting facial y lifting facial completo con cirujanos certificados en Boca Ratón. Descubra qué procedimiento se adapta mejor a sus objetivos. Programe su consulta hoy mismo.",
+    "proposed_title": "Minilifting facial vs. lifting facial completo - New Radiance | New Radiance",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://newradiancenow.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Exilis Ultra Skin Tightening in Boca Raton & Ft. Lauderdale'; homepage title comes from Yoast's site-wide template, change it there",
+    "gsc": {
+     "page": "https://www.newradiancenow.com/",
+     "keywords_count": 1,
+     "top_keyword": "where can i book non-surgical body contouring (coolsculpting, sculpsure) in florida?",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 8.0,
+     "traffic_value": null
+    },
+    "traffic": 86.0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "South Florida Cosmetic Surgery & Med Spa | New Radiance",
+    "serp_title": "Exilis Ultra Skin Tightening in Boca Raton & Ft. Lauderdale",
+    "h1": "South Florida’s Premier MedSpa, Plastic Surgery & Wellness Practice",
+    "current_description": "Cosmetic surgery, injectables and wellness care at New Radiance, with med spa centers in Boca Raton, Palm Beach Gardens, Wellington and Port St. Lucie.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://finance.newradiancenow.com/boca-raton?_gl=1*nb6lts*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "path": "/boca-raton?_gl=1*nb6lts*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "0% Interest Financing Calculator",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Financing Options at the Boca Raton Location | New Radiance",
+    "proposed_description": "Learn about financing for treatments at New Radiance in Boca Raton, including a no-hard-credit-check pre-qualification, a short online application, and a calculator to estimate monthly payments over 3 to 24 months. No-interest options are available to those who qualify.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "",
+    "text_chars": 1648
+   },
+   {
+    "url": "https://finance.newradiancenow.com/palm-beach-gardens?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "path": "/palm-beach-gardens?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "0% Interest Financing Calculator",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Financing Options at the Palm Beach Gardens Location | New Radiance",
+    "proposed_description": "Learn about financing for treatments at New Radiance in Palm Beach Gardens, including pre-qualifying without a hard credit check, a payment calculator for 3 to 24 month terms, and a quick online application.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "",
+    "text_chars": 1694
+   },
+   {
+    "url": "https://finance.newradiancenow.com/port-st-lucie?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "path": "/port-st-lucie?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "0% Interest Financing Calculator",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Financing Options at the Port St. Lucie Location | New Radiance",
+    "proposed_description": "Explore financing for treatments at New Radiance in Port St. Lucie, with a payment calculator and a quick application that won't affect your credit to pre-qualify. No-interest plans are available for those who qualify.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "",
+    "text_chars": 1656
+   },
+   {
+    "url": "https://newradiancenow.com/subscribe-notifications/",
+    "path": "/subscribe-notifications/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Subscribe",
+    "serp_title": "",
+    "h1": "Subscribe to unlock your exclusive offer now!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Sign up for email or text updates from New Radiance Cosmetic Centers by sharing your name, preferred location, and contact details. After subscribing, you'll get a code for $50 off your next treatment of $350 or more.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 712
+   },
+   {
+    "url": "https://es.newradiancenow.com/subscribe-notifications/",
+    "path": "/subscribe-notifications/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Suscríbete",
+    "serp_title": "",
+    "h1": "¡Suscríbete para desbloquear tu oferta exclusiva ahora!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Suscríbete con tu nombre, ubicación preferida, correo y teléfono para recibir correos o mensajes de texto de New Radiance Cosmetic Centers. Al suscribirte verás un código de $50 de descuento en tu próximo tratamiento de $350 o más.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 899
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/alma-accent-pixel/",
+    "path": "/video-category/alma-accent-pixel/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Archivo de píxeles de acento de Alma | Nuevo resplandor",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Píxel de acento de Alma",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Videos de la categoría Alma Accent Pixel de New Radiance Cosmetic Centers, con información de contacto y ubicaciones en Boca Ratón, Wellington, Palm Beach Gardens y Port St. Lucie. También puedes solicitar una consulta inicial desde esta página.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/emsella/",
+    "path": "/video-category/emsella/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Archivos de Emsella | Nuevo Resplandor",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Emsella",
+    "current_description": "",
+    "proposed_title": "Vídeos de Emsella | New Radiance",
+    "proposed_description": "Mira la categoría de vídeos de Emsella de New Radiance Cosmetic Centers, con cinco vídeos y la opción de solicitar una consulta inicial en una de sus cuatro ubicaciones del sur de Florida.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/microneedling/",
+    "path": "/video-category/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Archivo de Microagujas | New Radiance",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Microagujas",
+    "current_description": "",
+    "proposed_title": "Vídeos de microagujas | New Radiance",
+    "proposed_description": "Mira la colección de vídeos sobre microagujas de New Radiance Cosmetic Centers, con clínicas en Boca Ratón, Wellington, Palm Beach Gardens y Port St. Lucie. También puedes solicitar una consulta inicial desde esta página.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/pdo-thread-lifts/",
+    "path": "/video-category/pdo-thread-lifts/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Archivo de Hilos Tensores PDO | New Radiance",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Ascensores de rosca PDO",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mira la categoría de vídeos sobre lifting con hilos PDO de New Radiance Cosmetic Centers, con cuatro ubicaciones en el sur de Florida y un formulario para solicitar una consulta inicial.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/tummy-tuck/",
+    "path": "/video-category/tummy-tuck/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Archivo de Abdominoplastia | Nueva Radiancia",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Abdominoplastia \"Tummy Tuck\"",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Videos sobre abdominoplastia (tummy tuck) de New Radiance Cosmetic Centers, con información sobre cómo solicitar una consulta inicial en alguna de sus cuatro ubicaciones del sur de Florida.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://es.newradiancenow.com/video-category/ultherapy/",
+    "path": "/video-category/ultherapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Archivos de Ultherapy | Nueva Radiancia",
+    "serp_title": "",
+    "h1": "Categoría de vídeo: Ultherapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mira la colección de vídeos sobre Ultherapy de New Radiance Cosmetic Centers. También puedes solicitar una consulta inicial en cualquiera de sus cuatro ubicaciones del sur de Florida.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://finance.newradiancenow.com/wellington?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "path": "/wellington?_gl=1*ibap5o*_gcl_au*OTgxNDk1NTIwLjE3NTc5NTk5NDk.*_ga*MTQ0ODE5NTMxOS4xNzQxNzI1MDc0*_ga_TBP679T6FT*czE3NjM1NjAxOTkkbzE2MSRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDEwMTczNjExMjQ.*_ga_10D573LMBZ*czE3NjM1NjAyMDAkbzE3MiRnMSR0MTc2MzU2MjY0OCRqNTckbDAkaDA",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "0% Interest Financing Calculator",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Financing Options at the Wellington, FL Location | New Radiance",
+    "proposed_description": "Learn about financing for treatments at the Wellington, FL location, including a monthly payment calculator and an application that connects you with multiple lenders. Pre-qualifying doesn't involve a hard credit check, and no-interest options are available for those who qualify.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "",
+    "text_chars": 1658
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/author/dlm_seo/",
+    "/author/dlm_developer/page/3/",
+    "/author/dlm_developer/page/2/",
+    "/author/dlm_admin/",
+    "/author/dlm_admin/",
+    "/author/dlm_seo/",
+    "/author/dlm_seo/page/3/",
+    "/author/dlm_seo/page/2/",
+    "/author/dlm_seo/page/3/",
+    "/category/uncategorized/",
+    "/author/dlm_seo/page/4/",
+    "/author/dlm_developer/page/4/",
+    "/author/dlm_developer/page/2/",
+    "/author/dlm_developer/page/3/",
+    "/author/dlm_developer/",
+    "/category/uncategorized/",
+    "/video-category/alma-accent-pixel/",
+    "/category/uncategorized/page/2/",
+    "/author/dlm_developer/page/4/",
+    "/video-category/tummy-tuck/",
+    "/category/uncategorized/page/2/",
+    "/author/dlm_seo/page/4/",
+    "/author/dlm_developer/",
+    "/video-category/emsella/",
+    "/author/dlm_seo/page/2/",
+    "/gallery-category/coolsculpting-elite/page/3/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": [
+    "/"
+   ]
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

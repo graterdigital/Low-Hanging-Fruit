@@ -1,0 +1,563 @@
+{
+ "data": {
+  "pid": 9704555,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 19
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "The Ageless Center",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://www.theagelesscenter.com/procedures/",
+    "path": "/procedures/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/procedures/",
+     "keywords_count": 862,
+     "top_keyword": "botox buckhead",
+     "clicks": 7,
+     "impressions": 20983,
+     "ctr": 0.0334,
+     "position": 29.033312,
+     "traffic_value": 30.4
+    },
+    "traffic": 27.0,
+    "score": 20975.991678000002,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Med Spa Services in Buckhead | Non Surgical Skin Rejuvenation",
+    "serp_title": "Med Spa Services in Buckhead, Atlanta",
+    "h1": "Med Spa Services in Buckhead, Atlanta",
+    "current_description": "Discover med spa services including injectables, facial rejuvenation, and skin care in Buckhead. Enhance your natural beauty with expert care. Book today.",
+    "proposed_title": "Med Spa Services in Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/nonsurgical-liquid-facelift/",
+    "path": "/nonsurgical-liquid-facelift/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/nonsurgical-liquid-facelift/",
+     "keywords_count": 171,
+     "top_keyword": "natural face lift cost",
+     "clicks": 4,
+     "impressions": 12015,
+     "ctr": 0.0333,
+     "position": 22.260174,
+     "traffic_value": 3.0
+    },
+    "traffic": 5.0,
+    "score": 12010.999005,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Non Surgical Liquid Facelift in Buckhead for Facial Rejuvenation",
+    "serp_title": "Non-Surgical Liquid Facelift in Buckhead, Atlanta",
+    "h1": "Non-Surgical Liquid Facelift in Buckhead, Atlanta",
+    "current_description": "Rejuvenate your face without surgery using a custom liquid facelift in Buckhead. Lift and smooth with fillers and Botox or Dysport. Book a consultation.",
+    "proposed_title": "Non-Surgical Liquid Facelift in Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/dermal-filler-treatments/",
+    "path": "/dermal-filler-treatments/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Dermal Filler Treatments in Buckhead - Atlanta'",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/dermal-filler-treatments/",
+     "keywords_count": 443,
+     "top_keyword": "atlanta georgia jawline filler",
+     "clicks": 0,
+     "impressions": 9119,
+     "ctr": 0.0,
+     "position": 32.93519,
+     "traffic_value": null
+    },
+    "traffic": 1.0,
+    "score": 9119.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Dermal Filler Injections in Buckhead for Lips, Cheeks & Jawline",
+    "serp_title": "Dermal Filler Treatments in Buckhead - Atlanta",
+    "h1": "Dermal Filler Treatments in Buckhead",
+    "current_description": "Restore volume & smooth wrinkles with custom dermal fillers in Buckhead. Enhance lips, cheeks, & jawline with natural results from experts. Schedule today.",
+    "proposed_title": "Dermal Filler Treatments in Buckhead - Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/juvederm-voluma/",
+    "path": "/juvederm-voluma/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Juvederm® Voluma in Buckhead - Atlanta'",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/juvederm-voluma/",
+     "keywords_count": 191,
+     "top_keyword": "cost of juvederm voluma",
+     "clicks": 1,
+     "impressions": 7248,
+     "ctr": 0.0138,
+     "position": 20.850027,
+     "traffic_value": 1.7
+    },
+    "traffic": 42.0,
+    "score": 7246.999776000001,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Juvederm Voluma Filler in Buckhead: Cheek Filler & Midface Lift",
+    "serp_title": "Juvederm® Voluma in Buckhead - Atlanta",
+    "h1": "Juvederm® Voluma in Buckhead",
+    "current_description": "Restore cheek volume and enhance facial contours with Juvederm Voluma in Buckhead. Long-lasting lift for a more youthful profile. Book a consultation today.",
+    "proposed_title": "Juvederm® Voluma in Buckhead - Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/under-eye-treatments/",
+    "path": "/under-eye-treatments/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/under-eye-treatments/",
+     "keywords_count": 247,
+     "top_keyword": "under eye filler atlanta",
+     "clicks": 10,
+     "impressions": 3868,
+     "ctr": 0.2585,
+     "position": 14.779472,
+     "traffic_value": 14.6
+    },
+    "traffic": 6.0,
+    "score": 3858.00122,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Under Eye Filler Treatment in Buckhead for Eye Rejuvenation",
+    "serp_title": "Under Eye Filler Treatments in Buckhead",
+    "h1": "Under Eye Filler Treatments in Buckhead",
+    "current_description": "Refresh tired eyes with under eye filler in Buckhead. Reduce hollows & shadows for a brighter more youthful look with expert injectors. Book a consultation.",
+    "proposed_title": "Under Eye Filler Treatments in Buckhead | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/sculptra/",
+    "path": "/sculptra/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/sculptra/",
+     "keywords_count": 131,
+     "top_keyword": "sculptra atlanta",
+     "clicks": 2,
+     "impressions": 3604,
+     "ctr": 0.0555,
+     "position": 25.927025,
+     "traffic_value": 3.6
+    },
+    "traffic": 16.0,
+    "score": 3601.99978,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Sculptra in Atlanta, GA | The AgeLess Center",
+    "serp_title": "Sculptra® in Buckhead, Atlanta",
+    "h1": "Sculptra® in Buckhead, Atlanta",
+    "current_description": "Restore volume and reduce wrinkles with Sculptra fillers at The AgeLess Center in Atlanta. Achieve a youthful, rejuvenated look.",
+    "proposed_title": "Sculptra® in Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/prf-undereye/",
+    "path": "/prf-undereye/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'PRF Undereye Treatment in Buckhead - Atlanta'",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/prf-undereye/",
+     "keywords_count": 129,
+     "top_keyword": "prf atlanta",
+     "clicks": 5,
+     "impressions": 3266,
+     "ctr": 0.1531,
+     "position": 20.28322,
+     "traffic_value": 1.9
+    },
+    "traffic": 3.0,
+    "score": 3260.9997540000004,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "PRF Undereye Treatment in Buckhead for Dark Circles & Puffiness",
+    "serp_title": "PRF Undereye Treatment in Buckhead - Atlanta",
+    "h1": "PRF Undereye Treatment in Buckhead",
+    "current_description": "Reduce dark circles, fine lines, and under eye hollows with natural PRF injections in Buckhead. Boost collagen & refresh your look. Book a consultation.",
+    "proposed_title": "PRF Undereye Treatment in Buckhead - Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/skinpen-microneedling/",
+    "path": "/skinpen-microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/skinpen-microneedling/",
+     "keywords_count": 70,
+     "top_keyword": "microneedling atlanta",
+     "clicks": 2,
+     "impressions": 2805,
+     "ctr": 0.0713,
+     "position": 26.097326,
+     "traffic_value": 5.0
+    },
+    "traffic": 4.0,
+    "score": 2803.000035,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "SkinPen Microneedling in Buckhead | Smooth Texture & Tone",
+    "serp_title": "SkinPen Microneedling in Buckhead - Atlanta",
+    "h1": "Microneedling Buckhead, Atlanta",
+    "current_description": "SkinPen microneedling in Buckhead treats texture & acne scars by boosting collagen for smoother healthier skin. Pricing from $325. Book a consultation.",
+    "proposed_title": "Microneedling Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/dysport/",
+    "path": "/dysport/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/dysport/",
+     "keywords_count": 88,
+     "top_keyword": "dysport prices",
+     "clicks": 1,
+     "impressions": 2455,
+     "ctr": 0.0407,
+     "position": 10.462321,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2454.000815,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Dysport Injections in Buckhead for Fast Wrinkle Smoothing",
+    "serp_title": "Dysport® Injections in Buckhead, Atlanta",
+    "h1": "Dysport® Injections in Buckhead, Atlanta",
+    "current_description": "Smooth frown lines & wrinkles fast with Dysport in Buckhead. Results in days for a refreshed look. New patients only $10.5 per unit. Book an appointment!",
+    "proposed_title": "Dysport® Injections in Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/ezgel/",
+    "path": "/ezgel/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/ezgel/",
+     "keywords_count": 65,
+     "top_keyword": "prf ez gel atlanta",
+     "clicks": 2,
+     "impressions": 2236,
+     "ctr": 0.0894,
+     "position": 26.614937,
+     "traffic_value": null
+    },
+    "traffic": 3.0,
+    "score": 2234.001016,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "EZGel & PRF Injections in Buckhead | Natural Volume Renewal",
+    "serp_title": "EZGel & PRF Injections in Buckhead, Atlanta",
+    "h1": "EZGel & PRF Injections in Buckhead, Atlanta",
+    "current_description": "Restore volume & improve skin quality with EZGel & PRF. A natural filler alternative for eyes, cheeks, & more with lasting collagen support. Book today.",
+    "proposed_title": "EZGel & PRF Injections in Buckhead, Atlanta | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/latisse/",
+    "path": "/latisse/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/latisse/",
+     "keywords_count": 43,
+     "top_keyword": "latisse near me",
+     "clicks": 0,
+     "impressions": 1685,
+     "ctr": 0.0,
+     "position": 22.47181,
+     "traffic_value": null
+    },
+    "traffic": 17.0,
+    "score": 1685.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Latisse Eyelash Growth Treatment in Buckhead for Fuller Lashes",
+    "serp_title": "Latisse® Eyelash Growth Treatment in Buckhead",
+    "h1": "Latisse® Eyelash Growth Treatment in Buckhead",
+    "current_description": "Boost lash length and fullness with FDA-approved Latisse in Buckhead. Achieve visible growth in 12 to 16 weeks with a simple nightly routine. Book today.",
+    "proposed_title": "Latisse® Eyelash Growth Treatment in Buckhead | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/blog/juvederm-or-restylane-which-should-you-choose/",
+    "path": "/blog/juvederm-or-restylane-which-should-you-choose/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Juvederm or Restylane | Atlanta, Ga.'",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/blog/juvederm-or-restylane-which-should-you-choose/",
+     "keywords_count": 49,
+     "top_keyword": "restylane vs juvederm",
+     "clicks": 0,
+     "impressions": 776,
+     "ctr": 0.0,
+     "position": 26.244845,
+     "traffic_value": null
+    },
+    "traffic": 2.0,
+    "score": 776.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Juvederm or Restylane | Atlanta, Ga. | The Ageless Center",
+    "serp_title": "Juvederm or Restylane | Atlanta, Ga.",
+    "h1": "Juvederm or Restylane? Which should You Choose?",
+    "current_description": "Juvederm or Restylane? Stop by or call (470)-226-3315 for The AgeLess Center in Atlanta, Ga. today!",
+    "proposed_title": "Juvederm or Restylane | Atlanta, Ga | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/blog/the-benefits-of-belotero-balance/",
+    "path": "/blog/the-benefits-of-belotero-balance/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/blog/the-benefits-of-belotero-balance/",
+     "keywords_count": 30,
+     "top_keyword": "belotero balance dixon",
+     "clicks": 0,
+     "impressions": 643,
+     "ctr": 0.0,
+     "position": 15.772939,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 643.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Belotero Balance Benefits | The AgeLess Center Atlanta, GA",
+    "serp_title": "The Benefits of Belotero Balance - Atlanta",
+    "h1": "The Benefits of Belotero Balance",
+    "current_description": "Belotero balance is a great choice for younger looking skin. Call or stop by The AgeLess Center in Atlanta, GA today to learn more!",
+    "proposed_title": "The Benefits of Belotero Balance | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/financing/",
+     "keywords_count": 4,
+     "top_keyword": "site:www.theagelesscenter.com",
+     "clicks": 0,
+     "impressions": 56,
+     "ctr": 0.0,
+     "position": 9.321428,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 56.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | The AgeLess Center",
+    "serp_title": "",
+    "h1": "Payment Options",
+    "current_description": "Achieve your aesthetic goals with our diverse treatments, supported by convenient patient financing options. Contact our team today!",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.theagelesscenter.com/blog/why-beauty-editors-love-revision-skincare-neck-cream/",
+    "path": "/blog/why-beauty-editors-love-revision-skincare-neck-cream/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://www.theagelesscenter.com/blog/why-beauty-editors-love-revision-skincare-neck-cream/",
+     "keywords_count": 15,
+     "top_keyword": "beaute md wrinkle reducer",
+     "clicks": 0,
+     "impressions": 21,
+     "ctr": 0.0,
+     "position": 19.952381,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 21.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Why Beauty Editors Love Revision Skincare Neck Cream Atlanta",
+    "serp_title": "Why Beauty Editors Love Revision Skincare Neck Cream",
+    "h1": "Why Beauty Editors Love Revision Skincare Neck Cream",
+    "current_description": "If you’re looking for skincare products, one of the best places to look is in health and beauty magazines.",
+    "proposed_title": "Why Beauty Editors Love Revision Skincare Neck Cream | The Ageless Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

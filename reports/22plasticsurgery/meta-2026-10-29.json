@@ -1,0 +1,563 @@
+{
+ "data": {
+  "pid": 9704531,
+  "crawl": "2026-10-29",
+  "health": 97,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 18
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 31
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "22 Plastic Surgery",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://22plasticsurgery.com/doctor/dr-katherine-vandenberg/",
+    "path": "/doctor/dr-katherine-vandenberg/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 57.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dr. Katherine Vandenberg Archives - 22 Plastic Surgery",
+    "serp_title": "Dr. Katherine Vandenberg Archives",
+    "h1": "Dr. Katherine Vandenberg",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Dr. Katherine Vandenberg is a surgeon at 22 Plastic Surgery in Cottonwood Heights, Utah. This page lists the face procedures she offers, including facelift, rhinoplasty, eyelid lift, neck lift, and facial feminization.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 2307
+   },
+   {
+    "url": "https://22plasticsurgery.com/consultation-and-pre-op-prep/",
+    "path": "/consultation-and-pre-op-prep/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 37.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Essential Patient Resources | 22 Plastic Surgery",
+    "serp_title": "Preparing For Your Consultation and Procedure",
+    "h1": "Preparing For Your Consultation and Procedure",
+    "current_description": "Get ready for your consultation at 22 Plastic Surgery with our patient resources. Find directions, financing details, and more to simplify your visit.",
+    "proposed_title": "Preparing For Your Consultation and Procedure - 22 Plastic Surgery",
+    "proposed_description": "Find preparation instructions for in-person and virtual consultations, plus pre-op visit and pre-op phone call instructions, from 22 Plastic Surgery in Cottonwood Heights, Utah.",
+    "basis": [
+     "title: rewritten to H1",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2218
+   },
+   {
+    "url": "https://22plasticsurgery.com/what-is-vaginal-rejuvenation-surgery-a-comprehensive-beginners-guide/",
+    "path": "/what-is-vaginal-rejuvenation-surgery-a-comprehensive-beginners-guide/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Vaginal Rejuvenation Surgery: A Beginner's Guide'",
+    "gsc": {},
+    "traffic": 18.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Vaginal Rejuvenation Surgery: A Beginner’s Guide",
+    "serp_title": "Vaginal Rejuvenation Surgery: A Beginner's Guide",
+    "h1": "What Is Vaginal Rejuvenation Surgery? A Comprehensive Beginner’s Guide",
+    "current_description": "Learn what vaginal rejuvenation surgery involves, who it's for, and how labiaplasty & perineoplasty in Utah can improve comfort and confidence.",
+    "proposed_title": "Vaginal Rejuvenation Surgery: A Beginner's Guide - 22 Plastic Surgery",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://22plasticsurgery.com/dr-brian-reuben-bio/",
+    "path": "/dr-brian-reuben-bio/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 16.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Dr. Brian Reuben Bio - 22 Plastic Surgery",
+    "serp_title": "Dr. Brian Reuben Bio",
+    "h1": "Meet Dr. Reuben",
+    "current_description": "Meet Dr. Brian Reuben, a board-certified plastic surgeon at 22 Plastic Surgery, specializing in advanced techniques for natural, personalized results.",
+    "proposed_title": "Meet Dr. Brian Reuben, Board-Certified Plastic Surgeon - 22 Plastic Surgery",
+    "proposed_description": "Learn about Dr. Reuben's background, including his board certification by the American Board of Plastic Surgery, his general surgery residency at the University of Utah, and his plastic surgery training at the University of Pittsburgh. You can also view his breast, body, and face gallery.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 1890
+   },
+   {
+    "url": "https://22plasticsurgery.com/dr-clayton-bio/",
+    "path": "/dr-clayton-bio/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Dr. Brian Reuben Bio - 22 Plastic Surgery",
+    "serp_title": "Dr. Brian Reuben Bio",
+    "h1": "Meet Dr. Clayton",
+    "current_description": "Meet Dr. Brian Reuben, a board-certified plastic surgeon at 22 Plastic Surgery, specializing in advanced techniques for natural, personalized results.",
+    "proposed_title": "Meet Dr. John L. Clayton, Board-Certified Plastic Surgeon - 22 Plastic Surgery",
+    "proposed_description": "Learn about Dr. John L. Clayton's training, board certification, research, and family tradition in plastic surgery, and how he approaches personalized care at our Cottonwood Heights, UT practice.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/47976-2/",
+    "path": "/47976-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Our Locations'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "- 22 Plastic Surgery",
+    "serp_title": "Our Locations",
+    "h1": "",
+    "current_description": "Flexible Financing Exceptional care, without the wait. Your surgical journey is an investment in yourself. We've made financing simple so",
+    "proposed_title": "Our Locations - 22 Plastic Surgery",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://22plasticsurgery.com/achieve-your-dream-body-with-liposuction-a-personalized-approach/",
+    "path": "/achieve-your-dream-body-with-liposuction-a-personalized-approach/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Achieve Your Dream Body with Liposuction'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Achieve Your Dream Body with Liposuction: A Personalized Approach",
+    "serp_title": "Achieve Your Dream Body with Liposuction",
+    "h1": "Achieve Your Dream Body with Liposuction: A Personalized Approach",
+    "current_description": "Say goodbye to stubborn fat! Learn how personalized liposuction at 22 Plastic Surgery can help you achieve your body goals with precision.",
+    "proposed_title": "Achieve Your Dream Body with Liposuction - 22 Plastic Surgery",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://22plasticsurgery.com/form-test/",
+    "path": "/form-test/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "form test - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This page is a form test for 22 Plastic Surgery in Cottonwood Heights, Utah. For body, breast, and face procedures, or to book a consultation, use the main site navigation or call (801) 937-9650.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/gallery-category/hairline-lowering/",
+    "path": "/gallery-category/hairline-lowering/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Hairline Lowering Archives - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "Hairline Lowering",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This is the Hairline Lowering section of the 22 Plastic Surgery gallery, where you can filter by surgeon and browse other procedure categories. No photos are currently posted in this category.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2835
+   },
+   {
+    "url": "https://22plasticsurgery.com/gallery-category/jawline-contouring/",
+    "path": "/gallery-category/jawline-contouring/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Jawline Contouring Archives - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "Jawline Contouring",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse before-and-after photos of jawline contouring patients at 22 Plastic Surgery in Cottonwood Heights, Utah, and filter the gallery by surgeon. The page notes that every patient is unique and results may vary.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2813
+   },
+   {
+    "url": "https://22plasticsurgery.com/gallery-category/renuvion/",
+    "path": "/gallery-category/renuvion/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Renuvion Archives - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "Renuvion",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the Renuvion section of the 22 Plastic Surgery photo gallery, which shows actual patients of the practice who consented to share their photos. You can filter by surgeon, and the page notes that each patient's results may vary.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2793
+   },
+   {
+    "url": "https://22plasticsurgery.com/mommy-makeover-recovery-timeline-utah/",
+    "path": "/mommy-makeover-recovery-timeline-utah/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Complete Mommy Makeover Recovery Timeline'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Mommy Makeover Recovery - Complete Week-by-Week Timeline - 22 Plastic Surgery",
+    "serp_title": "Complete Mommy Makeover Recovery Timeline",
+    "h1": "Complete Mommy Makeover Recovery Timeline: Your Week-by-Week Guide for Utah Moms",
+    "current_description": "Utah moms: Get the complete mommy makeover recovery timeline with week-by-week guidance, family planning tips, and when to book for summer results.",
+    "proposed_title": "Complete Mommy Makeover Recovery Timeline - 22 Plastic Surgery",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://22plasticsurgery.com/patient-instructions/",
+    "path": "/patient-instructions/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Patient Instructions - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "Patient Instructions",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Patient instructions from 22 Plastic Surgery & Spa MD, the Cottonwood Heights, Utah practice of Dr. Reuben and Dr. Vandenberg. The page also lists office hours, phone numbers, and the address for both the surgery office and the spa.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2298
+   },
+   {
+    "url": "https://22plasticsurgery.com/doctor/dr-john-clayton/",
+    "path": "/doctor/dr-john-clayton/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dr. John L. Clayton Procedure Gallery",
+    "serp_title": "",
+    "h1": "Dr. John Clayton",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Dr. John Clayton of 22 Plastic Surgery in Cottonwood Heights, Utah, and browse the body and breast procedures he performs, including tummy tuck, liposuction, breast augmentation, and breast reduction.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 2263
+   },
+   {
+    "url": "https://22plasticsurgery.com/insurance-pre-op-instructions/",
+    "path": "/insurance-pre-op-instructions/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Insurance Pre-Op Instructions - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what to expect at your pre-op appointment with a 22 Plastic Surgery nurse when your procedure is billed to insurance, including how any patient balance is paid and how to reach the office with questions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/pre-op-phone-call-instructions/",
+    "path": "/pre-op-phone-call-instructions/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Pre-Op Phone Call Instructions - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find out what to expect on your pre-op phone call with a 22 Plastic Surgery nurse, including what is reviewed, how to handle changes to your surgical plan, and the payment options for any remaining balance.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/pre-op-visit-instructions/",
+    "path": "/pre-op-visit-instructions/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Pre-Op Visit Instructions - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find out what happens at your pre-op appointment with 22 Plastic Surgery, including the nurse review of your procedure and instructions, pre-surgery photos, balance payment, and what to know before surgery day.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/preparing-for-your-plastic-surgery-consultation/",
+    "path": "/preparing-for-your-plastic-surgery-consultation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Preparing for Your Plastic Surgery Consultation - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Preparing for Your Plastic Surgery Consultation - 22 Plastic Surgery",
+    "proposed_description": "Find out how to get ready for your consultation, including completing new patient forms, bringing photos of your goals, and the cancellation and late-arrival policy.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://22plasticsurgery.com/preparing-for-your-virtual-consultation/",
+    "path": "/preparing-for-your-virtual-consultation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Preparing For Your Virtual Consultation - 22 Plastic Surgery",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "How to join your virtual consultation with 22 Plastic Surgery through the Symplast Patient App, what to expect while you wait for your surgeon, and how to complete new patient forms ahead of time. Also covers the three business days' notice requested to cancel or reschedule.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/gallery-category/gynecomastia/",
+    "/gallery-category/neck-liposuction/",
+    "/gallery-category/facial-feminization/",
+    "/gallery-category/facial-implants/",
+    "/gallery-category/lip-surgery/",
+    "/gallery-category/laser-resurfacing/",
+    "/blog/",
+    "/gallery-category/breast-augmentation-revision/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -1,0 +1,379 @@
+{
+ "data": {
+  "pid": 9704535,
+  "crawl": "2026-10-29",
+  "health": 49,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 18
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "LivingYoung Center",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://livingyoungcenter.com/blog/lip-filler-in-tampa-the-complete-guide/",
+    "path": "/blog/lip-filler-in-tampa-the-complete-guide/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 53.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Lip Filler in Tampa: What You Need to Know | Living Young Center",
+    "serp_title": "Lip Filler in Tampa: What You Need to Know",
+    "h1": "Lip Fillers: The Complete Guide to Getting Natural, Gorgeous Lips at Living Young Center",
+    "current_description": "Discover the truth about lip filler in Tampa and learn how to achieve a fuller, natural-looking pout safely.",
+    "proposed_title": "Lip Filler in Tampa: What You Need to Know | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/tampa-bay-med-spa/best-med-spa-in-st-pete/",
+    "path": "/tampa-bay-med-spa/best-med-spa-in-st-pete/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Best Med Spa in St Petersburg'",
+    "gsc": {},
+    "traffic": 41.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Living Young | Best Med Spa in St Petersburg",
+    "serp_title": "Best Med Spa in St Petersburg",
+    "h1": "St Petersburg",
+    "current_description": "Explore the best med spa in St Pete, where luxury meets exceptional treatments for your beauty and wellness needs.",
+    "proposed_title": "Best Med Spa in St Petersburg | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/tampa-bay-med-spa/best-med-spa-odessa/",
+    "path": "/tampa-bay-med-spa/best-med-spa-odessa/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Best Med Spa in Odessa'",
+    "gsc": {},
+    "traffic": 29.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Living Young | Best Med Spa in Odessa",
+    "serp_title": "Best Med Spa in Odessa",
+    "h1": "Odessa & Starkey Ranch",
+    "current_description": "Experience luxury and relaxation at the best med spa in Odessa and Starkey ranch, offering advanced aesthetic treatments for every client.",
+    "proposed_title": "Best Med Spa in Odessa | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/blog/how-many-units-of-botox/",
+    "path": "/blog/how-many-units-of-botox/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 17.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Units of Botox: How Many Do You Need? | Living Young Center",
+    "serp_title": "Units of Botox: How Many Do You Need?",
+    "h1": "How Many Units of Botox Do You Really Need? Expert Guide from Living Young Center",
+    "current_description": "Understand the units of botox and how they affect your treatment costs. Learn to estimate your Botox expenses accurately.",
+    "proposed_title": "Units of Botox: How Many Do You Need? | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/acne-scar-treatment/",
+    "path": "/acne-scar-treatment/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 13.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Acne Scars St. Petersburg & Palm Harbor, FL | LivingYoung Center",
+    "serp_title": "Acne Scar Treatment St. Petersburg",
+    "h1": "Acne Scar Treatment St. Petersburg",
+    "current_description": "Explore effective acne scar treatments tailored for your skin type and regain your confidence with clear skin.",
+    "proposed_title": "Acne Scar Treatment St. Petersburg | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/privacy-policy/",
+    "path": "/privacy-policy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 11.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Privacy Policy | Living Young Center",
+    "serp_title": "Privacy Policy",
+    "h1": "Privacy Policy",
+    "current_description": "Read our privacy policy here. We have locations in Odessa, St. Pete, Palm Harbor, and Seminole.",
+    "proposed_title": "Privacy Policy | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/blog/peptide-therapy-tampa-guide/",
+    "path": "/blog/peptide-therapy-tampa-guide/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 11.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Peptide Therapy Tampa: Your Complete Guide to Benefits - Living Young Center",
+    "serp_title": "Peptide Therapy Tampa: Your Complete Guide to Benefits",
+    "h1": "What Are Peptides? Your Complete Guide to Peptide Therapy in Tampa",
+    "current_description": "Curious about peptide therapy Tampa? Learn how peptides like BPC-157 and Semaglutide optimize healing, aging, and weight loss at Living Young Center.",
+    "proposed_title": "Peptide Therapy Tampa: Your Complete Guide to Benefits | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/tampa-bay-med-spa/best-med-spa-in-palm-harbor/",
+    "path": "/tampa-bay-med-spa/best-med-spa-in-palm-harbor/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Best Med Spa in Palm Harbor - Seminole'",
+    "gsc": {},
+    "traffic": 4.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Living Young | Best Med Spa in Palm Harbor",
+    "serp_title": "Best Med Spa in Palm Harbor - Seminole",
+    "h1": "Palm Harbor",
+    "current_description": "Discover the best med spa in Palm Harbor for rejuvenating treatments and exceptional service. Book your appointment today.",
+    "proposed_title": "Best Med Spa in Palm Harbor - Seminole | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/blog/8-skin-conditions-ipl-photofacial-can-treat/",
+    "path": "/blog/8-skin-conditions-ipl-photofacial-can-treat/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 3.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "8 Skin Conditions IPL Photofacial Can Treat | Living Young Center",
+    "serp_title": "8 Skin Conditions IPL Photofacial Can Treat",
+    "h1": "8 Skin Conditions IPL Photofacial Can Treat",
+    "current_description": "Transform your skin with IPL photofacial treatments at Living Young Center. Discover the benefits of this powerful light therapy.",
+    "proposed_title": "8 Skin Conditions IPL Photofacial Can Treat | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/med-spa-specials/",
+    "path": "/med-spa-specials/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Living Young | Med Spa Specials",
+    "serp_title": "Med Spa Specials",
+    "h1": "MED SPA SPECIALS",
+    "current_description": "Explore exclusive med spa specials that enhance your beauty treatments and boost your confidence. Discover savings today!",
+    "proposed_title": "MED SPA SPECIALS | LivingYoung Center",
+    "proposed_description": "See current offers on Botox, Juvederm fillers and Latisse, plus VIP membership pricing and financing with no hard credit check. Specials apply at the Seminole, Palm Harbor, St. Petersburg and Odessa locations.",
+    "basis": [
+     "title: rewritten to H1",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://livingyoungcenter.com/resources/financing/",
+    "path": "/resources/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Living Young Center'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | Living Young Center",
+    "serp_title": "",
+    "h1": "MED SPA PAYMENT OPTIONS",
+    "current_description": "See the flexible financing options at LivingYoung Center, available to clients in Seminole, Palm Harbor, St. Pete & Odessa.",
+    "proposed_title": "Payment Options | LivingYoung Center",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://livingyoungcenter.com/wellness-health/specialty-testing/food-sensitivity-testing/",
+    "path": "/wellness-health/specialty-testing/food-sensitivity-testing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Food Sensitivity Testing in St. Petersburg & Palm Harbor | LivingYoung Center",
+    "serp_title": "Food Sensitivity Testing in St. Petersburg & Palm Harbor",
+    "h1": "Food Sensitivity Testing",
+    "current_description": "We offer professional food sensitivity testing at LivingYoung Center. We have locations in Seminole, Palm Harbor, St. Petersburg or Odessa.",
+    "proposed_title": "",
+    "proposed_description": "Learn how food sensitivities can develop and how Living Young Center's food sensitivity testing assesses immune reactivity to raw and cooked food proteins, with a look at what sets the lab's approach apart.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://livingyoungcenter.com/blog/how-natural-looking-fillers-reveal-not-change-your-true-beauty/",
+    "path": "/blog/how-natural-looking-fillers-reveal-not-change-your-true-beauty/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'How Natural-Looking Fillers Reveal, Not Change, Your ...'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Living Young: Natural-Looking fillers",
+    "serp_title": "How Natural-Looking Fillers Reveal, Not Change, Your ...",
+    "h1": "How Natural-Looking Fillers Reveal, Not Change, Your True Beauty",
+    "current_description": "Explore the benefits of natural looking fillers for a youthful appearance without compromising authenticity.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

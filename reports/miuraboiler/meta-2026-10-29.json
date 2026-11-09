@@ -1,0 +1,1093 @@
+{
+ "data": {
+  "pid": 9704539,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 11
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 5
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 59
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Miura America",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://miuraboiler.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Miura Boiler'; homepage title comes from Yoast's site-wide template, change it there",
+    "gsc": {
+     "page": "https://miuraboiler.com/",
+     "keywords_count": 1145,
+     "top_keyword": "miura boiler",
+     "clicks": 885,
+     "impressions": 18535,
+     "ctr": 4.7747,
+     "position": 9.251092,
+     "traffic_value": 334.81
+    },
+    "traffic": 536.0,
+    "score": 17650.009355000002,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Industrial Steam Boilers | Low NOx Steam Boiler Manufacturer",
+    "serp_title": "Miura Boiler",
+    "h1": "",
+    "current_description": "As a leading manufacturer of industrial steam boilers, Miura America specializes in high-efficiency, low NOx modular systems.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://miuraboiler.com/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
+    "path": "/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Water Tube vs. Fire Tube Boilers: Key Differences'",
+    "gsc": {
+     "page": "https://miuraboiler.com/difference-between-water-tube-boiler-and-a-fire-tube-boiler/",
+     "keywords_count": 212,
+     "top_keyword": "fire tube and water tube boiler",
+     "clicks": 28,
+     "impressions": 8870,
+     "ctr": 0.3156,
+     "position": 11.43416,
+     "traffic_value": 1.3
+    },
+    "traffic": 40.0,
+    "score": 8842.00628,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Water Tube vs. Fire Tube Boilers: Key Differences | Miura Boiler",
+    "serp_title": "Water Tube vs. Fire Tube Boilers: Key Differences",
+    "h1": "",
+    "current_description": "Compare fire tube vs. water tube boilers. Learn why Miura’s modular water tube design offers faster steam, better efficiency & scalable performance.",
+    "proposed_title": "Water Tube vs. Fire Tube Boilers: Key Differences - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Comparisons"
+   },
+   {
+    "url": "https://miuraboiler.com/products/chemical-treatment/",
+    "path": "/products/chemical-treatment/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/products/chemical-treatment/",
+     "keywords_count": 97,
+     "top_keyword": "boilermate miura",
+     "clicks": 18,
+     "impressions": 2786,
+     "ctr": 0.6461,
+     "position": 15.055635,
+     "traffic_value": 0.67
+    },
+    "traffic": 4.0,
+    "score": 2767.9996539999997,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Chemical Treatment for Steam Boilers | Miura America",
+    "serp_title": "BOILERMATE® Chemical Water Treatment",
+    "h1": "BOILERMATE® Chemical Water Treatment",
+    "current_description": "BOILERMATE® is an eco-friendly water treatment program for once-through steam boilers that contains silica, a natural corrosion inhibitor.",
+    "proposed_title": "BOILERMATE® Chemical Water Treatment - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://miuraboiler.com/choosing-a-steam-source-for-a-hospital-autoclave-sterilizer/",
+    "path": "/choosing-a-steam-source-for-a-hospital-autoclave-sterilizer/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/choosing-a-steam-source-for-a-hospital-autoclave-sterilizer/",
+     "keywords_count": 144,
+     "top_keyword": "medical steam sterilizer",
+     "clicks": 0,
+     "impressions": 1760,
+     "ctr": 0.0,
+     "position": 16.821022,
+     "traffic_value": null
+    },
+    "traffic": 2.0,
+    "score": 1760.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Hospital Autoclave Sterilizer Steam Sources | Miura America",
+    "serp_title": "Choosing a Steam Source for a Hospital Autoclave Sterilizer",
+    "h1": "Choosing a Steam Source for a Hospital Autoclave Sterilizer",
+    "current_description": "Hospitals need a good source of on-demand steam for sterilizing tools in the autoclave sterilizer. Learn more about choosing a steam boiler for hospitals.",
+    "proposed_title": "Choosing a Steam Source for a Hospital Autoclave Sterilizer - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://miuraboiler.com/7-industries-that-benefit-from-modular-industrial-boilers/",
+    "path": "/7-industries-that-benefit-from-modular-industrial-boilers/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/7-industries-that-benefit-from-modular-industrial-boilers/",
+     "keywords_count": 148,
+     "top_keyword": "public sectors",
+     "clicks": 1,
+     "impressions": 1446,
+     "ctr": 0.0692,
+     "position": 24.860995,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1444.999368,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "7 Industries That Benefit From Modular Boilers | Miura America",
+    "serp_title": "7 Industries That Benefit From Modular Industrial Boilers",
+    "h1": "7 Industries That Benefit From Modular Industrial Boilers",
+    "current_description": "From hospitals to factories, learn why modular boilers are the most efficient, reliable, & safe way to meet industrial steam demands.",
+    "proposed_title": "7 Industries That Benefit From Modular Industrial Boilers - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://miuraboiler.com/should-i-buy-or-rent-a-steam-boiler/",
+    "path": "/should-i-buy-or-rent-a-steam-boiler/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/should-i-buy-or-rent-a-steam-boiler/",
+     "keywords_count": 77,
+     "top_keyword": "boiler room rental",
+     "clicks": 0,
+     "impressions": 1241,
+     "ctr": 0.0,
+     "position": 42.056406,
+     "traffic_value": null
+    },
+    "traffic": 7.0,
+    "score": 1241.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Should You Buy or Rent a Steam Boiler? We have the answer | Miura",
+    "serp_title": "Rental Boiler Q & A: Should I Buy or Rent a Steam Boiler?",
+    "h1": "Rental Boiler Q & A: Should I Buy or Rent a Steam Boiler?",
+    "current_description": "Learn why some businesses are skipping the rental boiler industry entirely for our cost-effective rent a boiler alternative, Quick Ship Xpress.",
+    "proposed_title": "Rental Boiler Q & A: Should I Buy or Rent a Steam Boiler? - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://miuraboiler.com/commercial-building-owners-see-value-of-modular-boilers/",
+    "path": "/commercial-building-owners-see-value-of-modular-boilers/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/commercial-building-owners-see-value-of-modular-boilers/",
+     "keywords_count": 86,
+     "top_keyword": "large capacity boiler island supplier",
+     "clicks": 0,
+     "impressions": 1217,
+     "ctr": 0.0,
+     "position": 19.153656,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1217.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Modular Boilers For Commercial Building Owners | Miura America",
+    "serp_title": "Commercial Building Owners See Value of Modular Boilers",
+    "h1": "Commercial Building Owners See Value of Modular Boilers",
+    "current_description": "Modular boilers consist of smaller boilers working in tandem and operated as a single-boiler system by one master controller.",
+    "proposed_title": "Commercial Building Owners See Value of Modular Boilers - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Study_or_Research_Findings"
+   },
+   {
+    "url": "https://miuraboiler.com/miura-connect-remote-monitoring-platform-miura/",
+    "path": "/miura-connect-remote-monitoring-platform-miura/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Miura Connect™ Remote Monitoring Platform'",
+    "gsc": {
+     "page": "https://miuraboiler.com/miura-connect-remote-monitoring-platform-miura/",
+     "keywords_count": 32,
+     "top_keyword": "miura connect",
+     "clicks": 6,
+     "impressions": 678,
+     "ctr": 0.8849,
+     "position": 18.09587,
+     "traffic_value": null
+    },
+    "traffic": 6.0,
+    "score": 672.000378,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Miura Connect™ Remote Monitoring Platform – Miura - Miura America",
+    "serp_title": "Miura Connect™ Remote Monitoring Platform",
+    "h1": "Miura Connect™ Remote Monitoring Platform – Miura",
+    "current_description": "Leveraging 30-plus years of experience with remote monitoring, Miura, manufacturer of industrial steam boilers, recently launched Miura Connect™.",
+    "proposed_title": "Miura Connect™ Remote Monitoring Platform - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://miuraboiler.com/event/interphex-2026/",
+    "path": "/event/interphex-2026/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/event/interphex-2026/",
+     "keywords_count": 17,
+     "top_keyword": "interphex conference 2026",
+     "clicks": 0,
+     "impressions": 608,
+     "ctr": 0.0,
+     "position": 9.991776,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 608.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Interphex 2026 - Miura Boiler",
+    "serp_title": "Interphex 2026",
+    "h1": "Interphex 2026",
+    "current_description": "Discover exciting upcoming events! Stay updated on the latest events | Miura Boiler",
+    "proposed_title": "Interphex 2026 - Miura America",
+    "proposed_description": "Miura America is exhibiting at INTERPHEX 2026 at the Javits Center in New York City, April 21-23. Visit booth #1558 to talk with the team about steam generation for pharmaceutical and biotechnology manufacturing.",
+    "basis": [
+     "title: rewritten to H1",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 1794
+   },
+   {
+    "url": "https://miuraboiler.com/steam-boiler-rentals-6-downsides-to-consider/",
+    "path": "/steam-boiler-rentals-6-downsides-to-consider/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/steam-boiler-rentals-6-downsides-to-consider/#1_Steam_boiler_rental_units_can_be_very_costly",
+     "keywords_count": 6,
+     "top_keyword": "cost to rent a boiler",
+     "clicks": 0,
+     "impressions": 449,
+     "ctr": 0.0,
+     "position": 7.643652,
+     "traffic_value": null
+    },
+    "traffic": 13.0,
+    "score": 449.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "The Real Downsides of a Steam Boiler Rental | Miura America",
+    "serp_title": "Steam Boiler Rentals: 6 Downsides to Consider",
+    "h1": "Steam Boiler Rentals: 6 Downsides to Consider",
+    "current_description": "Considering steam boiler rental after your original steam system has failed? Here are six potential downsides of opting for a temporary rental boiler.",
+    "proposed_title": "Steam Boiler Rentals: 6 Downsides to Consider - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://miuraboiler.com/steam-as-a-service-the-future-of-steam-generation/",
+    "path": "/steam-as-a-service-the-future-of-steam-generation/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Steam-as-a-Service: The Future of Steam Generation'",
+    "gsc": {
+     "page": "https://miuraboiler.com/steam-as-a-service-the-future-of-steam-generation/",
+     "keywords_count": 26,
+     "top_keyword": "energy efficient boilers for homes",
+     "clicks": 0,
+     "impressions": 433,
+     "ctr": 0.0,
+     "position": 11.152425,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 433.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Steam-as-a-Service: The Future of Steam | Miura America",
+    "serp_title": "Steam-as-a-Service: The Future of Steam Generation",
+    "h1": "",
+    "current_description": "Steam-as-a-Service (SaaS) delivers state-of-the-art equipment, next-gen IoT, and on-site operation & maintenance for a single monthly payment.",
+    "proposed_title": "Steam-as-a-Service: The Future of Steam Generation - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Thought_Leadership"
+   },
+   {
+    "url": "https://miuraboiler.com/event/ippe-production-processing-expo/",
+    "path": "/event/ippe-production-processing-expo/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/event/ippe-production-processing-expo/",
+     "keywords_count": 49,
+     "top_keyword": "process expo 2022",
+     "clicks": 0,
+     "impressions": 413,
+     "ctr": 0.0,
+     "position": 14.968523,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 413.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "IPPE Production & Processing Expo - Miura Boiler",
+    "serp_title": "IPPE Production & Processing Expo",
+    "h1": "IPPE Production & Processing Expo",
+    "current_description": "Discover exciting upcoming events! Stay updated on the latest events | Miura Boiler",
+    "proposed_title": "IPPE Production & Processing Expo - Miura America",
+    "proposed_description": "See where Miura America is exhibiting at IPPE, held January 27-29 at the Georgia World Congress Center in Atlanta. Find the venue details and our booth number, BC46103.",
+    "basis": [
+     "title: rewritten to H1",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 1971
+   },
+   {
+    "url": "https://miuraboiler.com/how-to-find-the-most-efficient-industrial-steam-boiler/",
+    "path": "/how-to-find-the-most-efficient-industrial-steam-boiler/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/how-to-find-the-most-efficient-industrial-steam-boiler/#Efficient_Use_Of_Space",
+     "keywords_count": 23,
+     "top_keyword": "boiler industrial",
+     "clicks": 0,
+     "impressions": 243,
+     "ctr": 0.0,
+     "position": 5.975308,
+     "traffic_value": null
+    },
+    "traffic": 43.0,
+    "score": 243.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "The Most Efficient Industrial Steam Boiler | Miura America",
+    "serp_title": "How To Find The Most Efficient Industrial Steam Boiler",
+    "h1": "How To Find The Most Efficient Industrial Steam Boiler",
+    "current_description": "How do you find the most energy efficient industrial boiler models? Learn how to find the most efficient industrial steam boiler.",
+    "proposed_title": "How To Find The Most Efficient Industrial Steam Boiler - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://miuraboiler.com/3-benefits-of-outsourcing-your-facilitys-steam-system/",
+    "path": "/3-benefits-of-outsourcing-your-facilitys-steam-system/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows '3 Benefits of Outsourcing Your Facility's Steam System'",
+    "gsc": {
+     "page": "https://miuraboiler.com/3-benefits-of-outsourcing-your-facilitys-steam-system/",
+     "keywords_count": 22,
+     "top_keyword": "steam boiler industrial",
+     "clicks": 0,
+     "impressions": 210,
+     "ctr": 0.0,
+     "position": 54.990475,
+     "traffic_value": null
+    },
+    "traffic": 3.0,
+    "score": 210.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "3 Benefits of Outsourcing Your Facility’s Steam System - Miura America",
+    "serp_title": "3 Benefits of Outsourcing Your Facility's Steam System",
+    "h1": "3 Benefits of Outsourcing Your Facility’s Steam System",
+    "current_description": "Is it possible to outsource a steam plant? Yes. Discover the benefits of offloading the management & maintenance of your steam system.",
+    "proposed_title": "3 Benefits of Outsourcing Your Facility's Steam System - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://miuraboiler.com/steam-boiler-safety-in-an-age-of-public-health-concerns/",
+    "path": "/steam-boiler-safety-in-an-age-of-public-health-concerns/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Steam Boiler Safety in an Age of Public Health Concerns'",
+    "gsc": {
+     "page": "https://miuraboiler.com/steam-boiler-safety-in-an-age-of-public-health-concerns/",
+     "keywords_count": 34,
+     "top_keyword": "gas steam boiler",
+     "clicks": 0,
+     "impressions": 187,
+     "ctr": 0.0,
+     "position": 19.663101,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 187.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Steam Boiler Safety in an Age of Public Health Concerns | Miura",
+    "serp_title": "Steam Boiler Safety in an Age of Public Health Concerns",
+    "h1": "",
+    "current_description": "Physics and the physical design of an industrial or process steam boiler play a key role in determining the overall and day-to-day safety of a steam boiler.",
+    "proposed_title": "Steam Boiler Safety in an Age of Public Health Concerns - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://miuraboiler.com/how-boilermate-water-treatment-works-for-steam-boilers/",
+    "path": "/how-boilermate-water-treatment-works-for-steam-boilers/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://miuraboiler.com/how-boilermate-water-treatment-works-for-steam-boilers/",
+     "keywords_count": 19,
+     "top_keyword": "boilermate miura",
+     "clicks": 1,
+     "impressions": 130,
+     "ctr": 0.7692,
+     "position": 9.276923,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 129.00003999999998,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "How Boilermate® Works for Steam Boilers | Miura America",
+    "serp_title": "How Boilermate® Water Treatment Works for Steam Boilers",
+    "h1": "How Boilermate® Water Treatment Works for Steam Boilers",
+    "current_description": "Boilermate® is an eco-friendly water treatment system by Miura that protects your steam boiler system against the corrosive properties of water.",
+    "proposed_title": "How Boilermate® Water Treatment Works for Steam Boilers - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://miuraboiler.com/steam-challenges-in-modern-bottling-operations/",
+    "path": "/steam-challenges-in-modern-bottling-operations/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/steam-challenges-in-modern-bottling-operations/",
+     "keywords_count": 10,
+     "top_keyword": "bottling operations",
+     "clicks": 0,
+     "impressions": 76,
+     "ctr": 0.0,
+     "position": 11.592105,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 76.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Steam Challenges in Modern Bottling Operations (and How the Right Boiler System Can Help) - Miura America",
+    "serp_title": "",
+    "h1": "Steam Challenges in Modern Bottling Operations (and How the Right Boiler System Can Help)",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how variable production schedules, frequent CIP cycles, boiler downtime, energy costs, and water quality affect steam supply in bottling operations, and what to consider when evaluating a boiler system.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/decarbonizing-the-boiler-room-before-fuel-switching/",
+    "path": "/decarbonizing-the-boiler-room-before-fuel-switching/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/decarbonizing-the-boiler-room-before-fuel-switching/",
+     "keywords_count": 6,
+     "top_keyword": "decarbonization and emission control strategies for boilers",
+     "clicks": 0,
+     "impressions": 43,
+     "ctr": 0.0,
+     "position": 13.627907,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 43.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Decarbonizing the Boiler Room Before Fuel Switching - Miura America",
+    "serp_title": "",
+    "h1": "Decarbonizing the Boiler Room Before Fuel Switching",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Before switching fuels, plants can cut boiler room emissions by reducing stack, blowdown, and standby losses, tightening water chemistry, and matching steam output to demand. This article walks through those steps and how to build a decarbonization roadmap.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/miura-launches-new-intuitive-website-that-anticipates-user-requirements/",
+    "path": "/miura-launches-new-intuitive-website-that-anticipates-user-requirements/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Miura Launches New “Intuitive” Website That Anticipates ...'",
+    "gsc": {
+     "page": "https://miuraboiler.com/miura-launches-new-intuitive-website-that-anticipates-user-requirements/",
+     "keywords_count": 11,
+     "top_keyword": "miuraboiler.com",
+     "clicks": 0,
+     "impressions": 36,
+     "ctr": 0.0,
+     "position": 10.305555,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 36.0,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Miura America Improves Information Access With New Website Launch",
+    "serp_title": "Miura Launches New “Intuitive” Website That Anticipates ...",
+    "h1": "Miura Launches New “Intuitive” Website That Anticipates User Requirements",
+    "current_description": "Miura, the world leader in steam boiler technology, celebrates their 60th anniversary with the launch of a new user-friendly website.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://miuraboiler.com/rep-meeting-2026/",
+    "path": "/rep-meeting-2026/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/rep-meeting-2026/",
+     "keywords_count": 11,
+     "top_keyword": "industrial boiler design tempe az",
+     "clicks": 0,
+     "impressions": 32,
+     "ctr": 0.0,
+     "position": 19.96875,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 32.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Strengthening Miura’s Rep Network: Highlights from the 2026 Annual Representative Meeting - Miura America",
+    "serp_title": "",
+    "h1": "Strengthening Miura’s Rep Network: Highlights from the 2026 Annual Representative Meeting",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Highlights from Miura's 2026 Annual Representative Meeting in Savannah, Georgia, including partner award winners and two new representative companies, Thermal Product Solutions in the Northeast and Patriot Boiler in Tempe, Arizona.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/miura-introduces-industrial-reverse-osmosis-systems/",
+    "path": "/miura-introduces-industrial-reverse-osmosis-systems/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/miura-introduces-industrial-reverse-osmosis-systems/",
+     "keywords_count": 10,
+     "top_keyword": "i am a 45-54 or 55-64 year old in the government or energy industry. my job seniority is at the vp, director, or executive level. i work at a company with 250-1k employees, 1k-10k employees, or 10k+ employees. my main motivations: ensuring regulatory compliance with epa and state water quality standards. reducing operational costs through energy-efficient pumping and treatment systems. modernizing aging infrastructure with smart water networks and digital monitoring. achieving long-term resilience against climate-driven water stress and demand surges. my main pain points: budget constraints for capital-intensive infrastructure upgrades. difficulty integrating legacy scada systems with modern iot and digital twin platforms. workforce shortages and knowledge gaps in advanced water treatment technologies. navigating complex pfas remediation requirements and emerging contaminant regulations. which reverse osmosis systems are recommended for industrial applications?",
+     "clicks": 0,
+     "impressions": 27,
+     "ctr": 0.0,
+     "position": 23.592592,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 27.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Miura Introduces Industrial Reverse Osmosis Systems for High-Purity Boiler Feedwater Treatment - Miura America",
+    "serp_title": "",
+    "h1": "Miura Introduces Industrial Reverse Osmosis Systems for High-Purity Boiler Feedwater Treatment",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Miura's new industrial reverse osmosis systems for boiler feedwater come in Basic and Premium tiers, from 15 to 50 GPM standard and scalable to 500 GPM. This announcement covers how they work with Miura softeners, boilers, and Miura Connect monitoring.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/biogas-recovery-a-renewable-energy-source-for-generating-steam/",
+    "path": "/biogas-recovery-a-renewable-energy-source-for-generating-steam/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Biogas Recovery: A Renewable Energy Source'",
+    "gsc": {
+     "page": "https://miuraboiler.com/biogas-recovery-a-renewable-energy-source-for-generating-steam/#Fighting_Pollution_NonProfits_Programs_and_Policies",
+     "keywords_count": 3,
+     "top_keyword": "biogas to industrial boiler",
+     "clicks": 0,
+     "impressions": 25,
+     "ctr": 0.0,
+     "position": 3.56,
+     "traffic_value": null
+    },
+    "traffic": 7.0,
+    "score": 25.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Biogas Recovery: A Renewable Energy Source - Miura Boiler",
+    "serp_title": "Biogas Recovery: A Renewable Energy Source",
+    "h1": "Biogas Recovery: A Renewable Energy Source for Generating Steam",
+    "current_description": "A renewable energy source known as biogas can be used as an alternative fuel source to generate steam. Learn more from Miura experts.",
+    "proposed_title": "Biogas Recovery: A Renewable Energy Source - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://miuraboiler.com/how-to-prevent-boiler-scale-in-industrial-steam-systems-and-why-it-matters/",
+    "path": "/how-to-prevent-boiler-scale-in-industrial-steam-systems-and-why-it-matters/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Preventing Boiler Scale in Industrial Steam Systems'",
+    "gsc": {
+     "page": "https://miuraboiler.com/how-to-prevent-boiler-scale-in-industrial-steam-systems-and-why-it-matters/#Industrial_Boiler_Scale_Prevention_Starts_with_Feedwater_Management",
+     "keywords_count": 1,
+     "top_keyword": "prevention of scale formation in boilers",
+     "clicks": 0,
+     "impressions": 20,
+     "ctr": 0.0,
+     "position": 7.65,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 20.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Preventing Boiler Scale in Industrial Steam Systems | Miura Boiler",
+    "serp_title": "Preventing Boiler Scale in Industrial Steam Systems",
+    "h1": "How to Prevent Boiler Scale in Industrial Steam Systems (And Why It Matters)",
+    "current_description": "Boiler scale cuts efficiency and raises costs. Learn how smart water treatment helps industrial facilities prevent scale buildup.",
+    "proposed_title": "Preventing Boiler Scale in Industrial Steam Systems - Miura America",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://miuraboiler.com/miuras-4th-annual-first-responders-appreciation-day-event/",
+    "path": "/miuras-4th-annual-first-responders-appreciation-day-event/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/miuras-4th-annual-first-responders-appreciation-day-event/",
+     "keywords_count": 3,
+     "top_keyword": "1966 lamborghini miura",
+     "clicks": 0,
+     "impressions": 14,
+     "ctr": 0.0,
+     "position": 6.214286,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 14.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Miura's 4th Annual First Responders Appreciation Day Event - Miura America",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about Miura America's 4th annual First Responders Appreciation Day event, hosted by the boiler manufacturer from its Rockmart, Georgia headquarters.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 2497
+   },
+   {
+    "url": "https://miuraboiler.com/interphex-2026/",
+    "path": "/interphex-2026/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://miuraboiler.com/interphex-2026/",
+     "keywords_count": 2,
+     "top_keyword": "modular steam solutions",
+     "clicks": 0,
+     "impressions": 14,
+     "ctr": 0.0,
+     "position": 2.714286,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 14.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "High-Efficiency Steam for Pharma and Biotech: How Miura America's LX-50 Modular Boiler Optimized cGMP Utilities at INTERPHEX 2026 - Miura America",
+    "serp_title": "",
+    "h1": "High-Efficiency Steam for Pharma and Biotech: How Miura America’s LX-50 Modular Boiler Optimized cGMP Utilities at INTERPHEX 2026",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how Miura America presented the LX-50 modular steam boiler at INTERPHEX 2026, including its 50 BHP output, on-demand startup, low NOx emissions, and how modular steam supports cGMP utilities and clean steam.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Thought_Leadership",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/specifications/boilermate/",
+    "path": "/specifications/boilermate/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Water Treatment Chemical | BOILERMATE® - Miura Boiler",
+    "serp_title": "",
+    "h1": "WATER TREATMENT CHEMICAL | BOILERMATE®",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Download safety data sheets for BOILERMATE boiler water treatment chemicals, including the 1101S, 1200S, 2100D, 3300C, 7200P and 9100H, with Spanish versions and NSF food safety sheets for select products.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1719
+   },
+   {
+    "url": "https://miuraboiler.com/specifications/ex/",
+    "path": "/specifications/ex/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "EX Series | Dual-Fuel Steam Boiler - Standard Pressure - Miura Boiler",
+    "serp_title": "",
+    "h1": "EX SERIES | DUAL-FUEL STEAM BOILER - STANDARD PRESSURE",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Specifications for the EX Series dual-fuel steam boiler in standard pressure (70-150 PSI), covering 100 to 300 HP models including the low NOx EXN versions with FGR. Each model lists a spec sheet, 2D drawings, 3D STEP files and Revit models.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1958
+   },
+   {
+    "url": "https://miuraboiler.com/miura-america-honored-with-2026-trsa-community-service-award/",
+    "path": "/miura-america-honored-with-2026-trsa-community-service-award/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Miura America Honored with 2026 TRSA Community Service Award - Miura America",
+    "serp_title": "",
+    "h1": "Miura America Honored with 2026 TRSA Community Service Award",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Miura America received the 2026 Company Community Service Award from TRSA for its annual First Responders Appreciation Day. Read about the award, the event's growth, and the September 19, 2026 date for the 4th annual event.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/miura-america-welcomes-more-than-250-first-responders-and-family-members-at-fourth-annual-appreciation-day/",
+    "path": "/miura-america-welcomes-more-than-250-first-responders-and-family-members-at-fourth-annual-appreciation-day/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Miura America Welcomes More Than 250 First Responders and Family Members at Fourth Annual Appreciation Day - Miura America",
+    "serp_title": "",
+    "h1": "Miura America Welcomes More Than 250 First Responders and Family Members at Fourth Annual Appreciation Day",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Miura America hosted more than 250 first responders and family members at its Rockmart headquarters for the fourth annual First Responders Appreciation Day, which included two $1,500 scholarships, raffle prizes and sponsor-supported activities.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/more-than-300-expected-for-miuras-fourth-annual-first-responders-appreciation-day/",
+    "path": "/more-than-300-expected-for-miuras-fourth-annual-first-responders-appreciation-day/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "More Than 300 Expected for Miura’s Fourth Annual First Responders Appreciation Day - Miura America",
+    "serp_title": "",
+    "h1": "More Than 300 Expected for Miura’s Fourth Annual First Responders Appreciation Day",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Details on Miura's fourth annual First Responders Appreciation Day, a free UGA game day tailgate on Saturday, Sept. 19, from 11:30 a.m. to 3:30 p.m. at its Rockmart, Georgia headquarters. Find the activity lineup, two first responder scholarships, special guests and sponsors.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://miuraboiler.com/november-2025-newsletter/",
+    "path": "/november-2025-newsletter/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "{{Subject}}",
+    "serp_title": "",
+    "h1": "November 2025 Newsletter",
+    "current_description": "Stay in the loop with our latest updates, event news, and helpful tips to keep you informed and energised all month long.",
+    "proposed_title": "November 2025 Newsletter: Miura Connect Lite, Winter Boiler Readiness and Quick Ship Xpress - Miura America",
+    "proposed_description": "Read Miura America's November 2025 newsletter, covering the new Miura Connect Lite monitoring option, winter boiler failure planning, the Quick Ship Xpress program, and the February 24, 2026 Open House in Rockmart, Georgia.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/may-2026-newsletter/",
+    "/august-2025-newsletter/",
+    "/august-2026-newsletter/",
+    "/february-2026-newsletter/",
+    "/products-category/steam-boilers/",
+    "/category/videos/how-to/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": [
+    "/"
+   ]
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

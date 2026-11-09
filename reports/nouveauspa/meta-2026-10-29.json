@@ -1,0 +1,678 @@
+{
+ "data": {
+  "pid": 9704547,
+  "crawl": "2026-10-29",
+  "health": 80,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 19
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 8
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Nouveau Day Spa",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://nouveauspa.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in Kennewick, WA | Spa Near Richland | Nouveau ...'",
+    "gsc": {},
+    "traffic": 177.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Med Spa in Kennewick, WA | Spa Near Richland | Nouveau Day Spa",
+    "serp_title": "Med Spa in Kennewick, WA | Spa Near Richland | Nouveau ...",
+    "h1": "",
+    "current_description": "Nouveau Day Spa is a top rated med spa in Kennewick, Washington specializing in massages, waxing, skin care, nail treatments and more with excellent results!",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://nouveauspa.com/acne-scar-treatment-in-2025-lasers-rf-microneedling-fillers/",
+    "path": "/acne-scar-treatment-in-2025-lasers-rf-microneedling-fillers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Acne Scar Treatment in 2025: Lasers; RF Microneedling'",
+    "gsc": {},
+    "traffic": 24.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Acne Scar Treatment in 2025: Lasers; RF Microneedling; Fillers - Nouveau Day Spa",
+    "serp_title": "Acne Scar Treatment in 2025: Lasers; RF Microneedling",
+    "h1": "Acne Scar Treatment in 2025: Lasers; RF Microneedling; Fillers",
+    "current_description": "Discover the most effective acne scar treatments in 2025, including lasers, RF microneedling, and dermal fillers. Learn how to get rid of acne scars with expert care at Nouveau MedSpas in Kennewick, WA.",
+    "proposed_title": "Acne Scar Treatment in 2025: Lasers; RF Microneedling | Nouveau Day Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://nouveauspa.com/product-category/skin/facials/",
+    "path": "/product-category/skin/facials/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Kennewick & Richland, WA | Nouveau Day Spa",
+    "serp_title": "Kennewick & Richland, WA",
+    "h1": "Facials",
+    "current_description": "If you are interested in products that help with Facials then take a look at our large selection to find something that you will love!",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://nouveauspa.com/shop/day-spa/spa-days/sweet-16-spa-day-teens-13-18/",
+    "path": "/shop/day-spa/spa-days/sweet-16-spa-day-teens-13-18/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Sweet 16 Spa Day (Teens 13-18) in Kennewick, WA'",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Sweet 16 Spa Day (Teens 13-18) in Kennewick, WA | Near Me",
+    "serp_title": "Sweet 16 Spa Day (Teens 13-18) in Kennewick, WA",
+    "h1": "Sweet 16 Spa Day",
+    "current_description": "If you are looking to purchase Sweet 16 Spa Day then look no further, Nouveau Day Spa has what you are looking for and you can get it today!",
+    "proposed_title": "Sweet 16 Spa Day (Teens 13-18) in Kennewick, WA | Nouveau Day Spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://nouveauspa.com/team/brenda-petry/",
+    "path": "/team/brenda-petry/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Brenda Petry | Nouveau Day Spa",
+    "serp_title": "Brenda Petry | Nouveau Day Spa",
+    "h1": "Brenda Petry",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Brenda Petry, Master Aesthetician at Nouveau Day Spa in Kennewick, WA. Book an appointment or get in touch with the spa team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2309
+   },
+   {
+    "url": "https://nouveauspa.com/experience-the-magic-of-a-couples-massage-at-nouveau-day-spa/",
+    "path": "/experience-the-magic-of-a-couples-massage-at-nouveau-day-spa/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Experience the Magic of a Couples Massage at Nouveau ...'",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Experience the Magic of a Couples Massage at Nouveau Day Spa",
+    "serp_title": "Experience the Magic of a Couples Massage at Nouveau ...",
+    "h1": "Experience the Magic of a Couples Massage at Nouveau Day Spa",
+    "current_description": "As the holiday season approaches, many couples in Pasco, Washington are searching for unique ways to connect and unwind together. Look no further than",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://nouveauspa.com/cards/",
+    "path": "/cards/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Med Spa Gift Cards in Kennewick, WI - Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Gift Cards",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Buy a Nouveau Day Spa gift certificate in amounts of $50, $100, $150, $250 or $500, available to purchase online from the Kennewick, WA spa.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2061
+   },
+   {
+    "url": "https://nouveauspa.com/dlm-internal/",
+    "path": "/dlm-internal/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "DLM Internal",
+    "serp_title": "",
+    "h1": "DLM Internal",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Contact Nouveau Day Spa in Kennewick, WA by online form or phone to book an appointment, ask about specials, or learn more about the spa's services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2326
+   },
+   {
+    "url": "https://nouveauspa.com/our-blog/",
+    "path": "/our-blog/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Skincare & Beauty Blog | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Blogs",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Read the Nouveau Day Spa blog for articles from our Kennewick, Washington spa, with links to our massage, skin, hair and nail services and a way to book or contact the team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2324
+   },
+   {
+    "url": "https://nouveauspa.com/videos/",
+    "path": "/videos/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Videos | Aspire Plastic Surgery & Medical Spa",
+    "serp_title": "",
+    "h1": "Our Videos",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Visit the videos page for Nouveau Day Spa in Kennewick, Washington. You can also contact the team to book an appointment or ask about spa services and specials.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2334
+   },
+   {
+    "url": "https://nouveauspa.com/team/alaina-morgan/",
+    "path": "/team/alaina-morgan/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Alaina Morgan | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Alaina Morgan",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Alaina Morgan, a massage therapist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa to ask about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2308
+   },
+   {
+    "url": "https://nouveauspa.com/team/annina-monville/",
+    "path": "/team/annina-monville/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Annina Monville | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Annina Monville",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Annina Monville, an aesthetician at Nouveau Day Spa in Kennewick, WA. Book an appointment or contact the team with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 2305
+   },
+   {
+    "url": "https://nouveauspa.com/team/ashley-phanekham/",
+    "path": "/team/ashley-phanekham/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Ashley Phanekham | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Ashley Phanekham",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Ashley Phanekham, a hair stylist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa with questions about hair services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2306
+   },
+   {
+    "url": "https://nouveauspa.com/team/casandra-hudon/",
+    "path": "/team/casandra-hudon/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "CaSandra Hudon | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "CaSandra Hudon",
+    "current_description": "",
+    "proposed_title": "CaSandra Hudon | Nouveau Day Spa",
+    "proposed_description": "Meet CaSandra Hudon, a hair stylist on the Nouveau Day Spa team in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2304
+   },
+   {
+    "url": "https://nouveauspa.com/team/jenni-devoir/",
+    "path": "/team/jenni-devoir/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Jenni Devoir | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Jenni Devoir",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Jenni Devoir, Master Aesthetician at Nouveau Day Spa in Kennewick, WA. View her team profile and book an appointment online or contact the spa.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Business",
+    "text_chars": 2309
+   },
+   {
+    "url": "https://nouveauspa.com/team/joelle-filbrun/",
+    "path": "/team/joelle-filbrun/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Joelle Filbrun | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Joelle Filbrun",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Joelle Filbrun, a nail tech on the Nouveau Day Spa team in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2301
+   },
+   {
+    "url": "https://nouveauspa.com/team/kassen-chamberlain/",
+    "path": "/team/kassen-chamberlain/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Kassen Chamberlain | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Kassen Chamberlain",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Kassen Chamberlain, a massage therapist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2313
+   },
+   {
+    "url": "https://nouveauspa.com/team/michelle-mason/",
+    "path": "/team/michelle-mason/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Michelle Mason | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Michelle Mason",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Michelle Mason, an aesthetician on the Nouveau Day Spa team in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2304
+   },
+   {
+    "url": "https://nouveauspa.com/team/mikenzie-salas/",
+    "path": "/team/mikenzie-salas/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Mikenzie Salas | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Mikenzie Salas",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Mikenzie Salas, a hair stylist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa to ask about hair services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2304
+   },
+   {
+    "url": "https://nouveauspa.com/team/randee-alford/",
+    "path": "/team/randee-alford/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Randee Alford | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Randee Alford",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Randee Alford, Master Aesthetician at Nouveau Day Spa in Kennewick, WA. Book an appointment or contact the team with questions about services and specials.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2310
+   },
+   {
+    "url": "https://nouveauspa.com/team/samantha-olson/",
+    "path": "/team/samantha-olson/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Samantha Olson | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Samantha Olson",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Samantha Olson, a massage therapist on the Nouveau Day Spa team in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2309
+   },
+   {
+    "url": "https://nouveauspa.com/team/tayler-morales/",
+    "path": "/team/tayler-morales/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tayler Morales | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Tayler Morales",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Tayler Morales, a massage therapist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2309
+   },
+   {
+    "url": "https://nouveauspa.com/team/tony-arteaga/",
+    "path": "/team/tony-arteaga/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tony Arteaga | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Tony Arteaga",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Tony Arteaga, a massage therapist at Nouveau Day Spa in Kennewick, WA. Book an appointment online or contact the spa to ask about massage services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2307
+   },
+   {
+    "url": "https://nouveauspa.com/team/yennie-mendoza/",
+    "path": "/team/yennie-mendoza/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Yennie Mendoza | Nouveau Day Spa",
+    "serp_title": "",
+    "h1": "Yennie Mendoza",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Yennie Mendoza, Patient Care Coordinator at Nouveau Spa in Kennewick, WA. Find how to book an appointment or contact the team with questions about services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2316
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

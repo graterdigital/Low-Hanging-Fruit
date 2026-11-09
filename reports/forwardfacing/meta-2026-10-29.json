@@ -1,0 +1,156 @@
+{
+ "data": {
+  "pid": 9704533,
+  "crawl": "2026-10-29",
+  "health": 95,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 3
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 1
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Forward Facing Podcast",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://forwardfacing.com/about-us/",
+    "path": "/about-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'About Forward Facing Divorce & Family Law Podcast'",
+    "gsc": {
+     "page": "https://forwardfacing.com/about-us/",
+     "keywords_count": 2,
+     "top_keyword": "hastings shadmehry",
+     "clicks": 0,
+     "impressions": 10,
+     "ctr": 0.0,
+     "position": 13.499999,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 10.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "About Forward Facing Divorce & Family Law Podcast - Facing Forward Podcast",
+    "serp_title": "About Forward Facing Divorce & Family Law Podcast",
+    "h1": "About Us",
+    "current_description": "Learn more about the Facing Forward Podcast, its hosts, and the purpose behind creating thoughtful conversations around divorce, family law, and moving forward.",
+    "proposed_title": "About Forward Facing Divorce & Family Law Podcast - Forward Facing Podcast",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/About_Page"
+   },
+   {
+    "url": "https://forwardfacing.com/podcast-guest/",
+    "path": "/podcast-guest/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Podcast Guest - Forward Facing Podcast",
+    "serp_title": "",
+    "h1": "Podcast Guest",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Booked as a guest on the Forward Facing podcast? Complete this short form with your details and introduction information so the team can prepare for your conversation, and find out how to subscribe to new episodes released bi-weekly.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 687
+   },
+   {
+    "url": "https://forwardfacing.com/terms-of-service/",
+    "path": "/terms-of-service/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Terms of Service - Forward Facing Podcast",
+    "serp_title": "",
+    "h1": "Terms of Service",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The terms for using the Facing Forward Podcast website, covering content disclaimers, intellectual property, third-party platforms like Apple Podcasts, Spotify, and YouTube, user conduct, and limits on liability.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/T&C_Page",
+    "text_chars": 2041
+   },
+   {
+    "url": "https://forwardfacing.com/youtube-feed-cron/",
+    "path": "/youtube-feed-cron/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "YouTube Feed Cron - Forward Facing Podcast",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the Forward Facing Podcast episode feed, with links to About Us, Forward Finds, and Join the Conversation. You can also subscribe and follow the podcast on Facebook, Instagram, and TikTok.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Audio/Podcast",
+    "text_chars": 266
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

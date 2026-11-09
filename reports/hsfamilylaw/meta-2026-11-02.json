@@ -1,0 +1,82 @@
+{
+ "data": {
+  "pid": 9704538,
+  "crawl": "2026-11-02",
+  "health": 95,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 42
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 26
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Hastings Shadmehry",
+  "sep": " - ",
+  "todo": [],
+  "routed": {
+   "archive": [
+    "/blog/page/8/",
+    "/tag/dads/",
+    "/category/collaborative-divorce/",
+    "/blog/",
+    "/category/families/page/2/",
+    "/category/collaborative-divorce/page/3/",
+    "/category/families/custody/",
+    "/category/mediation/",
+    "/category/collaborative-divorce/page/4/",
+    "/category/military-divorce/",
+    "/blog/page/13/",
+    "/category/families/page/4/",
+    "/tag/families/",
+    "/category/divorce-faq/",
+    "/category/divorce/",
+    "/blog/page/10/",
+    "/blog/page/5/",
+    "/category/same-sex-marriage/",
+    "/blog/page/11/",
+    "/category/families/page/3/",
+    "/blog/page/2/",
+    "/category/divorce/page/2/",
+    "/tag/child-custody/",
+    "/blog/page/6/",
+    "/category/firm-news/",
+    "/blog/page/7/",
+    "/category/uncategorized/page/2/",
+    "/category/uncategorized/",
+    "/category/collaborative-divorce/page/2/",
+    "/category/families/",
+    "/tag/divorce/",
+    "/category/families/page/5/",
+    "/category/uncategorized/page/3/",
+    "/tag/children/",
+    "/blog/page/12/",
+    "/category/collaborative-divorce/page/5/",
+    "/category/firm-news/page/2/",
+    "/blog/page/3/",
+    "/blog/page/9/",
+    "/blog/page/4/",
+    "/tag/coparenting/",
+    "/category/divorce-faq/page/2/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

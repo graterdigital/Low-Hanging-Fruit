@@ -27,7 +27,7 @@ hosting:
   provider: wpengine
   access: ssh+wp-cli
   ssh_alias: purskinclinic
-  staging_environment: none
+  staging_environment: purskinclinic-staging
 
 tracking:
   ga4_measurement_id: G-GV152L8QM2

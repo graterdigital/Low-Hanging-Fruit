@@ -1,0 +1,744 @@
+{
+ "data": {
+  "pid": 9704524,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 12
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 13
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "CÚRATE MedAesthetics",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://curatemedspa.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Med Spa in Ooltewah - Chattanooga, TN | Cúrate MedAesthetics'; homepage title comes from Yoast's site-wide template, change it there",
+    "gsc": {
+     "page": "https://curatemedspa.com/",
+     "keywords_count": 744,
+     "top_keyword": "curate medaesthetics",
+     "clicks": 267,
+     "impressions": 16213,
+     "ctr": 1.6468,
+     "position": 15.108493,
+     "traffic_value": 117.49
+    },
+    "traffic": 128.0,
+    "score": 15946.004315999999,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Med Spa in Tennessee | Cúrate MedAesthetics",
+    "serp_title": "Med Spa in Ooltewah - Chattanooga, TN | Cúrate MedAesthetics",
+    "h1": "Beauty is An Art Form",
+    "current_description": "BOTOX® Cosmetic, fillers and more, cúrated for you at Cúrate MedAesthetics in Chattanooga, Ooltewah, Knoxville, Nashville and Murfreesboro, TN.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://curatemedspa.com/services/cooltone/",
+    "path": "/services/cooltone/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/cooltone/",
+     "keywords_count": 77,
+     "top_keyword": "cooltone nevada",
+     "clicks": 0,
+     "impressions": 2948,
+     "ctr": 0.0,
+     "position": 33.38331,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2948.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "CoolTone® - CÚRATE MedAesthetics",
+    "serp_title": "CoolTone",
+    "h1": "CoolTone® in Ooltewah Near Chattanooga, TN",
+    "current_description": "",
+    "proposed_title": "CoolTone® in Ooltewah Near Chattanooga, TN - CÚRATE MedAesthetics",
+    "proposed_description": "Learn how CoolTone® magnetic muscle stimulation is used on the abdomen, buttocks, and thighs, with sessions of about 30 minutes and little to no downtime. Request a consultation to build a personalized treatment plan.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 2544
+   },
+   {
+    "url": "https://curatemedspa.com/microneedling/",
+    "path": "/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://curatemedspa.com/microneedling/",
+     "keywords_count": 98,
+     "top_keyword": "microneedling near me",
+     "clicks": 9,
+     "impressions": 2647,
+     "ctr": 0.34,
+     "position": 30.244049,
+     "traffic_value": 11.23
+    },
+    "traffic": 10.0,
+    "score": 2638.0002,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Microneedling Chattanooga - Ooltewah, TN | Cúrate MedAesthetics",
+    "serp_title": "Microneedling in Ooltewah near Chattanooga, TN",
+    "h1": "Microneedling in Ooltewah near Chattanooga, TN",
+    "current_description": "Rejuvenate your skin with our professional microneedling services at Cúrate MedAesthetics, serving Ooltewah & greater Chattanooga, TN.",
+    "proposed_title": "Microneedling in Ooltewah near Chattanooga, TN - CÚRATE MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://curatemedspa.com/iv-hydration-therapy/",
+    "path": "/iv-hydration-therapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'IV Hydration Therapy Chattanooga - Ooltewah, TN | Cúrate ...'",
+    "gsc": {
+     "page": "https://curatemedspa.com/iv-hydration-therapy/",
+     "keywords_count": 264,
+     "top_keyword": "iv hydration near me",
+     "clicks": 7,
+     "impressions": 1929,
+     "ctr": 0.3629,
+     "position": 24.480041,
+     "traffic_value": 10.5
+    },
+    "traffic": 6.0,
+    "score": 1921.999659,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "IV Hydration Therapy Chattanooga - Ooltewah, TN | Cúrate MedAesthetics",
+    "serp_title": "IV Hydration Therapy Chattanooga - Ooltewah, TN | Cúrate ...",
+    "h1": "IV Hydration Therapy",
+    "current_description": "Revitalize your body with IV Hydration Therapy at Cúrate MedAesthetics, serving Ooltewah & greater Chattanooga, TN. Call us today!",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://curatemedspa.com/coolsculpting/",
+    "path": "/coolsculpting/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://curatemedspa.com/coolsculpting/",
+     "keywords_count": 106,
+     "top_keyword": "coolsculpting chattanooga",
+     "clicks": 4,
+     "impressions": 1541,
+     "ctr": 0.2596,
+     "position": 25.342634,
+     "traffic_value": 7.5
+    },
+    "traffic": 13.0,
+    "score": 1536.999564,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting : Cúrate MedAesthetics, Chattanooga TN : 423.661.3244",
+    "serp_title": "CoolSculpting : Cúrate MedAesthetics, Chattanooga TN",
+    "h1": "CoolSculpting® Elite",
+    "current_description": "CoolSculpting, Cúrate MedAesthetics near Chattanooga TN. 423.661.3244. Skincare solutions including Botox® and fillers, lasers, facials and peels, laser hair removal, IV infusion, pharmaceutical grade skincare and more.",
+    "proposed_title": "CoolSculpting® Elite - CÚRATE MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://curatemedspa.com/locations/nashville/",
+    "path": "/locations/nashville/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Curate MedAesthetics'",
+    "gsc": {
+     "page": "https://curatemedspa.com/locations/nashville/?utm_source=google&utm_medium=organic&utm_campaign=gbp_menu&utm_content=nashville",
+     "keywords_count": 145,
+     "top_keyword": "ideal image nashville",
+     "clicks": 13,
+     "impressions": 1240,
+     "ctr": 1.0484,
+     "position": 4.507258,
+     "traffic_value": 46.0
+    },
+    "traffic": 3.0,
+    "score": 1226.99984,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Nashville Med Spa - Curate MedAesthetics",
+    "serp_title": "Nashville Med Spa",
+    "h1": "Nashville Med Spa",
+    "current_description": "Step into our modern, restorative Nashville med spa and let our team help you achieve a radiant, confident glow. Book your appointment today!",
+    "proposed_title": "Nashville Med Spa - CÚRATE MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Location"
+   },
+   {
+    "url": "https://curatemedspa.com/locations/murfreesboro/",
+    "path": "/locations/murfreesboro/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Curate MedAesthetics'",
+    "gsc": {
+     "page": "https://curatemedspa.com/locations/murfreesboro/?utm_source=google&utm_medium=organic&utm_campaign=gbp_menu&utm_content=murfreesboro",
+     "keywords_count": 92,
+     "top_keyword": "lip filler near me",
+     "clicks": 4,
+     "impressions": 642,
+     "ctr": 0.623,
+     "position": 4.409657,
+     "traffic_value": 2.03
+    },
+    "traffic": 13.0,
+    "score": 638.00034,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Murfreesboro Med Spa - Curate MedAesthetics",
+    "serp_title": "Murfreesboro Med Spa",
+    "h1": "Murfreesboro Med Spa",
+    "current_description": "Experience the perfect blend of clinical precision and restorative luxury right here in Murfreesboro. Schedule your appointment today!",
+    "proposed_title": "Murfreesboro Med Spa - CÚRATE MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://curatemedspa.com/skincare/",
+    "path": "/skincare/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://curatemedspa.com/skincare/",
+     "keywords_count": 48,
+     "top_keyword": "services offered by curate medaesthetics",
+     "clicks": 1,
+     "impressions": 589,
+     "ctr": 0.1698,
+     "position": 31.733446,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 587.999878,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Skincare : Cúrate MedAesthetics, Chattanooga TN : 423.661.3244",
+    "serp_title": "Skincare : Cúrate MedAesthetics, Chattanooga TN",
+    "h1": "Skincare",
+    "current_description": "Skincare, Cúrate MedAesthetics near Chattanooga TN. 423.661.3244. Featured skincare brands at Cúrate: Zo Skin Health, EltaMD® Sun Care + Skin Care, The SkinMedica® System, Baby Foot®.",
+    "proposed_title": "Skincare - CÚRATE MedAesthetics",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://curatemedspa.com/services/botox/",
+    "path": "/services/botox/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/botox/",
+     "keywords_count": 28,
+     "top_keyword": "dysport tullahoma",
+     "clicks": 0,
+     "impressions": 547,
+     "ctr": 0.0,
+     "position": 65.767824,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 547.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Botox® & Dysport® - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Say Goodbye to Fine Lines",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore Botox, Dysport and Daxxify neurotoxin injectables from board-certified nurse practitioners at Cúrate MedAesthetics, including treatment areas from the forehead to the jawline. New patients can see the first-visit offer of 5 free units and request a consultation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3361
+   },
+   {
+    "url": "https://curatemedspa.com/services/laser-hair-removal/",
+    "path": "/services/laser-hair-removal/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/laser-hair-removal/",
+     "keywords_count": 22,
+     "top_keyword": "microneedling ooltewah tn",
+     "clicks": 0,
+     "impressions": 416,
+     "ctr": 0.0,
+     "position": 25.596154,
+     "traffic_value": null
+    },
+    "traffic": 5.0,
+    "score": 416.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Laser Hair Removal - CÚRATE MedAesthetics",
+    "serp_title": "Laser Hair Removal in Ooltewah near Chattanooga, TN",
+    "h1": "Laser Hair Removal in Ooltewah near Chattanooga, TN",
+    "current_description": "",
+    "proposed_title": "Laser Hair Removal in Ooltewah near Chattanooga, TN - CÚRATE MedAesthetics",
+    "proposed_description": "Learn how laser hair removal with the Gentle Max Pro works at Cúrate in Ooltewah, including who it suits and how the laser targets hair follicles. Request a consultation with a board certified practitioner to get started.",
+    "basis": [
+     "title: rewritten to H1",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 1808
+   },
+   {
+    "url": "https://curatemedspa.com/services/laser-light-treatments/",
+    "path": "/services/laser-light-treatments/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/laser-light-treatments/",
+     "keywords_count": 23,
+     "top_keyword": "cost?",
+     "clicks": 1,
+     "impressions": 313,
+     "ctr": 0.3195,
+     "position": 21.329073,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 311.99996500000003,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Laser & Light Treatments - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Laser & Light Treatments in Ooltewah near Chattanooga, TN",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about laser resurfacing options (Halo, Tetra CO2 CoolPeel, Deka Pulse, NanoLaserPeel and BBL) and the Cúrate Laser Facial at our Ooltewah med spa near Chattanooga. Treatment plans start with a consultation with a licensed provider.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3144
+   },
+   {
+    "url": "https://curatemedspa.com/services/facial-services-peels/",
+    "path": "/services/facial-services-peels/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/facial-services-peels/",
+     "keywords_count": 22,
+     "top_keyword": "curate med aesthetics nashville",
+     "clicks": 0,
+     "impressions": 206,
+     "ctr": 0.0,
+     "position": 38.65534,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 206.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Facial Services & Peels - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Facial Services & Peels",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the facials and peels offered at CÚRATE MedAesthetics in Nashville, including VI Peel, HydraFacial and DiamondGlow, with details on each option so you can find the right fit for your skin.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://curatemedspa.com/services/injectables/",
+    "path": "/services/injectables/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/injectables/",
+     "keywords_count": 22,
+     "top_keyword": "sculptra hardin valley",
+     "clicks": 0,
+     "impressions": 202,
+     "ctr": 0.0,
+     "position": 58.158415,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 202.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Injectables - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Injectable Services",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See the injectable treatments offered at CÚRATE MedAesthetics, including Botox, Dysport, Xeomin, dermal fillers, Kybella, and Sculptra. Request a consultation with a licensed provider at any of our five Tennessee locations, including Knoxville.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1309
+   },
+   {
+    "url": "https://curatemedspa.com/services/%D1%81oolsculpting/",
+    "path": "/services/%D1%81oolsculpting/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/%D1%81oolsculpting/",
+     "keywords_count": 23,
+     "top_keyword": "cool sculpting chattanooga",
+     "clicks": 0,
+     "impressions": 187,
+     "ctr": 0.0,
+     "position": 43.614973,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 187.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "CoolSculpting® - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "CoolSculpting® Elite",
+    "current_description": "",
+    "proposed_title": "CoolSculpting® Elite - CÚRATE MedAesthetics",
+    "proposed_description": "Learn how CoolSculpting Elite uses controlled cooling to target stubborn body fat without surgery, needles or anesthesia, and what to expect from a consultation. Available at all Cúrate locations.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://curatemedspa.com/services/biostimulators/",
+    "path": "/services/biostimulators/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/biostimulators/",
+     "keywords_count": 26,
+     "top_keyword": "facial biostimulators ellicott city",
+     "clicks": 0,
+     "impressions": 181,
+     "ctr": 0.0,
+     "position": 34.972375,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 181.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bio-Stimulators - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Bio Stimulators in Ooltewah near Chattanooga, TN",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how Sculptra, PRF EZ Gel, and Radiesse bio stimulators work with your body's own collagen production, and what each treatment involves at CÚRATE MedAesthetics in Ooltewah near Chattanooga, TN. Book a consultation with a licensed provider to find the right option.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://curatemedspa.com/services/wellness/",
+    "path": "/services/wellness/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/wellness/",
+     "keywords_count": 21,
+     "top_keyword": "curate medaesthetics reviews",
+     "clicks": 0,
+     "impressions": 170,
+     "ctr": 0.0,
+     "position": 54.817647,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 170.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Wellness - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "IV Hydration Therapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See the IV hydration therapy options at Cúrate MedAesthetics, including the Signature Cocktail and Pure Resilience infusions, add-on mixers and vitamin shots, given in our infusion lounge by licensed medical professionals. Request a consultation with a licensed provider to get started.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2111
+   },
+   {
+    "url": "https://curatemedspa.com/services/dermal-fillers/",
+    "path": "/services/dermal-fillers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/dermal-fillers/",
+     "keywords_count": 22,
+     "top_keyword": "curate med spa",
+     "clicks": 0,
+     "impressions": 158,
+     "ctr": 0.0,
+     "position": 37.120253,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 158.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dermal Fillers - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Lip & Dermal Fillers in Ooltewah near Chattanooga, TNs",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore lip and dermal filler treatments at Curate Med Spa in Ooltewah, including Restylane, Juvederm, Kybella and Radiesse, performed by Board-Certified Nurse Practitioners. See the areas we treat and request a consultation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3308
+   },
+   {
+    "url": "https://curatemedspa.com/services/microneedling/",
+    "path": "/services/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/services/microneedling/",
+     "keywords_count": 25,
+     "top_keyword": "microneedling murfreesboro tn",
+     "clicks": 0,
+     "impressions": 140,
+     "ctr": 0.0,
+     "position": 21.607142,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 140.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Microneedling - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Microneedling in Ooltewah near Chattanooga, TN",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about RF microneedling with exosomes and SkinPen® microneedling at CÚRATE MedAesthetics in Ooltewah, near Chattanooga. You can also see how to request a consultation with a licensed provider.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3092
+   },
+   {
+    "url": "https://curatemedspa.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://curatemedspa.com/financing/",
+     "keywords_count": 6,
+     "top_keyword": "curate pricing",
+     "clicks": 0,
+     "impressions": 20,
+     "ctr": 0.0,
+     "position": 75.6,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 20.0,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "Intentional care, thoughtfully within reach.",
+    "current_description": "Payment Options | CÚRATE MedAesthetics Monthly Payments Intentional care,thoughtfully within reach. Your treatment should be as curated as your standards.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://curatemedspa.com/services/pdo-threads/",
+    "path": "/services/pdo-threads/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "PDO Threads - CÚRATE MedAesthetics",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how a PDO thread lift at Cúrate uses fine medical-grade sutures on the face, neck or body, how it differs from a surgical facelift, and how to request a consultation at one of our Tennessee locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3407
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": [
+    "/"
+   ]
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

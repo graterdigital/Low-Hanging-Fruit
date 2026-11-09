@@ -1,0 +1,243 @@
+{
+ "data": {
+  "pid": 9704537,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 12
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 9
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Glo Medspa",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://glomedspa.com/genius/",
+    "path": "/genius/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Genius RF Microneedling Treatment Wilmington, NC'",
+    "gsc": {},
+    "traffic": 21.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Genius RF Microneedling Treatment Wilmington, NC | Glo",
+    "serp_title": "Genius RF Microneedling Treatment Wilmington, NC",
+    "h1": "RF Microneedling – Genius RF –",
+    "current_description": "Experience advanced skin rejuvenation with Genius RF microneedling in Wilmington, NC. Reduce wrinkles & improve skin texture. Schedule your consultation today!",
+    "proposed_title": "Genius RF Microneedling Treatment Wilmington, NC - Glo Medspa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://glomedspa.com/coolsculpting-elite/",
+    "path": "/coolsculpting-elite/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Coolsculpting Elite in Wilmington, NC - Glo Medspa'",
+    "gsc": {},
+    "traffic": 15.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Coolsculpting Elite in Wilmington, NC | Near Me | Wrightsville Beach",
+    "serp_title": "Coolsculpting Elite in Wilmington, NC - Glo Medspa",
+    "h1": "Coolsculpting Elite",
+    "current_description": "Glo Medspa is a top-rated med spa in Wilmington & Wrightsville Beach, NC specializing in coolsculpting elite for patients seeking to enhance their natural beauty. Call today!",
+    "proposed_title": "Coolsculpting Elite in Wilmington, NC - Glo Medspa - Glo Medspa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://glomedspa.com/winterville-nc/",
+    "path": "/winterville-nc/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Top Med Spa Winterville, NC | Botox & Hydrafacial'",
+    "gsc": {},
+    "traffic": 4.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Glo Med Spa Winterville & Greenville NC | Aesthetics",
+    "serp_title": "Top Med Spa Winterville, NC | Botox & Hydrafacial",
+    "h1": "Winterville, NC",
+    "current_description": "Visit Glo Med Spa in Winterville, proudly serving the Greenville NC area. We offer premium Botox, lip fillers, and advanced skincare. Book your visit!",
+    "proposed_title": "Top Med Spa Winterville, NC | Botox & Hydrafacial - Glo Medspa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://glomedspa.com/resurfx/",
+    "path": "/resurfx/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'ResurFX Laser Skin Resurfacing - Wilmington'",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "ResurFX Laser Skin Resurfacing - Glo Medspa",
+    "serp_title": "ResurFX Laser Skin Resurfacing - Wilmington",
+    "h1": "",
+    "current_description": "Reveal radiant, younger-looking skin with ResurFX laser resurfacing, gentle rejuvenation with minimal downtime.",
+    "proposed_title": "ResurFX Laser Skin Resurfacing - Wilmington - Glo Medspa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://glomedspa.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Glo Med Spa'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | Glo Med Spa",
+    "serp_title": "",
+    "h1": "Payment Options",
+    "current_description": "Enjoy the treatments you desire today and pay over time. Explore Glo Medspa's flexible financing plans designed to fit your budget.",
+    "proposed_title": "Payment Options - Glo Medspa",
+    "proposed_description": "",
+    "basis": [
+     "title: brand typo",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Core_Page/Services_Page"
+   },
+   {
+    "url": "https://glomedspa.com/ldn-therapy/",
+    "path": "/ldn-therapy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "LDN Therapy - Glo Medspa",
+    "serp_title": "",
+    "h1": "LDN Therapy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what low dose naltrexone (LDN) is, how it works with the immune system, and what it costs at Glo Medspa in Wilmington, including monthly and 3-month pricing and how dosing is determined.",
+    "basis": [
+     "description: from page text (model draft)",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://glomedspa.com/lipolean/",
+    "path": "/lipolean/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "LipoLean - Glo Medspa",
+    "serp_title": "",
+    "h1": "LipoLean",
+    "current_description": "",
+    "proposed_title": "LipoLean - Glo Medspa",
+    "proposed_description": "Learn about LipoLean, a vitamin and amino acid injection with L-Carnitine, choline, chromium and B vitamins, plus who it may suit and the typical weekly schedule.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)",
+     "manual in AIOSEO (no writer yet)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/category/injectables/",
+    "/author/infoeagleeyemarketinginc-com/",
+    "/category/skin/",
+    "/category/pdo-threads/",
+    "/category/blog/",
+    "/category/dlm-faq/",
+    "/category/chemical-peels/",
+    "/author/devgraterdigital-com/",
+    "/category/lasers/",
+    "/category/microneedling/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "aioseo",
+  "rows": []
+ }
+}

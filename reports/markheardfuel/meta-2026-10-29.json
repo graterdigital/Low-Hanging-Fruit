@@ -1,0 +1,920 @@
+{
+ "data": {
+  "pid": 9799849,
+  "crawl": "2026-10-29",
+  "health": 91,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 27
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 4
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Mark Heard Fuel Company",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://markheardfuel.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/",
+     "keywords_count": 394,
+     "top_keyword": "mark heard fuel",
+     "clicks": 149,
+     "impressions": 15634,
+     "ctr": 0.953,
+     "position": 4.1853,
+     "traffic_value": 37.25
+    },
+    "traffic": 0,
+    "score": 15485.007979999998,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "North Georgia Residential Propane Company - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mark Heard Fuel Company is a locally owned propane provider serving North Georgia counties for more than 70 years. Pay your bill online, sign up for new service, order a refill, or submit a service request.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Homepage",
+    "text_chars": 3429
+   },
+   {
+    "url": "https://markheardfuel.com/services",
+    "path": "/services",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/services",
+     "keywords_count": 10,
+     "top_keyword": "mark heard fuel",
+     "clicks": 2,
+     "impressions": 6487,
+     "ctr": 0.0308,
+     "position": 5.601202,
+     "traffic_value": 0.8
+    },
+    "traffic": 0,
+    "score": 6485.002004,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Services - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mark Heard Fuel provides propane to residential and commercial customers in Northeast Georgia, including tank delivery and installation, auto-fill plans, online bill pay, and new service sign-up.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Services_Page",
+    "text_chars": 2735
+   },
+   {
+    "url": "https://markheardfuel.com/contact",
+    "path": "/contact",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/contact",
+     "keywords_count": 21,
+     "top_keyword": "mark heard fuel company",
+     "clicks": 8,
+     "impressions": 5505,
+     "ctr": 0.1453,
+     "position": 4.30881,
+     "traffic_value": 1.2
+    },
+    "traffic": 0,
+    "score": 5497.001235,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Contact Us - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Contact Mark Heard Fuel Company for propane service, including ordering a refill, signing up for new service, submitting a service request, or paying your bill online. You'll also find links to FAQs, safety information, and careers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 368
+   },
+   {
+    "url": "https://markheardfuel.com/about",
+    "path": "/about",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/about",
+     "keywords_count": 19,
+     "top_keyword": "mark heard fuel company",
+     "clicks": 1,
+     "impressions": 5490,
+     "ctr": 0.0182,
+     "position": 7.397267,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5489.00082,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "About Us - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about Mark Heard Fuel Company, a locally owned propane provider serving residential and commercial customers in Northeast Georgia for over 70 years, including tank delivery, installation, maintenance, and auto-fill service.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 2798
+   },
+   {
+    "url": "https://markheardfuel.com/blog/propane-gas-smell-actions",
+    "path": "/blog/propane-gas-smell-actions",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'What To Do If You Smell Propane Gas In Your House?'",
+    "gsc": {
+     "page": "https://markheardfuel.com/blog/propane-gas-smell-actions",
+     "keywords_count": 325,
+     "top_keyword": "propane smell in house",
+     "clicks": 6,
+     "impressions": 5402,
+     "ctr": 0.1111,
+     "position": 11.039985,
+     "traffic_value": 5.6
+    },
+    "traffic": 8.0,
+    "score": 5395.998378,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "What Does Propane Gas Smell Like? Steps to Follow - Mark Heard Fuel Company",
+    "serp_title": "What To Do If You Smell Propane Gas In Your House?",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "Learn what propane gas smell means, why it smells like rotten eggs, and what to do immediately if you suspect a leak at home.",
+    "proposed_title": "What To Do If You Smell Propane Gas In Your House? - Mark Heard Fuel Company",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://markheardfuel.com/blog/cache-5",
+    "path": "/blog/cache-5",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/blog/cache-5",
+     "keywords_count": 4,
+     "top_keyword": "mark heard fuel co forsyth ga business directory",
+     "clicks": 0,
+     "impressions": 2754,
+     "ctr": 0.0,
+     "position": 9.810093,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2754.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "cache - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "What To Do If You Smell Propane Gas In Your House - Mark Heard Fuel Company",
+    "proposed_description": "This page poses the question of what to do if you smell propane gas in your house, with links to the propane safety FAQs. You can also pay a bill online, order a refill, or submit a service request.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article",
+    "text_chars": 425
+   },
+   {
+    "url": "https://markheardfuel.com/faqs/why-choose-propane",
+    "path": "/faqs/why-choose-propane",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/faqs/why-choose-propane",
+     "keywords_count": 7,
+     "top_keyword": "mark heard propane",
+     "clicks": 0,
+     "impressions": 2538,
+     "ctr": 0.0,
+     "position": 8.524428,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2538.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Why Choose Propane? - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn why Mark Heard Fuel has offered propane for more than 60 years, from heating and cooking at home to farm, landscaping, vehicle, and industrial uses across Georgia.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/careers",
+    "path": "/careers",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/careers",
+     "keywords_count": 6,
+     "top_keyword": "mark heard fuel",
+     "clicks": 1,
+     "impressions": 2220,
+     "ctr": 0.045,
+     "position": 8.304504,
+     "traffic_value": 0.4
+    },
+    "traffic": 0,
+    "score": 2219.001,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Apply to Work for Mark Heard Fuel Company - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See current job openings at Mark Heard Fuel Company, including Propane Service Technician and Propane Delivery Driver roles, plus the pay and benefits offered. You can apply using the employment application form on the page.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Careers_Page",
+    "text_chars": 2513
+   },
+   {
+    "url": "https://markheardfuel.com/services/order-a-refill",
+    "path": "/services/order-a-refill",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/services/order-a-refill",
+     "keywords_count": 11,
+     "top_keyword": "mark heard fuel",
+     "clicks": 12,
+     "impressions": 1539,
+     "ctr": 0.7797,
+     "position": 4.675113,
+     "traffic_value": 2.8
+    },
+    "traffic": 0,
+    "score": 1527.000417,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Order a Propane Refill - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Order a fuel refill from Mark Heard Fuel Company by filling out the online form with your account details and the amount you need, or call (770) 887-2333. Serves homes and businesses in north Georgia.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2158
+   },
+   {
+    "url": "https://markheardfuel.com/services/pay-bill",
+    "path": "/services/pay-bill",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/services/pay-bill",
+     "keywords_count": 11,
+     "top_keyword": "mark heard fuel",
+     "clicks": 20,
+     "impressions": 1144,
+     "ctr": 1.7482,
+     "position": 3.520978,
+     "traffic_value": 4.4
+    },
+    "traffic": 0,
+    "score": 1124.000592,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Online Bill Pay - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Pay your Mark Heard Fuel Company propane bill online, or download the Mark Heard App from the App Store or Google Play to manage your account. Questions about your bill? Contact the office for help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 1637
+   },
+   {
+    "url": "https://markheardfuel.com/faqs",
+    "path": "/faqs",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/faqs",
+     "keywords_count": 17,
+     "top_keyword": "mark heard fuel co forsyth ga official website",
+     "clicks": 0,
+     "impressions": 258,
+     "ctr": 0.0,
+     "position": 10.007752,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 258.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Propane & Safety FAQ - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Answers to common questions about propane from Mark Heard Fuel Co., including why choose propane, how to order and schedule refills, and propane safety basics. Serving Northeast Georgia for over 70 years.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/faqs/ordering-information",
+    "path": "/faqs/ordering-information",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/faqs/ordering-information",
+     "keywords_count": 11,
+     "top_keyword": "mark heard fuel",
+     "clicks": 0,
+     "impressions": 223,
+     "ctr": 0.0,
+     "position": 5.515695,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 223.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Ordering Information - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Ordering information for Mark Heard Fuel Company propane customers in Northeast Georgia, including how to read your tank gauge to know when to order a refill, plus details on the Keep-Filled and Budget Billing programs and what to do in an emergency.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/services/new-account-setup",
+    "path": "/services/new-account-setup",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/services/new-account-setup",
+     "keywords_count": 7,
+     "top_keyword": "mark heard fuel co po box 286 forsyth ga website and linkedin",
+     "clicks": 0,
+     "impressions": 121,
+     "ctr": 0.0,
+     "position": 9.016528,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 121.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Sign Up for New Service - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Start new fuel or propane service with Mark Heard Fuel Company by filling out the sign-up form with your contact details and service needs, or call (770) 887-2333. A representative will follow up to discuss your options.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2228
+   },
+   {
+    "url": "https://markheardfuel.com/faqs/propane-safety-faqs",
+    "path": "/faqs/propane-safety-faqs",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://markheardfuel.com/faqs/propane-safety-faqs",
+     "keywords_count": 21,
+     "top_keyword": "how long does it take for propane to dissipate outside",
+     "clicks": 0,
+     "impressions": 76,
+     "ctr": 0.0,
+     "position": 17.815789,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 76.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Propane Safety FAQs - Mark Heard Fuel Company",
+    "serp_title": "Propane Safety FAQs",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Answers to common propane safety questions from Mark Heard Fuel Co., including how to recognize a leak, what to do if you smell gas, and why a propane gas detector can help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/new-construction",
+    "path": "/new-construction",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/new-construction",
+     "keywords_count": 14,
+     "top_keyword": "propane installation for new construction",
+     "clicks": 0,
+     "impressions": 75,
+     "ctr": 0.0,
+     "position": 17.56,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 75.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Propane for New Construction - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mark Heard Fuel Company works with North Georgia home builders on propane for new construction, including tank sizing, site planning, permits, trenching, inspections, and jobsite fueling. Learn how propane installation can fit your next build.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/services/submit-service-request",
+    "path": "/services/submit-service-request",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/services/submit-service-request",
+     "keywords_count": 7,
+     "top_keyword": "submitservice",
+     "clicks": 0,
+     "impressions": 75,
+     "ctr": 0.0,
+     "position": 15.599999,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 75.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Submit Service Request - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Submit a service request online for maintenance or repair of your propane equipment, or call (770) 887-2333. Fill out the form with details about your equipment and the issue, and Mark Heard Fuel will contact you to schedule a visit.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2265
+   },
+   {
+    "url": "https://markheardfuel.com/faqs/underground-propane-tanks",
+    "path": "/faqs/underground-propane-tanks",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/faqs/underground-propane-tanks",
+     "keywords_count": 27,
+     "top_keyword": "is it safe to bury a propane tank",
+     "clicks": 0,
+     "impressions": 67,
+     "ctr": 0.0,
+     "position": 13.029851,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 67.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Underground Propane Tanks - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how underground propane tanks work, including cathodic protection against corrosion, compliance with EPA, NFPA and Georgia regulations, and the benefits of renting one from Mark Heard Fuel Company.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/FAQ_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/keep-full",
+    "path": "/keep-full",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/keep-full",
+     "keywords_count": 12,
+     "top_keyword": "mark heard fuel co",
+     "clicks": 0,
+     "impressions": 43,
+     "ctr": 0.0,
+     "position": 24.139535,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 43.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Keep Full Propane Autofill Service - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how Mark Heard Fuel Company's Keep Full Auto Fill Service uses a tank monitor to schedule propane refills automatically for customers leasing a tank, plus eligibility and answers to common questions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://markheardfuel.com/blog/fueling-the-future",
+    "path": "/blog/fueling-the-future",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://markheardfuel.com/blog/fueling-the-future",
+     "keywords_count": 2,
+     "top_keyword": "site:markheardfuel.com",
+     "clicks": 0,
+     "impressions": 6,
+     "ctr": 0.0,
+     "position": 7.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 6.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fueling the Future: Mark Heard Fuel Company Sponsors Grant for First-Time Teachers in Forsyth County - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Mark Heard Fuel Company sponsors the \"Fueling the Future\" grant with the Forsyth County Board of Education Foundation, funding classroom projects for first-year teachers. Read about the projects this year's recipients brought to life.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 2077
+   },
+   {
+    "url": "https://markheardfuel.com/service-areas",
+    "path": "/service-areas",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Service Areas - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See where Mark Heard Fuel Company delivers propane across north Georgia, with contact details for the Cumming and Dawsonville offices and links to order a refill or sign up for new service.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Services_Page",
+    "text_chars": 1181
+   },
+   {
+    "url": "https://markheardfuel.com/thank-you",
+    "path": "/thank-you",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thank You - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Confirmation that your request to Mark Heard Fuel Company has been received, with the phone number to call for immediate help or a propane emergency and links to bill pay, refills, and service requests.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 2124
+   },
+   {
+    "url": "https://markheardfuel.com/thank-you-new-service",
+    "path": "/thank-you-new-service",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thank You for Your Request - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your new propane service request has been submitted and our team is reviewing it. A representative will be in touch soon, and you can call (770) 887-2333 if you have questions in the meantime.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2308
+   },
+   {
+    "url": "https://markheardfuel.com/thank-you-refill",
+    "path": "/thank-you-refill",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Refill Request Submitted - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your propane refill request has been received. A team member will contact you if there are any questions, and you can call 770-887-2333 for immediate help or in an emergency.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 2256
+   },
+   {
+    "url": "https://markheardfuel.com/blog/cache-2",
+    "path": "/blog/cache-2",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "cache - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "What To Do If You Smell Propane Gas in Your House - Mark Heard Fuel Company",
+    "proposed_description": "A propane safety post that asks what to do if you smell propane gas in your house. The page also links to online bill pay, refill orders, service requests, and propane safety FAQs.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article",
+    "text_chars": 425
+   },
+   {
+    "url": "https://markheardfuel.com/blog/cache-3",
+    "path": "/blog/cache-3",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "cache - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "What To Do If You Smell Propane Gas in Your House - Mark Heard Fuel Company",
+    "proposed_description": "Read Mark Heard Fuel Company's post on what to do if you smell propane gas in your house. You'll also find links to propane safety FAQs, online bill pay, and service requests.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article",
+    "text_chars": 425
+   },
+   {
+    "url": "https://markheardfuel.com/blog/cache-4",
+    "path": "/blog/cache-4",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "cache - Mark Heard Fuel Company",
+    "serp_title": "",
+    "h1": "Mark Heard Fuel Company",
+    "current_description": "",
+    "proposed_title": "What To Do If You Smell Propane Gas in Your House - Mark Heard Fuel Company",
+    "proposed_description": "A propane safety post from Mark Heard Fuel Company that asks what to do if you smell propane gas in your house. The site also links to Propane Safety FAQs and to service request and bill pay pages.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article",
+    "text_chars": 425
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/blog",
+    "/blog/cache"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

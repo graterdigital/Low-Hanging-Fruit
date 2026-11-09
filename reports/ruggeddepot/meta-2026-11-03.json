@@ -1,0 +1,850 @@
+{
+ "data": {
+  "pid": 9704549,
+  "crawl": "2026-11-03",
+  "health": 96,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 30
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 0
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Rugged Depot",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://ruggeddepot.com/about/",
+    "path": "/about/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "About - Rugged Depot",
+    "serp_title": "",
+    "h1": "About us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Rugged Depot has sold rugged computers and accessories since 2001 from Tomball, Texas. Learn about our Panasonic Toughbook and Toughpad lineup, repair and parts service for rugged computers, and software integration.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2654
+   },
+   {
+    "url": "https://ruggeddepot.com/blog-news/",
+    "path": "/blog-news/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Blog & News - Rugged Depot",
+    "serp_title": "",
+    "h1": "Blog & News",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Read Rugged Depot's news on rugged laptops and tablets, including new Getac, Durabook and Panasonic TOUGHBOOK releases, buying and pricing guides, warranty information and Windows 10 end-of-support help.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3333
+   },
+   {
+    "url": "https://ruggeddepot.com/build-quote/",
+    "path": "/build-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Build A Quote - Rugged Depot",
+    "serp_title": "",
+    "h1": "Build A Quote",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Add rugged laptops, tablets, and accessories from Rugged Depot to your quote list, then enter your contact details to send a quote request.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 632
+   },
+   {
+    "url": "https://ruggeddepot.com/contact-thanks-rfq/",
+    "path": "/contact-thanks-rfq/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Contacting Us - RFQ - Rugged Depot",
+    "serp_title": "",
+    "h1": "Thanks For Contacting Us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your quote request has been received. A Rugged Expert from Rugged Depot will review your details and reach out shortly to help you find the right rugged solution.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 772
+   },
+   {
+    "url": "https://ruggeddepot.com/contact-thanks-savvik/",
+    "path": "/contact-thanks-savvik/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Contacting Us - Savvik - Rugged Depot",
+    "serp_title": "",
+    "h1": "Thanks for Contacting Us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Confirmation that your message to Rugged Depot was received. A Rugged Expert will follow up shortly to learn about your needs and help you find the right rugged solution.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 747
+   },
+   {
+    "url": "https://ruggeddepot.com/contact-thanks/",
+    "path": "/contact-thanks/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Contacting Us - Rugged Depot",
+    "serp_title": "",
+    "h1": "Thanks for Contacting Us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your message to Rugged Depot has been received. One of our Rugged Experts will be in touch shortly to learn about your needs and help you find the right rugged solution.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 747
+   },
+   {
+    "url": "https://ruggeddepot.com/contact-us/",
+    "path": "/contact-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Contact Us - Rugged Depot",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Call Rugged Depot at 888-337-3007 to reach the team about rugged laptops and tablets, vehicle mounts, accessories, and repair or installation services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/diagnostics-for-agricultural-equipment/",
+    "path": "/diagnostics-for-agricultural-equipment/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Agricultural Diagnostics - Rugged Depot",
+    "serp_title": "",
+    "h1": "Diagnostics For Agricultural Equipment",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare Panasonic TOUGHBOOK laptops and tablets for diagnosing and repairing farm and agricultural equipment, including the TOUGHBOOK 55, 33 and G2. Learn how battery life, optional 9-pin service ports and field-ready displays fit different diagnostic needs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/diesel-truck-diagnostics/",
+    "path": "/diesel-truck-diagnostics/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Diesel Truck Diagnostics - Rugged Depot",
+    "serp_title": "",
+    "h1": "Laptops For Diesel Engine Diagnostics",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Panasonic TOUGHBOOK laptops and tablets for diesel engine diagnostics, including the TOUGHBOOK 55, 33 and G2, with notes on durability, sunlight-viewable displays and mobile broadband options.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/expert-toughbook-configuration/",
+    "path": "/expert-toughbook-configuration/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Expert TOUGHBOOK Configuration - Rugged Depot",
+    "serp_title": "",
+    "h1": "Expert TOUGHBOOK Configuration",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Rugged Depot is a Panasonic Diamond Partner that configures TOUGHBOOK rugged laptops and tablets to order. Get in touch to discuss your setup, or call 888-337-3007.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 570
+   },
+   {
+    "url": "https://ruggeddepot.com/field-service-laptops-tablets/",
+    "path": "/field-service-laptops-tablets/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Field Work Laptops and Tablets - Rugged Depot",
+    "serp_title": "",
+    "h1": "Ultimate Guide to Field Work Laptops and Tablets",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A guide to choosing a rugged laptop or tablet for field service work, comparing four Panasonic TOUGHBOOK models (55, G2, 33 and A3) by features, benefits and ideal user, plus an FAQ.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/fire-ems-laptops-old/",
+    "path": "/fire-ems-laptops-old/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Fire & EMS - Rugged Depot",
+    "serp_title": "",
+    "h1": "The Fire & EMS Laptops Buying Guide",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A buying guide for fire and EMS laptops covering performance, integration with CAD and ePCR software, GPS tracking, durability, security, and support. Learn which features to weigh when choosing laptops for your department.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/government-laptops-buying-guide/",
+    "path": "/government-laptops-buying-guide/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Government Agencies - Rugged Depot",
+    "serp_title": "",
+    "h1": "Government Laptops Buying Guide",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A buying guide to choosing laptops for federal, state, and local government use, covering security, wireless connectivity, touchscreen capability, durability, performance, custom configuration, and value.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/home/trade-ins/",
+    "path": "/home/trade-ins/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Rugged Depot Trade-Up Program - Rugged Depot",
+    "serp_title": "",
+    "h1": "Rugged Depot Trade-Up Program",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how Rugged Depot's Trade-Up Program handles secure disposition, data destruction, and recycling or remarketing of your old rugged devices, with fair market value credit toward new or refurbished mobile computing solutions and services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2436
+   },
+   {
+    "url": "https://ruggeddepot.com/laptops-for-automotive-tuning/",
+    "path": "/laptops-for-automotive-tuning/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automotive Diagnostics - Rugged Depot",
+    "serp_title": "",
+    "h1": "Laptops for Automotive Tuning and Diagnostics",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare Panasonic TOUGHBOOK 55, 33 and G2 laptops for automotive tuning and diagnostics, with notes on battery life, hot-swappable batteries and rugged durability for shop and fleet use.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/marine-boat-diagnostics/",
+    "path": "/marine-boat-diagnostics/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Marine Diagnostics - Rugged Depot",
+    "serp_title": "",
+    "h1": "Rugged Laptops For Marine And Boat Diagnostics",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Compare three Panasonic TOUGHBOOK models for marine and boat engine diagnostics: the 55, 33 and G2. Learn why buying the laptop separately from your diagnostic software can cost less.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/mil-std-810h-explained/",
+    "path": "/mil-std-810h-explained/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "MIL-STD-810H Explained - Rugged Depot",
+    "serp_title": "",
+    "h1": "MIL-STD-810H Explained",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what MIL-STD-810H testing means for rugged laptops and tablets, from drop, vibration, temperature, and moisture tests to the questions worth asking before you buy.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/military-laptops-buying-guide/",
+    "path": "/military-laptops-buying-guide/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Military Laptops - Rugged Depot",
+    "serp_title": "",
+    "h1": "Military Laptops: The Definitive Buyer's Guide",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A buyer's guide to military laptops and tablets, covering durability standards like MIL-STD-810H and MIL-STD-461G, IP ratings, security, performance, usability, custom configuration and value.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/panasonic-toughbook-models/",
+    "path": "/panasonic-toughbook-models/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "TOUGHBOOK Models - Rugged Depot",
+    "serp_title": "",
+    "h1": "The Ultimate Guide to TOUGHBOOK Models",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A guide to Panasonic TOUGHBOOK laptops, tablets, and handhelds, with features, specs, and ideal users for each fully-rugged, ultra-rugged, and semi-rugged model, including the flagship TOUGHBOOK 40 Mk2.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/panasonics-ultimate-care-warranty/",
+    "path": "/panasonics-ultimate-care-warranty/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Panasonic's Ultimate Care Warranty - Rugged Depot",
+    "serp_title": "",
+    "h1": "Ultimate Care Protection Warranty",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Panasonic's Ultimate Care Protection Warranty covers accidental damage and hardware failures on Toughbooks, Toughpads, and other handhelds, with three-, four-, and five-year terms. See what's covered, the limitations, and the service-level options you can customize.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2591
+   },
+   {
+    "url": "https://ruggeddepot.com/police-laptops-buying-guide/",
+    "path": "/police-laptops-buying-guide/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Police Laptops - Rugged Depot",
+    "serp_title": "",
+    "h1": "The Ultimate Police Laptops Buying Guide",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A buying guide for police laptops and 2-in-1 hybrids, covering ease of use, performance, durability, security, custom configuration, and value. Learn what to look for in mounting, screen visibility, touch input, weight, and ergonomics for in-vehicle and field use.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/quote-thanks/",
+    "path": "/quote-thanks/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Requesting A Quote - Rugged Depot",
+    "serp_title": "",
+    "h1": "Thanks For Requesting A Quote",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your quote request has been received. A Rugged Expert from Rugged Depot will review your details and reach out shortly to discuss your needs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 777
+   },
+   {
+    "url": "https://ruggeddepot.com/request-for-quote/",
+    "path": "/request-for-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Request For Quote - Rugged Depot",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Request a quote from Rugged Depot for rugged laptops and tablets from Panasonic, Getac, and Durabook, as well as vehicle mounts, accessories, and services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/savvikoffers/",
+    "path": "/savvikoffers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Savvikoffers - Rugged Depot",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/services-old/",
+    "path": "/services-old/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Services-old - Rugged Depot",
+    "serp_title": "",
+    "h1": "Rugged Testing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what MIL-STD-810G rugged testing covers, including rain, salt fog, sand and dust, and drop tests, and how those certifications can help you choose a rugged laptop like the Panasonic Toughbook 31.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/services/",
+    "path": "/services/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Services - Rugged Depot",
+    "serp_title": "",
+    "h1": "Configuration, Deployment, And Repair Services Built For Rugged Professionals",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Rugged Depot's services page covers professional configuration, deployment, and repair for rugged devices, including dock and accessory installation, disk imaging, kitting, asset tagging, SIM installation, and multi-location shipping coordination.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/tax-exemption-request/",
+    "path": "/tax-exemption-request/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tax Exemption Request - Rugged Depot",
+    "serp_title": "",
+    "h1": "Tax Exemption Request",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Register your tax exemption with Rugged Depot by creating an account and uploading your documents for review. Once approved, taxes are removed automatically from future orders when you're logged in at checkout.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1235
+   },
+   {
+    "url": "https://ruggeddepot.com/toughbook-quote/",
+    "path": "/toughbook-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Requesting A TOUGHBOOK Quote - Rugged Depot",
+    "serp_title": "",
+    "h1": "Thanks For Requesting A TOUGHBOOK Quote",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Your TOUGHBOOK quote request has been received. One of our Rugged Experts will review the details and reach out shortly to help you find the right rugged solution.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 787
+   },
+   {
+    "url": "https://ruggeddepot.com/vehicle-laptop-mounts-for-cars-and-trucks/",
+    "path": "/vehicle-laptop-mounts-for-cars-and-trucks/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Laptop Mounts - Rugged Depot",
+    "serp_title": "",
+    "h1": "The Ultimate Guide to TOUGHBOOK Solutions for Cars and Trucks",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A guide to Panasonic TOUGHBOOK vehicle mounting for cars and trucks, covering docking stations, bases and poles, mounting kits, and cradles from Gamber-Johnson, Havis, and RAM, plus use cases by industry.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://ruggeddepot.com/what-is-a-mimo-antenna/",
+    "path": "/what-is-a-mimo-antenna/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Is a MIMO Antenna? A Fleet Guide for Cellular Vehicle Routers - Rugged Depot",
+    "serp_title": "",
+    "h1": "What Is a MIMO Antenna? A Fleet Guide for Cellular Vehicle Routers",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn what a MIMO antenna does for a cellular vehicle router, which antenna leads connect to which router ports, and how cellular MIMO differs from Wi-Fi MIMO.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "data": {
+  "pid": 9704526,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 4
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Blush Med Spa CT",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://blushmedspact.com/trending-treatments/preventative-botox-20s-30s-guide/",
+    "path": "/trending-treatments/preventative-botox-20s-30s-guide/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Preventative Botox in Your 20s and 30s'",
+    "gsc": {},
+    "traffic": 8.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Preventative Botox Guide 20s 30s - Baby Botox CT - Blush Med Spa",
+    "serp_title": "Preventative Botox in Your 20s and 30s",
+    "h1": "Preventative Botox in Your 20s and 30s: The Investment That Pays Off for Decades",
+    "current_description": "Is preventative Botox worth it? Expert guide to starting Botox in your 20s and 30s for natural results. Baby Botox specialists at Blush MedSpa Connecticut.",
+    "proposed_title": "Preventative Botox in Your 20s and 30s - Blush Med Spa CT",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://blushmedspact.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | Blush Med Spa",
+    "serp_title": "",
+    "h1": "Payment Options",
+    "current_description": "Payment Options -",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Pricing_Page"
+   },
+   {
+    "url": "https://blushmedspact.com/uncategorized/juvederm-2025/",
+    "path": "/uncategorized/juvederm-2025/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Juvederm's New Formula in 2025: What It Means for Results'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Juvederm’s New 2025 Formula: Longer-Lasting Natural Results - Blush Med Spa",
+    "serp_title": "Juvederm's New Formula in 2025: What It Means for Results",
+    "h1": "Juvederm’s New Formula in 2025: What It Means for Results",
+    "current_description": "Discover Juvederm’s new 2025 formula with VYCROSS technology, offering longer-lasting, natural results and reduced swelling for smoother facial enhancement.",
+    "proposed_title": "Juvederm's New Formula in 2025: What It Means for Results - Blush Med Spa CT",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -1,0 +1,71 @@
+# fix-images: restore originals on hsfamilylaw.com (live)
+
+Run 2026-11-05-1144 · alias `hsfamilylaw` · from `2026-10-29-1503-fix-images-live` · filter `splitting-retirement,HS-BG-Image,high-asset-divorce-checklist,child-support-lawyer,divorce-ft-image,guide-to-alimony,after-the-divorce,uncontested-divorce,before-the-divorce,property-division,child-custody-lawyer,collaborative-divorce,Areas-of-Practice` · webp siblings rewritten
+
+Restored 65, failed 0, size-verified on server 65 (mismatch 0).
+
+- `2025/03/child-custody-lawyer-hastings-shadmehry.png`
+- `2025/03/child-custody-lawyer-hastings-shadmehry-400x400.png`
+- `2025/03/child-custody-lawyer-hastings-shadmehry-1024x1024.png`
+- `2025/03/child-custody-lawyer-hastings-shadmehry-150x150.png`
+- `2025/03/child-custody-lawyer-hastings-shadmehry-768x768.png`
+- `2025/03/hasting-shadmehry-guide-to-alimony.png`
+- `2025/03/hasting-shadmehry-guide-to-alimony-400x400.png`
+- `2025/03/hasting-shadmehry-guide-to-alimony-1024x1024.png`
+- `2025/03/hasting-shadmehry-guide-to-alimony-150x150.png`
+- `2025/03/hasting-shadmehry-guide-to-alimony-768x768.png`
+- `2025/03/child-support-lawyer-hastings-shadmehry.png`
+- `2025/03/child-support-lawyer-hastings-shadmehry-400x400.png`
+- `2025/03/child-support-lawyer-hastings-shadmehry-1024x1024.png`
+- `2025/03/child-support-lawyer-hastings-shadmehry-150x150.png`
+- `2025/03/child-support-lawyer-hastings-shadmehry-768x768.png`
+- `2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney.png`
+- `2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney-400x400.png`
+- `2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney-1024x1024.png`
+- `2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney-150x150.png`
+- `2025/03/after-the-divorce-hastings-shadmehry-alphretta-divorce-attorney-768x768.png`
+- `2025/03/property-division-hastings-shadmehry-divorce-attorneys.png`
+- `2025/03/property-division-hastings-shadmehry-divorce-attorneys-400x400.png`
+- `2025/03/property-division-hastings-shadmehry-divorce-attorneys-1024x1024.png`
+- `2025/03/property-division-hastings-shadmehry-divorce-attorneys-150x150.png`
+- `2025/03/property-division-hastings-shadmehry-divorce-attorneys-768x768.png`
+- `2025/03/collaborative-divorce-process-hastings-shadmehry.png`
+- `2025/03/collaborative-divorce-process-hastings-shadmehry-400x400.png`
+- `2025/03/collaborative-divorce-process-hastings-shadmehry-1024x1024.png`
+- `2025/03/collaborative-divorce-process-hastings-shadmehry-150x150.png`
+- `2025/03/collaborative-divorce-process-hastings-shadmehry-768x768.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image-400x225.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image-1024x576.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image-150x150.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image-768x432.png`
+- `2025/03/hastings-shadmehry-divorce-ft-image-1536x864.png`
+- `2025/03/before-the-divorce-hastings-shadmehry.png`
+- `2025/03/before-the-divorce-hastings-shadmehry-400x400.png`
+- `2025/03/before-the-divorce-hastings-shadmehry-1024x1024.png`
+- `2025/03/before-the-divorce-hastings-shadmehry-150x150.png`
+- `2025/03/before-the-divorce-hastings-shadmehry-768x768.png`
+- `2025/03/hastings-shadmehry-uncontested-divorce-attorney.png`
+- `2025/03/hastings-shadmehry-uncontested-divorce-attorney-400x400.png`
+- `2025/03/hastings-shadmehry-uncontested-divorce-attorney-1024x1024.png`
+- `2025/03/hastings-shadmehry-uncontested-divorce-attorney-150x150.png`
+- `2025/03/hastings-shadmehry-uncontested-divorce-attorney-768x768.png`
+- `2025/04/HS-BG-Image.png`
+- `2025/04/HS-BG-Image-367x400.png`
+- `2025/04/HS-BG-Image-939x1024.png`
+- `2025/04/HS-BG-Image-150x150.png`
+- `2025/04/HS-BG-Image-768x838.png`
+- `2025/04/HS-BG-Image-1408x1536.png`
+- `2025/04/HS-BG-Image-1024x1117.png`
+- `2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia.png`
+- `2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia-320x400.png`
+- `2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia-150x150.png`
+- `2026/06/hastings-shadmehry-high-asset-divorce-checklist-georgia-768x960.png`
+- `2026/06/splitting-retirement-in-divorce-hastings-shadmehry.png`
+- `2026/06/splitting-retirement-in-divorce-hastings-shadmehry-320x400.png`
+- `2026/06/splitting-retirement-in-divorce-hastings-shadmehry-150x150.png`
+- `2026/06/splitting-retirement-in-divorce-hastings-shadmehry-768x960.png`
+- `2025/02/Areas-of-Practice-Experience-Picture.png`
+- `2025/02/Areas-of-Practice-Experience-Picture-400x377.png`
+- `2025/02/Areas-of-Practice-Experience-Picture-150x150.png`
+- `2025/02/Areas-of-Practice-Experience-Picture-768x724.png`

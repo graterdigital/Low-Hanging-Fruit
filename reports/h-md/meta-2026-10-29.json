@@ -1,0 +1,1797 @@
+{
+ "data": {
+  "pid": 9704536,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 80
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 8
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "H-MD Medical spa",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://h-md.com/services/coolsculpting-elite",
+    "path": "/services/coolsculpting-elite",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 17.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting Elite® in Oklahoma City, OK | H-MD Medical Spa",
+    "serp_title": "CoolSculpting Elite® in Oklahoma City, OK",
+    "h1": "CoolSculpting Elite",
+    "current_description": "Get your body & figure in shape with H-MD Medical Spa's reliable CoolSculpting Elite® in Oklahoma City, OK. Call (405) 757-2155 to book an appointment.",
+    "proposed_title": "CoolSculpting Elite - H-MD Medical spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://h-md.com/our-locations/tulsa",
+    "path": "/our-locations/tulsa",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 6.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Botox & Med Spa in Tulsa - H-MD Medical Spa",
+    "serp_title": "Botox & Med Spa in Tulsa",
+    "h1": "Tulsa",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find H-MD Medical Spa's Tulsa location at 6050 S Yale Ave, with hours, phone number, directions, and online booking. Browse the aesthetic, injectable, and laser treatments offered here and meet the providers and care team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://h-md.com/injectables",
+    "path": "/injectables",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 5.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Injectables Oklahoma City - OKC - H-MD Medical Spa",
+    "serp_title": "Injectables Oklahoma City - OKC",
+    "h1": "Injectables",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore H-MD Medical Spa's injectable treatments, including Xeomin, Dysport, dermal fillers, thread lifts, PRP hair restoration, and PRF EZGel. Each treatment is customized to refresh and enhance your natural features, and you can book online from the page.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 409
+   },
+   {
+    "url": "https://h-md.com/our_team/aunisty-moore",
+    "path": "/our_team/aunisty-moore",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Aunisty Moore - H-MD Medical spa",
+    "serp_title": "Aunisty Moore",
+    "h1": "Aunisty Moore",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Aunisty Moore on the H-MD Medical Spa team page. Browse the injectable, aesthetic and laser services H-MD offers and find a location.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 829
+   },
+   {
+    "url": "https://h-md.com/about",
+    "path": "/about",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "About H-MD Medical Spa Oklahoma City - H-MD Medical Spa",
+    "serp_title": "About H-MD Medical Spa Oklahoma City",
+    "h1": "Welcome to H-MD Medical Spa",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about H-MD Medical Spa in Oklahoma City, including our injectables, clinical facials, laser treatments and medical-grade skin health plans, and meet the providers behind them.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 1711
+   },
+   {
+    "url": "https://h-md.com/about/our-team",
+    "path": "/about/our-team",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Our Team - H-MD Medical Spa - Oklahoma City, OK",
+    "serp_title": "",
+    "h1": "Meet our Team",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet the providers, nurses, and patient care staff at H-MD Medical Spa, with team listings for the OKC Gaillardia, OKC Chisholm Creek, and Tulsa locations and each person's credentials or role.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1259
+   },
+   {
+    "url": "https://h-md.com/contact-us",
+    "path": "/contact-us",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Contact Us - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Contact us",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find phone numbers, addresses, and opening hours for H-MD Medical Spa's Gaillardia and Chisholm Creek locations in Oklahoma City and its Tulsa location, with links to book at each.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 1954
+   },
+   {
+    "url": "https://h-md.com/our-locations/okc",
+    "path": "/our-locations/okc",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Botox & Med Spa in Oklahoma City - OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "OKC",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Visit H-MD Medical Spa in Oklahoma City's Gaillardia neighborhood at 5101 W Memorial Rd. Find hours, phone number, directions, and the aesthetics, injectables, and laser treatments offered at this location.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://h-md.com/about/memberships",
+    "path": "/about/memberships",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Aesthetics Memberships - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Join Our Membership",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about the Smooth & Chic Society membership at H-MD Medical Spa: $199 per month applied as credit toward future services, with member pricing on neuromodulators, 15% off filler, services and retail skincare, and a free birthday-month facial.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 788
+   },
+   {
+    "url": "https://h-md.com/about/reviews",
+    "path": "/about/reviews",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Our Reviews - OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Reviews",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Read reviews from H-MD Medical Spa patients about their experiences with the team, including how comfortable and cared for they felt.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 184
+   },
+   {
+    "url": "https://h-md.com/before_after/1",
+    "path": "/before_after/1",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "#1 - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "#1",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This is a before and after gallery entry from H-MD Medical spa, which offers injectables, aesthetics treatments, and laser services at its Chisholm Creek, Gaillardia, and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/before_after/2",
+    "path": "/before_after/2",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "#2 - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "#2",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This is a before and after gallery entry from H-MD Medical Spa, with links to the practice's injectables, aesthetics and laser treatments, locations in Chisholm Creek, Gaillardia and Tulsa, and current offers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/before_after/3",
+    "path": "/before_after/3",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "#3 - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "#3",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A before and after gallery entry from H-MD Medical Spa, listed as #3 and posted December 4, 2025. Use the site menu to explore injectables, aesthetics and laser treatments, plus our locations and current offers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/before_after/4",
+    "path": "/before_after/4",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "#4 - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "#4",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This is before-and-after gallery entry #4 from H-MD Medical spa, posted December 4, 2025. Browse the site menu for injectables, aesthetics and laser treatments, plus locations in Chisholm Creek, Gaillardia and Tulsa.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/before_after/5",
+    "path": "/before_after/5",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "#5 - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "#5",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Entry #5 in the H-MD Medical spa before and after gallery, posted December 4, 2025. Browse the site menu for injectables, aesthetics and laser services, plus locations and current offers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/faqs/first-question",
+    "path": "/faqs/first-question",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "First question? - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "First question?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A placeholder FAQ entry from H-MD Medical Spa, posted February 3, 2026, that contains only sample text and no answer yet. Use the site menu to browse injectables, aesthetics, lasers, shop products, locations and offers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1134
+   },
+   {
+    "url": "https://h-md.com/faqs/second-question",
+    "path": "/faqs/second-question",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Second question? - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Second question?",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "This FAQ entry, titled \"Second question?\", currently holds placeholder sample text rather than an answer. For H-MD Medical Spa's injectables, aesthetics and laser services, use the site's treatment pages.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1135
+   },
+   {
+    "url": "https://h-md.com/financing",
+    "path": "/financing",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Payment Options | H.MD Med Spa",
+    "serp_title": "",
+    "h1": "Care you can count on, at a pace that works for you.",
+    "current_description": "",
+    "proposed_title": "Financing Options for Treatments - H-MD Medical spa",
+    "proposed_description": "Learn about H-MD's financing options, including true 0% APR, approvals up to $50,000, no hard credit checks and no hidden fees. Choose your location to get started.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "multiple titles"
+    ],
+    "ml": "",
+    "text_chars": 1130
+   },
+   {
+    "url": "https://h-md.com/laser-procedures",
+    "path": "/laser-procedures",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Laser Procedures Oklahoma City - OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Lasers",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse laser treatments at H-MD Medical spa, including Ultra Laser, Ultherapy, laser hair removal, IPL photorejuvenation, CO2 resurfacing, and Clear + Brilliant®. Providers tailor each treatment for skin tone, texture, and clarity, with attention to comfort and recovery.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 424
+   },
+   {
+    "url": "https://h-md.com/location_groups/oklahoma",
+    "path": "/location_groups/oklahoma",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Oklahoma - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find H-MD Medical Spa's Oklahoma locations in Oklahoma City (Gaillardia and Chisholm Creek) and Tulsa, each with experienced injectors and estheticians. Browse the three locations to see which one is right for you and book a visit.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://h-md.com/medical-aesthetics",
+    "path": "/medical-aesthetics",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Aesthetics - Oklahoma City'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Medical Aesthetics Oklahoma City - H-MD Medical Spa",
+    "serp_title": "Aesthetics - Oklahoma City",
+    "h1": "Aesthetics",
+    "current_description": "",
+    "proposed_title": "Aesthetics - Oklahoma City - H-MD Medical spa",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten",
+     "description: needs draft"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 468
+   },
+   {
+    "url": "https://h-md.com/our-locations",
+    "path": "/our-locations",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Locations Archive - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Our Locations",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find H-MD Medical Spa's three Oklahoma locations in Oklahoma City (Chisholm Creek and W Memorial Rd) and Tulsa, with addresses and phone numbers for each. Every location is described as calm, comfortable and judgment-free.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 1479
+   },
+   {
+    "url": "https://h-md.com/our-locations/chisholm-creek",
+    "path": "/our-locations/chisholm-creek",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Botox & Med Spa in Chislom Creek - OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Chisholm Creek",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "H-MD Medical Spa's Chisholm Creek location at 13230 Pawnee Dr in Oklahoma City offers aesthetics, injectables, and laser treatments with hours, phone number, directions, and provider details.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Location",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://h-md.com/our_team/bethany-beachel",
+    "path": "/our_team/bethany-beachel",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bethany Beachel - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Bethany Beachel",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Bethany Beachel of the H-MD Medical Spa team. From her profile you can browse the spa's injectables, aesthetics and laser services, its locations, and current offers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 831
+   },
+   {
+    "url": "https://h-md.com/our_team/brooke-wicker",
+    "path": "/our_team/brooke-wicker",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Brooke Wicker - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Brooke Wicker",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Brooke Wicker, a member of the H-MD Medical Spa team. From this page you can browse the med spa's injectables, aesthetics and laser treatments and its Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 839
+   },
+   {
+    "url": "https://h-md.com/our_team/cindy-rogers",
+    "path": "/our_team/cindy-rogers",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Cindy Rogers - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Cindy Rogers",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Cindy Rogers, a member of the H-MD Medical Spa team. Learn more about her and see the injectables, aesthetics and laser services offered at H-MD's Oklahoma locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/our_team/jasmyn-schmitz",
+    "path": "/our_team/jasmyn-schmitz",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Jasmyn Schmitz - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Jasmyn Schmitz",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Jasmyn Schmitz, a member of the H-MD Medical Spa team, which offers injectables, aesthetics treatments and laser services at its Oklahoma City and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 830
+   },
+   {
+    "url": "https://h-md.com/our_team/jennifer-deloera",
+    "path": "/our_team/jennifer-deloera",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Jennifer DeLoera - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Jennifer DeLoera",
+    "current_description": "",
+    "proposed_title": "Jennifer DeLoera - H-MD Medical spa",
+    "proposed_description": "Meet Jennifer DeLoera, a member of the H-MD Medical Spa team. Browse the team page to learn about the people behind our injectables, aesthetics and laser services.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 842
+   },
+   {
+    "url": "https://h-md.com/our_team/joe-janosy",
+    "path": "/our_team/joe-janosy",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Joe Janosy - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Joe Janosy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Team profile for Joe Janosy at H-MD Medical Spa. From here you can browse the med spa's injectables, aesthetics and laser treatments, and find its Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 836
+   },
+   {
+    "url": "https://h-md.com/our_team/kimberly-ward",
+    "path": "/our_team/kimberly-ward",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Kimberly Ward - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Kimberly Ward",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Kimberly Ward, a member of the H-MD Medical Spa team, and find the services, locations, and ways to book with H-MD.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 829
+   },
+   {
+    "url": "https://h-md.com/our_team/kinyada-singleton",
+    "path": "/our_team/kinyada-singleton",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Kinyada Singleton - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Kinyada Singleton",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Kinyada Singleton on the H-MD Medical Spa team page, with links to the injectables, aesthetics, and laser services offered at H-MD and to the other members of the team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 840
+   },
+   {
+    "url": "https://h-md.com/our_team/landon-oshea",
+    "path": "/our_team/landon-oshea",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Landon O’Shea - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Landon O’Shea",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Landon O'Shea, a member of the H-MD Medical Spa team. Find the team page along with H-MD's injectables, aesthetics, laser treatments, and locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 839
+   },
+   {
+    "url": "https://h-md.com/our_team/leeya-hicks",
+    "path": "/our_team/leeya-hicks",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Leeya Hicks - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Leeya Hicks",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Leeya Hicks of the H-MD Medical Spa team. From this profile you can browse the spa's injectables, aesthetics and laser treatments and find a location.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 837
+   },
+   {
+    "url": "https://h-md.com/our_team/lisa-fortier",
+    "path": "/our_team/lisa-fortier",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Lisa Fortier - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Lisa Fortier",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Lisa Fortier, a member of the H-MD Medical Spa team, and find out about the practice's injectables, aesthetics and laser treatments at its Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 828
+   },
+   {
+    "url": "https://h-md.com/our_team/lisset-manzano",
+    "path": "/our_team/lisset-manzano",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Lisset Manzano - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Lisset Manzano",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Lisset Manzano, a member of the H-MD Medical spa team, and explore the injectables, aesthetics and laser services offered across the Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 847
+   },
+   {
+    "url": "https://h-md.com/our_team/lyndsey-purcell",
+    "path": "/our_team/lyndsey-purcell",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Lyndsey Purcell - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Lyndsey Purcell",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Lyndsey Purcell, a member of the H-MD Medical Spa team. Browse the team page to learn about the people behind H-MD's injectables, aesthetics, and laser services.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 831
+   },
+   {
+    "url": "https://h-md.com/our_team/michelle-hunt",
+    "path": "/our_team/michelle-hunt",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Michelle Hunt - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Michelle Hunt",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Michelle Hunt, a member of the H-MD Medical Spa team, and explore the injectable, aesthetic and laser services offered at H-MD's Oklahoma and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 836
+   },
+   {
+    "url": "https://h-md.com/our_team/nancy-delaune",
+    "path": "/our_team/nancy-delaune",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Nancy DeLaune - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Nancy DeLaune",
+    "current_description": "",
+    "proposed_title": "Nancy DeLaune - H-MD Medical spa",
+    "proposed_description": "",
+    "basis": [
+     "title: glued",
+     "description: needs draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 846
+   },
+   {
+    "url": "https://h-md.com/our_team/nicole-alexander",
+    "path": "/our_team/nicole-alexander",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Nicole Alexander - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Nicole Alexander",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Team profile page for Nicole Alexander at H-MD Medical Spa. From here you can meet the rest of the team and browse injectables, aesthetics, laser treatments, and locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 832
+   },
+   {
+    "url": "https://h-md.com/our_team/paige-cupp",
+    "path": "/our_team/paige-cupp",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Paige Cupp - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Paige Cupp",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Paige Cupp on the H-MD Medical Spa team page. From here you can also browse the injectable, aesthetic and laser treatments and find the Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 826
+   },
+   {
+    "url": "https://h-md.com/our_team/shelby-lueders",
+    "path": "/our_team/shelby-lueders",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Shelby Lueders - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Shelby Lueders",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Shelby Lueders, a member of the H-MD Medical Spa team. This page also links to H-MD's injectables, aesthetics and laser services and to its Chisholm Creek, Gaillardia and Tulsa locations.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 830
+   },
+   {
+    "url": "https://h-md.com/our_team/stephanie-ramsey",
+    "path": "/our_team/stephanie-ramsey",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Stephanie Ramsey - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Stephanie Ramsey",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/our_team/tracy-alburty",
+    "path": "/our_team/tracy-alburty",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tracy Alburty - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Tracy Alburty",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/position/aestheticians-and-administrative-staff",
+    "path": "/position/aestheticians-and-administrative-staff",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Aestheticians and Administrative Staff - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/position/injectors",
+    "path": "/position/injectors",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Injectors - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/privacy-policy",
+    "path": "/privacy-policy",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Privacy Policy- OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Privacy Policy",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Privacy_Policy_Page"
+   },
+   {
+    "url": "https://h-md.com/services",
+    "path": "/services",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Services Archive - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Services_Page"
+   },
+   {
+    "url": "https://h-md.com/specialty/aprn",
+    "path": "/specialty/aprn",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "APRN - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/aprn-cnp",
+    "path": "/specialty/aprn-cnp",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "APRN-CNP - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/dnp",
+    "path": "/specialty/dnp",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "DNP - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/fnp-c",
+    "path": "/specialty/fnp-c",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FNP-C - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/le",
+    "path": "/specialty/le",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "LE - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/master-injector",
+    "path": "/specialty/master-injector",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Master Injector - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/pa-c",
+    "path": "/specialty/pa-c",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "PA-C - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/patient-care-coordinator",
+    "path": "/specialty/patient-care-coordinator",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Patient Care Coordinator - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/pm-ii-avelure-and-h-md",
+    "path": "/specialty/pm-ii-avelure-and-h-md",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "PM II- Avelure and H-MD - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/practice-manager",
+    "path": "/specialty/practice-manager",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Practice Manager - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/specialty/rn",
+    "path": "/specialty/rn",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "RN - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/team_locations/chisolm-creek",
+    "path": "/team_locations/chisolm-creek",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Chisolm Creek Archives - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/team_locations/okc",
+    "path": "/team_locations/okc",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "OKC Archives - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/team_locations/tulsa",
+    "path": "/team_locations/tulsa",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Tulsa Archives - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/terms",
+    "path": "/terms",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Privacy Policy- OKC - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Terms of Service",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://h-md.com/consider-liposuction-neck-okc",
+    "path": "/consider-liposuction-neck-okc",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Consider Liposuction for Your Neck in OKC - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "Consider Liposuction for Your Neck in OKC",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://h-md.com/good-faith-estimate",
+    "path": "/good-faith-estimate",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Good Faith Estimate - H-MD Medical Spa",
+    "serp_title": "",
+    "h1": "Good Faith Estimate Notice",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://h-md.com/post",
+    "path": "/post",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "FAQs Archive - H-MD Medical spa",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/category/blog/page/4",
+    "/category/blog/page/12",
+    "/category/blog",
+    "/position/injectors/page/2",
+    "/category/blog/page/5",
+    "/services/page/3",
+    "/category/blog/page/6",
+    "/category/blog/page/2",
+    "/services/page/2",
+    "/category/blog/page/9",
+    "/category/blog/page/11",
+    "/category/blog/page/3",
+    "/category/blog/page/7",
+    "/category/blog/page/10",
+    "/category/blog/page/13",
+    "/category/blog/page/8"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

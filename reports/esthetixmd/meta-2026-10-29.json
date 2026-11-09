@@ -1,0 +1,436 @@
+{
+ "data": {
+  "pid": 9704528,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 5
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 25
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "EsthetixMD",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://www.esthetixmd.com/blog/dysport-treatment-or/",
+    "path": "/blog/dysport-treatment-or/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Difference Between Dysport and Fillers - Bend'",
+    "gsc": {},
+    "traffic": 6.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Dysport treatment OR - Difference Between Dysport and Fillers",
+    "serp_title": "Difference Between Dysport and Fillers - Bend",
+    "h1": "Latest From Our Blog",
+    "current_description": "The aesthetic experts at EsthetixMD Spa and Laser Center in Bend, OR (541) 508-7907 explain Dysport treatment compared to dermal fillers and other injectables",
+    "proposed_title": "Difference Between Dysport and Fillers - Bend | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/gallery-category/kybella/",
+    "path": "/gallery-category/kybella/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Kybella Chin Contouring Before & After Results in Bend, OR'",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "KYBELLA™ Before & After Gallery",
+    "serp_title": "Kybella Chin Contouring Before & After Results in Bend, OR",
+    "h1": "KYBELLA™",
+    "current_description": "Discover how KYBELLA™ can help you achieve a more contoured chin and jawline. View our before and after gallery to see real patient results for chin reduction.",
+    "proposed_title": "Kybella Chin Contouring Before & After Results in Bend, OR | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/pelvic-suite/ultra-femme-360/",
+    "path": "/pelvic-suite/ultra-femme-360/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'ULTRA FEMME 360 | Vaginal Rejuvenation Bend, OR'",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "ULTRA FEMME 360 | Vaginal Rejuvenation Bend, OR| Redmond, OR",
+    "serp_title": "ULTRA FEMME 360 | Vaginal Rejuvenation Bend, OR",
+    "h1": "Ultra femme 360",
+    "current_description": "EsthetixMD is an award-winning medical spa ultra femme 360 for patients in Bend & Redmond with incredible results. Visit our website to learn more!",
+    "proposed_title": "ULTRA FEMME 360 | Vaginal Rejuvenation Bend, OR | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.esthetixmd.com/injectables-fillers/restylane-kysse/",
+    "path": "/injectables-fillers/restylane-kysse/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Restylane Kysse Bend, OR| Dermal Fillers | Corvallis, OR'",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Restylane Kysse Bend, OR| Dermal Fillers | Corvallis, OR | EsthetixMD Med Spa",
+    "serp_title": "Restylane Kysse Bend, OR| Dermal Fillers | Corvallis, OR",
+    "h1": "RESTYLANE KYSSE",
+    "current_description": "EsthetixMD is an award-winning medical spa restylane kysse for patients in Bend & Corvallis with incredible results. Visit our website to learn more!",
+    "proposed_title": "Restylane Kysse Bend, OR| Dermal Fillers | Corvallis, OR | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/about-us/financing/",
+    "path": "/about-us/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | EsthetixMD",
+    "serp_title": "",
+    "h1": "Expert care, naturally within reach.",
+    "current_description": "Payment Options | EsthetixMD Monthly Payments Expert care, naturallywithin reach. You deserve results that look and feel authentically you — without the",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/gallery/coolsculpting-case-10/",
+    "path": "/gallery/coolsculpting-case-10/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Coolsculpting Case 10 - EsthetixMD",
+    "serp_title": "",
+    "h1": "Coolsculpting Case 10",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Coolsculpting Case 10 from the Esthetix MD gallery in Bend, Oregon. You'll find a link back to the full gallery overview, plus the spa's phone number, address, and hours.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 216
+   },
+   {
+    "url": "https://www.esthetixmd.com/gallery/hydrafacial-keravive-case-2/",
+    "path": "/gallery/hydrafacial-keravive-case-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "HydraFacial Keravive Case 2 - EsthetixMD",
+    "serp_title": "",
+    "h1": "HydraFacial Keravive Case 2",
+    "current_description": "",
+    "proposed_title": "HydraFacial Keravive Case 2 | EsthetixMD",
+    "proposed_description": "Gallery entry for HydraFacial Keravive Case 2 from Esthetix MD, a medical spa at 115 SW Allen Rd in Bend, Oregon. Use the link to return to the gallery overview, or find the office hours and phone number to get in touch.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 228
+   },
+   {
+    "url": "https://www.esthetixmd.com/gallery/light-and-microneedling-therapies-case-1/",
+    "path": "/gallery/light-and-microneedling-therapies-case-1/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Light And Microneedling Therapies Case 1 - EsthetixMD",
+    "serp_title": "",
+    "h1": "Light And Microneedling Therapies Case 1",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "View a before-and-after gallery case from Esthetix MD in Bend, Oregon, featuring light therapy and microneedling treatments. Browse the case, then contact the med spa at (541) 508-7907 with questions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 254
+   },
+   {
+    "url": "https://www.esthetixmd.com/gallery/volbella-case-4/",
+    "path": "/gallery/volbella-case-4/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Volbella Case 4 - EsthetixMD",
+    "serp_title": "",
+    "h1": "Volbella Case 4",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Volbella Case 4 is one entry in the Esthetix MD gallery. The page links back to the gallery overview and lists contact details and hours for our medical spa at 115 SW Allen Rd in Bend, Oregon.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 204
+   },
+   {
+    "url": "https://www.esthetixmd.com/skin-treatments/ipl/",
+    "path": "/skin-treatments/ipl/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'IPL Treatment Bend, OR| Intense Pulsed Light'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "IPL Treatment Bend, OR| Intense Pulsed Light | Redmond, OR | EsthetixMD",
+    "serp_title": "IPL Treatment Bend, OR| Intense Pulsed Light",
+    "h1": "IPL",
+    "current_description": "EsthetixMD is an award-winning medical spa ipl for patients in Bend & Redmond with incredible results. Visit our website to learn more!",
+    "proposed_title": "IPL Treatment Bend, OR| Intense Pulsed Light | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/skin-treatments/pdo-thread-lift-for-face/",
+    "path": "/skin-treatments/pdo-thread-lift-for-face/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'PDO Thread Lift Bend, OR| Non-surgical Facelift'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "PDO Thread Lift Bend, OR| Non-surgical Facelift | Corvallis, OR | EsthetixMD",
+    "serp_title": "PDO Thread Lift Bend, OR| Non-surgical Facelift",
+    "h1": "PDO THREAD LIFT",
+    "current_description": "EsthetixMD is an award-winning medical spa pdo thread lift for face for patients in Bend & Corvallis with incredible results. Visit our website to learn more!",
+    "proposed_title": "PDO Thread Lift Bend, OR| Non-surgical Facelift | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/subscribe-and-save/",
+    "path": "/subscribe-and-save/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Subscribe",
+    "serp_title": "",
+    "h1": "Subscribe and stay informed!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Sign up for email and text updates from Esthetix MD by choosing your preferred location and contact method. After you subscribe, the page shares a code for 15% off your next appointment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 566
+   },
+   {
+    "url": "https://www.esthetixmd.com/blog/body-sculpting-treatment-in-bend-or/",
+    "path": "/blog/body-sculpting-treatment-in-bend-or/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Body Sculpting Treatment in Bend OR - Cost Of CoolSculpting",
+    "serp_title": "Body Sculpting Treatment in Bend OR",
+    "h1": "Latest From Our Blog",
+    "current_description": "CoolSculpting is a renowned non-surgical fat reduction / body sculpting treatment on abdomen & thighs. Visit EsthetixMD Medical Spa & Laser Center in Bend OR",
+    "proposed_title": "Latest From Our Blog | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/blog/men-and-women-in-bend-or-ask-is-it-safe-to-have-laser-hair-removal-on-the-face/",
+    "path": "/blog/men-and-women-in-bend-or-ask-is-it-safe-to-have-laser-hair-removal-on-the-face/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Safe Laser Hair Removal on Face Bend OR - LightSheer DUET",
+    "serp_title": "Safe Laser Hair Removal on Face Bend OR",
+    "h1": "Latest From Our Blog",
+    "current_description": "Talk with our team at EsthetixMD Spa & Laser Center in Bend OR, if you have concerns about the safety of laser hair removal on the face. Call (541) 508-7907",
+    "proposed_title": "Latest From Our Blog | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://www.esthetixmd.com/blog/xeo-type-hair-removal-machines-in-bend-or/",
+    "path": "/blog/xeo-type-hair-removal-machines-in-bend-or/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Xeo Type Hair Removal Bend'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Xeo Type Hair Removal Bend | How Hair Removal Works | EsthetixMD",
+    "serp_title": "Xeo Type Hair Removal Bend",
+    "h1": "Latest From Our Blog",
+    "current_description": "Get to the root of unwanted hair! Contact EsthetixMD Spa & Laser Center in Bend, OR for Xeo type hair removal machines. Call (541) 508-7907.",
+    "proposed_title": "Xeo Type Hair Removal Bend | EsthetixMD",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/blog/category/ultra-femme-360/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "data": {
+  "pid": 9704527,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 1
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "22 Spa MD",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://22spamd.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | 22 Spa MD",
+    "serp_title": "",
+    "h1": "Your treatment, your schedule & your budget.",
+    "current_description": "Get financing options for cosmetic treatments at 22 Spa MD in Salt Lake City, Cottonwood Heights, Jamestown and Wildwood. Apply now.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": ""
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

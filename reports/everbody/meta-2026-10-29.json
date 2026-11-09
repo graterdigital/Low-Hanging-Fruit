@@ -1,0 +1,174 @@
+{
+ "data": {
+  "pid": 9704532,
+  "crawl": "2026-10-29",
+  "health": 99,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 2
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 12
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Ever/Body",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://everbody.com/treatment/biorepeel/",
+    "path": "/treatment/biorepeel/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 11.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Expert-led BioRePeel® in NY & DC | Ever/Body",
+    "serp_title": "Expert-led BioRePeel® in NY & DC",
+    "h1": "BioRePeel",
+    "current_description": "Discover BioRePeel – an advanced, no-peel chemical peel designed to rejuvenate your skin while keeping downtime to a minimum. Book Now!",
+    "proposed_title": "BioRePeel | Ever/Body",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Service"
+   },
+   {
+    "url": "https://everbody.com/treatment/hydrafacial/",
+    "path": "/treatment/hydrafacial/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 10.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Expert-led HydraFacial™ in NY & DC | Ever/Body",
+    "serp_title": "Expert-led HydraFacial™ in NY & DC",
+    "h1": "Hydrafacial™",
+    "current_description": "The #1 way to achieve glowing skin. Hydrate, exfoliate, and clear blackheads & whiteheads with client-favorite, tech-enabled Hydrafacial. Book now.",
+    "proposed_title": "Hydrafacial™ | Ever/Body",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://everbody.com/treatment/ipl-laser-photofacial/",
+    "path": "/treatment/ipl-laser-photofacial/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 5.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Cosmetic Treatments in NYC & Washington DC Metro Area",
+    "serp_title": "Lumecca IPL Photofacial",
+    "h1": "Lumecca IPL Photofacial",
+    "current_description": "Improve overall skin tone and reduce brown spots, broken capillaries, mild sun damage, and irregular pigmentation with Lummeca IPL Photofacial. Book now.",
+    "proposed_title": "Lumecca IPL Photofacial | Ever/Body",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://everbody.com/how-it-works/",
+    "path": "/how-it-works/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Achieve Renewed Skin in Only 4 Steps With Us",
+    "serp_title": "Getting Started with Cosmetic Dermatology",
+    "h1": "Getting Started with Cosmetic Dermatology",
+    "current_description": "Ready to start your journey? Learn about our simple 4-step process for getting started with our cosmetic treatments, from your initial consultation to results.",
+    "proposed_title": "Getting Started with Cosmetic Dermatology | Ever/Body",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://everbody.com/press/",
+    "path": "/press/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand typo",
+    "why": "brand suffix reads 'Everbody'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Press Archive - Everbody",
+    "serp_title": "",
+    "h1": "Our Press",
+    "current_description": "",
+    "proposed_title": "Press Archive | Ever/Body",
+    "proposed_description": "The Ever/Body press page, with links to explore treatments, locations, our approach and medical staff, or book an appointment. It also includes a notice that site content is general information and not medical advice.",
+    "basis": [
+     "title: brand typo",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 756
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/treatment/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

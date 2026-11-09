@@ -1,0 +1,119 @@
+{
+ "data": {
+  "pid": 9704551,
+  "crawl": "2026-10-29",
+  "health": 97,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 1
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 3
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "SkynBar Atlanta",
+  "sep": " – ",
+  "todo": [
+   {
+    "url": "https://skynbaratlanta.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | SkynBar",
+    "serp_title": "",
+    "h1": "Your skin destination, on your terms.",
+    "current_description": "Payment Options | SkynBar Monthly Payments Your skin destination,on your terms. Great skin should feel like a destination — not a financial decision.",
+    "proposed_title": "Your skin destination, on your terms. – SkynBar Atlanta",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Core_Page/Services_Page"
+   },
+   {
+    "url": "https://skynbaratlanta.com/laser/",
+    "path": "/laser/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "laser - Skynbar",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find laser hair removal at SkynBar Atlanta, a medical spa on Roswell Road NE, along with office hours, phone number, and a link to book an appointment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 772
+   },
+   {
+    "url": "https://skynbaratlanta.com/treatments/microneedling/",
+    "path": "/treatments/microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'SkinPen Microneedling in Buckhead, Atlanta'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Microneedling in Buckhead, Atlanta | Texture & Tone",
+    "serp_title": "SkinPen Microneedling in Buckhead, Atlanta",
+    "h1": "MICRONEEDLING IN BUCKHEAD, ATLANTA",
+    "current_description": "Boost collagen, refine skin, improve scars & pigmentation with microneedling customized to your needs for smoother & healthier skin. Book now.",
+    "proposed_title": "SkinPen Microneedling in Buckhead, Atlanta – SkynBar Atlanta",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

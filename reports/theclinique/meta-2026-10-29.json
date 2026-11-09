@@ -1,0 +1,646 @@
+{
+ "data": {
+  "pid": 9704556,
+  "crawl": "2026-10-29",
+  "health": 98,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 10
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 1
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 56
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "The Clinique",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://theclinique.com/",
+    "path": "/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Aesthetic Clinique: Med Spa in Santa Rosa Beach, FL'; homepage title comes from Yoast's site-wide template, change it there",
+    "gsc": {},
+    "traffic": 164.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Med Spa in Santa Rosa Beach, FL | Aesthetic Clinique",
+    "serp_title": "Aesthetic Clinique: Med Spa in Santa Rosa Beach, FL",
+    "h1": "We are committed to the highest level of expertise, safety and customer service as a premier medical spa in Florida.",
+    "current_description": "Explore the latest in aesthetic treatments and skincare at Aesthetic Clinique.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Homepage"
+   },
+   {
+    "url": "https://theclinique.com/blog/filling-the-temples-should-be-done-with-sculptra-period/",
+    "path": "/blog/filling-the-temples-should-be-done-with-sculptra-period/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Filling The Temples Should Be Done With Sculptra...Period.'",
+    "gsc": {},
+    "traffic": 51.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Filling The Temples Should Be Done With Sculptra...Period. | The Clinique",
+    "serp_title": "Filling The Temples Should Be Done With Sculptra...Period.",
+    "h1": "Filling The Temples Should Be Done With Sculptra…Period.",
+    "current_description": "Temporal volume loss is part of the natural aging process of the face. It is the result primarily of fat pad atrophy, but loss of bone, soft tissue, and",
+    "proposed_title": "Filling The Temples Should Be Done With Sculptra...Period | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/blog/coolsculpting-elite-the-ultimate-solution-to-stubborn-fat-reduction/",
+    "path": "/blog/coolsculpting-elite-the-ultimate-solution-to-stubborn-fat-reduction/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 22.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "CoolSculpting Elite: The Ultimate Solution to Stubborn Fat Reduction | The Clinique",
+    "serp_title": "CoolSculpting Elite: The Ultimate Solution to Stubborn Fat ...",
+    "h1": "CoolSculpting Elite: The Ultimate Solution to Stubborn Fat Reduction",
+    "current_description": "Have you tried dieting and exercise, but are still living with stubborn pockets of fat? If so, you may be a great candidate for CoolSculpting Elite! This",
+    "proposed_title": "CoolSculpting Elite: The Ultimate Solution to Stubborn Fat Reduction | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/blog/maximizing-coolsculpting-results-with-cooladvantage-and-zimmer-z-wave/",
+    "path": "/blog/maximizing-coolsculpting-results-with-cooladvantage-and-zimmer-z-wave/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 11.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Maximizing Coolsculpting Results with CoolAdvantage and Zimmer Z Wave | The Clinique",
+    "serp_title": "Maximizing Coolsculpting Results with CoolAdvantage and ...",
+    "h1": "Maximizing Coolsculpting Results with CoolAdvantage and Zimmer Z Wave",
+    "current_description": "Coolsculpting has established itself as the worlds #1 noninvasive fat reduction treatment. It has over 3 million treatments worldwide and has been found",
+    "proposed_title": "Maximizing Coolsculpting Results with CoolAdvantage and Zimmer Z Wave | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://theclinique.com/blog/gum-chewing-accelerates-aging-of-the-lower-face-and-mouth/",
+    "path": "/blog/gum-chewing-accelerates-aging-of-the-lower-face-and-mouth/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'The Unintended Consequences of Gum Chewing'",
+    "gsc": {},
+    "traffic": 10.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "The Unintended Consequences of Gum Chewing: Accelerated Aging of the Lower Face and Mouth. | The Clinique",
+    "serp_title": "The Unintended Consequences of Gum Chewing",
+    "h1": "The Unintended Consequences of Gum Chewing: Accelerated Aging of the Lower Face and Mouth.",
+    "current_description": "People chew gum to help clean their teeth after eating, freshen their breath, and even try to keep them whiter. What isn't readily known is the havok gum",
+    "proposed_title": "The Unintended Consequences of Gum Chewing | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/blog/diamondglow-vs-hydrafacial-why-diamondglow-wins-for-radiant-skin/",
+    "path": "/blog/diamondglow-vs-hydrafacial-why-diamondglow-wins-for-radiant-skin/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 8.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "DiamondGlow vs. HydraFacial: Why DiamondGlow Wins for Radiant Skin! | The Clinique",
+    "serp_title": "DiamondGlow vs. HydraFacial",
+    "h1": "DiamondGlow vs. HydraFacial: Why DiamondGlow Wins for Radiant Skin!",
+    "current_description": "DiamondGlow and HydraFacial have often competed as similar skin rejuvenating treatments, but there are several reasons why we rely on DiamondGlow at",
+    "proposed_title": "DiamondGlow vs. HydraFacial: Why DiamondGlow Wins for Radiant Skin! | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/video/lutronic-genius-rf-microneedling/",
+    "path": "/video/lutronic-genius-rf-microneedling/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 4.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "How Lutronic Genius RF Microneedling Works Educational Videos",
+    "serp_title": "How Lutronic Genius RF Microneedling Works",
+    "h1": "How Lutronic Genius RF Microneedling Works",
+    "current_description": "Take a look at our amazing educational videos to learn more about How Lutronic Genius RF Microneedling Works at Aesthetic Clinique.",
+    "proposed_title": "How Lutronic Genius RF Microneedling Works | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/blog/sculptra-is-different-than-all-other-fillers-natural-large-volumes-cost-effective/",
+    "path": "/blog/sculptra-is-different-than-all-other-fillers-natural-large-volumes-cost-effective/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Sculptra is Different Than All Other Fillers'",
+    "gsc": {},
+    "traffic": 2.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Sculptra is Different Than All Other Fillers: Natural, Structural Support, Cost Effective | The Clinique",
+    "serp_title": "Sculptra is Different Than All Other Fillers",
+    "h1": "Sculptra is Different Than All Other Fillers: Natural, Structural Support, Cost Effective",
+    "current_description": "The concept of volume loss in the aging face is a relatively new realization by the aesthetic industry. Up until about 12-15 years ago, the dogma was",
+    "proposed_title": "Sculptra is Different Than All Other Fillers | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://theclinique.com/blog/oral-supplements-for-skin-health-beauty-and-longevity-heliocare-glisodin-skin-nutrients-and-ta65/",
+    "path": "/blog/oral-supplements-for-skin-health-beauty-and-longevity-heliocare-glisodin-skin-nutrients-and-ta65/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Oral Supplements for Skin Health, Beauty, and Longevity'",
+    "gsc": {},
+    "traffic": 1.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Oral Supplements for Skin Health, Beauty, and Longevity - Heliocare, GliSODin Skin Nutrients, TA65 and Megaresveratrol | The Clinique",
+    "serp_title": "Oral Supplements for Skin Health, Beauty, and Longevity",
+    "h1": "Oral Supplements for Skin Health, Beauty, and Longevity – Heliocare, GliSODin Skin Nutrients, TA65 and Megaresveratrol",
+    "current_description": "The focus of the Aesthetic Clinique is restoring and optimizing one's appearance. Skin treatments such as lasers, injectables, and topical creams",
+    "proposed_title": "Oral Supplements for Skin Health, Beauty, and Longevity | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/checkout/",
+    "path": "/checkout/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Checkout in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Checkout",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Book a consultation at The Clinique's Santa Rosa Beach location or send a question first. This page lists the clinic's weekday hours, select Saturday openings, and the address on West County Highway 30A.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 627
+   },
+   {
+    "url": "https://theclinique.com/elementor-7039/",
+    "path": "/elementor-7039/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Elementor #7039 in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Elementor #7039",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Get details for the Aesthetic Clinique Open House 2026 and contact The Clinique in Santa Rosa Beach, FL. Find the office hours, address and a link to book a consultation.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 711
+   },
+   {
+    "url": "https://theclinique.com/face/skin/acne-facial/",
+    "path": "/face/skin/acne-facial/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Acne Facial in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Acne Facial",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about the Acne Facial at The Clinique in Santa Rosa Beach, FL, and book a consultation or contact the team with questions. The page also lists office hours and the address on West County Highway 30A.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 647
+   },
+   {
+    "url": "https://theclinique.com/face/skin/facials/",
+    "path": "/face/skin/facials/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Facials in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Facials",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Facials at The Clinique's Santa Rosa Beach, Florida office, plus patient reviews, office hours, and a way to book a consultation or contact the team with questions.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2126
+   },
+   {
+    "url": "https://theclinique.com/financing/",
+    "path": "/financing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Payment Options | Aesthetic Clinique",
+    "serp_title": "",
+    "h1": "Payment Options",
+    "current_description": "Payment Options | Aesthetic Clinique Monthly Payments Expert care on the coast,on your terms. Thoughtful, results-driven aesthetics shouldn't have to",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "multiple titles"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://theclinique.com/my-account/",
+    "path": "/my-account/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "My account in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "My account",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Log in to your The Clinique account to manage your details and orders, or book a consultation at the Santa Rosa Beach location. The page also lists office hours and the address on County Highway 30A.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 661
+   },
+   {
+    "url": "https://theclinique.com/shop/",
+    "path": "/shop/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Shop in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Shop",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Visit the shop page for The Clinique in Santa Rosa Beach, Florida, where you can also book a consultation, contact the team, and find office hours and the address.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 619
+   },
+   {
+    "url": "https://theclinique.com/sitemap/",
+    "path": "/sitemap/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Sitemap in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "Sitemap",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the full list of pages on The Clinique's website in one place. You'll also find the Santa Rosa Beach location, office hours, and a way to book a consultation or contact the team.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 648
+   },
+   {
+    "url": "https://theclinique.com/subscribe-notifications/",
+    "path": "/subscribe-notifications/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Subscribe",
+    "serp_title": "",
+    "h1": "Subscribe to unlock your exclusive offer now!",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Sign up for email and text updates from Aesthetic Clinique by choosing your preferred location and contact method. After subscribing, you'll receive a code for $50 off your next treatment of $350 or more.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 701
+   },
+   {
+    "url": "https://theclinique.com/test/",
+    "path": "/test/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "test in Florida | Med Spa | The Clinique",
+    "serp_title": "",
+    "h1": "test",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Contact The Clinique's Santa Rosa Beach location to book a consultation or ask a question, and find the office hours and address on West County Highway 30A.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 619
+   },
+   {
+    "url": "https://theclinique.com/face/lasers/lutronic-hollywood-spectra-peel/",
+    "path": "/face/lasers/lutronic-hollywood-spectra-peel/",
+    "page_type": "people",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Carbon Laser Facial in Florida: Hollywood Spectra Peel",
+    "serp_title": "Lutronic Hollywood Spectra Peel in Santa Rosa Beach, FL",
+    "h1": "Lutronic Hollywood Spectra Peel in Santa Rosa Beach, FL",
+    "current_description": "Refresh dull, uneven skin with the Carbon Laser Facial using Hollywood Spectra in Santa Rosa Beach. Brighten tone & boost collagen, book a treatment today.",
+    "proposed_title": "Lutronic Hollywood Spectra Peel in Santa Rosa Beach, FL | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Business"
+   },
+   {
+    "url": "https://theclinique.com/blog/dlm-internal/",
+    "path": "/blog/dlm-internal/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "DLM Internal | The Clinique",
+    "serp_title": "",
+    "h1": "DLM Internal",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Contact The Clinique to schedule a consultation at the Santa Rosa Beach location, with office hours, select Saturday dates, and the address on West County Highway 30A.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 614
+   },
+   {
+    "url": "https://theclinique.com/blog/thermiva-rejuvenates-the-va/",
+    "path": "/blog/thermiva-rejuvenates-the-va/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "ThermiVa Rejuvenates the \"Va\" | The Clinique",
+    "serp_title": "ThermiVa Rejuvenates the \"Va\"",
+    "h1": "ThermiVa Rejuvenates the “Va”",
+    "current_description": "It's okay to talk about these things now. Women are discussing this subject at bars and parties. Restoring and enhancing the vaginal area is now popular,",
+    "proposed_title": "ThermiVa Rejuvenates the “Va” | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: glued"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": ""
+   },
+   {
+    "url": "https://theclinique.com/face/lasers/splendor-x-for-hair-reduction/",
+    "path": "/face/lasers/splendor-x-for-hair-reduction/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Splendor X Laser Hair Removal in Santa Rosa Beach, Florida",
+    "serp_title": "Splendor X Laser Hair Removal in Santa Rosa Beach, FL",
+    "h1": "Splendor X Laser Hair Removal in Santa Rosa Beach, FL",
+    "current_description": "Achieve smooth, hair-free skin with advanced Splendor X laser hair removal in Santa Rosa Beach. Safe, fast, and effective for all skin types, book now.",
+    "proposed_title": "Splendor X Laser Hair Removal in Santa Rosa Beach, FL | The Clinique",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": [
+    "/"
+   ]
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

@@ -1,0 +1,4557 @@
+{
+ "data": {
+  "pid": 9704554,
+  "crawl": "2026-10-29",
+  "health": 90,
+  "gsc_window": "2026-08-04 to 2026-11-02",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 171
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 6
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Technik Packaging Machinery",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://www.technikpackaging.com/industries-that-benefit-most-from-automated-packaging-machinery/",
+    "path": "/industries-that-benefit-most-from-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/industries-that-benefit-most-from-automated-packaging-machinery/",
+     "keywords_count": 65,
+     "top_keyword": "automated packaging systems informational intent",
+     "clicks": 0,
+     "impressions": 13504,
+     "ctr": 0.0,
+     "position": 23.057612,
+     "traffic_value": null
+    },
+    "traffic": 4.0,
+    "score": 13504.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Industries That Benefit Most from Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how automated packaging lines work, from front-end to end-of-line equipment, and which industries such as consumer products, cosmetics, and food and beverage use these machines.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/why-you-need-end-of-line-industrial-packaging-equipment/",
+    "path": "/why-you-need-end-of-line-industrial-packaging-equipment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/why-you-need-end-of-line-industrial-packaging-equipment/",
+     "keywords_count": 76,
+     "top_keyword": "end of line packing systems for cheese",
+     "clicks": 0,
+     "impressions": 6413,
+     "ctr": 0.0,
+     "position": 23.40605,
+     "traffic_value": null
+    },
+    "traffic": 7.0,
+    "score": 6413.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Why You Need End-of-line Industrial Packaging Equipment - Technik Packaging Machinery",
+    "serp_title": "Why You Need End-of-line Industrial Packaging Equipment",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "Why You Need End-of-Line Industrial Packaging Equipment - Technik Packaging Machinery",
+    "proposed_description": "An overview of end-of-line packaging equipment that erects, packs, seals and codes cartons and cases, including the Dienst HE Case Packer, Compact and Wrap Around machines with their case sizes and speeds.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-to-choose-the-best-vertical-bagging-equipment-for-your-business-2/",
+    "path": "/how-to-choose-the-best-vertical-bagging-equipment-for-your-business-2/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/how-to-choose-the-best-vertical-bagging-equipment-for-your-business-2/",
+     "keywords_count": 56,
+     "top_keyword": "top integrated packing line suppliers for growers needing wash, sort, and bagging automation?",
+     "clicks": 0,
+     "impressions": 840,
+     "ctr": 0.0,
+     "position": 31.304762,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 840.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How to Choose the Best Vertical Bagging Equipment for Your Business - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "How to Choose Vertical Bagging Equipment for Your Business - Technik Packaging Machinery",
+    "proposed_description": "A buying guide to vertical bagging equipment: which products suit vertical bagging, how it differs from horizontal bagging, and the controls, servomotors, sealing and closure options to check. Note that the page does not cover integrated wash, sort and bagging lines.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-he-case-packer/",
+    "path": "/product/dienst-he-case-packer/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-he-case-packer/",
+     "keywords_count": 101,
+     "top_keyword": "modulare verpackungsmaschine",
+     "clicks": 0,
+     "impressions": 715,
+     "ctr": 0.0,
+     "position": 21.995804,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 715.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HE Case Packer - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Dienst HE Case Packer is an automated intermittent-motion case packer that erects, fills, closes and seals RSC corrugated cases at up to 25 cases per minute. This page lists its specifications, case size range, sealing and integration options, and industry applications.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2157
+   },
+   {
+    "url": "https://www.technikpackaging.com/cartoning-101-2/",
+    "path": "/cartoning-101-2/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/cartoning-101-2/",
+     "keywords_count": 9,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 561,
+     "ctr": 0.0,
+     "position": 27.700534,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 561.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Cartoning 101 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Technik's Cartoning 101 news post introduces its Quick Bytes video series, a four-part primer on cartons covering how they are defined, closure styles, the 5th panel, and special carton features.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 2560
+   },
+   {
+    "url": "https://www.technikpackaging.com/packaging-equipment-buyers-guide-compact-cartoners/",
+    "path": "/packaging-equipment-buyers-guide-compact-cartoners/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/packaging-equipment-buyers-guide-compact-cartoners/",
+     "keywords_count": 12,
+     "top_keyword": "used cartoners",
+     "clicks": 0,
+     "impressions": 510,
+     "ctr": 0.0,
+     "position": 18.121568,
+     "traffic_value": null
+    },
+    "traffic": 1.0,
+    "score": 510.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Packaging Equipment Buyer’s Guide: Compact Cartoners - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A buyer's guide to the JW CCM series compact cartoners from Technik Packaging Machinery, covering the three models, including the hand-loaded CCM-MV, and the printing, labeling, and bar code verification options for each.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-dsxc/",
+    "path": "/product/triapex-dsxc/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-dsxc/",
+     "keywords_count": 3,
+     "top_keyword": "dsxc",
+     "clicks": 2,
+     "impressions": 357,
+     "ctr": 0.5602,
+     "position": 6.946778,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 355.000086,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DSXC - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex DSXC is a multilane auger filler for volumetric filling of powder or granular products into multilane stick pack machines, with the lane count matched to your machine. Starting at $9,900, with industry applications listed on the page.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1092
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/jw-ccm-av-lin-high-speed-compact-cartoner/",
+    "path": "/product/jw-ccm-av-lin-high-speed-compact-cartoner/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/jw-ccm-av-lin-high-speed-compact-cartoner/",
+     "keywords_count": 58,
+     "top_keyword": "automatic cartoners and tray packers",
+     "clicks": 2,
+     "impressions": 315,
+     "ctr": 0.6349,
+     "position": 44.238095,
+     "traffic_value": 5.0
+    },
+    "traffic": 0,
+    "score": 313.000065,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "JW CCM-AV Lin High Speed Compact Cartoner - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Specifications, options and applications for the JW CCM-AV Lin compact cartoner, which runs up to 120 cartons per minute with automatic infeed, Siemens controls and optional pharmaceutical serialization.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2031
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hnxb/",
+    "path": "/product/triapex-hnxb/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hnxb/",
+     "keywords_count": 3,
+     "top_keyword": "hnxb",
+     "clicks": 3,
+     "impressions": 284,
+     "ctr": 1.0563,
+     "position": 5.373239,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 281.000108,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HNXB - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex HNXB is a stick pack machine that makes stick packs, small pillow bags and Cross trapezoidal bags, with up to 16 lanes and output of up to 800 sticks per minute. This page lists its specifications, dosing and weighing options, industry applications and starting price.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1805
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/jw-ccm-mv/",
+    "path": "/product/jw-ccm-mv/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/jw-ccm-mv/",
+     "keywords_count": 48,
+     "top_keyword": "automatic cartoner for bakery products",
+     "clicks": 0,
+     "impressions": 274,
+     "ctr": 0.0,
+     "position": 7.729926,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 274.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "JW CCM-MV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The JW CCM-MV is a hand-loaded, top-load automatic cartoner for tubes, bottles, bags, and other consumer or industrial products. It offers tuck or glue closure, 30-40 cartons per minute, a 1000mm x 1000mm standard footprint, and options like printing, labeling, and serialization.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1851
+   },
+   {
+    "url": "https://www.technikpackaging.com/whats-your-speed-a-guide-to-determining-your-target-line-speed/",
+    "path": "/whats-your-speed-a-guide-to-determining-your-target-line-speed/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/whats-your-speed-a-guide-to-determining-your-target-line-speed/",
+     "keywords_count": 19,
+     "top_keyword": "three speeds packaging machine",
+     "clicks": 0,
+     "impressions": 266,
+     "ctr": 0.0,
+     "position": 8.733082,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 266.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "What’s Your Speed?: A Guide to Determining Your Target Line Speed - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "How to Determine Your Target Packaging Line Speed - Technik Packaging Machinery",
+    "proposed_description": "A guide to setting a target line speed for automated packaging equipment, based on either your available product input or your required output. Includes worked examples for granola bags and pharmaceutical cartons.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/valmatic-val75-unit-dose-thermoforming-system/",
+    "path": "/product/valmatic-val75-unit-dose-thermoforming-system/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/valmatic-val75-unit-dose-thermoforming-system/",
+     "keywords_count": 17,
+     "top_keyword": "val75",
+     "clicks": 1,
+     "impressions": 225,
+     "ctr": 0.4444,
+     "position": 5.951111,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 224.0001,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Valmatic VAL75 Unit Dose Thermoforming System - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Valmatic VAL75 is a unit dose thermoforming system for single-dose liquid and cream products from 0.1 to 200mL, with Siemens controls, temperature-regulated dosing, and options such as embossing, custom mold shapes, and pharmaceutical serialization. See the specifications, options, and industry applications, with pricing starting at $399,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1790
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/pegasus-premade-bag-filling-and-sealing-machine/",
+    "path": "/product/pegasus-premade-bag-filling-and-sealing-machine/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/pegasus-premade-bag-filling-and-sealing-machine/",
+     "keywords_count": 24,
+     "top_keyword": "pegasus packing",
+     "clicks": 0,
+     "impressions": 208,
+     "ctr": 0.0,
+     "position": 19.783654,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 208.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Pegasus Premade Bag Filling and Sealing Machine - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Pegasus premade bag filling and sealing machine opens, fills, and seals pillow, gusseted, and Doy-style bags at 25-55 bags per minute. This page lists specifications, dosing and printing options, industry applications, and starting price.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2143
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-vxnd/",
+    "path": "/product/triapex-vxnd/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-vxnd/",
+     "keywords_count": 3,
+     "top_keyword": "vxnd",
+     "clicks": 4,
+     "impressions": 202,
+     "ctr": 1.9801,
+     "position": 3.688119,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 198.000198,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex VXND - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex VXND is a linear weigher that doses loose products like nuts and cereals by weight, in single or multilane setups with 1-24 lanes and micro or mini sizes. See specifications, industry applications and starting price.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1497
+   },
+   {
+    "url": "https://www.technikpackaging.com/growth-of-use-in-high-speed-cartoners-for-frozen-foods-and-ready-meals/",
+    "path": "/growth-of-use-in-high-speed-cartoners-for-frozen-foods-and-ready-meals/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/growth-of-use-in-high-speed-cartoners-for-frozen-foods-and-ready-meals/",
+     "keywords_count": 10,
+     "top_keyword": "top load cartoner for frozen products",
+     "clicks": 0,
+     "impressions": 171,
+     "ctr": 0.0,
+     "position": 14.374269,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 171.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Growth of Use in High-Speed Cartoners for Frozen Foods and Ready Meals - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "Growth of High-Speed Cartoners for Frozen Foods and Ready Meals - Technik Packaging Machinery",
+    "proposed_description": "Read how high-speed cartoners for frozen foods and ready meals have evolved, including top-load cartoners for fish fingers, burgers and ice lollies and end-load cartoners for pies, pizza and quiche.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Study_or_Research_Findings",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/us-serialization-pharmaceuticals/",
+    "path": "/us-serialization-pharmaceuticals/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/us-serialization-pharmaceuticals/",
+     "keywords_count": 30,
+     "top_keyword": "serialization pharmaceutical packaging",
+     "clicks": 0,
+     "impressions": 156,
+     "ctr": 0.0,
+     "position": 37.923077,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 156.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "US Serialization 2017 | Pharmaceutical Packaging Equipment",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A 2018 news post on US pharmaceutical serialization under the Drug Supply Chain Security Act, covering the FDA's extended deadline, product identifier, serial number, lot number and expiration date requirements, and what they mean for packaging equipment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-ddxa/",
+    "path": "/product/triapex-ddxa/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-ddxa/",
+     "keywords_count": 2,
+     "top_keyword": "ddxa",
+     "clicks": 1,
+     "impressions": 150,
+     "ctr": 0.6666,
+     "position": 4.52,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 149.0001,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DDXA - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex DDXA is a volumetric dosing system for powder and granular products, built to feed multilane Triapex stick pack machines at up to 60 doses per minute per lane. See specifications, industry applications and pricing from $9,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1374
+   },
+   {
+    "url": "https://www.technikpackaging.com/food-beverage-industry-relies-automated-packaging-machinery/",
+    "path": "/food-beverage-industry-relies-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/food-beverage-industry-relies-automated-packaging-machinery/",
+     "keywords_count": 11,
+     "top_keyword": "automated packaging systems for beverages",
+     "clicks": 0,
+     "impressions": 144,
+     "ctr": 0.0,
+     "position": 21.534722,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 144.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "The Food and Beverage Industry Relies on Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "How Automation Is Changing Food and Beverage Packaging - Technik Packaging Machinery",
+    "proposed_description": "A 2017 news article on how automated packaging machinery is used in food and beverage production, from bottle inspection to primary, secondary and tertiary packing. It also summarizes PMMI report findings on industry demand for automation.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Study_or_Research_Findings",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/vertical-bagging-cost-effective/",
+    "path": "/vertical-bagging-cost-effective/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/vertical-bagging-cost-effective/",
+     "keywords_count": 9,
+     "top_keyword": "user-friendly vertical packer",
+     "clicks": 0,
+     "impressions": 141,
+     "ctr": 0.0,
+     "position": 69.730496,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 141.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Why Vertical Bagging is Cost Effective | Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "An article explaining why vertical bagging machines can cut labor and material costs, how they compare with horizontal baggers, and why most are simple to operate, with training often done in a day.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/equipment-coffee-bagging-coffee-pod-production/",
+    "path": "/equipment-coffee-bagging-coffee-pod-production/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/equipment-coffee-bagging-coffee-pod-production/",
+     "keywords_count": 8,
+     "top_keyword": "coffee bagging equipment factory",
+     "clicks": 0,
+     "impressions": 106,
+     "ctr": 0.0,
+     "position": 16.396226,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 106.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Equipment for Coffee Bagging and Coffee Pod Production - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "Equipment for Coffee Bagging and Coffee Pod Production - Technik Packaging Machinery",
+    "proposed_description": "An overview of coffee packaging equipment, from standup bag machines for dry-ground coffee to fill-and-seal equipment for coffee pods and K-cups, plus the Triapex bagging models Technik Packaging offers.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/athena-s3-horizontal-flow-wrapper/",
+    "path": "/product/athena-s3-horizontal-flow-wrapper/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/athena-s3-horizontal-flow-wrapper/",
+     "keywords_count": 32,
+     "top_keyword": "horizontal wrapper",
+     "clicks": 3,
+     "impressions": 106,
+     "ctr": 2.8302,
+     "position": 10.641509,
+     "traffic_value": 5.5
+    },
+    "traffic": 0,
+    "score": 102.999988,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Athena S3 Horizontal Flow Wrapper - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Athena S3 is a compact horizontal flow wrapper for candy, baked goods, frozen foods, soap and medical devices, starting at $49,900. See specifications, options such as extended infeeds and inkjet coding, and industry applications.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1875
+   },
+   {
+    "url": "https://www.technikpackaging.com/equipment-for-coffee-bagging-and-coffee-pod-production/",
+    "path": "/equipment-for-coffee-bagging-and-coffee-pod-production/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/equipment-for-coffee-bagging-and-coffee-pod-production/",
+     "keywords_count": 15,
+     "top_keyword": "coffee frac pack equipment",
+     "clicks": 0,
+     "impressions": 99,
+     "ctr": 0.0,
+     "position": 13.777777,
+     "traffic_value": null
+    },
+    "traffic": 2.0,
+    "score": 99.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Equipment for Coffee Bagging and Coffee Pod Production - Technik Packaging Machinery",
+    "serp_title": "Equipment for Coffee Bagging and Coffee Pod Production",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "Equipment for Coffee Bagging and Coffee Pod Production - Technik Packaging Machinery",
+    "proposed_description": "Learn how coffee pods and K-cups differ, what output ranges pod filling and sealing machines typically cover, and which packaging equipment suits coffee bags. The article also lists the Triapex bagging systems Technik Packaging offers for coffee.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/jw-ccm-av/",
+    "path": "/product/jw-ccm-av/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/jw-ccm-av/",
+     "keywords_count": 35,
+     "top_keyword": "cartoning packaging machine",
+     "clicks": 0,
+     "impressions": 84,
+     "ctr": 0.0,
+     "position": 14.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 84.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "JW CCM-AV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The JW CCM-AV is an automatic top load cartoning machine for bags, bottles, vials, and other products dropped vertically into a carton, running up to 60 cartons per minute. See the specifications, options such as printing, labeling, and serialization, pharmaceutical cGMP and 21 CFR 11 compatibility, and industry applications.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2209
+   },
+   {
+    "url": "https://www.technikpackaging.com/about-us/",
+    "path": "/about-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/about-us/",
+     "keywords_count": 6,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 71,
+     "ctr": 0.0,
+     "position": 5.394366,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 71.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "About Us - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Technik Packaging Machinery was founded in 2001 by packaging engineers and executives with over forty years of combined experience. Read about our mission and the range of equipment we offer, from standalone machines to fully integrated packaging lines.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 2103
+   },
+   {
+    "url": "https://www.technikpackaging.com/bagging-102/",
+    "path": "/bagging-102/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/bagging-102/",
+     "keywords_count": 5,
+     "top_keyword": "technik packaging machinery",
+     "clicks": 0,
+     "impressions": 71,
+     "ctr": 0.0,
+     "position": 14.676056,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 71.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bagging 102 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Technik's Bagging 102 news post rounds up the next Quick Bytes video shorts on bag packaging, covering unique bag designs, bottom gusset bags, cereal bags, and common questions about why packages are made the way they are.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 2573
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-dls-i-iii/",
+    "path": "/product/dienst-dls-i-iii/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-dls-i-iii/",
+     "keywords_count": 19,
+     "top_keyword": "system dls",
+     "clicks": 0,
+     "impressions": 70,
+     "ctr": 0.0,
+     "position": 17.771428,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 70.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst DLS I/III - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Dienst DLS I/III is a top closing system that closes and seals filled three-flap cartons with hot melt glue, at up to 100 cartons per minute (DLS I) or 200 (DLS III). See carton size ranges, options, industry applications and starting price.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2096
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/valmatic-val56-unit-dose-thermoforming-system/",
+    "path": "/product/valmatic-val56-unit-dose-thermoforming-system/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/valmatic-val56-unit-dose-thermoforming-system/",
+     "keywords_count": 26,
+     "top_keyword": "where to buy pharmaceutical packaging automation systems in the united states",
+     "clicks": 0,
+     "impressions": 70,
+     "ctr": 0.0,
+     "position": 9.885714,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 70.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Valmatic VAL56 Unit Dose Thermoforming System - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Valmatic VAL56 is a compact unit dose thermoforming system for low to medium volume single-dose liquid packaging of pharmaceutical and cosmetic products from 0.1 to 150mL, with a 56mm mold pitch, up to 40 cycles per minute, and pricing starting at $199,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1597
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hnxe/",
+    "path": "/product/triapex-hnxe/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hnxe/",
+     "keywords_count": 5,
+     "top_keyword": "hnxe",
+     "clicks": 2,
+     "impressions": 70,
+     "ctr": 2.8571,
+     "position": 4.157142,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 68.00003,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HNXE - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex HNXE is a modular stick pack machine for sticks up to 180 mm long, ordered with one or two lanes and expandable with more lanes in the field. See specifications, dosing and handling options, and industry applications, with pricing starting at $199,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2112
+   },
+   {
+    "url": "https://www.technikpackaging.com/custom-automated-packaging-solutions-from-technik/",
+    "path": "/custom-automated-packaging-solutions-from-technik/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/custom-automated-packaging-solutions-from-technik/",
+     "keywords_count": 16,
+     "top_keyword": "custom automated packaging system",
+     "clicks": 0,
+     "impressions": 60,
+     "ctr": 0.0,
+     "position": 40.866667,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 60.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Custom Automated Packaging Solutions from Technik - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn how Technik builds custom automated packaging solutions, including transfer systems, pick and place systems, and Dienst tray and sleeving machines, for industries from food to pharmaceuticals.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packaging-machinery-for-medical-products-in-huge-demand/",
+    "path": "/automated-packaging-machinery-for-medical-products-in-huge-demand/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/automated-packaging-machinery-for-medical-products-in-huge-demand/",
+     "keywords_count": 5,
+     "top_keyword": "high-speed automated packaging and labeling for single-use medical products",
+     "clicks": 0,
+     "impressions": 58,
+     "ctr": 0.0,
+     "position": 14.706896,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 58.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automated Packaging Machinery for Medical Products in Huge Demand - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A news post summarizing a Grand View Research report on the growing global market for automated packaging machinery. It covers the repetitive tasks being automated, such as counting, labeling and packaging, and how chronic disease trends are increasing demand for medical packaging.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Study_or_Research_Findings",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hu/",
+    "path": "/product/triapex-hu/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hu/",
+     "keywords_count": 5,
+     "top_keyword": "triapex",
+     "clicks": 0,
+     "impressions": 53,
+     "ctr": 0.0,
+     "position": 5.641509,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 53.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HU - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex HU is a compact vertical bagger and stick pack machine for granular products and liquids, starting at $29,900. See specifications, single and multilane options, pillow, gusseted and Cross trapezoidal bag styles, and dosing add-ons.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1946
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-dr2a/",
+    "path": "/product/triapex-dr2a/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-dr2a/",
+     "keywords_count": 4,
+     "top_keyword": "triapex",
+     "clicks": 0,
+     "impressions": 47,
+     "ctr": 0.0,
+     "position": 7.340425,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 47.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DR2A - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex DR2A is a volumetric cup filler for granular and bulk products, running up to 70 doses per minute with replaceable cups for different dose sizes. See specifications, industry applications and starting price of $14,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1331
+   },
+   {
+    "url": "https://www.technikpackaging.com/when-are-stick-packers-the-best-option-for-packaging/",
+    "path": "/when-are-stick-packers-the-best-option-for-packaging/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/when-are-stick-packers-the-best-option-for-packaging/",
+     "keywords_count": 6,
+     "top_keyword": "packaging systems sticks",
+     "clicks": 0,
+     "impressions": 45,
+     "ctr": 0.0,
+     "position": 21.888889,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 45.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "When Are Stick Packers the Best Option for Packaging? - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "When Are Stick Packers the Best Option for Packaging? - Technik Packaging Machinery",
+    "proposed_description": "Learn when stick pack packaging suits single-serve products such as powders, liquids, gels and coffee, the advantages of stick packs, and how machine types differ by lane count, speed and bag style.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/stick-packers-cater-for-consumers-on-the-move/",
+    "path": "/stick-packers-cater-for-consumers-on-the-move/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/stick-packers-cater-for-consumers-on-the-move/",
+     "keywords_count": 4,
+     "top_keyword": "stick packers",
+     "clicks": 0,
+     "impressions": 43,
+     "ctr": 0.0,
+     "position": 35.813953,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 43.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Stick Packers Cater for Consumers on the Move - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "Why Stick Packers Suit Consumers on the Move - Technik Packaging Machinery",
+    "proposed_description": "A news article on why stick packs appeal to on-the-go consumers and manufacturers, the industries and products that use them, and the stick packer options Technik offers, from one-lane machines to multi-lane high-speed models.",
+    "basis": [
+     "description: from page text (model draft)",
+     "title: model draft"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/bagging-101/",
+    "path": "/bagging-101/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/bagging-101/",
+     "keywords_count": 8,
+     "top_keyword": "bagging technology",
+     "clicks": 0,
+     "impressions": 40,
+     "ctr": 0.0,
+     "position": 23.3,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 40.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bagging 101 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Technik's Bagging 101 news post introduces a Quick Bytes video series on bag types, covering pillow bags, stick packs, side gusset bags and flow wrapped bags, plus the kinds of products best suited to each style.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 2490
+   },
+   {
+    "url": "https://www.technikpackaging.com/choosing-the-best-pet-food-packaging/",
+    "path": "/choosing-the-best-pet-food-packaging/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/choosing-the-best-pet-food-packaging/",
+     "keywords_count": 10,
+     "top_keyword": "packaging machines for pet food",
+     "clicks": 0,
+     "impressions": 34,
+     "ctr": 0.0,
+     "position": 22.441176,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 34.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Choosing the Best Pet Food Packaging - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A guide to choosing pet food packaging: how dry, semi-moist and canned foods are typically packed, why branding matters, and the vertical bagging machines Technik offers for kibble and moist pet food.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-ds1b/",
+    "path": "/product/triapex-ds1b/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-ds1b/",
+     "keywords_count": 4,
+     "top_keyword": "ds1b",
+     "clicks": 0,
+     "impressions": 33,
+     "ctr": 0.0,
+     "position": 7.424242,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 33.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DS1B - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex DS1B is a standard performance auger doser for volumetric filling of powder or granular products, rated at 80 doses per minute and built to integrate with an automated packaging line. Find specifications, applications and pricing starting at $14,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1208
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-psr/",
+    "path": "/product/triapex-psr/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-psr/",
+     "keywords_count": 10,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 33,
+     "ctr": 0.0,
+     "position": 12.60606,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 33.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex PSR - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex PSR is a modular multilane cup filling line that doses liquid or solid products into rigid cups and seals them with heat-sealed foil tops. Find specifications, options like lid printing and case stacking, industry applications, and pricing from $99,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2509
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-he-tl/",
+    "path": "/product/dienst-he-tl/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-he-tl/",
+     "keywords_count": 18,
+     "top_keyword": "dienst he case packer",
+     "clicks": 0,
+     "impressions": 32,
+     "ctr": 0.0,
+     "position": 16.6875,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 32.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HE TL - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Dienst HE TL is an automated tray and lid packer that erects corrugated trays, loads products, glues the tray closed and applies coding for retail-ready packaging. This page lists its specifications (up to 25 trays per minute, servo-driven axes), available options and industry applications, with pricing starting at $299,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2136
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-dvk/",
+    "path": "/product/triapex-dvk/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-dvk/",
+     "keywords_count": 11,
+     "top_keyword": "multihead weighing plc control tenbucket scale machine",
+     "clicks": 0,
+     "impressions": 30,
+     "ctr": 0.0,
+     "position": 10.533333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 30.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DVK - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Triapex DVK is a multihead weigher with 8 to 24 weighing heads and three bucket sizes for weight-based dosing of solid or granular products, rated at up to 120 doses per minute. This page covers its specifications, industry applications, and starting price of $19,900.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1489
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv2d/",
+    "path": "/product/triapex-hv2d/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv2d/",
+     "keywords_count": 4,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 25,
+     "ctr": 0.0,
+     "position": 7.88,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 25.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV2D - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-l/",
+    "path": "/product/dienst-hk-l/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-l/",
+     "keywords_count": 5,
+     "top_keyword": "hk.l",
+     "clicks": 0,
+     "impressions": 24,
+     "ctr": 0.0,
+     "position": 16.625,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 24.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK L - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-dr1a/",
+    "path": "/product/triapex-dr1a/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-dr1a/",
+     "keywords_count": 7,
+     "top_keyword": "volumetric cup filler market",
+     "clicks": 0,
+     "impressions": 22,
+     "ctr": 0.0,
+     "position": 10.545454,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 22.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DR1A - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/contact-us/",
+    "path": "/contact-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/contact-us/",
+     "keywords_count": 6,
+     "top_keyword": "technik packaging machinery",
+     "clicks": 0,
+     "impressions": 20,
+     "ctr": 0.0,
+     "position": 15.65,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 20.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Contact - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page"
+   },
+   {
+    "url": "https://www.technikpackaging.com/the-technik-supply-chain/",
+    "path": "/the-technik-supply-chain/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/the-technik-supply-chain/",
+     "keywords_count": 10,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 19,
+     "ctr": 0.0,
+     "position": 23.631579,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 19.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Technik Supply Chain - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Wiki"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-bv/",
+    "path": "/product/triapex-bv/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-bv/",
+     "keywords_count": 3,
+     "top_keyword": "triapex",
+     "clicks": 0,
+     "impressions": 18,
+     "ctr": 0.0,
+     "position": 20.055555,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 18.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex BV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-ii-s/",
+    "path": "/product/dienst-hk-ii-s/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-ii-s/",
+     "keywords_count": 6,
+     "top_keyword": "horizontal cartoning machine",
+     "clicks": 0,
+     "impressions": 16,
+     "ctr": 0.0,
+     "position": 19.0625,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 16.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK II S - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv2/",
+    "path": "/product/triapex-hv2/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv2/",
+     "keywords_count": 5,
+     "top_keyword": "hv2 symptoms",
+     "clicks": 0,
+     "impressions": 14,
+     "ctr": 0.0,
+     "position": 36.357143,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 14.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV2 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv4/",
+    "path": "/product/triapex-hv4/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv4/",
+     "keywords_count": 5,
+     "top_keyword": "metal packaging machinery parts",
+     "clicks": 0,
+     "impressions": 14,
+     "ctr": 0.0,
+     "position": 11.571429,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 14.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV4 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-ms1/",
+    "path": "/product/triapex-ms1/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-ms1/",
+     "keywords_count": 4,
+     "top_keyword": "triuper",
+     "clicks": 0,
+     "impressions": 13,
+     "ctr": 0.0,
+     "position": 13.846154,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 13.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex MS1 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-zam-s-ii/",
+    "path": "/product/dienst-zam-s-ii/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-zam-s-ii/",
+     "keywords_count": 3,
+     "top_keyword": "zam 2",
+     "clicks": 0,
+     "impressions": 11,
+     "ctr": 0.0,
+     "position": 17.090909,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 11.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst ZAM S II - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/jw-ccm-ah/",
+    "path": "/product/jw-ccm-ah/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/jw-ccm-ah/",
+     "keywords_count": 6,
+     "top_keyword": "cartoning equipment",
+     "clicks": 0,
+     "impressions": 10,
+     "ctr": 0.0,
+     "position": 27.2,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 10.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "JW CCM-AH - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/jw-ccm-av-tray-former/",
+    "path": "/product/jw-ccm-av-tray-former/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/jw-ccm-av-tray-former/",
+     "keywords_count": 3,
+     "top_keyword": "tray formers",
+     "clicks": 0,
+     "impressions": 10,
+     "ctr": 0.0,
+     "position": 35.4,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 10.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "JW CCM-AV Tray Former - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hvr/",
+    "path": "/product/triapex-hvr/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hvr/",
+     "keywords_count": 6,
+     "top_keyword": "triapdix 300",
+     "clicks": 0,
+     "impressions": 10,
+     "ctr": 0.0,
+     "position": 37.4,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 10.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HVR - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-ii-n/",
+    "path": "/product/dienst-hk-ii-n/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-ii-n/",
+     "keywords_count": 7,
+     "top_keyword": "automatic cartoner infeeds",
+     "clicks": 0,
+     "impressions": 9,
+     "ctr": 0.0,
+     "position": 26.777778,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 9.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK II N - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/global-packaging-trends-2015/",
+    "path": "/global-packaging-trends-2015/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/global-packaging-trends-2015/",
+     "keywords_count": 3,
+     "top_keyword": "trend global packaging",
+     "clicks": 0,
+     "impressions": 9,
+     "ctr": 0.0,
+     "position": 42.333333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 9.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Top Global Packaging Trends in 2015 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-ks/",
+    "path": "/product/triapex-ks/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-ks/",
+     "keywords_count": 3,
+     "top_keyword": "automatic cartoners and tray packers",
+     "clicks": 0,
+     "impressions": 8,
+     "ctr": 0.0,
+     "position": 14.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 8.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex KS - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-lds/",
+    "path": "/product/triapex-lds/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-lds/",
+     "keywords_count": 4,
+     "top_keyword": "tri-lead mle packer penetrator",
+     "clicks": 0,
+     "impressions": 8,
+     "ctr": 0.0,
+     "position": 20.25,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 8.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex LDS - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-dv/",
+    "path": "/product/triapex-dv/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-dv/",
+     "keywords_count": 4,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 26.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv5/",
+    "path": "/product/triapex-hv5/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv5/",
+     "keywords_count": 3,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 16.857143,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV5 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/financial-benefits-of-using-vertical-bagging-equipment/",
+    "path": "/financial-benefits-of-using-vertical-bagging-equipment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/financial-benefits-of-using-vertical-bagging-equipment/",
+     "keywords_count": 6,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 42.714286,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Financial Benefits of Using Vertical Bagging Equipment - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/problems-solutions-sustainable-packaging/",
+    "path": "/problems-solutions-sustainable-packaging/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/problems-solutions-sustainable-packaging/",
+     "keywords_count": 2,
+     "top_keyword": "packaging solution technical articles",
+     "clicks": 0,
+     "impressions": 7,
+     "ctr": 0.0,
+     "position": 23.428571,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 7.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Sustainable Packing Solutions for Business | Technik",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-iv-s/",
+    "path": "/product/dienst-hk-iv-s/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-iv-s/",
+     "keywords_count": 4,
+     "top_keyword": "kartoniarki",
+     "clicks": 0,
+     "impressions": 6,
+     "ctr": 0.0,
+     "position": 31.833333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 6.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK IV S - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-pkk10/",
+    "path": "/product/triapex-pkk10/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-pkk10/",
+     "keywords_count": 4,
+     "top_keyword": "pod filler",
+     "clicks": 0,
+     "impressions": 6,
+     "ctr": 0.0,
+     "position": 17.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 6.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex PKK10 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/growth-use-high-speed-cartoners-frozen-foods-ready-meals/",
+    "path": "/growth-use-high-speed-cartoners-frozen-foods-ready-meals/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/growth-use-high-speed-cartoners-frozen-foods-ready-meals/",
+     "keywords_count": 1,
+     "top_keyword": "top load cartoner for frozen products",
+     "clicks": 0,
+     "impressions": 6,
+     "ctr": 0.0,
+     "position": 6.833333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 6.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Growth of Use in High-Speed Cartoners for Frozen Foods and Ready Meals - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Study_or_Research_Findings"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-els/",
+    "path": "/product/dienst-els/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-els/",
+     "keywords_count": 2,
+     "top_keyword": "closing techniken",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 19.2,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst ELS - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-he-compact/",
+    "path": "/product/dienst-he-compact/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-he-compact/",
+     "keywords_count": 4,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 41.8,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HE Compact - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-he-wrap-around/",
+    "path": "/product/dienst-he-wrap-around/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-he-wrap-around/",
+     "keywords_count": 5,
+     "top_keyword": "endverpackungsmaschine wrap around",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 49.4,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HE Wrap Around - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-vk-iv-s/",
+    "path": "/product/dienst-vk-iv-s/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-vk-iv-s/",
+     "keywords_count": 2,
+     "top_keyword": "solved s vk",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 48.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst VK IV S - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv6/",
+    "path": "/product/triapex-hv6/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv6/",
+     "keywords_count": 2,
+     "top_keyword": "hv6",
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0.0,
+     "position": 16.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 5.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV6 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-ka-100-190/",
+    "path": "/product/dienst-ka-100-190/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-ka-100-190/",
+     "keywords_count": 2,
+     "top_keyword": "100/190",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0.0,
+     "position": 65.25,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 4.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst KA 100/190 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packaging-machinery-reduces-labor-costs-2/",
+    "path": "/automated-packaging-machinery-reduces-labor-costs-2/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/automated-packaging-machinery-reduces-labor-costs-2/",
+     "keywords_count": 1,
+     "top_keyword": "how automated packaging equipment reduces labor",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0.0,
+     "position": 3.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 4.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automated Packaging Machinery Reduces Labor Costs | TPM",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/optimizing-your-project-from-launch-to-startup/",
+    "path": "/optimizing-your-project-from-launch-to-startup/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/optimizing-your-project-from-launch-to-startup/",
+     "keywords_count": 2,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0.0,
+     "position": 48.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 4.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Optimizing your Project from Launch to Startup - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/request-a-quote/",
+    "path": "/request-a-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/request-a-quote/",
+     "keywords_count": 2,
+     "top_keyword": "technik packaging machinery",
+     "clicks": 0,
+     "impressions": 3,
+     "ctr": 0.0,
+     "position": 29.333333,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Quote Request - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packing-equipment-mistakes-can-cost-business-money/",
+    "path": "/automated-packing-equipment-mistakes-can-cost-business-money/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/automated-packing-equipment-mistakes-can-cost-business-money/",
+     "keywords_count": 2,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 3,
+     "ctr": 0.0,
+     "position": 39.666667,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Automated Packing Equipment Mistakes That Can Cost Your Business Money - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-automating-your-end-of-line-can-boost-profits/",
+    "path": "/how-automating-your-end-of-line-can-boost-profits/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/how-automating-your-end-of-line-can-boost-profits/",
+     "keywords_count": 1,
+     "top_keyword": "can packaging machinery",
+     "clicks": 0,
+     "impressions": 3,
+     "ctr": 0.0,
+     "position": 14.666666,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How Automating Your End-of-Line Can Boost Profits - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/up-your-game-with-automated-packaging-machinery/",
+    "path": "/up-your-game-with-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/up-your-game-with-automated-packaging-machinery/",
+     "keywords_count": 3,
+     "top_keyword": "packaging automation for gaming",
+     "clicks": 0,
+     "impressions": 3,
+     "ctr": 0.0,
+     "position": 31.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 3.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Up Your Game With Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Thought_Leadership"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-ii-a/",
+    "path": "/product/dienst-hk-ii-a/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-ii-a/",
+     "keywords_count": 2,
+     "top_keyword": "hardware packaging system",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 43.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK II A - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-ii-b/",
+    "path": "/product/dienst-hk-ii-b/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-ii-b/",
+     "keywords_count": 1,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 69.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK II B - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hk-iii-ics/",
+    "path": "/product/dienst-hk-iii-ics/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hk-iii-ics/",
+     "keywords_count": 1,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 61.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HK III ICS - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-hv3/",
+    "path": "/product/triapex-hv3/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/triapex-hv3/",
+     "keywords_count": 2,
+     "top_keyword": "hv3",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 47.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex HV3 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/diversify-automated-packaging-solutions-using-vertical-bagging-equipment/",
+    "path": "/diversify-automated-packaging-solutions-using-vertical-bagging-equipment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/diversify-automated-packaging-solutions-using-vertical-bagging-equipment/",
+     "keywords_count": 1,
+     "top_keyword": "what are some vertical packaging solutions?",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 7.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Diversify Automated Packaging Solutions Using Vertical Bagging Equipment - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-to-overcome-the-obstacles-of-sustainable-packaging-solutions/",
+    "path": "/how-to-overcome-the-obstacles-of-sustainable-packaging-solutions/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/how-to-overcome-the-obstacles-of-sustainable-packaging-solutions/",
+     "keywords_count": 1,
+     "top_keyword": "how to overcome barriers to adopting eco-friendly packaging",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 10.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Overcome the Obstacles of Sustainable Packaging Solutions - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/new-report-highlights-importance-of-automated-packaging-machinery-as-industry-set-to-burgeon/",
+    "path": "/new-report-highlights-importance-of-automated-packaging-machinery-as-industry-set-to-burgeon/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/new-report-highlights-importance-of-automated-packaging-machinery-as-industry-set-to-burgeon/",
+     "keywords_count": 1,
+     "top_keyword": "packaging machinery automated packaging",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 63.5,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "New Report Highlights Importance of Automated Packaging Machinery as Industry Set to Burgeon - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/us-serialization-for-pharmaceuticals/",
+    "path": "/us-serialization-for-pharmaceuticals/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/us-serialization-for-pharmaceuticals/",
+     "keywords_count": 1,
+     "top_keyword": "pharmaceutical serialization compliance deadline united states mid-2010s",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0.0,
+     "position": 8.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 2.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "US Serialization for Pharmaceuticals - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hs-iv-s/",
+    "path": "/product/dienst-hs-iv-s/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/product/dienst-hs-iv-s/",
+     "keywords_count": 1,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 67.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HS IV S - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-to-calculate-if-your-business-is-ready-for-automated-packing-to-increase-roi/",
+    "path": "/how-to-calculate-if-your-business-is-ready-for-automated-packing-to-increase-roi/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/how-to-calculate-if-your-business-is-ready-for-automated-packing-to-increase-roi/",
+     "keywords_count": 1,
+     "top_keyword": "how do i calculate the roi of automating an existing manual or semi-manual packaging line?",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 5.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "How to Calculate if Your Business is Ready for Automated Packing to Increase ROI - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/packaging-in-the-age-of-covid-19/",
+    "path": "/packaging-in-the-age-of-covid-19/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {
+     "page": "https://www.technikpackaging.com/packaging-in-the-age-of-covid-19/",
+     "keywords_count": 1,
+     "top_keyword": "site:www.technikpackaging.com",
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0.0,
+     "position": 106.0,
+     "traffic_value": null
+    },
+    "traffic": 0,
+    "score": 1.0,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Packaging in the Age of COVID-19 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/featured-product-spotlight-jw-ccm-mv-2/",
+    "path": "/featured-product-spotlight-jw-ccm-mv-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Featured Product Spotlight - J+W CCM-MV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/featured-product-spotlight-jw-ccm-mv/",
+    "path": "/featured-product-spotlight-jw-ccm-mv/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Featured Product Spotlight - J+W CCM-MV - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/featured-product-spotlight-triapex-hu-2/",
+    "path": "/featured-product-spotlight-triapex-hu-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Featured Product Spotlight - Triapex HU - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/featured-product-spotlight-triapex-hu/",
+    "path": "/featured-product-spotlight-triapex-hu/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Featured Product Spotlight - Triapex HU - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/supersized-packaging-2/",
+    "path": "/supersized-packaging-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Supersized Packaging - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Product_Page"
+   },
+   {
+    "url": "https://www.technikpackaging.com/supersized-packaging/",
+    "path": "/supersized-packaging/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Supersized Packaging - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Product_Page"
+   },
+   {
+    "url": "https://www.technikpackaging.com/vertical-baggers-2/",
+    "path": "/vertical-baggers-2/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Vertical Baggers - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/dienst-hs-ii-s/",
+    "path": "/product/dienst-hs-ii-s/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Dienst HS II S - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/product/triapex-ds2a/",
+    "path": "/product/triapex-ds2a/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Triapex DS2A - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://www.technikpackaging.com/are-you-ready-for-the-labor-shortage/",
+    "path": "/are-you-ready-for-the-labor-shortage/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Are You Ready for the Labor Shortage? - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packaging-equipment-can-highlight-the-value-of-your-products/",
+    "path": "/automated-packaging-equipment-can-highlight-the-value-of-your-products/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automated Packaging Equipment Can Highlight the Value of Your Products - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packaging-equipment-must-be-cost-effective-and-reliable/",
+    "path": "/automated-packaging-equipment-must-be-cost-effective-and-reliable/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automated Packaging Equipment Must be Cost-Effective and Reliable - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packaging-machinery-reduces-labor-costs/",
+    "path": "/automated-packaging-machinery-reduces-labor-costs/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Automated Packaging Machinery Reduces Labor Costs - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automated-packing-equipment-mistakes-that-can-cost-your-business-money/",
+    "path": "/automated-packing-equipment-mistakes-that-can-cost-your-business-money/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Automated Packing Equipment Mistakes That Can Cost Your Business Money - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/automating-end-of-line/",
+    "path": "/automating-end-of-line/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How Automating Your End-of-Line Can Boost Profits - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/choose-packing-equipment-suits-product/",
+    "path": "/choose-packing-equipment-suits-product/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Choose Packing Equipment that Suits the Product - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/choose-packing-equipment-that-suits-the-product/",
+    "path": "/choose-packing-equipment-that-suits-the-product/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Choose Packing Equipment that Suits the Product - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/choosing-the-right-packaging-design-for-your-product/",
+    "path": "/choosing-the-right-packaging-design-for-your-product/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Choosing the Right Packaging Design for Your Product - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/considering-automating-your-product-packing-technik-packaging-machinery-offers-custom-solutions/",
+    "path": "/considering-automating-your-product-packing-technik-packaging-machinery-offers-custom-solutions/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Considering Automating Your Product Packing? Technik Packaging Machinery Offers Custom Solutions - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/fda-regulations-food-packaging/",
+    "path": "/fda-regulations-food-packaging/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Learn More About the FDA Regulations on Food Packaging and Labeling - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/financial-benefits-of-automated-packaging-equipment/",
+    "path": "/financial-benefits-of-automated-packaging-equipment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Financial Benefits of Automated Packaging Equipment - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/game-automated-packaging-machinery/",
+    "path": "/game-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Up Your Game With Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-to-choose-the-best-vertical-bagging-equipment-for-your-business/",
+    "path": "/how-to-choose-the-best-vertical-bagging-equipment-for-your-business/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How to Choose the Best Vertical Bagging Equipment for Your Business - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/how-to-launch-an-automation-project/",
+    "path": "/how-to-launch-an-automation-project/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How to Launch an Automation Project - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/keep-environmental-impact-in-mind-when-choosing-packaging-materials-such-as-plastics-vs-cardboard/",
+    "path": "/keep-environmental-impact-in-mind-when-choosing-packaging-materials-such-as-plastics-vs-cardboard/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Keep Environmental Impact in mind when choosing Packaging Materials such as Plastics vs. Cardboard - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://www.technikpackaging.com/launch-automation-project/",
+    "path": "/launch-automation-project/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "How to Launch an Automation Project - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/launching-a-new-food-or-candy-business-learn-about-automated-packing/",
+    "path": "/launching-a-new-food-or-candy-business-learn-about-automated-packing/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Launching a New Food or Candy Business? Learn About Automated Packing - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/learn-more-about-the-fda-regulations-on-food-packaging-and-labeling/",
+    "path": "/learn-more-about-the-fda-regulations-on-food-packaging-and-labeling/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Learn More About the FDA Regulations on Food Packaging and Labeling - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/need-end-line-industrial-packaging-equipment/",
+    "path": "/need-end-line-industrial-packaging-equipment/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Why You Need End-of-line Industrial Packaging Equipment - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/new-report-highlights-importance-automated-packaging-machinery-industry-set-burgeon/",
+    "path": "/new-report-highlights-importance-automated-packaging-machinery-industry-set-burgeon/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "New Report Highlights Importance of Automated Packaging Machinery as Industry Set to Burgeon - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/one-simple-step-to-improve-your-packaging-projects/",
+    "path": "/one-simple-step-to-improve-your-packaging-projects/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "One Simple Step to Improve Your Packaging Projects - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/optimizing-project-launch-startup/",
+    "path": "/optimizing-project-launch-startup/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Optimizing your Project from Launch to Startup - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to"
+   },
+   {
+    "url": "https://www.technikpackaging.com/packaging-is-just-as-important-as-the-products-packaged/",
+    "path": "/packaging-is-just-as-important-as-the-products-packaged/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Packaging is Just as Important as the Products Packaged - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/ready-labor-shortage/",
+    "path": "/ready-labor-shortage/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Are You Ready for the Labor Shortage? - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/resolve-grow-2018/",
+    "path": "/resolve-grow-2018/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Resolve to Grow in 2018 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/resolve-to-grow-in-2018/",
+    "path": "/resolve-to-grow-in-2018/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Resolve to Grow in 2018 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://www.technikpackaging.com/save-money-day-one/",
+    "path": "/save-money-day-one/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Save Money from Day One - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Story"
+   },
+   {
+    "url": "https://www.technikpackaging.com/save-money-from-day-one/",
+    "path": "/save-money-from-day-one/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Save Money from Day One - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Story"
+   },
+   {
+    "url": "https://www.technikpackaging.com/stick-packers-best-option-packaging/",
+    "path": "/stick-packers-best-option-packaging/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "When Are Stick Packers the Best Option for Packaging? - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/stick-packers-cater-consumers-move/",
+    "path": "/stick-packers-cater-consumers-move/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Stick Packers Cater for Consumers on the Move - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/sustainability-benefits-automated-packaging-machinery/",
+    "path": "/sustainability-benefits-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Sustainability Benefits of Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Thought_Leadership"
+   },
+   {
+    "url": "https://www.technikpackaging.com/sustainability-benefits-of-automated-packaging-machinery/",
+    "path": "/sustainability-benefits-of-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Sustainability Benefits of Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Thought_Leadership"
+   },
+   {
+    "url": "https://www.technikpackaging.com/the-food-and-beverage-industry-relies-on-automated-packaging-machinery/",
+    "path": "/the-food-and-beverage-industry-relies-on-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "The Food and Beverage Industry Relies on Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Study_or_Research_Findings"
+   },
+   {
+    "url": "https://www.technikpackaging.com/the-impact-automated-packaging-systems-can-have-on-your-business/",
+    "path": "/the-impact-automated-packaging-systems-can-have-on-your-business/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Impact Automated Packaging Systems Can Have on Your Business - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/the-right-time-to-upgrade-to-automated-packaging-machinery/",
+    "path": "/the-right-time-to-upgrade-to-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "The Right Time to Upgrade to Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/top-global-packaging-trends-in-2015/",
+    "path": "/top-global-packaging-trends-in-2015/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Top Global Packaging Trends in 2015 - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Listicle"
+   },
+   {
+    "url": "https://www.technikpackaging.com/upgrade-facility-2017-automated-packaging-machinery/",
+    "path": "/upgrade-facility-2017-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Upgrade Your Facility for 2017 with Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/upgrade-your-facility-for-2017-with-automated-packaging-machinery/",
+    "path": "/upgrade-your-facility-for-2017-with-automated-packaging-machinery/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Upgrade Your Facility for 2017 with Automated Packaging Machinery - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/versatile-vertical-baggers-cater-multiple-industries/",
+    "path": "/versatile-vertical-baggers-cater-multiple-industries/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Versatile Vertical Baggers Cater for Multiple Industries - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/what-automated-packing-equipment-is-right-for-your-product/",
+    "path": "/what-automated-packing-equipment-is-right-for-your-product/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "What Automated Packing Equipment is Right for Your Product? - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/whats-speed-guide-determining-target-line-speed/",
+    "path": "/whats-speed-guide-determining-target-line-speed/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "What’s Your Speed?: A Guide to Determining Your Target Line Speed - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   },
+   {
+    "url": "https://www.technikpackaging.com/why-vertical-bagging-is-cost-effective/",
+    "path": "/why-vertical-bagging-is-cost-effective/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Why Vertical Bagging is Cost Effective - Technik Packaging Machinery",
+    "serp_title": "",
+    "h1": "Technik Packaging Machinery",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [
+     "description: needs draft (page text not pulled; raise --max-pages)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/Tutorial_or_Guide"
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/product-category/custom-solutions/",
+    "/category/uncategorized/",
+    "/category/news/page/7/",
+    "/cache-2/",
+    "/news/page/4/",
+    "/cache-3/",
+    "/category/news/page/3/",
+    "/news/page/5/",
+    "/news/page/7/",
+    "/product-category/uncategorized/",
+    "/category/news/page/6/",
+    "/category/snack-foods/",
+    "/news/",
+    "/shop/page/4/",
+    "/category/dried-foods/",
+    "/news/page/3/",
+    "/product-category/packaging-equipment/cup-pod-fill-seal-machines/",
+    "/news/page/8/",
+    "/category/news/page/2/",
+    "/news/page/2/",
+    "/cache/",
+    "/category/vertical-baggers/",
+    "/shop/",
+    "/category/news/page/5/",
+    "/news/page/6/",
+    "/category/industrial/",
+    "/category/news/",
+    "/category/pharmaceutical/",
+    "/shop/page/2/",
+    "/category/news/page/4/",
+    "/shop/page/3/",
+    "/product-category/industries/condiments/",
+    "/product-category/packaging-equipment/automatic-bottling-lines/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

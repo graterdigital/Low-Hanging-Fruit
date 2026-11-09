@@ -1,0 +1,242 @@
+{
+ "data": {
+  "pid": 9704543,
+  "crawl": "2026-10-29",
+  "health": 88,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 44
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 4
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Native Custom Stone",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "http://www.nativecustomstone.com/product-category/go-stone-accessories/",
+    "path": "/product-category/go-stone-accessories/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Go-Stone Accessories Archives - Native Custom Stone",
+    "serp_title": "",
+    "h1": "Go-Stone Accessories",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Shop Go-Stone electric box accents in single, double and triple sizes, plus $10 sample boards for Castle Rock, Stack Stone, Ledge Stone, River Rock, GoBrick and other Native Custom Stone profiles.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1748
+   },
+   {
+    "url": "http://www.nativecustomstone.com/product-category/sample-boards/",
+    "path": "/product-category/sample-boards/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Sample Boards Archives - Native Custom Stone",
+    "serp_title": "",
+    "h1": "Sample Boards",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Order $10 sample boards of Native Custom Stone's manufactured stone profiles, including Castle Rock, Ledge Stone, River Rock, CustomFit, Go-Stone and Go-Brick, plus Go-Stone electric box accents.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1741
+   },
+   {
+    "url": "http://www.nativecustomstone.com/product/double-light-switch-box-accent/",
+    "path": "/product/double-light-switch-box-accent/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Go Stone Double Electric Box Accent- Native Custom Stone",
+    "serp_title": "",
+    "h1": "Go Stone Double Electric Box Accent",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Go Stone Double Electric Box Accent is a Go-Stone accessory for finishing around a double electrical box, available in brown, buff, white, or gray for $25.75.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 1232
+   },
+   {
+    "url": "https://www.nativecustomstone.com/product/go-stone-single-electric-box-accent/",
+    "path": "/product/go-stone-single-electric-box-accent/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Go Stone Single Electric Box Accent- Native Custom Stone",
+    "serp_title": "",
+    "h1": "Go Stone Single Electric Box Accent",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A Go-Stone single electric box accent for finishing stone panels around a single outlet, available in brown, buff, white, or gray for $23.75.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1237
+   },
+   {
+    "url": "https://www.nativecustomstone.com/product/go-stone-triple-electric-box-accent/",
+    "path": "/product/go-stone-triple-electric-box-accent/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Go Stone Triple Electric Box Accent- Native Custom Stone",
+    "serp_title": "",
+    "h1": "Go Stone Triple Electric Box Accent",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The Go Stone Triple Electric Box Accent is a Go-Stone accessory for finishing around a triple electrical box, available in brown, buff, white or gray for $27.75.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1228
+   },
+   {
+    "url": "https://www.nativecustomstone.com/product/stack-stone-sample-board/",
+    "path": "/product/stack-stone-sample-board/",
+    "page_type": "product",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Stack Stone Sample Board- Native Custom Stone",
+    "serp_title": "Stack Stone Sample Board",
+    "h1": "Stack Stone Sample Board",
+    "current_description": "Available in All 31 Colors and Custom Colors Appalachian Athens Aspen Ridge Autumn Blend Aztek Brown Cedar Creek Champagne Chardonnay Chastain",
+    "proposed_title": "",
+    "proposed_description": "A $10 Stack Stone sample board (24 × 24 × 5 in, 25 lbs) from Native Custom Stone, available in any of 31 colors including Appalachian, Driftwood, and Titan Gray, or in a custom color.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "",
+    "text_chars": 2070
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/category/custom-stone-bathroom/",
+    "/category/manufactured-stone/page/3/",
+    "/category/custom-stone-fireplace/page/2/",
+    "/category/faux-stone-veneer/",
+    "/category/maintenance-and-installation/page/3/",
+    "/category/faux-stone-paneling/",
+    "/category/manufactured-stone-fireplace/",
+    "/category/tips-and-tricks/",
+    "/category/custom-stone-kitchen/",
+    "/category/maintenance-and-installation/diy/",
+    "/category/installation-and-care/",
+    "/category/stone/",
+    "/category/go-stone-panels/",
+    "/category/go-stone-panels/page/2/",
+    "/category/go-brick-brick-veneer/",
+    "/category/uncategorized/",
+    "/category/adhered-stone-veneer/",
+    "/category/manufactured-stone/",
+    "/category/maintenance-and-installation/",
+    "/category/panel/",
+    "/category/faux-stone-paneling/page/2/",
+    "/category/maintenance-and-installation/diy/page/2/",
+    "/category/custom-stone-accents/",
+    "/category/custom-stone-fireplace/",
+    "/category/general/",
+    "/category/maintenance-and-installation/diy/page/3/",
+    "/category/maintenance-and-installation/tips-and-advice/page/2/",
+    "/category/custom-stone-kitchen/page/2/",
+    "/category/faux-stone-veneer/page/2/",
+    "/category/faux-stone-veneer/page/3/",
+    "/category/maintenance-and-installation/page/5/",
+    "/category/maintenance-and-installation/page/4/",
+    "/category/manufactured-stone2/",
+    "/stone/",
+    "/category/maintenance-and-installation/tips-and-advice/",
+    "/category/uncategorized/page/2/",
+    "/category/maintenance-and-installation/page/2/",
+    "/category/manufactured-stone/page/2/",
+    "/category/manufactured-stone/page/4/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

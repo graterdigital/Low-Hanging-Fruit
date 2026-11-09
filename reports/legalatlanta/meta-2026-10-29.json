@@ -1,0 +1,168 @@
+{
+ "data": {
+  "pid": 9704534,
+  "crawl": "2026-10-29",
+  "health": 90,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 0
+   },
+   "Multiple meta description tags": {
+    "crawled": 0
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 85
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Burrow & Associates",
+  "sep": " | ",
+  "todo": [
+   {
+    "url": "https://legalatlanta.com/bankruptcy/",
+    "path": "/bankruptcy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Atlanta Bankruptcy Attorneys'",
+    "gsc": {},
+    "traffic": 44.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Atlanta Bankruptcy Lawyers | Burrow & Associates",
+    "serp_title": "Atlanta Bankruptcy Attorneys",
+    "h1": "Bankruptcy Attorneys of Georgia",
+    "current_description": "Contact Burrow & Associates' bankruptcy lawyers to learn how we can help you through the bankruptcy process. Schedule a free consultation today!",
+    "proposed_title": "Atlanta Bankruptcy Attorneys | Burrow & Associates",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://legalatlanta.com/what-your-auto-liability-insurance-really-covers/",
+    "path": "/what-your-auto-liability-insurance-really-covers/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 13.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "What Does Auto Liability Insurance Cover?",
+    "serp_title": "What Your Auto Liability Insurance Really Covers",
+    "h1": "What Your Auto Liability Insurance Really Covers",
+    "current_description": "We help you understand your auto liability coverage. Work with a car accident lawyer in Athens, GA. Contact us today.",
+    "proposed_title": "What Your Auto Liability Insurance Really Covers | Burrow & Associates",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/Opinion_Piece"
+   },
+   {
+    "url": "https://legalatlanta.com/personal-injury/nursing-home-abuse/",
+    "path": "/personal-injury/nursing-home-abuse/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Nursing Home Abuse Lawyers of Georgia'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Nursing Home Abuse Lawyers | Burrow & Associates",
+    "serp_title": "Nursing Home Abuse Lawyers of Georgia",
+    "h1": "Nursing Home Abuse and Assisted Living Facility Injuries",
+    "current_description": "Contact the nursing home abuse Lawyers at Burrow & Associates to get justice for your loved ones. Visit LegalAtlanta.com and call (678) 323-2394 today.",
+    "proposed_title": "Nursing Home Abuse Lawyers of Georgia | Burrow & Associates",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Landing_Page/Service_Page"
+   },
+   {
+    "url": "https://legalatlanta.com/georgias-attorney-general-opens-investigation-into-atlanta-based-us-auto-sales/",
+    "path": "/georgias-attorney-general-opens-investigation-into-atlanta-based-us-auto-sales/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Georgia's Attorney General Opens Investigation into ...'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": false,
+    "current_title": "Georgia’s Attorney General Opens Investigation into Atlanta-Based US Auto Sales | Burrow & Associates",
+    "serp_title": "Georgia's Attorney General Opens Investigation into ...",
+    "h1": "Georgia’s Attorney General Opens Investigation into Atlanta-Based US Auto Sales",
+    "current_description": "Georgia Attorney General Chris Carr has opened an investigation into Atlanta-based US Auto Sales, following an influx of complaints from unhappy customers.",
+    "proposed_title": "",
+    "proposed_description": "",
+    "basis": [],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   },
+   {
+    "url": "https://legalatlanta.com/state-farm-insurance-rate-changes-2026/",
+    "path": "/state-farm-insurance-rate-changes-2026/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'State Farm Insurance Rate Changes In 2026'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "State Farm Insurance Rate Changes In 2026 - What You Need To Know - Burrow & Associates",
+    "serp_title": "State Farm Insurance Rate Changes In 2026",
+    "h1": "State Farm Insurance Rate Changes In 2026 – What You Need To Know",
+    "current_description": "Learn how State Farm insurance rate changes in 2026 will cut Georgia drivers’ stacked coverage and what steps to take to keep your protection intact.",
+    "proposed_title": "State Farm Insurance Rate Changes In 2026 | Burrow & Associates",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Article/News_Update"
+   }
+  ],
+  "routed": {
+   "archive": [],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "yoast",
+  "rows": []
+ }
+}

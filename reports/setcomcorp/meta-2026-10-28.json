@@ -1,0 +1,1159 @@
+{
+ "data": {
+  "pid": 10610051,
+  "crawl": "2026-10-28",
+  "health": 94,
+  "gsc_window": "",
+  "gsc": {},
+  "found": {
+   "Meta description tag missing or empty": {
+    "crawled": 46
+   },
+   "Multiple meta description tags": {
+    "crawled": 1
+   },
+   "Multiple title tags": {
+    "crawled": 0
+   },
+   "Page and SERP titles do not match": {
+    "crawled": 7
+   },
+   "Title tag missing or empty": {
+    "crawled": 0
+   }
+  }
+ },
+ "queue": {
+  "brand": "Setcom",
+  "sep": " - ",
+  "todo": [
+   {
+    "url": "https://setcomcorp.com/police-motorcycle-rodeo-course-maps/",
+    "path": "/police-motorcycle-rodeo-course-maps/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 8.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Police Motorcycle Rodeo Course Maps - Setcom",
+    "serp_title": "Police Motorcycle Rodeo Course Maps",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse police motorcycle rodeo course maps sorted by Easy, Moderate, Advanced and Themed, from the Keyhole and Lollipop to the 180° U-Turn. Setcom also invites riders to send in maps that aren't listed yet.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Article/Tutorial_or_Guide",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/products/headsets/5b-headset/",
+    "path": "/products/headsets/5b-headset/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 7.0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Rugged, lightweight headse. Medium-to-low noise areas - Setcom",
+    "serp_title": "5B Series Headset",
+    "h1": "5B Series Headset",
+    "current_description": "A rugged, lightweight headset. Extremely comfortable for extended use applications such as dispatch or command centers.",
+    "proposed_title": "5B Series Headset - Setcom",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://setcomcorp.com/support/",
+    "path": "/support/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 3.0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Support - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Get help from Setcom's support team, including returns and repairs (RMA), warranty registration, and contact details for the Austin office. You can also schedule a time to talk with a professional online.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/2023-police-motorcycle-training-events/",
+    "path": "/2023-police-motorcycle-training-events/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "2023 Police Motorcycle Training Events - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A list of 2023 police motorcycle training events and rodeo competitions across the United States and Canada, with dates, event names, and locations. You can also submit an event or get free rodeo course maps.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/2025-safe-d-annual-conference/",
+    "path": "/2025-safe-d-annual-conference/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "2025 SAFE-D Annual Conference - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Setcom invites you to its booth #1109 at the 2025 SAFE-D Annual Conference, February 6-8 at the Kalahari Resort and Convention Center in Round Rock, TX, to demo the LiberatorMAX wireless fire apparatus communication system.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/2025-setcom-conference-schedule/",
+    "path": "/2025-setcom-conference-schedule/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "2025 Setcom Conference Schedule - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See where Setcom is exhibiting in 2025, with dates, locations, venues and booth numbers for each trade show, from Florida Fire & EMS Conference and FDIC to World of Concrete and police motorcycle rodeos.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/2027-police-motorcycle-training-events/",
+    "path": "/2027-police-motorcycle-training-events/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "2027 Police Motorcycle Training Events - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A list of police motorcycle training competitions and rodeos across the United States and Canada for 2027, with dates, locations, and event links. You can also submit an event to be added or get free rodeo course maps.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/950max/",
+    "path": "/950max/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "950MAX - Setcom",
+    "serp_title": "",
+    "h1": "950MAX",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "The 950MAX (MS-950MAX-16) is a single-radio interface that supports up to 7 wireless headsets, with four radio transmit circuits, PTT lockout, and an AUX audio input. Find its features, user guide, technical specs, warranty details, and answers on range and headset pairing.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2953
+   },
+   {
+    "url": "https://setcomcorp.com/about/",
+    "path": "/about/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "About - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Learn about Setcom, founded in 1970 in Mountain View, California, and its five-decade history building communication systems for fire, police, and military teams. The page walks through the company's timeline from its first police motorcycle system to fire apparatus intercoms.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/About_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/careers/",
+    "path": "/careers/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "brand dropped",
+    "why": "Google shows the title minus the brand suffix; normal, nothing to do",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Careers - Setcom",
+    "serp_title": "Careers",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore current job openings at Setcom, a manufacturer of communications and safety equipment for public safety and industrial teams, including engineering and assembly roles. You can also share your resume if you don't see a fit.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Careers_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/come-see-us-at-fdic/",
+    "path": "/come-see-us-at-fdic/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Come See Us At FDIC - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Setcom at FDIC, April 23-25, 2026, at the Indianapolis Convention Center, Booth #3469, to see the LiberatorMAX all-wireless fire apparatus headset system and book an on-site meeting.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/come-see-us-at-world-of-concrete/",
+    "path": "/come-see-us-at-world-of-concrete/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Come See Us At World of Concrete - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Setcom invited visitors to demo the LiberatorMAX wireless intercom system at World of Concrete, January 21-23 at the Las Vegas Convention Center, Booth N249. The page covers the event details and how this rugged, hands-free headset system works for construction and other industrial crews.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/conference-template/",
+    "path": "/conference-template/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Conference Template - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find details for meeting Setcom at a trade conference, where you can demo the latest in fire apparatus communications, including the LiberatorMAX Fire wireless headset.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Document/Manual",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/contact-thanks/",
+    "path": "/contact-thanks/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Contacting Us - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Confirmation that your quote request to Setcom was received, with a note that the team will process your information, plus options to sign up for company emails.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 3318
+   },
+   {
+    "url": "https://setcomcorp.com/customer-spotlight-alpha-prime-racing/",
+    "path": "/customer-spotlight-alpha-prime-racing/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Customer Spotlight: Alpha Prime Racing - Setcom",
+    "serp_title": "",
+    "h1": "Customer Spotlight: Alpha Prime Racing",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See how Alpha Prime Racing uses Setcom's LiberatorMAX wireless headsets on NASCAR pit road, keeping team members connected and letting pit stand guests follow the team's radio channel.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3035
+   },
+   {
+    "url": "https://setcomcorp.com/customer-spotlight-performance-crop-research-llc/",
+    "path": "/customer-spotlight-performance-crop-research-llc/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Customer Spotlight: Performance Crop Research LLC - Setcom",
+    "serp_title": "",
+    "h1": "Customer Spotlight: Performance Crop Research LLC",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See how Performance Crop Research uses Setcom LiberatorMAX wireless headsets to keep field crews talking hands-free while they work around tractors, combines, sprayers, and other noisy equipment.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/customer-spotlight-travis-county-esd-12/",
+    "path": "/customer-spotlight-travis-county-esd-12/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Customer Spotlight: Travis County ESD 12 - Setcom",
+    "serp_title": "",
+    "h1": "Customer Spotlight: Travis County ESD 12",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "See how Travis County ESD 12 in Manor, Texas uses Setcom LiberatorMAX wireless headsets, from simple setup out of the box to staying connected with the crew on brush truck responses. Includes a video interview with Engineer Juan Garcia and Firefighter Javon Newcost.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2941
+   },
+   {
+    "url": "https://setcomcorp.com/customer-testimonial-sweepstakes/",
+    "path": "/customer-testimonial-sweepstakes/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Customer Testimonial Sweepstakes​ - Setcom",
+    "serp_title": "",
+    "h1": "Customer Testimonial Sweepstakes",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Share your experience with Setcom equipment to enter for a chance to win a $300 YETI Tundra 45 Cooler. Confirmed police motor and industrial/fire customer entries also receive a free accessory pack.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 1383
+   },
+   {
+    "url": "https://setcomcorp.com/florida-fire-and-ems-show/",
+    "path": "/florida-fire-and-ems-show/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Florida Fire and EMS Show - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Meet Setcom at booth #1216 at the Florida Fire and EMS Show in Orlando, January 8-10, 2025, and demo the LiberatorMAX wireless fire apparatus communication system. Learn how it works in engines, aerials, rescue vehicles, ambulances, and command vehicles.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Service_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/highlighting-critical-communications-featured-in-fire-safety-journal-americas/",
+    "path": "/highlighting-critical-communications-featured-in-fire-safety-journal-americas/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Highlighting Critical Communications: Featured in Fire & Safety Journal Americas - Setcom",
+    "serp_title": "",
+    "h1": "Highlighting Critical Communications: Featured in Fire & Safety Journal Americas",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Setcom was featured in Fire & Safety Journal Americas in the article \"Tools the Fire Service Can Trust.\" This post recaps what our Sales & Marketing Director shared about fire service communications and how the 900MAX Wireless Intercom System fits in-cab workflows.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 2912
+   },
+   {
+    "url": "https://setcomcorp.com/industry/",
+    "path": "/industry/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Industry - Setcom",
+    "serp_title": "",
+    "h1": "Wireless Headsets for High-Noise Industrial Environments",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore Setcom LiberatorMAX wireless headsets for high-noise industrial work, with hands-free intercom, 8 talk group channels, and no pairing or base station required. Browse applications from construction and crane to utilities and wastewater.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Product_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/privacy/",
+    "path": "/privacy/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten",
+    "why": "Google shows 'Privacy Policy'",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "Privacy - Setcom",
+    "serp_title": "Privacy Policy",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "Privacy Policy - Setcom",
+    "proposed_description": "Read how Setcom Corporation collects, uses, and shares information when you visit setcomcorp.com, including the personal details you may choose to provide.",
+    "basis": [
+     "title: rewritten",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing",
+     "serp mismatch"
+    ],
+    "ml": "/Core_Page/Privacy_Policy_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/products/accessories/clip-on-liberator-max/",
+    "path": "/products/accessories/clip-on-liberator-max/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Clip On Headset For Hard Hat",
+    "serp_title": "",
+    "h1": "Clip-On LiberatorMAX",
+    "current_description": "For situations where a hardhat or tree helmet is needed, Setcom offers a clip-on version of the LiberatorMAX headsets.",
+    "proposed_title": "",
+    "proposed_description": "The Clip-On LiberatorMAX is a dual-speaker headset with a 17dB noise reduction rating that clips onto a hard hat or tree helmet using a standard 3M mount. See the industries it suits, from arboriculture to crane communications, and which Setcom headsets it is compatible with.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "multiple descriptions"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 2499
+   },
+   {
+    "url": "https://setcomcorp.com/products/headsets/",
+    "path": "/products/headsets/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Headsets - Setcom",
+    "serp_title": "",
+    "h1": "Headsets",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse Setcom's headsets category, then get a quote, find a dealer, or schedule a time to talk with a professional about your needs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 679
+   },
+   {
+    "url": "https://setcomcorp.com/products/police-motor/",
+    "path": "/products/police-motor/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "glued",
+    "why": "title is two titles concatenated; H1 used instead",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": true,
+    "current_title": "zPolice Motor - Setcom",
+    "serp_title": "",
+    "h1": "zPolice Motor",
+    "current_description": "",
+    "proposed_title": "zPolice Motor - Setcom",
+    "proposed_description": "Explore the zPolice Motor product from Setcom. You can request a quote, find a dealer, or schedule a time to talk with a professional about your needs.",
+    "basis": [
+     "title: glued",
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 684
+   },
+   {
+    "url": "https://setcomcorp.com/products/police-motor/full-face-helmet-kit/",
+    "path": "/products/police-motor/full-face-helmet-kit/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "rewritten to H1",
+    "why": "Google replaced the title with the H1; proposing the H1 as the title",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": true,
+    "want_description": false,
+    "current_title": "Helmet kits - 3/4 or full face internal mount single or dual speakers.",
+    "serp_title": "Helmet Kit - Internal Mount Full Face / Three-Quarter Shell",
+    "h1": "Helmet Kit - Internal Mount Full Face / Three-Quarter Shell",
+    "current_description": "Helmet kits - three-quarter or full face internal mount with single or dual ear speaker systems and simple, non-intrusive install.",
+    "proposed_title": "Helmet Kit - Internal Mount Full Face / Three-Quarter Shell - Setcom",
+    "proposed_description": "",
+    "basis": [
+     "title: rewritten to H1"
+    ],
+    "reasons": [
+     "serp mismatch"
+    ],
+    "ml": "/Listing/Product"
+   },
+   {
+    "url": "https://setcomcorp.com/products/systems/",
+    "path": "/products/systems/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Systems - Setcom",
+    "serp_title": "",
+    "h1": "Systems",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse the Systems category from Setcom Corporation in Austin, TX. You can also request a quote, find a dealer, or schedule a time to talk with a professional about your needs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Product",
+    "text_chars": 678
+   },
+   {
+    "url": "https://setcomcorp.com/quote/",
+    "path": "/quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Get A Quote - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Request a quote from Setcom for communication headsets and systems, or ask about a customized solution for your team's requirements. Also includes feedback from EMS, towing, and fire customers.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/request-quote/",
+    "path": "/request-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Request a Quote - Setcom",
+    "serp_title": "",
+    "h1": "Request a Quote",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Add products to your quote cart, set quantities, and submit the form to request a quote from Setcom. Our team will follow up with a tailored quote.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 947
+   },
+   {
+    "url": "https://setcomcorp.com/rma/",
+    "path": "/rma/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "RMA - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Submit a Return Merchandise Authorization (RMA) request to send a Setcom product back for repair or replacement. The page explains how requests get reviewed and assigned a case number by email, and notes that dealer-purchased items follow the dealer's return policy.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/shop/",
+    "path": "/shop/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "- Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Browse Setcom replacement parts and accessories, including antennas, ear pads, cup rings, foam pads and hanger hooks, and request a quote on the items you need.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/solutions/",
+    "path": "/solutions/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Solutions - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Explore Setcom's solutions for hands-free, real-time crew communication, including the LiberatorMAX wireless intercom headsets and the LiberatorMAX Fire system for fire apparatus. Book time with a product expert to talk through your needs.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Landing_Page/Product_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/territories/",
+    "path": "/territories/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Territories Page - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Find the Setcom account executive for your region, with phone and email contacts for the Western, Central and Eastern territories, plus law enforcement sales and the director of sales and marketing.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/Contact_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/thanks-for-contacting-us/",
+    "path": "/thanks-for-contacting-us/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks Repair Registration - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Confirmation that your Authorized Repair Center Program repair registration was received, with what happens next as Technical Support reviews warranty eligibility and parts used.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/thanks-for-requesting-a-quote/",
+    "path": "/thanks-for-requesting-a-quote/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Thanks For Requesting A Quote - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Confirmation that your Setcom quote request was submitted, with a note that a team member will be in touch soon to discuss next steps. You can also sign up for product news and event updates.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3337
+   },
+   {
+    "url": "https://setcomcorp.com/warranty-registration/",
+    "path": "/warranty-registration/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Warranty Registration - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Register your Setcom product and review the warranty terms, under which Setcom will repair or replace parts found defective in workmanship or materials during the warranty period.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "",
+    "text_chars": 3368
+   },
+   {
+    "url": "https://setcomcorp.com/warranty/",
+    "path": "/warranty/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Warranty - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Read Setcom Corporation's warranty terms, including how defective parts are repaired or replaced, who the coverage applies to, and what is not covered.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Core_Page/T&C_Page",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/wwett-2025-show/",
+    "path": "/wwett-2025-show/",
+    "page_type": "core",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Come See Us At WWETT - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Setcom will be at WWETT February 18-20, 2025 at the Indianapolis Convention Center, Booth #5031, demoing the LiberatorMAX wireless intercom system for rugged, hands-free crew communication.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Listing/Event",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/reference-guide_liberator_max_fire/",
+    "path": "/reference-guide_liberator_max_fire/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Quick Reference Guide: LiberatorMAX? Fire - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "A quick reference guide for the LiberatorMAX Fire headset, with a downloadable PDF and answers on identifying your headset model, checking its channel and the master station channel, and changing channels.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/support/bluetooth-portable-only-wireless/",
+    "path": "/support/bluetooth-portable-only-wireless/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "Bluetooth Portable Only Wireless - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Troubleshooting steps for the Setcom Bluetooth Portable Only Wireless system, covering power checks, PTT, transmit and receive problems, and pairing or linking issues, plus links to the reference guide and system guide.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   },
+   {
+    "url": "https://setcomcorp.com/support/mocs-ii-troubleshooting/",
+    "path": "/support/mocs-ii-troubleshooting/",
+    "page_type": "post",
+    "action": "write",
+    "title_kind": "",
+    "why": "",
+    "gsc": {},
+    "traffic": 0,
+    "score": -1,
+    "want_title": false,
+    "want_description": true,
+    "current_title": "MOCS II Troubleshooting - Setcom",
+    "serp_title": "",
+    "h1": "",
+    "current_description": "",
+    "proposed_title": "",
+    "proposed_description": "Troubleshooting steps for the Setcom MOCS II Bluetooth portable wireless system, covering power checks, PTT/transmit/receive problems, and pairing or linking issues, plus links to the reference and system guides.",
+    "basis": [
+     "description: from page text (model draft)"
+    ],
+    "reasons": [
+     "description missing"
+    ],
+    "ml": "/Article/How_to",
+    "text_chars": 3500
+   }
+  ],
+  "routed": {
+   "archive": [
+    "/products/",
+    "/2026-police-motorcycle-training-events/",
+    "/blog/",
+    "/products/accessories/",
+    "/blog/page/2/",
+    "/shop/page/2/",
+    "/dealers/",
+    "/shop/page/3/"
+   ],
+   "noindex": [],
+   "non-200": [],
+   "homepage title": []
+  },
+  "seo_plugin": "unknown",
+  "rows": []
+ }
+}
