@@ -7,6 +7,7 @@
     python scripts/review_sheets.py mark-applied <slug>    # after --alt-apply: stamp merged rows "applied <date>"
     python scripts/review_sheets.py status                 # one line per client: sheet id, pending / merged / applied counts
     python scripts/review_sheets.py dropdowns <slug>|--all # (re)apply the strict status dropdowns on every toolkit tab
+    python scripts/review_sheets.py previews <slug>|--all  # add/refresh the in-cell image thumbnails (preview + image_url columns) on existing rows
 
 Credentials: a Google service account. Put the JSON key at the path in GOOGLE_SERVICE_ACCOUNT (environment or .env at the
 repo root; default secrets/google-service-account.json, git-ignored). Service accounts cannot own Drive files, so `setup`
@@ -14,9 +15,11 @@ creates each sheet inside the folder GOOGLE_SHEETS_FOLDER (.env), a folder a hum
 client_email, or let `setup` create the sheet as the service account and share it with the humans in --share.
 Needs: pip install gspread google-auth
 
-Tab "alt text" columns: image_key | tier | uses | on_pages | example_page | image | current_alt | suggestion | new_alt | status | note | added | applied
+Tab "alt text" columns: image_key | tier | uses | on_pages | example_page | image | preview | image_url | current_alt | suggestion | new_alt | status | note | added | applied
 status: pending (needs a human) -> merged (pulled into the repo CSV) -> applied (date in the `applied` column); "skip" leaves the image alone.
 A human only edits new_alt (and note; status is a strict dropdown). Everything else is written by the scripts.
+`preview` is an =IMAGE() formula (the thumbnail renders in the cell, so a reviewer can see the picture while writing the alt);
+`image_url` is the plain live URL to click for full size. Rows are sized PREVIEW_ROW_PX tall so the thumbnail is visible.
 
 Every status column the toolkit writes (alt text, ai discoverability, meta, work orders) is a strict dropdown; the allowed values per
 tab live in STATUS_VALUES below and `set_status_dropdown()` applies them. `python scripts/review_sheets.py dropdowns <slug>|--all`
@@ -33,8 +36,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_redirect_map import load_env
 TAB = "alt text"
-COLS = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "current_alt", "suggestion", "new_alt", "status", "note", "added", "applied"]
-COLS_V1 = COLS[:-1]   # tabs made before 2026-11-09 (status carried "applied <date>"; the date now has its own column)
+COLS = ["image_key", "tier", "uses", "on_pages", "example_page", "image", "preview", "image_url", "current_alt", "suggestion", "new_alt", "status", "note", "added", "applied"]
+COLS_V2 = [c for c in COLS if c not in ("preview", "image_url")]   # tabs made 2026-11-09 .. 11-10 (no thumbnails yet)
+COLS_V1 = COLS_V2[:-1]   # tabs made before 2026-11-09 (status carried "applied <date>"; the date now has its own column)
+PREVIEW_ROW_PX = 90      # row height so the =IMAGE() thumbnail is visible
+PREVIEW_COL_PX = 130
 
 # Allowed status values per tab. Humans pick from a strict dropdown; scripts write only these values too (dates go in their own
 # column: alt `applied`, ai/meta `updated`, work orders `cleared`). Keep the first value = the state a new row starts in.
@@ -120,26 +126,87 @@ def alt_tab(sh):
             ws = sh.add_worksheet(TAB, rows=200, cols=len(COLS)); ws.append_row(COLS); ws.freeze(rows=1)
     head = ws.row_values(1)
     if not head: ws.append_row(COLS); ws.freeze(rows=1)
-    elif head == LEGACY:   # upgrade in place: insert status before note, add 'added' and 'applied'
-        vals = ws.get_all_values()
-        new = [COLS] + [r[:9] + [("merged" if (r[8] if len(r) > 8 else "").strip() else "pending"), (r[9] if len(r) > 9 else ""), "2026-10-30", ""] for r in vals[1:] if any(r)]
-        ws.clear(); ws.update(values=new, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
-        print(f"  upgraded '{TAB}' tab to the current columns ({len(new) - 1} rows)")
-    elif head == COLS_V1:   # upgrade in place: 'applied <date>' statuses become status 'applied' + the date in the new `applied` column
-        vals = ws.get_all_values(); si = COLS.index("status"); moved = 0
-        new = [COLS]
-        for r in vals[1:]:
-            if not any(r): continue
-            r = r + [""] * (len(COLS_V1) - len(r)); st = r[si].strip(); date = ""
-            if st.lower().startswith("applied"): date = st[len("applied"):].strip(); r[si] = "applied"; moved += 1
-            new.append(r[:len(COLS_V1)] + [date])
+    elif head in (LEGACY, COLS_V1, COLS_V2):
+        # Upgrade in place, one layout at a time: LEGACY -> V1 -> V2 -> current. Rows are rewritten as V2 (no thumbnails) and then
+        # the preview/image_url columns are spliced in after `image`; `previews` fills them (needs the client's domain, so not here).
+        vals = ws.get_all_values(); rows = [r for r in vals[1:] if any(r)]
+        if head == LEGACY:   # insert status before note, add 'added' and 'applied'
+            rows = [r[:9] + [("merged" if (r[8] if len(r) > 8 else "").strip() else "pending"), (r[9] if len(r) > 9 else ""), "2026-10-30", ""] for r in rows]
+            head = COLS_V2
+        elif head == COLS_V1:   # 'applied <date>' statuses become status 'applied' + the date in the new `applied` column
+            si = COLS_V1.index("status"); out = []
+            for r in rows:
+                r = r + [""] * (len(COLS_V1) - len(r)); st = r[si].strip(); date = ""
+                if st.lower().startswith("applied"): date = st[len("applied"):].strip(); r[si] = "applied"
+                out.append(r[:len(COLS_V1)] + [date])
+            rows = out; head = COLS_V2
+        ii = COLS.index("image") + 1
+        new = [COLS] + [(r + [""] * (len(COLS_V2) - len(r)))[:ii] + ["", ""] + (r + [""] * (len(COLS_V2) - len(r)))[ii:len(COLS_V2)] for r in rows]
         if ws.col_count < len(COLS): ws.add_cols(len(COLS) - ws.col_count)
-        ws.update(values=new, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
-        print(f"  upgraded '{TAB}' tab: added the `applied` column ({moved} rows moved their date into it)")
+        ws.clear(); ws.update(values=new, range_name="A1", value_input_option="RAW"); ws.freeze(rows=1)
+        print(f"  upgraded '{TAB}' tab to the current columns ({len(new) - 1} rows; run `review_sheets.py previews <slug>` to fill the thumbnails)")
     elif head != COLS:
         sys.exit(f"'{TAB}' tab has unexpected columns {head}; expected {COLS}")
     set_status_dropdown(ws, COLS)
     return ws
+
+def image_url(src, domain):
+    """Live URL for an image reference from the alt CSV: the crawl ran on staging, so swap the host for the client's canonical
+    domain. Returns '' for things that are not fetchable images (pasted page junk like './Isle of Dogs_files/sr')."""
+    src = (src or "").strip()
+    if not src: return ""
+    if re.match(r"^https?://", src): return re.sub(r"^https?://[^/]+", domain, src)
+    if src.startswith("//"): return re.sub(r"^//[^/]+", domain, src)
+    if src.startswith("/"): return domain + src
+    if re.match(r"^\d{4}/\d{2}/[^/]+\.(jpe?g|png|gif|webp|avif|svg)$", src, re.I): return f"{domain}/wp-content/uploads/{src}"
+    return ""
+
+def preview_formula(url):
+    return f'=IMAGE("{url}",1)' if url else ""
+
+def write_previews(ws, rows, urls, fill_blank_only=True):
+    """rows: read_rows(ws) in sheet order; urls: {image_key: url}. Writes the preview formula + plain URL for each row with a URL,
+    then sizes the preview column and the data rows so the thumbnails are visible. Returns the number of rows written."""
+    pi, ui = COLS.index("preview"), COLS.index("image_url")
+    pc, uc = chr(65 + pi), chr(65 + ui)
+    updates = []
+    for i, r in enumerate(rows):
+        url = urls.get(r["image_key"], "")
+        if not url: continue
+        if fill_blank_only and r["image_url"].strip() == url and r["preview"].strip(): continue
+        updates.append({"range": f"{pc}{i + 2}:{uc}{i + 2}", "values": [[preview_formula(url), url]]})
+    if updates: ws.batch_update(updates, value_input_option="USER_ENTERED")
+    reqs = [{"updateDimensionProperties": {"range": {"sheetId": ws.id, "dimension": "COLUMNS", "startIndex": pi, "endIndex": pi + 1},
+                                           "properties": {"pixelSize": PREVIEW_COL_PX}, "fields": "pixelSize"}}]
+    if rows:
+        reqs.append({"updateDimensionProperties": {"range": {"sheetId": ws.id, "dimension": "ROWS", "startIndex": 1, "endIndex": len(rows) + 1},
+                                                   "properties": {"pixelSize": PREVIEW_ROW_PX}, "fields": "pixelSize"}})
+    ws.spreadsheet.batch_update({"requests": reqs})
+    return len(updates)
+
+def urls_from_csvs(slug, provider, domain):
+    """image_key -> live image URL, from every alt CSV the client has (newest wins), plus the product-alt exception files."""
+    urls = {}
+    cdir = ROOT / "changes" / provider / slug
+    for p in sorted(cdir.glob("*-fix-images-alt.csv")):
+        for r in csv.DictReader(p.open(encoding="utf-8-sig")):
+            k = r.get("image_key") or r.get("src") or ""
+            u = image_url(r.get("src", ""), domain)
+            if k and u: urls[k] = u
+    for p in sorted(cdir.glob("*-fix-images-product-alt-exceptions.csv")):
+        for e in csv.DictReader(p.open(encoding="utf-8-sig")):
+            u = image_url(e.get("url") or e.get("src") or e.get("file", ""), domain)
+            if u: urls[f"product-attachment:{e['attachment_id']}"] = u
+    return urls
+
+def urls_from_rows(rows, domain):
+    """Fallback for rows whose key is not in any CSV: rebuild the uploads URL from image_key ('2025/09/name', no extension) + image (file name)."""
+    out = {}
+    for r in rows:
+        k, f = r["image_key"].strip(), r["image"].strip()
+        m = re.match(r"^(\d{4}/\d{2})/", k)
+        if m and f and "/" not in f: out[k] = f"{domain}/wp-content/uploads/{m.group(1)}/{f}"
+    return out
 
 def read_rows(ws):
     vals = ws.get_all_values()
@@ -159,8 +226,10 @@ def review_rows_from_csv(path, domain):
         if r.get("tier") == "D": continue
         k = r.get("image_key") or r["src"]
         g = groups.setdefault(k, {"image_key": k, "tier": r["tier"], "uses": 0, "pages": set(), "example_page": r["page_url"], "image": r["src"].rsplit("/", 1)[-1],
+                                  "image_url": image_url(r["src"], domain),
                                   "current_alt": r.get("current_alt", ""), "suggestion": r.get("suggestion", ""), "new_alt": r.get("new_alt", ""), "note": r.get("note", "")})
         g["uses"] += 1; g["pages"].add(r["page_url"])
+        if not g["image_url"]: g["image_url"] = image_url(r["src"], domain)
         if order.get(r["tier"], 9) < order.get(g["tier"], 9): g["tier"] = r["tier"]
     out = []
     for g in groups.values():
@@ -209,7 +278,8 @@ def cmd_push(a):
     path = newest_alt_csv(a.slug, provider)
     review, _ = review_rows_from_csv(path, domain)
     today = datetime.date.today().isoformat()
-    new = [[r["image_key"], r["tier"], r["uses"], r["on_pages"], r["example_page"], r["image"], r["current_alt"], r["suggestion"], r["new_alt"],
+    # preview is left blank here (RAW append would store the formula as text); write_previews fills it with USER_ENTERED below
+    new = [[r["image_key"], r["tier"], r["uses"], r["on_pages"], r["example_page"], r["image"], "", r["image_url"], r["current_alt"], r["suggestion"], r["new_alt"],
             "merged" if r["new_alt"] else "pending", r["note"], today, ""] for r in review if r["image_key"] not in have]
     # WooCommerce: the product-alt exception list (shared model photos, one-word titles) also needs a human
     exc_files = sorted((ROOT / "changes" / provider / a.slug).glob("*-fix-images-product-alt-exceptions.csv"))
@@ -218,10 +288,38 @@ def cmd_push(a):
         for e in csv.DictReader(exc_files[-1].open(encoding="utf-8-sig")):
             key = f"product-attachment:{e['attachment_id']}"
             if key in have: continue
-            new.append([key, "P", e["used_by_products"], e["used_by_products"], e.get("example_products", "")[:200], e["file"], "", e.get("suggestion", ""), "",
+            new.append([key, "P", e["used_by_products"], e["used_by_products"], e.get("example_products", "")[:200], e["file"], "",
+                        image_url(e.get("url") or e.get("src") or e.get("file", ""), domain), "", e.get("suggestion", ""), "",
                         "pending", "product image: " + e.get("reason", ""), today, ""]); n_exc += 1
     if new: ws.append_rows(new, value_input_option="RAW")
-    print(f"{a.slug}: {len(new)} new rows appended ({len(review) - (len(new) - n_exc)} already on the sheet) from {path.name}" + (f" + {n_exc} product-alt exceptions" if n_exc else "") + f": {sh.url}")
+    rows = read_rows(ws)
+    urls = {r["image_key"]: r["image_url"] for r in rows if r["image_url"].strip()}
+    n_prev = write_previews(ws, rows, urls)
+    print(f"{a.slug}: {len(new)} new rows appended ({len(review) - (len(new) - n_exc)} already on the sheet) from {path.name}" + (f" + {n_exc} product-alt exceptions" if n_exc else "") + f"; {n_prev} thumbnails written: {sh.url}")
+
+def cmd_previews(a):
+    """Fill the preview/image_url columns on existing rows (after the column upgrade, or to refresh). URL per row comes from the
+    client's alt CSVs (newest wins), else is rebuilt from image_key + image. Rows whose key maps to no image are left blank."""
+    g = gc()
+    slugs = [a.slug] if a.slug else [p.stem for p in sorted((ROOT / "clients").glob("*.yaml")) if not p.name.startswith("_")]
+    for slug in slugs:
+        c = load_client(slug); sid = (c.get("review") or {}).get("alt_sheet_id")
+        if not sid or sid == "unknown":
+            if a.slug: sys.exit(f"clients/{slug}.yaml has no review.alt_sheet_id")
+            continue
+        provider = str((c.get("hosting") or {}).get("provider") or "other").lower()
+        domain = c.get("canonical_host") or f"https://{c['domain']}"
+        try:
+            sh, ws = open_tab(g, sid); rows = read_rows(ws)
+            urls = urls_from_rows(rows, domain); urls.update(urls_from_csvs(slug, provider, domain))
+            if not getattr(a, "force", False):
+                for r in rows:   # keep a URL already on the sheet unless --force
+                    if r["image_url"].strip(): urls[r["image_key"]] = r["image_url"].strip()
+            n = write_previews(ws, rows, urls, fill_blank_only=not getattr(a, "force", False))
+            missing = [r["image_key"] for r in rows if not urls.get(r["image_key"])]
+            print(f"{slug:26} {n:4} thumbnails written, {len(rows) - len(missing):4}/{len(rows)} rows have an image URL" + (f", no URL for: {', '.join(missing[:3])}{'...' if len(missing) > 3 else ''}" if missing else "") + f"  {sh.url}")
+        except Exception as e:
+            print(f"{slug:26} ERROR {str(e)[:120]}")
 
 def cmd_pull(a):
     c = load_client(a.slug); provider = str((c.get("hosting") or {}).get("provider") or "other").lower()
@@ -305,8 +403,9 @@ def main():
     s = sub.add_parser("mark-applied"); s.add_argument("slug"); s.set_defaults(f=cmd_mark)
     s = sub.add_parser("status"); s.set_defaults(f=cmd_status)
     s = sub.add_parser("dropdowns", help="(re)apply the strict status dropdowns on every toolkit tab of a client's sheet"); s.add_argument("slug", nargs="?"); s.add_argument("--all", action="store_true"); s.set_defaults(f=cmd_dropdowns)
+    s = sub.add_parser("previews", help="fill/refresh the in-cell image thumbnails (preview + image_url) on a client's alt tab"); s.add_argument("slug", nargs="?"); s.add_argument("--all", action="store_true"); s.add_argument("--force", action="store_true", help="rewrite every row, even ones that already have a URL"); s.set_defaults(f=cmd_previews)
     a = ap.parse_args()
-    if a.cmd == "dropdowns" and not a.slug and not a.all: ap.error("dropdowns needs a slug or --all")
+    if a.cmd in ("dropdowns", "previews") and not a.slug and not a.all: ap.error(f"{a.cmd} needs a slug or --all")
     a.f(a)
 
 if __name__ == "__main__":
